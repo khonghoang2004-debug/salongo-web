@@ -79,6 +79,27 @@ export function Navbar() {
         aria-hidden
       />
       <div className="mx-auto flex h-10 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        {/* Mobile: icon menu bên trái; Desktop: ẩn, dùng icon bên phải */}
+        <label
+          htmlFor="nav-menu-toggle"
+          className="flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-lg text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 lg:hidden"
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="size-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </label>
         <Link
           href="/"
           className="flex shrink-0 items-center gap-1.5 transition-opacity hover:opacity-80"
@@ -218,27 +239,6 @@ export function Navbar() {
             )}
           </div>
           <LocaleSwitcher />
-
-          <label
-            htmlFor="nav-menu-toggle"
-            className="flex size-10 cursor-pointer items-center justify-center rounded-lg text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 lg:hidden"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="size-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </label>
         </div>
       </div>
 

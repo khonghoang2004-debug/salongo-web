@@ -43,22 +43,25 @@ export async function TrustSection() {
               key={titleKey}
               className="rounded-[18px] border border-neutral-200/60 bg-white p-9 shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-none hover:translate-y-0"
             >
-              <div
-                className="flex size-14 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-                  borderColor: "rgba(236,72,153,0.25)",
-                }}
-              >
-                <Icon className="size-7" stroke="url(#trustSectionIconGradient)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
-              </div>
-              <div className="mt-6 space-y-3">
-                <h3 className="text-lg font-bold text-[#1F2937]">
-                  {t(titleKey)}
-                </h3>
-                <p className="text-sm leading-[1.65] text-[#6B7280]">
-                  {t(descKey)}
-                </p>
+              {/* Mobile: icon + title cùng hàng; Desktop: icon trên, title + mô tả dưới */}
+              <div className="flex flex-row items-start gap-3 md:flex-col md:items-stretch">
+                <div
+                  className="flex size-14 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
+                    borderColor: "rgba(236,72,153,0.25)",
+                  }}
+                >
+                  <Icon className="size-7" stroke="url(#trustSectionIconGradient)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
+                </div>
+                <div className="min-w-0 flex-1 space-y-3 md:mt-6">
+                  <h3 className="text-lg font-bold text-[#1F2937]">
+                    {t(titleKey)}
+                  </h3>
+                  <p className="text-sm leading-[1.65] text-[#6B7280]">
+                    {t(descKey)}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

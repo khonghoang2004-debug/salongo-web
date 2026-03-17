@@ -119,7 +119,7 @@
     "bookDemoCta": "Kostenlose Beratung buchen",
     "faqTitle": "Häufige Fragen",
     "faqQ1": "Wann erhalte ich eine Antwort?",
-    "faqA1": "Wir antworten innerhalb von 24 Geschäftsstunden.",
+    "faqA1": "Wir antworten innerhalb von 24 Geschäftsstunden. Priorität haben Kontakt per Telefon und Facebook.",
     "faqQ2": "Unterstützung auf Vietnamesisch?",
     "faqA2": "Ja. Support und Oberfläche auf Vietnamesisch.",
     "faqQ3": "Gibt es eine Einrichtungs-Anleitung?",
@@ -130,7 +130,7 @@
     "trust3": "Daten geschützt",
     "trust4": "Keine versteckten Gebühren",
     "ctaTitle": "Verwalten Sie Ihren Salon ab heute professionell",
-    "ctaButton": "Kostenlos testen",
+    "ctaButton": "Jetzt kostenlos ausprobieren",
     "ctaSubtext": "Keine aufwendige Einrichtung."
   },
   "pricingPage": {
@@ -156,7 +156,6 @@
     "plan3Feature5": "Datenexport",
     "plan4Feature1": "Unbegrenzt Mitarbeiter",
     "plan4Feature2": "Alle Premium-Funktionen",
-    "plan4Feature3": "Mehrere Standorte",
     "plan4Feature4": "API & Integrationen",
     "plan4Feature5": "Zentrale Verwaltung",
     "compareTitle": "Tarifvergleich",
@@ -198,12 +197,12 @@
     "faqQ6": "Backup?",
     "faqA6": "Ja. Regelmäßige Backups, sichere Cloud.",
     "faqQ7": "Hilfe bei Einrichtung?",
-    "faqA7": "Ja. E-Mail und Doku. Premium: Prioritäts-Support.",
+    "faqA7": "Ja — wir unterstützen Sie per Telefon, Facebook, Instagram und WhatsApp.",
     "faqQ8": "Upgrade/Downgrade?",
     "faqA8": "Ja. Jederzeit wechseln, anteilig abgerechnet.",
     "ctaTitle": "Verwalten Sie Ihren Salon ab heute professionell",
     "ctaSubtext": "30 Tage kostenlos – keine Karte nötig.",
-    "ctaButton": "Kostenlos testen"
+    "ctaButton": "Jetzt testen"
   },
   "footer": {
     "quickLinks": "Quicklinks",

@@ -119,7 +119,7 @@
     "bookDemoCta": "Đặt lịch tư vấn miễn phí",
     "faqTitle": "Câu hỏi thường gặp",
     "faqQ1": "Tôi sẽ nhận phản hồi trong bao lâu?",
-    "faqA1": "Chúng tôi cam kết phản hồi trong vòng 24 giờ làm việc. Ưu tiên email và form liên hệ.",
+    "faqA1": "Chúng tôi cam kết phản hồi trong vòng 24 giờ làm việc. Ưu tiên liên lạc qua số điện thoại và Facebook.",
     "faqQ2": "Có hỗ trợ bằng tiếng Việt không?",
     "faqA2": "Có. Đội ngũ hỗ trợ khách hàng và giao diện đều có tiếng Việt.",
     "faqQ3": "Có hướng dẫn cài đặt không?",
@@ -130,7 +130,7 @@
     "trust3": "Bảo mật dữ liệu",
     "trust4": "Không phí ẩn",
     "ctaTitle": "Bắt đầu quản lý salon chuyên nghiệp ngay hôm nay",
-    "ctaButton": "Dùng thử miễn phí",
+    "ctaButton": "Trải nghiệm miễn phí ngay",
     "ctaSubtext": "Không cần cài đặt phức tạp."
   },
   "pricingPage": {
@@ -156,7 +156,6 @@
     "plan3Feature5": "Xuất dữ liệu",
     "plan4Feature1": "Không giới hạn nhân viên",
     "plan4Feature2": "Tất cả tính năng Premium",
-    "plan4Feature3": "Nhiều chi nhánh",
     "plan4Feature4": "API & tích hợp",
     "plan4Feature5": "Quản lý tập trung",
     "compareTitle": "So sánh chi tiết các gói",
@@ -198,12 +197,12 @@
     "faqQ6": "Có backup dữ liệu không?",
     "faqA6": "Có. Dữ liệu được sao lưu định kỳ và bảo mật trên cloud.",
     "faqQ7": "Có hỗ trợ khi cài đặt không?",
-    "faqA7": "Có. Chúng tôi hướng dẫn qua email và tài liệu. Gói Premium trở lên có hỗ trợ ưu tiên.",
+    "faqA7": "Có, chúng tôi hỗ trợ qua số điện thoại, Facebook, IG, WhatsApp.",
     "faqQ8": "Có nâng cấp / hạ cấp được không?",
     "faqA8": "Có. Bạn có thể đổi gói bất cứ lúc nào, tính theo tỷ lệ thời gian sử dụng.",
     "ctaTitle": "Bắt đầu quản lý salon chuyên nghiệp ngay hôm nay",
     "ctaSubtext": "Trải nghiệm miễn phí 30 ngày – không cần thẻ.",
-    "ctaButton": "Dùng thử miễn phí"
+    "ctaButton": "Trải nghiệm ngay"
   },
   "footer": {
     "quickLinks": "Điều hướng nhanh",
@@ -211,7 +210,7 @@
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản sử dụng",
     "rights": "Bảo lưu mọi quyền.",
-    "tagline": "Phát triển salon với SalonGo — nền tảng quản lý salon toàn diện cho đội ngũ hiện đại."
+    "tagline": "SalonGo — chuẩn mực mới cho vận hành salon"
   },
   "pages": {
     "homeTitle": "Trang chủ",

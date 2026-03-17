@@ -119,7 +119,7 @@
     "bookDemoCta": "Domluvit konzultaci zdarma",
     "faqTitle": "Časté dotazy",
     "faqQ1": "Za jak dlouho dostanu odpověď?",
-    "faqA1": "Odpovídáme do 24 pracovních hodin.",
+    "faqA1": "Odpovídáme do 24 pracovních hodin. Upřednostňujeme kontakt telefonem a přes Facebook.",
     "faqQ2": "Podpora ve vietnamštině?",
     "faqA2": "Ano. Podpora i rozhraní ve vietnamštině.",
     "faqQ3": "Je k dispozici návod k instalaci?",
@@ -130,7 +130,7 @@
     "trust3": "Zabezpečená data",
     "trust4": "Žádné skryté poplatky",
     "ctaTitle": "Začněte řídit salon profesionálně ještě dnes",
-    "ctaButton": "Vyzkoušet zdarma",
+    "ctaButton": "Vyzkoušet zdarma hned",
     "ctaSubtext": "Bez složitého nastavení."
   },
   "pricingPage": {
@@ -156,7 +156,6 @@
     "plan3Feature5": "Export dat",
     "plan4Feature1": "Neomezeno zaměstnanců",
     "plan4Feature2": "Všechny Premium funkce",
-    "plan4Feature3": "Více provozoven",
     "plan4Feature4": "API a integrace",
     "plan4Feature5": "Centrální správa",
     "compareTitle": "Porovnání tarifů",
@@ -198,12 +197,12 @@
     "faqQ6": "Záloha dat?",
     "faqA6": "Ano. Pravidelné zálohy, bezpečné úložiště.",
     "faqQ7": "Pomoc při nastavení?",
-    "faqA7": "Ano. E-mail a dokumentace. Premium: prioritní podpora.",
+    "faqA7": "Ano — podporu poskytujeme telefonem, Facebookem, Instagramem a WhatsAppem.",
     "faqQ8": "Změna tarifu?",
     "faqA8": "Ano. Kdykoli změnit, účtování poměrně.",
     "ctaTitle": "Začněte řídit salon profesionálně ještě dnes",
     "ctaSubtext": "30 dní zdarma – bez karty.",
-    "ctaButton": "Vyzkoušet zdarma"
+    "ctaButton": "Vyzkoušet hned"
   },
   "footer": {
     "quickLinks": "Rychlé odkazy",

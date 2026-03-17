@@ -14,10 +14,7 @@ export async function SectionPricingCTA() {
         <h2 className="text-3xl font-bold tracking-tight text-[#1F2937] sm:text-4xl lg:text-5xl">
           {t("ctaTitle")}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-[#6B7280]">
-          {t("ctaSubtext")}
-        </p>
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <a
             href="https://app.salongo.eu/signup"
             target="_blank"

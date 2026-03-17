@@ -30,7 +30,7 @@ const planKeys = [
   {
     nameKey: "plan4Name",
     subtitleKey: "plan4Subtitle",
-    featureKeys: ["plan4Feature1", "plan4Feature2", "plan4Feature3", "plan4Feature4", "plan4Feature5"],
+    featureKeys: ["plan4Feature1", "plan4Feature2", "plan4Feature4", "plan4Feature5"],
     originalPrice: "999",
     price: "599",
     highlighted: false,

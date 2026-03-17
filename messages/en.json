@@ -119,7 +119,7 @@
     "bookDemoCta": "Book a free consultation",
     "faqTitle": "Frequently asked questions",
     "faqQ1": "How soon will I get a response?",
-    "faqA1": "We aim to respond within 24 business hours. We prioritise email and the contact form.",
+    "faqA1": "We aim to respond within 24 business hours. We prioritise phone and Facebook.",
     "faqQ2": "Do you support Vietnamese?",
     "faqA2": "Yes. Our support team and interface are available in Vietnamese.",
     "faqQ3": "Is there setup guidance?",
@@ -130,7 +130,7 @@
     "trust3": "Data secured",
     "trust4": "No hidden fees",
     "ctaTitle": "Start managing your salon professionally today",
-    "ctaButton": "Try for free",
+    "ctaButton": "Try free now",
     "ctaSubtext": "No complex setup required."
   },
   "pricingPage": {
@@ -156,7 +156,6 @@
     "plan3Feature5": "Data export",
     "plan4Feature1": "Unlimited staff",
     "plan4Feature2": "All Premium features",
-    "plan4Feature3": "Multi-location",
     "plan4Feature4": "API & integrations",
     "plan4Feature5": "Centralised management",
     "compareTitle": "Detailed plan comparison",
@@ -198,12 +197,12 @@
     "faqQ6": "Is there data backup?",
     "faqA6": "Yes. Data is backed up regularly and stored securely in the cloud.",
     "faqQ7": "Is there setup support?",
-    "faqA7": "Yes. We provide email and documentation support. Premium and above get priority support.",
+    "faqA7": "Yes — we support you by phone, Facebook, Instagram, and WhatsApp.",
     "faqQ8": "Can I upgrade or downgrade?",
     "faqA8": "Yes. You can change your plan anytime; billing is prorated.",
     "ctaTitle": "Start managing your salon professionally today",
     "ctaSubtext": "30-day free trial – no card required.",
-    "ctaButton": "Try for free"
+    "ctaButton": "Try it now"
   },
   "footer": {
     "quickLinks": "Quick links",

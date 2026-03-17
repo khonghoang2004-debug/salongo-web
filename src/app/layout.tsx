@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
+
+/** Favicon / logo tab & Google kết quả tìm kiếm (SVG trong public/) */
+export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/salongo-logo.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: "/salongo-logo.svg",
+    apple: [{ url: "/salongo-logo.svg", type: "image/svg+xml" }],
+  },
+};
 
 export default async function RootLayout({
   children,

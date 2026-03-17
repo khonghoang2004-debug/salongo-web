@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
 
-const FAQ_KEYS = [1, 2, 3, 4, 5, 6, 7, 8] as const;
+const FAQ_KEYS = [1, 2, 3, 4, 7, 8] as const;
 
 export function SectionPricingFAQ() {
   const t = useTranslations("pricingPage");
@@ -18,8 +18,8 @@ export function SectionPricingFAQ() {
         </h2>
 
         <div className="mt-10 space-y-3">
-          {FAQ_KEYS.map((i) => {
-            const isOpen = openIndex === i - 1;
+          {FAQ_KEYS.map((i, idx) => {
+            const isOpen = openIndex === idx;
             return (
               <div
                 key={i}
@@ -27,7 +27,7 @@ export function SectionPricingFAQ() {
               >
                 <button
                   type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : i - 1)}
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-[#1F2937]"
                 >
                   <span>{t(`faqQ${i}`)}</span>

@@ -21,41 +21,46 @@ const footerNavItems = [
 const linkBase =
   "text-sm text-neutral-600 transition-colors duration-200 hover:text-[#EC4899] focus:outline-none focus:ring-2 focus:ring-[#EC4899]/30 focus:ring-offset-1 rounded";
 
+const socialBtnClass =
+  "flex h-8 w-8 items-center justify-center rounded-md border border-neutral-200 bg-neutral-50/80 text-neutral-600 transition-colors sm:h-9 sm:w-9 sm:rounded-lg";
+
 export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
 
   return (
     <footer className="border-t border-neutral-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        {/*
+          Mobile: 2 cột — điều hướng | liên hệ (gọn). Tablet+: layout cũ.
+          Hàng 1 mobile: brand full width. Hàng 2: nav | contact.
+        */}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-12 lg:gap-8">
           {/* Brand */}
-          <div className="lg:col-span-4">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2.5 transition-opacity hover:opacity-85"
-            >
-              <img
-                src={siteConfig.logo}
-                alt=""
-                width={40}
-                height={40}
-                className="h-10 w-10 shrink-0 rounded-lg"
-              />
-              <span className="bg-gradient-to-r from-[#EC4899] to-[#A855F7] bg-clip-text text-lg font-bold tracking-tight text-transparent">
-                {siteConfig.name}
-              </span>
-            </Link>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-neutral-500">
-              {t("tagline")}
-            </p>
-            {/* Social */}
-            <div className="mt-4 flex items-center gap-2">
+          <div className="col-span-2 flex flex-col sm:col-span-1 lg:col-span-4">
+            <div className="flex items-start justify-between gap-3 sm:block">
+              <Link
+                href="/"
+                className="inline-flex min-w-0 items-center gap-2 transition-opacity hover:opacity-85 sm:gap-2.5"
+              >
+                <img
+                  src={siteConfig.logo}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="h-9 w-9 shrink-0 rounded-lg sm:h-10 sm:w-10"
+                />
+                <span className="bg-gradient-to-r from-[#EC4899] to-[#A855F7] bg-clip-text text-base font-bold tracking-tight text-transparent sm:text-lg">
+                  {siteConfig.name}
+                </span>
+              </Link>
+              {/* Social: cùng hàng brand trên mobile */}
+              <div className="flex shrink-0 items-center gap-1 sm:mt-4 sm:justify-start lg:mt-4">
               <a
                 href={CONTACT_FACEBOOK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 bg-neutral-50/80 text-neutral-600 transition-colors hover:border-[#EC4899]/30 hover:bg-pink-50 hover:text-[#EC4899]"
+                className={`${socialBtnClass} hover:border-[#EC4899]/30 hover:bg-pink-50 hover:text-[#EC4899]`}
                 aria-label="Facebook"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
@@ -66,7 +71,7 @@ export async function Footer() {
                 href={CONTACT_INSTAGRAM}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 bg-neutral-50/80 text-neutral-600 transition-colors hover:border-[#EC4899]/30 hover:bg-pink-50 hover:text-[#EC4899]"
+                className={`${socialBtnClass} hover:border-[#EC4899]/30 hover:bg-pink-50 hover:text-[#EC4899]`}
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
@@ -77,7 +82,7 @@ export async function Footer() {
                 href={CONTACT_WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 bg-neutral-50/80 text-neutral-600 transition-colors hover:border-green-500/30 hover:bg-green-50 hover:text-green-600"
+                className={`${socialBtnClass} hover:border-green-500/30 hover:bg-green-50 hover:text-green-600`}
                 aria-label="WhatsApp"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
@@ -85,19 +90,23 @@ export async function Footer() {
                 </svg>
               </a>
             </div>
+            </div>
+            <p className="mt-2.5 text-xs leading-snug text-neutral-500 sm:mt-3 sm:max-w-xs sm:text-sm sm:leading-relaxed">
+              {t("tagline")}
+            </p>
           </div>
 
-          {/* Quick links */}
-          <div className="sm:col-span-1 lg:col-span-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+          {/* Quick links — mobile: cột trái, gọn */}
+          <div className="min-w-0 sm:col-span-1 lg:col-span-3">
+            <h3 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-xs">
               {t("quickLinks")}
             </h3>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-2 space-y-1 sm:mt-4 sm:space-y-2.5">
               {footerNavItems.map(({ href, labelKey }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className={`${linkBase} inline-block`}
+                    className={`${linkBase} inline-block text-xs sm:text-sm`}
                   >
                     {labelKey === "home" ? t("home") : tNav(labelKey)}
                   </Link>
@@ -106,16 +115,19 @@ export async function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Legal */}
-          <div className="sm:col-span-1 lg:col-span-4">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+          {/* Contact & Legal — mobile: cột phải cạnh điều hướng */}
+          <div className="min-w-0 max-sm:border-l max-sm:border-neutral-100 max-sm:pl-3 sm:col-span-1 lg:col-span-5">
+            <h3 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-xs">
               {tNav("contact")}
             </h3>
-            <dl className="mt-4 space-y-2.5">
+            <dl className="mt-2 space-y-1.5 sm:mt-4 sm:space-y-2.5">
               <div>
                 <dt className="sr-only">Email</dt>
                 <dd>
-                  <a href={`mailto:${CONTACT_EMAIL}`} className={linkBase}>
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className={`${linkBase} block text-xs break-all sm:inline sm:text-sm sm:break-normal`}
+                  >
                     {CONTACT_EMAIL}
                   </a>
                 </dd>
@@ -125,26 +137,26 @@ export async function Footer() {
                 <dd>
                   <a
                     href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
-                    className={linkBase}
+                    className={`${linkBase} text-xs sm:text-sm`}
                   >
                     {CONTACT_PHONE}
                   </a>
                 </dd>
               </div>
             </dl>
-            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-neutral-100 pt-5">
-              <Link href="/privacy" className={linkBase}>
+            <div className="mt-3 flex flex-wrap gap-x-2.5 gap-y-0.5 border-t border-neutral-100 pt-3 sm:mt-5 sm:gap-x-5 sm:gap-y-2 sm:pt-5">
+              <Link href="/privacy" className={`${linkBase} text-xs sm:text-sm`}>
                 {t("privacy")}
               </Link>
-              <Link href="/terms" className={linkBase}>
+              <Link href="/terms" className={`${linkBase} text-xs sm:text-sm`}>
                 {t("terms")}
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-100 pt-8 sm:flex-row">
-          <p className="text-center text-sm text-neutral-500 sm:text-left">
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-neutral-100 pt-5 sm:mt-12 sm:flex-row sm:gap-4 sm:pt-8">
+          <p className="text-center text-xs text-neutral-500 sm:text-left sm:text-sm">
             &copy; {new Date().getFullYear()} SalonGo. {t("rights")}
           </p>
         </div>

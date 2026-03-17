@@ -56,11 +56,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: siteConfig.name,
       title: siteConfig.name,
       description: meta.description,
+      images: [{ url: siteConfig.ogImage, alt: siteConfig.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: siteConfig.name,
       description: meta.description,
+      images: [siteConfig.ogImage],
     },
     robots: {
       index: true,

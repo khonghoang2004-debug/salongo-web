@@ -34,18 +34,18 @@ export async function DownloadSection() {
   const t = await getTranslations("download");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-16 lg:pb-20">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
             {t("title")}
           </h2>
-          <p className="mt-5 text-lg text-[#6B7280]">
+          <p className="mt-3 text-lg text-[#6B7280]">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
             href={WINDOWS_DOWNLOAD_URL}
             target="_blank"

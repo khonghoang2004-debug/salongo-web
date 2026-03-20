@@ -47,10 +47,10 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
   const bullets = BULLET_KEYS[i];
 
   return (
-    <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] sm:p-8">
-      <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+    <div className="rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] sm:p-6">
+      <div className="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
         {/* Problem */}
-        <div className="flex gap-5">
+        <div className="flex gap-3">
           <div
             className="flex size-16 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]"
             style={{
@@ -64,7 +64,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
             <h3 className="text-lg font-bold text-[#374151]">
               {tProblem(`item${index}Title`)}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+            <p className="mt-1 text-sm leading-relaxed text-[#6B7280]">
               {tProblem(`item${index}Desc`)}
             </p>
           </div>
@@ -79,16 +79,16 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
             →
           </span>
         </div>
-        <div className="flex items-center justify-center py-2 lg:hidden" aria-hidden>
+        <div className="flex items-center justify-center py-1 lg:hidden" aria-hidden>
           <span className="text-[#EC4899]">↓</span>
         </div>
 
         {/* Solution */}
-        <div className="rounded-xl bg-gradient-to-br from-pink-50/60 to-violet-50/40 p-5 sm:p-6" style={{ borderRadius: 16 }}>
+        <div className="rounded-xl bg-gradient-to-br from-pink-50/60 to-violet-50/40 p-4 sm:p-5" style={{ borderRadius: 16 }}>
           <h4 className="text-lg font-bold text-[#1F2937]">
             {tSolution(`item${index}Title`)}
           </h4>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-2 space-y-1.5">
             {bullets.map((key) => (
               <li key={key} className="flex items-center gap-2 text-[#4B5563]">
                 <span
@@ -99,7 +99,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
               </li>
             ))}
           </ul>
-          <p className="mt-4 flex items-center gap-2 font-semibold text-emerald-600">
+          <p className="mt-2.5 flex items-center gap-2 font-semibold text-emerald-600">
             <span className="text-lg">✓</span>
             {tSolution(`result${index}`)}
           </p>

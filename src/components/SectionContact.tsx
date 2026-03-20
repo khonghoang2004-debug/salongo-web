@@ -32,14 +32,14 @@ export async function SectionContact() {
   const t = await getTranslations("contact");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
       <div className="mx-auto max-w-xl">
         <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-base font-semibold tracking-tight text-neutral-900">
             {t("companyInfo")}
           </h2>
 
-          <dl className="mt-5 space-y-4">
+          <dl className="mt-4 space-y-3">
             <div>
               <dt className="text-xs font-medium uppercase tracking-wider text-neutral-500">
                 {t("emailLabel")}
@@ -100,7 +100,7 @@ export async function SectionContact() {
             </div>
           </dl>
 
-          <ul className="mt-6 border-t border-neutral-100 pt-5 space-y-2.5">
+          <ul className="mt-5 border-t border-neutral-100 pt-4 space-y-2">
             <li className="flex items-center gap-2.5 text-sm text-neutral-600">
               <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-500" aria-hidden>✓</span>
               {t("supportSetup")}

@@ -68,18 +68,18 @@ export async function Problem() {
   ];
 
   return (
-    <section className="bg-white px-6 py-28">
+    <section className="bg-white px-6 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-[#1F2937] md:text-4xl">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-[#6B7280]">
+          <p className="mx-auto mt-3 max-w-2xl text-center text-[#6B7280]">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-12 lg:grid-cols-3">
           {items.map((item, index) => {
             const IconOrComponent = ITEM_ICONS[index];
             const isComposite =

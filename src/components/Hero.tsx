@@ -5,9 +5,9 @@ export async function Hero() {
   const t = await getTranslations("hero");
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+    <section className="relative overflow-hidden bg-white px-4 pt-6 pb-6 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-12 lg:pb-16">
       <div className="relative z-10 mx-auto max-w-[1600px]">
-        <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.9fr] lg:gap-16">
+        <div className="grid items-center gap-4 lg:grid-cols-[1fr_1.9fr] lg:gap-16">
           <div className="order-2 lg:order-1">
             {/* Desktop: slogan bên trái; Mobile: ẩn, slogan nằm trên ảnh */}
             <h1 className="hidden max-w-[600px] text-4xl font-bold leading-tight tracking-tight text-[#1F2937] sm:text-5xl lg:block lg:text-6xl">
@@ -34,11 +34,11 @@ export async function Hero() {
               </span>
               {t("titleAfter3")}
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-[#6B7280]">
+            <p className="mt-3 max-w-xl text-lg text-[#6B7280] sm:mt-4 lg:mt-6">
               {t("subtitle")}
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:flex-wrap sm:gap-4 lg:mt-10">
               <a
                 href="https://app.salongo.eu/signup"
                 target="_blank"
@@ -64,7 +64,7 @@ export async function Hero() {
               </Link>
             </div>
 
-            <div className="mt-8 space-y-3">
+            <div className="mt-5 space-y-2.5 sm:mt-6 sm:space-y-3 lg:mt-8">
               <p className="flex items-center gap-3 text-base font-medium text-[#6B7280]">
                 <CheckIcon />
                 {t("proof1")}
@@ -88,7 +88,7 @@ export async function Hero() {
                 className="w-full"
               />
               {/* Mobile only: slogan đè lên ảnh */}
-              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent p-5 lg:hidden">
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent p-4 lg:hidden">
                 <h1 className="text-2xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] sm:text-3xl">
                   {t("titleBefore")}{" "}
                   <span

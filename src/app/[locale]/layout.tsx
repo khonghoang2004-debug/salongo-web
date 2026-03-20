@@ -49,6 +49,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: meta.keywords,
     authors: [{ name: siteConfig.name, url: siteConfig.url }],
     creator: siteConfig.name,
+    /** Favicon / logo tab & Google kết quả tìm kiếm - URLs tuyệt đối với metadataBase */
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+        { url: "/salongo-logo.svg", type: "image/svg+xml", sizes: "any" },
+      ],
+      shortcut: "/favicon.ico",
+      apple: [{ url: "/salongo-logo.svg", type: "image/svg+xml", sizes: "180x180" }],
+    },
     openGraph: {
       type: "website",
       locale: ogLocale,

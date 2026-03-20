@@ -11,7 +11,7 @@ export async function TrustSection() {
   const t = await getTranslations("trust");
 
   return (
-    <section className="relative overflow-hidden border-t border-neutral-100 bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section className="relative overflow-hidden border-t border-neutral-100 bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-12 lg:px-8 lg:pt-12 lg:pb-16">
       <svg className="absolute size-0" aria-hidden>
         <defs>
           <linearGradient id="trustSectionIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -32,12 +32,12 @@ export async function TrustSection() {
             </span>
             {t("titleAfter")}
           </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[#6B7280] sm:mt-8">
+          <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-[#6B7280] sm:mt-5">
             {t("subtext")}
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3 lg:mt-20">
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3 lg:mt-12">
           {points.map(({ Icon, titleKey, descKey }) => (
             <div
               key={titleKey}
@@ -67,7 +67,7 @@ export async function TrustSection() {
           ))}
         </div>
 
-        <p className="mt-14 text-center text-base font-medium text-[#374151] sm:mt-16">
+        <p className="mt-10 text-center text-base font-medium text-[#374151] sm:mt-12">
           <span className="mr-1.5 text-amber-500" aria-hidden>⭐</span>
           {t("socialProof")}
         </p>

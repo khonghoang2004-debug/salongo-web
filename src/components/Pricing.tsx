@@ -44,10 +44,10 @@ export async function Pricing() {
   return (
     <section
       id="pricing"
-      className="border-t border-neutral-100 bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+      className="border-t border-neutral-100 bg-white px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12 lg:px-8 lg:pt-10 lg:pb-14"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-6">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
           {planKeys.map((plan) => (
             <div
               key={plan.nameKey}
@@ -126,7 +126,7 @@ export async function Pricing() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-sm text-[#6B7280]">
+        <p className="mt-6 text-center text-sm text-[#6B7280]">
           {t("footer")}
         </p>
       </div>

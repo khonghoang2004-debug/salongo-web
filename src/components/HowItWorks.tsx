@@ -10,18 +10,18 @@ export async function HowItWorks() {
   const t = await getTranslations("howItWorks");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-16 lg:pb-20">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-[#6B7280] sm:mt-8">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#6B7280] sm:mt-5">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mt-14 grid gap-10 sm:grid-cols-3 lg:mt-20">
+        <div className="mt-10 grid gap-10 sm:grid-cols-3 lg:mt-12">
           {steps.map((step, index) => (
             <div
               key={step.titleKey}
@@ -64,7 +64,7 @@ export async function HowItWorks() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center sm:mt-14">
+        <div className="mt-10 flex justify-center sm:mt-12">
           <a
             href="https://app.salongo.eu/signup"
             target="_blank"
@@ -91,7 +91,7 @@ export async function HowItWorks() {
           </a>
         </div>
 
-        <p className="mx-auto mt-10 max-w-xl text-center text-sm text-[#6B7280] leading-relaxed">
+        <p className="mx-auto mt-8 max-w-xl text-center text-sm text-[#6B7280] leading-relaxed">
           {t("closingLine")}
         </p>
       </div>

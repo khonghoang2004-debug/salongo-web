@@ -2,15 +2,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/favicon.ico",
-        destination: "/salongo-logo.svg",
-        permanent: false,
-      },
-    ];
-  },
+  // Không cần redirect nữa vì đã có file favicon.ico thật trong public/
 };
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");

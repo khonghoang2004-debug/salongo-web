@@ -5,7 +5,7 @@ export async function SectionContactCTA() {
 
   return (
     <section
-      className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
+      className="relative overflow-hidden px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-14 lg:px-8 lg:pt-12 lg:pb-16"
       style={{
         background:
           "linear-gradient(135deg, rgba(236,72,153,0.12) 0%, rgba(168,85,247,0.1) 50%, rgba(236,72,153,0.08) 100%)",
@@ -15,10 +15,10 @@ export async function SectionContactCTA() {
         <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
           {t("ctaTitle")}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-[#6B7280]">
+        <p className="mx-auto mt-3 max-w-xl text-lg text-[#6B7280]">
           {t("ctaSubtext")}
         </p>
-        <div className="mt-8">
+        <div className="mt-6">
           <a
             href="https://app.salongo.eu/signup"
             target="_blank"

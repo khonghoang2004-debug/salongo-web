@@ -12,12 +12,12 @@ export async function SectionContactTrust() {
   const t = await getTranslations("contact");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-8 lg:px-8 lg:pt-8 lg:pb-10">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-center text-lg font-bold tracking-tight text-[#1F2937] sm:text-xl lg:text-2xl">
           {t("trustTitle")}
         </h2>
-        <div className="mt-5 grid grid-cols-2 gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4 lg:gap-4">
+        <div className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-6 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4 lg:gap-3">
           {ITEMS.map(({ key, Icon }) => (
             <div
               key={key}

@@ -51,7 +51,7 @@ export async function FeatureBlocksAlternating() {
   const t = await getTranslations("featuresPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-4 pb-8 sm:px-6 sm:pt-6 sm:pb-10 lg:px-8 lg:pt-8 lg:pb-12">
       <div className="mx-auto max-w-6xl">
         {blocks.map((block, index) => {
           const isEven = index % 2 === 1;
@@ -62,7 +62,7 @@ export async function FeatureBlocksAlternating() {
           return (
             <div
               key={block.titleKey}
-              className={`grid items-center gap-10 py-12 lg:grid-cols-2 lg:gap-14 lg:py-16 ${index > 0 ? "border-t border-neutral-100" : ""}`}
+              className={`grid items-center gap-6 py-6 lg:grid-cols-2 lg:gap-8 lg:py-8 ${index > 0 ? "border-t border-neutral-100" : ""}`}
             >
               <div className={imageOnRight ? "lg:order-2" : ""}>
                 {block.image === "custom" && "imageSrc" in block ? (
@@ -82,10 +82,10 @@ export async function FeatureBlocksAlternating() {
                 <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
                   {t(block.titleKey)}
                 </h2>
-                <p className="mt-4 text-[#6B7280] leading-relaxed">
+                <p className="mt-2 text-[#6B7280] leading-relaxed">
                   {t(block.descKey)}
                 </p>
-                <ul className={`mt-6 space-y-3 ${imageOnRight ? "lg:ml-auto lg:flex lg:flex-col lg:items-end" : ""}`}>
+                <ul className={`mt-4 space-y-2 ${imageOnRight ? "lg:ml-auto lg:flex lg:flex-col lg:items-end" : ""}`}>
                   {block.bullets.map((key) => (
                     <li key={key} className="flex items-center gap-3">
                       <span

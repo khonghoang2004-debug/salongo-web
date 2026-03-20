@@ -10,12 +10,12 @@ export async function SectionWhyFeatures() {
   const t = await getTranslations("featuresPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-4 pb-8 sm:px-6 sm:pt-6 sm:pb-10 lg:px-8 lg:pt-8 lg:pb-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
           {t("whyTitle")}
         </h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-3 lg:mt-12">
+        <div className="mt-6 grid gap-5 sm:grid-cols-3 lg:mt-8">
           {cards.map(({ titleKey, descKey }) => (
             <div
               key={titleKey}
@@ -27,7 +27,7 @@ export async function SectionWhyFeatures() {
               <h3 className="text-lg font-bold text-[#1F2937]">
                 {t(titleKey)}
               </h3>
-              <p className="mt-3 text-[#6B7280] leading-relaxed">
+              <p className="mt-2 text-[#6B7280] leading-relaxed">
                 {t(descKey)}
               </p>
             </div>

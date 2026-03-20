@@ -7,7 +7,7 @@ export async function ProblemSolutionResult() {
   const tSolution = await getTranslations("solution");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-12 pb-16 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">

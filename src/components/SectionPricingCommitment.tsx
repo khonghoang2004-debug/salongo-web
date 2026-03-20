@@ -13,13 +13,13 @@ export async function SectionPricingCommitment() {
   const t = await getTranslations("pricingPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-8 lg:px-8 lg:pt-8 lg:pb-10">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-center text-xl font-bold tracking-tight text-[#1F2937] sm:text-2xl lg:text-3xl">
           {t("commitmentTitle")}
         </h2>
 
-        <ul className="mt-5 grid grid-cols-2 gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:mt-10 lg:grid-cols-5 lg:gap-3">
+        <ul className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-6 sm:grid-cols-2 sm:gap-3 lg:mt-8 lg:grid-cols-5 lg:gap-2.5">
           {COMMITMENTS.map(({ key, Icon }, index) => (
             <li
               key={key}

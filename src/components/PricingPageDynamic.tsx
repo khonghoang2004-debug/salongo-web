@@ -7,7 +7,7 @@ const SectionPricingFAQ = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex justify-center py-12">
+      <div className="flex justify-center py-8">
         <div className="h-8 w-48 animate-pulse rounded bg-neutral-100" />
       </div>
     ),

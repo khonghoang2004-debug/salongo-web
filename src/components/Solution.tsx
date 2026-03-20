@@ -61,18 +61,18 @@ export async function Solution() {
   ];
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-16 lg:pb-20">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#6B7280]">
+          <p className="mx-auto mt-3 max-w-2xl text-lg text-[#6B7280]">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mt-16 grid gap-12 md:grid-cols-2 lg:mt-20">
+        <div className="mt-10 grid gap-12 md:grid-cols-2 lg:mt-12">
           {items.map(({ titleKey, descKey }, index) => {
             const IconOrComponent = ITEM_ICONS[index];
             const isComposite = IconOrComponent === IconGlobeCalendar;

@@ -31,13 +31,13 @@ export async function PricingComparisonTable() {
   ];
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl">
           {t("compareTitle")}
         </h2>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+        <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-left text-sm">
               <thead>

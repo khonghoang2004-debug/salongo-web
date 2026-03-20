@@ -18,7 +18,7 @@ export async function TermsOfServiceContent() {
   const t = await getTranslations("termsOfService");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-10 lg:px-8 lg:pt-12 lg:pb-16">
       <div className="mx-auto max-w-3xl prose prose-neutral">
         {SECTION_KEYS.map((key) => (
           <div key={key} className="mb-8">

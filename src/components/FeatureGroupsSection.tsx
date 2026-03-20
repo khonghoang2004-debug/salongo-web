@@ -49,12 +49,12 @@ export async function FeatureGroupsSection() {
   const t = await getTranslations("featuresPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
           {t("groupsTitle")}
         </h2>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3">
           {groups.map((group) => (
             <div
               key={group.titleKey}
@@ -63,7 +63,7 @@ export async function FeatureGroupsSection() {
               <h3 className="text-lg font-bold text-[#1F2937]">
                 {t(group.titleKey)}
               </h3>
-              <ul className="mt-5 space-y-4">
+              <ul className="mt-3 space-y-2.5">
                 {group.items.map(({ labelKey, Icon }) => (
                   <li key={labelKey} className="flex items-center gap-4">
                     <div className={iconBoxClass} style={iconBoxStyle}>

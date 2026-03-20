@@ -11,12 +11,12 @@ export async function SectionSolutionsResults() {
   const t = await getTranslations("solutionsPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
           {t("resultsTitle")}
         </h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:grid-cols-4">
           {stats.map(({ titleKey, descKey }) => (
             <div
               key={titleKey}
@@ -26,7 +26,7 @@ export async function SectionSolutionsResults() {
               <h3 className="text-lg font-bold text-[#1F2937]">
                 {t(titleKey)}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
+              <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
                 {t(descKey)}
               </p>
             </div>

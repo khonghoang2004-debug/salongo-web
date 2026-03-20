@@ -12,13 +12,13 @@ export async function SectionPricingWhoIsFor() {
   const tPricing = await getTranslations("pricing");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="border-t border-neutral-100 bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl">
           {t("whoTitle")}
         </h2>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:mt-8 lg:grid-cols-4">
           {CARDS.map(({ planKey, titleKey, descKey }) => (
             <div
               key={planKey}
@@ -27,10 +27,10 @@ export async function SectionPricingWhoIsFor() {
               <p className="text-sm font-semibold text-[#EC4899]">
                 {tPricing(planKey)}
               </p>
-              <h3 className="mt-2 text-lg font-bold text-[#1F2937]">
+              <h3 className="mt-1.5 text-lg font-bold text-[#1F2937]">
                 {t(titleKey)}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+              <p className="mt-1.5 text-sm leading-relaxed text-[#6B7280]">
                 {t(descKey)}
               </p>
             </div>

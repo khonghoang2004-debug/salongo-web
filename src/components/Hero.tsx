@@ -9,8 +9,8 @@ export async function Hero() {
       <div className="relative z-10 mx-auto max-w-[1600px]">
         <div className="grid items-center gap-4 lg:grid-cols-[1fr_1.9fr] lg:gap-16">
           <div className="order-2 lg:order-1">
-            {/* Desktop: slogan bên trái; Mobile: ẩn, slogan nằm trên ảnh */}
-            <h1 className="hidden max-w-[600px] text-4xl font-bold leading-tight tracking-tight text-[#1F2937] sm:text-5xl lg:block lg:text-6xl">
+            {/* H1 always visible for SEO - styling handles responsive display */}
+            <h1 className="max-w-[600px] text-4xl font-bold leading-tight tracking-tight text-[#1F2937] sm:text-5xl lg:text-6xl">
               {t("titleBefore")}{" "}
               <span
                 className="bg-clip-text text-transparent"
@@ -87,9 +87,9 @@ export async function Hero() {
                 alt={t("imageAlt")}
                 className="w-full"
               />
-              {/* Mobile only: slogan đè lên ảnh */}
+              {/* Mobile only: visual overlay text (not H1 for SEO) */}
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent p-4 lg:hidden">
-                <h1 className="text-2xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] sm:text-3xl">
+                <div className="text-2xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] sm:text-3xl">
                   {t("titleBefore")}{" "}
                   <span
                     className="bg-clip-text text-transparent"
@@ -112,7 +112,7 @@ export async function Hero() {
                     {t("heroHighlight3")}
                   </span>
                   {t("titleAfter3")}
-                </h1>
+                </div>
               </div>
             </div>
           </div>

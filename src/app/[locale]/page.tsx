@@ -23,12 +23,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("homeTitle"),
       description: t("homeDesc"),
       url: pageUrl,
-      images: [{ url: siteConfig.ogImage, alt: t("homeTitle") }],
+      images: [
+        {
+          url: `${siteConfig.url}${siteConfig.ogImage}`,
+          width: 1200,
+          height: 630,
+          alt: t("homeTitle"),
+        },
+      ],
     },
     twitter: {
       title: t("homeTitle"),
       description: t("homeDesc"),
-      images: [siteConfig.ogImage],
+      images: [`${siteConfig.url}${siteConfig.ogImage}`],
     },
   };
 }
@@ -38,7 +45,7 @@ export default async function Home({ params }: Props) {
   setRequestLocale(locale);
 
   const base = siteConfig.url;
-  const heroImageUrl = `${base}${siteConfig.ogImage}`;
+  const ogImageUrl = `${base}${siteConfig.ogImage}`;
   const pageUrl = `${base}/${locale}`;
   const tPage = await getTranslations({ locale, namespace: "pages" });
   const jsonLd = {
@@ -50,7 +57,7 @@ export default async function Home({ params }: Props) {
         url: pageUrl,
         name: siteConfig.name,
         description: tPage("homeDesc"),
-        image: heroImageUrl,
+        image: ogImageUrl,
       },
       {
         "@type": "Organization",
@@ -58,7 +65,17 @@ export default async function Home({ params }: Props) {
         name: siteConfig.name,
         url: base,
         logo: `${base}${siteConfig.logo}`,
-        image: heroImageUrl,
+        image: ogImageUrl,
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${base}/#software`,
+        name: siteConfig.name,
+        url: base,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        image: ogImageUrl,
+        description: tPage("homeDesc"),
       },
     ],
   };

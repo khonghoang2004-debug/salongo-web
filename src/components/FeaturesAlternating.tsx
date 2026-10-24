@@ -44,7 +44,7 @@ export async function FeaturesAlternating() {
           </p>
         </div>
 
-        <div className="mt-16 space-y-24 lg:mt-20">
+        <div className="mt-10 space-y-14 lg:mt-14 lg:space-y-20">
           {items.map(({ icon: Icon, titleKey, descKey }, index) => {
             const isEven = index % 2 === 0;
             return (

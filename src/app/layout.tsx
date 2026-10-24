@@ -9,7 +9,7 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <body>
         <svg className="absolute size-0 overflow-hidden" aria-hidden>
           <defs>

@@ -26,7 +26,7 @@ export async function SectionAbout() {
             {t("missionTitle")}
           </span>
           <h1 className="mt-5 sg-h1">{t("title")}</h1>
-          <div className="sg-hero-card mx-auto mt-8 max-w-3xl rounded-3xl px-6 py-8 sm:mt-10 sm:px-10 sm:py-10">
+          <div className="sg-hero-card mx-auto mt-8 max-w-3xl rounded-3xl px-6 py-8 sm:mt-8 sm:px-10 sm:py-10">
             <p className="text-xl font-semibold leading-snug sm:text-2xl lg:text-[1.75rem]">
               “{t("missionDesc")}”
             </p>
@@ -38,7 +38,7 @@ export async function SectionAbout() {
       <section className="sg-section bg-white">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center sg-h2">{t("whyTitle")}</h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-3 lg:mt-12 lg:gap-6">
+          <div className="mt-8 grid gap-5 sm:grid-cols-3 lg:mt-10 lg:gap-6">
             {whyItems.map(({ key, Icon }) => (
               <div key={key} className="sg-card sg-card-hover p-6 sm:p-7">
                 <div className="sg-icon-tile size-12">
@@ -55,7 +55,7 @@ export async function SectionAbout() {
       <section className="sg-section sg-section-alt">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-center sg-h2">{t("roadmapTitle")}</h2>
-          <ol className="relative mt-10 space-y-5 lg:mt-12">
+          <ol className="relative mt-8 space-y-5 lg:mt-10">
             <span
               className="absolute bottom-6 left-6 top-6 w-[3px] -translate-x-1/2 rounded-full bg-[image:var(--sg-gradient)] opacity-70"
               aria-hidden

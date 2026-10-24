@@ -26,7 +26,7 @@ export async function TrustSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3 lg:mt-12">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 lg:mt-10">
           {points.map(({ Icon, titleKey, descKey }) => (
             <div
               key={titleKey}
@@ -50,7 +50,7 @@ export async function TrustSection() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 flex w-fit items-center gap-1.5 rounded-full bg-white px-4 py-2 text-center text-sm font-medium text-[#374151] shadow-sg-lg ring-1 ring-violet-100 sm:mt-12 sm:text-base">
+        <p className="mx-auto mt-8 flex w-fit items-center gap-1.5 rounded-full bg-white px-4 py-2 text-center text-sm font-medium text-[#374151] shadow-sg-lg ring-1 ring-violet-100 sm:mt-10 sm:text-base">
           <span className="text-amber-500" aria-hidden>⭐</span>
           {t("socialProof")}
         </p>

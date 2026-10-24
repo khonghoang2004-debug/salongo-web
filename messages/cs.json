@@ -10,7 +10,10 @@
     "tryFree": "Vyzkoušet zdarma",
     "downloadApp": "Stáhnout aplikaci",
     "downloadForWindows": "Pro Windows",
-    "downloadForMac": "Pro macOS"
+    "downloadForMac": "Pro macOS",
+    "closeMenu": "Zavřít",
+    "backToTop": "Nahoru",
+    "backHome": "Zpět na úvod"
   },
   "howItWorks": {
     "title": "Začněte za pár minut",
@@ -201,7 +204,7 @@
     "faqQ8": "Změna tarifu?",
     "faqA8": "Ano. Kdykoli změnit, účtování poměrně.",
     "ctaTitle": "Začněte řídit salon profesionálně ještě dnes",
-    "ctaSubtext": "30 dní zdarma – bez karty.",
+    "ctaSubtext": "150 dní (5 měsíců) zdarma – bez karty.",
     "ctaButton": "Vyzkoušet hned"
   },
   "footer": {
@@ -274,7 +277,7 @@
     "stat1Label": "Salonů používá SalonGo",
     "stat2Value": "4",
     "stat2Label": "Jazyky včetně vietnamštiny",
-    "stat3Value": "30 dní",
+    "stat3Value": "150 dní",
     "stat3Label": "Zkušební verze zdarma",
     "stat4Value": "24 h",
     "stat4Label": "Odpověď podpory",
@@ -410,6 +413,12 @@
     "block1Bullet2": "Žádné dvojité rezervace",
     "block1Bullet3": "Automatické připomínky",
     "block1Bullet4": "Automatická aktualizace stavu",
+    "block1TabStaff": "Podle zaměstnanců",
+    "block1TabList": "Seznam",
+    "block1ViewStaff": "Pohled podle zaměstnanců",
+    "block1ViewStaffDesc": "Každý zaměstnanec má vlastní sloupec po hodinách – hned vidíte, kdo je volný a kdo má plno.",
+    "block1ViewList": "Pohled jako seznam",
+    "block1ViewListDesc": "Rezervace seskupené podle časových bloků, nepřiřazené rezervace jsou zvýrazněné pro rychlé přidělení.",
     "block2Title": "Pokladna & platby",
     "block2Desc": "Hotovost, převod, na účet – elektronické faktury, snadné vyhledávání a reporty.",
     "block2Bullet1": "Flexibilní platby",
@@ -420,6 +429,15 @@
     "block3Bullet2": "Grafy",
     "block3Bullet3": "Tržby v čase",
     "block3Bullet4": "Export pro účetnictví",
+    "block3TabOverview": "Přehled",
+    "block3TabRevenue": "Tržby",
+    "block3ViewOverview": "Přehledová obrazovka",
+    "block3ViewOverviewDesc": "Dnešní tržby, rezervace, klienti a nejlepší zaměstnanec, s grafem a nejprodávanějšími službami – po otevření aplikace hned víte, jak salon funguje.",
+    "block3ViewRevenue": "Přehled tržeb",
+    "block3ViewRevenueDesc": "Graf tržeb po měsících, pořadí podle zaměstnanců, služeb a způsobu platby včetně spropitného – export dat pro účetní.",
+    "block3TabInvoices": "Účtenky",
+    "block3ViewInvoices": "Správa účtenek",
+    "block3ViewInvoicesDesc": "Každá účtenka s klientem, službou, zaměstnancem a způsobem platby; součty v hotovosti, kartou a převodem, export do PDF.",
     "block4Title": "Vlastní stránka online rezervací pro váš salon",
     "block4Desc": "Každý salon má vlastní rezervační stránku s profesionálním odkazem – zákazníci mohou rezervovat 24/7 v několika krocích.",
     "block4Bullet1": "Vlastní rezervační odkaz pro každý salon",
@@ -432,6 +450,27 @@
     "block5Bullet2": "Aktualizace stavu dokončených služeb",
     "block5Bullet3": "Přehled vlastních tržeb a provizí",
     "block5Bullet4": "Jasná oprávnění podle role (majitel, manažer, zaměstnanec)",
+    "block6Title": "Klienti a věrnostní body",
+    "block6Desc": "Profil každého klienta s počtem návštěv, poslední návštěvou, nadcházejícími rezervacemi a celkovou útratou – VIP klienti se rozpoznají automaticky a věrnostní body udrží stálé zákazníky.",
+    "block6Bullet1": "Profily a historie klientů",
+    "block6Bullet2": "Rychlé hledání podle jména, telefonu, e-mailu",
+    "block6Bullet3": "Automatická pravidla VIP",
+    "block6Bullet4": "Členský program a věrnostní body",
+    "block6TabCustomers": "Klienti",
+    "block7Title": "Služby a ceník",
+    "block7Desc": "Všechny služby v jedné tabulce: barevné kategorie, délka, cena a stav – jedním klepnutím zvolíte, které služby si klienti mohou rezervovat online.",
+    "block7Bullet1": "Barevné kategorie služeb",
+    "block7Bullet2": "Přehledná délka a cena",
+    "block7Bullet3": "Online rezervace zapnout/vypnout u každé služby",
+    "block7Bullet4": "Filtrování, hledání a hromadné úpravy",
+    "block7TabServices": "Služby",
+    "block8Title": "Automatický výpočet mezd",
+    "block8Desc": "Mzda každého zaměstnance se počítá automaticky z jeho tržeb – procentem nebo podle služby, včetně spropitného. Na konci měsíce stačí zkontrolovat a exportovat výplatní listinu.",
+    "block8Bullet1": "Provize v % nebo podle služby",
+    "block8Bullet2": "Spropitné připočtené každému",
+    "block8Bullet3": "Celkové mzdy, tržby a počet účtenek za období",
+    "block8Bullet4": "Export výplatní listiny jedním klepnutím",
+    "block8TabPayroll": "Mzdy",
     "groupsTitle": "Funkce podle kategorie",
     "group1Title": "Provoz",
     "group1Item1": "Rezervace",
@@ -463,7 +502,7 @@
     "testimonial3Name": "Lan",
     "testimonial3Role": "Majitelka salonu, Brno",
     "ctaTitle": "Připraveni na profesionálnější provoz salonu?",
-    "ctaSubtext": "30 dní zdarma. Bez karty.",
+    "ctaSubtext": "150 dní (5 měsíců) zdarma. Bez karty.",
     "ctaButton": "Začít nyní"
   },
   "pricing": {
@@ -494,11 +533,17 @@
   },
   "cta": {
     "title": "Začněte profesionálně spravovat svůj salon ještě dnes.",
-    "subtitle": "30 dní zdarma vyzkoušet.",
+    "subtitle": "150 dní (5 měsíců) zdarma vyzkoušet.",
     "button": "Začít nyní"
   },
   "metadata": {
     "description": "SalonGo – Komplexní platforma pro správu salonu: rezervace, POS, mzdy, reporty příjmů. Jednoduchá, přesná, šetří čas.",
     "keywords": ["správa salonu", "software pro salony", "rezervace salonu", "mzdy zaměstnanců", "příjmy salonu"]
+  },
+  "notFound": {
+    "title": "Stránka nenalezena",
+    "desc": "Hledaná stránka mohla být přesunuta nebo již neexistuje.",
+    "backHome": "Zpět na úvod",
+    "goBack": "Zpět"
   }
 }

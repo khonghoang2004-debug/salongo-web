@@ -18,7 +18,7 @@ export async function ProblemSolutionResult() {
           </p>
         </div>
 
-        <div className="mt-16 space-y-16 lg:mt-20">
+        <div className="mt-10 space-y-12 lg:mt-14">
           {indices.map((i) => (
             <div
               key={i}
@@ -53,7 +53,7 @@ export async function ProblemSolutionResult() {
           ))}
         </div>
 
-        <div className="sg-section-tint mt-16 rounded-2xl p-8 text-center ring-1 ring-violet-100 lg:mt-20">
+        <div className="sg-section-tint mt-10 rounded-2xl p-8 text-center ring-1 ring-violet-100 lg:mt-14">
           <h3 className="text-xl font-bold text-ink">
             {tSolution("title")}
           </h3>

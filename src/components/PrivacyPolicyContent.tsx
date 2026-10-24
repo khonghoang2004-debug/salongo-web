@@ -15,7 +15,7 @@ export async function PrivacyPolicyContent() {
   ] as const;
 
   return (
-    <section className="sg-section bg-white">
+    <section className="bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 lg:px-8">
       <div className="mx-auto max-w-3xl prose prose-neutral">
         {sections.map(({ key }) => (
           <div key={key} className="mb-8">

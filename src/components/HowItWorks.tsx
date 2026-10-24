@@ -21,7 +21,7 @@ export async function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-10 sm:grid-cols-3 lg:mt-12">
+        <div className="mt-8 grid gap-10 sm:grid-cols-3 lg:mt-10">
           {steps.map((step, index) => (
             <div
               key={step.titleKey}
@@ -46,7 +46,7 @@ export async function HowItWorks() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center sm:mt-12">
+        <div className="mt-8 flex justify-center sm:mt-10">
           <a
             href="https://app.salongo.eu/signup"
             target="_blank"

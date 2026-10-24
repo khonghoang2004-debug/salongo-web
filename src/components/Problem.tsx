@@ -79,7 +79,7 @@ export async function Problem() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-12 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-10 lg:grid-cols-3">
           {items.map((item, index) => {
             const IconOrComponent = ITEM_ICONS[index];
             const isComposite =

@@ -13,7 +13,7 @@ export async function Hero() {
   const t = await getTranslations("hero");
 
   return (
-    <section className="sg-section-glow relative overflow-hidden px-4 pt-10 pb-12 sm:px-6 sm:pt-14 sm:pb-16 lg:px-8 lg:pt-20 lg:pb-20">
+    <section className="sg-section-glow relative overflow-hidden px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-14 lg:px-8 lg:pt-14 lg:pb-16">
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.35fr] lg:gap-14">
           <div>
@@ -68,18 +68,18 @@ export async function Hero() {
                   app.salongo.eu
                 </span>
               </div>
-              <img src="/images/hero-image.png" alt={t("imageAlt")} className="block w-full" />
+              <img src="/images/hero-dashboard.webp" alt={t("imageAlt")} width={2000} height={1150} className="block h-auto w-full" />
             </div>
 
             {/* Thẻ doanh thu — cùng kiểu thẻ gradient trong app SalonGo */}
-            <div className="sg-hero-card absolute -bottom-6 left-3 w-[72%] max-w-[300px] rounded-2xl border border-white/60 p-3.5 shadow-sg-lg sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
+            <div className="sg-hero-card absolute -bottom-10 left-3 w-[60%] max-w-[300px] rounded-xl border border-white/60 p-3 sm:w-[72%] sm:rounded-2xl shadow-sg-lg sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
               <p className="flex items-center gap-2 text-xs font-semibold sm:text-sm">
                 <Wallet className="size-4 sm:size-5" aria-hidden />
                 {t("revenueToday")}
               </p>
-              <p className="mt-1.5 flex items-center gap-2.5 sm:mt-2">
-                <span className="text-2xl font-extrabold tracking-tight sm:text-[1.75rem]">89&nbsp;230&nbsp;Kč</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/35 px-2 py-0.5 text-xs font-bold sm:text-sm">
+              <p className="mt-1 flex items-center gap-2 sm:mt-2 sm:gap-2.5">
+                <span className="text-xl font-extrabold tracking-tight sm:text-[1.75rem]">89&nbsp;230&nbsp;Kč</span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/35 px-1.5 py-0.5 text-[11px] font-bold sm:px-2 sm:text-sm">
                   <ArrowUpRight className="size-3.5" aria-hidden />
                   +100%
                 </span>
@@ -89,7 +89,7 @@ export async function Hero() {
         </div>
 
         {/* Dải số liệu */}
-        <dl className="mt-16 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-sm sm:mt-20 lg:grid-cols-4">
+        <dl className="mt-14 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-sm sm:mt-16 lg:grid-cols-4">
           {stats.map(({ value, label }, i) => (
             <div
               key={value}

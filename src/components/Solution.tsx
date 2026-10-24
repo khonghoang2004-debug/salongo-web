@@ -67,7 +67,7 @@ export async function Solution() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-12 md:grid-cols-2 lg:mt-12">
+        <div className="mt-8 grid gap-12 md:grid-cols-2 lg:mt-10">
           {items.map(({ titleKey, descKey }, index) => {
             const IconOrComponent = ITEM_ICONS[index];
             const isComposite = IconOrComponent === IconGlobeCalendar;

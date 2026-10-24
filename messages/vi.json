@@ -10,7 +10,10 @@
     "tryFree": "Dùng thử miễn phí",
     "downloadApp": "Tải app",
     "downloadForWindows": "Tải cho Windows",
-    "downloadForMac": "Tải cho macOS"
+    "downloadForMac": "Tải cho macOS",
+    "closeMenu": "Đóng",
+    "backToTop": "Lên đầu trang",
+    "backHome": "Về trang chủ"
   },
   "howItWorks": {
     "title": "Cách bắt đầu chỉ trong vài phút",
@@ -201,7 +204,7 @@
     "faqQ8": "Có nâng cấp / hạ cấp được không?",
     "faqA8": "Có. Bạn có thể đổi gói bất cứ lúc nào, tính theo tỷ lệ thời gian sử dụng.",
     "ctaTitle": "Bắt đầu quản lý salon chuyên nghiệp ngay hôm nay",
-    "ctaSubtext": "Trải nghiệm miễn phí 30 ngày – không cần thẻ.",
+    "ctaSubtext": "Trải nghiệm miễn phí 150 ngày (5 tháng) – không cần thẻ.",
     "ctaButton": "Trải nghiệm ngay"
   },
   "footer": {
@@ -274,7 +277,7 @@
     "stat1Label": "Salon đang sử dụng",
     "stat2Value": "4",
     "stat2Label": "Ngôn ngữ, có tiếng Việt",
-    "stat3Value": "30 ngày",
+    "stat3Value": "150 ngày",
     "stat3Label": "Dùng thử miễn phí",
     "stat4Value": "24 giờ",
     "stat4Label": "Phản hồi hỗ trợ",
@@ -411,6 +414,12 @@
     "block1Bullet2": "Tránh trùng giờ",
     "block1Bullet3": "Nhắc lịch tự động",
     "block1Bullet4": "Tự động cập nhật trạng thái",
+    "block1TabStaff": "Theo nhân viên",
+    "block1TabList": "Danh sách",
+    "block1ViewStaff": "Xem theo nhân viên",
+    "block1ViewStaffDesc": "Mỗi thợ một cột theo giờ trong ngày – nhìn là biết ai đang rảnh, ai đã kín lịch.",
+    "block1ViewList": "Xem dạng danh sách",
+    "block1ViewListDesc": "Lịch gom theo khung giờ, lịch chưa phân công được làm nổi bật để xếp thợ thật nhanh.",
     "block2Title": "Thanh toán nhanh chóng",
     "block2Desc": "Thu tiền mặt, chuyển khoản, ghi nợ – hóa đơn điện tử chuẩn, dễ tra cứu và báo cáo.",
     "block2Bullet1": "Thu tiền linh hoạt",
@@ -421,6 +430,15 @@
     "block3Bullet2": "Biểu đồ trực quan",
     "block3Bullet3": "Theo dõi doanh thu theo thời gian",
     "block3Bullet4": "Xuất dữ liệu cho kế toán",
+    "block3TabOverview": "Tổng quan",
+    "block3TabRevenue": "Doanh thu",
+    "block3ViewOverview": "Màn hình tổng quan",
+    "block3ViewOverviewDesc": "Doanh thu, lịch hẹn, khách và nhân viên nổi bật trong ngày, kèm biểu đồ và dịch vụ bán chạy – mở app là nắm ngay tình hình salon.",
+    "block3ViewRevenue": "Báo cáo doanh thu",
+    "block3ViewRevenueDesc": "Biểu đồ doanh thu theo tháng, xếp hạng theo nhân viên, dịch vụ và cách thanh toán, kèm tip – xuất dữ liệu cho kế toán.",
+    "block3TabInvoices": "Hoá đơn",
+    "block3ViewInvoices": "Quản lý hoá đơn",
+    "block3ViewInvoicesDesc": "Mọi hoá đơn kèm khách, dịch vụ, nhân viên và cách thanh toán; tổng thu theo tiền mặt, thẻ, chuyển khoản và xuất PDF.",
     "block4Title": "Trang đặt lịch online riêng cho salon",
     "block4Desc": "Mỗi salon có một trang đặt lịch riêng với đường link chuyên nghiệp – khách hàng có thể đặt lịch 24/7 chỉ trong vài bước đơn giản.",
     "block4Bullet1": "Link đặt lịch riêng cho từng salon",
@@ -433,6 +451,27 @@
     "block5Bullet2": "Cập nhật trạng thái hoàn thành dịch vụ",
     "block5Bullet3": "Xem doanh thu và hoa hồng cá nhân",
     "block5Bullet4": "Phân quyền rõ ràng theo vai trò (chủ, quản lý, nhân viên)",
+    "block6Title": "Quản lý khách hàng & tích điểm",
+    "block6Desc": "Hồ sơ từng khách với lượt ghé, lần ghé gần nhất, lịch hẹn tới và tổng chi tiêu – tự động nhận diện khách VIP và tích điểm thành viên để giữ chân khách quen.",
+    "block6Bullet1": "Hồ sơ & lịch sử từng khách",
+    "block6Bullet2": "Tìm nhanh theo tên, SĐT, email",
+    "block6Bullet3": "Quy tắc khách VIP tự động",
+    "block6Bullet4": "Chương trình thành viên & tích điểm",
+    "block6TabCustomers": "Khách hàng",
+    "block7Title": "Quản lý dịch vụ & bảng giá",
+    "block7Desc": "Toàn bộ dịch vụ trong một bảng: danh mục màu, thời gian, giá và trạng thái – chọn dịch vụ nào cho khách đặt online chỉ bằng một chạm.",
+    "block7Bullet1": "Danh mục dịch vụ có màu riêng",
+    "block7Bullet2": "Thời gian & giá rõ ràng",
+    "block7Bullet3": "Bật/tắt đặt lịch online từng dịch vụ",
+    "block7Bullet4": "Lọc, tìm kiếm và sửa hàng loạt",
+    "block7TabServices": "Dịch vụ",
+    "block8Title": "Tính lương tự động cho nhân viên",
+    "block8Desc": "Lương mỗi thợ được tính tự động từ doanh thu cá nhân theo % hoặc theo từng dịch vụ, cộng tip – cuối tháng chỉ cần xem và xuất bảng lương.",
+    "block8Bullet1": "Hoa hồng % hoặc theo dịch vụ",
+    "block8Bullet2": "Tự cộng tip cho từng thợ",
+    "block8Bullet3": "Tổng lương, doanh thu, số hoá đơn trong kỳ",
+    "block8Bullet4": "Xuất bảng lương một chạm",
+    "block8TabPayroll": "Tính lương",
     "groupsTitle": "Tính năng theo nhóm",
     "group1Title": "Quản lý vận hành",
     "group1Item1": "Lịch hẹn",
@@ -464,7 +503,7 @@
     "testimonial3Name": "Chị Lan",
     "testimonial3Role": "Chủ salon, Brno",
     "ctaTitle": "Sẵn sàng vận hành salon chuyên nghiệp hơn?",
-    "ctaSubtext": "Trải nghiệm miễn phí 30 ngày. Không cần thẻ.",
+    "ctaSubtext": "Trải nghiệm miễn phí 150 ngày (5 tháng). Không cần thẻ.",
     "ctaButton": "Bắt đầu ngay"
   },
   "pricing": {
@@ -495,11 +534,17 @@
   },
   "cta": {
     "title": "Bắt đầu quản lý salon chuyên nghiệp ngay hôm nay.",
-    "subtitle": "Trải nghiệm miễn phí 30 ngày.",
+    "subtitle": "Trải nghiệm miễn phí 150 ngày (5 tháng).",
     "button": "Bắt đầu ngay"
   },
   "metadata": {
     "description": "SalonGo – Nền tảng quản lý salon toàn diện: lịch hẹn, POS, tính lương, báo cáo doanh thu. Đơn giản, chính xác, tiết kiệm thời gian.",
     "keywords": ["quản lý salon", "phần mềm salon", "đặt lịch salon", "tính lương thợ", "doanh thu salon"]
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "desc": "Trang bạn tìm có thể đã bị đổi địa chỉ hoặc không còn tồn tại.",
+    "backHome": "Về trang chủ",
+    "goBack": "Quay lại"
   }
 }

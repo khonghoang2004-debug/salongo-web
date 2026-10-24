@@ -8,6 +8,7 @@ import {
   CONTACT_INSTAGRAM,
 } from "@/lib/contact";
 import { siteConfig } from "@/lib/metadata";
+import { BackToTop } from "./BackToTop";
 
 const footerNavItems = [
   { href: "/", labelKey: "home" as const },
@@ -31,7 +32,7 @@ export async function Footer() {
   return (
     <footer className="relative bg-[#fbfaff]">
       <div className="sg-gradient absolute inset-x-0 top-0 h-[3px]" aria-hidden />
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         {/*
           Mobile: 2 cột — điều hướng | liên hệ (gọn). Tablet+: layout cũ.
           Hàng 1 mobile: brand full width. Hàng 2: nav | contact.
@@ -164,12 +165,13 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-violet-100 pt-5 sm:mt-12 sm:flex-row sm:gap-4 sm:pt-8">
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-violet-100 pt-5 sm:mt-10 sm:flex-row sm:gap-4 sm:pt-8">
           <p className="text-center text-xs text-neutral-500 sm:text-left sm:text-sm">
             &copy; {new Date().getFullYear()} SalonGo. {t("rights")}
           </p>
         </div>
       </div>
+      <BackToTop />
     </footer>
   );
 }

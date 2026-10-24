@@ -10,7 +10,10 @@
     "tryFree": "Kostenlos testen",
     "downloadApp": "App herunterladen",
     "downloadForWindows": "Für Windows",
-    "downloadForMac": "Für macOS"
+    "downloadForMac": "Für macOS",
+    "closeMenu": "Schließen",
+    "backToTop": "Nach oben",
+    "backHome": "Zur Startseite"
   },
   "howItWorks": {
     "title": "In wenigen Minuten starten",
@@ -201,7 +204,7 @@
     "faqQ8": "Upgrade/Downgrade?",
     "faqA8": "Ja. Jederzeit wechseln, anteilig abgerechnet.",
     "ctaTitle": "Verwalten Sie Ihren Salon ab heute professionell",
-    "ctaSubtext": "30 Tage kostenlos – keine Karte nötig.",
+    "ctaSubtext": "150 Tage (5 Monate) kostenlos – keine Karte nötig.",
     "ctaButton": "Jetzt testen"
   },
   "footer": {
@@ -274,7 +277,7 @@
     "stat1Label": "Salons nutzen SalonGo",
     "stat2Value": "4",
     "stat2Label": "Sprachen, inkl. Vietnamesisch",
-    "stat3Value": "30 Tage",
+    "stat3Value": "150 Tage",
     "stat3Label": "Kostenlos testen",
     "stat4Value": "24 Std.",
     "stat4Label": "Antwort vom Support",
@@ -410,6 +413,12 @@
     "block1Bullet2": "Keine Doppelbuchungen",
     "block1Bullet3": "Automatische Erinnerungen",
     "block1Bullet4": "Status automatisch aktualisiert",
+    "block1TabStaff": "Nach Mitarbeiter",
+    "block1TabList": "Liste",
+    "block1ViewStaff": "Ansicht nach Mitarbeiter",
+    "block1ViewStaffDesc": "Eine Spalte pro Mitarbeiter über den ganzen Tag – sofort sehen, wer frei und wer ausgebucht ist.",
+    "block1ViewList": "Listenansicht",
+    "block1ViewListDesc": "Termine nach Zeitfenstern gruppiert, nicht zugewiesene Termine hervorgehoben für schnelles Zuweisen.",
     "block2Title": "Kasse & Zahlungen",
     "block2Desc": "Bar, Überweisung, auf Rechnung – E-Rechnungen, einfache Abfrage und Berichte.",
     "block2Bullet1": "Flexible Zahlung",
@@ -420,6 +429,15 @@
     "block3Bullet2": "Grafiken",
     "block3Bullet3": "Umsatz im Zeitverlauf",
     "block3Bullet4": "Export für Buchhaltung",
+    "block3TabOverview": "Übersicht",
+    "block3TabRevenue": "Umsatz",
+    "block3ViewOverview": "Übersichts-Dashboard",
+    "block3ViewOverviewDesc": "Umsatz, Termine, Kunden und Top-Mitarbeiter des Tages, mit Diagramm und meistverkauften Leistungen – beim Öffnen der App sofort wissen, wie es im Salon läuft.",
+    "block3ViewRevenue": "Umsatzberichte",
+    "block3ViewRevenueDesc": "Monatliches Umsatzdiagramm, Ranking nach Mitarbeiter, Leistung und Zahlungsart inkl. Trinkgeld – Datenexport für die Buchhaltung.",
+    "block3TabInvoices": "Rechnungen",
+    "block3ViewInvoices": "Rechnungsverwaltung",
+    "block3ViewInvoicesDesc": "Jede Rechnung mit Kunde, Leistung, Mitarbeiter und Zahlungsart; Summen nach Bar, Karte und Überweisung, plus PDF-Export.",
     "block4Title": "Eigene Online-Buchungsseite für Ihren Salon",
     "block4Desc": "Jeder Salon erhält eine eigene Buchungsseite mit professionellem Link – Kunden können rund um die Uhr in wenigen Schritten buchen.",
     "block4Bullet1": "Eigener Buchungslink pro Salon",
@@ -432,6 +450,27 @@
     "block5Bullet2": "Status der erledigten Leistungen aktualisieren",
     "block5Bullet3": "Eigene Umsätze und Provisionen einsehen",
     "block5Bullet4": "Klare Rechte nach Rolle (Inhaber, Manager, Mitarbeiter)",
+    "block6Title": "Kunden & Treuepunkte",
+    "block6Desc": "Ein Profil für jeden Kunden mit Besuchen, letztem Besuch, kommenden Terminen und Gesamtumsatz – VIP-Kunden werden automatisch erkannt und Treuepunkte binden Stammkunden.",
+    "block6Bullet1": "Kundenprofile & Verlauf",
+    "block6Bullet2": "Schnellsuche nach Name, Telefon, E-Mail",
+    "block6Bullet3": "Automatische VIP-Regeln",
+    "block6Bullet4": "Mitgliedschaft & Treuepunkte",
+    "block6TabCustomers": "Kunden",
+    "block7Title": "Leistungen & Preisliste",
+    "block7Desc": "Alle Leistungen in einer Tabelle: farbige Kategorien, Dauer, Preis und Status – mit einem Tipp festlegen, welche Leistungen online buchbar sind.",
+    "block7Bullet1": "Farbige Leistungskategorien",
+    "block7Bullet2": "Klare Dauer & Preise",
+    "block7Bullet3": "Online-Buchung pro Leistung ein/aus",
+    "block7Bullet4": "Filtern, suchen und Massenbearbeitung",
+    "block7TabServices": "Leistungen",
+    "block8Title": "Automatische Lohnabrechnung",
+    "block8Desc": "Der Lohn jedes Mitarbeiters wird automatisch aus seinem Umsatz berechnet – prozentual oder pro Leistung, plus Trinkgeld. Am Monatsende nur prüfen und die Lohnliste exportieren.",
+    "block8Bullet1": "Provision in % oder pro Leistung",
+    "block8Bullet2": "Trinkgeld pro Mitarbeiter automatisch addiert",
+    "block8Bullet3": "Gesamtlohn, Umsatz und Rechnungen pro Zeitraum",
+    "block8Bullet4": "Lohnliste mit einem Tipp exportieren",
+    "block8TabPayroll": "Lohn",
     "groupsTitle": "Funktionen nach Kategorie",
     "group1Title": "Betrieb",
     "group1Item1": "Termine",
@@ -463,7 +502,7 @@
     "testimonial3Name": "Lan",
     "testimonial3Role": "Saloninhaberin, Brno",
     "ctaTitle": "Bereit für einen professionelleren Salonbetrieb?",
-    "ctaSubtext": "30 Tage kostenlos testen. Keine Karte nötig.",
+    "ctaSubtext": "150 Tage (5 Monate) kostenlos testen. Keine Karte nötig.",
     "ctaButton": "Jetzt starten"
   },
   "pricing": {
@@ -494,7 +533,7 @@
   },
   "cta": {
     "title": "Starten Sie noch heute die professionelle Salonverwaltung.",
-    "subtitle": "30 Tage kostenlos erleben.",
+    "subtitle": "150 Tage (5 Monate) kostenlos erleben.",
     "button": "Jetzt starten"
   },
   "footer": {
@@ -505,5 +544,11 @@
   "metadata": {
     "description": "SalonGo – Umfassende Salonverwaltungsplattform: Termine, Kasse, Gehälter, Umsatzberichte. Einfach, präzise, zeitsparend.",
     "keywords": ["Salonverwaltung", "Salon-Software", "Salon-Terminbuchung", "Mitarbeitergehälter", "Salon-Umsatz"]
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "desc": "Die gesuchte Seite wurde möglicherweise verschoben oder existiert nicht mehr.",
+    "backHome": "Zur Startseite",
+    "goBack": "Zurück"
   }
 }

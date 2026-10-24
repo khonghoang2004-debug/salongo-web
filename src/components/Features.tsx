@@ -56,7 +56,7 @@ export async function Features() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
           {items.map(({ icon: Icon, titleKey, descKey }) => (
             <div
               key={titleKey}

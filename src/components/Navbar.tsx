@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -22,11 +23,6 @@ const menuItems = [
   { href: "/lien-he", labelKey: "contact" as const },
 ];
 
-function closeMobileMenu() {
-  const checkbox = document.getElementById("nav-menu-toggle") as HTMLInputElement | null;
-  if (checkbox) checkbox.checked = false;
-}
-
 const DOWNLOAD_LINKS = {
   windows:
     "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.exe",
@@ -38,7 +34,39 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const downloadRef = useRef<HTMLDivElement>(null);
+  const closeMobileMenu = () => setMenuOpen(false);
+
+  // Đóng menu khi chuyển trang
+  useEffect(() => {
+    setMenuOpen(false);
+    setDownloadOpen(false);
+  }, [pathname]);
+
+  // Esc để đóng menu / dropdown; khoá cuộn trang khi menu mobile mở
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        setDownloadOpen(false);
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onResize = () => window.innerWidth >= 1024 && setMenuOpen(false);
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("resize", onResize);
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -72,34 +100,35 @@ export function Navbar() {
           : "bg-white py-4"
       }`}
     >
-      <input
-        type="checkbox"
-        id="nav-menu-toggle"
-        className="peer sr-only"
-        aria-hidden
-      />
       <div className="mx-auto flex h-10 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Mobile: icon menu bên trái; Desktop: ẩn, dùng icon bên phải */}
-        <label
-          htmlFor="nav-menu-toggle"
-          className="flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-lg text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 lg:hidden"
-          aria-label="Toggle menu"
+        <button
+          type="button"
+          onClick={() => setMenuOpen((v) => !v)}
+          className="relative flex size-10 shrink-0 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 lg:hidden"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
-          <svg
-            className="size-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
+          {/* 3 gạch → dấu X, chuyển động mượt */}
+          <span className="relative block h-4 w-5" aria-hidden>
+            <span
+              className={`absolute left-0 h-0.5 w-5 rounded-full bg-current transition-all duration-300 ${
+                menuOpen ? "top-[7px] rotate-45" : "top-0"
+              }`}
             />
-          </svg>
-        </label>
+            <span
+              className={`absolute left-0 top-[7px] h-0.5 w-5 rounded-full bg-current transition-opacity duration-200 ${
+                menuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-0 h-0.5 w-5 rounded-full bg-current transition-all duration-300 ${
+                menuOpen ? "top-[7px] -rotate-45" : "top-[14px]"
+              }`}
+            />
+          </span>
+        </button>
         <Link
           href="/"
           className="flex shrink-0 items-center gap-1.5 transition-opacity hover:opacity-80"
@@ -182,7 +211,7 @@ export function Navbar() {
             </button>
             {downloadOpen && (
               <div
-                className="absolute right-0 top-full z-50 mt-2 min-w-[200px] rounded-2xl border border-neutral-200/80 bg-white py-1.5 shadow-sg-lg"
+                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[200px] rounded-2xl border border-neutral-200/80 bg-white py-1.5 shadow-sg-lg"
                 role="menu"
               >
                 <a
@@ -221,9 +250,24 @@ export function Navbar() {
         </div>
       </div>
 
+      {menuOpen && (
+        <>
+          {/* Lớp nền tối nhẹ (không blur) — chạm để đóng menu */}
+          {createPortal(
+            <button
+              type="button"
+              aria-label="Close menu"
+              tabIndex={-1}
+              onClick={closeMobileMenu}
+              className="sg-fade fixed inset-0 z-40 cursor-default bg-[#111827]/25 lg:hidden"
+            />,
+            document.body,
+          )}
       <div
-        className="hidden max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-neutral-100 bg-white px-4 pt-3 pb-5 shadow-sg-lg lg:hidden peer-checked:block"
+        id="mobile-menu"
+        className="sg-menu-panel absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-neutral-100 bg-white px-4 pt-3 pb-5 shadow-sg-lg lg:hidden"
         role="dialog"
+        aria-modal="true"
         aria-label="Mobile menu"
       >
         <nav className="flex flex-col gap-0.5" aria-label="Mobile">
@@ -288,11 +332,23 @@ export function Navbar() {
               {t("downloadForMac")}
             </a>
           </div>
-          <div className="mt-4 border-t border-gray-100 pt-4">
+          <div className="mt-4 flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
             <LocaleSwitcher />
+            <button
+              type="button"
+              onClick={closeMobileMenu}
+              className="btn-secondary px-4 py-2 text-sm"
+            >
+              <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              {t("closeMenu")}
+            </button>
           </div>
         </nav>
       </div>
+        </>
+      )}
     </header>
   );
 }

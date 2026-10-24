@@ -12,12 +12,7 @@ import {
 import { getTranslations } from "next-intl/server";
 
 const iconBoxClass =
-  "flex size-14 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]";
-const iconBoxStyle = {
-  background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-  borderColor: "rgba(236,72,153,0.25)",
-} as const;
-
+  "flex size-14 shrink-0 items-center justify-center sg-icon-tile rounded-2xl";
 const groups = [
   {
     titleKey: "group1Title" as const,
@@ -49,9 +44,9 @@ export async function FeatureGroupsSection() {
   const t = await getTranslations("featuresPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
+    <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
+        <h2 className="text-center sg-h2">
           {t("groupsTitle")}
         </h2>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3">
@@ -60,14 +55,14 @@ export async function FeatureGroupsSection() {
               key={group.titleKey}
               className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <h3 className="text-lg font-bold text-[#1F2937]">
+              <h3 className="text-lg font-bold text-ink">
                 {t(group.titleKey)}
               </h3>
               <ul className="mt-3 space-y-2.5">
                 {group.items.map(({ labelKey, Icon }) => (
                   <li key={labelKey} className="flex items-center gap-4">
-                    <div className={iconBoxClass} style={iconBoxStyle}>
-                      <Icon className="size-7 text-[#EC4899]" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
+                    <div className={iconBoxClass}>
+                      <Icon className="size-7 text-accent-strong" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
                     </div>
                     <span className="font-medium text-[#374151]">{t(labelKey)}</span>
                   </li>

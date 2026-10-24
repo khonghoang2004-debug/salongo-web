@@ -7,7 +7,7 @@ const MAC_DOWNLOAD_URL =
 
 const WindowsIcon = () => (
   <svg
-    className="size-6 shrink-0"
+    className="size-5 shrink-0"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden
@@ -21,7 +21,7 @@ const WindowsIcon = () => (
 
 const AppleIcon = () => (
   <svg
-    className="size-6 shrink-0"
+    className="size-5 shrink-0"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden
@@ -34,45 +34,37 @@ export async function DownloadSection() {
   const t = await getTranslations("download");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-16 lg:pb-20">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
+          <h2 className="sg-h2">
             {t("title")}
           </h2>
-          <p className="mt-3 text-lg text-[#6B7280]">
+          <p className="sg-lead mt-3">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
           <a
             href={WINDOWS_DOWNLOAD_URL}
             target="_blank"
             rel="noopener noreferrer"
             download="SalonGo-Setup.exe"
-            className="flex items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-semibold transition-all duration-300 hover:brightness-105 active:scale-[0.98] sm:min-w-[220px]"
-            style={{
-              background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-              border: "1px solid rgba(236,72,153,0.25)",
-            }}
+            className="btn-secondary gap-3 px-8 py-4 text-lg sm:min-w-[240px]"
           >
-            <span className="text-[#EC4899]"><WindowsIcon /></span>
-            <span className="btn-glass-text">{t("windows")}</span>
+            <span className="sg-icon-tile size-9 rounded-xl"><WindowsIcon /></span>
+            <span>{t("windows")}</span>
           </a>
           <a
             href={MAC_DOWNLOAD_URL}
             target="_blank"
             rel="noopener noreferrer"
             download="SalonGo-Setup.dmg"
-            className="flex items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-semibold transition-all duration-300 hover:brightness-105 active:scale-[0.98] sm:min-w-[220px]"
-            style={{
-              background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-              border: "1px solid rgba(236,72,153,0.25)",
-            }}
+            className="btn-secondary gap-3 px-8 py-4 text-lg sm:min-w-[240px]"
           >
-            <span className="text-[#C084FC]"><AppleIcon /></span>
-            <span className="btn-glass-text">{t("mac")}</span>
+            <span className="sg-icon-tile size-9 rounded-xl"><AppleIcon /></span>
+            <span>{t("mac")}</span>
           </a>
         </div>
       </div>

@@ -4,27 +4,19 @@ export async function SectionSolutionsCTA() {
   const t = await getTranslations("solutionsPage");
 
   return (
-    <section
-      className="px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-14 lg:px-8 lg:pt-12 lg:pb-16"
-      style={{
-        background: "linear-gradient(135deg, rgba(252,231,243,0.65) 0%, rgba(250,240,255,0.6) 50%, rgba(236,72,153,0.1) 100%)",
-      }}
-    >
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-[#1F2937] sm:text-4xl lg:text-5xl">
+    <section className="sg-section bg-white">
+      <div className="sg-hero-card mx-auto max-w-6xl rounded-[28px] px-6 py-12 text-center shadow-[0_30px_60px_-28px_rgba(76,29,149,0.55)] sm:rounded-[32px] sm:px-10 sm:py-16">
+        <h2 className="mx-auto max-w-3xl text-[1.75rem] leading-tight font-bold tracking-tight sm:text-4xl lg:text-5xl">
           {t("ctaTitle")}
         </h2>
-        <p className="mt-3 text-lg text-[#6B7280] sm:text-xl">
+        <p className="mt-3 text-lg mx-auto max-w-xl font-medium text-white/95 sm:text-xl">
           {t("ctaSubtext")}
         </p>
         <a
           href="https://app.salongo.eu/signup"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center justify-center rounded-full px-12 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:brightness-105 active:scale-[0.98]"
-          style={{
-            background: "linear-gradient(135deg, #EC4899, #A855F7)",
-          }}
+          className="btn-on-gradient [text-shadow:none] mt-6 px-12 py-4 text-lg"
         >
           {t("ctaButton")}
         </a>

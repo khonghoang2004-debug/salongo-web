@@ -3,6 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
 import { SectionAbout } from "@/components/SectionAbout";
+import { CTA } from "@/components/CTA";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -22,6 +23,7 @@ export default async function AboutPage({ params }: Props) {
   return (
     <PageShell>
       <SectionAbout />
+      <CTA />
     </PageShell>
   );
 }

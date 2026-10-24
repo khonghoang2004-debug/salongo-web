@@ -18,6 +18,12 @@ const config: Config = {
           DEFAULT: "#7C3AED",
           hover: "#6D28D9",
         },
+        accent: {
+          DEFAULT: "#8B5CF6",
+          strong: "#7C3AED",
+        },
+        ink: "#1F2937",
+        muted: "#6B7280",
       },
     },
   },

@@ -25,7 +25,7 @@ export default async function TermsPage({ params }: Props) {
     <PageShell>
       <header className="border-b border-neutral-100 bg-white px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl">
+          <h1 className="sg-h1">
             {t("termsTitle")}
           </h1>
         </div>

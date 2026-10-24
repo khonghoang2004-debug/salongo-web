@@ -11,28 +11,17 @@ export async function TrustSection() {
   const t = await getTranslations("trust");
 
   return (
-    <section className="relative overflow-hidden border-t border-neutral-100 bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-12 lg:px-8 lg:pt-12 lg:pb-16">
-      <svg className="absolute size-0" aria-hidden>
-        <defs>
-          <linearGradient id="trustSectionIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#EC4899" />
-            <stop offset="100%" stopColor="#A855F7" />
-          </linearGradient>
-        </defs>
-      </svg>
+    <section className="sg-section bg-white relative overflow-hidden">
       <div className="relative mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
+          <h2 className="sg-h2">
             {t("titleBefore")}
-            <span
-              className="bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(135deg, #EC4899 0%, #A855F7 100%)" }}
-            >
+            <span className="sg-gradient-text">
               {t("titleHighlight")}
             </span>
             {t("titleAfter")}
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-[#6B7280] sm:mt-5">
+          <p className="sg-lead mx-auto mt-4 max-w-3xl sm:mt-5">
             {t("subtext")}
           </p>
         </div>
@@ -41,24 +30,18 @@ export async function TrustSection() {
           {points.map(({ Icon, titleKey, descKey }) => (
             <div
               key={titleKey}
-              className="rounded-[18px] border border-neutral-200/60 bg-white p-9 shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-none hover:translate-y-0"
+              className="sg-card sg-card-hover p-6 sm:p-8"
             >
               {/* Mobile: icon + title cùng hàng; Desktop: icon trên, title + mô tả dưới */}
               <div className="flex flex-row items-start gap-3 md:flex-col md:items-stretch">
-                <div
-                  className="flex size-14 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-                    borderColor: "rgba(236,72,153,0.25)",
-                  }}
-                >
-                  <Icon className="size-7" stroke="url(#trustSectionIconGradient)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
+                <div className="sg-icon-tile size-12 sm:size-14">
+                  <Icon className="size-6 sm:size-7" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
                 </div>
-                <div className="min-w-0 flex-1 space-y-3 md:mt-6">
-                  <h3 className="text-lg font-bold text-[#1F2937]">
+                <div className="min-w-0 flex-1 space-y-2 md:mt-6 md:space-y-3">
+                  <h3 className="text-lg font-bold text-ink">
                     {t(titleKey)}
                   </h3>
-                  <p className="text-sm leading-[1.65] text-[#6B7280]">
+                  <p className="text-sm leading-[1.65] text-muted">
                     {t(descKey)}
                   </p>
                 </div>
@@ -67,8 +50,8 @@ export async function TrustSection() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-base font-medium text-[#374151] sm:mt-12">
-          <span className="mr-1.5 text-amber-500" aria-hidden>⭐</span>
+        <p className="mx-auto mt-10 flex w-fit items-center gap-1.5 rounded-full bg-white px-4 py-2 text-center text-sm font-medium text-[#374151] shadow-[0_6px_20px_-10px_rgba(76,29,149,0.35)] ring-1 ring-violet-100 sm:mt-12 sm:text-base">
+          <span className="text-amber-500" aria-hidden>⭐</span>
           {t("socialProof")}
         </p>
       </div>

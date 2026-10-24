@@ -6,6 +6,28 @@
   :root {
     --background: #ffffff;
     --foreground: #171717;
+
+    /* Gradient thương hiệu — giống hệt app SalonGo (hồng → tím → xanh pastel) */
+    --sg-gradient: linear-gradient(135deg, #f9a8d4 0%, #d8b4fe 25%, #93c5fd 50%, #a5b4fc 75%, #c4b5fd 100%);
+    /* Cùng gradient nhưng rất nhạt: nền section, nền ô icon phụ */
+    --sg-gradient-soft: linear-gradient(135deg, rgba(249, 168, 212, 0.18) 0%, rgba(147, 197, 253, 0.14) 55%, rgba(196, 181, 253, 0.18) 100%);
+    /* Bản đậm hơn cho chữ gradient trên nền trắng (đủ tương phản) */
+    --sg-gradient-text: linear-gradient(120deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%);
+    /* Chữ trắng trên nền gradient: bóng tím nhẹ cho dễ đọc (như app) */
+    --sg-on-gradient-shadow: 0 1px 1.5px rgba(76, 29, 149, 0.45);
+    --sg-glow: 0 10px 28px -10px rgba(139, 92, 246, 0.55), 0 4px 12px -6px rgba(236, 72, 153, 0.35);
+    /* Điểm nhấn tím (chữ/icon đang chọn, dấu tích, link) — giống --salon-accent của app */
+    --sg-accent: #8b5cf6;
+    --sg-accent-strong: #7c3aed;
+    --sg-ink: #1f2937;
+    --sg-muted: #6b7280;
+  }
+
+  /* Trình duyệt hỗ trợ nội suy oklch: gradient mượt hơn, không bị xám ở giữa */
+  @supports (background: linear-gradient(135deg in oklch, red, blue)) {
+    :root {
+      --sg-gradient: linear-gradient(135deg in oklch, #f9a8d4 0%, #93c5fd 50%, #c4b5fd 100%);
+    }
   }
 
   html {
@@ -19,6 +41,283 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ::selection {
+    background: rgba(196, 181, 253, 0.45);
+  }
+}
+
+@layer components {
+  /* ---------- Bố cục & chữ thống nhất toàn site ---------- */
+  .sg-section {
+    @apply px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+  }
+
+  .sg-section-alt {
+    background-color: #fbfaff;
+    border-top: 1px solid #f1eefb;
+    border-bottom: 1px solid #f1eefb;
+  }
+
+  .sg-page-hero {
+    @apply px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8 lg:pt-20 lg:pb-24;
+  }
+
+  .sg-h1 {
+    @apply text-[2.125rem] font-bold leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem];
+    text-wrap: balance;
+  }
+
+  .sg-h2 {
+    @apply text-[1.75rem] font-bold leading-[1.15] tracking-tight text-ink sm:text-[2.125rem] lg:text-[2.5rem];
+    text-wrap: balance;
+  }
+
+  .sg-h2-sm {
+    @apply text-xl font-bold leading-snug tracking-tight text-ink sm:text-2xl lg:text-[1.75rem];
+    text-wrap: balance;
+  }
+
+  .sg-lead {
+    @apply text-base leading-relaxed text-muted sm:text-lg;
+    text-wrap: pretty;
+  }
+  /* ---------- Nền & chữ gradient ---------- */
+  .sg-gradient {
+    background-color: #c4b5fd;
+    background-image: var(--sg-gradient);
+  }
+
+  .sg-gradient-soft {
+    background-image: var(--sg-gradient-soft);
+  }
+
+  .sg-gradient-text {
+    background-image: var(--sg-gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Viền gradient, nền trắng */
+  .sg-gradient-border {
+    border: 1.5px solid transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      var(--sg-gradient) border-box;
+  }
+
+  /* ---------- Nút ---------- */
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease,
+      filter 200ms ease,
+      background-color 200ms ease;
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 3px #fff,
+      0 0 0 5px rgba(167, 139, 250, 0.7);
+  }
+
+  /* Nút chính: nền gradient của app, chữ trắng */
+  .btn-primary {
+    color: #fff;
+    font-weight: 700;
+    background-color: #c4b5fd;
+    background-image: var(--sg-gradient);
+    text-shadow: 0 1px 2px rgba(76, 29, 149, 0.5);
+    box-shadow: var(--sg-glow);
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.04) saturate(1.08);
+    transform: translateY(-1px);
+    box-shadow:
+      0 14px 32px -10px rgba(139, 92, 246, 0.6),
+      0 6px 14px -6px rgba(236, 72, 153, 0.4);
+  }
+
+  /* Nút phụ: nền trắng, viền gradient */
+  .btn-secondary {
+    color: var(--sg-ink);
+    border: 1.5px solid transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      var(--sg-gradient) border-box;
+    box-shadow: 0 6px 18px -10px rgba(31, 41, 55, 0.18);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+    background:
+      var(--sg-gradient-soft) padding-box,
+      linear-gradient(#fff, #fff) padding-box,
+      var(--sg-gradient) border-box;
+  }
+
+  /* Nút trắng trên nền gradient (CTA) */
+  .btn-on-gradient {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    background: #fff;
+    color: #6d28d9;
+    box-shadow: 0 12px 30px -12px rgba(76, 29, 149, 0.55);
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .btn-on-gradient:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 36px -12px rgba(76, 29, 149, 0.65);
+  }
+
+  /* ---------- Ô icon gradient (như ô icon đang chọn trong app) ---------- */
+  .sg-icon-tile {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: #c4b5fd;
+    background-image: var(--sg-gradient);
+    box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.55);
+  }
+
+  .sg-icon-tile svg {
+    color: #fff;
+    filter: drop-shadow(0 1px 1px rgba(76, 29, 149, 0.35));
+  }
+
+  /* ---------- Thẻ ---------- */
+  .sg-card {
+    border-radius: 1.25rem;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    background: #fff;
+    box-shadow:
+      0 1px 2px rgba(31, 41, 55, 0.04),
+      0 10px 30px -12px rgba(31, 41, 55, 0.12);
+    transition:
+      transform 250ms ease,
+      box-shadow 250ms ease,
+      border-color 250ms ease;
+  }
+
+  @media (hover: hover) {
+    .sg-card-hover:hover {
+      transform: translateY(-3px);
+      border-color: rgba(196, 181, 253, 0.8);
+      box-shadow:
+        0 1px 2px rgba(31, 41, 55, 0.04),
+        0 18px 40px -14px rgba(139, 92, 246, 0.35);
+    }
+  }
+
+  /* Thẻ gradient lớn (giống thẻ "Doanh thu hôm nay" trong app):
+     nền gradient, vòng tròn mờ góc phải, đường cong trắng góc trái dưới */
+  .sg-hero-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    color: #fff;
+    background-color: #c4b5fd;
+    background-image: var(--sg-gradient);
+    text-shadow: var(--sg-on-gradient-shadow);
+  }
+
+  .sg-hero-card :is(h2, h3) {
+    text-shadow:
+      0 1px 2px rgba(76, 29, 149, 0.45),
+      0 4px 16px rgba(76, 29, 149, 0.22);
+  }
+
+  .sg-hero-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -40%;
+    right: -6%;
+    width: min(55%, 440px);
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .sg-hero-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: max(-18%, -90px);
+    bottom: max(-75%, -190px);
+    width: min(45%, 260px);
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+  }
+
+  /* Chip nhãn nhỏ phía trên tiêu đề section */
+  .sg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 9999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #6d28d9;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(#faf7ff, #faf7ff) padding-box,
+      var(--sg-gradient) border-box;
+  }
+
+  /* Nền section nhạt với hai đốm màu gradient */
+  .sg-section-glow {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .sg-section-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(42rem 26rem at 8% 0%, rgba(249, 168, 212, 0.22), transparent 70%),
+      radial-gradient(40rem 26rem at 95% 15%, rgba(147, 197, 253, 0.22), transparent 70%),
+      radial-gradient(36rem 22rem at 60% 100%, rgba(196, 181, 253, 0.18), transparent 70%);
+  }
+
+  .sg-section-tint {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%),
+      var(--sg-gradient-soft);
+  }
 }
 
 @layer utilities {
@@ -26,12 +325,25 @@
     text-wrap: balance;
   }
 
-  /* Glass CTA button – text gradient */
+  /* Giữ tương thích: chữ gradient cho các chỗ cũ */
   .btn-glass-text {
-    background: linear-gradient(135deg, #EC4899, #C084FC);
+    background-image: var(--sg-gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-on-gradient,
+  .sg-card {
+    transition: none;
   }
 }

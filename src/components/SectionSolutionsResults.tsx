@@ -11,9 +11,9 @@ export async function SectionSolutionsResults() {
   const t = await getTranslations("solutionsPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
+    <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
+        <h2 className="text-center sg-h2">
           {t("resultsTitle")}
         </h2>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:grid-cols-4">
@@ -23,10 +23,10 @@ export async function SectionSolutionsResults() {
               className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_8px_28px_rgba(0,0,0,0.08)]"
               style={{ borderRadius: 16 }}
             >
-              <h3 className="text-lg font-bold text-[#1F2937]">
+              <h3 className="text-lg font-bold text-ink">
                 {t(titleKey)}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {t(descKey)}
               </p>
             </div>

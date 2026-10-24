@@ -2,7 +2,7 @@ export function DashboardMockup({ className = "" }: { className?: string }) {
   return (
     <div
       className={`overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)] ${className}`}
-      style={{ boxShadow: "0 25px 50px -12px rgba(0,0,0,0.08), 0 0 0 1px rgba(236,72,153,0.06)" }}
+      style={{ boxShadow: "0 25px 50px -12px rgba(0,0,0,0.08), 0 0 0 1px rgba(139,92,246,0.06)" }}
     >
       <div className="flex items-center gap-2 border-b border-neutral-100 px-5 py-4">
         <div className="flex gap-1.5">

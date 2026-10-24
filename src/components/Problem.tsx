@@ -17,12 +17,12 @@ const ICON_PROPS = {
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
   "aria-hidden": true as const,
-  className: "size-7 text-[#EC4899]",
+  className: "size-7 text-accent-strong",
 };
 
 function IconCalendarGlobe() {
   return (
-    <div className="relative flex size-7 shrink-0 items-center justify-center text-[#EC4899]">
+    <div className="relative flex size-7 shrink-0 items-center justify-center text-accent-strong">
       <Calendar {...ICON_PROPS} className="size-7" />
       <Globe
         {...ICON_PROPS}
@@ -35,7 +35,7 @@ function IconCalendarGlobe() {
 
 function IconCalculatorPercent() {
   return (
-    <div className="relative flex size-7 shrink-0 items-center justify-center text-[#EC4899]">
+    <div className="relative flex size-7 shrink-0 items-center justify-center text-accent-strong">
       <Calculator {...ICON_PROPS} className="size-7" />
       <Percent
         {...ICON_PROPS}
@@ -68,13 +68,13 @@ export async function Problem() {
   ];
 
   return (
-    <section className="bg-white px-6 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#1F2937] md:text-4xl">
+          <h2 className="sg-h2">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-[#6B7280]">
+          <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
             {t("subtitle")}
           </p>
         </div>
@@ -89,13 +89,9 @@ export async function Problem() {
             return (
               <div
                 key={index}
-                className="space-y-4 rounded-[24px] p-8"
-                style={{
-                  background: "rgba(255,255,255,0.55)",
-                  border: "1px solid rgba(255,255,255,0.6)",
-                }}
+                className="space-y-4 sg-card sg-card-hover p-6 sm:p-8"
               >
-                <div className="flex size-12 shrink-0 items-center justify-center">
+                <div className="sg-icon-tile size-14 rounded-2xl">
                   {isComposite ? (
                     <IconOrComponent />
                   ) : (
@@ -106,10 +102,10 @@ export async function Problem() {
                     />
                   )}
                 </div>
-                <h3 className="text-lg font-bold text-[#1F2937]">
+                <h3 className="text-lg font-bold text-ink">
                   {item.title}
                 </h3>
-                <p className="leading-relaxed text-[#6B7280]">{item.desc}</p>
+                <p className="leading-relaxed text-muted">{item.desc}</p>
               </div>
             );
           })}

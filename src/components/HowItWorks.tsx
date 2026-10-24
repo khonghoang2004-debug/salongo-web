@@ -10,13 +10,13 @@ export async function HowItWorks() {
   const t = await getTranslations("howItWorks");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-16 lg:pb-20">
+    <section className="sg-section sg-section-tint">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
+          <h2 className="sg-h2">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#6B7280] sm:mt-5">
+          <p className="sg-lead mx-auto mt-4 max-w-2xl sm:mt-5">
             {t("subtitle")}
           </p>
         </div>
@@ -27,37 +27,19 @@ export async function HowItWorks() {
               key={step.titleKey}
               className="relative flex flex-col items-center text-center"
             >
-              <div
-                className="flex shrink-0 items-center justify-center rounded-full border text-3xl font-bold shadow-[0_2px_12px_rgba(236,72,153,0.15)]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-                  borderColor: "rgba(236,72,153,0.25)",
-                  width: "4.5rem",
-                  height: "4.5rem",
-                }}
-              >
-                <span
-                  className="bg-clip-text font-bold"
-                  style={{
-                    backgroundImage: "linear-gradient(135deg, #EC4899 0%, #A855F7 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    color: "transparent",
-                  }}
-                >
-                  {index + 1}
-                </span>
+              <div className="sg-icon-tile relative z-10 size-16 rounded-full text-2xl font-bold ring-[6px] ring-white [text-shadow:var(--sg-on-gradient-shadow)] sm:size-[4.5rem] sm:text-3xl">
+                {index + 1}
               </div>
               {index < steps.length - 1 && (
                 <div
-                  className="absolute top-9 left-[calc(50%+2.5rem)] hidden h-0.5 w-[calc(100%-5rem)] max-w-24 bg-gradient-to-r from-[#EC4899] to-[#A855F7] opacity-80 sm:block lg:left-[calc(50%+2.75rem)]"
+                  className="absolute top-9 left-[calc(50%+3rem)] hidden h-[3px] w-[calc(100%-6rem)] rounded-full bg-[image:var(--sg-gradient)] opacity-70 sm:block"
                   aria-hidden
                 />
               )}
-              <h3 className="mt-6 text-lg font-bold text-[#1F2937]">
+              <h3 className="mt-6 text-lg font-bold text-ink">
                 {t(step.titleKey)}
               </h3>
-              <p className="mt-3 max-w-sm text-[#6B7280] leading-[1.65]">
+              <p className="mt-3 max-w-sm text-muted leading-[1.65]">
                 {t(step.descKey)}
               </p>
             </div>
@@ -69,29 +51,14 @@ export async function HowItWorks() {
             href="https://app.salongo.eu/signup"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-fit rounded-xl p-[2px] transition-none hover:translate-y-0"
-            style={{ background: "linear-gradient(135deg, #EC4899 0%, #A855F7 100%)" }}
+            className="btn-primary px-7 py-3.5 text-base"
           >
-            <span
-              className="inline-flex items-center gap-2 rounded-[10px] bg-white px-6 py-3.5 text-base font-semibold transition-colors duration-200 hover:bg-pink-50"
-            >
-              <span
-                className="bg-clip-text font-semibold"
-                style={{
-                  backgroundImage: "linear-gradient(135deg, #EC4899 0%, #A855F7 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}
-              >
-                {t("ctaButton")}
-                <span aria-hidden className="inline"> →</span>
-              </span>
-            </span>
+            {t("ctaButton")}
+            <span aria-hidden>→</span>
           </a>
         </div>
 
-        <p className="mx-auto mt-8 max-w-xl text-center text-sm text-[#6B7280] leading-relaxed">
+        <p className="mx-auto mt-8 max-w-xl text-center text-sm text-muted leading-relaxed">
           {t("closingLine")}
         </p>
       </div>

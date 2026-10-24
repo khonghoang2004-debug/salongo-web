@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 
 function getOtherExt(src: string): string | null {
   if (src.endsWith(".jpg") || src.endsWith(".jpeg")) return src.replace(/\.jpe?g$/i, ".png");
@@ -71,6 +71,17 @@ export function FeatureImageMockup({
   }, [src, altPath]);
 
   const currentSrc = urls[tryIndex] ?? null;
+
+  // Ảnh có thể đã tải xong trước khi React gắn onLoad (SSR + cache) → kiểm tra lại sau khi mount
+  const imgRef = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img?.complete) {
+      if (img.naturalWidth > 0) setLoaded(true);
+      else handleError();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentSrc]);
   const imgSrc = currentSrc ? `${currentSrc}?v=1` : null;
 
   const handleError = () => {
@@ -86,17 +97,13 @@ export function FeatureImageMockup({
 
   return (
     <div
-      className={`overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)] ${className}`}
-      style={{
-        boxShadow:
-          "0 25px 50px -12px rgba(0,0,0,0.08), 0 0 0 1px rgba(236,72,153,0.06)",
-      }}
+      className={`overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-[0_28px_56px_-28px_rgba(76,29,149,0.35)] ${className}`}
     >
-      <div className="flex items-center gap-2 border-b border-neutral-100 px-5 py-4">
+      <div className="flex items-center gap-2 border-b border-neutral-100 px-4 py-3 sm:px-5 sm:py-3.5">
         <div className="flex gap-1.5">
-          <span className="size-3 rounded-full bg-neutral-300" />
-          <span className="size-3 rounded-full bg-neutral-300" />
-          <span className="size-3 rounded-full bg-neutral-300" />
+          <span className="size-3 rounded-full bg-[#f9a8d4]" />
+          <span className="size-3 rounded-full bg-[#c4b5fd]" />
+          <span className="size-3 rounded-full bg-[#93c5fd]" />
         </div>
         <div className="ml-4 h-2 w-24 rounded bg-neutral-100" />
       </div>
@@ -108,6 +115,7 @@ export function FeatureImageMockup({
         {currentSrc && !imageError && (
           <img
             key={currentSrc}
+            ref={imgRef}
             src={imgSrc!}
             alt={alt}
             className={`h-full w-full object-top ${

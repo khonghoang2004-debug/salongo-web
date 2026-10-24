@@ -12,9 +12,9 @@ export async function SectionPricingWhoIsFor() {
   const tPricing = await getTranslations("pricing");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl">
+        <h2 className="text-center sg-h2">
           {t("whoTitle")}
         </h2>
 
@@ -24,13 +24,13 @@ export async function SectionPricingWhoIsFor() {
               key={planKey}
               className="rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg"
             >
-              <p className="text-sm font-semibold text-[#EC4899]">
+              <p className="text-sm font-semibold text-accent-strong">
                 {tPricing(planKey)}
               </p>
-              <h3 className="mt-1.5 text-lg font-bold text-[#1F2937]">
+              <h3 className="mt-1.5 text-lg font-bold text-ink">
                 {t(titleKey)}
               </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-[#6B7280]">
+              <p className="mt-1.5 text-sm leading-relaxed text-muted">
                 {t(descKey)}
               </p>
             </div>

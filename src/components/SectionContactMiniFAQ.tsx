@@ -11,9 +11,9 @@ export function SectionContactMiniFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-2xl">
-        <h2 className="text-center text-xl font-bold tracking-tight text-[#1F2937] sm:text-2xl">
+        <h2 className="text-center sg-h2-sm">
           {t("faqTitle")}
         </h2>
         <div className="mt-6 space-y-3">
@@ -29,13 +29,13 @@ export function SectionContactMiniFAQ() {
                   onClick={() => setOpenIndex(isOpen ? null : i - 1)}
                   className={`flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold transition-colors ${
                     isOpen
-                      ? "bg-gradient-to-r from-pink-50/80 to-violet-50/60 text-[#1F2937]"
-                      : "bg-white text-[#1F2937] hover:bg-neutral-50/50"
+                      ? "bg-gradient-to-r from-pink-50/80 to-violet-50/60 text-ink"
+                      : "bg-white text-ink hover:bg-neutral-50/50"
                   }`}
                 >
                   <span>{t(`faqQ${i}`)}</span>
                   <ChevronDown
-                    className={`size-5 shrink-0 text-[#EC4899] transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    className={`size-5 shrink-0 text-accent-strong transition-transform ${isOpen ? "rotate-180" : ""}`}
                   />
                 </button>
                 {isOpen && (

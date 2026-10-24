@@ -32,7 +32,7 @@ export async function SectionContact() {
   const t = await getTranslations("contact");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/50 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
+    <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-xl">
         <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-base font-semibold tracking-tight text-neutral-900">
@@ -55,7 +55,7 @@ export async function SectionContact() {
               <dd className="mt-1">
                 <a
                   href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
-                  className="text-[15px] font-medium text-neutral-800 hover:text-[#EC4899] hover:underline"
+                  className="text-[15px] font-medium text-neutral-800 hover:text-violet-600 hover:underline"
                 >
                   {CONTACT_PHONE}
                 </a>

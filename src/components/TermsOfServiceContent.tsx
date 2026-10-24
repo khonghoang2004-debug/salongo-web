@@ -18,7 +18,7 @@ export async function TermsOfServiceContent() {
   const t = await getTranslations("termsOfService");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-10 lg:px-8 lg:pt-12 lg:pb-16">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-3xl prose prose-neutral">
         {SECTION_KEYS.map((key) => (
           <div key={key} className="mb-8">
@@ -27,7 +27,7 @@ export async function TermsOfServiceContent() {
                 {t("contact")}{" "}
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="font-medium text-[#EC4899] hover:underline"
+                  className="font-medium text-accent-strong hover:underline"
                 >
                   {CONTACT_EMAIL}
                 </a>

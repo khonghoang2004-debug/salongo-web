@@ -25,7 +25,7 @@ export function CopyEmailButton() {
     <div className="flex flex-wrap items-center gap-2">
       <a
         href={`mailto:${email}`}
-        className="text-[15px] font-medium text-neutral-800 hover:text-[#EC4899] hover:underline"
+        className="text-[15px] font-medium text-neutral-800 hover:text-violet-600 hover:underline"
       >
         {email}
       </a>

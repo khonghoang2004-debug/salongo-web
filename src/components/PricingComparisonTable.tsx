@@ -31,9 +31,9 @@ export async function PricingComparisonTable() {
   ];
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
+    <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl">
+        <h2 className="text-center sg-h2">
           {t("compareTitle")}
         </h2>
 
@@ -48,7 +48,7 @@ export async function PricingComparisonTable() {
                   {planNames.map((name, i) => (
                     <th
                       key={name}
-                      className="px-4 py-4 text-center font-semibold text-[#1F2937]"
+                      className="px-4 py-4 text-center font-semibold text-ink"
                     >
                       {name}
                     </th>

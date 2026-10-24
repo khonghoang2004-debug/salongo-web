@@ -21,8 +21,8 @@ export function PricingToggle() {
           onClick={() => setYearly(false)}
           className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
             !yearly
-              ? "bg-[linear-gradient(135deg,#EC4899,#A855F7)] text-white shadow-md"
-              : "text-[#6B7280] hover:text-[#1F2937]"
+              ? "sg-gradient text-white shadow-md [text-shadow:var(--sg-on-gradient-shadow)]"
+              : "text-muted hover:text-ink"
           }`}
         >
           {t("toggleMonth")}
@@ -34,8 +34,8 @@ export function PricingToggle() {
           onClick={() => setYearly(true)}
           className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
             yearly
-              ? "bg-[linear-gradient(135deg,#EC4899,#A855F7)] text-white shadow-md"
-              : "text-[#6B7280] hover:text-[#1F2937]"
+              ? "sg-gradient text-white shadow-md [text-shadow:var(--sg-on-gradient-shadow)]"
+              : "text-muted hover:text-ink"
           }`}
         >
           {t("toggleYear")}

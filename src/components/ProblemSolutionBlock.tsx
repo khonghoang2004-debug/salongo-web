@@ -14,7 +14,7 @@ const ICON_PROPS = {
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
   "aria-hidden": true as const,
-  className: "size-10 text-[#EC4899]",
+  className: "size-10 text-accent-strong",
 };
 
 const ICONS = [
@@ -52,11 +52,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
         {/* Problem */}
         <div className="flex gap-3">
           <div
-            className="flex size-16 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]"
-            style={{
-              background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-              borderColor: "rgba(236,72,153,0.25)",
-            }}
+            className="flex size-16 shrink-0 items-center justify-center sg-icon-tile rounded-2xl"
           >
             <Icon {...ICON_PROPS} />
           </div>
@@ -64,7 +60,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
             <h3 className="text-lg font-bold text-[#374151]">
               {tProblem(`item${index}Title`)}
             </h3>
-            <p className="mt-1 text-sm leading-relaxed text-[#6B7280]">
+            <p className="mt-1 text-sm leading-relaxed text-muted">
               {tProblem(`item${index}Desc`)}
             </p>
           </div>
@@ -73,27 +69,26 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
         {/* Arrow */}
         <div className="hidden items-center justify-center lg:flex" aria-hidden>
           <span
-            className="text-2xl text-[#EC4899] transition-transform duration-300 lg:hover:translate-x-1"
-            style={{ filter: "drop-shadow(0 2px 4px rgba(236,72,153,0.2))" }}
+            className="text-2xl text-accent-strong transition-transform duration-300 lg:hover:translate-x-1"
+            style={{ filter: "drop-shadow(0 2px 4px rgba(139,92,246,0.2))" }}
           >
             →
           </span>
         </div>
         <div className="flex items-center justify-center py-1 lg:hidden" aria-hidden>
-          <span className="text-[#EC4899]">↓</span>
+          <span className="text-accent-strong">↓</span>
         </div>
 
         {/* Solution */}
         <div className="rounded-xl bg-gradient-to-br from-pink-50/60 to-violet-50/40 p-4 sm:p-5" style={{ borderRadius: 16 }}>
-          <h4 className="text-lg font-bold text-[#1F2937]">
+          <h4 className="text-lg font-bold text-ink">
             {tSolution(`item${index}Title`)}
           </h4>
           <ul className="mt-2 space-y-1.5">
             {bullets.map((key) => (
               <li key={key} className="flex items-center gap-2 text-[#4B5563]">
                 <span
-                  className="size-1.5 shrink-0 rounded-full"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
+                  className="sg-gradient size-1.5 shrink-0 rounded-full"
                 />
                 {tPage(key)}
               </li>

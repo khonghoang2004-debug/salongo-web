@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-const iconColor = "#EC4899";
+const iconColor = "currentColor";
 const Icon1 = () => (
   <svg className="size-8" fill="none" stroke={iconColor} viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
 );
@@ -33,13 +33,13 @@ export async function FeaturesAlternating() {
   const t = await getTranslations("features");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-12 pb-16 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
+          <h2 className="sg-h2">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#6B7280]">
+          <p className="sg-lead mx-auto mt-5 max-w-2xl">
             {t("subtitle")}
           </p>
         </div>
@@ -54,20 +54,16 @@ export async function FeaturesAlternating() {
               >
                 <div className={!isEven ? "lg:order-2" : ""}>
                   <div
-                    className="flex size-20 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_12px_rgba(236,72,153,0.12)]"
-                    style={{
-                      background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-                      borderColor: "rgba(236,72,153,0.25)",
-                    }}
+                    className="flex size-20 shrink-0 items-center justify-center sg-icon-tile rounded-2xl"
                   >
                     <Icon />
                   </div>
                 </div>
                 <div className={!isEven ? "lg:order-1 lg:text-right" : ""}>
-                  <h3 className="text-xl font-bold text-[#1F2937] lg:text-2xl">
+                  <h3 className="text-xl font-bold text-ink lg:text-2xl">
                     {t(titleKey)}
                   </h3>
-                  <p className="mt-4 leading-relaxed text-[#6B7280]">
+                  <p className="mt-4 leading-relaxed text-muted">
                     {t(descKey)}
                   </p>
                 </div>

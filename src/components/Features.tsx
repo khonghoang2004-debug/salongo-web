@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-const iconColor = "#EC4899";
+const iconColor = "currentColor";
 const Icon1 = () => (
   <svg className="size-6" fill="none" stroke={iconColor} viewBox="0 0 24 24" aria-hidden>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -45,13 +45,13 @@ export async function Features() {
   const t = await getTranslations("features");
 
   return (
-    <section id="features" className="border-t border-neutral-100 bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-16 lg:pb-20">
+    <section id="features" className="sg-section bg-white">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl lg:text-4xl">
+          <h2 className="sg-h2">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-lg text-[#6B7280]">
+          <p className="sg-lead mx-auto mt-3 max-w-2xl">
             {t("subtitle")}
           </p>
         </div>
@@ -60,25 +60,17 @@ export async function Features() {
           {items.map(({ icon: Icon, titleKey, descKey }) => (
             <div
               key={titleKey}
-              className="rounded-[24px] p-8"
-              style={{
-                background: "rgba(255,255,255,0.55)",
-                border: "1px solid rgba(255,255,255,0.6)",
-              }}
+              className="sg-card sg-card-hover p-6 sm:p-8"
             >
               <div
-                className="flex size-12 shrink-0 items-center justify-center rounded-2xl border shadow-[0_2px_10px_rgba(236,72,153,0.12)]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-                  borderColor: "rgba(236,72,153,0.25)",
-                }}
+                className="flex size-12 shrink-0 items-center justify-center sg-icon-tile rounded-2xl"
               >
                 <Icon />
               </div>
-              <h3 className="mt-6 text-lg font-bold text-[#1F2937]">
+              <h3 className="mt-6 text-lg font-bold text-ink">
                 {t(titleKey)}
               </h3>
-              <p className="mt-3 leading-relaxed text-[#6B7280]">
+              <p className="mt-3 leading-relaxed text-muted">
                 {t(descKey)}
               </p>
             </div>

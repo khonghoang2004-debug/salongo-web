@@ -51,7 +51,7 @@ export async function FeatureBlocksAlternating() {
   const t = await getTranslations("featuresPage");
 
   return (
-    <section className="border-t border-neutral-100 bg-white px-4 pt-4 pb-8 sm:px-6 sm:pt-6 sm:pb-10 lg:px-8 lg:pt-8 lg:pb-12">
+    <section className="sg-section bg-white">
       <div className="mx-auto max-w-6xl">
         {blocks.map((block, index) => {
           const isEven = index % 2 === 1;
@@ -62,37 +62,41 @@ export async function FeatureBlocksAlternating() {
           return (
             <div
               key={block.titleKey}
-              className={`grid items-center gap-6 py-6 lg:grid-cols-2 lg:gap-8 lg:py-8 ${index > 0 ? "border-t border-neutral-100" : ""}`}
+              className={`grid items-center gap-8 py-10 lg:grid-cols-2 lg:gap-16 lg:py-14 ${index > 0 ? "border-t border-violet-100/70" : "pt-0 lg:pt-0"}`}
             >
-              <div className={imageOnRight ? "lg:order-2" : ""}>
+              <div className={`flex justify-center ${imageOnRight ? "lg:order-2 lg:justify-end" : "lg:justify-start"}`}>
                 {block.image === "custom" && "imageSrc" in block ? (
                   <FeatureImageMockup
                     src={block.imageSrc}
                     altPath={"imageSrcAlt" in block ? block.imageSrcAlt : undefined}
                     alt=""
                     placeholderLabel={t(block.titleKey)}
-                    className={"imageVariant" in block && block.imageVariant === "tall" ? "max-w-sm w-full" : "max-w-lg w-full"}
+                    className={"imageVariant" in block && block.imageVariant === "tall" ? "max-w-sm w-full" : "max-w-xl w-full"}
                     imageVariant={"imageVariant" in block ? block.imageVariant : "default"}
                   />
                 ) : (
                   <DashboardMockup className="max-w-lg" />
                 )}
               </div>
-              <div className={imageOnRight ? "lg:order-1 lg:text-right" : ""}>
-                <h2 className="text-2xl font-bold tracking-tight text-[#1F2937] lg:text-3xl">
+              <div className={imageOnRight ? "lg:order-1" : ""}>
+                <span className="sg-gradient-text text-sm font-extrabold tracking-wider">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h2 className="mt-2 text-2xl font-bold leading-tight tracking-tight text-ink sm:text-3xl">
                   {t(block.titleKey)}
                 </h2>
-                <p className="mt-2 text-[#6B7280] leading-relaxed">
+                <p className="sg-lead mt-3">
                   {t(block.descKey)}
                 </p>
-                <ul className={`mt-4 space-y-2 ${imageOnRight ? "lg:ml-auto lg:flex lg:flex-col lg:items-end" : ""}`}>
+                <ul className="mt-5 space-y-3">
                   {block.bullets.map((key) => (
                     <li key={key} className="flex items-center gap-3">
-                      <span
-                        className="size-2 shrink-0 rounded-full"
-                        style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-                      />
-                      <span className="text-[#1F2937] font-medium">{t(key)}</span>
+                      <span className="sg-icon-tile size-6 rounded-full shadow-none" aria-hidden>
+                        <svg className="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span className="font-medium text-ink">{t(key)}</span>
                     </li>
                   ))}
                 </ul>

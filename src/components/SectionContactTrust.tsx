@@ -12,9 +12,9 @@ export async function SectionContactTrust() {
   const t = await getTranslations("contact");
 
   return (
-    <section className="border-t border-neutral-100 bg-neutral-50/40 px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-8 lg:px-8 lg:pt-8 lg:pb-10">
+    <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-4xl">
-        <h2 className="text-center text-lg font-bold tracking-tight text-[#1F2937] sm:text-xl lg:text-2xl">
+        <h2 className="text-center sg-h2-sm">
           {t("trustTitle")}
         </h2>
         <div className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-6 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4 lg:gap-3">
@@ -24,14 +24,10 @@ export async function SectionContactTrust() {
               className="flex flex-col items-center rounded-xl border border-neutral-200/80 bg-white px-2 py-3 text-center shadow-sm transition-shadow hover:shadow-md sm:rounded-2xl sm:p-6 sm:shadow-[0_4px_16px_rgba(0,0,0,0.05)]"
             >
               <div
-                className="flex size-9 items-center justify-center rounded-xl border shadow-[0_2px_8px_rgba(236,72,153,0.1)] sm:size-12 sm:rounded-2xl sm:shadow-[0_2px_10px_rgba(236,72,153,0.12)]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(252,231,243,0.95) 0%, rgba(250,240,255,0.95) 100%)",
-                  borderColor: "rgba(236,72,153,0.25)",
-                }}
+                className="flex size-9 items-center justify-center sg-icon-tile rounded-xl sm:size-12 sm:rounded-2xl"
               >
                 <Icon
-                  className="size-[1.125rem] text-[#EC4899] sm:size-6"
+                  className="size-[1.125rem] text-accent-strong sm:size-6"
                   strokeWidth={2}
                   aria-hidden
                 />

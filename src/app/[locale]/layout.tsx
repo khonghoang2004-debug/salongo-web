@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         { url: "/salongo-logo.svg", type: "image/svg+xml", sizes: "any" },
       ],
       shortcut: "/favicon.ico",
-      apple: [{ url: "/salongo-logo.svg", type: "image/svg+xml", sizes: "180x180" }],
+      apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
     },
     openGraph: {
       type: "website",

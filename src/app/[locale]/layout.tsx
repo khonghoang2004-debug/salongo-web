@@ -51,12 +51,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     creator: siteConfig.name,
     /** Favicon / logo tab & Google kết quả tìm kiếm - URLs tuyệt đối với metadataBase */
     icons: {
+      // ?v=2: đổi URL để trình duyệt (nhất là Safari) bỏ icon Next.js cũ đã lưu
       icon: [
-        { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
-        { url: "/salongo-logo.svg", type: "image/svg+xml", sizes: "any" },
+        { url: "/favicon.ico?v=2", sizes: "48x48", type: "image/x-icon" },
+        { url: "/icon-192.png?v=2", sizes: "192x192", type: "image/png" },
+        { url: "/salongo-logo.svg?v=2", type: "image/svg+xml", sizes: "any" },
       ],
-      shortcut: "/favicon.ico",
-      apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+      shortcut: "/favicon.ico?v=2",
+      apple: [{ url: "/apple-touch-icon.png?v=2", type: "image/png", sizes: "180x180" }],
     },
     openGraph: {
       type: "website",

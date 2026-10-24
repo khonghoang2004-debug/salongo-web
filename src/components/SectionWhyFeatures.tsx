@@ -1,32 +1,27 @@
+import { CalendarCheck, HandCoins, TrendingUp } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 const cards = [
-  { titleKey: "whyCard1Title" as const, descKey: "whyCard1Desc" as const },
-  { titleKey: "whyCard2Title" as const, descKey: "whyCard2Desc" as const },
-  { titleKey: "whyCard3Title" as const, descKey: "whyCard3Desc" as const },
-];
+  { i: 1, Icon: CalendarCheck },
+  { i: 2, Icon: HandCoins },
+  { i: 3, Icon: TrendingUp },
+] as const;
 
 export async function SectionWhyFeatures() {
-  const t = await getTranslations("featuresPage");
+  const t = await getTranslations("featuresV2");
 
   return (
-    <section className="sg-section bg-white">
+    <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center sg-h2">
-          {t("whyTitle")}
-        </h2>
-        <div className="mt-6 grid gap-5 sm:grid-cols-3 lg:mt-8">
-          {cards.map(({ titleKey, descKey }) => (
-            <div
-              key={titleKey}
-              className="sg-card sg-card-hover p-6"
-            >
-              <h3 className="text-lg font-bold text-ink">
-                {t(titleKey)}
-              </h3>
-              <p className="mt-2 text-muted leading-relaxed">
-                {t(descKey)}
-              </p>
+        <h2 className="text-center sg-h2">{t("whyTitle")}</h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-3 sm:gap-5">
+          {cards.map(({ i, Icon }) => (
+            <div key={i} className="sg-card sg-card-hover p-6">
+              <span className="sg-icon-tile size-11 rounded-xl" aria-hidden>
+                <Icon className="size-5" />
+              </span>
+              <h3 className="mt-4 text-lg font-bold text-ink">{t(`why${i}Title`)}</h3>
+              <p className="mt-2 leading-relaxed text-muted">{t(`why${i}Text`)}</p>
             </div>
           ))}
         </div>

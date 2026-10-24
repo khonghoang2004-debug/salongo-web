@@ -3,8 +3,9 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
 import { FeaturesPageHero } from "@/components/FeaturesPageHero";
-import { FeatureBlocksAlternating } from "@/components/FeatureBlocksAlternating";
-import { FeatureGroupsSection } from "@/components/FeatureGroupsSection";
+import { FeatureSubnav } from "@/components/FeatureSubnav";
+import { FeatureChapters } from "@/components/FeatureChapters";
+import { FEATURES } from "@/components/featuresData";
 import { SectionWhyFeatures } from "@/components/SectionWhyFeatures";
 import { SectionFeaturesCTA } from "@/components/SectionFeaturesCTA";
 
@@ -22,12 +23,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function FeaturesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("featuresV2");
 
   return (
     <PageShell>
       <FeaturesPageHero />
-      <FeatureBlocksAlternating />
-      <FeatureGroupsSection />
+      <FeatureSubnav
+        label={t("navLabel")}
+        items={FEATURES.map(({ id, anchor }) => ({ id, anchor, label: t(`f.${id}.short`) }))}
+      />
+      <FeatureChapters />
       <SectionWhyFeatures />
       <SectionFeaturesCTA />
     </PageShell>

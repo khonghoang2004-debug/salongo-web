@@ -109,7 +109,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className={`${inter.variable} font-sans antialiased`}>{children}</div>
+      <div id="sg-root" className={`${inter.variable} font-sans antialiased`}>{children}</div>
     </NextIntlClientProvider>
   );
 }

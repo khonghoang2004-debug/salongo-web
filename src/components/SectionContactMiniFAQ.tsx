@@ -22,7 +22,7 @@ export function SectionContactMiniFAQ() {
             return (
               <div
                 key={i}
-                className="rounded-2xl border border-neutral-200 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-md"
+                className="rounded-2xl border border-neutral-200 bg-white shadow-sg-md transition-shadow hover:shadow-sg-md"
               >
                 <button
                   type="button"

@@ -48,7 +48,7 @@ export function SectionFAQ() {
                   return (
                     <div
                       key={item.qKey}
-                      className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-md"
+                      className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sg-md transition-shadow hover:shadow-sg-md"
                     >
                       <button
                         type="button"
@@ -84,7 +84,7 @@ export function SectionFAQ() {
                             </button>
                             {copied === `answer-${item.qKey}` && (
                               <span
-                                className="absolute -bottom-1 right-0 rounded-lg bg-[#1F2937] px-2.5 py-1 text-xs font-medium text-white shadow-lg"
+                                className="absolute -bottom-1 right-0 rounded-lg bg-[#1F2937] px-2.5 py-1 text-xs font-medium text-white shadow-sg-md"
                                 role="status"
                               >
                                 {t("copyCopied")}
@@ -106,7 +106,7 @@ export function SectionFAQ() {
         </p>
 
         {/* Still not found + Email copy */}
-        <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50/60 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] sm:p-8">
+        <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50/60 p-6 shadow-sg-lg sm:p-8">
           <h3 className="text-lg font-bold text-ink">
             {t("stillNotFound")}
           </h3>
@@ -130,7 +130,7 @@ export function SectionFAQ() {
               </button>
               {copied === "email" && (
                 <span
-                  className="absolute -bottom-8 left-0 rounded-lg bg-[#1F2937] px-3 py-1.5 text-xs font-medium text-white shadow-lg"
+                  className="absolute -bottom-8 left-0 rounded-lg bg-[#1F2937] px-3 py-1.5 text-xs font-medium text-white shadow-sg-md"
                   role="status"
                 >
                   {t("emailCopied")}

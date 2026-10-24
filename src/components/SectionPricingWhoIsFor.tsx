@@ -22,7 +22,7 @@ export async function SectionPricingWhoIsFor() {
           {CARDS.map(({ planKey, titleKey, descKey }) => (
             <div
               key={planKey}
-              className="rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg"
+              className="rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sg-lg transition-shadow hover:shadow-sg-md"
             >
               <p className="text-sm font-semibold text-accent-strong">
                 {tPricing(planKey)}

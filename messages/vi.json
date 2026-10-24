@@ -269,7 +269,16 @@
     "proof2": "Hỗ trợ đa ngôn ngữ đặc biệt tiếng Việt",
     "proof3": "Hoạt động tại các quốc gia ở châu Âu",
     "imageAlt": "SalonGo app preview",
-    "revenueToday": "Doanh thu hôm nay"
+    "revenueToday": "Doanh thu hôm nay",
+    "stat1Value": "1000+",
+    "stat1Label": "Salon đang sử dụng",
+    "stat2Value": "4",
+    "stat2Label": "Ngôn ngữ, có tiếng Việt",
+    "stat3Value": "30 ngày",
+    "stat3Label": "Dùng thử miễn phí",
+    "stat4Value": "24 giờ",
+    "stat4Label": "Phản hồi hỗ trợ",
+    "badge": "Quản lý salon cho người Việt tại châu Âu"
   },
   "download": {
     "title": "Tải ứng dụng Desktop",

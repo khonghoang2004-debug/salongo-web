@@ -269,7 +269,16 @@
     "proof2": "Mehrsprachige Unterstützung inkl. Vietnamesisch",
     "proof3": "Einsatz in Ländern in ganz Europa",
     "imageAlt": "SalonGo App-Vorschau",
-    "revenueToday": "Umsatz heute"
+    "revenueToday": "Umsatz heute",
+    "stat1Value": "1000+",
+    "stat1Label": "Salons nutzen SalonGo",
+    "stat2Value": "4",
+    "stat2Label": "Sprachen, inkl. Vietnamesisch",
+    "stat3Value": "30 Tage",
+    "stat3Label": "Kostenlos testen",
+    "stat4Value": "24 Std.",
+    "stat4Label": "Antwort vom Support",
+    "badge": "Salon-Software für Europa"
   },
   "download": {
     "title": "Desktop-App herunterladen",

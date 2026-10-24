@@ -53,7 +53,7 @@ export async function FeatureGroupsSection() {
           {groups.map((group) => (
             <div
               key={group.titleKey}
-              className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sg-sm transition-shadow hover:shadow-sg-md"
             >
               <h3 className="text-lg font-bold text-ink">
                 {t(group.titleKey)}

@@ -22,7 +22,7 @@ export async function ProblemSolutionResult() {
           {indices.map((i) => (
             <div
               key={i}
-              className="rounded-2xl border border-neutral-100 bg-neutral-50/50 p-8 shadow-sm"
+              className="rounded-2xl border border-neutral-100 bg-neutral-50/50 p-8 shadow-sg-sm"
             >
               <p className="text-sm font-semibold uppercase tracking-wide text-muted">
                 {tSolution("problemLabel")}

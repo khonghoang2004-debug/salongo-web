@@ -66,9 +66,9 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-neutral-100 transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full border-b border-line transition-all duration-300 ${
         scrolled
-          ? "border-neutral-200/80 bg-white py-3 shadow-[0_6px_24px_-12px_rgba(31,41,55,0.18)]"
+          ? "border-neutral-200/80 bg-white py-3 shadow-sg-lg"
           : "bg-white py-4"
       }`}
     >
@@ -182,7 +182,7 @@ export function Navbar() {
             </button>
             {downloadOpen && (
               <div
-                className="absolute right-0 top-full z-50 mt-2 min-w-[200px] rounded-2xl border border-neutral-200/80 bg-white py-1.5 shadow-[0_18px_40px_-14px_rgba(76,29,149,0.3)]"
+                className="absolute right-0 top-full z-50 mt-2 min-w-[200px] rounded-2xl border border-neutral-200/80 bg-white py-1.5 shadow-sg-lg"
                 role="menu"
               >
                 <a
@@ -222,7 +222,7 @@ export function Navbar() {
       </div>
 
       <div
-        className="hidden max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-neutral-100 bg-white px-4 pt-3 pb-5 shadow-[0_18px_40px_-20px_rgba(76,29,149,0.25)] lg:hidden peer-checked:block"
+        className="hidden max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-neutral-100 bg-white px-4 pt-3 pb-5 shadow-sg-lg lg:hidden peer-checked:block"
         role="dialog"
         aria-label="Mobile menu"
       >

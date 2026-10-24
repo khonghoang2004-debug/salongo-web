@@ -106,16 +106,16 @@ export async function Footer() {
           </div>
 
           {/* Quick links — mobile: cột trái, gọn */}
-          <div className="min-w-0 sm:col-span-1 lg:col-span-3">
+          <div className="col-span-2 min-w-0 sm:col-span-1 lg:col-span-3">
             <h3 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-xs">
               {t("quickLinks")}
             </h3>
-            <ul className="mt-2 space-y-1 sm:mt-4 sm:space-y-2.5">
+            <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 sm:mt-4 sm:block sm:space-y-2.5">
               {footerNavItems.map(({ href, labelKey }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className={`${linkBase} inline-block text-xs sm:text-sm`}
+                    className={`${linkBase} inline-block text-sm`}
                   >
                     {labelKey === "home" ? t("home") : tNav(labelKey)}
                   </Link>
@@ -125,7 +125,7 @@ export async function Footer() {
           </div>
 
           {/* Contact & Legal — mobile: cột phải cạnh điều hướng */}
-          <div className="min-w-0 max-sm:border-l max-sm:border-violet-100 max-sm:pl-3 sm:col-span-1 lg:col-span-5">
+          <div className="col-span-2 min-w-0 max-sm:border-t max-sm:border-violet-100 max-sm:pt-5 sm:col-span-1 lg:col-span-5">
             <h3 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-xs">
               {tNav("contact")}
             </h3>
@@ -135,7 +135,7 @@ export async function Footer() {
                 <dd>
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
-                    className={`${linkBase} block text-xs [overflow-wrap:anywhere] sm:inline sm:text-sm`}
+                    className={`${linkBase} block text-sm [overflow-wrap:anywhere] sm:inline`}
                   >
                     {CONTACT_EMAIL}
                   </a>

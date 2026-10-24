@@ -34,7 +34,7 @@ export async function SectionContact() {
   return (
     <section className="sg-section sg-section-alt">
       <div className="mx-auto max-w-xl">
-        <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sg-sm sm:p-8">
           <h2 className="text-base font-semibold tracking-tight text-neutral-900">
             {t("companyInfo")}
           </h2>

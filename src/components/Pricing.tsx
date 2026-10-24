@@ -51,16 +51,16 @@ export async function Pricing() {
           {planKeys.map((plan) => (
             <div
               key={plan.nameKey}
-              className={`relative flex h-full flex-col rounded-2xl border bg-white transition-all duration-300 hover:shadow-lg ${
+              className={`relative flex h-full flex-col rounded-2xl border bg-white transition-all duration-300 hover:shadow-sg-md ${
                 plan.highlighted
-                  ? "sg-gradient-border scale-[1.02] p-[10px] shadow-[0_18px_44px_-14px_rgba(139,92,246,0.4)] lg:scale-[1.03]"
-                  : "border-neutral-200/80 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
+                  ? "sg-gradient-border scale-[1.02] p-[10px] shadow-sg-lg lg:scale-[1.03]"
+                  : "border-neutral-200/80 p-6 shadow-sg-lg"
               }`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2">
                   <span
-                    className="sg-gradient inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-md"
+                    className="sg-gradient inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-sg-md"
                   >
                     {tPage("popularMost")}
                   </span>

@@ -10,7 +10,7 @@ export function PricingToggle() {
   return (
     <div className="flex justify-center">
       <div
-        className="inline-flex rounded-full border border-neutral-200 bg-white p-1 shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
+        className="inline-flex rounded-full border border-neutral-200 bg-white p-1 shadow-sg-md"
         role="tablist"
         aria-label="Billing period"
       >
@@ -21,7 +21,7 @@ export function PricingToggle() {
           onClick={() => setYearly(false)}
           className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
             !yearly
-              ? "sg-gradient text-white shadow-md [text-shadow:var(--sg-on-gradient-shadow)]"
+              ? "sg-gradient text-white shadow-sg-md [text-shadow:var(--sg-on-gradient-shadow)]"
               : "text-muted hover:text-ink"
           }`}
         >
@@ -34,7 +34,7 @@ export function PricingToggle() {
           onClick={() => setYearly(true)}
           className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
             yearly
-              ? "sg-gradient text-white shadow-md [text-shadow:var(--sg-on-gradient-shadow)]"
+              ? "sg-gradient text-white shadow-sg-md [text-shadow:var(--sg-on-gradient-shadow)]"
               : "text-muted hover:text-ink"
           }`}
         >

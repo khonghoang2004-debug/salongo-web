@@ -269,7 +269,16 @@
     "proof2": "Vícejazyčná podpora včetně vietnamštiny",
     "proof3": "Provoz v zemích po celé Evropě",
     "imageAlt": "Náhled aplikace SalonGo",
-    "revenueToday": "Dnešní tržby"
+    "revenueToday": "Dnešní tržby",
+    "stat1Value": "1000+",
+    "stat1Label": "Salonů používá SalonGo",
+    "stat2Value": "4",
+    "stat2Label": "Jazyky včetně vietnamštiny",
+    "stat3Value": "30 dní",
+    "stat3Label": "Zkušební verze zdarma",
+    "stat4Value": "24 h",
+    "stat4Label": "Odpověď podpory",
+    "badge": "Software pro správu salonů v Evropě"
   },
   "download": {
     "title": "Stáhnout desktopovou aplikaci",

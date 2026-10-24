@@ -15,11 +15,13 @@
     --sg-gradient-text: linear-gradient(120deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%);
     /* Chữ trắng trên nền gradient: bóng tím nhẹ cho dễ đọc (như app) */
     --sg-on-gradient-shadow: 0 1px 1.5px rgba(76, 29, 149, 0.45);
-    --sg-glow: 0 10px 28px -10px rgba(139, 92, 246, 0.55), 0 4px 12px -6px rgba(236, 72, 153, 0.35);
+    /* Bóng gọn, sắc (không tỏa mờ) */
+    --sg-shadow-btn: 0 1px 2px rgba(16, 24, 40, 0.08), inset 0 -1px 0 rgba(76, 29, 149, 0.12);
+    --sg-line: #e9e8f2;
     /* Điểm nhấn tím (chữ/icon đang chọn, dấu tích, link) — giống --salon-accent của app */
     --sg-accent: #8b5cf6;
     --sg-accent-strong: #7c3aed;
-    --sg-ink: #1f2937;
+    --sg-ink: #111827;
     --sg-muted: #6b7280;
   }
 
@@ -64,12 +66,12 @@
   }
 
   .sg-h1 {
-    @apply text-[2.125rem] font-bold leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem];
+    @apply text-[2.125rem] font-extrabold leading-[1.1] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.5rem];
     text-wrap: balance;
   }
 
   .sg-h2 {
-    @apply text-[1.75rem] font-bold leading-[1.15] tracking-tight text-ink sm:text-[2.125rem] lg:text-[2.5rem];
+    @apply text-[1.75rem] font-bold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[2.125rem] lg:text-[2.5rem];
     text-wrap: balance;
   }
 
@@ -145,33 +147,24 @@
     background-color: #c4b5fd;
     background-image: var(--sg-gradient);
     text-shadow: 0 1px 2px rgba(76, 29, 149, 0.5);
-    box-shadow: var(--sg-glow);
+    box-shadow: var(--sg-shadow-btn);
   }
 
   .btn-primary:hover {
-    filter: brightness(1.04) saturate(1.08);
-    transform: translateY(-1px);
-    box-shadow:
-      0 14px 32px -10px rgba(139, 92, 246, 0.6),
-      0 6px 14px -6px rgba(236, 72, 153, 0.4);
+    filter: brightness(0.96) saturate(1.15);
   }
 
   /* Nút phụ: nền trắng, viền gradient */
   .btn-secondary {
     color: var(--sg-ink);
-    border: 1.5px solid transparent;
-    background:
-      linear-gradient(#fff, #fff) padding-box,
-      var(--sg-gradient) border-box;
-    box-shadow: 0 6px 18px -10px rgba(31, 41, 55, 0.18);
+    background: #fff;
+    border: 1px solid #dcdae8;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
   }
 
   .btn-secondary:hover {
-    transform: translateY(-1px);
-    background:
-      var(--sg-gradient-soft) padding-box,
-      linear-gradient(#fff, #fff) padding-box,
-      var(--sg-gradient) border-box;
+    border-color: #c4b5fd;
+    background: #faf8ff;
   }
 
   /* Nút trắng trên nền gradient (CTA) */
@@ -184,15 +177,12 @@
     font-weight: 700;
     background: #fff;
     color: #6d28d9;
-    box-shadow: 0 12px 30px -12px rgba(76, 29, 149, 0.55);
-    transition:
-      transform 200ms ease,
-      box-shadow 200ms ease;
+    box-shadow: 0 1px 2px rgba(76, 29, 149, 0.25);
+    transition: background-color 200ms ease;
   }
 
   .btn-on-gradient:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 16px 36px -12px rgba(76, 29, 149, 0.65);
+    background: #f7f4ff;
   }
 
   /* ---------- Ô icon gradient (như ô icon đang chọn trong app) ---------- */
@@ -205,7 +195,7 @@
     color: #fff;
     background-color: #c4b5fd;
     background-image: var(--sg-gradient);
-    box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.55);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
   }
 
   .sg-icon-tile svg {
@@ -215,25 +205,21 @@
 
   /* ---------- Thẻ ---------- */
   .sg-card {
-    border-radius: 1.25rem;
-    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 1rem;
+    border: 1px solid var(--sg-line);
     background: #fff;
-    box-shadow:
-      0 1px 2px rgba(31, 41, 55, 0.04),
-      0 10px 30px -12px rgba(31, 41, 55, 0.12);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
     transition:
-      transform 250ms ease,
-      box-shadow 250ms ease,
-      border-color 250ms ease;
+      box-shadow 200ms ease,
+      border-color 200ms ease;
   }
 
   @media (hover: hover) {
     .sg-card-hover:hover {
-      transform: translateY(-3px);
-      border-color: rgba(196, 181, 253, 0.8);
+      border-color: #d6ccfb;
       box-shadow:
-        0 1px 2px rgba(31, 41, 55, 0.04),
-        0 18px 40px -14px rgba(139, 92, 246, 0.35);
+        0 1px 2px rgba(16, 24, 40, 0.04),
+        0 8px 16px -6px rgba(16, 24, 40, 0.08);
     }
   }
 
@@ -250,9 +236,7 @@
   }
 
   .sg-hero-card :is(h2, h3) {
-    text-shadow:
-      0 1px 2px rgba(76, 29, 149, 0.45),
-      0 4px 16px rgba(76, 29, 149, 0.22);
+    text-shadow: 0 1px 2px rgba(76, 29, 149, 0.5);
   }
 
   .sg-hero-card::before {
@@ -286,13 +270,11 @@
     gap: 0.4rem;
     border-radius: 9999px;
     padding: 0.35rem 0.85rem;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #6d28d9;
-    border: 1px solid transparent;
-    background:
-      linear-gradient(#faf7ff, #faf7ff) padding-box,
-      var(--sg-gradient) border-box;
+    border: 1px solid #e4dcfd;
+    background: #f7f4ff;
   }
 
   /* Nền section nhạt với hai đốm màu gradient */
@@ -301,22 +283,35 @@
     isolation: isolate;
   }
 
+  /* Nền lưới mảnh (thay cho đốm màu mờ), nhạt dần xuống dưới */
   .sg-section-glow::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background:
-      radial-gradient(42rem 26rem at 8% 0%, rgba(249, 168, 212, 0.22), transparent 70%),
-      radial-gradient(40rem 26rem at 95% 15%, rgba(147, 197, 253, 0.22), transparent 70%),
-      radial-gradient(36rem 22rem at 60% 100%, rgba(196, 181, 253, 0.18), transparent 70%);
+    background-image:
+      linear-gradient(to right, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
+  }
+
+  .sg-section-glow::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    z-index: -1;
+    background-image: var(--sg-gradient);
+    opacity: 0.9;
   }
 
   .sg-section-tint {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%),
-      var(--sg-gradient-soft);
+    background-color: #fbfaff;
+    border-top: 1px solid #f1eefb;
+    border-bottom: 1px solid #f1eefb;
   }
 }
 

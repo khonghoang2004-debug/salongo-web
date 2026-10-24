@@ -97,7 +97,7 @@ export function FeatureImageMockup({
 
   return (
     <div
-      className={`overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-[0_28px_56px_-28px_rgba(76,29,149,0.35)] ${className}`}
+      className={`overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-sg-lg ${className}`}
     >
       <div className="flex items-center gap-2 border-b border-neutral-100 px-4 py-3 sm:px-5 sm:py-3.5">
         <div className="flex gap-1.5">

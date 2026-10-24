@@ -5,7 +5,7 @@ export async function SectionSolutionsCTA() {
 
   return (
     <section className="sg-section bg-white">
-      <div className="sg-hero-card mx-auto max-w-6xl rounded-[28px] px-6 py-12 text-center shadow-[0_30px_60px_-28px_rgba(76,29,149,0.55)] sm:rounded-[32px] sm:px-10 sm:py-16">
+      <div className="sg-hero-card mx-auto max-w-6xl rounded-[28px] px-6 py-12 text-center shadow-sg-lg sm:rounded-[32px] sm:px-10 sm:py-16">
         <h2 className="mx-auto max-w-3xl text-[1.75rem] leading-tight font-bold tracking-tight sm:text-4xl lg:text-5xl">
           {t("ctaTitle")}
         </h2>

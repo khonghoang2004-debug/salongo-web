@@ -50,7 +50,7 @@ export async function TrustSection() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 flex w-fit items-center gap-1.5 rounded-full bg-white px-4 py-2 text-center text-sm font-medium text-[#374151] shadow-[0_6px_20px_-10px_rgba(76,29,149,0.35)] ring-1 ring-violet-100 sm:mt-12 sm:text-base">
+        <p className="mx-auto mt-10 flex w-fit items-center gap-1.5 rounded-full bg-white px-4 py-2 text-center text-sm font-medium text-[#374151] shadow-sg-lg ring-1 ring-violet-100 sm:mt-12 sm:text-base">
           <span className="text-amber-500" aria-hidden>⭐</span>
           {t("socialProof")}
         </p>

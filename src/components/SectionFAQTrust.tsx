@@ -21,7 +21,7 @@ export async function SectionFAQTrust() {
           {ITEMS.map(({ key, Icon }) => (
             <div
               key={key}
-              className="flex flex-col items-center rounded-xl border border-neutral-200/80 bg-white px-2 py-3 text-center shadow-sm transition-shadow hover:shadow-md sm:rounded-2xl sm:p-6 sm:shadow-[0_4px_16px_rgba(0,0,0,0.05)]"
+              className="flex flex-col items-center rounded-xl border border-neutral-200/80 bg-white px-2 py-3 text-center shadow-sg-sm transition-shadow hover:shadow-sg-md sm:rounded-2xl sm:p-6 sm:shadow-sg-md"
             >
               <div
                 className="flex size-9 items-center justify-center sg-icon-tile rounded-xl sm:size-12 sm:rounded-2xl"

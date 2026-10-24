@@ -47,7 +47,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
   const bullets = BULLET_KEYS[i];
 
   return (
-    <div className="rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] sm:p-6">
+    <div className="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sg-lg transition-all hover:shadow-sg-lg sm:p-6">
       <div className="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
         {/* Problem */}
         <div className="flex gap-3">

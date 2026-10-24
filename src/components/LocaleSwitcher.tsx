@@ -87,7 +87,7 @@ export function LocaleSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-50 mt-1 min-w-[160px] rounded-lg border border-neutral-200 bg-white py-1 shadow-lg"
+          className="absolute right-0 top-full z-50 mt-1 min-w-[160px] rounded-lg border border-neutral-200 bg-white py-1 shadow-sg-md"
         >
           {locales.map((loc) => (
             <li key={loc.code} role="option" aria-selected={locale === loc.code}>

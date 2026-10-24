@@ -269,7 +269,16 @@
     "proof2": "Multilingual support including Vietnamese",
     "proof3": "Operating in countries across Europe",
     "imageAlt": "SalonGo app preview",
-    "revenueToday": "Today's revenue"
+    "revenueToday": "Today's revenue",
+    "stat1Value": "1000+",
+    "stat1Label": "Salons using SalonGo",
+    "stat2Value": "4",
+    "stat2Label": "Languages, incl. Vietnamese",
+    "stat3Value": "30 days",
+    "stat3Label": "Free trial",
+    "stat4Value": "24 h",
+    "stat4Label": "Support response",
+    "badge": "Salon management software for Europe"
   },
   "download": {
     "title": "Download Desktop App",

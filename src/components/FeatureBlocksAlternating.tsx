@@ -37,8 +37,11 @@ const blocks = [
     titleKey: "block4Title" as const,
     descKey: "block4Desc" as const,
     bullets: ["block4Bullet1", "block4Bullet2", "block4Bullet3", "block4Bullet4"] as const,
-    image: "custom" as const,
-    imageSrc: "/images/lich-hen-online.webp",
+    image: "views" as const,
+    views: [
+      { icon: "booking", tab: "block4TabBooking", title: "block4ViewBooking", desc: "block4ViewBookingDesc", src: "/images/dat-lich-khach.webp" },
+      { icon: "requests", tab: "block4TabRequests", title: "block4ViewRequests", desc: "block4ViewRequestsDesc", src: "/images/lich-hen-online.webp" },
+    ] as const,
   },
   {
     titleKey: "block5Title" as const,

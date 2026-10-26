@@ -4,20 +4,24 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
+    /* Bộ màu chuẩn của SalonGo */
+    --primary: #800020; /* Màu chính, nút bấm */
+    --primary-hover: #66001A; /* Khi rê chuột */
+    --primary-soft: #F8EEF1; /* Nền menu đang chọn */
+    --background: #FFFFFF; /* Nền giao diện */
     --foreground: #1a1416;
 
-    /* Màu chủ đạo: đỏ đô (burgundy). Gradient đậm cho nút, thẻ lớn, nền CTA */
-    --sg-gradient: linear-gradient(#7d1a3a, #7d1a3a);
-    /* Bản rất nhạt: nền ô, nền section phụ */
-    --sg-gradient-soft: linear-gradient(#fcf4f6, #fcf4f6);
-    /* Chữ nhấn trên nền trắng: đỏ đô → hồng rượu (đủ tương phản) */
-    --sg-gradient-text: linear-gradient(#7d1a3a, #7d1a3a);
+    /* Màu đặc, không gradient (giữ tên biến cũ cho các chỗ đang dùng) */
+    --sg-gradient: linear-gradient(var(--primary), var(--primary));
+    /* Nền nhạt: ô icon, nền phụ */
+    --sg-gradient-soft: linear-gradient(var(--primary-soft), var(--primary-soft));
+    /* Chữ nhấn trên nền trắng */
+    --sg-gradient-text: linear-gradient(var(--primary), var(--primary));
     --sg-on-gradient-shadow: 0 1px 1px rgba(44, 8, 20, 0.25);
-    --sg-shadow-btn: 0 1px 2px rgba(44, 8, 20, 0.18), 0 6px 16px -6px rgba(125, 26, 58, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    --sg-shadow-btn: 0 1px 2px rgba(44, 8, 20, 0.18), 0 6px 16px -6px rgba(128, 0, 32, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
     --sg-line: #ece6e7;
-    --sg-accent: #97274a;
-    --sg-accent-strong: #7d1a3a;
+    --sg-accent: var(--primary);
+    --sg-accent-strong: var(--primary);
     --sg-ink: #1a1416;
     --sg-muted: #6e6568;
   }
@@ -30,7 +34,7 @@
   body {
     position: relative;
     color: var(--foreground);
-    background: #ffffff;
+    background: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "cv11", "ss01";
@@ -86,7 +90,7 @@
 
   /* ---------- Nền & chữ gradient ---------- */
   .sg-gradient {
-    background-color: #7d1a3a;
+    background-color: var(--primary);
     background-image: var(--sg-gradient);
   }
 
@@ -96,7 +100,7 @@
 
   /* Chữ nhấn: đỏ đô đặc, không gradient */
   .sg-gradient-text {
-    color: #7d1a3a;
+    color: var(--primary);
   }
 
   .sg-gradient-border {
@@ -144,18 +148,18 @@
     outline: none;
     box-shadow:
       0 0 0 3px #fff,
-      0 0 0 5px rgba(151, 39, 74, 0.55);
+      0 0 0 5px rgba(128, 0, 32, 0.55);
   }
 
   /* Nút chính: đỏ đô đặc, chữ trắng */
   .btn-primary {
     color: #fff;
-    background-color: #7d1a3a;
+    background-color: var(--primary);
     box-shadow: var(--sg-shadow-btn);
   }
 
   .btn-primary:hover {
-    background-color: #64152f;
+    background-color: var(--primary-hover);
   }
 
   /* Nút phụ: nền trắng, viền mảnh */
@@ -168,8 +172,8 @@
 
   .btn-secondary:hover {
     border-color: #e3a0b3;
-    background: #fcf4f6;
-    color: #64152f;
+    background: var(--primary-soft);
+    color: var(--primary-hover);
   }
 
   /* Nút trắng trên nền đỏ đô (CTA) */
@@ -181,7 +185,7 @@
     border-radius: 0.75rem;
     font-weight: 700;
     background: #fff;
-    color: #7d1a3a;
+    color: var(--primary);
     box-shadow: 0 1px 2px rgba(44, 8, 20, 0.2), 0 8px 20px -8px rgba(0, 0, 0, 0.35);
     transition:
       transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -189,7 +193,7 @@
   }
 
   .btn-on-gradient:hover {
-    background: #fcf4f6;
+    background: var(--primary-soft);
   }
 
   /* ---------- Ô icon: nền đỏ đô nhạt, icon đỏ đô ---------- */
@@ -199,13 +203,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.875rem;
-    color: #7d1a3a;
-    background: #fcf4f6;
-    box-shadow: inset 0 0 0 1px rgba(151, 39, 74, 0.14);
+    color: var(--primary);
+    background: var(--primary-soft);
+    box-shadow: inset 0 0 0 1px rgba(128, 0, 32, 0.14);
   }
 
   .sg-icon-tile svg {
-    color: #7d1a3a;
+    color: var(--primary);
   }
 
   /* Ô icon đặc (dùng khi cần nhấn mạnh) */
@@ -216,9 +220,9 @@
     justify-content: center;
     border-radius: 0.875rem;
     color: #fff;
-    background-color: #7d1a3a;
+    background-color: var(--primary);
     background-image: var(--sg-gradient);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 4px 10px -4px rgba(125, 26, 58, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 4px 10px -4px rgba(128, 0, 32, 0.6);
   }
 
   /* ---------- Thẻ ---------- */
@@ -239,7 +243,7 @@
       transform: translateY(-2px);
       box-shadow:
         0 1px 2px rgba(41, 17, 25, 0.04),
-        0 16px 32px -14px rgba(74, 14, 34, 0.22);
+        0 16px 32px -14px rgba(102, 0, 26, 0.22);
     }
   }
 
@@ -249,7 +253,7 @@
     overflow: hidden;
     isolation: isolate;
     color: #fff;
-    background-color: #7d1a3a;
+    background-color: var(--primary);
     background-image: var(--sg-gradient);
     text-shadow: var(--sg-on-gradient-shadow);
   }
@@ -292,9 +296,9 @@
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.01em;
-    color: #7d1a3a;
+    color: var(--primary);
     border: 1px solid #f0cad5;
-    background: #fcf4f6;
+    background: var(--primary-soft);
   }
 
   /* Nhãn chữ nhỏ in hoa phía trên tiêu đề section */
@@ -306,7 +310,7 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #97274a;
+    color: var(--primary);
   }
 
   .sg-kicker::before {
@@ -331,8 +335,8 @@
     z-index: -1;
     pointer-events: none;
     background-image:
-      linear-gradient(to right, rgba(125, 26, 58, 0.055) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(125, 26, 58, 0.055) 1px, transparent 1px);
+      linear-gradient(to right, rgba(128, 0, 32, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(128, 0, 32, 0.055) 1px, transparent 1px);
     background-size: 48px 48px;
     -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
     mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
@@ -351,7 +355,7 @@
   /* Nền đỏ đô đặc cho dải CTA / thẻ nổi bật */
   .sg-dark {
     color: #fff;
-    background-color: #7d1a3a;
+    background-color: var(--primary);
   }
 
   /* Khung trình duyệt chứa ảnh chụp app */
@@ -363,7 +367,7 @@
     box-shadow:
       0 0 0 6px rgba(255, 255, 255, 0.6),
       0 2px 4px rgba(41, 17, 25, 0.04),
-      0 32px 64px -24px rgba(74, 14, 34, 0.3);
+      0 32px 64px -24px rgba(102, 0, 26, 0.3);
   }
 
   .sg-browser-bar {
@@ -390,7 +394,7 @@
 
   /* Giữ tương thích: chữ gradient cho các chỗ cũ */
   .btn-glass-text {
-    color: #7d1a3a;
+    color: var(--primary);
     font-weight: 600;
   }
 }

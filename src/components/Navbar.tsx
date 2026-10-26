@@ -218,8 +218,8 @@ export function Navbar() {
                   onClick={() => setDownloadOpen(false)}
                 >
                   <svg className="size-4 shrink-0" viewBox="0 0 24 24" aria-hidden>
-                    <rect x="1" y="1" width="10" height="10" rx="1.5" fill="#7d1a3a" />
-                    <rect x="13" y="1" width="10" height="10" rx="1.5" fill="#97274a" />
+                    <rect x="1" y="1" width="10" height="10" rx="1.5" fill="#800020" />
+                    <rect x="13" y="1" width="10" height="10" rx="1.5" fill="#800020" />
                     <rect x="1" y="13" width="10" height="10" rx="1.5" fill="#b34366" />
                     <rect x="13" y="13" width="10" height="10" rx="1.5" fill="#cf6e8a" />
                   </svg>

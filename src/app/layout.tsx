@@ -15,7 +15,7 @@ export default async function RootLayout({
           <defs>
             <linearGradient id="gradientPinkPurple" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#6b1532" />
-              <stop offset="50%" stopColor="#97274a" />
+              <stop offset="50%" stopColor="#800020" />
               <stop offset="100%" stopColor="#c04a6e" />
             </linearGradient>
           </defs>

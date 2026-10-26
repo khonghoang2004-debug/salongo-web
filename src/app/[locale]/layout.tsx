@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
@@ -12,12 +12,11 @@ import viMessages from "../../../messages/vi.json";
 import csMessages from "../../../messages/cs.json";
 import deMessages from "../../../messages/de.json";
 
-const inter = Inter({ subsets: ["latin", "latin-ext", "vietnamese"], variable: "--font-inter", display: "swap" });
-// Font tiêu đề: hình học, hiện đại, có đủ dấu tiếng Việt / Séc / Đức
-const display = Plus_Jakarta_Sans({
+// Be Vietnam Pro: font thiết kế cho tiếng Việt, đủ dấu Séc / Đức, dùng cho cả tiêu đề và nội dung
+const sans = Be_Vietnam_Pro({
   subsets: ["latin", "latin-ext", "vietnamese"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-display",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -118,7 +117,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div id="sg-root" className={`${inter.variable} ${display.variable} font-sans antialiased`}>{children}</div>
+      <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>{children}</div>
     </NextIntlClientProvider>
   );
 }

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
+import { HomeHero } from "@/components/home/HomeHero";
+import { HomeBento } from "@/components/home/HomeBento";
+import { HomeLanguage } from "@/components/home/HomeLanguage";
+import { HomeSalonTypes } from "@/components/home/HomeSalonTypes";
+import { HomePricingTeaser } from "@/components/home/HomePricingTeaser";
 import { DownloadSection } from "@/components/DownloadSection";
-import { TrustSection } from "@/components/TrustSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -87,9 +90,12 @@ export default async function Home({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <Hero />
-      <TrustSection />
+      <HomeHero />
+      <HomeBento />
+      <HomeLanguage />
+      <HomeSalonTypes />
       <HowItWorks />
+      <HomePricingTeaser />
       <DownloadSection />
       <CTA />
       <Footer />

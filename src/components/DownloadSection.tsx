@@ -40,7 +40,7 @@ export async function DownloadSection() {
   ];
 
   return (
-    <section className="sg-section bg-white">
+    <section className="sg-section bg-white pt-0 sm:pt-0 lg:pt-0">
       <div className="mx-auto grid max-w-6xl items-center gap-8 rounded-[28px] border border-line bg-sand p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-12">
         <div className="text-center lg:text-left">
           <p className="sg-kicker">{t("eyebrow")}</p>
@@ -48,7 +48,7 @@ export async function DownloadSection() {
           <p className="sg-lead mt-3">{t("subtitle")}</p>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 lg:w-[560px]">
+        <div className="grid gap-3 sm:grid-cols-2 lg:w-[380px] lg:grid-cols-1">
           {items.map(({ href, file, label, Icon, ext }) => (
             <a
               key={file}

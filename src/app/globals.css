@@ -31,13 +31,16 @@
     scroll-behavior: smooth;
   }
 
+  #sg-root {
+    --font-display: var(--font-inter);
+  }
+
   body {
     position: relative;
     color: var(--foreground);
     background: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "cv11", "ss01";
   }
 
   h1,

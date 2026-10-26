@@ -9,16 +9,11 @@ type CtaBandProps = {
   secondaryLabel?: string;
 };
 
-// Dải kêu gọi hành động nền đỏ đô đậm, dùng chung cho mọi trang
+// Dải kêu gọi hành động nền đỏ đô đặc, dùng chung cho mọi trang
 export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProps) {
   return (
     <section className="sg-section bg-white">
       <div className="sg-dark relative mx-auto max-w-6xl overflow-hidden rounded-[28px] px-6 py-12 text-center shadow-sg-xl sm:rounded-[32px] sm:px-10 sm:py-16 lg:py-20">
-        {/* Lưới mảnh trên nền tối */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_0%,#000,transparent)]"
-          aria-hidden
-        />
         <div className="relative">
           <h2 className="mx-auto max-w-3xl font-display text-[1.875rem] font-bold leading-[1.15] tracking-[-0.025em] text-balance sm:text-[2.25rem] lg:text-[3rem]">
             {title}

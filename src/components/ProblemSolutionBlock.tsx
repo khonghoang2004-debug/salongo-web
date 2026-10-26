@@ -80,7 +80,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
         </div>
 
         {/* Solution */}
-        <div className="rounded-xl bg-gradient-to-br from-brand-50/60 to-brand-50/40 p-4 sm:p-5" style={{ borderRadius: 16 }}>
+        <div className="rounded-xl bg-brand-50/50 p-4 sm:p-5" style={{ borderRadius: 16 }}>
           <h4 className="text-lg font-bold text-ink">
             {tSolution(`item${index}Title`)}
           </h4>

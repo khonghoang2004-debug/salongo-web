@@ -64,8 +64,6 @@ export async function Hero() {
 
           <div className="relative min-w-0">
             {/* Khung trình duyệt: viền mảnh, bóng gọn, không blur */}
-            {/* Quầng màu đỏ đô phía sau ảnh */}
-            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(ellipse_at_center,rgba(207,110,138,0.22),transparent_70%)] blur-2xl" aria-hidden />
             <div className="sg-browser">
               <div className="sg-browser-bar">
                 <span className="sg-browser-dot" />
@@ -79,7 +77,7 @@ export async function Hero() {
               <img src="/images/hero-dashboard.webp" alt={t("imageAlt")} width={2000} height={1150} className="block h-auto w-full" />
             </div>
 
-            {/* Thẻ doanh thu — cùng kiểu thẻ gradient trong app SalonGo */}
+            {/* Thẻ doanh thu — nền đỏ đô đặc */}
             <div className="sg-hero-card absolute -bottom-10 left-3 w-[62%] max-w-[300px] rounded-xl border border-white/15 p-3 shadow-sg-xl sm:w-[72%] sm:rounded-2xl sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
               <p className="flex items-center gap-2 text-xs font-semibold text-white/80 sm:text-sm">
                 <Wallet className="size-4 sm:size-5" aria-hidden />

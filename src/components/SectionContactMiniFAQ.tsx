@@ -29,7 +29,7 @@ export function SectionContactMiniFAQ() {
                   onClick={() => setOpenIndex(isOpen ? null : i - 1)}
                   className={`flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold transition-colors ${
                     isOpen
-                      ? "bg-gradient-to-r from-brand-50/80 to-brand-50/60 text-ink"
+                      ? "bg-brand-50/70 text-ink"
                       : "bg-white text-ink hover:bg-sand"
                   }`}
                 >
@@ -39,7 +39,7 @@ export function SectionContactMiniFAQ() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="border-t-2 border-brand-100/60 bg-gradient-to-br from-white to-neutral-50/40 px-5 pb-4 pt-3 text-sm text-ink/80 leading-relaxed">
+                  <div className="border-t-2 border-brand-100/60 bg-white px-5 pb-4 pt-3 text-sm text-ink/80 leading-relaxed">
                     {t(`faqA${i}`)}
                   </div>
                 )}

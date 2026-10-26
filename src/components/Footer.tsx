@@ -31,10 +31,6 @@ export async function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-[#1c0a11] text-white">
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_100%_0%,rgba(151,39,74,0.35),transparent_60%)]"
-        aria-hidden
-      />
       <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         {/*
           Mobile: 2 cột — điều hướng | liên hệ (gọn). Tablet+: layout cũ.

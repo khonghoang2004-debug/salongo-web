@@ -65,7 +65,7 @@ export function LocaleSwitcher() {
 
   if (!mounted) {
     return (
-      <div className="h-9 w-[140px] shrink-0 animate-pulse rounded-lg border border-neutral-200 bg-neutral-100" />
+      <div className="h-9 w-[140px] shrink-0 animate-pulse rounded-lg border border-line bg-[#f3eeee]" />
     );
   }
 
@@ -74,7 +74,7 @@ export function LocaleSwitcher() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-2.5 py-1.5 text-sm font-medium text-neutral-700 transition-colors hover:border-neutral-300 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500"
+        className="flex items-center gap-2 rounded-xl border border-[#e3dbdd] bg-white px-2.5 py-2 text-sm font-medium text-ink/80 transition-colors hover:border-brand-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/40"
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label="Select language"
@@ -94,17 +94,17 @@ export function LocaleSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="sg-pop absolute right-0 top-full z-50 mt-1 min-w-[160px] rounded-lg border border-neutral-200 bg-white py-1 shadow-sg-md"
+          className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[170px] rounded-xl border border-line bg-white p-1 shadow-sg-lg"
         >
           {locales.map((loc) => (
             <li key={loc.code} role="option" aria-selected={locale === loc.code}>
               <button
                 type="button"
                 onClick={() => handleSelect(loc.code)}
-                className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors ${
+                className={`flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
                   locale === loc.code
-                    ? "bg-purple-50 font-medium text-purple-700"
-                    : "text-neutral-700 hover:bg-neutral-50"
+                    ? "bg-brand-50 font-medium text-brand-700"
+                    : "text-ink/80 hover:bg-sand"
                 }`}
               >
                 <FlagImg code={loc.flagCode} className="shrink-0 rounded-sm object-cover" />

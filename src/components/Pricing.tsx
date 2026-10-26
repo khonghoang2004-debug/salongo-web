@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Check } from "lucide-react";
 
 const APP_URL = "https://app.salongo.eu";
 
@@ -44,72 +45,71 @@ export async function Pricing() {
   return (
     <section
       id="pricing"
-      className="sg-section bg-white"
+      className="sg-section bg-white pt-2 sm:pt-4 lg:pt-6"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
-          {planKeys.map((plan) => (
-            <div
-              key={plan.nameKey}
-              className={`relative flex h-full flex-col rounded-2xl border bg-white transition-all duration-300 hover:shadow-sg-md ${
-                plan.highlighted
-                  ? "sg-gradient-border scale-[1.02] p-[10px] shadow-sg-lg lg:scale-[1.03]"
-                  : "border-neutral-200/80 p-6 shadow-sg-lg"
-              }`}
-            >
-              {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2">
-                  <span
-                    className="sg-gradient inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-sg-md"
-                  >
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
+          {planKeys.map((plan) => {
+            const hi = plan.highlighted;
+            return (
+              <div
+                key={plan.nameKey}
+                className={`relative flex h-full flex-col rounded-[1.25rem] p-6 transition-all duration-300 sm:p-7 ${
+                  hi
+                    ? "sg-dark shadow-sg-xl lg:-my-3 lg:py-10"
+                    : "sg-card sg-card-hover"
+                }`}
+              >
+                {hi && (
+                  <span className="absolute right-5 top-5 inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white ring-1 ring-white/20">
                     {tPage("popularMost")}
                   </span>
-                </div>
-              )}
+                )}
 
-              <div
-                className={`flex flex-1 flex-col rounded-2xl bg-white ${plan.highlighted ? "p-6" : ""}`}
-                style={plan.highlighted ? { borderRadius: 14 } : undefined}
-              >
-                <h3 className="text-xl font-bold text-ink">
-                  {t(plan.nameKey)}
-                </h3>
-                <p className="mt-2 text-sm text-muted">{t(plan.subtitleKey)}</p>
+                <h3 className={`font-display text-xl font-bold ${hi ? "text-white" : "text-ink"}`}>{t(plan.nameKey)}</h3>
+                <p className={`mt-2 min-h-[2.5rem] text-sm ${hi ? "text-white/70" : "text-muted"}`}>{t(plan.subtitleKey)}</p>
 
-                <div className="mt-6">
+                <div className={`mt-6 border-b pb-6 ${hi ? "border-white/15" : "border-line"}`}>
                   <div className="flex items-baseline gap-1.5">
-                    <span className="text-3xl font-bold tracking-tight text-ink lg:text-4xl">
+                    <span className={`font-display text-4xl font-extrabold tracking-[-0.03em] lg:text-[2.75rem] ${hi ? "text-white" : "text-ink"}`}>
                       {plan.price}
                     </span>
-                    <span className="text-muted">{t("perMonth")}</span>
+                    <span className={hi ? "text-white/70" : "text-muted"}>{t("perMonth")}</span>
                   </div>
                   {plan.originalPrice && (
-                    <p className="mt-1 text-sm text-neutral-400 line-through">
+                    <p className={`mt-1 text-sm line-through ${hi ? "text-white/45" : "text-[#a49a9d]"}`}>
                       {plan.originalPrice} CZK
                     </p>
                   )}
                 </div>
 
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-6 flex-1 space-y-3">
                   {plan.featureKeys.map((key) => (
-                    <li key={key} className="flex items-start gap-2 text-sm text-[#4B5563]">
-                      <span className="mt-0.5 shrink-0 text-emerald-500">✓</span>
+                    <li key={key} className={`flex items-start gap-2.5 text-sm ${hi ? "text-white/90" : "text-ink/80"}`}>
+                      <span
+                        className={`mt-0.5 flex size-[18px] shrink-0 items-center justify-center rounded-full ${
+                          hi ? "bg-white/15 text-white" : "bg-brand-50 text-brand-700"
+                        }`}
+                        aria-hidden
+                      >
+                        <Check className="size-3" strokeWidth={3} />
+                      </span>
                       {tPage(key)}
                     </li>
                   ))}
                 </ul>
-              </div>
 
-              <a
-                href={`${APP_URL}/signup`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-6 w-full py-3.5 text-sm ${plan.highlighted ? "btn-primary" : "btn-secondary"}`}
-              >
-                {t("upgrade")}
-              </a>
-            </div>
-          ))}
+                <a
+                  href={`${APP_URL}/signup`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 w-full py-3.5 text-sm ${hi ? "btn-on-gradient" : "btn-secondary"}`}
+                >
+                  {t("upgrade")}
+                </a>
+              </div>
+            );
+          })}
         </div>
 
         <p className="mt-6 text-center text-sm text-muted">

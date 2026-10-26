@@ -23,7 +23,7 @@ export async function TermsOfServiceContent() {
         {SECTION_KEYS.map((key) => (
           <div key={key} className="mb-8">
             {key === "contact" ? (
-              <p className="text-[#374151] leading-relaxed">
+              <p className="text-ink/80 leading-relaxed">
                 {t("contact")}{" "}
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
@@ -33,7 +33,7 @@ export async function TermsOfServiceContent() {
                 </a>
               </p>
             ) : (
-              <p className="text-[#374151] leading-relaxed">{t(key)}</p>
+              <p className="text-ink/80 leading-relaxed">{t(key)}</p>
             )}
           </div>
         ))}

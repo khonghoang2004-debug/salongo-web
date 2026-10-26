@@ -16,6 +16,7 @@
     "backHome": "Zpět na úvod"
   },
   "howItWorks": {
+    "eyebrow": "3 jednoduché kroky",
     "title": "Začněte za pár minut",
     "subtitle": "Žádná technika. Žádná složitá instalace.",
     "step1Title": "Vytvořte účet",
@@ -257,6 +258,7 @@
     "contact": "Máte-li dotazy ohledně těchto podmínek, kontaktujte nás:"
   },
   "hero": {
+    "trialNote": "150 dní zdarma · Bez platební karty",
     "titleBefore": "Chytrá správa",
     "titleSalon": "salonu",
     "titleAfter": "– přesná a šetří váš čas.",
@@ -284,12 +286,14 @@
     "badge": "Software pro správu salonů v Evropě"
   },
   "download": {
+    "eyebrow": "Desktopová aplikace",
     "title": "Stáhnout desktopovou aplikaci",
     "subtitle": "Rychlá instalace pro Windows nebo Mac",
     "windows": "Stáhnout pro Windows",
     "mac": "Stáhnout pro Mac"
   },
   "trust": {
+    "eyebrow": "Proč SalonGo",
     "title": "Profesionální správa pro vietnamské salony v Evropě",
     "titleBefore": "Profesionální správa pro ",
     "titleHighlight": "vietnamské salony",

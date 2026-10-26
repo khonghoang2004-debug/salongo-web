@@ -20,19 +20,22 @@ const footerNavItems = [
 ] as const;
 
 const linkBase =
-  "text-sm text-neutral-600 transition-colors duration-200 hover:text-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-400/40 focus:ring-offset-1 rounded";
+  "text-sm text-white/65 transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/50 rounded";
 
 const socialBtnClass =
-  "flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-600 transition-colors sm:h-10 sm:w-10";
+  "flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/75 transition-colors sm:h-10 sm:w-10";
 
 export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
 
   return (
-    <footer className="relative bg-[#fbfaff]">
-      <div className="sg-gradient absolute inset-x-0 top-0 h-[3px]" aria-hidden />
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+    <footer className="relative overflow-hidden bg-[#1c0a11] text-white">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_100%_0%,rgba(151,39,74,0.35),transparent_60%)]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         {/*
           Mobile: 2 cột — điều hướng | liên hệ (gọn). Tablet+: layout cũ.
           Hàng 1 mobile: brand full width. Hàng 2: nav | contact.
@@ -50,9 +53,9 @@ export async function Footer() {
                   alt=""
                   width={40}
                   height={40}
-                  className="h-9 w-9 shrink-0 rounded-lg sm:h-10 sm:w-10"
+                  className="h-9 w-9 shrink-0 rounded-lg bg-white p-1 sm:h-10 sm:w-10"
                 />
-                <span className="sg-gradient-text text-base font-bold tracking-tight sm:text-lg">
+                <span className="font-display text-lg font-bold tracking-tight text-white sm:text-xl">
                   {siteConfig.name}
                 </span>
               </Link>
@@ -62,7 +65,7 @@ export async function Footer() {
                 href={CONTACT_FACEBOOK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${socialBtnClass} hover:border-violet-300 hover:bg-violet-50 hover:text-violet-600`}
+                className={`${socialBtnClass} hover:border-white/30 hover:bg-white/10 hover:text-white`}
                 aria-label="Facebook"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
@@ -73,7 +76,7 @@ export async function Footer() {
                 href={CONTACT_INSTAGRAM}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${socialBtnClass} hover:border-violet-300 hover:bg-violet-50 hover:text-violet-600`}
+                className={`${socialBtnClass} hover:border-white/30 hover:bg-white/10 hover:text-white`}
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
@@ -84,7 +87,7 @@ export async function Footer() {
                 href={CONTACT_WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${socialBtnClass} hover:border-green-500/30 hover:bg-green-50 hover:text-green-600`}
+                className={`${socialBtnClass} hover:border-[#25D366]/50 hover:bg-[#25D366]/15 hover:text-[#25D366]`}
                 aria-label="WhatsApp"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
@@ -93,14 +96,14 @@ export async function Footer() {
               </a>
             </div>
             </div>
-            <p className="mt-2.5 text-xs leading-snug text-neutral-500 sm:mt-3 sm:max-w-xs sm:text-sm sm:leading-relaxed">
+            <p className="mt-2.5 text-xs leading-snug text-white/55 sm:mt-3 sm:max-w-xs sm:text-sm sm:leading-relaxed">
               {t("tagline")}
             </p>
             <a
               href="https://app.salongo.eu/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary mt-4 hidden w-fit px-5 py-2.5 text-sm sm:inline-flex"
+              className="btn-on-gradient mt-5 hidden w-fit px-5 py-2.5 text-sm sm:inline-flex"
             >
               {tNav("tryFree")}
             </a>
@@ -108,7 +111,7 @@ export async function Footer() {
 
           {/* Quick links — mobile: cột trái, gọn */}
           <div className="col-span-2 min-w-0 sm:col-span-1 lg:col-span-3">
-            <h3 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-xs">
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/40 sm:text-xs">
               {t("quickLinks")}
             </h3>
             <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 sm:mt-4 sm:block sm:space-y-2.5">
@@ -126,8 +129,8 @@ export async function Footer() {
           </div>
 
           {/* Contact & Legal — mobile: cột phải cạnh điều hướng */}
-          <div className="col-span-2 min-w-0 max-sm:border-t max-sm:border-violet-100 max-sm:pt-5 sm:col-span-1 lg:col-span-5">
-            <h3 className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-xs">
+          <div className="col-span-2 min-w-0 max-sm:border-t max-sm:border-white/10 max-sm:pt-5 sm:col-span-1 lg:col-span-5">
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/40 sm:text-xs">
               {tNav("contact")}
             </h3>
             <dl className="mt-2 space-y-1.5 sm:mt-4 sm:space-y-2.5">
@@ -154,7 +157,7 @@ export async function Footer() {
                 </dd>
               </div>
             </dl>
-            <div className="mt-3 flex flex-wrap gap-x-2.5 gap-y-0.5 border-t border-violet-100 pt-3 sm:mt-5 sm:gap-x-5 sm:gap-y-2 sm:pt-5">
+            <div className="mt-3 flex flex-wrap gap-x-2.5 gap-y-0.5 border-t border-white/10 pt-3 sm:mt-5 sm:gap-x-5 sm:gap-y-2 sm:pt-5">
               <Link href="/privacy" className={`${linkBase} text-xs sm:text-sm`}>
                 {t("privacy")}
               </Link>
@@ -165,8 +168,8 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-violet-100 pt-5 sm:mt-10 sm:flex-row sm:gap-4 sm:pt-8">
-          <p className="text-center text-xs text-neutral-500 sm:text-left sm:text-sm">
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-5 sm:mt-12 sm:flex-row sm:gap-4 sm:pt-8">
+          <p className="text-center text-xs text-white/45 sm:text-left sm:text-sm">
             &copy; {new Date().getFullYear()} SalonGo. {t("rights")}
           </p>
         </div>

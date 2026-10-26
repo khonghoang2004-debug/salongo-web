@@ -20,7 +20,7 @@ export async function SectionSolutionsResults() {
           {stats.map(({ titleKey, descKey }) => (
             <div
               key={titleKey}
-              className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sg-lg transition-all hover:shadow-sg-lg"
+              className="rounded-2xl border border-line bg-white p-6 shadow-sg-lg transition-all hover:shadow-sg-lg"
               style={{ borderRadius: 16 }}
             >
               <h3 className="text-lg font-bold text-ink">

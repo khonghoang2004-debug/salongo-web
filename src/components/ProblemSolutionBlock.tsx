@@ -47,7 +47,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
   const bullets = BULLET_KEYS[i];
 
   return (
-    <div className="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sg-lg transition-all hover:shadow-sg-lg sm:p-6">
+    <div className="rounded-2xl border border-line bg-white p-5 shadow-sg-lg transition-all hover:shadow-sg-lg sm:p-6">
       <div className="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
         {/* Problem */}
         <div className="flex gap-3">
@@ -57,7 +57,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
             <Icon {...ICON_PROPS} />
           </div>
           <div className="min-w-0">
-            <h3 className="text-lg font-bold text-[#374151]">
+            <h3 className="text-lg font-bold text-ink/80">
               {tProblem(`item${index}Title`)}
             </h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
@@ -80,13 +80,13 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
         </div>
 
         {/* Solution */}
-        <div className="rounded-xl bg-gradient-to-br from-pink-50/60 to-violet-50/40 p-4 sm:p-5" style={{ borderRadius: 16 }}>
+        <div className="rounded-xl bg-gradient-to-br from-brand-50/60 to-brand-50/40 p-4 sm:p-5" style={{ borderRadius: 16 }}>
           <h4 className="text-lg font-bold text-ink">
             {tSolution(`item${index}Title`)}
           </h4>
           <ul className="mt-2 space-y-1.5">
             {bullets.map((key) => (
-              <li key={key} className="flex items-center gap-2 text-[#4B5563]">
+              <li key={key} className="flex items-center gap-2 text-muted">
                 <span
                   className="sg-gradient size-1.5 shrink-0 rounded-full"
                 />

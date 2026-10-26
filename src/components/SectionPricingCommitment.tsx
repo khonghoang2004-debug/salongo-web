@@ -30,7 +30,7 @@ export async function SectionPricingCommitment() {
               }
             >
               <div
-                className="mx-auto flex w-full max-w-[11.5rem] flex-col items-center rounded-xl border border-neutral-200/80 bg-white px-3 py-3 text-center shadow-sg-sm transition-shadow hover:shadow-sg-sm sm:mx-0 sm:max-w-none sm:rounded-2xl sm:px-4 sm:py-5 lg:py-4"
+                className="mx-auto flex w-full max-w-[11.5rem] flex-col items-center rounded-xl border border-line bg-white px-3 py-3 text-center shadow-sg-sm transition-shadow hover:shadow-sg-sm sm:mx-0 sm:max-w-none sm:rounded-2xl sm:px-4 sm:py-5 lg:py-4"
               >
                 <div
                   className="sg-icon-tile size-9 rounded-xl sm:size-11 sm:rounded-2xl lg:size-10"
@@ -41,7 +41,7 @@ export async function SectionPricingCommitment() {
                     aria-hidden
                   />
                 </div>
-                <span className="mt-1.5 text-xs font-medium leading-tight text-[#374151] sm:mt-2.5 sm:text-sm">
+                <span className="mt-1.5 text-xs font-medium leading-tight text-ink/80 sm:mt-2.5 sm:text-sm">
                   {t(key)}
                 </span>
               </div>

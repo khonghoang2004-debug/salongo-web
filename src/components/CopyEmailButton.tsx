@@ -25,14 +25,14 @@ export function CopyEmailButton() {
     <div className="flex flex-wrap items-center gap-2">
       <a
         href={`mailto:${email}`}
-        className="text-[15px] font-medium text-neutral-800 hover:text-violet-600 hover:underline"
+        className="text-[15px] font-medium text-ink hover:text-brand-600 hover:underline"
       >
         {email}
       </a>
       <button
         type="button"
         onClick={handleCopy}
-        className="flex size-8 shrink-0 items-center justify-center rounded-md text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:ring-offset-1"
+        className="flex size-8 shrink-0 items-center justify-center rounded-md text-[#a49a9d] transition-colors hover:bg-[#f3eeee] hover:text-muted focus:outline-none focus:ring-2 focus:ring-brand-200 focus:ring-offset-1"
         aria-label={t("copyCopied")}
         title={t("copyCopied")}
       >

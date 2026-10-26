@@ -16,6 +16,7 @@
     "backHome": "Back to home"
   },
   "howItWorks": {
+    "eyebrow": "3 simple steps",
     "title": "Get started in just a few minutes",
     "subtitle": "No technical skills needed. No complex setup.",
     "step1Title": "Create an account",
@@ -257,6 +258,7 @@
     "contact": "If you have questions about these Terms of Service, please contact:"
   },
   "hero": {
+    "trialNote": "150 days free · No credit card required",
     "titleBefore": "Smart",
     "titleSalon": "salon",
     "titleAfter": " management – accurate and time-saving.",
@@ -284,12 +286,14 @@
     "badge": "Salon management software for Europe"
   },
   "download": {
+    "eyebrow": "Desktop app",
     "title": "Download Desktop App",
     "subtitle": "Quick install for Windows or Mac",
     "windows": "Download for Windows",
     "mac": "Download for Mac"
   },
   "trust": {
+    "eyebrow": "Why SalonGo",
     "title": "Professional management for Vietnamese salons in Europe",
     "titleBefore": "Professional management for ",
     "titleHighlight": "Vietnamese salons",

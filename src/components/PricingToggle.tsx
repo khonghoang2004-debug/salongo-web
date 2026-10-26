@@ -10,7 +10,7 @@ export function PricingToggle() {
   return (
     <div className="flex justify-center">
       <div
-        className="inline-flex rounded-full border border-neutral-200 bg-white p-1 shadow-sg-md"
+        className="inline-flex rounded-full border border-line bg-white p-1 shadow-sg-md"
         role="tablist"
         aria-label="Billing period"
       >

@@ -16,6 +16,7 @@
     "backHome": "Về trang chủ"
   },
   "howItWorks": {
+    "eyebrow": "3 bước đơn giản",
     "title": "Cách bắt đầu chỉ trong vài phút",
     "subtitle": "Không cần kỹ thuật. Không cần cài đặt phức tạp.",
     "step1Title": "Tạo tài khoản",
@@ -257,6 +258,7 @@
     "contact": "Nếu bạn có câu hỏi về điều khoản sử dụng, vui lòng liên hệ:"
   },
   "hero": {
+    "trialNote": "Miễn phí 150 ngày · Không cần thẻ thanh toán",
     "titleBefore": "Vận hành",
     "titleSalon": "salon",
     "titleAfter": "thông minh – chính xác và tiết kiệm thời gian.",
@@ -284,12 +286,14 @@
     "badge": "Quản lý salon cho người Việt tại châu Âu"
   },
   "download": {
+    "eyebrow": "Ứng dụng máy tính",
     "title": "Tải ứng dụng Desktop",
     "subtitle": "Cài đặt nhanh chóng cho Windows hoặc Mac",
     "windows": "Tải cho Windows",
     "mac": "Tải cho Mac"
   },
   "trust": {
+    "eyebrow": "Vì sao chọn SalonGo",
     "title": "Giải pháp quản lý chuyên nghiệp cho salon người Việt tại châu Âu",
     "titleBefore": "Giải pháp quản lý chuyên nghiệp cho ",
     "titleHighlight": "salon người Việt",

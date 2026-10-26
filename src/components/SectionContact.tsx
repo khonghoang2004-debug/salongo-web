@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Check, Clock, Mail, MessageCircle, Phone } from "lucide-react";
 import { CopyEmailButton } from "./CopyEmailButton";
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_WHATSAPP } from "@/lib/contact";
 
@@ -30,48 +31,54 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export async function SectionContact() {
   const t = await getTranslations("contact");
+  const supports = [t("supportSetup"), t("supportData"), t("supportMultilang")];
 
   return (
     <section className="sg-section sg-section-alt">
-      <div className="mx-auto max-w-xl">
-        <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sg-sm sm:p-8">
-          <h2 className="text-base font-semibold tracking-tight text-neutral-900">
-            {t("companyInfo")}
-          </h2>
+      <div className="mx-auto grid max-w-5xl gap-4 sm:gap-6 lg:grid-cols-[1.35fr_1fr]">
+        <div className="sg-card p-6 sm:p-8">
+          <h2 className="font-display text-xl font-bold tracking-[-0.02em] text-ink">{t("companyInfo")}</h2>
 
-          <dl className="mt-4 space-y-3">
-            <div>
-              <dt className="text-xs font-medium uppercase tracking-wider text-neutral-500">
-                {t("emailLabel")}
-              </dt>
-              <dd className="mt-1">
-                <CopyEmailButton />
-              </dd>
+          <dl className="mt-6 divide-y divide-line">
+            <div className="flex items-center gap-4 pb-5">
+              <span className="sg-icon-tile size-11">
+                <Mail className="size-5" aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{t("emailLabel")}</dt>
+                <dd className="mt-1">
+                  <CopyEmailButton />
+                </dd>
+              </div>
             </div>
-            <div>
-              <dt className="text-xs font-medium uppercase tracking-wider text-neutral-500">
-                {t("phoneLabel")}
-              </dt>
-              <dd className="mt-1">
-                <a
-                  href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
-                  className="text-[15px] font-medium text-neutral-800 hover:text-violet-600 hover:underline"
-                >
-                  {CONTACT_PHONE}
-                </a>
-              </dd>
+            <div className="flex items-center gap-4 py-5">
+              <span className="sg-icon-tile size-11">
+                <Phone className="size-5" aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{t("phoneLabel")}</dt>
+                <dd className="mt-1">
+                  <a
+                    href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
+                    className="text-[15px] font-semibold text-ink transition-colors hover:text-brand-700"
+                  >
+                    {CONTACT_PHONE}
+                  </a>
+                </dd>
+              </div>
             </div>
-            <div>
-              <dt className="text-xs font-medium uppercase tracking-wider text-neutral-500">
-                {t("socialLabel")}
-              </dt>
-              <dd className="mt-2">
-                <div className="inline-flex items-center gap-3 rounded-xl border border-neutral-200 bg-neutral-50/80 px-4 py-3">
+            <div className="flex items-center gap-4 pt-5">
+              <span className="sg-icon-tile size-11">
+                <MessageCircle className="size-5" aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{t("socialLabel")}</dt>
+                <dd className="mt-2 flex items-center gap-2">
                   <a
                     href={CONTACT_FACEBOOK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white transition-opacity hover:opacity-90"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:-translate-y-0.5"
                     aria-label="Facebook"
                   >
                     <FacebookIcon className="size-4" />
@@ -80,7 +87,7 @@ export async function SectionContact() {
                     href={CONTACT_INSTAGRAM}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full text-white transition-opacity hover:opacity-90"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full text-white transition-transform hover:-translate-y-0.5"
                     style={{ background: "linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737)" }}
                     aria-label="Instagram"
                   >
@@ -90,29 +97,33 @@ export async function SectionContact() {
                     href={CONTACT_WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition-opacity hover:opacity-90"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition-transform hover:-translate-y-0.5"
                     aria-label="WhatsApp"
                   >
                     <WhatsAppIcon className="size-4" />
                   </a>
-                </div>
-              </dd>
+                </dd>
+              </div>
             </div>
           </dl>
+        </div>
 
-          <ul className="mt-5 border-t border-neutral-100 pt-4 space-y-2">
-            <li className="flex items-center gap-2.5 text-sm text-neutral-600">
-              <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-500" aria-hidden>✓</span>
-              {t("supportSetup")}
-            </li>
-            <li className="flex items-center gap-2.5 text-sm text-neutral-600">
-              <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-500" aria-hidden>✓</span>
-              {t("supportData")}
-            </li>
-            <li className="flex items-center gap-2.5 text-sm text-neutral-600">
-              <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-500" aria-hidden>✓</span>
-              {t("supportMultilang")}
-            </li>
+        <div className="sg-dark relative overflow-hidden rounded-[1.125rem] p-6 sm:p-8">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
+            <Clock className="size-3.5" aria-hidden />
+            24h
+          </span>
+          <h2 className="mt-5 font-display text-xl font-bold tracking-[-0.02em] sm:text-2xl">{t("quickSupportTitle")}</h2>
+          <p className="mt-2 text-sm leading-relaxed text-white/70">{t("response24h")}</p>
+          <ul className="mt-6 space-y-3 border-t border-white/10 pt-6">
+            {supports.map((label) => (
+              <li key={label} className="flex items-center gap-3 text-sm font-medium text-white/90">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-white/10" aria-hidden>
+                  <Check className="size-3.5" strokeWidth={3} />
+                </span>
+                {label}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

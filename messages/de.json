@@ -16,6 +16,7 @@
     "backHome": "Zur Startseite"
   },
   "howItWorks": {
+    "eyebrow": "3 einfache Schritte",
     "title": "In wenigen Minuten starten",
     "subtitle": "Keine Technik nötig. Keine aufwendige Installation.",
     "step1Title": "Konto erstellen",
@@ -257,6 +258,7 @@
     "contact": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:"
   },
   "hero": {
+    "trialNote": "150 Tage kostenlos · Keine Kreditkarte nötig",
     "titleBefore": "Intelligente",
     "titleSalon": "Salon",
     "titleAfter": "-Verwaltung – präzise und zeitsparend.",
@@ -284,12 +286,14 @@
     "badge": "Salon-Software für Europa"
   },
   "download": {
+    "eyebrow": "Desktop-App",
     "title": "Desktop-App herunterladen",
     "subtitle": "Schnelle Installation für Windows oder Mac",
     "windows": "Download für Windows",
     "mac": "Download für Mac"
   },
   "trust": {
+    "eyebrow": "Warum SalonGo",
     "title": "Professionelle Verwaltung für vietnamesische Salons in Europa",
     "titleBefore": "Professionelle Verwaltung für ",
     "titleHighlight": "vietnamesische Salons",

@@ -12,7 +12,7 @@ export async function FeaturesPageHero() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="sg-eyebrow">{t("eyebrow")}</span>
           <h1 className="mt-5 sg-h1">{t("heroTitle")}</h1>
-          <p className="sg-lead mx-auto mt-4 max-w-2xl">{t("heroLead")}</p>
+          <p className="sg-lead mx-auto mt-5 max-w-2xl">{t("heroLead")}</p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               href="https://app.salongo.eu/signup"
@@ -50,7 +50,7 @@ export async function FeaturesPageHero() {
                       <Icon className="size-5" />
                     </span>
                     <span className="min-w-0">
-                      <span className="block font-semibold text-ink transition-colors group-hover:text-violet-700">
+                      <span className="block font-semibold text-ink transition-colors group-hover:text-brand-700">
                         {t(`f.${id}.short`)}
                       </span>
                       <span className="mt-0.5 block text-sm leading-snug text-muted">{t(`f.${id}.tile`)}</span>

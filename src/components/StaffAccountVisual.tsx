@@ -12,7 +12,7 @@ export async function StaffAccountVisual() {
   ] as const;
 
   return (
-    <div className="sg-gradient-soft overflow-hidden rounded-2xl border border-violet-100 p-4 shadow-sg-lg sm:rounded-3xl sm:p-8 lg:p-10">
+    <div className="sg-gradient-soft overflow-hidden rounded-2xl border border-brand-100 p-4 shadow-sg-lg sm:rounded-3xl sm:p-8 lg:p-10">
       <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-5 md:grid-cols-[1.15fr_1fr] md:gap-8">
         {/* Lịch hôm nay của nhân viên */}
         <div className="min-w-0 rounded-2xl border border-line bg-white p-4 shadow-sg-md sm:p-6">
@@ -34,7 +34,7 @@ export async function StaffAccountVisual() {
               <li
                 key={it.time}
                 className={`flex items-center gap-3 rounded-xl border px-3.5 py-3 ${
-                  it.state === "now" ? "border-violet-200 bg-violet-50/70" : "border-line bg-white"
+                  it.state === "now" ? "border-brand-200 bg-brand-50/70" : "border-line bg-white"
                 }`}
               >
                 <span className="w-11 shrink-0 text-sm font-bold tabular-nums text-ink">{it.time}</span>
@@ -44,8 +44,8 @@ export async function StaffAccountVisual() {
                     it.state === "done"
                       ? "bg-emerald-50 text-emerald-700"
                       : it.state === "now"
-                        ? "bg-violet-100 text-violet-700"
-                        : "bg-neutral-100 text-neutral-600"
+                        ? "bg-brand-100 text-brand-700"
+                        : "bg-[#f3eeee] text-muted"
                   }`}
                 >
                   {it.state === "done" ? (

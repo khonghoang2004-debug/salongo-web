@@ -62,7 +62,7 @@ export async function SectionAbout() {
             />
             {roadmapItems.map(({ key, Icon }, i) => (
               <li key={key} className="relative flex items-center gap-4 sm:gap-5">
-                <div className="sg-icon-tile relative z-10 size-12 rounded-full ring-4 ring-[#fbfaff]">
+                <div className="sg-icon-tile relative z-10 size-12 rounded-full ring-4 ring-sand">
                   <Icon className="size-5" strokeWidth={2} aria-hidden />
                 </div>
                 <div className="sg-card flex-1 px-5 py-4 sm:px-6">

@@ -5,30 +5,26 @@
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #171717;
+    --foreground: #1a1416;
 
-    /* Gradient thương hiệu — giống hệt app SalonGo (hồng → tím → xanh pastel) */
-    --sg-gradient: linear-gradient(135deg, #f9a8d4 0%, #d8b4fe 25%, #93c5fd 50%, #a5b4fc 75%, #c4b5fd 100%);
-    /* Cùng gradient nhưng rất nhạt: nền section, nền ô icon phụ */
-    --sg-gradient-soft: linear-gradient(135deg, rgba(249, 168, 212, 0.18) 0%, rgba(147, 197, 253, 0.14) 55%, rgba(196, 181, 253, 0.18) 100%);
-    /* Bản đậm hơn cho chữ gradient trên nền trắng (đủ tương phản) */
-    --sg-gradient-text: linear-gradient(120deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%);
-    /* Chữ trắng trên nền gradient: bóng tím nhẹ cho dễ đọc (như app) */
-    --sg-on-gradient-shadow: 0 1px 1.5px rgba(76, 29, 149, 0.45);
-    /* Bóng gọn, sắc (không tỏa mờ) */
-    --sg-shadow-btn: 0 1px 2px rgba(16, 24, 40, 0.08), inset 0 -1px 0 rgba(76, 29, 149, 0.12);
-    --sg-line: #e9e8f2;
-    /* Điểm nhấn tím (chữ/icon đang chọn, dấu tích, link) — giống --salon-accent của app */
-    --sg-accent: #8b5cf6;
-    --sg-accent-strong: #7c3aed;
-    --sg-ink: #111827;
-    --sg-muted: #6b7280;
+    /* Màu chủ đạo: đỏ đô (burgundy). Gradient đậm cho nút, thẻ lớn, nền CTA */
+    --sg-gradient: linear-gradient(135deg, #4e1126 0%, #7d1a3a 52%, #a3355a 100%);
+    /* Bản rất nhạt: nền ô, nền section phụ */
+    --sg-gradient-soft: linear-gradient(135deg, rgba(248, 230, 235, 0.9) 0%, rgba(252, 244, 246, 0.6) 100%);
+    /* Chữ nhấn trên nền trắng: đỏ đô → hồng rượu (đủ tương phản) */
+    --sg-gradient-text: linear-gradient(110deg, #6b1532 0%, #97274a 55%, #c04a6e 100%);
+    --sg-on-gradient-shadow: 0 1px 1px rgba(44, 8, 20, 0.25);
+    --sg-shadow-btn: 0 1px 2px rgba(44, 8, 20, 0.18), 0 6px 16px -6px rgba(125, 26, 58, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    --sg-line: #ece6e7;
+    --sg-accent: #97274a;
+    --sg-accent-strong: #7d1a3a;
+    --sg-ink: #1a1416;
+    --sg-muted: #6e6568;
   }
 
-  /* Trình duyệt hỗ trợ nội suy oklch: gradient mượt hơn, không bị xám ở giữa */
   @supports (background: linear-gradient(135deg in oklch, red, blue)) {
     :root {
-      --sg-gradient: linear-gradient(135deg in oklch, #f9a8d4 0%, #93c5fd 50%, #c4b5fd 100%);
+      --sg-gradient: linear-gradient(135deg in oklch, #4e1126 0%, #7d1a3a 52%, #a3355a 100%);
     }
   }
 
@@ -42,51 +38,60 @@
     background: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
   }
 
   ::selection {
-    background: rgba(196, 181, 253, 0.45);
+    background: rgba(207, 110, 138, 0.28);
   }
 }
 
 @layer components {
   /* ---------- Bố cục & chữ thống nhất toàn site ---------- */
   .sg-section {
-    @apply px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20;
+    @apply px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
   }
 
   .sg-section-alt {
-    background-color: #fbfaff;
-    border-top: 1px solid #f1eefb;
-    border-bottom: 1px solid #f1eefb;
+    background-color: #faf7f6;
+    border-top: 1px solid #f1ebea;
+    border-bottom: 1px solid #f1ebea;
   }
 
   .sg-page-hero {
-    @apply px-4 pt-10 pb-10 sm:px-6 sm:pt-12 sm:pb-14 lg:px-8 lg:pt-16 lg:pb-16;
+    @apply px-4 pt-12 pb-12 sm:px-6 sm:pt-16 sm:pb-16 lg:px-8 lg:pt-20 lg:pb-20;
   }
 
   .sg-h1 {
-    @apply text-[2.125rem] font-extrabold leading-[1.1] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.5rem];
+    @apply font-display text-[2.25rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[3rem] lg:text-[3.75rem];
     text-wrap: balance;
   }
 
   .sg-h2 {
-    @apply text-[1.75rem] font-bold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[2.125rem] lg:text-[2.5rem];
+    @apply font-display text-[1.875rem] font-bold leading-[1.15] tracking-[-0.025em] text-ink sm:text-[2.25rem] lg:text-[2.75rem];
     text-wrap: balance;
   }
 
   .sg-h2-sm {
-    @apply text-xl font-bold leading-snug tracking-tight text-ink sm:text-2xl lg:text-[1.75rem];
+    @apply font-display text-[1.25rem] font-bold leading-[1.3] tracking-[-0.02em] text-ink sm:text-[1.5rem] lg:text-[1.75rem];
     text-wrap: balance;
   }
 
   .sg-lead {
-    @apply text-base leading-relaxed text-muted sm:text-lg;
+    @apply text-base leading-relaxed text-muted sm:text-[1.125rem] sm:leading-[1.7];
     text-wrap: pretty;
   }
+
   /* ---------- Nền & chữ gradient ---------- */
   .sg-gradient {
-    background-color: #c4b5fd;
+    background-color: #7d1a3a;
     background-image: var(--sg-gradient);
   }
 
@@ -102,7 +107,6 @@
     color: transparent;
   }
 
-  /* Viền gradient, nền trắng */
   .sg-gradient-border {
     border: 1.5px solid transparent;
     background:
@@ -117,15 +121,16 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 9999px;
+    border-radius: 0.75rem;
     font-weight: 600;
     white-space: nowrap;
+    letter-spacing: -0.005em;
     transition:
       transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
       box-shadow 180ms ease,
-      filter 180ms ease,
       background-color 180ms ease,
-      border-color 180ms ease;
+      border-color 180ms ease,
+      color 180ms ease;
   }
 
   .btn-primary:hover,
@@ -142,112 +147,125 @@
   }
 
   .btn-primary:focus-visible,
-  .btn-secondary:focus-visible {
+  .btn-secondary:focus-visible,
+  .btn-on-gradient:focus-visible {
     outline: none;
     box-shadow:
       0 0 0 3px #fff,
-      0 0 0 5px rgba(167, 139, 250, 0.7);
+      0 0 0 5px rgba(151, 39, 74, 0.55);
   }
 
-  /* Nút chính: nền gradient của app, chữ trắng */
+  /* Nút chính: đỏ đô đặc, chữ trắng */
   .btn-primary {
     color: #fff;
-    font-weight: 700;
-    background-color: #c4b5fd;
-    background-image: var(--sg-gradient);
-    text-shadow: 0 1px 2px rgba(76, 29, 149, 0.5);
+    background-color: #7d1a3a;
+    background-image: linear-gradient(180deg, #8c2044 0%, #7d1a3a 100%);
     box-shadow: var(--sg-shadow-btn);
   }
 
   .btn-primary:hover {
-    filter: brightness(0.96) saturate(1.15);
+    background-color: #64152f;
+    background-image: linear-gradient(180deg, #7d1a3a 0%, #64152f 100%);
   }
 
-  /* Nút phụ: nền trắng, viền gradient */
+  /* Nút phụ: nền trắng, viền mảnh */
   .btn-secondary {
     color: var(--sg-ink);
     background: #fff;
-    border: 1px solid #dcdae8;
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+    border: 1px solid #e3dbdd;
+    box-shadow: 0 1px 2px rgba(41, 17, 25, 0.05);
   }
 
   .btn-secondary:hover {
-    border-color: #c4b5fd;
-    background: #faf8ff;
+    border-color: #e3a0b3;
+    background: #fcf4f6;
+    color: #64152f;
   }
 
-  /* Nút trắng trên nền gradient (CTA) */
+  /* Nút trắng trên nền đỏ đô (CTA) */
   .btn-on-gradient {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 9999px;
+    border-radius: 0.75rem;
     font-weight: 700;
     background: #fff;
-    color: #6d28d9;
-    box-shadow: 0 1px 2px rgba(76, 29, 149, 0.25);
+    color: #7d1a3a;
+    box-shadow: 0 1px 2px rgba(44, 8, 20, 0.2), 0 8px 20px -8px rgba(0, 0, 0, 0.35);
     transition:
       transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
       background-color 180ms ease;
   }
 
   .btn-on-gradient:hover {
-    background: #f7f4ff;
+    background: #fcf4f6;
   }
 
-  /* ---------- Ô icon gradient (như ô icon đang chọn trong app) ---------- */
+  /* ---------- Ô icon: nền đỏ đô nhạt, icon đỏ đô ---------- */
   .sg-icon-tile {
     display: flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
-    color: #fff;
-    background-color: #c4b5fd;
-    background-image: var(--sg-gradient);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    border-radius: 0.875rem;
+    color: #7d1a3a;
+    background: linear-gradient(180deg, #fcf4f6 0%, #f8e6eb 100%);
+    box-shadow: inset 0 0 0 1px rgba(151, 39, 74, 0.14);
   }
 
   .sg-icon-tile svg {
+    color: #7d1a3a;
+  }
+
+  /* Ô icon đặc (dùng khi cần nhấn mạnh) */
+  .sg-icon-tile-solid {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.875rem;
     color: #fff;
-    filter: drop-shadow(0 1px 1px rgba(76, 29, 149, 0.35));
+    background-color: #7d1a3a;
+    background-image: var(--sg-gradient);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 4px 10px -4px rgba(125, 26, 58, 0.6);
   }
 
   /* ---------- Thẻ ---------- */
   .sg-card {
-    border-radius: 1rem;
+    border-radius: 1.125rem;
     border: 1px solid var(--sg-line);
     background: #fff;
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    box-shadow: 0 1px 2px rgba(41, 17, 25, 0.04);
     transition:
-      box-shadow 200ms ease,
-      border-color 200ms ease;
+      box-shadow 220ms ease,
+      border-color 220ms ease,
+      transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
   @media (hover: hover) {
     .sg-card-hover:hover {
-      border-color: #d6ccfb;
+      border-color: #ebc9d3;
+      transform: translateY(-2px);
       box-shadow:
-        0 1px 2px rgba(16, 24, 40, 0.04),
-        0 8px 16px -6px rgba(16, 24, 40, 0.08);
+        0 1px 2px rgba(41, 17, 25, 0.04),
+        0 16px 32px -14px rgba(74, 14, 34, 0.22);
     }
   }
 
-  /* Thẻ gradient lớn (giống thẻ "Doanh thu hôm nay" trong app):
-     nền gradient, vòng tròn mờ góc phải, đường cong trắng góc trái dưới */
+  /* Thẻ lớn nền đỏ đô: vòng tròn mờ góc phải, đường cong mảnh góc trái dưới */
   .sg-hero-card {
     position: relative;
     overflow: hidden;
     isolation: isolate;
     color: #fff;
-    background-color: #c4b5fd;
+    background-color: #7d1a3a;
     background-image: var(--sg-gradient);
     text-shadow: var(--sg-on-gradient-shadow);
   }
 
   .sg-hero-card :is(h2, h3) {
-    text-shadow: 0 1px 2px rgba(76, 29, 149, 0.5);
+    text-shadow: none;
   }
 
   .sg-hero-card::before {
@@ -259,7 +277,7 @@
     width: min(55%, 440px);
     aspect-ratio: 1;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.16);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 70%);
   }
 
   .sg-hero-card::after {
@@ -271,30 +289,51 @@
     width: min(45%, 260px);
     aspect-ratio: 1;
     border-radius: 9999px;
-    border: 2px solid rgba(255, 255, 255, 0.75);
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
   }
 
   /* Chip nhãn nhỏ phía trên tiêu đề section */
   .sg-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.45rem;
     border-radius: 9999px;
-    padding: 0.35rem 0.85rem;
+    padding: 0.35rem 0.8rem;
     font-size: 0.75rem;
     font-weight: 600;
-    color: #6d28d9;
-    border: 1px solid #e4dcfd;
-    background: #f7f4ff;
+    letter-spacing: 0.01em;
+    color: #7d1a3a;
+    border: 1px solid #f0cad5;
+    background: #fcf4f6;
   }
 
-  /* Nền section nhạt với hai đốm màu gradient */
+  /* Nhãn chữ nhỏ in hoa phía trên tiêu đề section */
+  .sg-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #97274a;
+  }
+
+  .sg-kicker::before {
+    content: "";
+    width: 1.25rem;
+    height: 2px;
+    border-radius: 9999px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  /* Nền hero: lưới mảnh nhạt dần + quầng đỏ đô rất nhẹ */
   .sg-section-glow {
     position: relative;
     isolation: isolate;
   }
 
-  /* Nền lưới mảnh (thay cho đốm màu mờ), nhạt dần xuống dưới */
   .sg-section-glow::before {
     content: "";
     position: absolute;
@@ -302,27 +341,66 @@
     z-index: -1;
     pointer-events: none;
     background-image:
-      linear-gradient(to right, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
-    background-size: 44px 44px;
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
+      linear-gradient(to right, rgba(125, 26, 58, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(125, 26, 58, 0.055) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
   }
 
   .sg-section-glow::after {
     content: "";
     position: absolute;
-    inset: 0 0 auto;
-    height: 3px;
-    z-index: -1;
-    background-image: var(--sg-gradient);
-    opacity: 0.9;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 45% at 85% 0%, rgba(207, 110, 138, 0.14), transparent 70%),
+      radial-gradient(ellipse 50% 40% at 0% 10%, rgba(240, 202, 213, 0.35), transparent 70%);
   }
 
   .sg-section-tint {
-    background-color: #fbfaff;
-    border-top: 1px solid #f1eefb;
-    border-bottom: 1px solid #f1eefb;
+    background-color: #faf7f6;
+    border-top: 1px solid #f1ebea;
+    border-bottom: 1px solid #f1ebea;
+  }
+
+  /* Nền đỏ đô đậm cho dải CTA / khối tối */
+  .sg-dark {
+    color: #fff;
+    background-color: #2c0814;
+    background-image:
+      radial-gradient(ellipse 70% 90% at 100% 0%, rgba(179, 67, 102, 0.45), transparent 60%),
+      radial-gradient(ellipse 60% 80% at 0% 100%, rgba(125, 26, 58, 0.6), transparent 60%),
+      linear-gradient(135deg, #3d0b1c 0%, #5a1129 100%);
+  }
+
+  /* Khung trình duyệt chứa ảnh chụp app */
+  .sg-browser {
+    overflow: hidden;
+    border-radius: 0.875rem;
+    border: 1px solid #e6dfe0;
+    background: #fff;
+    box-shadow:
+      0 0 0 6px rgba(255, 255, 255, 0.6),
+      0 2px 4px rgba(41, 17, 25, 0.04),
+      0 32px 64px -24px rgba(74, 14, 34, 0.3);
+  }
+
+  .sg-browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-bottom: 1px solid #efe9ea;
+    background: #faf7f6;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .sg-browser-dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background: #e2d9db;
   }
 }
 

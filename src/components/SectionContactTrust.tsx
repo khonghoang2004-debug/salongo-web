@@ -21,7 +21,7 @@ export async function SectionContactTrust() {
           {ITEMS.map(({ key, Icon }) => (
             <div
               key={key}
-              className="flex flex-col items-center rounded-xl border border-neutral-200/80 bg-white px-2 py-3 text-center shadow-sg-sm transition-shadow hover:shadow-sg-md sm:rounded-2xl sm:p-6 sm:shadow-sg-md"
+              className="flex flex-col items-center rounded-xl border border-line bg-white px-2 py-3 text-center shadow-sg-sm transition-shadow hover:shadow-sg-md sm:rounded-2xl sm:p-6 sm:shadow-sg-md"
             >
               <div
                 className="flex size-9 items-center justify-center sg-icon-tile rounded-xl sm:size-12 sm:rounded-2xl"
@@ -32,7 +32,7 @@ export async function SectionContactTrust() {
                   aria-hidden
                 />
               </div>
-              <p className="mt-2 text-center text-xs font-medium leading-snug text-[#374151] sm:mt-3 sm:text-sm sm:leading-normal">
+              <p className="mt-2 text-center text-xs font-medium leading-snug text-ink/80 sm:mt-3 sm:text-sm sm:leading-normal">
                 {t(key)}
               </p>
             </div>

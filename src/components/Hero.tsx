@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, ArrowUpRight, Wallet } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Lock, Wallet } from "lucide-react";
 
 const stats = [
   { value: "stat1Value", label: "stat1Label" },
@@ -13,16 +13,19 @@ export async function Hero() {
   const t = await getTranslations("hero");
 
   return (
-    <section className="sg-section-glow relative overflow-hidden px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-14 lg:px-8 lg:pt-14 lg:pb-16">
+    <section className="sg-section-glow relative overflow-hidden px-4 pt-10 pb-4 sm:px-6 sm:pt-14 sm:pb-6 lg:px-8 lg:pt-20 lg:pb-8">
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.35fr] lg:gap-14">
           <div>
             <span className="sg-eyebrow">
-              <span className="sg-gradient size-2 rounded-full" aria-hidden />
+              <span className="relative flex size-2" aria-hidden>
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand-400 opacity-60" />
+                <span className="relative inline-flex size-2 rounded-full bg-brand-600" />
+              </span>
               {t("badge")}
             </span>
             {/* H1 always visible for SEO */}
-            <h1 className="mt-5 max-w-[620px] text-[2.375rem] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink sm:text-5xl lg:text-[3.6rem]">
+            <h1 className="mt-6 max-w-[640px] font-display text-[2.5rem] font-extrabold leading-[1.1] tracking-[-0.035em] text-ink sm:text-[3.25rem] lg:text-[3.85rem]">
               {t("titleBefore")} <span className="sg-gradient-text">{t("titleSalon")}</span> {t("titleAfter1")}
               <span className="sg-gradient-text">{t("heroHighlight2")}</span>
               {t("titleAfter2")}
@@ -36,20 +39,22 @@ export async function Hero() {
                 href="https://app.salongo.eu/signup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary px-6 py-3.5 text-base"
+                className="btn-primary px-6 py-3.5 text-base sm:px-7"
               >
                 {t("cta")}
                 <ArrowUpRight className="size-[18px]" aria-hidden />
               </a>
-              <Link href="/tinh-nang" className="btn-secondary px-6 py-3.5 text-base">
+              <Link href="/tinh-nang" className="btn-secondary px-6 py-3.5 text-base sm:px-7">
                 {t("ctaSecondary")}
                 <ArrowRight className="size-[18px] text-muted" aria-hidden />
               </Link>
             </div>
 
-            <ul className="mt-7 grid gap-2.5 sm:gap-3 lg:mt-9">
+            <p className="mt-4 text-sm text-muted">{t("trialNote")}</p>
+
+            <ul className="mt-7 grid gap-2.5 border-t border-line pt-6 sm:gap-3 lg:mt-8">
               {(["proof1", "proof2", "proof3"] as const).map((key) => (
-                <li key={key} className="flex items-center gap-3 text-[15px] font-medium text-[#374151]">
+                <li key={key} className="flex items-center gap-3 text-[15px] font-medium text-ink/80">
                   <CheckIcon />
                   {t(key)}
                 </li>
@@ -59,12 +64,15 @@ export async function Hero() {
 
           <div className="relative min-w-0">
             {/* Khung trình duyệt: viền mảnh, bóng gọn, không blur */}
-            <div className="overflow-hidden rounded-xl border border-line bg-white shadow-sg-lg sm:rounded-2xl">
-              <div className="flex items-center gap-1.5 border-b border-line bg-[#fafafc] px-3.5 py-2.5">
-                <span className="size-2.5 rounded-full bg-[#f9a8d4]" />
-                <span className="size-2.5 rounded-full bg-[#c4b5fd]" />
-                <span className="size-2.5 rounded-full bg-[#93c5fd]" />
-                <span className="ml-3 hidden h-5 max-w-[220px] flex-1 items-center rounded-md border border-line bg-white px-2 text-[11px] text-muted sm:flex">
+            {/* Quầng màu đỏ đô phía sau ảnh */}
+            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(ellipse_at_center,rgba(207,110,138,0.22),transparent_70%)] blur-2xl" aria-hidden />
+            <div className="sg-browser">
+              <div className="sg-browser-bar">
+                <span className="sg-browser-dot" />
+                <span className="sg-browser-dot" />
+                <span className="sg-browser-dot" />
+                <span className="ml-3 hidden h-6 max-w-[240px] flex-1 items-center gap-1.5 rounded-md border border-line bg-white px-2 text-[11px] text-muted sm:flex">
+                  <Lock className="size-3" aria-hidden />
                   app.salongo.eu
                 </span>
               </div>
@@ -72,14 +80,14 @@ export async function Hero() {
             </div>
 
             {/* Thẻ doanh thu — cùng kiểu thẻ gradient trong app SalonGo */}
-            <div className="sg-hero-card absolute -bottom-10 left-3 w-[60%] max-w-[300px] rounded-xl border border-white/60 p-3 sm:w-[72%] sm:rounded-2xl shadow-sg-lg sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
-              <p className="flex items-center gap-2 text-xs font-semibold sm:text-sm">
+            <div className="sg-hero-card absolute -bottom-10 left-3 w-[62%] max-w-[300px] rounded-xl border border-white/15 p-3 shadow-sg-xl sm:w-[72%] sm:rounded-2xl sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
+              <p className="flex items-center gap-2 text-xs font-semibold text-white/80 sm:text-sm">
                 <Wallet className="size-4 sm:size-5" aria-hidden />
                 {t("revenueToday")}
               </p>
               <p className="mt-1 flex items-center gap-2 sm:mt-2 sm:gap-2.5">
-                <span className="text-xl font-extrabold tracking-tight sm:text-[1.75rem]">89&nbsp;230&nbsp;Kč</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/35 px-1.5 py-0.5 text-[11px] font-bold sm:px-2 sm:text-sm">
+                <span className="font-display text-xl font-extrabold tracking-tight sm:text-[1.75rem]">89&nbsp;230&nbsp;Kč</span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-400/20 px-1.5 py-0.5 text-[11px] font-bold text-emerald-200 sm:px-2 sm:text-sm">
                   <ArrowUpRight className="size-3.5" aria-hidden />
                   +100%
                 </span>
@@ -89,14 +97,14 @@ export async function Hero() {
         </div>
 
         {/* Dải số liệu */}
-        <dl className="mt-14 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-sm sm:mt-16 lg:grid-cols-4">
+        <dl className="mt-16 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-md sm:mt-20 lg:grid-cols-4">
           {stats.map(({ value, label }, i) => (
             <div
               key={value}
-              className={`px-5 py-5 sm:px-7 sm:py-6 ${i % 2 === 1 ? "border-l border-line" : ""} ${i >= 2 ? "border-t border-line lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
+              className={`flex flex-col-reverse px-5 py-5 sm:px-8 sm:py-7 ${i % 2 === 1 ? "border-l border-line" : ""} ${i >= 2 ? "border-t border-line lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
             >
-              <dt className="text-sm font-medium text-muted">{t(label)}</dt>
-              <dd className="sg-gradient-text mt-1 text-2xl font-extrabold tracking-tight sm:text-3xl">{t(value)}</dd>
+              <dt className="text-[13px] font-medium text-muted sm:text-sm">{t(label)}</dt>
+              <dd className="mb-1 font-display text-[1.75rem] font-extrabold tracking-[-0.03em] text-brand-700 sm:text-[2.25rem]">{t(value)}</dd>
             </div>
           ))}
         </dl>

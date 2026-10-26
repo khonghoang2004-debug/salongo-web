@@ -1,27 +1,56 @@
 import { getTranslations } from "next-intl/server";
+import { ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
-export async function CTA() {
-  const t = await getTranslations("cta");
+type CtaBandProps = {
+  title: string;
+  subtitle?: string;
+  button: string;
+  secondaryLabel?: string;
+};
 
+// Dải kêu gọi hành động nền đỏ đô đậm, dùng chung cho mọi trang
+export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProps) {
   return (
-    <section id="contact" className="sg-section bg-white">
-      <div className="sg-hero-card mx-auto max-w-6xl rounded-[28px] px-6 py-10 text-center shadow-sg-lg sm:rounded-[32px] sm:px-10 sm:py-12 lg:py-14">
-        <h2 className="mx-auto max-w-3xl text-[1.75rem] font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-          {t("title")}
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base font-medium text-white/95 sm:text-xl">
-          {t("subtitle")}
-        </p>
-        <a
-          href="https://app.salongo.eu/signup"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-on-gradient mt-8 px-9 py-4 text-lg [text-shadow:none]"
-        >
-          {t("button")}
-          <span aria-hidden>→</span>
-        </a>
+    <section className="sg-section bg-white">
+      <div className="sg-dark relative mx-auto max-w-6xl overflow-hidden rounded-[28px] px-6 py-12 text-center shadow-sg-xl sm:rounded-[32px] sm:px-10 sm:py-16 lg:py-20">
+        {/* Lưới mảnh trên nền tối */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_0%,#000,transparent)]"
+          aria-hidden
+        />
+        <div className="relative">
+          <h2 className="mx-auto max-w-3xl font-display text-[1.875rem] font-bold leading-[1.15] tracking-[-0.025em] text-balance sm:text-[2.25rem] lg:text-[3rem]">
+            {title}
+          </h2>
+          {subtitle && <p className="mx-auto mt-5 max-w-xl text-base text-white/75 sm:text-lg">{subtitle}</p>}
+          <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+            <a
+              href="https://app.salongo.eu/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-on-gradient px-7 py-3.5 text-base"
+            >
+              {button}
+              <ArrowRight className="size-[18px]" aria-hidden />
+            </a>
+            {secondaryLabel && (
+              <Link
+                href="/lien-he"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/10"
+              >
+                {secondaryLabel}
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
+}
+
+export async function CTA() {
+  const t = await getTranslations("cta");
+  const tNav = await getTranslations("nav");
+  return <CtaBand title={t("title")} subtitle={t("subtitle")} button={t("button")} secondaryLabel={tNav("contact")} />;
 }

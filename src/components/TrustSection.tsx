@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Globe, MonitorSmartphone, BadgeDollarSign } from "lucide-react";
+import { Globe, MonitorSmartphone, BadgeDollarSign, Star } from "lucide-react";
 
 const points = [
   { Icon: Globe, titleKey: "point1" as const, descKey: "point1Desc" as const },
@@ -14,7 +14,8 @@ export async function TrustSection() {
     <section className="sg-section bg-white relative overflow-hidden">
       <div className="relative mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="sg-h2">
+          <p className="sg-kicker">{t("eyebrow")}</p>
+          <h2 className="sg-h2 mt-4">
             {t("titleBefore")}
             <span className="sg-gradient-text">
               {t("titleHighlight")}
@@ -26,7 +27,7 @@ export async function TrustSection() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 lg:mt-10">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3 lg:mt-14">
           {points.map(({ Icon, titleKey, descKey }) => (
             <div
               key={titleKey}
@@ -38,7 +39,7 @@ export async function TrustSection() {
                   <Icon className="size-6 sm:size-7" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden />
                 </div>
                 <div className="min-w-0 flex-1 space-y-2 md:mt-6 md:space-y-3">
-                  <h3 className="text-lg font-bold text-ink">
+                  <h3 className="text-lg font-bold tracking-[-0.01em] text-ink">
                     {t(titleKey)}
                   </h3>
                   <p className="text-sm leading-[1.65] text-muted">
@@ -50,8 +51,12 @@ export async function TrustSection() {
           ))}
         </div>
 
-        <p className="mx-auto mt-8 flex w-fit items-center gap-1.5 rounded-full bg-white px-4 py-2 text-center text-sm font-medium text-[#374151] shadow-sg-lg ring-1 ring-violet-100 sm:mt-10 sm:text-base">
-          <span className="text-amber-500" aria-hidden>⭐</span>
+        <p className="mx-auto mt-10 flex w-fit items-center gap-2.5 rounded-full border border-line bg-white py-2 pl-2 pr-4 text-center text-sm font-medium text-ink/80 shadow-sg-sm sm:mt-12 sm:text-[15px]">
+          <span className="flex items-center gap-0.5 rounded-full bg-brand-50 px-2 py-1 text-brand-700" aria-hidden>
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} className="size-3 fill-current" />
+            ))}
+          </span>
           {t("socialProof")}
         </p>
       </div>

@@ -14,10 +14,10 @@ export async function SolutionsPageHero() {
         <h1 className="mt-5 sg-h1">
           {t("heroTitle")}
         </h1>
-        <p className="sg-lead mx-auto mt-3 max-w-2xl">
+        <p className="sg-lead mx-auto mt-5 max-w-2xl">
           {t("heroSubtext")}
         </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
           <a
             href="https://app.salongo.eu/signup"
             target="_blank"

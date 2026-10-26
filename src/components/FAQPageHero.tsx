@@ -13,7 +13,7 @@ export async function FAQPageHero() {
         <h1 className="mt-5 sg-h1">
           {t("heroTitle")}
         </h1>
-        <p className="sg-lead mx-auto mt-3 max-w-2xl">
+        <p className="sg-lead mx-auto mt-5 max-w-2xl">
           {t("heroSubtext")}
         </p>
       </div>

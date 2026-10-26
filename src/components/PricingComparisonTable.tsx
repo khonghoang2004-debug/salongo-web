@@ -37,12 +37,12 @@ export async function PricingComparisonTable() {
           {t("compareTitle")}
         </h2>
 
-        <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sg-lg">
+        <div className="mt-6 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-lg">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-left text-sm">
               <thead>
-                <tr className="border-b border-neutral-200 bg-neutral-50/80">
-                  <th className="px-5 py-4 font-semibold text-[#374151]">
+                <tr className="border-b border-line bg-sand">
+                  <th className="px-5 py-4 font-semibold text-ink/80">
                     {t("compareFeatureCol")}
                   </th>
                   {planNames.map((name, i) => (
@@ -59,9 +59,9 @@ export async function PricingComparisonTable() {
                 {ROW_KEYS.map((rowKey, rowIndex) => (
                   <tr
                     key={rowKey}
-                    className="border-b border-neutral-100 last:border-b-0 hover:bg-neutral-50/50"
+                    className="border-b border-line last:border-b-0 hover:bg-sand"
                   >
-                    <td className="px-5 py-3.5 font-medium text-[#374151]">
+                    <td className="px-5 py-3.5 font-medium text-ink/80">
                       {t(rowKey)}
                     </td>
                     {MATRIX[rowIndex].map((val, colIndex) => (
@@ -70,9 +70,9 @@ export async function PricingComparisonTable() {
                         className="px-4 py-3.5 text-center"
                       >
                         {val ? (
-                          <span className="text-emerald-600" aria-hidden>✓</span>
+                          <span className="inline-flex size-5 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-700" aria-hidden>✓</span>
                         ) : (
-                          <span className="text-neutral-300" aria-hidden>✗</span>
+                          <span className="text-[#cfc6c8]" aria-hidden>✗</span>
                         )}
                       </td>
                     ))}

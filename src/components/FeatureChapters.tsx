@@ -16,7 +16,7 @@ export async function FeatureChapters() {
         <section key={c} className={`sg-section ${ci % 2 === 1 ? "sg-section-alt" : "bg-white"}`}>
           <div className="mx-auto max-w-6xl">
             <header className="mx-auto max-w-3xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white px-3.5 py-1 text-sm font-semibold text-violet-700">
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3.5 py-1 text-sm font-semibold text-brand-700">
                 <span className="sg-gradient-text font-extrabold">{ci + 1}</span>
                 {t(`chapters.${c}.label`)}
               </span>

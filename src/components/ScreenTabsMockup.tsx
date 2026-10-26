@@ -44,16 +44,16 @@ export function ScreenTabsMockup({
   }, [auto, views.length]);
 
   return (
-    <div className={`overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-sg-lg sm:rounded-3xl ${className}`}>
-      <div className="flex items-center gap-3 border-b border-neutral-100 bg-white px-3 py-2.5 sm:px-5 sm:py-3">
+    <div className={`overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sg-lg sm:rounded-3xl ${className}`}>
+      <div className="flex items-center gap-3 border-b border-line bg-white px-3 py-2.5 sm:px-5 sm:py-3">
         <div className="hidden gap-1.5 sm:flex" aria-hidden>
-          <span className="size-3 rounded-full bg-[#f9a8d4]" />
-          <span className="size-3 rounded-full bg-[#c4b5fd]" />
-          <span className="size-3 rounded-full bg-[#93c5fd]" />
+          <span className="size-3 rounded-full bg-[#e2d9db]" />
+          <span className="size-3 rounded-full bg-[#e2d9db]" />
+          <span className="size-3 rounded-full bg-[#e2d9db]" />
         </div>
         {views.length > 1 ? (
           <div
-            className="-mx-1 flex min-w-0 gap-1 overflow-x-auto px-1 [scrollbar-width:none] sm:mx-auto sm:rounded-full sm:border sm:border-line sm:bg-[#fafafc] sm:p-1"
+            className="-mx-1 flex min-w-0 gap-1 overflow-x-auto px-1 [scrollbar-width:none] sm:mx-auto sm:rounded-full sm:border sm:border-line sm:bg-sand sm:p-1"
             role="tablist"
           >
             {views.map((v, i) => {
@@ -71,7 +71,7 @@ export function ScreenTabsMockup({
                   }}
                   className={`flex shrink-0 items-center gap-2 rounded-full px-3.5 py-1.5 text-[13px] font-semibold transition-all duration-200 sm:px-4 sm:text-sm ${
                     on
-                      ? "bg-white text-violet-700 shadow-sg-sm ring-1 ring-violet-200"
+                      ? "bg-white text-brand-700 shadow-sg-sm ring-1 ring-brand-200"
                       : "text-muted hover:bg-white/70 hover:text-ink"
                   }`}
                 >
@@ -90,7 +90,7 @@ export function ScreenTabsMockup({
             setZoom(true);
             setAuto(false);
           }}
-          className="ml-auto flex size-8 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-violet-50 hover:text-violet-700 sm:ml-0"
+          className="ml-auto flex size-8 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-brand-50 hover:text-brand-700 sm:ml-0"
           aria-label={zoomLabel}
           title={zoomLabel}
         >
@@ -103,7 +103,7 @@ export function ScreenTabsMockup({
           setZoom(true);
           setAuto(false);
         }}
-        className="relative block aspect-[2400/1567] w-full cursor-zoom-in overflow-hidden bg-[#f7f7fa]"
+        className="relative block aspect-[2400/1567] w-full cursor-zoom-in overflow-hidden bg-sand"
         aria-label={zoomLabel}
       >
         {views.map((v, i) => (
@@ -125,7 +125,7 @@ export function ScreenTabsMockup({
       {zoom &&
         createPortal(
           <div
-            className="sg-fade fixed inset-0 z-[60] flex flex-col bg-[#0b0b14]/95 font-sans"
+            className="sg-fade fixed inset-0 z-[60] flex flex-col bg-[#1a0a10]/95 font-sans"
             role="dialog"
             aria-modal="true"
             aria-label={views[active].label}

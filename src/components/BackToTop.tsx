@@ -22,7 +22,7 @@ export function BackToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label={t("backToTop")}
       title={t("backToTop")}
-      className={`fixed bottom-5 right-4 z-40 flex size-11 items-center justify-center rounded-full border border-line bg-white text-violet-700 shadow-sg-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-300 sm:bottom-6 sm:right-6 ${
+      className={`fixed bottom-5 right-4 z-40 flex size-11 items-center justify-center rounded-full border border-line bg-white text-brand-700 shadow-sg-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300 sm:bottom-6 sm:right-6 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
       }`}
     >

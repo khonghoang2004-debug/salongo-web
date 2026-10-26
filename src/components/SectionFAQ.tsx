@@ -48,15 +48,15 @@ export function SectionFAQ() {
                   return (
                     <div
                       key={item.qKey}
-                      className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sg-md transition-shadow hover:shadow-sg-md"
+                      className="overflow-hidden rounded-2xl border border-line bg-white shadow-sg-md transition-shadow hover:shadow-sg-md"
                     >
                       <button
                         type="button"
                         onClick={() => setOpenId(isOpen ? null : item.qKey)}
                         className={`flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold transition-colors ${
                           isOpen
-                            ? "bg-gradient-to-r from-pink-50/80 to-violet-50/60 text-ink"
-                            : "bg-white text-ink hover:bg-neutral-50/50"
+                            ? "bg-gradient-to-r from-brand-50/80 to-brand-50/60 text-ink"
+                            : "bg-white text-ink hover:bg-sand"
                         }`}
                       >
                         <span>{t(item.qKey)}</span>
@@ -65,9 +65,9 @@ export function SectionFAQ() {
                         />
                       </button>
                       {isOpen && (
-                        <div className="border-t-2 border-pink-100/60 bg-gradient-to-br from-white to-neutral-50/40 px-5 pb-4 pt-3">
+                        <div className="border-t-2 border-brand-100/60 bg-gradient-to-br from-white to-neutral-50/40 px-5 pb-4 pt-3">
                           <div className="relative">
-                            <p className="pr-10 text-[#374151] leading-relaxed" style={{ lineHeight: 1.7 }}>
+                            <p className="pr-10 text-ink/80 leading-relaxed" style={{ lineHeight: 1.7 }}>
                               {answerText}
                             </p>
                             <button
@@ -76,7 +76,7 @@ export function SectionFAQ() {
                                 e.stopPropagation();
                                 copy(answerText, `answer-${item.qKey}`);
                               }}
-                              className="absolute top-0 right-0 flex size-9 items-center justify-center rounded-lg text-muted transition-colors hover:bg-violet-50 hover:text-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-400/50"
+                              className="absolute top-0 right-0 flex size-9 items-center justify-center rounded-lg text-muted transition-colors hover:bg-brand-50 hover:text-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-400/50"
                               aria-label={t("copyCopied")}
                               title={t("copyCopied")}
                             >
@@ -84,7 +84,7 @@ export function SectionFAQ() {
                             </button>
                             {copied === `answer-${item.qKey}` && (
                               <span
-                                className="absolute -bottom-1 right-0 rounded-lg bg-[#1F2937] px-2.5 py-1 text-xs font-medium text-white shadow-sg-md"
+                                className="absolute -bottom-1 right-0 rounded-lg bg-ink px-2.5 py-1 text-xs font-medium text-white shadow-sg-md"
                                 role="status"
                               >
                                 {t("copyCopied")}
@@ -106,7 +106,7 @@ export function SectionFAQ() {
         </p>
 
         {/* Still not found + Email copy */}
-        <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50/60 p-6 shadow-sg-lg sm:p-8">
+        <div className="mt-10 rounded-2xl border border-line bg-sand p-6 shadow-sg-lg sm:p-8">
           <h3 className="text-lg font-bold text-ink">
             {t("stillNotFound")}
           </h3>
@@ -122,7 +122,7 @@ export function SectionFAQ() {
               <button
                 type="button"
                 onClick={() => copy(CONTACT_EMAIL, "email")}
-                className="ml-2 flex size-9 shrink-0 items-center justify-center rounded-lg text-muted transition-colors hover:bg-violet-50 hover:text-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-400/50"
+                className="ml-2 flex size-9 shrink-0 items-center justify-center rounded-lg text-muted transition-colors hover:bg-brand-50 hover:text-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-400/50"
                 aria-label={t("emailCopied")}
                 title={t("copyCopied")}
               >
@@ -130,7 +130,7 @@ export function SectionFAQ() {
               </button>
               {copied === "email" && (
                 <span
-                  className="absolute -bottom-8 left-0 rounded-lg bg-[#1F2937] px-3 py-1.5 text-xs font-medium text-white shadow-sg-md"
+                  className="absolute -bottom-8 left-0 rounded-lg bg-ink px-3 py-1.5 text-xs font-medium text-white shadow-sg-md"
                   role="status"
                 >
                   {t("emailCopied")}

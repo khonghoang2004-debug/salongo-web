@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/metadata";
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
   loading: () => (
-    <div className="h-9 w-[140px] shrink-0 animate-pulse rounded-lg border border-neutral-200 bg-neutral-100" />
+    <div className="h-9 w-[140px] shrink-0 animate-pulse rounded-lg border border-line bg-[#f3eeee]" />
   ),
 });
 
@@ -94,18 +94,18 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-line transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "border-neutral-200/80 bg-white py-3 shadow-sg-lg"
-          : "bg-white py-4"
+          ? "border-line bg-white/90 py-3 shadow-[0_8px_24px_-16px_rgba(41,17,25,0.25)] backdrop-blur-md supports-[backdrop-filter]:bg-white/80"
+          : "border-transparent bg-white py-4"
       }`}
     >
-      <div className="mx-auto flex h-10 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Mobile: icon menu bên trái; Desktop: ẩn, dùng icon bên phải */}
         <button
           type="button"
           onClick={() => setMenuOpen((v) => !v)}
-          className="relative flex size-10 shrink-0 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 lg:hidden"
+          className="relative flex size-10 shrink-0 items-center justify-center rounded-lg text-ink transition-colors hover:bg-sand lg:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -131,22 +131,22 @@ export function Navbar() {
         </button>
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-1.5 transition-opacity hover:opacity-80"
+          className="flex shrink-0 items-center gap-2 transition-opacity hover:opacity-80"
         >
           <img
             src={siteConfig.logo}
             alt=""
             width={40}
             height={40}
-            className="h-10 w-10 shrink-0"
+            className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
           />
-          <span className="sg-gradient-text text-xl font-bold tracking-tight sm:text-2xl">
+          <span className="font-display text-xl font-extrabold tracking-[-0.02em] text-ink sm:text-[1.375rem]">
             {siteConfig.name}
           </span>
         </Link>
 
         <nav
-          className="hidden shrink-0 items-center justify-center gap-4 lg:flex lg:gap-5 xl:gap-7"
+          className="hidden shrink-0 items-center justify-center gap-0.5 lg:flex xl:gap-1"
           aria-label="Main"
         >
           {menuItems.map((item) => {
@@ -155,19 +155,14 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative whitespace-nowrap text-sm font-medium transition-colors duration-200 ${
+                aria-current={active ? "page" : undefined}
+                className={`whitespace-nowrap rounded-lg px-2.5 py-2 text-sm font-medium transition-colors duration-200 xl:px-3 ${
                   active
-                    ? "pb-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-[image:var(--sg-gradient)]"
-                    : "text-gray-700 hover:text-violet-600"
+                    ? "bg-brand-50 font-semibold text-brand-700"
+                    : "text-ink/70 hover:bg-sand hover:text-ink"
                 }`}
               >
-                {active ? (
-                  <span className="sg-gradient-text font-semibold">
-                    {t(item.labelKey)}
-                  </span>
-                ) : (
-                  t(item.labelKey)
-                )}
+                {t(item.labelKey)}
               </Link>
             );
           })}
@@ -178,7 +173,7 @@ export function Navbar() {
             href="https://app.salongo.eu/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-violet-600 xl:inline-block"
+            className="hidden px-1 text-sm font-semibold text-ink/80 transition-colors duration-200 hover:text-brand-700 xl:inline-block"
           >
             {t("login")}
           </a>
@@ -186,7 +181,7 @@ export function Navbar() {
             href="https://app.salongo.eu/signup"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary hidden px-4 py-2.5 text-sm lg:inline-flex xl:px-5"
+            className="btn-primary hidden px-4 py-2.5 text-sm lg:inline-flex"
           >
             {t("tryFree")}
           </a>
@@ -194,7 +189,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setDownloadOpen((v) => !v)}
-              className="btn-secondary gap-1 px-4 py-2.5 text-sm xl:px-5"
+              className="btn-secondary gap-1 px-3.5 py-2.5 text-sm"
               aria-expanded={downloadOpen}
               aria-haspopup="true"
             >
@@ -211,22 +206,22 @@ export function Navbar() {
             </button>
             {downloadOpen && (
               <div
-                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[200px] rounded-2xl border border-neutral-200/80 bg-white py-1.5 shadow-sg-lg"
+                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[220px] rounded-xl border border-line bg-white py-1.5 shadow-sg-lg"
                 role="menu"
               >
                 <a
                   href={DOWNLOAD_LINKS.windows}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-1.5 flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-violet-50"
+                  className="mx-1.5 flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-brand-50"
                   role="menuitem"
                   onClick={() => setDownloadOpen(false)}
                 >
                   <svg className="size-4 shrink-0" viewBox="0 0 24 24" aria-hidden>
-                    <rect x="1" y="1" width="10" height="10" rx="1.5" fill="#f9a8d4" />
-                    <rect x="13" y="1" width="10" height="10" rx="1.5" fill="#c4b5fd" />
-                    <rect x="1" y="13" width="10" height="10" rx="1.5" fill="#a5b4fc" />
-                    <rect x="13" y="13" width="10" height="10" rx="1.5" fill="#93c5fd" />
+                    <rect x="1" y="1" width="10" height="10" rx="1.5" fill="#7d1a3a" />
+                    <rect x="13" y="1" width="10" height="10" rx="1.5" fill="#97274a" />
+                    <rect x="1" y="13" width="10" height="10" rx="1.5" fill="#b34366" />
+                    <rect x="13" y="13" width="10" height="10" rx="1.5" fill="#cf6e8a" />
                   </svg>
                   <span>{t("downloadForWindows")}</span>
                 </a>
@@ -234,7 +229,7 @@ export function Navbar() {
                   href={DOWNLOAD_LINKS.mac}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-1.5 flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-violet-50"
+                  className="mx-1.5 flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-brand-50"
                   role="menuitem"
                   onClick={() => setDownloadOpen(false)}
                 >
@@ -259,13 +254,13 @@ export function Navbar() {
               aria-label="Close menu"
               tabIndex={-1}
               onClick={closeMobileMenu}
-              className="sg-fade fixed inset-0 z-40 cursor-default bg-[#111827]/25 lg:hidden"
+              className="sg-fade fixed inset-0 z-40 cursor-default bg-[#1a0a10]/30 lg:hidden"
             />,
             document.body,
           )}
       <div
         id="mobile-menu"
-        className="sg-menu-panel absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-neutral-100 bg-white px-4 pt-3 pb-5 shadow-sg-lg lg:hidden"
+        className="sg-menu-panel absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-white px-4 pt-3 pb-5 shadow-sg-lg lg:hidden"
         role="dialog"
         aria-modal="true"
         aria-label="Mobile menu"
@@ -278,19 +273,15 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={closeMobileMenu}
-                className={`rounded-xl px-4 py-3 text-base font-medium transition-colors ${
+                aria-current={active ? "page" : undefined}
+                className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors ${
                   active
-                    ? "sg-gradient-soft ring-1 ring-violet-200/70"
-                    : "text-gray-700 hover:bg-gray-50 hover:text-violet-600"
+                    ? "bg-brand-50 font-semibold text-brand-700"
+                    : "text-ink/80 hover:bg-sand hover:text-ink"
                 }`}
               >
-                {active ? (
-                  <span className="sg-gradient-text font-semibold">
-                    {t(item.labelKey)}
-                  </span>
-                ) : (
-                  t(item.labelKey)
-                )}
+                {t(item.labelKey)}
+                {active && <span className="size-1.5 rounded-full bg-brand-600" aria-hidden />}
               </Link>
             );
           })}
@@ -299,7 +290,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMobileMenu}
-            className="rounded-lg px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-violet-600"
+            className="rounded-xl px-4 py-3 text-base font-medium text-ink/80 transition-colors hover:bg-sand hover:text-ink"
           >
             {t("login")}
           </a>
@@ -332,7 +323,7 @@ export function Navbar() {
               {t("downloadForMac")}
             </a>
           </div>
-          <div className="mt-4 flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
+          <div className="mt-4 flex items-center justify-between gap-3 border-t border-line pt-4">
             <LocaleSwitcher />
             <button
               type="button"

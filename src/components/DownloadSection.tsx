@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Download } from "lucide-react";
 
 const WINDOWS_DOWNLOAD_URL =
   "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.exe";
@@ -33,39 +34,40 @@ const AppleIcon = () => (
 export async function DownloadSection() {
   const t = await getTranslations("download");
 
+  const items = [
+    { href: WINDOWS_DOWNLOAD_URL, file: "SalonGo-Setup.exe", label: t("windows"), Icon: WindowsIcon, ext: ".exe" },
+    { href: MAC_DOWNLOAD_URL, file: "SalonGo-Setup.dmg", label: t("mac"), Icon: AppleIcon, ext: ".dmg" },
+  ];
+
   return (
     <section className="sg-section bg-white">
-      <div className="mx-auto max-w-4xl">
-        <div className="text-center">
-          <h2 className="sg-h2">
-            {t("title")}
-          </h2>
-          <p className="sg-lead mt-3">
-            {t("subtitle")}
-          </p>
+      <div className="mx-auto grid max-w-6xl items-center gap-8 rounded-[28px] border border-line bg-sand p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-12">
+        <div className="text-center lg:text-left">
+          <p className="sg-kicker">{t("eyebrow")}</p>
+          <h2 className="sg-h2 mt-4">{t("title")}</h2>
+          <p className="sg-lead mt-3">{t("subtitle")}</p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
-          <a
-            href={WINDOWS_DOWNLOAD_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            download="SalonGo-Setup.exe"
-            className="btn-secondary gap-3 px-8 py-4 text-lg sm:min-w-[240px]"
-          >
-            <span className="sg-icon-tile size-9 rounded-xl"><WindowsIcon /></span>
-            <span>{t("windows")}</span>
-          </a>
-          <a
-            href={MAC_DOWNLOAD_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            download="SalonGo-Setup.dmg"
-            className="btn-secondary gap-3 px-8 py-4 text-lg sm:min-w-[240px]"
-          >
-            <span className="sg-icon-tile size-9 rounded-xl"><AppleIcon /></span>
-            <span>{t("mac")}</span>
-          </a>
+        <div className="grid gap-3 sm:grid-cols-2 lg:w-[560px]">
+          {items.map(({ href, file, label, Icon, ext }) => (
+            <a
+              key={file}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              download={file}
+              className="sg-card sg-card-hover group flex items-center gap-4 p-4 sm:p-5"
+            >
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-ink text-white">
+                <Icon />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block whitespace-nowrap font-semibold text-ink">{label}</span>
+                <span className="mt-0.5 block text-xs text-muted">{ext}</span>
+              </span>
+              <Download className="size-5 shrink-0 text-muted transition-colors group-hover:text-brand-700" aria-hidden />
+            </a>
+          ))}
         </div>
       </div>
     </section>

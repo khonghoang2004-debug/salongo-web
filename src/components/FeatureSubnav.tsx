@@ -52,7 +52,7 @@ export function FeatureSubnav({ items, label }: { items: Item[]; label: string }
               data-anchor={anchor}
               aria-current={on ? "true" : undefined}
               className={`flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${
-                on ? "bg-violet-50 text-violet-700 ring-1 ring-violet-200" : "text-muted hover:bg-neutral-50 hover:text-ink"
+                on ? "bg-brand-50 text-brand-700 ring-1 ring-brand-200" : "text-muted hover:bg-sand hover:text-ink"
               }`}
             >
               <Icon className="size-4" aria-hidden />

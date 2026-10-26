@@ -26,11 +26,11 @@ export default async function TermsPage({ params }: Props) {
 
   return (
     <PageShell>
-      <header className="border-b border-neutral-100 bg-white px-4 pt-8 pb-8 sm:px-6 sm:pt-10 lg:px-8">
+      <header className="border-b border-line bg-white px-4 pt-8 pb-8 sm:px-6 sm:pt-10 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <Link
             href="/"
-            className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:border-violet-300 hover:text-violet-700"
+            className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
           >
             <ArrowLeft className="size-4" aria-hidden />
             {tNav("backHome")}

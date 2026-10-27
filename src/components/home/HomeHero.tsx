@@ -95,7 +95,7 @@ export async function HomeHero() {
         </div>
 
         {/* Thẻ: doanh thu hôm nay */}
-        <div className="absolute -bottom-6 left-3 w-[62%] max-w-[300px] rounded-2xl bg-brand-700 p-3.5 text-left text-white shadow-sg-xl sm:-bottom-8 sm:left-[-1.5rem] sm:p-5 lg:-left-10">
+        <div className="absolute -bottom-6 left-3 hidden w-[62%] max-w-[300px] rounded-2xl bg-brand-700 p-3.5 text-left text-white shadow-sg-xl sm:-bottom-8 sm:left-[-1.5rem] sm:block sm:p-5 lg:-left-10">
           <p className="flex items-center gap-2 text-xs font-medium text-white/80 sm:text-sm">
             <Wallet className="size-4" aria-hidden />
             {t("revenueToday")}

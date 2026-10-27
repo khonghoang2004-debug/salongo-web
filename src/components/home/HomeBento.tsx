@@ -3,12 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { FEATURE_ICONS, type FeatureId } from "../featuresData";
 
-type Tile = { id: FeatureId; anchor: string; img: string; span: string; tall?: boolean; zoom?: string };
+type Tile = { id: FeatureId; anchor: string; img: string; span: string };
 
 // Lưới tính năng (bento): mỗi ô có ảnh chụp thật từ app
 const TILES: Tile[] = [
-  { id: "booking", anchor: "dat-lich-online", img: "/images/dat-lich-khach.webp", span: "lg:col-span-4", tall: true, zoom: "w-[150%] sm:w-[115%] lg:w-[105%]" },
-  { id: "calendar", anchor: "lich-hen", img: "/images/lich-hen-nhan-vien.webp", span: "lg:col-span-2", tall: true },
+  { id: "booking", anchor: "dat-lich-online", img: "/images/dat-lich-khach.webp", span: "lg:col-span-3" },
+  { id: "calendar", anchor: "lich-hen", img: "/images/lich-hen-nhan-vien.webp", span: "lg:col-span-3" },
   { id: "checkout", anchor: "tinh-tien", img: "/images/tinh-tien.webp", span: "lg:col-span-2" },
   { id: "reports", anchor: "bao-cao", img: "/images/tong-quan.webp", span: "lg:col-span-2" },
   { id: "payroll", anchor: "tinh-luong", img: "/images/tinh-luong.webp", span: "lg:col-span-2" },
@@ -36,7 +36,7 @@ export async function HomeBento() {
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-12 lg:grid-cols-6 lg:gap-5">
-          {TILES.map(({ id, anchor, img, span, tall, zoom }) => {
+          {TILES.map(({ id, anchor, img, span }) => {
             const Icon = FEATURE_ICONS[id];
             return (
               <Link
@@ -51,12 +51,12 @@ export async function HomeBento() {
                   <h3 className="mt-5 text-lg font-bold tracking-[-0.01em] text-ink">{f(`${id}.title`)}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-muted">{f(`${id}.desc`)}</p>
                 </div>
-                <div className={`relative mt-auto ml-6 overflow-hidden rounded-tl-xl border-l border-t border-line bg-sand sm:ml-7 ${tall ? "h-56 sm:h-64 lg:h-72" : "h-48 sm:h-52"}`}>
+                <div className="mt-auto px-6 pb-6 sm:px-7 sm:pb-7">
                   <img
                     src={img}
                     alt=""
                     loading="lazy"
-                    className={`absolute left-0 top-0 max-w-none origin-top-left transition-transform duration-500 group-hover:scale-[1.02] ${zoom ?? "w-[200%] sm:w-[160%] lg:w-[170%]"}`}
+                    className="block h-auto w-full rounded-xl border border-line bg-sand"
                   />
                 </div>
               </Link>

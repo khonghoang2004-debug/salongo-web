@@ -70,7 +70,6 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
         <div className="hidden items-center justify-center lg:flex" aria-hidden>
           <span
             className="text-2xl text-accent-strong transition-transform duration-300 lg:hover:translate-x-1"
-            style={{ filter: "drop-shadow(0 2px 4px rgba(139,92,246,0.2))" }}
           >
             →
           </span>

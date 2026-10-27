@@ -116,7 +116,7 @@ export function ScreenTabsMockup({
             sizes="(max-width: 1200px) 100vw, 1152px"
             loading="lazy"
             decoding="async"
-            className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500 ${
+            className={`absolute inset-0 h-full w-full object-contain object-top transition-opacity duration-500 ${
               active === i ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -150,7 +150,7 @@ export function ScreenTabsMockup({
                 width={2400}
                 height={1567}
                 onClick={(e) => e.stopPropagation()}
-                className="sg-pop h-auto w-[220%] max-w-none rounded-xl shadow-2xl sm:w-full sm:max-w-[2400px]"
+                className="sg-pop h-auto w-[220%] max-w-none rounded-xl sm:w-full sm:max-w-[2400px]"
               />
             </div>
           </div>,

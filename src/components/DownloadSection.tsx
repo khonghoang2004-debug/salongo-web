@@ -40,7 +40,7 @@ export async function DownloadSection() {
   ];
 
   return (
-    <section className="sg-section bg-white pt-0 sm:pt-0 lg:pt-0">
+    <section className="sg-section bg-white py-0 sm:py-0 lg:py-0">
       <div className="mx-auto grid max-w-6xl items-center gap-8 rounded-[28px] border border-line bg-sand p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-12">
         <div className="text-center lg:text-left">
           <p className="sg-kicker">{t("eyebrow")}</p>

@@ -36,7 +36,7 @@ export function FeatureSubnav({ items, label }: { items: Item[]; label: string }
   return (
     <nav
       aria-label={label}
-      className="sticky top-[65px] z-30 border-b border-line bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85"
+      className="sticky top-[65px] z-30 border-b border-line bg-white"
     >
       <div
         ref={listRef}

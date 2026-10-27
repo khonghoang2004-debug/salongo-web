@@ -14,9 +14,15 @@ const config: Config = {
       },
       boxShadow: {
         "sg-sm": "0 1px 2px rgba(41, 17, 25, 0.05)",
-        "sg-md": "0 1px 3px rgba(41, 17, 25, 0.06), 0 6px 16px -4px rgba(41, 17, 25, 0.08)",
-        "sg-lg": "0 2px 4px rgba(41, 17, 25, 0.04), 0 18px 40px -12px rgba(41, 17, 25, 0.18)",
-        "sg-xl": "0 4px 8px rgba(41, 17, 25, 0.04), 0 32px 64px -20px rgba(102, 0, 26, 0.28)",
+        "sg-md": "0 1px 2px rgba(41, 17, 25, 0.06), 0 2px 6px rgba(41, 17, 25, 0.06)",
+        "sg-lg": "0 1px 2px rgba(41, 17, 25, 0.06), 0 4px 12px rgba(41, 17, 25, 0.08)",
+        "sg-xl": "0 1px 2px rgba(41, 17, 25, 0.06), 0 6px 16px rgba(41, 17, 25, 0.1)",
+      },
+      /* Tiêu đề chỉ đậm hơn chữ thường một chút */
+      fontWeight: {
+        bold: "600",
+        extrabold: "600",
+        black: "700",
       },
       colors: {
         background: "var(--background)",

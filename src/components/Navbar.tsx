@@ -96,7 +96,7 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "border-line bg-white/90 py-3 shadow-[0_8px_24px_-16px_rgba(41,17,25,0.25)] backdrop-blur-md supports-[backdrop-filter]:bg-white/80"
+          ? "border-line bg-white py-3 shadow-sg-sm"
           : "border-transparent bg-white py-4"
       }`}
     >

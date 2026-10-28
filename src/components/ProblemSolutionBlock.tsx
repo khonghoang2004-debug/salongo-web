@@ -5,6 +5,7 @@ import {
   Calculator,
   Monitor,
   BarChart3,
+  Check,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
@@ -14,7 +15,7 @@ const ICON_PROPS = {
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
   "aria-hidden": true as const,
-  className: "size-10 text-accent-strong",
+  className: "size-5",
 };
 
 const ICONS = [
@@ -47,57 +48,35 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
   const bullets = BULLET_KEYS[i];
 
   return (
-    <div className="rounded-2xl border border-line bg-white p-5 shadow-sg-lg transition-all hover:shadow-sg-lg sm:p-6">
-      <div className="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
-        {/* Problem */}
-        <div className="flex gap-3">
-          <div
-            className="flex size-16 shrink-0 items-center justify-center sg-icon-tile rounded-2xl"
-          >
+    <div className="grid overflow-hidden rounded-[20px] border border-line bg-white md:grid-cols-2">
+      {/* Vấn đề */}
+      <div className="p-6 sm:p-7">
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#FBF7F7] text-ink/60">
             <Icon {...ICON_PROPS} />
-          </div>
-          <div className="min-w-0">
-            <h3 className="text-lg font-bold text-ink/80">
-              {tProblem(`item${index}Title`)}
-            </h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              {tProblem(`item${index}Desc`)}
-            </p>
-          </div>
-        </div>
-
-        {/* Arrow */}
-        <div className="hidden items-center justify-center lg:flex" aria-hidden>
-          <span
-            className="text-2xl text-accent-strong transition-transform duration-300 lg:hover:translate-x-1"
-          >
-            →
           </span>
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{tPage("problemLabel")}</span>
         </div>
-        <div className="flex items-center justify-center py-1 lg:hidden" aria-hidden>
-          <span className="text-accent-strong">↓</span>
-        </div>
+        <h3 className="mt-5 text-lg font-semibold tracking-[-0.01em] text-ink">{tProblem(`item${index}Title`)}</h3>
+        <p className="mt-2 text-[15px] leading-relaxed text-muted">{tProblem(`item${index}Desc`)}</p>
+      </div>
 
-        {/* Solution */}
-        <div className="rounded-xl bg-brand-50/50 p-4 sm:p-5" style={{ borderRadius: 16 }}>
-          <h4 className="text-lg font-bold text-ink">
-            {tSolution(`item${index}Title`)}
-          </h4>
-          <ul className="mt-2 space-y-1.5">
-            {bullets.map((key) => (
-              <li key={key} className="flex items-center gap-2 text-muted">
-                <span
-                  className="sg-gradient size-1.5 shrink-0 rounded-full"
-                />
-                {tPage(key)}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-2.5 flex items-center gap-2 font-semibold text-emerald-600">
-            <span className="text-lg">✓</span>
-            {tSolution(`result${index}`)}
-          </p>
-        </div>
+      {/* Giải pháp */}
+      <div className="border-t border-line bg-brand-50 p-6 sm:p-7 md:border-l md:border-t-0">
+        <span className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">{tPage("solutionLabel")}</span>
+        <h4 className="mt-3 text-lg font-semibold tracking-[-0.01em] text-ink">{tSolution(`item${index}Title`)}</h4>
+        <ul className="mt-3 space-y-2">
+          {bullets.map((key) => (
+            <li key={key} className="flex items-center gap-2.5 text-[15px] text-ink/75">
+              <span className="size-1.5 shrink-0 rounded-full bg-brand-700" aria-hidden />
+              {tPage(key)}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-5 flex items-start gap-2 border-t border-brand-100 pt-4 text-[15px] font-semibold text-brand-700">
+          <Check className="mt-0.5 size-4 shrink-0" strokeWidth={3} aria-hidden />
+          {tSolution(`result${index}`)}
+        </p>
       </div>
     </div>
   );

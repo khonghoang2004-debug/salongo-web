@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ProblemSolutionBlock } from "./ProblemSolutionBlock";
+import { SectionHead } from "./ui/SectionHead";
 
 const GROUPS: { groupTitleKey: "group1Title" | "group2Title" | "group3Title"; indices: [number, number] }[] = [
   { groupTitleKey: "group1Title", indices: [1, 4] },
@@ -12,24 +13,18 @@ export async function SolutionsBlocksSection() {
   const tProblem = await getTranslations("problem");
 
   return (
-    <section className="sg-section bg-white">
-      <div className="mx-auto max-w-5xl">
-        <div className="text-center">
-          <h2 className="sg-h2">
-            {tProblem("title")}
-          </h2>
-          <p className="sg-lead mx-auto mt-3 max-w-2xl">
-            {tProblem("subtitle")}
-          </p>
-        </div>
+    <section className="sg-section">
+      <div className="sg-container">
+        <SectionHead title={tProblem("title")} lead={tProblem("subtitle")} />
 
-        <div className="mt-6 space-y-8 lg:mt-8">
-          {GROUPS.map(({ groupTitleKey, indices }) => (
-            <div key={groupTitleKey}>
-              <h3 className="mb-4 text-xl font-bold text-ink sm:text-2xl">
-                {t(groupTitleKey)}
-              </h3>
-              <div className="space-y-4">
+        <div className="mt-12 space-y-12 lg:mt-16 lg:space-y-16">
+          {GROUPS.map(({ groupTitleKey, indices }, gi) => (
+            <div key={groupTitleKey} className="grid gap-5 border-t border-line pt-8 lg:grid-cols-12 lg:gap-10">
+              <div className="lg:col-span-3">
+                <span className="font-display text-sm font-semibold text-brand-700">0{gi + 1}</span>
+                <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-ink lg:sticky lg:top-24">{t(groupTitleKey)}</h3>
+              </div>
+              <div className="space-y-4 lg:col-span-9">
                 {indices.map((idx) => (
                   <ProblemSolutionBlock key={idx} index={idx as 1 | 2 | 3 | 4 | 5 | 6} />
                 ))}

@@ -3,11 +3,10 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { HomeHero } from "@/components/home/HomeHero";
-import { HomeBento } from "@/components/home/HomeBento";
+import { HomeFeatures } from "@/components/home/HomeFeatures";
 import { HomeLanguage } from "@/components/home/HomeLanguage";
 import { HomeSalonTypes } from "@/components/home/HomeSalonTypes";
 import { HomePricingTeaser } from "@/components/home/HomePricingTeaser";
-import { DownloadSection } from "@/components/DownloadSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -90,14 +89,15 @@ export default async function Home({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <HomeHero />
-      <HomeBento />
-      <HomeLanguage />
-      <HomeSalonTypes />
-      <HowItWorks />
-      <HomePricingTeaser />
-      <DownloadSection />
-      <CTA />
+      <main>
+        <HomeHero />
+        <HomeFeatures />
+        <HomeLanguage />
+        <HomeSalonTypes />
+        <HowItWorks />
+        <HomePricingTeaser />
+        <CTA />
+      </main>
       <Footer />
     </>
   );

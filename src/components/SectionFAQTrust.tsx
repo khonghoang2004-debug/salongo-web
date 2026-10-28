@@ -12,31 +12,20 @@ export async function SectionFAQTrust() {
   const t = await getTranslations("faq");
 
   return (
-    <section className="sg-section sg-section-alt">
-      <div className="mx-auto max-w-4xl">
-        <h2 className="text-center sg-h2-sm">
-          {t("trustTitle")}
-        </h2>
-        <div className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-6 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4 lg:gap-3">
-          {ITEMS.map(({ key, Icon }) => (
-            <div
-              key={key}
-              className="flex flex-col items-center rounded-xl border border-line bg-white px-2 py-3 text-center shadow-sg-sm transition-shadow hover:shadow-sg-md sm:rounded-2xl sm:p-6 sm:shadow-sg-md"
-            >
-              <div
-                className="flex size-9 items-center justify-center sg-icon-tile rounded-xl sm:size-12 sm:rounded-2xl"
-              >
-                <Icon
-                  className="size-[1.125rem] text-accent-strong sm:size-6"
-                  strokeWidth={2}
-                  aria-hidden
-                />
+    <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
+      <div className="sg-container">
+        <div className="rounded-[28px] border border-line p-7 sm:p-10">
+          <h2 className="sg-h2-sm">{t("trustTitle")}</h2>
+          <div className="mt-8 grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+            {ITEMS.map(({ key, Icon }) => (
+              <div key={key} className="flex items-center gap-3">
+                <span className="sg-icon-tile size-11 rounded-xl">
+                  <Icon className="size-5" strokeWidth={2} aria-hidden />
+                </span>
+                <p className="text-[15px] font-medium leading-snug text-ink/85">{t(key)}</p>
               </div>
-              <p className="mt-2 text-center text-xs font-medium leading-snug text-ink/80 sm:mt-3 sm:text-sm sm:leading-normal">
-                {t(key)}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

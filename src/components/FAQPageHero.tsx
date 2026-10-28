@@ -1,22 +1,28 @@
+import { Check } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { PageHero } from "./ui/PageHero";
 
 export async function FAQPageHero() {
   const t = await getTranslations("faq");
   const tNav = await getTranslations("nav");
 
   return (
-    <section
-      className="sg-page-hero sg-section-glow relative overflow-hidden"
-    >
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <span className="sg-eyebrow">{tNav("faq")}</span>
-        <h1 className="mt-5 sg-h1">
-          {t("heroTitle")}
-        </h1>
-        <p className="sg-lead mx-auto mt-5 max-w-2xl">
-          {t("heroSubtext")}
-        </p>
-      </div>
-    </section>
+    <PageHero
+      crumb={tNav("faq")}
+      title={t("heroTitle")}
+      lead={t("heroSubtext")}
+      aside={
+        <ul className="divide-y divide-line rounded-[20px] border border-line bg-white">
+          {(["heroBadge1", "heroBadge2", "heroBadge3"] as const).map((k) => (
+            <li key={k} className="flex items-center gap-3 px-5 py-4 text-[15px] font-medium text-ink">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700" aria-hidden>
+                <Check className="size-4" strokeWidth={3} />
+              </span>
+              {t(k)}
+            </li>
+          ))}
+        </ul>
+      }
+    />
   );
 }

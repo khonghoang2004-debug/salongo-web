@@ -71,7 +71,7 @@ export function ScreenTabsMockup({
                   }}
                   className={`flex shrink-0 items-center gap-2 rounded-full px-3.5 py-1.5 text-[13px] font-semibold transition-all duration-200 sm:px-4 sm:text-sm ${
                     on
-                      ? "bg-white text-brand-700 shadow-sg-sm ring-1 ring-brand-200"
+                      ? "bg-white text-brand-700 ring-1 ring-line"
                       : "text-muted hover:bg-white/70 hover:text-ink"
                   }`}
                 >

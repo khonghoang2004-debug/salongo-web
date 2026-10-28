@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "Salongo",
+  name: "Salora",
   logo: "/salongo-logo.svg",
   description:
-    "Grow your business with Salongo — the all-in-one SaaS platform for modern teams.",
+    "Grow your business with Salora — the all-in-one SaaS platform for modern teams.",
   /** Domain chính — dùng cho metadataBase, Open Graph (Google lấy thumbnail) */
   url: "https://salongo.eu",
   /** Ảnh OG cho chia sẻ & kết quả tìm kiếm - 1200x630 pixels */

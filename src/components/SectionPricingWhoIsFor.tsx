@@ -12,27 +12,15 @@ export async function SectionPricingWhoIsFor() {
   const tPricing = await getTranslations("pricing");
 
   return (
-    <section className="sg-section bg-white">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-center sg-h2">
-          {t("whoTitle")}
-        </h2>
-
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:mt-8 lg:grid-cols-4">
+    <section className="sg-section">
+      <div className="sg-container">
+        <h2 className="sg-h2">{t("whoTitle")}</h2>
+        <div className="mt-12 grid border-t border-line sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-line">
           {CARDS.map(({ planKey, titleKey, descKey }) => (
-            <div
-              key={planKey}
-              className="rounded-2xl border border-line bg-white p-6 shadow-sg-lg transition-shadow hover:shadow-sg-md"
-            >
-              <p className="text-sm font-semibold text-accent-strong">
-                {tPricing(planKey)}
-              </p>
-              <h3 className="mt-1.5 text-lg font-bold text-ink">
-                {t(titleKey)}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                {t(descKey)}
-              </p>
+            <div key={planKey} className="border-b border-line py-8 lg:border-b-0 lg:px-7 lg:first:pl-0 lg:last:pr-0">
+              <p className="inline-flex rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700">{tPricing(planKey)}</p>
+              <h3 className="mt-5 text-lg font-semibold tracking-[-0.01em] text-ink">{t(titleKey)}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-muted">{t(descKey)}</p>
             </div>
           ))}
         </div>

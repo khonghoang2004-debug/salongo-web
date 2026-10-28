@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { ChevronDown } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 
 const FAQ_KEYS = [1, 2, 3] as const;
 
@@ -11,38 +11,31 @@ export function SectionContactMiniFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="sg-section bg-white">
-      <div className="mx-auto max-w-2xl">
-        <h2 className="text-center sg-h2-sm">
-          {t("faqTitle")}
-        </h2>
-        <div className="mt-6 space-y-3">
+    <section className="sg-section">
+      <div className="sg-container grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <h2 className="sg-h2 lg:col-span-4">{t("faqTitle")}</h2>
+        <div className="border-t border-line lg:col-span-8">
           {FAQ_KEYS.map((i) => {
             const isOpen = openIndex === i - 1;
             return (
-              <div
-                key={i}
-                className="rounded-2xl border border-line bg-white shadow-sg-md transition-shadow hover:shadow-sg-md"
-              >
+              <div key={i} className="border-b border-line">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i - 1)}
-                  className={`flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold transition-colors ${
-                    isOpen
-                      ? "bg-brand-50/70 text-ink"
-                      : "bg-white text-ink hover:bg-sand"
-                  }`}
+                  aria-expanded={isOpen}
+                  className="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold text-ink transition-colors hover:text-brand-700 sm:py-6 sm:text-lg"
                 >
                   <span>{t(`faqQ${i}`)}</span>
-                  <ChevronDown
-                    className={`size-5 shrink-0 text-accent-strong transition-transform ${isOpen ? "rotate-180" : ""}`}
-                  />
+                  <span
+                    className={`flex size-8 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                      isOpen ? "border-brand-700 bg-brand-700 text-white" : "border-line text-ink"
+                    }`}
+                    aria-hidden
+                  >
+                    {isOpen ? <Minus className="size-4" /> : <Plus className="size-4" />}
+                  </span>
                 </button>
-                {isOpen && (
-                  <div className="border-t-2 border-brand-100/60 bg-white px-5 pb-4 pt-3 text-sm text-ink/80 leading-relaxed">
-                    {t(`faqA${i}`)}
-                  </div>
-                )}
+                {isOpen && <p className="max-w-2xl pb-6 text-[15px] leading-relaxed text-muted sm:text-base">{t(`faqA${i}`)}</p>}
               </div>
             );
           })}

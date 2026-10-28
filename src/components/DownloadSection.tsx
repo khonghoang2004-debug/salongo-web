@@ -31,7 +31,8 @@ const AppleIcon = () => (
   </svg>
 );
 
-export async function DownloadSection() {
+// Thẻ tải ứng dụng máy tính (dùng trong khối giá trên trang chủ)
+export async function DownloadCard() {
   const t = await getTranslations("download");
 
   const items = [
@@ -40,36 +41,31 @@ export async function DownloadSection() {
   ];
 
   return (
-    <section className="sg-section bg-white py-0 sm:py-0 lg:py-0">
-      <div className="mx-auto grid max-w-6xl items-center gap-8 rounded-[28px] border border-line bg-sand p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-12">
-        <div className="text-center lg:text-left">
-          <p className="sg-kicker">{t("eyebrow")}</p>
-          <h2 className="sg-h2 mt-4">{t("title")}</h2>
-          <p className="sg-lead mt-3">{t("subtitle")}</p>
-        </div>
-
-        <div className="grid gap-3 sm:grid-cols-2 lg:w-[380px] lg:grid-cols-1">
-          {items.map(({ href, file, label, Icon, ext }) => (
-            <a
-              key={file}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              download={file}
-              className="sg-card sg-card-hover group flex items-center gap-4 p-4 sm:p-5"
-            >
-              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-ink text-white">
-                <Icon />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block whitespace-nowrap font-semibold text-ink">{label}</span>
-                <span className="mt-0.5 block text-xs text-muted">{ext}</span>
-              </span>
-              <Download className="size-5 shrink-0 text-muted transition-colors group-hover:text-brand-700" aria-hidden />
-            </a>
-          ))}
-        </div>
+    <div className="flex h-full flex-col rounded-[28px] border border-line bg-white p-7 sm:p-10">
+      <p className="sg-kicker">{t("eyebrow")}</p>
+      <h2 className="sg-h2-sm mt-4">{t("title")}</h2>
+      <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("subtitle")}</p>
+      <div className="mt-auto grid gap-3 pt-8">
+        {items.map(({ href, file, label, Icon, ext }) => (
+          <a
+            key={file}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            download={file}
+            className="group flex min-h-14 items-center gap-4 rounded-2xl border border-line px-4 py-3 transition-colors hover:border-ink"
+          >
+            <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-ink text-white">
+              <Icon />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block font-semibold text-ink">{label}</span>
+              <span className="block text-xs text-muted">{ext}</span>
+            </span>
+            <Download className="size-5 shrink-0 text-muted transition-colors group-hover:text-ink" aria-hidden />
+          </a>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

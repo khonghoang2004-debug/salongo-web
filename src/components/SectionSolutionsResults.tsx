@@ -11,26 +11,20 @@ export async function SectionSolutionsResults() {
   const t = await getTranslations("solutionsPage");
 
   return (
-    <section className="sg-section sg-section-alt">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="text-center sg-h2">
-          {t("resultsTitle")}
-        </h2>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:grid-cols-4">
-          {stats.map(({ titleKey, descKey }) => (
-            <div
-              key={titleKey}
-              className="rounded-2xl border border-line bg-white p-6 shadow-sg-lg transition-all hover:shadow-sg-lg"
-              style={{ borderRadius: 16 }}
-            >
-              <h3 className="text-lg font-bold text-ink">
-                {t(titleKey)}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {t(descKey)}
-              </p>
-            </div>
-          ))}
+    <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
+      <div className="sg-container">
+        <div className="rounded-[28px] bg-brand-700 p-7 text-white sm:p-10 lg:p-14">
+          <h2 className="max-w-2xl font-display text-[1.875rem] font-semibold leading-[1.12] tracking-[-0.03em] sm:text-[2.375rem] lg:text-[3rem]">
+            {t("resultsTitle")}
+          </h2>
+          <div className="mt-10 grid gap-x-8 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+            {stats.map(({ titleKey, descKey }) => (
+              <div key={titleKey} className="border-t border-white/20 py-6">
+                <h3 className="text-xl font-semibold tracking-[-0.02em]">{t(titleKey)}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-white/75">{t(descKey)}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

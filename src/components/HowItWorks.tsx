@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, UserPlus, Settings2, CalendarCheck } from "lucide-react";
+import { SectionHead } from "./ui/SectionHead";
 
 const steps = [
   { titleKey: "step1Title" as const, descKey: "step1Desc" as const, Icon: UserPlus },
@@ -7,48 +8,43 @@ const steps = [
   { titleKey: "step3Title" as const, descKey: "step3Desc" as const, Icon: CalendarCheck },
 ];
 
+// 3 bước bắt đầu: số lớn, đường kẻ nối các bước
 export async function HowItWorks() {
   const t = await getTranslations("howItWorks");
 
   return (
-    <section className="sg-section sg-section-tint">
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center">
-          <p className="sg-kicker">{t("eyebrow")}</p>
-          <h2 className="sg-h2 mt-4">{t("title")}</h2>
-          <p className="sg-lead mx-auto mt-4 max-w-2xl sm:mt-5">{t("subtitle")}</p>
-        </div>
+    <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
+      <div className="sg-container">
+        <div className="rounded-[28px] border border-line p-6 sm:p-10 lg:p-14">
+          <SectionHead kicker={t("eyebrow")} title={t("title")} lead={t("subtitle")} />
 
-        <ol className="relative mt-10 grid gap-4 sm:gap-6 md:grid-cols-3 lg:mt-14">
-          {steps.map(({ titleKey, descKey, Icon }, index) => (
-            <li key={titleKey} className="sg-card relative flex gap-4 p-5 sm:p-6 md:flex-col md:items-center md:p-8 md:text-center">
-              <div className="relative shrink-0">
-                <span className="sg-icon-tile-solid size-12 rounded-2xl md:size-14">
-                  <Icon className="size-6" aria-hidden />
-                </span>
-                <span className="absolute -right-2 -top-2 flex size-6 items-center justify-center rounded-full border-2 border-white bg-ink text-[11px] font-bold text-white">
-                  {index + 1}
-                </span>
-              </div>
-              <div className="min-w-0">
-                <h3 className="text-lg font-bold tracking-[-0.01em] text-ink md:mt-6">{t(titleKey)}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted md:mt-3">{t(descKey)}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+          <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8 lg:mt-16">
+            {steps.map(({ titleKey, descKey, Icon }, index) => (
+              <li key={titleKey} className="relative border-t-2 border-brand-700 pt-6">
+                <div className="flex items-center justify-between">
+                  <span className="font-display text-[2.5rem] font-semibold leading-none tracking-[-0.04em] text-brand-700">
+                    0{index + 1}
+                  </span>
+                  <Icon className="size-6 text-ink/40" aria-hidden />
+                </div>
+                <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-ink">{t(titleKey)}</h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{t(descKey)}</p>
+              </li>
+            ))}
+          </ol>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:mt-12">
-          <a
-            href="https://app.salongo.eu/signup"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary w-full px-7 py-3.5 text-base sm:w-auto"
-          >
-            {t("ctaButton")}
-            <ArrowRight className="size-[18px]" aria-hidden />
-          </a>
-          <p className="max-w-xl text-center text-sm leading-relaxed text-muted">{t("closingLine")}</p>
+          <div className="mt-12 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl text-sm leading-relaxed text-muted">{t("closingLine")}</p>
+            <a
+              href="https://app.salongo.eu/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary shrink-0 px-7 py-3.5 text-base"
+            >
+              {t("ctaButton")}
+              <ArrowRight className="size-[18px]" aria-hidden />
+            </a>
+          </div>
         </div>
       </div>
     </section>

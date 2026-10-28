@@ -13,18 +13,19 @@ export async function FeatureChapters() {
   return (
     <>
       {CHAPTERS.map((c, ci) => (
-        <section key={c} className={`sg-section ${ci % 2 === 1 ? "sg-section-alt" : "bg-white"}`}>
-          <div className="mx-auto max-w-6xl">
-            <header className="mx-auto max-w-3xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3.5 py-1 text-sm font-semibold text-brand-700">
-                <span className="sg-gradient-text font-extrabold">{ci + 1}</span>
-                {t(`chapters.${c}.label`)}
-              </span>
-              <h2 className="mt-4 sg-h2">{t(`chapters.${c}.title`)}</h2>
-              <p className="sg-lead mx-auto mt-3 max-w-2xl">{t(`chapters.${c}.lead`)}</p>
+        <section key={c} className={`sg-section ${ci % 2 === 1 ? "bg-[#FBF7F7]" : "bg-white"}`}>
+          <div className="sg-container">
+            <header className="grid gap-5 border-b border-line pb-10 lg:grid-cols-12 lg:items-end lg:gap-10">
+              <div className="lg:col-span-7">
+                <p className="sg-kicker">
+                  {String(ci + 1).padStart(2, "0")} · {t(`chapters.${c}.label`)}
+                </p>
+                <h2 className="mt-4 sg-h2">{t(`chapters.${c}.title`)}</h2>
+              </div>
+              <p className="sg-lead lg:col-span-5 lg:pb-1.5">{t(`chapters.${c}.lead`)}</p>
             </header>
 
-            <div className="mt-10 space-y-16 sm:mt-12 lg:space-y-24">
+            <div className="mt-12 space-y-20 sm:mt-14 lg:space-y-28">
               {FEATURES.filter((f) => f.chapter === c).map((f) => (
                 <FeatureShowcase key={f.id} feature={f} index={++n} t={t} />
               ))}
@@ -52,7 +53,7 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
               <Icon className="size-5" />
             </span>
             <span className="text-sm font-bold tracking-wider text-muted">
-              <span className="sg-gradient-text">{String(index).padStart(2, "0")}</span>
+              <span className="text-brand-700">{String(index).padStart(2, "0")}</span>
               <span className="mx-2 text-line">/</span>
               {t(k("short"))}
             </span>
@@ -80,10 +81,10 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
       </div>
 
       <div className="mt-6 sm:mt-8">
-        <p className="text-sm font-bold uppercase tracking-wider text-muted">{t("youCan")}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t("youCan")}</p>
         <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           {[1, 2, 3, 4].map((i) => (
-            <li key={i} className="sg-card p-4 sm:p-5">
+            <li key={i} className="rounded-2xl border border-line bg-white p-5">
               <div className="flex items-start gap-2.5">
                 <CircleCheck className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
                 <div>

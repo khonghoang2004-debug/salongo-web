@@ -34,10 +34,10 @@ export async function SectionContact() {
   const supports = [t("supportSetup"), t("supportData"), t("supportMultilang")];
 
   return (
-    <section className="sg-section sg-section-alt">
-      <div className="mx-auto grid max-w-5xl gap-4 sm:gap-6 lg:grid-cols-[1.35fr_1fr]">
-        <div className="sg-card p-6 sm:p-8">
-          <h2 className="font-display text-xl font-bold tracking-[-0.02em] text-ink">{t("companyInfo")}</h2>
+    <section className="sg-section">
+      <div className="sg-container grid gap-4 sm:gap-5 lg:grid-cols-12">
+        <div className="rounded-[28px] border border-line bg-white p-7 sm:p-10 lg:col-span-7">
+          <h2 className="sg-h2-sm">{t("companyInfo")}</h2>
 
           <dl className="mt-6 divide-y divide-line">
             <div className="flex items-center gap-4 pb-5">
@@ -78,7 +78,7 @@ export async function SectionContact() {
                     href={CONTACT_FACEBOOK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:-translate-y-0.5"
+                    className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:-translate-y-0.5"
                     aria-label="Facebook"
                   >
                     <FacebookIcon className="size-4" />
@@ -87,7 +87,7 @@ export async function SectionContact() {
                     href={CONTACT_INSTAGRAM}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full text-white transition-transform hover:-translate-y-0.5"
+                    className="flex size-11 shrink-0 items-center justify-center rounded-full text-white transition-transform hover:-translate-y-0.5"
                     style={{ background: "linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737)" }}
                     aria-label="Instagram"
                   >
@@ -97,7 +97,7 @@ export async function SectionContact() {
                     href={CONTACT_WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition-transform hover:-translate-y-0.5"
+                    className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition-transform hover:-translate-y-0.5"
                     aria-label="WhatsApp"
                   >
                     <WhatsAppIcon className="size-4" />
@@ -108,12 +108,12 @@ export async function SectionContact() {
           </dl>
         </div>
 
-        <div className="sg-dark relative overflow-hidden rounded-[1.125rem] p-6 sm:p-8">
+        <div className="sg-dark relative overflow-hidden rounded-[28px] p-7 sm:p-10 lg:col-span-5">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
             <Clock className="size-3.5" aria-hidden />
             24h
           </span>
-          <h2 className="mt-5 font-display text-xl font-bold tracking-[-0.02em] sm:text-2xl">{t("quickSupportTitle")}</h2>
+          <h2 className="mt-6 font-display text-2xl font-semibold tracking-[-0.02em] sm:text-[1.75rem]">{t("quickSupportTitle")}</h2>
           <p className="mt-2 text-sm leading-relaxed text-white/70">{t("response24h")}</p>
           <ul className="mt-6 space-y-3 border-t border-white/10 pt-6">
             {supports.map((label) => (

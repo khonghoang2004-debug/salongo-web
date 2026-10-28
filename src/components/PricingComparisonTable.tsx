@@ -31,24 +31,22 @@ export async function PricingComparisonTable() {
   ];
 
   return (
-    <section className="sg-section sg-section-alt">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-center sg-h2">
-          {t("compareTitle")}
-        </h2>
+    <section className="sg-section bg-[#FBF7F7]">
+      <div className="sg-container">
+        <h2 className="sg-h2">{t("compareTitle")}</h2>
 
-        <div className="mt-6 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-lg">
+        <div className="mt-10 overflow-hidden rounded-[20px] border border-line bg-white">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[600px] border-collapse text-left text-sm">
+            <table className="w-full border-collapse text-left text-[13px] sm:text-sm">
               <thead>
-                <tr className="border-b border-line bg-sand">
-                  <th className="px-5 py-4 font-semibold text-ink/80">
+                <tr className="border-b border-line">
+                  <th className="px-3 py-4 font-semibold text-muted sm:px-5 sm:py-5">
                     {t("compareFeatureCol")}
                   </th>
                   {planNames.map((name, i) => (
                     <th
                       key={name}
-                      className="px-4 py-4 text-center font-semibold text-ink"
+                      className="px-1 py-4 text-center font-semibold text-ink sm:px-4 sm:py-5"
                     >
                       {name}
                     </th>
@@ -59,15 +57,15 @@ export async function PricingComparisonTable() {
                 {ROW_KEYS.map((rowKey, rowIndex) => (
                   <tr
                     key={rowKey}
-                    className="border-b border-line last:border-b-0 hover:bg-sand"
+                    className="border-b border-line last:border-b-0 hover:bg-[#FBF7F7]"
                   >
-                    <td className="px-5 py-3.5 font-medium text-ink/80">
+                    <td className="px-3 py-3.5 font-medium text-ink/85 sm:px-5 sm:py-4">
                       {t(rowKey)}
                     </td>
                     {MATRIX[rowIndex].map((val, colIndex) => (
                       <td
                         key={colIndex}
-                        className="px-4 py-3.5 text-center"
+                        className="px-1 py-3.5 text-center sm:px-4 sm:py-4"
                       >
                         {val ? (
                           <span className="inline-flex size-5 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-700" aria-hidden>✓</span>

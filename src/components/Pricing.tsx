@@ -45,19 +45,17 @@ export async function Pricing() {
   return (
     <section
       id="pricing"
-      className="sg-section bg-white pt-2 sm:pt-4 lg:pt-6"
+      className="sg-section"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="sg-container">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
           {planKeys.map((plan) => {
             const hi = plan.highlighted;
             return (
               <div
                 key={plan.nameKey}
-                className={`relative flex h-full flex-col rounded-[1.25rem] p-6 transition-all duration-300 sm:p-7 ${
-                  hi
-                    ? "sg-dark shadow-sg-xl lg:-my-3 lg:py-10"
-                    : "sg-card sg-card-hover"
+                className={`relative flex h-full flex-col rounded-[24px] p-6 sm:p-7 ${
+                  hi ? "sg-dark" : "border border-line bg-white"
                 }`}
               >
                 {hi && (
@@ -66,12 +64,12 @@ export async function Pricing() {
                   </span>
                 )}
 
-                <h3 className={`font-display text-xl font-bold ${hi ? "text-white" : "text-ink"}`}>{t(plan.nameKey)}</h3>
+                <h3 className={`font-display text-xl font-semibold ${hi ? "text-white" : "text-ink"}`}>{t(plan.nameKey)}</h3>
                 <p className={`mt-2 min-h-[2.5rem] text-sm ${hi ? "text-white/70" : "text-muted"}`}>{t(plan.subtitleKey)}</p>
 
                 <div className={`mt-6 border-b pb-6 ${hi ? "border-white/15" : "border-line"}`}>
                   <div className="flex items-baseline gap-1.5">
-                    <span className={`font-display text-4xl font-extrabold tracking-[-0.03em] lg:text-[2.75rem] ${hi ? "text-white" : "text-ink"}`}>
+                    <span className={`font-display text-[2.75rem] font-semibold tracking-[-0.04em] lg:text-[3.25rem] ${hi ? "text-white" : "text-ink"}`}>
                       {plan.price}
                     </span>
                     <span className={hi ? "text-white/70" : "text-muted"}>{t("perMonth")}</span>
@@ -112,7 +110,7 @@ export async function Pricing() {
           })}
         </div>
 
-        <p className="mt-6 text-center text-sm text-muted">
+        <p className="mt-6 text-sm text-muted">
           {t("footer")}
         </p>
       </div>

@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
-import { BarChart3, BellRing, CalendarX2, Calculator, Globe2, NotebookPen, Sparkles } from "lucide-react";
+import { BarChart3, BellRing, CalendarX2, Calculator, Globe2, NotebookPen } from "lucide-react";
+import { PageHero } from "./ui/PageHero";
+import { SectionHead } from "./ui/SectionHead";
 
 const whyItems = [
   { key: "why1" as const, Icon: NotebookPen },
@@ -19,59 +21,56 @@ export async function SectionAbout() {
   return (
     <>
       {/* Hero + sứ mệnh */}
-      <section className="sg-page-hero sg-section-glow relative overflow-hidden">
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <span className="sg-eyebrow">
-            <Sparkles className="size-3.5" aria-hidden />
-            {t("missionTitle")}
-          </span>
-          <h1 className="mt-5 sg-h1">{t("title")}</h1>
-          <div className="sg-hero-card mx-auto mt-8 max-w-3xl rounded-3xl px-6 py-8 sm:mt-8 sm:px-10 sm:py-10">
-            <p className="text-xl font-semibold leading-snug sm:text-2xl lg:text-[1.75rem]">
+      <PageHero
+        crumb={t("title")}
+        title={t("title")}
+        aside={
+          <figure className="rounded-[24px] bg-brand-700 p-7 text-white sm:p-9">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">{t("missionTitle")}</p>
+            <blockquote className="mt-4 text-xl font-semibold leading-snug tracking-[-0.01em] sm:text-2xl">
               “{t("missionDesc")}”
-            </p>
-          </div>
-        </div>
-      </section>
+            </blockquote>
+          </figure>
+        }
+      />
 
       {/* Vì sao xây dựng */}
-      <section className="sg-section bg-white">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-center sg-h2">{t("whyTitle")}</h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-3 lg:mt-10 lg:gap-6">
-            {whyItems.map(({ key, Icon }) => (
-              <div key={key} className="sg-card sg-card-hover p-6 sm:p-7">
-                <div className="sg-icon-tile size-12">
-                  <Icon className="size-6" strokeWidth={2} aria-hidden />
+      <section className="sg-section">
+        <div className="sg-container">
+          <SectionHead title={t("whyTitle")} layout="stack" />
+          <div className="mt-12 grid border-t border-line md:grid-cols-3 md:gap-x-0 md:divide-x md:divide-line">
+            {whyItems.map(({ key, Icon }, i) => (
+              <div key={key} className="border-b border-line py-8 md:border-b-0 md:px-8 md:first:pl-0 md:last:pr-0">
+                <div className="flex items-center justify-between">
+                  <span className="sg-icon-tile size-12 rounded-2xl">
+                    <Icon className="size-6" strokeWidth={2} aria-hidden />
+                  </span>
+                  <span className="font-display text-sm font-semibold text-ink/30">0{i + 1}</span>
                 </div>
-                <p className="mt-5 text-base font-medium leading-relaxed text-ink">{t(key)}</p>
+                <p className="mt-8 text-lg font-medium leading-relaxed text-ink">{t(key)}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Định hướng phát triển: dòng thời gian */}
-      <section className="sg-section sg-section-alt">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-center sg-h2">{t("roadmapTitle")}</h2>
-          <ol className="relative mt-8 space-y-5 lg:mt-10">
-            <span
-              className="absolute bottom-6 left-6 top-6 w-[3px] -translate-x-1/2 rounded-full bg-[image:var(--sg-gradient)] opacity-70"
-              aria-hidden
-            />
-            {roadmapItems.map(({ key, Icon }, i) => (
-              <li key={key} className="relative flex items-center gap-4 sm:gap-5">
-                <div className="sg-icon-tile relative z-10 size-12 rounded-full ring-4 ring-sand">
-                  <Icon className="size-5" strokeWidth={2} aria-hidden />
-                </div>
-                <div className="sg-card flex-1 px-5 py-4 sm:px-6">
-                  <p className="text-xs font-bold uppercase tracking-wider text-accent-strong">0{i + 1}</p>
-                  <p className="mt-1 font-medium leading-relaxed text-ink">{t(key)}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+      {/* Định hướng phát triển */}
+      <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
+        <div className="sg-container">
+          <div className="grid gap-10 rounded-[28px] bg-[#FBF7F7] p-7 sm:p-10 lg:grid-cols-12 lg:p-14">
+            <div className="lg:col-span-5">
+              <h2 className="sg-h2">{t("roadmapTitle")}</h2>
+            </div>
+            <ol className="space-y-3 lg:col-span-7">
+              {roadmapItems.map(({ key, Icon }, i) => (
+                <li key={key} className="flex items-center gap-4 rounded-2xl border border-line bg-white p-5 sm:gap-5">
+                  <span className="font-display text-2xl font-semibold tracking-[-0.03em] text-brand-700">0{i + 1}</span>
+                  <p className="flex-1 font-medium leading-relaxed text-ink">{t(key)}</p>
+                  <Icon className="size-5 shrink-0 text-ink/35" strokeWidth={2} aria-hidden />
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
     </>

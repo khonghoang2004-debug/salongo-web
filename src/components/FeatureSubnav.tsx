@@ -36,11 +36,11 @@ export function FeatureSubnav({ items, label }: { items: Item[]; label: string }
   return (
     <nav
       aria-label={label}
-      className="sticky top-[65px] z-30 border-b border-line bg-white"
+      className="sticky top-[65px] z-30 lg:top-[73px] border-b border-line bg-white"
     >
       <div
         ref={listRef}
-        className="mx-auto flex max-w-6xl gap-1.5 overflow-x-auto px-4 py-2.5 [scrollbar-width:none] sm:px-6 lg:justify-center lg:px-8"
+        className="mx-auto flex max-w-[1200px] gap-1.5 overflow-x-auto px-4 py-2.5 [scrollbar-width:none] sm:px-6 lg:justify-center lg:px-8"
       >
         {items.map(({ id, anchor, label: text }) => {
           const Icon = FEATURE_ICONS[id];

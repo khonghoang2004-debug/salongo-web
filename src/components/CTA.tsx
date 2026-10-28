@@ -9,22 +9,24 @@ type CtaBandProps = {
   secondaryLabel?: string;
 };
 
-// Dải kêu gọi hành động nền đỏ đô đặc, dùng chung cho mọi trang
+// Dải kêu gọi hành động: khối đỏ đô đặc, chữ bên trái, nút bên phải (PC)
 export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProps) {
   return (
-    <section className="sg-section bg-white">
-      <div className="sg-dark relative mx-auto max-w-6xl overflow-hidden rounded-[28px] px-6 py-12 text-center shadow-sg-xl sm:rounded-[32px] sm:px-10 sm:py-16 lg:py-20">
-        <div className="relative">
-          <h2 className="mx-auto max-w-3xl font-display text-[1.875rem] font-bold leading-[1.15] tracking-[-0.025em] text-balance sm:text-[2.25rem] lg:text-[3rem]">
-            {title}
-          </h2>
-          {subtitle && <p className="mx-auto mt-5 max-w-xl text-base text-white/75 sm:text-lg">{subtitle}</p>}
-          <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+    <section className="py-2 sm:py-3">
+      <div className="sg-dark mx-2 rounded-[24px] px-6 py-14 sm:mx-3 sm:rounded-[32px] sm:px-10 sm:py-20 lg:mx-4 lg:px-12 lg:py-24">
+        <div className="sg-container grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <h2 className="max-w-3xl font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-[2.75rem] lg:text-[3.5rem]">
+              {title}
+            </h2>
+            {subtitle && <p className="mt-5 max-w-xl text-base text-white/75 sm:text-lg">{subtitle}</p>}
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:flex-col lg:items-stretch">
             <a
               href="https://app.salongo.eu/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-on-gradient px-7 py-3.5 text-base"
+              className="btn-on-gradient px-7 py-4 text-base"
             >
               {button}
               <ArrowRight className="size-[18px]" aria-hidden />
@@ -32,7 +34,7 @@ export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProp
             {secondaryLabel && (
               <Link
                 href="/lien-he"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-4 text-base font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
               >
                 {secondaryLabel}
               </Link>

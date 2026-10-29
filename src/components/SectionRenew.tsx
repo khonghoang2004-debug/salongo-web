@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ArrowUpRight, CreditCard, LogIn, MousePointerClick, Store } from "lucide-react";
-import { renewUrl } from "@/lib/app-links";
+import { RENEW_URL } from "@/lib/app-links";
 import { DemoNote, PhoneShot } from "./ui/AppShot";
 
 const STEPS = [
@@ -10,7 +10,7 @@ const STEPS = [
   { i: 4, Icon: CreditCard },
 ] as const;
 
-// "Gia hạn gói": nút trên website mở thẳng màn Nâng cấp gói của salon trong app (app.salongo.eu/renew)
+// "Gia hạn gói": nút trên website mở thẳng màn Nâng cấp gói trong app (app.salongo.eu/dashboard/subscription)
 export async function SectionRenew() {
   const t = await getTranslations("renew");
 
@@ -34,7 +34,7 @@ export async function SectionRenew() {
               </li>
             ))}
           </ol>
-          <a href={renewUrl()} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-9 w-full px-7 py-4 text-base sm:w-auto">
+          <a href={RENEW_URL} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-9 w-full px-7 py-4 text-base sm:w-auto">
             {t("cta")}
             <ArrowUpRight className="size-[18px]" aria-hidden />
           </a>

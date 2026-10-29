@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUpRight, Check, RefreshCw, Store, Users } from "lucide-react";
-import { SIGNUP_URL, renewUrl, type PlanCode } from "@/lib/app-links";
+import { SIGNUP_URL, RENEW_URL, type PlanCode } from "@/lib/app-links";
 
 export type PlanCard = {
   code: PlanCode;
@@ -138,7 +138,7 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
                   <ArrowUpRight className="size-4" aria-hidden />
                 </a>
                 <a
-                  href={renewUrl(plan.code, yearly ? "year" : "month")}
+                  href={RENEW_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex min-h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold transition-colors ${

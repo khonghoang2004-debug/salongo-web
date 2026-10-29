@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import { renewUrl } from "@/lib/app-links";
+import { RENEW_URL } from "@/lib/app-links";
 import { DownloadCard } from "../DownloadSection";
 
 // Giá + tải app: hai khối cạnh nhau
@@ -30,7 +30,7 @@ export async function HomePricingTeaser() {
               <ArrowRight className="size-[18px]" aria-hidden />
             </Link>
             <a
-              href={renewUrl()}
+              href={RENEW_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="sg-arrow sg-arrow-up inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full px-4 text-[15px] font-semibold text-brand-700 hover:text-brand-800"

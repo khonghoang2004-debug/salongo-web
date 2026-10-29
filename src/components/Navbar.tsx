@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/metadata";
 import { ArrowRight, Download, RefreshCw } from "lucide-react";
-import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, renewUrl } from "@/lib/app-links";
+import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, RENEW_URL } from "@/lib/app-links";
 
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
@@ -142,7 +142,7 @@ export function Navbar() {
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href={renewUrl()}
+            href={RENEW_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
@@ -289,7 +289,7 @@ export function Navbar() {
                 {t("login")}
               </a>
               <a
-                href={renewUrl()}
+                href={RENEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}

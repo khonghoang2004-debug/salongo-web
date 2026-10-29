@@ -10,7 +10,7 @@ import {
 } from "@/lib/contact";
 import { siteConfig } from "@/lib/metadata";
 import { BackToTop } from "./BackToTop";
-import { LOGIN_URL, SIGNUP_URL, renewUrl } from "@/lib/app-links";
+import { LOGIN_URL, SIGNUP_URL, RENEW_URL } from "@/lib/app-links";
 
 const footerNavItems = [
   { href: "/", labelKey: "home" as const },
@@ -92,7 +92,7 @@ export async function Footer() {
               {([
                 [SIGNUP_URL, tNav("tryFree")],
                 [LOGIN_URL, tNav("login")],
-                [renewUrl(), tNav("renew")],
+                [RENEW_URL, tNav("renew")],
               ] as const).map(([href, label]) => (
                 <li key={href}>
                   <a

@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { ArrowUpRight, CreditCard, LogIn, MousePointerClick, Store } from "lucide-react";
 import { RENEW_URL } from "@/lib/app-links";
 import { PhoneShot } from "./ui/AppShot";
+import { DeviceSwitch } from "./ui/DeviceSwitch";
 
 const STEPS = [
   { i: 1, Icon: MousePointerClick },
@@ -42,16 +43,20 @@ export async function SectionRenew() {
         </div>
 
         <div data-reveal="scale" className="lg:col-span-7">
-          <div className="sg-browser max-sm:hidden">
-            <div className="sg-browser-bar">
-              <span className="sg-browser-dot" />
-              <span className="sg-browser-dot" />
-              <span className="sg-browser-dot" />
-              <span className="ml-2 truncate text-xs font-medium text-muted">app.salongo.eu · {t("shotLabel")}</span>
-            </div>
-            <img src="/images/app/nang-cap-goi-noi-dung.webp" alt={t("shotLabel")} width={1600} height={1165} loading="lazy" className="block h-auto w-full" />
-          </div>
-          <PhoneShot src="/images/app/m-nang-cap-goi.webp" alt={t("shotLabel")} className="mx-auto max-w-[280px] sm:hidden" />
+          <DeviceSwitch
+            phone={<PhoneShot src="/images/app/m-nang-cap-goi.webp" alt={t("shotLabel")} className="mx-auto max-w-[280px]" />}
+            pc={
+              <div className="sg-browser">
+                <div className="sg-browser-bar">
+                  <span className="sg-browser-dot" />
+                  <span className="sg-browser-dot" />
+                  <span className="sg-browser-dot" />
+                  <span className="ml-2 truncate text-xs font-medium text-muted">app.salongo.eu · {t("shotLabel")}</span>
+                </div>
+                <img src="/images/app/nang-cap-goi-noi-dung.webp" alt={t("shotLabel")} width={1600} height={1165} loading="lazy" className="block h-auto w-full" />
+              </div>
+            }
+          />
         </div>
       </div>
     </section>

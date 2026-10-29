@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight, ArrowUpRight, Check, Lock } from "lucide-react";
 import { CountUp } from "../motion/CountUp";
 import { PhoneShot } from "../ui/AppShot";
+import { DeviceSwitch } from "../ui/DeviceSwitch";
 import { SIGNUP_URL } from "@/lib/app-links";
 
 const stats = [
@@ -80,9 +81,11 @@ export async function HomeHero() {
 
           {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn */}
           <div className="relative mx-auto mt-8 max-w-[1180px] px-3 pb-4 sm:mt-12 sm:px-10 sm:pb-12 lg:mt-14 lg:px-16 lg:pb-16">
-            {/* Điện thoại: ảnh chụp app bản mobile, đọc được chữ */}
-            <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority className="sg-stage mx-auto max-w-[270px] sm:hidden" />
-            <div className="sg-stage max-sm:hidden" style={d(600)}>
+            {/* Mobile: nút gạt Điện thoại / Máy tính; PC: ảnh máy tính */}
+            <DeviceSwitch
+              className="sg-stage"
+              phone={<PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority className="mx-auto max-w-[270px]" />}
+              pc={
               <div className="sg-browser shadow-[0_50px_100px_-50px_rgba(77,0,20,0.45)]">
                 <div className="sg-browser-bar">
                   <span className="sg-browser-dot" />
@@ -103,7 +106,8 @@ export async function HomeHero() {
                   fetchPriority="high"
                 />
               </div>
-            </div>
+              }
+            />
 
             {/* Cùng màn Tổng quan trên điện thoại (PC: nổi góc phải; mobile: không hiện để ảnh PC đủ lớn) */}
             <div className="sg-float absolute bottom-6 right-2 hidden w-[190px] lg:block xl:-right-4 xl:w-[210px]" style={d(1300)}>

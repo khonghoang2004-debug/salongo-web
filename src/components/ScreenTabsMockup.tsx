@@ -5,6 +5,8 @@ import { createPortal } from "react-dom";
 import { Maximize2, X } from "lucide-react";
 import { SHOT, TAB_ICONS, type TabIcon } from "./featuresData";
 import { PhoneShot } from "./ui/AppShot";
+import { useTranslations } from "next-intl";
+import { DeviceToggle, type Device } from "./ui/DeviceSwitch";
 
 type View = { key: string; label: string; src: string; icon: TabIcon; mobile?: string };
 
@@ -26,6 +28,9 @@ export function ScreenTabsMockup({
   const [auto, setAuto] = useState(true);
   const [zoom, setZoom] = useState(false);
   const hasMobile = views.every((v) => v.mobile);
+  const [device, setDevice] = useState<Device>("phone");
+  const tDevice = useTranslations("device");
+  const showPhone = hasMobile && device === "phone";
 
   useEffect(() => {
     if (!zoom) return;
@@ -47,6 +52,8 @@ export function ScreenTabsMockup({
   }, [auto, views.length]);
 
   return (
+    <>
+    {hasMobile && <DeviceToggle value={device} onChange={setDevice} className="mb-4" />}
     <div className={`overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sg-lg sm:rounded-3xl ${className}`}>
       <div className="flex items-center gap-3 border-b border-line bg-white px-3 py-2.5 sm:px-5 sm:py-3">
         <div className="hidden gap-1.5 sm:flex" aria-hidden>
@@ -106,7 +113,7 @@ export function ScreenTabsMockup({
           setZoom(true);
           setAuto(false);
         }}
-        className={`relative block aspect-[1600/1165] w-full cursor-zoom-in overflow-hidden bg-sand ${hasMobile ? "max-sm:hidden" : ""}`}
+        className={`relative block aspect-[1600/1165] w-full cursor-zoom-in overflow-hidden bg-sand ${showPhone ? "max-sm:hidden" : hasMobile ? "sg-swap" : ""}`}
         aria-label={zoomLabel}
       >
         {views.map((v, i) => (
@@ -125,8 +132,8 @@ export function ScreenTabsMockup({
           />
         ))}
       </button>
-      {hasMobile && (
-        <div className="bg-sand px-6 py-6 sm:hidden">
+      {showPhone && (
+        <div className="sg-swap bg-sand px-6 py-6 sm:hidden">
           <PhoneShot key={views[active].mobile} src={views[active].mobile!} alt={views[active].label} className="sg-swap mx-auto max-w-[300px]" />
         </div>
       )}
@@ -165,5 +172,7 @@ export function ScreenTabsMockup({
           document.getElementById("sg-root") ?? document.body,
         )}
     </div>
+    {hasMobile && !showPhone && <p className="sg-fade mt-2 text-center text-xs text-muted sm:hidden">{tDevice("zoomHint")}</p>}
+    </>
   );
 }

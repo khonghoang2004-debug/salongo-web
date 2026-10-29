@@ -894,5 +894,11 @@
     "cta": "Tarif verlängern",
     "note": "Sie nutzen die Salora-App aus App Store oder Google Play? Verlängern Sie im Browser oder in der Desktop-App.",
     "shotLabel": "Tarife"
+  },
+  "device": {
+    "label": "App ansehen auf",
+    "phone": "Handy",
+    "pc": "Computer",
+    "zoomHint": "Zum Vergrößern auf das Bild tippen"
   }
 }

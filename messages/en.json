@@ -894,5 +894,11 @@
     "cta": "Renew plan",
     "note": "Using the Salora app from the App Store or Google Play? Renew in a browser or the desktop app.",
     "shotLabel": "Plan screen"
+  },
+  "device": {
+    "label": "View the app on",
+    "phone": "Phone",
+    "pc": "Computer",
+    "zoomHint": "Tap the image to enlarge"
   }
 }

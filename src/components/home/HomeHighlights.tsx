@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PhoneShot } from "../ui/AppShot";
+import { DeviceSwitch } from "../ui/DeviceSwitch";
 
 const A = "/images/app/";
 const POINTS = [1, 2, 3, 4] as const;
@@ -28,19 +29,21 @@ export async function HomeHighlights() {
             </Link>
           </div>
 
-          <div data-reveal="scale" className="relative lg:col-span-7">
-            <div className="sg-browser max-sm:hidden lg:mr-24">
-              <div className="sg-browser-bar">
-                <span className="sg-browser-dot" />
-                <span className="sg-browser-dot" />
-                <span className="sg-browser-dot" />
-                <span className="ml-2 truncate text-xs font-medium text-muted">{h("hlBranchShotPc")}</span>
-              </div>
-              <img src={A + "chi-nhanh-chon.webp"} alt={h("hlBranchShotPc")} width={933} height={800} loading="lazy" className="block h-auto w-full" />
-            </div>
-            <div className="mx-auto max-w-[280px] sm:absolute sm:-bottom-6 sm:right-0 sm:w-[210px] sm:max-w-none lg:w-[230px]">
-              <PhoneShot src={A + "m-chi-nhanh-menu.webp"} alt={h("hlBranchShotPhone")} />
-            </div>
+          <div data-reveal="scale" className="lg:col-span-7">
+            <DeviceSwitch
+              phone={<PhoneShot src={A + "m-chi-nhanh-menu.webp"} alt={h("hlBranchShotPhone")} className="mx-auto max-w-[280px]" />}
+              pc={<BranchBrowser label={h("hlBranchShotPc")} />}
+              desktop={
+                <div className="relative">
+                  <div className="lg:mr-24">
+                    <BranchBrowser label={h("hlBranchShotPc")} />
+                  </div>
+                  <div className="absolute -bottom-6 right-0 w-[210px] lg:w-[230px]">
+                    <PhoneShot src={A + "m-chi-nhanh-menu.webp"} alt={h("hlBranchShotPhone")} />
+                  </div>
+                </div>
+              }
+            />
           </div>
         </div>
       </section>
@@ -94,5 +97,19 @@ function Points({ h, prefix }: { h: T; prefix: "hlBranch" | "hlStaff" }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function BranchBrowser({ label }: { label: string }) {
+  return (
+    <div className="sg-browser">
+      <div className="sg-browser-bar">
+        <span className="sg-browser-dot" />
+        <span className="sg-browser-dot" />
+        <span className="sg-browser-dot" />
+        <span className="ml-2 truncate text-xs font-medium text-muted">{label}</span>
+      </div>
+      <img src={A + "chi-nhanh-chon.webp"} alt={label} width={933} height={800} loading="lazy" className="block h-auto w-full" />
+    </div>
   );
 }

@@ -894,5 +894,11 @@
     "cta": "Gia hạn gói",
     "note": "Dùng app Salora trên iPhone hoặc Android tải từ cửa hàng ứng dụng? Hãy gia hạn trên trình duyệt hoặc app máy tính.",
     "shotLabel": "Nâng cấp gói"
+  },
+  "device": {
+    "label": "Xem giao diện trên",
+    "phone": "Điện thoại",
+    "pc": "Máy tính",
+    "zoomHint": "Chạm vào ảnh để xem to hơn"
   }
 }

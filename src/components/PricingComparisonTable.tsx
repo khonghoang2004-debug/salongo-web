@@ -1,23 +1,18 @@
 import { getTranslations } from "next-intl/server";
 
-// Rows: 6 features. Cols: Basic, Pro, Premium, Enterprise. 1 = yes, 0 = no
-const MATRIX: readonly (readonly number[])[] = [
-  [1, 1, 1, 1],
-  [1, 1, 1, 1],
-  [0, 1, 1, 1],
-  [0, 1, 1, 1],
-  [0, 1, 1, 1],
-  [0, 0, 1, 1],
+// Plans differ only in limits; every feature is in every plan. Cols: Basic, Pro, Premium.
+// A string is a value key in "pricingPage"; true = included.
+type Cell = string | true;
+const ROWS: readonly { key: string; cells: readonly [Cell, Cell, Cell] }[] = [
+  { key: "compareStaff", cells: ["limitStaff3", "limitStaff8", "limitUnlimited"] },
+  { key: "compareBranches", cells: ["limitBranch1", "limitBranch3", "limitUnlimited"] },
+  { key: "compareRow1", cells: [true, true, true] },
+  { key: "compareRow2", cells: [true, true, true] },
+  { key: "compareRow3", cells: [true, true, true] },
+  { key: "compareRow4", cells: [true, true, true] },
+  { key: "compareRow5", cells: [true, true, true] },
+  { key: "compareRow6", cells: [true, true, true] },
 ];
-
-const ROW_KEYS = [
-  "compareRow1",
-  "compareRow2",
-  "compareRow3",
-  "compareRow4",
-  "compareRow5",
-  "compareRow8",
-] as const;
 
 export async function PricingComparisonTable() {
   const t = await getTranslations("pricingPage");
@@ -27,7 +22,6 @@ export async function PricingComparisonTable() {
     tPricing("plan1Name"),
     tPricing("plan2Name"),
     tPricing("plan3Name"),
-    tPricing("plan4Name"),
   ];
 
   return (
@@ -43,7 +37,7 @@ export async function PricingComparisonTable() {
                   <th className="px-3 py-4 font-semibold text-muted sm:px-5 sm:py-5">
                     {t("compareFeatureCol")}
                   </th>
-                  {planNames.map((name, i) => (
+                  {planNames.map((name) => (
                     <th
                       key={name}
                       className="px-1 py-4 text-center font-semibold text-ink sm:px-4 sm:py-5"
@@ -54,23 +48,23 @@ export async function PricingComparisonTable() {
                 </tr>
               </thead>
               <tbody>
-                {ROW_KEYS.map((rowKey, rowIndex) => (
+                {ROWS.map((row) => (
                   <tr
-                    key={rowKey}
+                    key={row.key}
                     className="border-b border-line last:border-b-0 hover:bg-[#FBF7F7]"
                   >
                     <td className="px-3 py-3.5 font-medium text-ink/85 sm:px-5 sm:py-4">
-                      {t(rowKey)}
+                      {t(row.key)}
                     </td>
-                    {MATRIX[rowIndex].map((val, colIndex) => (
+                    {row.cells.map((val, colIndex) => (
                       <td
                         key={colIndex}
                         className="px-1 py-3.5 text-center sm:px-4 sm:py-4"
                       >
-                        {val ? (
+                        {val === true ? (
                           <span className="inline-flex size-5 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-700" aria-hidden>✓</span>
                         ) : (
-                          <span className="text-[#cfc6c8]" aria-hidden>✗</span>
+                          <span className="font-semibold text-ink">{t(val)}</span>
                         )}
                       </td>
                     ))}

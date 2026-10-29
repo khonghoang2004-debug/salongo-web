@@ -3,37 +3,28 @@ import { Check } from "lucide-react";
 
 const APP_URL = "https://app.salongo.eu";
 
+// Same plans, prices and limits as the app (Basic / Pro / Premium). Every plan includes every feature;
+// plans differ only in staff per branch and number of branches.
 const planKeys = [
   {
     nameKey: "plan1Name",
     subtitleKey: "plan1Subtitle",
-    featureKeys: ["plan1Feature1", "plan1Feature2", "plan1Feature3", "plan1Feature4"],
-    originalPrice: "199",
-    price: "159",
+    featureKeys: ["plan1Feature1", "plan1Feature2", "allFeatures", "yearlyFeature"],
+    price: "199",
     highlighted: false,
   },
   {
     nameKey: "plan2Name",
     subtitleKey: "plan2Subtitle",
-    featureKeys: ["plan2Feature1", "plan2Feature2", "plan2Feature3", "plan2Feature4", "plan2Feature5"],
-    originalPrice: "399",
-    price: "299",
+    featureKeys: ["plan2Feature1", "plan2Feature2", "allFeatures", "yearlyFeature"],
+    price: "499",
     highlighted: true,
   },
   {
     nameKey: "plan3Name",
     subtitleKey: "plan3Subtitle",
-    featureKeys: ["plan3Feature1", "plan3Feature2", "plan3Feature3", "plan3Feature4", "plan3Feature5"],
-    originalPrice: "599",
-    price: "419",
-    highlighted: false,
-  },
-  {
-    nameKey: "plan4Name",
-    subtitleKey: "plan4Subtitle",
-    featureKeys: ["plan4Feature1", "plan4Feature2", "plan4Feature4", "plan4Feature5"],
-    originalPrice: "999",
-    price: "599",
+    featureKeys: ["plan3Feature1", "plan3Feature2", "allFeatures", "yearlyFeature"],
+    price: "799",
     highlighted: false,
   },
 ] as const;
@@ -48,7 +39,7 @@ export async function Pricing() {
       className="sg-section"
     >
       <div className="sg-container">
-        <div data-stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
+        <div data-stagger className="grid gap-4 md:grid-cols-3 md:items-stretch lg:gap-5">
           {planKeys.map((plan) => {
             const hi = plan.highlighted;
             return (
@@ -74,11 +65,6 @@ export async function Pricing() {
                     </span>
                     <span className={hi ? "text-white/70" : "text-muted"}>{t("perMonth")}</span>
                   </div>
-                  {plan.originalPrice && (
-                    <p className={`mt-1 text-sm line-through ${hi ? "text-white/45" : "text-[#a49a9d]"}`}>
-                      {plan.originalPrice} CZK
-                    </p>
-                  )}
                 </div>
 
                 <ul className="mt-6 flex-1 space-y-3">

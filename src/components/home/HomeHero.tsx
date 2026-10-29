@@ -37,13 +37,13 @@ export async function HomeHero() {
     <>
       <section className="pt-1.5 sm:pt-3">
         <div className="sg-panel overflow-hidden">
-          <div className="mx-auto max-w-[1160px] px-4 pt-7 text-center sm:px-8 sm:pt-14 lg:pt-16">
+          <div className="mx-auto max-w-[1160px] px-1.5 pt-7 text-center sm:px-8 sm:pt-14 lg:pt-16">
             <span className="sg-eyebrow sg-in" style={d(0)}>
               <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
               {t("badge")}
             </span>
 
-            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.04em] text-ink text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
+            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.045em] text-ink sm:text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
               <span className="block">{words(t("title1"))}</span>
               <span className="block text-brand-700">{words(t("titleAccent"))}</span>
             </h1>

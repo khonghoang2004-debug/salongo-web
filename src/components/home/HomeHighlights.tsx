@@ -16,13 +16,13 @@ export async function HomeHighlights() {
     <>
       {/* Đa chi nhánh */}
       <section id="da-chi-nhanh" className="sg-section scroll-mt-24 bg-[#FBF7F7]">
-        <div className="sg-container grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="sg-container grid items-center gap-7 lg:grid-cols-12 lg:gap-14">
           <div data-reveal className="lg:col-span-5">
             <p className="sg-kicker">{h("hlBranchEyebrow")}</p>
             <h2 className="sg-h2 mt-4">{h("hlBranchTitle")}</h2>
             <p className="sg-lead mt-5">{h("hlBranchLead")}</p>
             <Points h={h} prefix="hlBranch" />
-            <Link href="/tinh-nang#da-chi-nhanh" className="btn-secondary sg-arrow mt-9 px-6 py-3 text-sm">
+            <Link href="/tinh-nang#da-chi-nhanh" className="btn-secondary sg-arrow mt-6 px-6 py-3 text-sm lg:mt-9">
               {h("featureMore")}
               <ArrowRight className="size-4" aria-hidden />
             </Link>
@@ -48,13 +48,13 @@ export async function HomeHighlights() {
 
       {/* Tài khoản nhân viên: chỉ giao diện điện thoại */}
       <section id="tai-khoan-nhan-vien" className="sg-section scroll-mt-24">
-        <div className="sg-container grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="sg-container grid items-center gap-7 lg:grid-cols-12 lg:gap-14">
           <div data-reveal className="min-w-0 lg:order-2 lg:col-span-5">
             <p className="sg-kicker">{h("hlStaffEyebrow")}</p>
             <h2 className="sg-h2 mt-4">{h("hlStaffTitle")}</h2>
             <p className="sg-lead mt-5">{h("hlStaffLead")}</p>
             <Points h={h} prefix="hlStaff" />
-            <Link href="/tinh-nang#nhan-vien" className="btn-secondary sg-arrow mt-9 px-6 py-3 text-sm">
+            <Link href="/tinh-nang#nhan-vien" className="btn-secondary sg-arrow mt-6 px-6 py-3 text-sm lg:mt-9">
               {h("featureMore")}
               <ArrowRight className="size-4" aria-hidden />
             </Link>
@@ -88,7 +88,7 @@ type T = Awaited<ReturnType<typeof getTranslations<"home2">>>;
 
 function Points({ h, prefix }: { h: T; prefix: "hlBranch" | "hlStaff" }) {
   return (
-    <ul data-stagger className="mt-8 space-y-3.5 border-t border-line pt-7">
+    <ul data-stagger className="mt-6 space-y-3 border-t border-line pt-5 lg:mt-8 lg:pt-7">
       {POINTS.map((i) => (
         <li key={i} className="flex items-start gap-3 text-[15px] font-medium leading-relaxed text-ink/85">
           <Check className="mt-1 size-4 shrink-0 text-brand-700" strokeWidth={3} aria-hidden />

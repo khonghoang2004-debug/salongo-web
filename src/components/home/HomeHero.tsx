@@ -35,24 +35,24 @@ export async function HomeHero() {
 
   return (
     <>
-      <section className="pt-2 sm:pt-3">
+      <section className="pt-1.5 sm:pt-3">
         <div className="sg-panel overflow-hidden">
-          <div className="mx-auto max-w-[1160px] px-5 pt-14 text-center sm:px-8 sm:pt-20 lg:pt-24">
+          <div className="mx-auto max-w-[1160px] px-4 pt-7 text-center sm:px-8 sm:pt-14 lg:pt-16">
             <span className="sg-eyebrow sg-in" style={d(0)}>
               <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
               {t("badge")}
             </span>
 
-            <h1 className="mt-7 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.04em] text-ink text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
+            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.04em] text-ink text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
               <span className="block">{words(t("title1"))}</span>
               <span className="block text-brand-700">{words(t("titleAccent"))}</span>
             </h1>
 
-            <p className="sg-lead sg-in mx-auto mt-7 max-w-[640px]" style={d(560)}>
+            <p className="sg-lead sg-in mx-auto mt-5 max-w-[640px]" style={d(560)}>
               {t("subtitle")}
             </p>
 
-            <div className="sg-in mt-9 flex flex-col justify-center gap-3 sm:flex-row" style={d(680)}>
+            <div className="sg-in mt-7 flex flex-col justify-center gap-2.5 sm:flex-row" style={d(680)}>
               <a
                 href={SIGNUP_URL}
                 target="_blank"
@@ -68,7 +68,7 @@ export async function HomeHero() {
               </Link>
             </div>
 
-            <ul className="sg-in mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted" style={d(780)}>
+            <ul className="sg-in mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted" style={d(780)}>
               {(["trial1", "trial2", "trial3"] as const).map((k) => (
                 <li key={k} className="flex items-center gap-1.5">
                   <Check className="size-4 text-brand-700" strokeWidth={2.5} aria-hidden />
@@ -79,7 +79,7 @@ export async function HomeHero() {
           </div>
 
           {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn */}
-          <div className="relative mx-auto mt-14 max-w-[1180px] px-3 pb-3 sm:mt-16 sm:px-10 sm:pb-16 lg:mt-20 lg:px-16 lg:pb-24">
+          <div className="relative mx-auto mt-8 max-w-[1180px] px-3 pb-4 sm:mt-12 sm:px-10 sm:pb-12 lg:mt-14 lg:px-16 lg:pb-16">
             {/* Điện thoại: ảnh chụp app bản mobile, đọc được chữ */}
             <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority className="sg-stage mx-auto max-w-[270px] sm:hidden" />
             <div className="sg-stage max-sm:hidden" style={d(600)}>
@@ -115,12 +115,12 @@ export async function HomeHero() {
       </section>
 
       {/* Dải số liệu, số đếm lên khi cuộn tới */}
-      <section className="px-4 pb-4 pt-16 sm:px-6 sm:pt-24 lg:px-8">
+      <section className="px-3 pb-2 pt-10 sm:px-6 sm:pt-16 lg:px-8">
         <div className="sg-container">
           <p data-reveal className="mx-auto max-w-2xl text-center text-[15px] font-medium text-muted sm:text-base">
             {h("statsTitle")}
           </p>
-          <dl data-stagger className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-line">
+          <dl data-stagger className="mt-7 grid grid-cols-2 gap-x-4 gap-y-7 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-line">
             {stats.map(({ value, label }) => (
               <div key={value} className="flex flex-col-reverse justify-end text-center lg:px-6">
                 <dt className="mt-2 text-sm text-muted">{t(label)}</dt>

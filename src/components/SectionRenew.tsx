@@ -16,12 +16,12 @@ export async function SectionRenew() {
 
   return (
     <section id="gia-han" className="sg-section scroll-mt-24">
-      <div className="sg-container grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+      <div className="sg-container grid items-center gap-7 lg:grid-cols-12 lg:gap-14">
         <div data-reveal className="lg:col-span-5">
           <p className="sg-kicker">{t("eyebrow")}</p>
           <h2 className="sg-h2 mt-4">{t("title")}</h2>
           <p className="sg-lead mt-5">{t("lead")}</p>
-          <ol className="mt-8 space-y-5">
+          <ol className="mt-6 space-y-4 lg:mt-8 lg:space-y-5">
             {STEPS.map(({ i, Icon }) => (
               <li key={i} className="flex gap-4">
                 <span className="sg-icon-tile size-10 shrink-0 rounded-xl" aria-hidden>
@@ -34,7 +34,7 @@ export async function SectionRenew() {
               </li>
             ))}
           </ol>
-          <a href={RENEW_URL} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-9 w-full px-7 py-4 text-base sm:w-auto">
+          <a href={RENEW_URL} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full px-7 py-4 text-base sm:w-auto">
             {t("cta")}
             <ArrowUpRight className="size-[18px]" aria-hidden />
           </a>

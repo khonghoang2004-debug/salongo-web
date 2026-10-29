@@ -15,7 +15,7 @@ export async function FeatureChapters() {
       {CHAPTERS.map((c, ci) => (
         <section key={c} className={`sg-section ${ci % 2 === 1 ? "bg-[#FBF7F7]" : "bg-white"}`}>
           <div className="sg-container">
-            <header data-reveal className="grid gap-5 border-b border-line pb-10 lg:grid-cols-12 lg:items-end lg:gap-10">
+            <header data-reveal className="grid gap-4 border-b border-line pb-7 lg:grid-cols-12 lg:items-end lg:gap-10">
               <div className="lg:col-span-7">
                 <p className="sg-kicker">
                   {String(ci + 1).padStart(2, "0")} · {t(`chapters.${c}.label`)}
@@ -25,7 +25,7 @@ export async function FeatureChapters() {
               <p className="sg-lead lg:col-span-5 lg:pb-1.5">{t(`chapters.${c}.lead`)}</p>
             </header>
 
-            <div className="mt-12 space-y-20 sm:mt-14 lg:space-y-28">
+            <div className="mt-8 space-y-14 sm:mt-10 lg:space-y-20">
               {FEATURES.filter((f) => f.chapter === c).map((f) => (
                 <FeatureShowcase key={f.id} feature={f} index={++n} t={t} />
               ))}

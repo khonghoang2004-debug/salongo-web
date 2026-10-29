@@ -30,7 +30,7 @@ export async function FeaturesPageHero() {
       }
     >
       {/* Bản đồ tính năng: bấm để nhảy tới phần chi tiết */}
-      <div className="mt-14 border-t border-line pt-8 lg:mt-16">
+      <div className="mt-8 border-t border-line pt-6 lg:mt-12">
         <div className="flex flex-wrap items-end justify-between gap-2">
           <h2 className="text-lg font-semibold text-ink">{t("mapTitle")}</h2>
           <p className="flex items-center gap-1.5 text-sm text-muted">

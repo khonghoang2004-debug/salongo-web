@@ -12,7 +12,7 @@ export async function HomePricingTeaser() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container grid gap-4 lg:grid-cols-12 lg:gap-5">
-        <div data-reveal className="flex flex-col rounded-[28px] bg-brand-50 p-7 sm:p-10 lg:col-span-7 lg:p-12">
+        <div data-reveal className="flex flex-col rounded-[28px] bg-brand-50 p-5 sm:p-8 lg:p-10 lg:col-span-7 lg:p-12">
           <p className="sg-kicker">{h("priceEyebrow")}</p>
           <h2 className="sg-h2 mt-4">{h("priceTitle")}</h2>
           <p className="sg-lead mt-4">{h("priceLead")}</p>

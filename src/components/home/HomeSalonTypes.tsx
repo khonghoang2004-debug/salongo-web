@@ -17,7 +17,7 @@ export async function HomeSalonTypes() {
     <section className="sg-section">
       <div className="sg-container">
         <SectionHead kicker={h("typesEyebrow")} title={h("typesTitle")} lead={h("typesLead")} />
-        <div data-stagger className="mt-12 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-16 lg:grid-cols-4">
+        <div data-stagger className="mt-7 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-12 lg:grid-cols-4">
           {TYPES.map(({ k, Icon }, i) => (
             <div
               key={k}

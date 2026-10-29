@@ -17,7 +17,7 @@ export async function SolutionsBlocksSection() {
       <div className="sg-container">
         <SectionHead title={tProblem("title")} lead={tProblem("subtitle")} />
 
-        <div className="mt-12 space-y-12 lg:mt-16 lg:space-y-16">
+        <div className="mt-8 space-y-10 lg:mt-12 lg:space-y-14">
           {GROUPS.map(({ groupTitleKey, indices }, gi) => (
             <div key={groupTitleKey} data-reveal className="grid gap-5 border-t border-line pt-8 lg:grid-cols-12 lg:gap-10">
               <div className="lg:col-span-3">

@@ -20,8 +20,8 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
   const tNav = await getTranslations("nav");
 
   return (
-    <section className="pt-2 sm:pt-3">
-      <div className="sg-panel px-4 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-10 lg:px-12 lg:pb-20 lg:pt-12">
+    <section className="pt-1.5 sm:pt-3">
+      <div className="sg-panel px-3 pb-7 pt-4 sm:px-8 sm:pb-12 sm:pt-8 lg:px-12 lg:pb-14 lg:pt-10">
         <div className="sg-container">
           <nav
             aria-label="Breadcrumb"
@@ -36,10 +36,10 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
             </span>
           </nav>
 
-          <div className={`mt-8 grid gap-10 sm:mt-10 ${aside ? "lg:grid-cols-12 lg:items-end lg:gap-12" : ""}`}>
+          <div className={`mt-4 grid gap-8 sm:mt-8 ${aside ? "lg:grid-cols-12 lg:items-end lg:gap-12" : ""}`}>
             <div className={aside ? "lg:col-span-7" : "mx-auto max-w-4xl text-center [&_.sg-lead]:mx-auto"}>
               {eyebrow && (
-                <div className="sg-in mb-6" style={d(60)}>
+                <div className="sg-in mb-4 sm:mb-6" style={d(60)}>
                   {eyebrow}
                 </div>
               )}
@@ -47,13 +47,13 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
                 {title}
               </h1>
               {lead && (
-                <p className="sg-lead sg-in mt-6 max-w-2xl" style={d(260)}>
+                <p className="sg-lead sg-in mt-4 max-w-2xl sm:mt-6" style={d(260)}>
                   {lead}
                 </p>
               )}
               {actions && (
                 <div
-                  className={`sg-in mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap ${aside ? "" : "sm:justify-center"}`}
+                  className={`sg-in mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap ${aside ? "" : "sm:justify-center"}`}
                   style={d(380)}
                 >
                   {actions}

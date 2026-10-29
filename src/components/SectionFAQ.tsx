@@ -94,7 +94,7 @@ export function SectionFAQ() {
         </div>
 
         {/* Chưa tìm thấy câu trả lời */}
-        <div data-reveal className="mt-16 grid gap-8 rounded-[28px] bg-brand-50 p-7 sm:p-10 lg:mt-20 lg:grid-cols-12 lg:items-center lg:p-12">
+        <div data-reveal className="mt-10 grid gap-6 rounded-[24px] bg-brand-50 p-5 sm:p-8 lg:p-10 lg:mt-20 lg:grid-cols-12 lg:items-center lg:p-12">
           <div className="lg:col-span-7">
             <h3 className="sg-h2-sm">{t("stillNotFound")}</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("closingParagraph")}</p>

@@ -14,7 +14,7 @@ export async function SectionPricingWhoIsFor() {
     <section className="sg-section">
       <div className="sg-container">
         <h2 className="sg-h2">{t("whoTitle")}</h2>
-        <div data-stagger className="mt-12 grid border-t border-line md:grid-cols-3 md:divide-x md:divide-line">
+        <div data-stagger className="mt-7 grid border-t lg:mt-12 border-line md:grid-cols-3 md:divide-x md:divide-line">
           {CARDS.map(({ planKey, titleKey, descKey }) => (
             <div key={planKey} className="border-b border-line py-8 md:border-b-0 md:px-6 md:first:pl-0 md:last:pr-0 lg:px-8">
               <p className="inline-flex rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700">{tPricing(planKey)}</p>

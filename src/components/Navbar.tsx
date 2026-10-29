@@ -108,10 +108,10 @@ export function Navbar() {
         scrolled || menuOpen ? "border-line" : "border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-8">
+      <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-3 px-3 sm:h-16 sm:px-6 lg:h-[72px] lg:px-8">
         <Link href="/" className="flex shrink-0 items-center gap-2 rounded-lg transition-opacity hover:opacity-80">
-          <img src={siteConfig.logo} alt="" width={36} height={36} className="size-8 shrink-0 sm:size-9" />
-          <span className="font-display text-[1.25rem] font-semibold tracking-[-0.03em] text-ink sm:text-[1.375rem]">
+          <img src={siteConfig.logo} alt="" width={36} height={36} className="size-7 shrink-0 sm:size-9" />
+          <span className="font-display text-[1.125rem] font-semibold tracking-[-0.03em] text-ink sm:text-[1.375rem]">
             {siteConfig.name}
           </span>
         </Link>
@@ -210,7 +210,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="relative flex size-11 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink lg:hidden"
+            className="relative flex size-10 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -245,7 +245,7 @@ export function Navbar() {
           )}
           <div
             id="mobile-menu"
-            className="sg-menu-panel absolute inset-x-0 top-full flex max-h-[calc(100dvh-4rem)] flex-col overflow-y-auto border-b border-line bg-white px-4 pb-6 pt-2 sm:px-6 lg:hidden"
+            className="sg-menu-panel absolute inset-x-0 top-full flex max-h-[calc(100dvh-3.5rem)] flex-col overflow-y-auto border-b border-line bg-white px-4 pb-6 pt-2 sm:px-6 lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile menu"

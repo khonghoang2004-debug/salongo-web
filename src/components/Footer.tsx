@@ -37,7 +37,7 @@ export async function Footer() {
 
   return (
     <footer className="mt-2 border-t border-line bg-[#FBF7F7]">
-      <div className="mx-auto max-w-[1280px] px-4 pt-14 sm:px-6 sm:pt-20 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-3 pt-10 sm:px-6 sm:pt-16 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-2 rounded-lg transition-opacity hover:opacity-80">
@@ -110,7 +110,7 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-line py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-line py-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.name}. {t("rights")}
           </p>

@@ -58,7 +58,7 @@
 @layer components {
   /* ---------- Bố cục & chữ thống nhất toàn site ---------- */
   .sg-section {
-    @apply px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28;
+    @apply px-3 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20;
   }
 
   /* Khung nội dung chung */
@@ -68,7 +68,7 @@
 
   /* Khối nền lùi vào so với mép trang (hero, CTA) */
   .sg-panel {
-    @apply mx-2 rounded-[24px] border border-[#F1E8EA] bg-[#FBF7F7] sm:mx-3 sm:rounded-[32px] lg:mx-4;
+    @apply mx-1.5 rounded-[20px] border border-[#F1E8EA] bg-[#FBF7F7] sm:mx-3 sm:rounded-[32px] lg:mx-4;
   }
 
   .sg-section-alt {
@@ -78,7 +78,7 @@
   }
 
   .sg-page-hero {
-    @apply px-4 pt-12 pb-12 sm:px-6 sm:pt-16 sm:pb-16 lg:px-8 lg:pt-20 lg:pb-20;
+    @apply px-3 pt-8 pb-8 sm:px-6 sm:pt-12 sm:pb-12 lg:px-8 lg:pt-14 lg:pb-14;
   }
 
   .sg-h1 {

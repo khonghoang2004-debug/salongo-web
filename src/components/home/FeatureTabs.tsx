@@ -60,11 +60,11 @@ export function FeatureTabs({ items, moreLabel, demoNote }: { items: FeatureTabI
     <div
       ref={ref}
       data-reveal
-      className="mt-12 lg:mt-16 lg:grid lg:grid-cols-12 lg:gap-12"
+      className="mt-7 lg:mt-12 lg:grid lg:grid-cols-12 lg:gap-12"
       onMouseEnter={() => setPaused(true)}
     >
       {/* Mobile: chip chọn tính năng */}
-      <div ref={chips} className="relative -mx-4 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 lg:hidden" role="tablist" aria-label={moreLabel}>
+      <div ref={chips} className="relative -mx-3 overflow-x-auto px-3 pb-1 sm:-mx-6 sm:px-6 lg:hidden" role="tablist" aria-label={moreLabel}>
         <div className="flex w-max gap-2">
           {items.map((it, i) => (
             <button

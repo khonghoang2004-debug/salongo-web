@@ -14,7 +14,7 @@ export async function SectionContactTrust() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container">
-        <div data-reveal className="rounded-[28px] border border-line p-7 sm:p-10">
+        <div data-reveal className="rounded-[28px] border border-line p-5 sm:p-8 lg:p-10">
           <h2 className="sg-h2-sm">{t("trustTitle")}</h2>
           <div data-stagger className="mt-8 grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
             {ITEMS.map(({ key, Icon }) => (

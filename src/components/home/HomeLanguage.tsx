@@ -10,12 +10,12 @@ export async function HomeLanguage() {
 
   return (
     <section className="sg-section bg-[#FBF7F7]">
-      <div className="sg-container grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      <div className="sg-container grid items-center gap-7 lg:grid-cols-12 lg:gap-16">
         <div data-reveal className="lg:col-span-6">
           <p className="sg-kicker">{h("langEyebrow")}</p>
           <h2 className="sg-h2 mt-4">{h("langTitle")}</h2>
           <p className="sg-lead mt-5">{h("langLead")}</p>
-          <ul data-stagger className="mt-9 grid gap-x-8 gap-y-5 border-t border-line pt-8 sm:grid-cols-2">
+          <ul data-stagger className="mt-6 grid gap-x-8 gap-y-4 border-t border-line pt-6 sm:grid-cols-2 lg:mt-9 lg:pt-8">
             {points.map((k) => (
               <li key={k} className="flex items-start gap-3 text-[15px] font-medium leading-relaxed text-ink/85">
                 <Check className="mt-1 size-4 shrink-0 text-brand-700" strokeWidth={3} aria-hidden />

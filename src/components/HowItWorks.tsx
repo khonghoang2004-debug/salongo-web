@@ -16,10 +16,10 @@ export async function HowItWorks() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container">
-        <div className="rounded-[28px] border border-line p-6 sm:p-10 lg:p-14">
+        <div className="rounded-[28px] border border-line p-5 sm:p-8 lg:p-12">
           <SectionHead kicker={t("eyebrow")} title={t("title")} lead={t("subtitle")} />
 
-          <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8 lg:mt-16">
+          <ol className="mt-7 grid gap-7 md:grid-cols-3 md:gap-8 lg:mt-12">
             {steps.map(({ titleKey, descKey, Icon }, index) => (
               <li key={titleKey} data-reveal className="relative pt-6" style={{ "--d": `${index * 160}ms` } as CSSProperties}>
                 <span className="absolute inset-x-0 top-0 h-0.5 bg-line" aria-hidden />
@@ -41,7 +41,7 @@ export async function HowItWorks() {
             ))}
           </ol>
 
-          <div data-reveal className="mt-12 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div data-reveal className="mt-8 flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-relaxed text-muted">{t("closingLine")}</p>
             <a
               href="https://app.salongo.eu/signup"

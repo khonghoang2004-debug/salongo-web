@@ -14,6 +14,7 @@ export type PlanCode = "BASIC" | "PRO" | "PREMIUM";
 export const RENEW_URL = `${APP_URL}/dashboard/subscription`;
 
 export const DOWNLOAD_LINKS = {
-  windows: "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.exe",
-  mac: "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.dmg",
+  // Our own redirect: newest published version (full or pre-release), see src/app/api/download/[os]/route.ts
+  windows: "/api/download/windows",
+  mac: "/api/download/mac",
 };

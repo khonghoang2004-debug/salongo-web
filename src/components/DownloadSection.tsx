@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { Download } from "lucide-react";
 
-const WINDOWS_DOWNLOAD_URL =
-  "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.exe";
-const MAC_DOWNLOAD_URL =
-  "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.dmg";
+import { DOWNLOAD_LINKS } from "@/lib/app-links";
+
+const WINDOWS_DOWNLOAD_URL = DOWNLOAD_LINKS.windows;
+const MAC_DOWNLOAD_URL = DOWNLOAD_LINKS.mac;
 
 const WindowsIcon = () => (
   <svg

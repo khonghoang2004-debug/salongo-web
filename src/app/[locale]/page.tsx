@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeFeatures } from "@/components/home/HomeFeatures";
+import { HomeHighlights } from "@/components/home/HomeHighlights";
 import { HomeLanguage } from "@/components/home/HomeLanguage";
 import { HomeSalonTypes } from "@/components/home/HomeSalonTypes";
 import { HomePricingTeaser } from "@/components/home/HomePricingTeaser";
@@ -92,6 +93,7 @@ export default async function Home({ params }: Props) {
       <main>
         <HomeHero />
         <HomeFeatures />
+        <HomeHighlights />
         <HomeLanguage />
         <HomeSalonTypes />
         <HowItWorks />

@@ -31,7 +31,7 @@ export const FEATURE_ICONS = {
   branches: Store,
 };
 
-export const TAB_ICONS = { BellRing, Globe, LayoutDashboard, LayoutList, ReceiptText, Users, BarChart3, CreditCard, UserRound, Scissors, Wallet };
+export const TAB_ICONS = { BellRing, Globe, LayoutDashboard, LayoutList, ReceiptText, Users, BarChart3, CreditCard, UserRound, Scissors, Wallet, Store };
 export type TabIcon = keyof typeof TAB_ICONS;
 
 // Ảnh chụp màn hình app (PC: vùng nội dung, bỏ menu bên trái; 1600 × 1165). mobile: ảnh điện thoại 780 × 1688
@@ -44,6 +44,8 @@ export type Feature = {
   anchor: string;
   chapter: ChapterId;
   views: FeatureView[];
+  /** Chỉ có giao diện điện thoại (tài khoản nhân viên): hiện dãy ảnh điện thoại thay cho khung PC */
+  phones?: string[];
 };
 
 const A = "/images/app/";
@@ -89,8 +91,16 @@ export const FEATURES: Feature[] = [
     ],
   },
   { id: "payroll", anchor: "tinh-luong", chapter: "c3", views: [{ src: A + "tinh-luong-noi-dung.webp", icon: "Wallet", mobile: A + "m-tinh-luong.webp" }] },
-  { id: "staff", anchor: "nhan-vien", chapter: "c3", views: [{ src: A + "nhan-vien-noi-dung.webp", icon: "Users" }] },
-  { id: "branches", anchor: "da-chi-nhanh", chapter: "c3", views: [{ src: A + "tat-ca-salon-noi-dung.webp", icon: "LayoutDashboard", mobile: A + "m-tat-ca-salon.webp" }] },
+  {
+    id: "branches",
+    anchor: "da-chi-nhanh",
+    chapter: "c3",
+    views: [
+      { src: A + "chi-nhanh-chon-noi-dung.webp", icon: "Store", mobile: A + "m-chi-nhanh-menu.webp" },
+      { src: A + "tat-ca-salon-noi-dung.webp", icon: "LayoutDashboard", mobile: A + "m-tat-ca-salon.webp" },
+    ],
+  },
+  { id: "staff", anchor: "nhan-vien", chapter: "c3", views: [], phones: [A + "m-nv-ngay-mai.webp", A + "m-nv-hom-nay.webp", A + "m-nv-menu.webp"] },
 ];
 
 export const CHAPTERS: ChapterId[] = ["c1", "c2", "c3"];

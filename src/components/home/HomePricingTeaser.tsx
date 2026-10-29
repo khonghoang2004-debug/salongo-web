@@ -1,7 +1,8 @@
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { renewUrl } from "@/lib/app-links";
 import { DownloadCard } from "../DownloadSection";
 
 // Giá + tải app: hai khối cạnh nhau
@@ -23,11 +24,20 @@ export async function HomePricingTeaser() {
               </li>
             ))}
           </ul>
-          <div className="mt-auto pt-10">
+          <div className="mt-auto flex flex-col gap-3 pt-10 sm:flex-row sm:items-center">
             <Link href="/bang-gia" className="btn-primary sg-arrow w-full px-7 py-4 text-base sm:w-auto">
               {h("priceCta")}
               <ArrowRight className="size-[18px]" aria-hidden />
             </Link>
+            <a
+              href={renewUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sg-arrow sg-arrow-up inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full px-4 text-[15px] font-semibold text-brand-700 hover:text-brand-800"
+            >
+              {h("priceRenew")}
+              <ArrowUpRight className="size-4" aria-hidden />
+            </a>
           </div>
         </div>
         <div data-reveal className="lg:col-span-5" style={{ "--d": "150ms" } as CSSProperties}>

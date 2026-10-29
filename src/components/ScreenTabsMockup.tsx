@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Maximize2, X } from "lucide-react";
-import { TAB_ICONS, type TabIcon } from "./featuresData";
+import { SHOT, TAB_ICONS, type TabIcon } from "./featuresData";
+import { PhoneShot } from "./ui/AppShot";
 
-type View = { key: string; label: string; src: string; icon: TabIcon };
+type View = { key: string; label: string; src: string; icon: TabIcon; mobile?: string };
 
 // Khung trình duyệt lớn có tab để chuyển giữa các màn hình của app.
 // Tự chuyển tab mỗi vài giây cho tới khi người dùng bấm chọn. Bấm vào ảnh để xem phóng to.
+// Trên điện thoại, màn nào có ảnh chụp bản mobile thì hiện ảnh đó trong khung máy (đọc được, không phải thu nhỏ bản PC).
 export function ScreenTabsMockup({
   views,
   zoomLabel,
@@ -23,6 +25,7 @@ export function ScreenTabsMockup({
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
   const [zoom, setZoom] = useState(false);
+  const hasMobile = views.every((v) => v.mobile);
 
   useEffect(() => {
     if (!zoom) return;
@@ -103,7 +106,7 @@ export function ScreenTabsMockup({
           setZoom(true);
           setAuto(false);
         }}
-        className="relative block aspect-[2400/1567] w-full cursor-zoom-in overflow-hidden bg-sand"
+        className={`relative block aspect-[1600/1165] w-full cursor-zoom-in overflow-hidden bg-sand ${hasMobile ? "max-sm:hidden" : ""}`}
         aria-label={zoomLabel}
       >
         {views.map((v, i) => (
@@ -111,8 +114,8 @@ export function ScreenTabsMockup({
             key={v.key}
             src={v.src}
             alt={v.label}
-            width={2400}
-            height={1567}
+            width={SHOT.w}
+            height={SHOT.h}
             sizes="(max-width: 1200px) 100vw, 1152px"
             loading="lazy"
             decoding="async"
@@ -122,6 +125,11 @@ export function ScreenTabsMockup({
           />
         ))}
       </button>
+      {hasMobile && (
+        <div className="bg-sand px-6 py-6 sm:hidden">
+          <PhoneShot key={views[active].mobile} src={views[active].mobile!} alt={views[active].label} className="sg-swap mx-auto max-w-[300px]" />
+        </div>
+      )}
       {zoom &&
         createPortal(
           <div
@@ -147,10 +155,10 @@ export function ScreenTabsMockup({
               <img
                 src={views[active].src}
                 alt={views[active].label}
-                width={2400}
-                height={1567}
+                width={SHOT.w}
+                height={SHOT.h}
                 onClick={(e) => e.stopPropagation()}
-                className="sg-pop h-auto w-[220%] max-w-none rounded-xl sm:w-full sm:max-w-[2400px]"
+                className="sg-pop h-auto w-[220%] max-w-none rounded-xl sm:w-full sm:max-w-[1600px]"
               />
             </div>
           </div>,

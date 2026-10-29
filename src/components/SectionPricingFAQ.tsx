@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Minus, Plus } from "lucide-react";
 
-const FAQ_KEYS = [1, 2, 3, 4, 7, 8] as const;
+const FAQ_KEYS = [1, 2, 3, 9, 10, 5, 8, 7] as const;
 
 export function SectionPricingFAQ() {
   const t = useTranslations("pricingPage");

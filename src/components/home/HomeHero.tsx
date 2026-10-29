@@ -1,8 +1,10 @@
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, ArrowUpRight, BellRing, Check, Lock, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Lock } from "lucide-react";
 import { CountUp } from "../motion/CountUp";
+import { DemoNote, PhoneShot } from "../ui/AppShot";
+import { SIGNUP_URL } from "@/lib/app-links";
 
 const stats = [
   { value: "stat1Value", label: "stat1Label" },
@@ -11,12 +13,9 @@ const stats = [
   { value: "stat4Value", label: "stat4Label" },
 ] as const;
 
-// Cột doanh thu trong thẻ nổi (cột cuối là hôm nay)
-const BARS = [38, 52, 44, 66, 58, 74, 92];
-
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
-// Hero trang chủ: tiêu đề lớn căn giữa hiện từng chữ, ảnh app nghiêng rồi đặt thẳng, thẻ số liệu nổi hai bên
+// Hero trang chủ: tiêu đề lớn căn giữa hiện từng chữ, ảnh chụp app thật (PC + điện thoại) nghiêng rồi đặt thẳng
 export async function HomeHero() {
   const t = await getTranslations("hero");
   const h = await getTranslations("home2");
@@ -55,7 +54,7 @@ export async function HomeHero() {
 
             <div className="sg-in mt-9 flex flex-col justify-center gap-3 sm:flex-row" style={d(680)}>
               <a
-                href="https://app.salongo.eu/signup"
+                href={SIGNUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary sg-arrow sg-arrow-up px-7 py-4 text-base"
@@ -81,7 +80,9 @@ export async function HomeHero() {
 
           {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn */}
           <div className="relative mx-auto mt-14 max-w-[1180px] px-3 pb-3 sm:mt-16 sm:px-10 sm:pb-16 lg:mt-20 lg:px-16 lg:pb-24">
-            <div className="sg-stage" style={d(600)}>
+            {/* Điện thoại: ảnh chụp app bản mobile, đọc được chữ */}
+            <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority className="sg-stage mx-auto max-w-[270px] sm:hidden" />
+            <div className="sg-stage max-sm:hidden" style={d(600)}>
               <div className="sg-browser shadow-[0_50px_100px_-50px_rgba(77,0,20,0.45)]">
                 <div className="sg-browser-bar">
                   <span className="sg-browser-dot" />
@@ -94,55 +95,21 @@ export async function HomeHero() {
                   <span className="hidden w-[42px] sm:block" aria-hidden />
                 </div>
                 <img
-                  src="/images/hero-dashboard.webp"
+                  src="/images/app/tong-quan.webp"
                   alt={t("imageAlt")}
-                  width={2000}
-                  height={1150}
+                  width={1600}
+                  height={1000}
                   className="block h-auto w-full"
                   fetchPriority="high"
                 />
               </div>
             </div>
 
-            {/* Thẻ doanh thu hôm nay (PC) */}
-            <div
-              className="sg-float absolute bottom-8 left-6 hidden w-[300px] items-center gap-5 rounded-2xl border border-line bg-white p-4 text-left shadow-[0_24px_48px_-24px_rgba(77,0,20,0.35)] lg:flex xl:-left-2"
-              style={d(1300)}
-              aria-hidden
-            >
-              <div className="min-w-0 flex-1">
-                <p className="text-xs font-medium text-muted">{t("revenueToday")}</p>
-                <p className="mt-0.5 font-display text-[1.5rem] font-semibold tracking-[-0.03em] text-ink">{h("revenueValue")}</p>
-                <p className="mt-0.5 flex items-center gap-1 text-[11px] font-semibold text-brand-700">
-                  <TrendingUp className="size-3.5 shrink-0" />
-                  {h("revenueDelta")}
-                </p>
-              </div>
-              <div className="flex h-14 w-[92px] shrink-0 items-end gap-1">
-                {BARS.map((v, i) => (
-                  <span
-                    key={i}
-                    className={`sg-bar flex-1 rounded-[4px] ${i === BARS.length - 1 ? "bg-brand-700" : "bg-brand-100"}`}
-                    style={{ height: `${v}%`, ...d(1450 + i * 70) }}
-                  />
-                ))}
-              </div>
+            {/* Cùng màn Tổng quan trên điện thoại (PC: nổi góc phải; mobile: không hiện để ảnh PC đủ lớn) */}
+            <div className="sg-float absolute bottom-6 right-2 hidden w-[190px] lg:block xl:-right-4 xl:w-[210px]" style={d(1300)}>
+              <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority />
             </div>
-
-            {/* Thẻ lịch hẹn mới */}
-            <div
-              className="sg-float mx-auto mt-4 flex max-w-[340px] items-center gap-3 rounded-2xl border border-line bg-white p-3.5 text-left shadow-[0_24px_48px_-24px_rgba(77,0,20,0.35)] sm:absolute sm:bottom-6 sm:right-6 sm:mt-0 sm:w-[330px] lg:bottom-8 xl:-right-2"
-              style={d(1500)}
-            >
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                <BellRing className="size-5" aria-hidden />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-ink">{h("notifTitle")}</p>
-                <p className="truncate text-[13px] text-muted">{h("notifText")}</p>
-              </div>
-              <span className="rounded-full bg-brand-700 px-3 py-1.5 text-xs font-semibold text-white">{h("notifAction")}</span>
-            </div>
+            <DemoNote text={h("demoNote")} className="mt-4 justify-center lg:justify-start" />
           </div>
         </div>
       </section>

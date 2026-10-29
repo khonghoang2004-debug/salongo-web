@@ -10,6 +10,7 @@ import {
 } from "@/lib/contact";
 import { siteConfig } from "@/lib/metadata";
 import { BackToTop } from "./BackToTop";
+import { LOGIN_URL, SIGNUP_URL, renewUrl } from "@/lib/app-links";
 
 const footerNavItems = [
   { href: "/", labelKey: "home" as const },
@@ -88,17 +89,23 @@ export async function Footer() {
                   {CONTACT_PHONE}
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://app.salongo.eu/signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 rounded text-[15px] font-semibold text-brand-700 hover:text-brand-800"
-                >
-                  {tNav("tryFree")}
-                  <ArrowUpRight className="size-4" aria-hidden />
-                </a>
-              </li>
+              {([
+                [SIGNUP_URL, tNav("tryFree")],
+                [LOGIN_URL, tNav("login")],
+                [renewUrl(), tNav("renew")],
+              ] as const).map(([href, label]) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded text-[15px] font-semibold text-brand-700 hover:text-brand-800"
+                  >
+                    {label}
+                    <ArrowUpRight className="size-4" aria-hidden />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

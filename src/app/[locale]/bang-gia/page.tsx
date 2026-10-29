@@ -9,6 +9,7 @@ import { SectionPricingWhoIsFor } from "@/components/SectionPricingWhoIsFor";
 import { SectionPricingCommitment } from "@/components/SectionPricingCommitment";
 import { SectionPricingCTA } from "@/components/SectionPricingCTA";
 import { SectionPricingFAQ } from "@/components/PricingPageDynamic";
+import { SectionRenew } from "@/components/SectionRenew";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -30,6 +31,7 @@ export default async function PricingPage({ params }: Props) {
       <PricingPageHero />
       <Pricing />
       <PricingComparisonTable />
+      <SectionRenew />
       <SectionPricingWhoIsFor />
       <SectionPricingCommitment />
       <SectionPricingFAQ />

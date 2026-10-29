@@ -2,8 +2,7 @@ import { CircleCheck } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { CHAPTERS, FEATURES, FEATURE_ICONS, type Feature } from "./featuresData";
 import { ScreenTabsMockup } from "./ScreenTabsMockup";
-import { StaffAccountVisual } from "./StaffAccountVisual";
-import { BranchesVisual } from "./BranchesVisual";
+import { DemoNote } from "./ui/AppShot";
 
 // Phần chi tiết trang Tính năng: 3 phần theo một ngày làm việc của salon,
 // mỗi tính năng có ảnh màn hình lớn và 4 việc bạn có thể làm
@@ -65,22 +64,18 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
       </div>
 
       <div data-reveal="scale" className="mt-6 sm:mt-8">
-        {views.length > 0 ? (
-          <ScreenTabsMockup
-            zoomLabel={t("zoom")}
-            closeLabel={t("close")}
-            views={views.map((v, i) => ({
-              key: v.src,
-              label: t(k(`tab${i + 1}`)),
-              src: v.src,
-              icon: v.icon,
-            }))}
-          />
-        ) : id === "branches" ? (
-          <BranchesVisual />
-        ) : (
-          <StaffAccountVisual />
-        )}
+        <ScreenTabsMockup
+          zoomLabel={t("zoom")}
+          closeLabel={t("close")}
+          views={views.map((v, i) => ({
+            key: v.src,
+            label: t(k(`tab${i + 1}`)),
+            src: v.src,
+            icon: v.icon,
+            mobile: v.mobile,
+          }))}
+        />
+        <DemoNote text={t("demoNote")} className="mt-3 justify-center sm:justify-end" />
       </div>
 
       <div className="mt-6 sm:mt-8">

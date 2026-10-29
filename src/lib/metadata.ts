@@ -2,13 +2,9 @@ export const siteConfig = {
   name: "Salora",
   logo: "/salongo-logo.svg",
   description:
-    "Grow your business with Salora — the all-in-one SaaS platform for modern teams.",
+    "Salora – app quản lý salon: lịch hẹn, đặt lịch online, tính tiền, tính lương và báo cáo doanh thu.",
   /** Domain chính — dùng cho metadataBase, Open Graph (Google lấy thumbnail) */
   url: "https://salongo.eu",
   /** Ảnh OG cho chia sẻ & kết quả tìm kiếm - 1200x630 pixels */
   ogImage: "/images/og-image.png",
-  links: {
-    twitter: "https://twitter.com/salongo",
-    github: "https://github.com/salongo",
-  },
 };

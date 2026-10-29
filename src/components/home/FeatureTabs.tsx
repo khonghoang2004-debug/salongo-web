@@ -1,16 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { FEATURE_ICONS, type FeatureId } from "../featuresData";
+import { FEATURE_ICONS, SHOT, type FeatureId } from "../featuresData";
+import { DemoNote, PhoneShot } from "../ui/AppShot";
 
 export type FeatureTabItem = {
   id: FeatureId;
   anchor: string;
-  img?: string;
-  // Minh hoạ vẽ bằng giao diện, dùng thay ảnh chụp khi tính năng không có ảnh
-  visual?: ReactNode;
+  img: string;
+  // Ảnh chụp bản điện thoại, hiện thay ảnh PC trên màn hình nhỏ
+  mobile?: string;
   short: string;
   title: string;
   desc: string;
@@ -19,7 +20,7 @@ export type FeatureTabItem = {
 const AUTO_MS = 6000;
 
 // Danh sách tính năng bên trái, ảnh app nguyên vẹn bên phải; mobile: chip cuộn ngang
-export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; moreLabel: string }) {
+export function FeatureTabs({ items, moreLabel, demoNote }: { items: FeatureTabItem[]; moreLabel: string; demoNote: string }) {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -132,29 +133,27 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
       {/* Ảnh + mô tả */}
       <div className="mt-6 lg:col-span-7 lg:mt-0">
         <div className="rounded-[24px] bg-brand-50 p-3 sm:p-6 lg:sticky lg:top-24 lg:p-8">
-          <div className="sg-browser">
+          <div className={`sg-browser ${cur.mobile ? "max-sm:hidden" : ""}`}>
             <div className="sg-browser-bar">
               <span className="sg-browser-dot" />
               <span className="sg-browser-dot" />
               <span className="sg-browser-dot" />
               <span className="ml-2 truncate text-xs font-medium text-muted">{cur.short}</span>
             </div>
-            {cur.img ? (
-              <img
-                key={cur.img}
-                src={cur.img}
-                alt={cur.title}
-                width={2400}
-                height={1570}
-                loading="lazy"
-                className="sg-swap block h-auto w-full"
-              />
-            ) : (
-              <div key={cur.id} className="sg-swap">
-                {cur.visual}
-              </div>
-            )}
+            <img
+              key={cur.img}
+              src={cur.img}
+              alt={cur.title}
+              width={SHOT.w}
+              height={SHOT.h}
+              loading="lazy"
+              className="sg-swap block h-auto w-full"
+            />
           </div>
+          {cur.mobile && (
+            <PhoneShot key={cur.mobile} src={cur.mobile} alt={cur.title} className="sg-swap mx-auto max-w-[280px] sm:hidden" />
+          )}
+          <DemoNote text={demoNote} className="mt-3 justify-center lg:justify-start" />
           <div className="mt-5 px-1 lg:hidden">
             <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink">{cur.title}</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">{cur.desc}</p>

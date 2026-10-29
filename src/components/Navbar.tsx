@@ -6,7 +6,8 @@ import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/metadata";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, RefreshCw } from "lucide-react";
+import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, renewUrl } from "@/lib/app-links";
 
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
@@ -23,12 +24,6 @@ const menuItems = [
   { href: "/faq", labelKey: "faq" as const },
   { href: "/lien-he", labelKey: "contact" as const },
 ];
-
-const DOWNLOAD_LINKS = {
-  windows:
-    "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.exe",
-  mac: "https://github.com/khonghoang2004-debug/salongo-desktop-releases/releases/latest/download/SalonGo-Setup.dmg",
-};
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -147,7 +142,15 @@ export function Navbar() {
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href="https://app.salongo.eu/login"
+            href={renewUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
+          >
+            {t("renew")}
+          </a>
+          <a
+            href={LOGIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
@@ -195,7 +198,7 @@ export function Navbar() {
             <LocaleSwitcher compact />
           </div>
           <a
-            href="https://app.salongo.eu/signup"
+            href={SIGNUP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary hidden px-5 py-2.5 text-sm lg:inline-flex"
@@ -268,7 +271,7 @@ export function Navbar() {
             </nav>
             <div className="mt-6 grid gap-2.5">
               <a
-                href="https://app.salongo.eu/signup"
+                href={SIGNUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
@@ -277,13 +280,23 @@ export function Navbar() {
                 {t("tryFree")}
               </a>
               <a
-                href="https://app.salongo.eu/login"
+                href={LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
                 className="btn-secondary px-5 py-3.5 text-base"
               >
                 {t("login")}
+              </a>
+              <a
+                href={renewUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMobileMenu}
+                className="flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 text-base font-semibold text-brand-700"
+              >
+                <RefreshCw className="size-4" aria-hidden />
+                {t("renew")}
               </a>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-2.5">

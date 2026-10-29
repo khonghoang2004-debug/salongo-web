@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
-import { Check, Globe2 } from "lucide-react";
+import { Check } from "lucide-react";
+import { DemoNote, PhoneShot } from "../ui/AppShot";
 
 // Khối "làm cho người Việt": chủ dùng tiếng Việt, khách đặt lịch bằng tiếng địa phương
 export async function HomeLanguage() {
@@ -24,52 +25,27 @@ export async function HomeLanguage() {
           </ul>
         </div>
 
-        {/* Minh hoạ: cùng một lịch hẹn, hai ngôn ngữ (giao diện vẽ, không phải ảnh) */}
-        <div data-reveal="scale" className="lg:col-span-6" aria-hidden>
-          <div className="rounded-[28px] bg-brand-700 p-5 sm:p-10">
-            <div data-reveal className="rounded-2xl bg-white p-5 sm:p-6" style={{ "--d": "250ms" } as CSSProperties}>
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Salora · Tiếng Việt</span>
-                <span className="rounded-full bg-brand-50 px-2.5 py-0.5 text-[11px] font-semibold text-brand-700">VI</span>
-              </div>
-              <p className="mt-4 text-base font-semibold text-ink">Lịch hẹn mới</p>
-              <div className="mt-3 space-y-2.5 text-sm">
-                <Row label="Khách" value="Lenka Nováková" />
-                <Row label="Dịch vụ" value="Gel nails · 60 phút" />
-                <Row label="Thợ" value="Mai · 14:30" />
-              </div>
-              <div className="mt-5 flex gap-2">
-                <span className="flex-1 rounded-full bg-brand-700 py-2.5 text-center text-sm font-semibold text-white">Duyệt</span>
-                <span className="flex-1 rounded-full border border-line py-2.5 text-center text-sm font-semibold text-ink">Đổi giờ</span>
-              </div>
-            </div>
-
-            <div className="my-4 flex items-center gap-3 px-2 text-white/70">
-              <span data-reveal="line" className="h-px flex-1 bg-white/30" style={{ "--d": "450ms" } as CSSProperties} />
-              <Globe2 className="size-5" />
-              <span data-reveal="line" className="h-px flex-1 bg-white/30" style={{ "--d": "550ms" } as CSSProperties} />
-            </div>
-
-            <div data-reveal="right" className="rounded-2xl bg-white p-5 sm:ml-12 sm:p-6" style={{ "--d": "650ms" } as CSSProperties}>
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Rezervace · Čeština</span>
-                <span className="rounded-full bg-[#FBF7F7] px-2.5 py-0.5 text-[11px] font-semibold text-ink/70">CS</span>
-              </div>
-              <p className="mt-4 text-base font-semibold text-ink">Vaše rezervace je potvrzena</p>
-              <p className="mt-1.5 text-sm text-muted">Gelové nehty · úterý 14:30 · Mai</p>
+        {/* Ảnh chụp thật: app của salon bằng tiếng Việt, trang đặt lịch của khách bằng tiếng Séc */}
+        <div data-reveal="scale" className="lg:col-span-6">
+          <div className="rounded-[28px] bg-brand-700 px-5 pb-6 pt-7 sm:px-10 sm:pb-8 sm:pt-9">
+            <div className="grid grid-cols-2 gap-4 sm:gap-8">
+              {([
+                ["/images/app/m-lich-online.webp", "langShotApp", "VI"],
+                ["/images/app/m-dat-lich-dich-vu.webp", "langShotBook", "CS"],
+              ] as const).map(([src, label, code], i) => (
+                <figure key={src} data-reveal={i ? "right" : undefined} style={{ "--d": `${250 + i * 250}ms` } as CSSProperties}>
+                  <PhoneShot src={src} alt={h(label)} />
+                  <figcaption className="mt-3 flex items-center justify-center gap-2 text-center text-xs font-semibold text-white/85 sm:text-sm">
+                    <span className="rounded-full bg-white/15 px-2 py-0.5 text-[11px]">{code}</span>
+                    {h(label)}
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           </div>
+          <DemoNote text={h("demoNote")} className="mt-3 justify-center" />
         </div>
       </div>
     </section>
-  );
-}
-
-function Row({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-center justify-between gap-4 border-b border-line pb-2.5 last:border-0 last:pb-0">
-      <span className="text-muted">{label}</span>
-      <span className="font-medium text-ink">{value}</span>
-    </div>
   );
 }

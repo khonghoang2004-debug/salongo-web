@@ -374,6 +374,14 @@
     border-radius: 9999px;
     background: #e2d9db;
   }
+
+  /* Khung điện thoại chứa ảnh chụp app trên mobile */
+  .sg-phone {
+    border-radius: 30px;
+    background: #1d1416;
+    padding: 8px;
+    box-shadow: 0 30px 60px -30px rgba(77, 0, 20, 0.45);
+  }
 }
 
 @layer utilities {

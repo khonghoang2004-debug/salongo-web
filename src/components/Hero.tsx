@@ -74,7 +74,7 @@ export async function Hero() {
                   app.salongo.eu
                 </span>
               </div>
-              <img src="/images/hero-dashboard.webp" alt={t("imageAlt")} width={2000} height={1150} className="block h-auto w-full" />
+              <img src="/images/app/tong-quan.webp" alt={t("imageAlt")} width={1600} height={1000} className="block h-auto w-full" />
             </div>
 
             {/* Thẻ doanh thu — nền đỏ đô đặc */}

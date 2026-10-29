@@ -81,7 +81,9 @@
     "q13": "Ich habe mehrere Filialen. Geht das?",
     "a13": "Ja. Ein Inhaberkonto führt alle Filialen und wechselt im Menü. Jede Filiale hat eigenen Tarif und eigenes Enddatum.",
     "q14": "In welchen Sprachen gibt es die App?",
-    "a14": "Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch und Französisch, in der Salon-App und auf der Buchungsseite."
+    "a14": "Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch und Französisch, in der Salon-App und auf der Buchungsseite.",
+    "q15": "Wie sende ich Kunden eine Marketing-E-Mail?",
+    "a15": "Unter Kunden → Marketing eine von 10 Vorlagen wählen, Text anpassen, optional Rabatt hinzufügen, Vorschau ansehen und senden. Sie erreicht nur Kunden mit E-Mail und Einwilligung; eine Kampagne pro Salon und Tag. In jedem Tarif enthalten."
   },
   "about": {
     "title": "Über Salora",
@@ -239,7 +241,8 @@
     "faqQ9": "Wie verlängere ich meinen Tarif?",
     "faqA9": "Klicken Sie auf „Tarif verlängern“ auf der Website oder öffnen Sie die Tarife in der App. Anmelden, Filiale prüfen, dann Tarif und Zahlungsart wählen. Nur der Inhaber kann verlängern.",
     "faqQ10": "Verliere ich Daten, wenn der Tarif abläuft?",
-    "faqA10": "Nein. Ihre Daten bleiben. Die App erinnert 2 Tage vorher; nach Ablauf sind einige Funktionen bis zur Verlängerung gesperrt, Kasse und Belege funktionieren weiter."
+    "faqA10": "Nein. Ihre Daten bleiben. Die App erinnert 2 Tage vorher; nach Ablauf sind einige Funktionen bis zur Verlängerung gesperrt, Kasse und Belege funktionieren weiter.",
+    "compareRowMarketing": "E-Mail-Marketing & Geburtstage"
   },
   "footer": {
     "quickLinks": "Quicklinks",
@@ -455,7 +458,7 @@
     "heroLead": "Von der ersten Buchung bis zur Lohnzahlung erledigt Salora jeden Schritt. Auf Handy, Tablet und Computer.",
     "ctaPrimary": "Kostenlos testen",
     "ctaSecondary": "Preise ansehen",
-    "mapTitle": "9 Hauptfunktionen",
+    "mapTitle": "10 Hauptfunktionen",
     "mapHint": "Tippen Sie auf eine Funktion, um Details zu sehen",
     "navLabel": "Zur Funktion springen",
     "youCan": "Das können Sie",
@@ -621,6 +624,23 @@
         "p4Text": "Jede Filiale wählt ihren Tarif nach Teamgröße und verlängert ihn separat.",
         "tab1": "Filiale wählen",
         "tab2": "Alle Salons"
+      },
+      "marketing": {
+        "short": "Marketing",
+        "tile": "Angebots-Mails, Geburtstage",
+        "title": "E-Mail-Marketing & Geburtstage",
+        "desc": "Angebote im Namen Ihres Salons an Kunden mit Einwilligung senden, aus 10 Vorlagen zu Anlässen. Die App erinnert außerdem an Kundengeburtstage.",
+        "p1Title": "10 Vorlagen zu Anlässen",
+        "p1Text": "Rabatt, neue Leistung, Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Ostern, Muttertag, Sommer, Black Friday.",
+        "p2Title": "Rabatt und Gültigkeit",
+        "p2Text": "Rabatt und Ablaufdatum hinzufügen; Betreff und Text in 6 Sprachen, anpassbar.",
+        "p3Title": "Vorschau PC & Handy",
+        "p3Text": "Sehen, was Kunden bekommen, und zuerst einen Test an sich senden.",
+        "p4Title": "Nur mit Einwilligung",
+        "p4Text": "Einwilligung im Kundenprofil ankreuzen; jede E-Mail hat einen Abmeldelink.",
+        "tab1": "Vorlage Weihnachten",
+        "tab2": "Vorlage Weltfrauentag",
+        "tab3": "Geburtstage"
       }
     },
     "staffDemo": {
@@ -877,7 +897,35 @@
     "hlStaff4": "App-Sprache selbst wählen: Vietnamesisch, Tschechisch, Englisch, Deutsch, Slowakisch, Französisch",
     "hlStaffShot1": "Kalender für morgen",
     "hlStaffShot2": "Heute alles erledigt",
-    "hlStaffShot3": "Menü für Mitarbeiter"
+    "hlStaffShot3": "Menü für Mitarbeiter",
+    "mkEyebrow": "Neu · E-Mail-Marketing",
+    "mkTitle": "Angebote an Stammkunden direkt aus der App, wie E-Mails großer Marken",
+    "mkLead": "Keine Agentur, kein zusätzliches E-Mail-Tool. Vorlage zum Anlass wählen, ein paar Zeilen anpassen, senden – Kunden mit Einwilligung erhalten eine E-Mail im Namen Ihres Salons.",
+    "mk1Title": "10 Vorlagen zu Anlässen.",
+    "mk1Text": "Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Muttertag, Black Friday… jede mit eigenen Farben und Motiv, dazu Rabatt und Gültigkeit.",
+    "mk2Title": "In 6 Sprachen vorbereitet.",
+    "mk2Text": "Senden auf Tschechisch, Slowakisch, Deutsch, Englisch, Französisch oder Vietnamesisch; alles anpassbar.",
+    "mk3Title": "Vorschau und Test.",
+    "mk3Text": "E-Mail am Computer und Handy ansehen und sich selbst einen Test schicken.",
+    "mk4Title": "Die Richtigen, nach den Regeln.",
+    "mk4Text": "Nur Kunden mit Einwilligung; jede E-Mail hat einen Abmeldelink mit einem Klick.",
+    "mk5Title": "Geburtstagserinnerung.",
+    "mk5Text": "Die App zeigt Geburtstage von heute und morgen und benachrichtigt den Inhaber rechtzeitig.",
+    "mkCta": "Marketing ansehen",
+    "mkShotPc": "Marketing-E-Mail · Vorlage Weihnachten",
+    "mkShotCompose": "E-Mail verfassen",
+    "mkTemplates": "10 fertige Vorlagen",
+    "mkNote": "In jedem Tarif ohne Aufpreis. Eine Kampagne pro Salon und Tag.",
+    "tplSale": "Rabatt",
+    "tplNewService": "Neue Leistung",
+    "tplChristmas": "Weihnachten",
+    "tplNewYear": "Neujahr",
+    "tplValentine": "Valentinstag",
+    "tplWomensDay": "Weltfrauentag (8. März)",
+    "tplEaster": "Ostern",
+    "tplMothersDay": "Muttertag",
+    "tplSummer": "Sommer",
+    "tplBlackFriday": "Black Friday"
   },
   "renew": {
     "eyebrow": "Tarif verlängern",

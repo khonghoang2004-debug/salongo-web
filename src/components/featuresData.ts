@@ -6,6 +6,8 @@ import {
   Globe,
   LayoutDashboard,
   LayoutList,
+  Megaphone,
+  Cake,
   ReceiptText,
   Scissors,
   Store,
@@ -16,7 +18,7 @@ import {
 } from "lucide-react";
 
 // Danh sách tính năng cho trang Tính năng: thứ tự, phần (chapter), ảnh màn hình app
-export type FeatureId = "booking" | "calendar" | "checkout" | "customers" | "services" | "reports" | "payroll" | "staff" | "branches";
+export type FeatureId = "booking" | "calendar" | "checkout" | "customers" | "marketing" | "services" | "reports" | "payroll" | "staff" | "branches";
 export type ChapterId = "c1" | "c2" | "c3";
 
 export const FEATURE_ICONS = {
@@ -24,6 +26,7 @@ export const FEATURE_ICONS = {
   calendar: CalendarDays,
   checkout: CreditCard,
   customers: UserRound,
+  marketing: Megaphone,
   services: Scissors,
   reports: BarChart3,
   payroll: Wallet,
@@ -31,7 +34,7 @@ export const FEATURE_ICONS = {
   branches: Store,
 };
 
-export const TAB_ICONS = { BellRing, Globe, LayoutDashboard, LayoutList, ReceiptText, Users, BarChart3, CreditCard, UserRound, Scissors, Wallet, Store };
+export const TAB_ICONS = { BellRing, Globe, LayoutDashboard, LayoutList, ReceiptText, Users, BarChart3, CreditCard, UserRound, Scissors, Wallet, Store, Megaphone, Cake };
 export type TabIcon = keyof typeof TAB_ICONS;
 
 // Ảnh chụp màn hình app (PC: vùng nội dung, bỏ menu bên trái; 1600 × 1165). mobile: ảnh điện thoại 780 × 1688
@@ -77,6 +80,16 @@ export const FEATURES: Feature[] = [
     views: [
       { src: A + "khach-hang-noi-dung.webp", icon: "Users", mobile: A + "m-khach-hang.webp" },
       { src: A + "khach-hang-chi-tiet-noi-dung.webp", icon: "UserRound", mobile: A + "m-khach-hang.webp" },
+    ],
+  },
+  {
+    id: "marketing",
+    anchor: "marketing",
+    chapter: "c2",
+    views: [
+      { src: A + "marketing-giang-sinh.webp", icon: "Megaphone", mobile: A + "m-marketing-giang-sinh.webp" },
+      { src: A + "marketing-8-3.webp", icon: "Megaphone", mobile: A + "m-marketing-8-3.webp" },
+      { src: A + "sinh-nhat-noi-dung.webp", icon: "Cake", mobile: A + "m-sinh-nhat.webp" },
     ],
   },
   { id: "services", anchor: "dich-vu", chapter: "c2", views: [{ src: A + "dich-vu-noi-dung.webp", icon: "Scissors", mobile: A + "m-dich-vu.webp" }] },

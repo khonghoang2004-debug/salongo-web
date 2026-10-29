@@ -13,6 +13,7 @@ const ITEMS: { id: FeatureTabItem["id"]; anchor: string; img: string; mobile?: s
   { id: "reports", anchor: "bao-cao", img: A + "tong-quan-30-ngay-noi-dung.webp", mobile: A + "m-tong-quan.webp" },
   { id: "payroll", anchor: "tinh-luong", img: A + "tinh-luong-noi-dung.webp", mobile: A + "m-tinh-luong.webp" },
   { id: "customers", anchor: "khach-hang", img: A + "khach-hang-noi-dung.webp", mobile: A + "m-khach-hang.webp" },
+  { id: "marketing", anchor: "marketing", img: A + "marketing-giang-sinh.webp", mobile: A + "m-marketing-giang-sinh.webp" },
   { id: "services", anchor: "dich-vu", img: A + "dich-vu-noi-dung.webp", mobile: A + "m-dich-vu.webp" },
   { id: "branches", anchor: "da-chi-nhanh", img: A + "tat-ca-salon-noi-dung.webp", mobile: A + "m-tat-ca-salon.webp" },
 ];

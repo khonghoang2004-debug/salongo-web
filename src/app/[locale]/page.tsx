@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeFeatures } from "@/components/home/HomeFeatures";
 import { HomeHighlights } from "@/components/home/HomeHighlights";
+import { HomeMarketing } from "@/components/home/HomeMarketing";
 import { HomeLanguage } from "@/components/home/HomeLanguage";
 import { HomeSalonTypes } from "@/components/home/HomeSalonTypes";
 import { HomePricingTeaser } from "@/components/home/HomePricingTeaser";
@@ -93,6 +94,7 @@ export default async function Home({ params }: Props) {
       <main>
         <HomeHero />
         <HomeFeatures />
+        <HomeMarketing />
         <HomeHighlights />
         <HomeLanguage />
         <HomeSalonTypes />

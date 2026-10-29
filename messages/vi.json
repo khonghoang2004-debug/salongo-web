@@ -81,7 +81,9 @@
     "q13": "Tôi có nhiều chi nhánh thì sao?",
     "a13": "Một tài khoản chủ quản lý mọi chi nhánh, chuyển qua lại ngay trên menu. Mỗi chi nhánh có gói và thời hạn riêng.",
     "q14": "App có những ngôn ngữ nào?",
-    "a14": "Tiếng Việt, Séc, Slovakia, Anh, Đức và Pháp, cho cả app của salon lẫn trang đặt lịch của khách."
+    "a14": "Tiếng Việt, Séc, Slovakia, Anh, Đức và Pháp, cho cả app của salon lẫn trang đặt lịch của khách.",
+    "q15": "Gửi email marketing cho khách như thế nào?",
+    "a15": "Vào Khách hàng → Marketing, chọn một trong 10 mẫu theo dịp, sửa nội dung, thêm ưu đãi nếu muốn, xem trước rồi gửi. Email chỉ tới khách có email và đã đồng ý nhận ưu đãi; mỗi salon gửi 1 chiến dịch mỗi ngày. Có trong mọi gói."
   },
   "about": {
     "title": "Về Salora",
@@ -239,7 +241,8 @@
     "faqQ9": "Gia hạn gói như thế nào?",
     "faqA9": "Bấm \"Gia hạn gói\" trên website hoặc vào Nâng cấp gói trong app. Đăng nhập nếu cần, kiểm tra đúng chi nhánh, rồi chọn gói và cách thanh toán. Chỉ chủ salon mới gia hạn được.",
     "faqQ10": "Hết hạn gói thì dữ liệu có mất không?",
-    "faqA10": "Không. Dữ liệu vẫn giữ nguyên. App nhắc trước 2 ngày; khi hết hạn, một số chức năng tạm khoá đến khi gia hạn, riêng tính tiền và hoá đơn vẫn dùng được."
+    "faqA10": "Không. Dữ liệu vẫn giữ nguyên. App nhắc trước 2 ngày; khi hết hạn, một số chức năng tạm khoá đến khi gia hạn, riêng tính tiền và hoá đơn vẫn dùng được.",
+    "compareRowMarketing": "Email marketing & nhắc sinh nhật"
   },
   "footer": {
     "quickLinks": "Điều hướng nhanh",
@@ -455,7 +458,7 @@
     "heroLead": "Từ lúc khách đặt lịch đến khi trả lương cho thợ, Salora lo từng bước. Dùng bằng tiếng Việt trên điện thoại, máy tính bảng và máy tính.",
     "ctaPrimary": "Dùng thử miễn phí",
     "ctaSecondary": "Xem bảng giá",
-    "mapTitle": "9 tính năng chính",
+    "mapTitle": "10 tính năng chính",
     "mapHint": "Bấm vào một tính năng để xem chi tiết",
     "navLabel": "Đi tới tính năng",
     "youCan": "Bạn có thể",
@@ -621,6 +624,23 @@
         "p4Text": "Mỗi chi nhánh chọn gói theo số thợ và gia hạn riêng.",
         "tab1": "Chọn chi nhánh",
         "tab2": "Tất cả salon"
+      },
+      "marketing": {
+        "short": "Marketing",
+        "tile": "Email ưu đãi, nhắc sinh nhật",
+        "title": "Email marketing & nhắc sinh nhật",
+        "desc": "Gửi email ưu đãi mang tên salon cho khách đã đồng ý nhận, chọn từ 10 mẫu theo dịp lễ. App còn nhắc sinh nhật khách để bạn kịp chúc mừng.",
+        "p1Title": "10 mẫu theo dịp",
+        "p1Text": "Giảm giá, dịch vụ mới, Giáng sinh, Năm mới, Valentine, 8/3, Phục sinh, Ngày của Mẹ, mùa hè, Black Friday.",
+        "p2Title": "Ưu đãi và hạn dùng",
+        "p2Text": "Thêm % giảm giá và ngày hết hạn; tiêu đề, nội dung viết sẵn 6 ngôn ngữ và sửa được.",
+        "p3Title": "Xem trước PC & điện thoại",
+        "p3Text": "Thấy email khách sẽ nhận, gửi thử cho mình trước khi gửi thật.",
+        "p4Title": "Chỉ gửi khách đã đồng ý",
+        "p4Text": "Đánh dấu đồng ý nhận ưu đãi ở hồ sơ khách; email có link huỷ nhận một chạm.",
+        "tab1": "Mẫu Giáng sinh",
+        "tab2": "Mẫu Ngày Phụ nữ 8/3",
+        "tab3": "Nhắc sinh nhật"
       }
     },
     "staffDemo": {
@@ -877,7 +897,35 @@
     "hlStaff4": "Thợ tự chọn ngôn ngữ app: Việt, Séc, Anh, Đức, Slovakia, Pháp",
     "hlStaffShot1": "Lịch ngày mai",
     "hlStaffShot2": "Hôm nay đã xong",
-    "hlStaffShot3": "Menu của thợ"
+    "hlStaffShot3": "Menu của thợ",
+    "mkEyebrow": "Mới · Email marketing",
+    "mkTitle": "Gửi ưu đãi cho khách quen ngay trong app, đẹp như email của thương hiệu lớn",
+    "mkLead": "Không cần thuê agency hay dùng thêm công cụ email nào. Chọn một mẫu theo dịp, sửa vài dòng, bấm gửi là khách đã đồng ý nhận ưu đãi nhận được email mang tên salon của bạn.",
+    "mk1Title": "10 mẫu theo dịp.",
+    "mk1Text": "Giáng sinh, Năm mới, Valentine, 8/3, Ngày của Mẹ, Black Friday… mỗi mẫu một màu và hình riêng, thêm % giảm giá và hạn dùng.",
+    "mk2Title": "Viết sẵn 6 ngôn ngữ.",
+    "mk2Text": "Gửi cho khách bằng tiếng Séc, Slovakia, Đức, Anh, Pháp hoặc tiếng Việt, mọi câu đều sửa được.",
+    "mk3Title": "Xem trước, gửi thử.",
+    "mk3Text": "Xem email trên máy tính và điện thoại trước khi gửi, gửi thử về email của bạn.",
+    "mk4Title": "Đúng người, đúng quy định.",
+    "mk4Text": "Chỉ gửi tới khách đã đồng ý nhận ưu đãi, mỗi email có link huỷ nhận một chạm.",
+    "mk5Title": "Nhắc sinh nhật khách.",
+    "mk5Text": "App báo sinh nhật hôm nay và ngày mai, chủ salon nhận thông báo để kịp chúc mừng và tặng quà.",
+    "mkCta": "Xem tính năng Marketing",
+    "mkShotPc": "Gửi tin marketing · mẫu Giáng sinh",
+    "mkShotCompose": "Soạn email",
+    "mkTemplates": "10 mẫu có sẵn",
+    "mkNote": "Có trong mọi gói, không tính thêm phí. Mỗi salon gửi 1 chiến dịch mỗi ngày.",
+    "tplSale": "Giảm giá",
+    "tplNewService": "Dịch vụ mới",
+    "tplChristmas": "Giáng sinh",
+    "tplNewYear": "Năm mới",
+    "tplValentine": "Valentine",
+    "tplWomensDay": "Ngày Phụ nữ 8/3",
+    "tplEaster": "Phục sinh",
+    "tplMothersDay": "Ngày của Mẹ",
+    "tplSummer": "Mùa hè",
+    "tplBlackFriday": "Black Friday"
   },
   "renew": {
     "eyebrow": "Gia hạn gói",

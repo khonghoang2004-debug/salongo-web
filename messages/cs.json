@@ -81,7 +81,9 @@
     "q13": "Mám více poboček. Jde to?",
     "a13": "Ano. Jeden účet majitele spravuje všechny pobočky a přepíná se v menu. Každá pobočka má vlastní tarif a datum konce.",
     "q14": "V jakých jazycích je aplikace?",
-    "a14": "Vietnamsky, česky, slovensky, anglicky, německy a francouzsky, v aplikaci salonu i na rezervační stránce."
+    "a14": "Vietnamsky, česky, slovensky, anglicky, německy a francouzsky, v aplikaci salonu i na rezervační stránce.",
+    "q15": "Jak pošlu klientům marketingový e-mail?",
+    "a15": "V části Klienti → Marketing vyberte jednu z 10 šablon, upravte text, případně přidejte slevu, zobrazte náhled a odešlete. Dostanou ho jen klienti s e-mailem a souhlasem; jedna kampaň na salon denně. Součást každého tarifu."
   },
   "about": {
     "title": "O Salora",
@@ -239,7 +241,8 @@
     "faqQ9": "Jak prodloužím tarif?",
     "faqA9": "Klikněte na „Prodloužit tarif“ na webu nebo otevřete tarify v aplikaci. Přihlaste se, zkontrolujte pobočku a zvolte tarif a způsob platby. Prodloužit může jen majitel salonu.",
     "faqQ10": "Přijdu po vypršení tarifu o data?",
-    "faqA10": "Ne. Data zůstanou. Aplikace vás upozorní 2 dny předem; po vypršení jsou některé funkce zamčené do prodloužení, pokladna a doklady fungují dál."
+    "faqA10": "Ne. Data zůstanou. Aplikace vás upozorní 2 dny předem; po vypršení jsou některé funkce zamčené do prodloužení, pokladna a doklady fungují dál.",
+    "compareRowMarketing": "E-mailový marketing a narozeniny"
   },
   "footer": {
     "quickLinks": "Rychlé odkazy",
@@ -455,7 +458,7 @@
     "heroLead": "Od první rezervace po výplatu týmu, Salora zvládne každý krok. Na telefonu, tabletu i počítači.",
     "ctaPrimary": "Vyzkoušet zdarma",
     "ctaSecondary": "Zobrazit ceník",
-    "mapTitle": "9 hlavních funkcí",
+    "mapTitle": "10 hlavních funkcí",
     "mapHint": "Klepněte na funkci a zobrazí se podrobnosti",
     "navLabel": "Přejít na funkci",
     "youCan": "Co můžete",
@@ -621,6 +624,23 @@
         "p4Text": "Každá pobočka si volí tarif podle počtu personálu a prodlužuje ho samostatně.",
         "tab1": "Výběr pobočky",
         "tab2": "Všechny salony"
+      },
+      "marketing": {
+        "short": "Marketing",
+        "tile": "Nabídky e-mailem, narozeniny",
+        "title": "E-mailový marketing a narozeniny",
+        "desc": "Posílejte nabídky jménem salonu klientům se souhlasem, z 10 šablon k příležitostem. Aplikace navíc připomíná narozeniny klientů.",
+        "p1Title": "10 šablon k příležitostem",
+        "p1Text": "Sleva, nová služba, Vánoce, Nový rok, Valentýn, MDŽ, Velikonoce, Den matek, léto, Black Friday.",
+        "p2Title": "Sleva a platnost",
+        "p2Text": "Přidejte slevu a datum platnosti; předmět i text jsou v 6 jazycích a lze je upravit.",
+        "p3Title": "Náhled na PC i telefonu",
+        "p3Text": "Uvidíte, co klient dostane, a nejdřív si pošlete test.",
+        "p4Title": "Jen klientům se souhlasem",
+        "p4Text": "Souhlas zaškrtnete v kartě klienta; každý e-mail má odkaz pro odhlášení.",
+        "tab1": "Šablona Vánoce",
+        "tab2": "Šablona MDŽ",
+        "tab3": "Narozeniny"
       }
     },
     "staffDemo": {
@@ -877,7 +897,35 @@
     "hlStaff4": "Jazyk aplikace si zvolí sám: vietnamština, čeština, angličtina, němčina, slovenština, francouzština",
     "hlStaffShot1": "Rozvrh na zítra",
     "hlStaffShot2": "Dnes hotovo",
-    "hlStaffShot3": "Menu personálu"
+    "hlStaffShot3": "Menu personálu",
+    "mkEyebrow": "Novinka · E-mailový marketing",
+    "mkTitle": "Posílejte stálým klientům nabídky přímo z aplikace, jako e-maily velkých značek",
+    "mkLead": "Bez agentury a bez dalšího e-mailového nástroje. Vyberte šablonu k příležitosti, upravte pár řádků, odešlete a klienti se souhlasem dostanou e-mail jménem vašeho salonu.",
+    "mk1Title": "10 šablon k příležitostem.",
+    "mk1Text": "Vánoce, Nový rok, Valentýn, MDŽ, Den matek, Black Friday… každá s vlastními barvami a motivem, se slevou a platností.",
+    "mk2Title": "Připraveno v 6 jazycích.",
+    "mk2Text": "Posílejte česky, slovensky, německy, anglicky, francouzsky nebo vietnamsky; vše lze upravit.",
+    "mk3Title": "Náhled a test.",
+    "mk3Text": "Prohlédněte si e-mail na počítači i telefonu a pošlete si test.",
+    "mk4Title": "Správným lidem, podle pravidel.",
+    "mk4Text": "Dostanou ho jen klienti se souhlasem; každý e-mail má odkaz pro odhlášení jedním kliknutím.",
+    "mk5Title": "Připomínky narozenin.",
+    "mk5Text": "Aplikace ukáže dnešní a zítřejší narozeniny a upozorní majitele, aby stihl popřát.",
+    "mkCta": "Prohlédnout Marketing",
+    "mkShotPc": "Marketingový e-mail · šablona Vánoce",
+    "mkShotCompose": "Psaní e-mailu",
+    "mkTemplates": "10 hotových šablon",
+    "mkNote": "Součást každého tarifu bez příplatku. Jedna kampaň na salon denně.",
+    "tplSale": "Sleva",
+    "tplNewService": "Nová služba",
+    "tplChristmas": "Vánoce",
+    "tplNewYear": "Nový rok",
+    "tplValentine": "Valentýn",
+    "tplWomensDay": "MDŽ (8. března)",
+    "tplEaster": "Velikonoce",
+    "tplMothersDay": "Den matek",
+    "tplSummer": "Léto",
+    "tplBlackFriday": "Black Friday"
   },
   "renew": {
     "eyebrow": "Prodloužení tarifu",

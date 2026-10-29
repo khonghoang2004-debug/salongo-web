@@ -81,7 +81,9 @@
     "q13": "I have several locations. Is that OK?",
     "a13": "Yes. One owner account runs every location and switches from the menu. Each location has its own plan and end date.",
     "q14": "Which languages does the app have?",
-    "a14": "Vietnamese, Czech, Slovak, English, German and French, for both the salon app and the client booking page."
+    "a14": "Vietnamese, Czech, Slovak, English, German and French, for both the salon app and the client booking page.",
+    "q15": "How do I send a marketing email to clients?",
+    "a15": "Go to Clients → Marketing, pick one of 10 occasion templates, edit the text, add an offer if you like, preview and send. It only reaches clients with an email who agreed to offers; one campaign per salon per day. Included in every plan."
   },
   "about": {
     "title": "About Salora",
@@ -239,7 +241,8 @@
     "faqQ9": "How do I renew my plan?",
     "faqA9": "Click \"Renew plan\" on the website or open the plan screen in the app. Sign in if needed, check the location, then choose the plan and how to pay. Only the salon owner can renew.",
     "faqQ10": "Do I lose data when the plan expires?",
-    "faqA10": "No. Your data stays. The app reminds you 2 days before; after expiry some features are locked until you renew, while checkout and invoices keep working."
+    "faqA10": "No. Your data stays. The app reminds you 2 days before; after expiry some features are locked until you renew, while checkout and invoices keep working.",
+    "compareRowMarketing": "Email marketing & birthday reminders"
   },
   "footer": {
     "quickLinks": "Quick links",
@@ -455,7 +458,7 @@
     "heroLead": "From the first booking to paying your team, Salora handles each step. Works on phone, tablet and computer.",
     "ctaPrimary": "Start free trial",
     "ctaSecondary": "See pricing",
-    "mapTitle": "9 key features",
+    "mapTitle": "10 key features",
     "mapHint": "Tap a feature to see the details",
     "navLabel": "Jump to feature",
     "youCan": "What you can do",
@@ -621,6 +624,23 @@
         "p4Text": "Each location picks a plan by staff count and renews on its own.",
         "tab1": "Choose location",
         "tab2": "All salons"
+      },
+      "marketing": {
+        "short": "Marketing",
+        "tile": "Offer emails, birthday reminders",
+        "title": "Email marketing & birthday reminders",
+        "desc": "Send offer emails in your salon's name to clients who agreed, from 10 occasion templates. The app also reminds you of client birthdays.",
+        "p1Title": "10 occasion templates",
+        "p1Text": "Sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday.",
+        "p2Title": "Offer and expiry",
+        "p2Text": "Add a discount and a valid-until date; subject and text come in 6 languages and can be edited.",
+        "p3Title": "Preview on PC & phone",
+        "p3Text": "See what clients will get and send yourself a test first.",
+        "p4Title": "Only clients who agreed",
+        "p4Text": "Tick consent in the client profile; each email has a one-click unsubscribe link.",
+        "tab1": "Christmas template",
+        "tab2": "Women's Day template",
+        "tab3": "Birthday reminder"
       }
     },
     "staffDemo": {
@@ -877,7 +897,35 @@
     "hlStaff4": "Staff choose the app language: Vietnamese, Czech, English, German, Slovak, French",
     "hlStaffShot1": "Tomorrow's schedule",
     "hlStaffShot2": "Today, all done",
-    "hlStaffShot3": "Staff menu"
+    "hlStaffShot3": "Staff menu",
+    "mkEyebrow": "New · Email marketing",
+    "mkTitle": "Send offers to your regulars from the app, looking like a big brand's email",
+    "mkLead": "No agency, no extra email tool. Pick a template for the occasion, edit a few lines, hit send, and clients who agreed to offers get an email in your salon's name.",
+    "mk1Title": "10 occasion templates.",
+    "mk1Text": "Christmas, New Year, Valentine's, Women's Day, Mother's Day, Black Friday… each with its own colours and motif, plus a discount and valid-until date.",
+    "mk2Title": "Written in 6 languages.",
+    "mk2Text": "Send in Czech, Slovak, German, English, French or Vietnamese; every line can be edited.",
+    "mk3Title": "Preview and test.",
+    "mk3Text": "See the email on computer and phone before sending, and send a test to yourself.",
+    "mk4Title": "Right people, by the rules.",
+    "mk4Text": "Only clients who agreed to offers receive it; every email has a one-click unsubscribe link.",
+    "mk5Title": "Birthday reminders.",
+    "mk5Text": "The app shows today's and tomorrow's birthdays and notifies the owner in time to congratulate.",
+    "mkCta": "See Marketing",
+    "mkShotPc": "Marketing email · Christmas template",
+    "mkShotCompose": "Compose",
+    "mkTemplates": "10 ready templates",
+    "mkNote": "Included in every plan at no extra cost. One campaign per salon per day.",
+    "tplSale": "Sale",
+    "tplNewService": "New service",
+    "tplChristmas": "Christmas",
+    "tplNewYear": "New Year",
+    "tplValentine": "Valentine's Day",
+    "tplWomensDay": "Women's Day (8 March)",
+    "tplEaster": "Easter",
+    "tplMothersDay": "Mother's Day",
+    "tplSummer": "Summer",
+    "tplBlackFriday": "Black Friday"
   },
   "renew": {
     "eyebrow": "Renew plan",

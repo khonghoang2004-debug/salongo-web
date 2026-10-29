@@ -12,7 +12,7 @@ export function SectionPricingFAQ() {
 
   return (
     <section className="sg-section bg-[#FBF7F7]">
-      <div className="sg-container grid gap-8 lg:grid-cols-12 lg:gap-12">
+      <div data-reveal className="sg-container grid gap-8 lg:grid-cols-12 lg:gap-12">
         <h2 className="sg-h2 lg:col-span-4">{t("faqSectionTitle")}</h2>
         <div className="border-t border-line lg:col-span-8">
           {FAQ_KEYS.map((i, idx) => {

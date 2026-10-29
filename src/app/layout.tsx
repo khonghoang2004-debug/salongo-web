@@ -9,7 +9,11 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth">
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        {/* Bật chuyển động trước khi vẽ trang để nội dung không bị nháy */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('sg-js')" }} />
+      </head>
       <body>
         <svg className="absolute size-0 overflow-hidden" aria-hidden>
           <defs>

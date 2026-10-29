@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, UserPlus, Settings2, CalendarCheck } from "lucide-react";
 import { SectionHead } from "./ui/SectionHead";
@@ -20,7 +21,14 @@ export async function HowItWorks() {
 
           <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8 lg:mt-16">
             {steps.map(({ titleKey, descKey, Icon }, index) => (
-              <li key={titleKey} className="relative border-t-2 border-brand-700 pt-6">
+              <li key={titleKey} data-reveal className="relative pt-6" style={{ "--d": `${index * 160}ms` } as CSSProperties}>
+                <span className="absolute inset-x-0 top-0 h-0.5 bg-line" aria-hidden />
+                <span
+                  data-reveal="line"
+                  className="absolute inset-x-0 top-0 h-0.5 bg-brand-700"
+                  style={{ "--d": `${200 + index * 260}ms` } as CSSProperties}
+                  aria-hidden
+                />
                 <div className="flex items-center justify-between">
                   <span className="font-display text-[2.5rem] font-semibold leading-none tracking-[-0.04em] text-brand-700">
                     0{index + 1}
@@ -33,13 +41,13 @@ export async function HowItWorks() {
             ))}
           </ol>
 
-          <div className="mt-12 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div data-reveal className="mt-12 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-relaxed text-muted">{t("closingLine")}</p>
             <a
               href="https://app.salongo.eu/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary shrink-0 px-7 py-3.5 text-base"
+              className="btn-primary sg-arrow shrink-0 px-7 py-3.5 text-base"
             >
               {t("ctaButton")}
               <ArrowRight className="size-[18px]" aria-hidden />

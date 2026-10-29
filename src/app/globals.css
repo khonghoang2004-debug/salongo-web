@@ -388,15 +388,18 @@
   }
 }
 
-/* ---------- Chuyển động: vào trang, menu, dropdown ---------- */
+/* ---------- Chuyển động ---------- */
+:root {
+  --sg-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --sg-ease-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 @keyframes sg-page-in {
   from {
     opacity: 0;
-    transform: translateY(8px);
   }
   to {
     opacity: 1;
-    transform: none;
   }
 }
 
@@ -420,23 +423,234 @@
   }
 }
 
-/* Nội dung trang hiện dần khi chuyển trang; header đứng yên */
+/* Chữ / khối nhô lên khi tải trang (hero) */
+@keyframes sg-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.6em, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sg-rise-lg {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Ảnh app trong hero: nghiêng nhẹ rồi đặt thẳng */
+@keyframes sg-stage-in {
+  from {
+    opacity: 0;
+    transform: perspective(1600px) translate3d(0, 72px, 0) rotateX(14deg) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1600px) translate3d(0, 0, 0) rotateX(0) scale(1);
+  }
+}
+
+/* Thẻ nổi bật lên */
+@keyframes sg-float-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sg-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Đổi trang: chỉ mờ dần, không xê dịch */
 .sg-page-enter > :not(header):not(span) {
-  animation: sg-page-in 380ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: sg-page-in 320ms ease both;
 }
 
 .sg-pop {
   transform-origin: top right;
-  animation: sg-pop-in 160ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: sg-pop-in 160ms var(--sg-ease-soft) both;
 }
 
 .sg-menu-panel {
   transform-origin: top center;
-  animation: sg-pop-in 200ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: sg-pop-in 200ms var(--sg-ease-soft) both;
 }
 
 .sg-fade {
-  animation: sg-fade-in 200ms ease both;
+  animation: sg-fade-in 360ms ease both;
+}
+
+@keyframes sg-swap-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Ảnh đổi khi chuyển tab */
+.sg-swap {
+  animation: sg-swap-in 700ms var(--sg-ease) both;
+}
+
+/* Hero: từng phần hiện theo thứ tự, --d là độ trễ */
+.sg-in {
+  animation: sg-rise-lg 900ms var(--sg-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.sg-word {
+  display: inline-block;
+  animation: sg-rise 900ms var(--sg-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.sg-stage {
+  transform-origin: 50% 0%;
+  animation: sg-stage-in 1400ms var(--sg-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.sg-float {
+  animation: sg-float-in 900ms var(--sg-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes sg-bar-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.sg-bar {
+  transform-origin: bottom;
+  animation: sg-bar-grow 900ms var(--sg-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* Hiện dần khi cuộn tới: chỉ ẩn khi JS đã chạy (class sg-js), không JS vẫn thấy đủ */
+.sg-js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 900ms var(--sg-ease),
+    transform 1100ms var(--sg-ease);
+  transition-delay: var(--d, 0ms);
+}
+
+.sg-js [data-reveal="fade"] {
+  transform: none;
+}
+
+.sg-js [data-reveal="scale"] {
+  transform: translate3d(0, 48px, 0) scale(0.96);
+}
+
+.sg-js [data-reveal="left"] {
+  transform: translate3d(-36px, 0, 0);
+}
+
+.sg-js [data-reveal="right"] {
+  transform: translate3d(36px, 0, 0);
+}
+
+.sg-js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Các phần tử con hiện lần lượt */
+.sg-js [data-stagger] > * {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 800ms var(--sg-ease),
+    transform 1000ms var(--sg-ease);
+  transition-delay: calc(var(--i, 0) * 90ms + var(--d, 0ms));
+}
+
+.sg-js [data-stagger].is-in > * {
+  opacity: 1;
+  transform: none;
+}
+
+[data-stagger] > :nth-child(2) { --i: 1; }
+[data-stagger] > :nth-child(3) { --i: 2; }
+[data-stagger] > :nth-child(4) { --i: 3; }
+[data-stagger] > :nth-child(5) { --i: 4; }
+[data-stagger] > :nth-child(6) { --i: 5; }
+[data-stagger] > :nth-child(7) { --i: 6; }
+[data-stagger] > :nth-child(8) { --i: 7; }
+[data-stagger] > :nth-child(n + 9) { --i: 8; }
+
+/* Đường kẻ tự vẽ khi cuộn tới */
+.sg-js [data-reveal="line"] {
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1400ms var(--sg-ease);
+  transition-delay: var(--d, 0ms);
+}
+
+.sg-js [data-reveal="line"].is-in {
+  transform: scaleX(1);
+}
+
+/* Thanh tiến trình tự chuyển tab */
+.sg-progress {
+  transform-origin: left center;
+  animation: sg-progress linear both;
+}
+
+/* Thẻ nhấc nhẹ khi rê chuột */
+@media (hover: hover) {
+  .sg-lift {
+    transition:
+      transform 500ms var(--sg-ease),
+      border-color 300ms ease,
+      background-color 300ms ease;
+  }
+
+  .sg-lift:hover {
+    transform: translateY(-4px);
+    border-color: #e3b6c1;
+  }
+
+  .sg-arrow svg:last-child {
+    transition: transform 300ms var(--sg-ease);
+  }
+
+  .sg-arrow:hover svg:last-child {
+    transform: translateX(3px);
+  }
+
+  .sg-arrow-up:hover svg:last-child {
+    transform: translate(2px, -2px);
+  }
 }
 
 a,
@@ -452,14 +666,29 @@ button {
   .sg-page-enter > :not(header):not(span),
   .sg-pop,
   .sg-menu-panel,
-  .sg-fade {
-    animation: none;
+  .sg-fade,
+  .sg-swap,
+  .sg-in,
+  .sg-word,
+  .sg-stage,
+  .sg-float,
+  .sg-bar,
+  .sg-progress {
+    animation: none !important;
+  }
+
+  .sg-js [data-reveal],
+  .sg-js [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   .btn-primary,
   .btn-secondary,
   .btn-on-gradient,
-  .sg-card {
+  .sg-card,
+  .sg-lift {
     transition: none;
   }
 }

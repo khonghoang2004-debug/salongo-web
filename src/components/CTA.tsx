@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -13,20 +14,24 @@ type CtaBandProps = {
 export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProps) {
   return (
     <section className="py-2 sm:py-3">
-      <div className="sg-dark mx-2 rounded-[24px] px-6 py-14 sm:mx-3 sm:rounded-[32px] sm:px-10 sm:py-20 lg:mx-4 lg:px-12 lg:py-24">
+      <div data-reveal="scale" className="sg-hero-card mx-2 rounded-[24px] px-6 py-14 sm:mx-3 sm:rounded-[32px] sm:px-10 sm:py-20 lg:mx-4 lg:px-12 lg:py-24">
         <div className="sg-container grid gap-10 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-8">
+          <div data-reveal className="lg:col-span-8" style={{ "--d": "200ms" } as CSSProperties}>
             <h2 className="max-w-3xl font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-[2.75rem] lg:text-[3.5rem]">
               {title}
             </h2>
             {subtitle && <p className="mt-5 max-w-xl text-base text-white/75 sm:text-lg">{subtitle}</p>}
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:flex-col lg:items-stretch">
+          <div
+            data-reveal
+            className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:flex-col lg:items-stretch"
+            style={{ "--d": "350ms" } as CSSProperties}
+          >
             <a
               href="https://app.salongo.eu/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-on-gradient px-7 py-4 text-base"
+              className="btn-on-gradient sg-arrow px-7 py-4 text-base"
             >
               {button}
               <ArrowRight className="size-[18px]" aria-hidden />

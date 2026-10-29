@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, Check } from "lucide-react";
@@ -10,7 +11,7 @@ export async function HomePricingTeaser() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container grid gap-4 lg:grid-cols-12 lg:gap-5">
-        <div className="flex flex-col rounded-[28px] bg-brand-50 p-7 sm:p-10 lg:col-span-7 lg:p-12">
+        <div data-reveal className="flex flex-col rounded-[28px] bg-brand-50 p-7 sm:p-10 lg:col-span-7 lg:p-12">
           <p className="sg-kicker">{h("priceEyebrow")}</p>
           <h2 className="sg-h2 mt-4">{h("priceTitle")}</h2>
           <p className="sg-lead mt-4">{h("priceLead")}</p>
@@ -23,13 +24,13 @@ export async function HomePricingTeaser() {
             ))}
           </ul>
           <div className="mt-auto pt-10">
-            <Link href="/bang-gia" className="btn-primary w-full px-7 py-4 text-base sm:w-auto">
+            <Link href="/bang-gia" className="btn-primary sg-arrow w-full px-7 py-4 text-base sm:w-auto">
               {h("priceCta")}
               <ArrowRight className="size-[18px]" aria-hidden />
             </Link>
           </div>
         </div>
-        <div className="lg:col-span-5">
+        <div data-reveal className="lg:col-span-5" style={{ "--d": "150ms" } as CSSProperties}>
           <DownloadCard />
         </div>
       </div>

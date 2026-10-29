@@ -48,7 +48,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
   const bullets = BULLET_KEYS[i];
 
   return (
-    <div className="grid overflow-hidden rounded-[20px] border border-line bg-white md:grid-cols-2">
+    <div data-reveal className="grid overflow-hidden rounded-[20px] border border-line bg-white md:grid-cols-2">
       {/* Vấn đề */}
       <div className="p-6 sm:p-7">
         <div className="flex items-center gap-3">

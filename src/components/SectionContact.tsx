@@ -36,7 +36,7 @@ export async function SectionContact() {
   return (
     <section className="sg-section">
       <div className="sg-container grid gap-4 sm:gap-5 lg:grid-cols-12">
-        <div className="rounded-[28px] border border-line bg-white p-7 sm:p-10 lg:col-span-7">
+        <div data-reveal className="rounded-[28px] border border-line bg-white p-7 sm:p-10 lg:col-span-7">
           <h2 className="sg-h2-sm">{t("companyInfo")}</h2>
 
           <dl className="mt-6 divide-y divide-line">
@@ -108,7 +108,7 @@ export async function SectionContact() {
           </dl>
         </div>
 
-        <div className="sg-dark relative overflow-hidden rounded-[28px] p-7 sm:p-10 lg:col-span-5">
+        <div data-reveal="right" className="sg-dark relative overflow-hidden rounded-[28px] p-7 sm:p-10 lg:col-span-5">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
             <Clock className="size-3.5" aria-hidden />
             24h

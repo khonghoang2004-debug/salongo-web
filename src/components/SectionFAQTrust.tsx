@@ -14,9 +14,9 @@ export async function SectionFAQTrust() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container">
-        <div className="rounded-[28px] border border-line p-7 sm:p-10">
+        <div data-reveal className="rounded-[28px] border border-line p-7 sm:p-10">
           <h2 className="sg-h2-sm">{t("trustTitle")}</h2>
-          <div className="mt-8 grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div data-stagger className="mt-8 grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
             {ITEMS.map(({ key, Icon }) => (
               <div key={key} className="flex items-center gap-3">
                 <span className="sg-icon-tile size-11 rounded-xl">

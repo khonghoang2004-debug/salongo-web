@@ -6,6 +6,7 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/metadata";
+import { MotionRoot } from "@/components/motion/MotionRoot";
 
 import enMessages from "../../../messages/en.json";
 import viMessages from "../../../messages/vi.json";
@@ -117,7 +118,10 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>{children}</div>
+      <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>
+        {children}
+        <MotionRoot />
+      </div>
     </NextIntlClientProvider>
   );
 }

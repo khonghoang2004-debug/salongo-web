@@ -38,7 +38,7 @@ export async function SectionAbout() {
       <section className="sg-section">
         <div className="sg-container">
           <SectionHead title={t("whyTitle")} layout="stack" />
-          <div className="mt-12 grid border-t border-line md:grid-cols-3 md:gap-x-0 md:divide-x md:divide-line">
+          <div data-stagger className="mt-12 grid border-t border-line md:grid-cols-3 md:gap-x-0 md:divide-x md:divide-line">
             {whyItems.map(({ key, Icon }, i) => (
               <div key={key} className="border-b border-line py-8 md:border-b-0 md:px-8 md:first:pl-0 md:last:pr-0">
                 <div className="flex items-center justify-between">
@@ -57,7 +57,7 @@ export async function SectionAbout() {
       {/* Định hướng phát triển */}
       <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
         <div className="sg-container">
-          <div className="grid gap-10 rounded-[28px] bg-[#FBF7F7] p-7 sm:p-10 lg:grid-cols-12 lg:p-14">
+          <div data-reveal className="grid gap-10 rounded-[28px] bg-[#FBF7F7] p-7 sm:p-10 lg:grid-cols-12 lg:p-14">
             <div className="lg:col-span-5">
               <h2 className="sg-h2">{t("roadmapTitle")}</h2>
             </div>

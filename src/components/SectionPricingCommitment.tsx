@@ -15,7 +15,7 @@ export async function SectionPricingCommitment() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container">
-        <div className="rounded-[28px] border border-line p-7 sm:p-10">
+        <div data-reveal className="rounded-[28px] border border-line p-7 sm:p-10">
           <h2 className="sg-h2-sm">{t("commitmentTitle")}</h2>
           <ul className="mt-8 flex flex-wrap gap-2.5">
             {COMMITMENTS.map(({ key, Icon }) => (

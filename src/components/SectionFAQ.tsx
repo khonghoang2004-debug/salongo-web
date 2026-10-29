@@ -35,7 +35,7 @@ export function SectionFAQ() {
       <div className="sg-container">
         <div className="space-y-14 lg:space-y-16">
           {GROUPS.map((group, gi) => (
-            <div key={group.titleKey} className="grid gap-6 lg:grid-cols-12 lg:gap-12">
+            <div key={group.titleKey} data-reveal className="grid gap-6 lg:grid-cols-12 lg:gap-12">
               <div className="lg:col-span-4">
                 <span className="font-display text-sm font-semibold text-brand-700">0{gi + 1}</span>
                 <h2 className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-ink">{t(group.titleKey)}</h2>
@@ -94,7 +94,7 @@ export function SectionFAQ() {
         </div>
 
         {/* Chưa tìm thấy câu trả lời */}
-        <div className="mt-16 grid gap-8 rounded-[28px] bg-brand-50 p-7 sm:p-10 lg:mt-20 lg:grid-cols-12 lg:items-center lg:p-12">
+        <div data-reveal className="mt-16 grid gap-8 rounded-[28px] bg-brand-50 p-7 sm:p-10 lg:mt-20 lg:grid-cols-12 lg:items-center lg:p-12">
           <div className="lg:col-span-7">
             <h3 className="sg-h2-sm">{t("stillNotFound")}</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("closingParagraph")}</p>

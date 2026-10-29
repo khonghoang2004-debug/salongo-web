@@ -62,7 +62,7 @@ export async function DownloadCard() {
               <span className="block font-semibold text-ink">{label}</span>
               <span className="block text-xs text-muted">{ext}</span>
             </span>
-            <Download className="size-5 shrink-0 text-muted transition-colors group-hover:text-ink" aria-hidden />
+            <Download className="size-5 shrink-0 text-muted transition group-hover:translate-y-0.5 group-hover:text-ink" aria-hidden />
           </a>
         ))}
       </div>

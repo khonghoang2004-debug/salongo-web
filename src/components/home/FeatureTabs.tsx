@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FEATURE_ICONS, type FeatureId } from "../featuresData";
@@ -14,15 +14,54 @@ export type FeatureTabItem = {
   desc: string;
 };
 
+const AUTO_MS = 6000;
+
 // Danh sách tính năng bên trái, ảnh app nguyên vẹn bên phải; mobile: chip cuộn ngang
 export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; moreLabel: string }) {
   const [active, setActive] = useState(0);
+  const [auto, setAuto] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const chips = useRef<HTMLDivElement>(null);
   const cur = items[active];
 
+  // Tự chuyển tính năng khi khối đang trong màn hình; dừng hẳn khi người dùng tự bấm
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const io = new IntersectionObserver(([e]) => setAuto(e.isIntersecting), { threshold: 0.35 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  const running = auto && !paused;
+  useEffect(() => {
+    if (!running) return;
+    const id = window.setTimeout(() => setActive((a) => (a + 1) % items.length), AUTO_MS);
+    return () => window.clearTimeout(id);
+  }, [running, active, items.length]);
+
+  // Mobile: giữ chip đang chọn trong tầm nhìn (chỉ cuộn ngang)
+  useEffect(() => {
+    const row = chips.current;
+    const chip = row?.querySelectorAll("button")[active];
+    if (row && chip) row.scrollTo({ left: chip.offsetLeft - 16, behavior: "smooth" });
+  }, [active]);
+
+  const pick = (i: number) => {
+    setActive(i);
+    setPaused(true);
+  };
+
   return (
-    <div className="mt-12 lg:mt-16 lg:grid lg:grid-cols-12 lg:gap-12">
+    <div
+      ref={ref}
+      data-reveal
+      className="mt-12 lg:mt-16 lg:grid lg:grid-cols-12 lg:gap-12"
+      onMouseEnter={() => setPaused(true)}
+    >
       {/* Mobile: chip chọn tính năng */}
-      <div className="-mx-4 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 lg:hidden" role="tablist" aria-label={moreLabel}>
+      <div ref={chips} className="relative -mx-4 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 lg:hidden" role="tablist" aria-label={moreLabel}>
         <div className="flex w-max gap-2">
           {items.map((it, i) => (
             <button
@@ -30,7 +69,7 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
               type="button"
               role="tab"
               aria-selected={i === active}
-              onClick={() => setActive(i)}
+              onClick={() => pick(i)}
               className={`min-h-11 whitespace-nowrap rounded-full border px-4 text-sm font-medium transition-colors ${
                 i === active ? "border-brand-700 bg-brand-700 text-white" : "border-line bg-white text-ink/80"
               }`}
@@ -47,12 +86,12 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
           const Icon = FEATURE_ICONS[it.id];
           const on = i === active;
           return (
-            <li key={it.id} className="border-b border-line">
+            <li key={it.id} className="relative border-b border-line">
               <button
                 type="button"
                 role="tab"
                 aria-selected={on}
-                onClick={() => setActive(i)}
+                onClick={() => pick(i)}
                 className="group flex w-full items-start gap-4 py-5 text-left"
               >
                 <span
@@ -71,9 +110,18 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
                   >
                     {it.title}
                   </span>
-                  {on && <span className="mt-2 block text-[15px] leading-relaxed text-muted">{it.desc}</span>}
+                  {on && <span className="sg-fade mt-2 block text-[15px] leading-relaxed text-muted">{it.desc}</span>}
                 </span>
               </button>
+              {on && (
+                <span className="absolute inset-x-0 -bottom-px h-px overflow-hidden" aria-hidden>
+                  <span
+                    key={`${active}-${running}`}
+                    className={`block h-full bg-brand-700 ${running ? "sg-progress" : ""}`}
+                    style={{ animationDuration: `${AUTO_MS}ms` }}
+                  />
+                </span>
+              )}
             </li>
           );
         })}
@@ -96,16 +144,16 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
               width={2400}
               height={1570}
               loading="lazy"
-              className="sg-fade block h-auto w-full"
+              className="sg-swap block h-auto w-full"
             />
           </div>
           <div className="mt-5 px-1 lg:hidden">
-            <h3 className="text-lg font-semibold tracking-[-0.01em] text-ink">{cur.title}</h3>
+            <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink">{cur.title}</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">{cur.desc}</p>
           </div>
           <Link
             href={`/tinh-nang#${cur.anchor}`}
-            className="mt-4 inline-flex min-h-11 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-brand-700 hover:text-brand-800 lg:mt-6"
+            className="sg-arrow mt-4 inline-flex min-h-11 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-brand-700 hover:text-brand-800 lg:mt-6"
           >
             {moreLabel}
             <ArrowRight className="size-4" aria-hidden />

@@ -15,7 +15,7 @@ export async function SectionWhyFeatures() {
     <section className="sg-section">
       <div className="sg-container">
         <SectionHead title={t("whyTitle")} layout="stack" />
-        <div className="mt-12 grid border-t border-line md:grid-cols-3 md:divide-x md:divide-line">
+        <div data-stagger className="mt-12 grid border-t border-line md:grid-cols-3 md:divide-x md:divide-line">
           {cards.map(({ i, Icon }) => (
             <div key={i} className="border-b border-line py-8 md:border-b-0 md:px-8 md:first:pl-0 md:last:pr-0">
               <span className="sg-icon-tile size-12 rounded-2xl" aria-hidden>

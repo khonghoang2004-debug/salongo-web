@@ -15,7 +15,7 @@ export async function FeatureChapters() {
       {CHAPTERS.map((c, ci) => (
         <section key={c} className={`sg-section ${ci % 2 === 1 ? "bg-[#FBF7F7]" : "bg-white"}`}>
           <div className="sg-container">
-            <header className="grid gap-5 border-b border-line pb-10 lg:grid-cols-12 lg:items-end lg:gap-10">
+            <header data-reveal className="grid gap-5 border-b border-line pb-10 lg:grid-cols-12 lg:items-end lg:gap-10">
               <div className="lg:col-span-7">
                 <p className="sg-kicker">
                   {String(ci + 1).padStart(2, "0")} · {t(`chapters.${c}.label`)}
@@ -46,7 +46,7 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
 
   return (
     <article id={anchor} className="scroll-mt-[136px]">
-      <div className="grid gap-4 lg:grid-cols-12 lg:items-end lg:gap-10">
+      <div data-reveal className="grid gap-4 lg:grid-cols-12 lg:items-end lg:gap-10">
         <div className="lg:col-span-7">
           <div className="flex items-center gap-3">
             <span className="sg-icon-tile size-11 rounded-xl" aria-hidden>
@@ -63,7 +63,7 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
         <p className="sg-lead lg:col-span-5">{t(k("desc"))}</p>
       </div>
 
-      <div className="mt-6 sm:mt-8">
+      <div data-reveal="scale" className="mt-6 sm:mt-8">
         {views.length > 0 ? (
           <ScreenTabsMockup
             zoomLabel={t("zoom")}
@@ -82,7 +82,7 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
 
       <div className="mt-6 sm:mt-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t("youCan")}</p>
-        <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+        <ul data-stagger className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           {[1, 2, 3, 4].map((i) => (
             <li key={i} className="rounded-2xl border border-line bg-white p-5">
               <div className="flex items-start gap-2.5">

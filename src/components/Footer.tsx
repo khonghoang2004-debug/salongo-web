@@ -120,8 +120,15 @@ export async function Footer() {
 
       {/* Chữ thương hiệu lớn ở đáy trang */}
       <div className="overflow-hidden" aria-hidden>
-        <p className="mx-auto max-w-[1280px] select-none px-4 pb-6 font-display text-[23vw] font-semibold leading-none tracking-[-0.06em] text-brand-100 sm:px-6 lg:px-8 xl:text-[17.5rem]">
-          {siteConfig.name}
+        <p
+          data-stagger
+          className="mx-auto max-w-[1280px] select-none px-4 pb-6 font-display text-[23vw] font-semibold leading-none tracking-[-0.06em] text-brand-100 sm:px-6 lg:px-8 xl:text-[17.5rem]"
+        >
+          {siteConfig.name.split("").map((c, i) => (
+            <span key={i} className="inline-block">
+              {c}
+            </span>
+          ))}
         </p>
       </div>
       <BackToTop />

@@ -48,14 +48,14 @@ export async function Pricing() {
       className="sg-section"
     >
       <div className="sg-container">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
+        <div data-stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-5">
           {planKeys.map((plan) => {
             const hi = plan.highlighted;
             return (
               <div
                 key={plan.nameKey}
                 className={`relative flex h-full flex-col rounded-[24px] p-6 sm:p-7 ${
-                  hi ? "sg-dark" : "border border-line bg-white"
+                  hi ? "sg-dark" : "border border-line bg-white transition-colors duration-300 hover:border-brand-300"
                 }`}
               >
                 {hi && (

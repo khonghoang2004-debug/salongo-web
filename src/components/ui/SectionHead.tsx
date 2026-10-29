@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type Props = {
   kicker?: string;
@@ -14,7 +14,7 @@ type Props = {
 export function SectionHead({ kicker, title, lead, action, layout = "split", className = "" }: Props) {
   if (layout === "stack") {
     return (
-      <div className={`max-w-3xl ${className}`}>
+      <div data-reveal className={`max-w-3xl ${className}`}>
         {kicker && <p className="sg-kicker">{kicker}</p>}
         <h2 className={`sg-h2 ${kicker ? "mt-4" : ""}`}>{title}</h2>
         {lead && <p className="sg-lead mt-4 max-w-2xl">{lead}</p>}
@@ -24,12 +24,12 @@ export function SectionHead({ kicker, title, lead, action, layout = "split", cla
   }
   return (
     <div className={`grid gap-5 lg:grid-cols-12 lg:items-end lg:gap-10 ${className}`}>
-      <div className="lg:col-span-7">
+      <div data-reveal className="lg:col-span-7">
         {kicker && <p className="sg-kicker">{kicker}</p>}
         <h2 className={`sg-h2 ${kicker ? "mt-4" : ""}`}>{title}</h2>
       </div>
       {(lead || action) && (
-        <div className="lg:col-span-5 lg:pb-1.5">
+        <div data-reveal className="lg:col-span-5 lg:pb-1.5" style={{ "--d": "140ms" } as CSSProperties}>
           {lead && <p className="sg-lead">{lead}</p>}
           {action && <div className="mt-6">{action}</div>}
         </div>

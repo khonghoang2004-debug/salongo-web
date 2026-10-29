@@ -35,7 +35,7 @@ export async function PricingComparisonTable() {
       <div className="sg-container">
         <h2 className="sg-h2">{t("compareTitle")}</h2>
 
-        <div className="mt-10 overflow-hidden rounded-[20px] border border-line bg-white">
+        <div data-reveal className="mt-10 overflow-hidden rounded-[20px] border border-line bg-white">
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-left text-[13px] sm:text-sm">
               <thead>

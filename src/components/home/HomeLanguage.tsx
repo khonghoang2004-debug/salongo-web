@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
 import { Check, Globe2 } from "lucide-react";
 
@@ -9,11 +10,11 @@ export async function HomeLanguage() {
   return (
     <section className="sg-section bg-[#FBF7F7]">
       <div className="sg-container grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-6">
+        <div data-reveal className="lg:col-span-6">
           <p className="sg-kicker">{h("langEyebrow")}</p>
           <h2 className="sg-h2 mt-4">{h("langTitle")}</h2>
           <p className="sg-lead mt-5">{h("langLead")}</p>
-          <ul className="mt-9 grid gap-x-8 gap-y-5 border-t border-line pt-8 sm:grid-cols-2">
+          <ul data-stagger className="mt-9 grid gap-x-8 gap-y-5 border-t border-line pt-8 sm:grid-cols-2">
             {points.map((k) => (
               <li key={k} className="flex items-start gap-3 text-[15px] font-medium leading-relaxed text-ink/85">
                 <Check className="mt-1 size-4 shrink-0 text-brand-700" strokeWidth={3} aria-hidden />
@@ -24,9 +25,9 @@ export async function HomeLanguage() {
         </div>
 
         {/* Minh hoạ: cùng một lịch hẹn, hai ngôn ngữ (giao diện vẽ, không phải ảnh) */}
-        <div className="lg:col-span-6" aria-hidden>
+        <div data-reveal="scale" className="lg:col-span-6" aria-hidden>
           <div className="rounded-[28px] bg-brand-700 p-5 sm:p-10">
-            <div className="rounded-2xl bg-white p-5 sm:p-6">
+            <div data-reveal className="rounded-2xl bg-white p-5 sm:p-6" style={{ "--d": "250ms" } as CSSProperties}>
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Salora · Tiếng Việt</span>
                 <span className="rounded-full bg-brand-50 px-2.5 py-0.5 text-[11px] font-semibold text-brand-700">VI</span>
@@ -44,12 +45,12 @@ export async function HomeLanguage() {
             </div>
 
             <div className="my-4 flex items-center gap-3 px-2 text-white/70">
-              <span className="h-px flex-1 bg-white/20" />
+              <span data-reveal="line" className="h-px flex-1 bg-white/30" style={{ "--d": "450ms" } as CSSProperties} />
               <Globe2 className="size-5" />
-              <span className="h-px flex-1 bg-white/20" />
+              <span data-reveal="line" className="h-px flex-1 bg-white/30" style={{ "--d": "550ms" } as CSSProperties} />
             </div>
 
-            <div className="rounded-2xl bg-white p-5 sm:ml-12 sm:p-6">
+            <div data-reveal="right" className="rounded-2xl bg-white p-5 sm:ml-12 sm:p-6" style={{ "--d": "650ms" } as CSSProperties}>
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Rezervace · Čeština</span>
                 <span className="rounded-full bg-[#FBF7F7] px-2.5 py-0.5 text-[11px] font-semibold text-ink/70">CS</span>

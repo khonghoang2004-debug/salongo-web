@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { CHAPTERS, FEATURES, FEATURE_ICONS, type Feature } from "./featuresData";
 import { ScreenTabsMockup } from "./ScreenTabsMockup";
 import { StaffAccountVisual } from "./StaffAccountVisual";
+import { BranchesVisual } from "./BranchesVisual";
 
 // Phần chi tiết trang Tính năng: 3 phần theo một ngày làm việc của salon,
 // mỗi tính năng có ảnh màn hình lớn và 4 việc bạn có thể làm
@@ -75,6 +76,8 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
               icon: v.icon,
             }))}
           />
+        ) : id === "branches" ? (
+          <BranchesVisual />
         ) : (
           <StaffAccountVisual />
         )}

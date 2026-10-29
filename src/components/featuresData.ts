@@ -8,6 +8,7 @@ import {
   LayoutList,
   ReceiptText,
   Scissors,
+  Store,
   UserCog,
   UserRound,
   Users,
@@ -15,7 +16,7 @@ import {
 } from "lucide-react";
 
 // Danh sách tính năng cho trang Tính năng: thứ tự, phần (chapter), ảnh màn hình app
-export type FeatureId = "booking" | "calendar" | "checkout" | "customers" | "services" | "reports" | "payroll" | "staff";
+export type FeatureId = "booking" | "calendar" | "checkout" | "customers" | "services" | "reports" | "payroll" | "staff" | "branches";
 export type ChapterId = "c1" | "c2" | "c3";
 
 export const FEATURE_ICONS = {
@@ -27,6 +28,7 @@ export const FEATURE_ICONS = {
   reports: BarChart3,
   payroll: Wallet,
   staff: UserCog,
+  branches: Store,
 };
 
 export const TAB_ICONS = { BellRing, Globe, LayoutDashboard, LayoutList, ReceiptText, Users, BarChart3, CreditCard, UserRound, Scissors, Wallet };
@@ -74,6 +76,8 @@ export const FEATURES: Feature[] = [
   { id: "payroll", anchor: "tinh-luong", chapter: "c3", views: [{ src: "/images/tinh-luong.webp", icon: "Wallet" }] },
   // Tài khoản nhân viên: không dùng ảnh, vẽ bằng giao diện (StaffAccountVisual)
   { id: "staff", anchor: "nhan-vien", chapter: "c3", views: [] },
+  // Đa chi nhánh: vẽ bằng giao diện (BranchesVisual)
+  { id: "branches", anchor: "da-chi-nhanh", chapter: "c3", views: [] },
 ];
 
 export const CHAPTERS: ChapterId[] = ["c1", "c2", "c3"];

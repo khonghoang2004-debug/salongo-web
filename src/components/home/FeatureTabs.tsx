@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FEATURE_ICONS, type FeatureId } from "../featuresData";
@@ -8,7 +8,9 @@ import { FEATURE_ICONS, type FeatureId } from "../featuresData";
 export type FeatureTabItem = {
   id: FeatureId;
   anchor: string;
-  img: string;
+  img?: string;
+  // Minh hoạ vẽ bằng giao diện, dùng thay ảnh chụp khi tính năng không có ảnh
+  visual?: ReactNode;
   short: string;
   title: string;
   desc: string;
@@ -137,15 +139,21 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
               <span className="sg-browser-dot" />
               <span className="ml-2 truncate text-xs font-medium text-muted">{cur.short}</span>
             </div>
-            <img
-              key={cur.img}
-              src={cur.img}
-              alt={cur.title}
-              width={2400}
-              height={1570}
-              loading="lazy"
-              className="sg-swap block h-auto w-full"
-            />
+            {cur.img ? (
+              <img
+                key={cur.img}
+                src={cur.img}
+                alt={cur.title}
+                width={2400}
+                height={1570}
+                loading="lazy"
+                className="sg-swap block h-auto w-full"
+              />
+            ) : (
+              <div key={cur.id} className="sg-swap">
+                {cur.visual}
+              </div>
+            )}
           </div>
           <div className="mt-5 px-1 lg:hidden">
             <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink">{cur.title}</h3>

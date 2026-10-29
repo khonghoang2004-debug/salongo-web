@@ -38,7 +38,7 @@ export async function FeaturesPageHero() {
             {t("mapHint")}
           </p>
         </div>
-        <ul className="mt-5 grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4">
+        <ul className="mt-5 grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-3">
           {FEATURES.map(({ id, anchor }) => {
             const Icon = FEATURE_ICONS[id];
             return (

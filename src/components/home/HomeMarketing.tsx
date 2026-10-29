@@ -75,12 +75,12 @@ export async function HomeMarketing() {
                   <span className="sg-browser-dot" />
                   <span className="ml-2 truncate text-xs font-medium text-muted">{h("mkShotPc")}</span>
                 </div>
-                <img src={A + "marketing-giang-sinh.webp"} alt={h("mkShotPc")} width={1600} height={1165} loading="lazy" className="block h-auto w-full" />
+                <img src={A + "marketing-giang-sinh-v2.webp"} alt={h("mkShotPc")} width={1600} height={1165} loading="lazy" className="block h-auto w-full" />
               </div>
               <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:hidden">
                 {([
-                  ["m-marketing-giang-sinh.webp", "tplChristmas"],
-                  ["m-marketing-8-3.webp", "tplWomensDay"],
+                  ["m-marketing-giang-sinh-v2.webp", "tplChristmas"],
+                  ["m-marketing-8-3-v2.webp", "tplWomensDay"],
                   ["m-marketing-soan.webp", "mkShotCompose"],
                 ] as const).map(([src, label]) => (
                   <figure key={src} className="w-[62vw] max-w-[240px] shrink-0 snap-center">

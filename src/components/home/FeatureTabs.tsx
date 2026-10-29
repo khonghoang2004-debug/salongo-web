@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FEATURE_ICONS, SHOT, type FeatureId } from "../featuresData";
 import { PhoneShot } from "../ui/AppShot";
-import { DeviceToggle, type Device } from "../ui/DeviceSwitch";
 
 export type FeatureTabItem = {
   id: FeatureId;
@@ -25,7 +24,6 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(false);
   const [paused, setPaused] = useState(false);
-  const [device, setDevice] = useState<Device>("phone");
   const ref = useRef<HTMLDivElement>(null);
   const chips = useRef<HTMLDivElement>(null);
   const cur = items[active];
@@ -135,8 +133,7 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
       {/* Ảnh + mô tả */}
       <div className="mt-6 lg:col-span-7 lg:mt-0">
         <div className="rounded-[24px] bg-brand-50 p-3 sm:p-6 lg:sticky lg:top-24 lg:p-8">
-          <DeviceToggle value={device} onChange={(d) => { setDevice(d); setPaused(true); }} className="mb-3" />
-          <div key={`pc-${device}`} className={`sg-browser ${cur.mobile && device === "phone" ? "max-sm:hidden" : "sg-swap"}`}>
+          <div className={`sg-browser ${cur.mobile ? "max-sm:hidden" : ""}`}>
             <div className="sg-browser-bar">
               <span className="sg-browser-dot" />
               <span className="sg-browser-dot" />
@@ -153,7 +150,7 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
               className="sg-swap block h-auto w-full"
             />
           </div>
-          {cur.mobile && device === "phone" && (
+          {cur.mobile && (
             <PhoneShot key={cur.mobile} src={cur.mobile} alt={cur.title} className="sg-swap mx-auto max-w-[280px] sm:hidden" />
           )}
           <div className="mt-5 px-1 lg:hidden">

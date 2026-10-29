@@ -46,11 +46,13 @@ export function DeviceToggle({ value, onChange, className = "" }: { value: Devic
   );
 }
 
-// Ảnh điện thoại / ảnh PC với nút gạt trên mobile; từ sm trở lên luôn hiện bản PC (desktop).
+// Ảnh điện thoại trên mobile, ảnh PC từ sm trở lên. toggle: thêm nút gạt để xem bản PC trên mobile
+// (chỉ dùng ở trang Tính năng).
 export function DeviceSwitch({
   phone,
   pc,
   desktop,
+  toggle = false,
   className = "",
 }: {
   phone: ReactNode;
@@ -58,12 +60,13 @@ export function DeviceSwitch({
   pc: ReactNode;
   /** Nội dung cho màn hình lớn (mặc định giống pc) */
   desktop?: ReactNode;
+  toggle?: boolean;
   className?: string;
 }) {
   const [device, setDevice] = useState<Device>("phone");
   return (
     <div className={className}>
-      <DeviceToggle value={device} onChange={setDevice} className="mb-4" />
+      {toggle && <DeviceToggle value={device} onChange={setDevice} className="mb-4" />}
       <div className="sm:hidden">
         <div key={device} className="sg-swap">
           {device === "phone" ? phone : pc}

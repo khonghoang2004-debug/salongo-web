@@ -48,13 +48,11 @@ export async function HomeMarketing() {
 
               <ul data-stagger className="mt-6 space-y-3.5">
                 {POINTS.map(({ i, Icon }) => (
-                  <li key={i} className="flex items-start gap-3 text-[15px] leading-relaxed text-white/90">
-                    <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-lg bg-white/15" aria-hidden>
+                  <li key={i} className="flex items-center gap-3 text-[15px] leading-snug text-white/90">
+                    <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-white/15" aria-hidden>
                       <Icon className="size-4" />
                     </span>
-                    <span>
-                      <strong className="font-semibold text-white">{h(`mk${i}Title`)}</strong> {h(`mk${i}Text`)}
-                    </span>
+                    <span className="font-semibold text-white">{h(`mk${i}Title`)}</span>
                   </li>
                 ))}
               </ul>

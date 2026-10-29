@@ -656,8 +656,7 @@
     "why2Title": "Fast, transparent payroll",
     "why2Text": "Commission is based on each staff member's revenue, so everyone trusts the numbers.",
     "why3Title": "Know what your salon earns",
-    "why3Text": "Revenue by day, month and staff member, so decisions rest on real numbers.",
-    "demoNote": "Screenshot from the Salora app, sample data"
+    "why3Text": "Revenue by day, month and staff member, so decisions rest on real numbers."
   },
   "featuresPage": {
     "heroTitle": "Everything you need to run your salon professionally",
@@ -857,7 +856,6 @@
     "payTitle": "Mai’s pay this month",
     "payValue": "€2,180",
     "payNote": "Commission and tips included",
-    "demoNote": "Screenshots from the Salora app. Sample data, not a real salon's figures.",
     "langShotApp": "The salon's app",
     "langShotBook": "The client booking page",
     "priceRenew": "Already on Salora? Renew your plan",
@@ -895,7 +893,6 @@
     "step4Text": "Pick a plan, monthly or yearly, then pay by card or bank transfer, depending on what the app offers the salon.",
     "cta": "Renew plan",
     "note": "Using the Salora app from the App Store or Google Play? Renew in a browser or the desktop app.",
-    "shotLabel": "Plan screen",
-    "demoNote": "Plan screen in the app, sample salon on trial"
+    "shotLabel": "Plan screen"
   }
 }

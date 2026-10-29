@@ -656,8 +656,7 @@
     "why2Title": "Schnelle, transparente Löhne",
     "why2Text": "Provision nach dem Umsatz jedes Mitarbeiters, alle vertrauen den Zahlen.",
     "why3Title": "Wissen, was Ihr Salon verdient",
-    "why3Text": "Umsatz nach Tag, Monat und Mitarbeiter, Entscheidungen auf echten Zahlen.",
-    "demoNote": "Screenshot aus der Salora-App, Beispieldaten"
+    "why3Text": "Umsatz nach Tag, Monat und Mitarbeiter, Entscheidungen auf echten Zahlen."
   },
   "featuresPage": {
     "heroTitle": "Alles, was Sie für den professionellen Salonbetrieb brauchen",
@@ -857,7 +856,6 @@
     "payTitle": "Lohn von Mai diesen Monat",
     "payValue": "2.180 €",
     "payNote": "Inklusive Provision und Trinkgeld",
-    "demoNote": "Screenshots aus der Salora-App. Beispieldaten, keine Zahlen eines echten Salons.",
     "langShotApp": "App des Salons",
     "langShotBook": "Buchungsseite für Kunden",
     "priceRenew": "Schon bei Salora? Tarif verlängern",
@@ -895,7 +893,6 @@
     "step4Text": "Tarif wählen, monatlich oder jährlich, dann per Karte oder Überweisung zahlen, je nachdem, was die App dem Salon anbietet.",
     "cta": "Tarif verlängern",
     "note": "Sie nutzen die Salora-App aus App Store oder Google Play? Verlängern Sie im Browser oder in der Desktop-App.",
-    "shotLabel": "Tarife",
-    "demoNote": "Tarifseite in der App, Beispielsalon in der Testphase"
+    "shotLabel": "Tarife"
   }
 }

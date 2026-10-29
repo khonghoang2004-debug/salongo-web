@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, ArrowUpRight, Check, Lock } from "lucide-react";
 import { CountUp } from "../motion/CountUp";
-import { DemoNote, PhoneShot } from "../ui/AppShot";
+import { PhoneShot } from "../ui/AppShot";
 import { SIGNUP_URL } from "@/lib/app-links";
 
 const stats = [
@@ -109,7 +109,6 @@ export async function HomeHero() {
             <div className="sg-float absolute bottom-6 right-2 hidden w-[190px] lg:block xl:-right-4 xl:w-[210px]" style={d(1300)}>
               <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority />
             </div>
-            <DemoNote text={h("demoNote")} className="mt-4 justify-center lg:justify-start" />
           </div>
         </div>
       </section>

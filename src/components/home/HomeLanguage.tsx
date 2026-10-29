@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
 import { Check } from "lucide-react";
-import { DemoNote, PhoneShot } from "../ui/AppShot";
+import { PhoneShot } from "../ui/AppShot";
 
 // Khối "làm cho người Việt": chủ dùng tiếng Việt, khách đặt lịch bằng tiếng địa phương
 export async function HomeLanguage() {
@@ -43,7 +43,6 @@ export async function HomeLanguage() {
               ))}
             </div>
           </div>
-          <DemoNote text={h("demoNote")} className="mt-3 justify-center" />
         </div>
       </div>
     </section>

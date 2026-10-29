@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FEATURE_ICONS, SHOT, type FeatureId } from "../featuresData";
-import { DemoNote, PhoneShot } from "../ui/AppShot";
+import { PhoneShot } from "../ui/AppShot";
 
 export type FeatureTabItem = {
   id: FeatureId;
@@ -20,7 +20,7 @@ export type FeatureTabItem = {
 const AUTO_MS = 6000;
 
 // Danh sách tính năng bên trái, ảnh app nguyên vẹn bên phải; mobile: chip cuộn ngang
-export function FeatureTabs({ items, moreLabel, demoNote }: { items: FeatureTabItem[]; moreLabel: string; demoNote: string }) {
+export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; moreLabel: string }) {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -153,7 +153,6 @@ export function FeatureTabs({ items, moreLabel, demoNote }: { items: FeatureTabI
           {cur.mobile && (
             <PhoneShot key={cur.mobile} src={cur.mobile} alt={cur.title} className="sg-swap mx-auto max-w-[280px] sm:hidden" />
           )}
-          <DemoNote text={demoNote} className="mt-3 justify-center lg:justify-start" />
           <div className="mt-5 px-1 lg:hidden">
             <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink">{cur.title}</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">{cur.desc}</p>

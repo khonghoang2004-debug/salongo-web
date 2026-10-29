@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { DemoNote, PhoneShot } from "../ui/AppShot";
+import { PhoneShot } from "../ui/AppShot";
 
 const A = "/images/app/";
 const POINTS = [1, 2, 3, 4] as const;
@@ -41,7 +41,6 @@ export async function HomeHighlights() {
             <div className="mx-auto max-w-[280px] sm:absolute sm:-bottom-6 sm:right-0 sm:w-[210px] sm:max-w-none lg:w-[230px]">
               <PhoneShot src={A + "m-chi-nhanh-menu.webp"} alt={h("hlBranchShotPhone")} />
             </div>
-            <DemoNote text={h("demoNote")} className="mt-4 justify-center sm:mt-10 lg:justify-start" />
           </div>
         </div>
       </section>
@@ -76,7 +75,6 @@ export async function HomeHighlights() {
                 ))}
               </div>
             </div>
-            <DemoNote text={h("demoNote")} className="mt-3 justify-center" />
           </div>
         </div>
       </section>

@@ -656,8 +656,7 @@
     "why2Title": "Tính lương nhanh, minh bạch",
     "why2Text": "Hoa hồng tính theo doanh thu từng thợ, chủ và thợ đều yên tâm.",
     "why3Title": "Biết rõ salon lãi bao nhiêu",
-    "why3Text": "Doanh thu theo ngày, tháng, theo thợ để quyết định dựa trên số liệu thật.",
-    "demoNote": "Ảnh chụp từ app Salora, dữ liệu minh họa"
+    "why3Text": "Doanh thu theo ngày, tháng, theo thợ để quyết định dựa trên số liệu thật."
   },
   "featuresPage": {
     "heroTitle": "Tất cả những gì bạn cần để vận hành salon chuyên nghiệp",
@@ -857,7 +856,6 @@
     "payTitle": "Lương tháng của Mai",
     "payValue": "2 180 €",
     "payNote": "Đã gồm hoa hồng và tip",
-    "demoNote": "Ảnh chụp từ app Salora. Dữ liệu minh họa, không phải số liệu của salon thật.",
     "langShotApp": "App của salon",
     "langShotBook": "Trang đặt lịch của khách",
     "priceRenew": "Đã dùng Salora? Gia hạn gói",
@@ -895,7 +893,6 @@
     "step4Text": "Chọn gói, theo tháng hoặc theo năm, rồi thanh toán bằng thẻ hoặc chuyển khoản, tuỳ lựa chọn app hiện cho salon.",
     "cta": "Gia hạn gói",
     "note": "Dùng app Salora trên iPhone hoặc Android tải từ cửa hàng ứng dụng? Hãy gia hạn trên trình duyệt hoặc app máy tính.",
-    "shotLabel": "Nâng cấp gói",
-    "demoNote": "Màn Nâng cấp gói trong app, salon dùng thử minh họa"
+    "shotLabel": "Nâng cấp gói"
   }
 }

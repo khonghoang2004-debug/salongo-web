@@ -10,8 +10,6 @@ import { SIGNUP_URL } from "@/lib/app-links";
 const stats = [
   { value: "stat1Value", label: "stat1Label" },
   { value: "stat2Value", label: "stat2Label" },
-  { value: "stat3Value", label: "stat3Label" },
-  { value: "stat4Value", label: "stat4Label" },
 ] as const;
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
@@ -123,7 +121,7 @@ export async function HomeHero() {
           <p data-reveal className="mx-auto max-w-2xl text-center text-[15px] font-medium text-muted sm:text-base">
             {h("statsTitle")}
           </p>
-          <dl data-stagger className="mt-7 grid grid-cols-2 gap-x-4 gap-y-7 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-line">
+          <dl data-stagger className="mx-auto mt-7 grid max-w-[720px] grid-cols-2 gap-x-4 gap-y-7 lg:gap-x-0 lg:divide-x lg:divide-line">
             {stats.map(({ value, label }) => (
               <div key={value} className="flex flex-col-reverse justify-end text-center lg:px-6">
                 <dt className="mt-2 text-sm text-muted">{t(label)}</dt>

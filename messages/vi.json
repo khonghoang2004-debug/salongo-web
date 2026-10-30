@@ -1052,5 +1052,43 @@
         "a": "Mỗi thợ tính lương theo % doanh thu cá nhân hoặc lương cố định theo tháng. Tip do chủ salon chọn: khách tip thợ nào thợ đó nhận, hoặc chia đều cho các thợ."
       }
     ]
+  },
+  "videos": {
+    "kicker": "Video giới thiệu",
+    "title": "Xem SalonGo hoạt động trong một phút",
+    "lead": "Mỗi video quay từ app thật, đi từng bước một cách rõ ràng. Lời đọc tiếng Việt, phụ đề tiếng Séc.",
+    "play": "Xem video",
+    "watch": "Xem video",
+    "close": "Đóng",
+    "note": "Tiếng Việt · phụ đề tiếng Séc",
+    "more": "Xem chi tiết tính năng",
+    "heroVideo": "Xem video giới thiệu",
+    "items": {
+      "booking": {
+        "tab": "Lịch hẹn",
+        "title": "Lịch hẹn & đặt lịch online",
+        "desc": "Khách tự đặt lịch qua đường link của tiệm, chủ duyệt và chia thợ, app tự gửi email xác nhận và nhắc lịch trước giờ hẹn."
+      },
+      "checkout": {
+        "tab": "Tính tiền",
+        "title": "Tính tiền, hoá đơn & doanh thu",
+        "desc": "Chạm chọn dịch vụ và thợ, app tự tính tiền thừa, in hoá đơn ngay. Doanh thu theo ngày, theo thợ, theo dịch vụ luôn cập nhật."
+      },
+      "marketing": {
+        "tab": "Marketing",
+        "title": "Email ưu đãi & nhắc sinh nhật",
+        "desc": "Chọn mẫu email có sẵn cho từng dịp, sửa vài dòng rồi gửi cho khách đã đồng ý. App nhắc trước ngày sinh nhật của khách."
+      },
+      "payroll": {
+        "tab": "Tính lương",
+        "title": "Tính lương thợ tự động",
+        "desc": "Ăn chia theo phần trăm hoặc lương cứng, cộng tip theo khách hoặc chia đều. Chi tiết tới từng hoá đơn, xuất Excel hoặc PDF."
+      },
+      "branches": {
+        "tab": "Chi nhánh",
+        "title": "Quản lý nhiều chi nhánh",
+        "desc": "Doanh thu, lịch hẹn và lịch online chờ duyệt của mọi chi nhánh trên một màn hình. Chuyển chi nhánh chỉ một chạm."
+      }
+    }
   }
 }

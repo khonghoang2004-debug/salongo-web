@@ -3,11 +3,26 @@ import { getTranslations } from "next-intl/server";
 import { CHAPTERS, FEATURES, FEATURE_ICONS, type Feature } from "./featuresData";
 import { ScreenTabsMockup } from "./ScreenTabsMockup";
 import { PhoneShot } from "./ui/AppShot";
+import { VideoModalButton } from "./video/VideoModalButton";
+import { videoById, type VideoId } from "@/lib/videos";
+
+// Tính năng nào có video giới thiệu (một video có thể dùng cho 2 tính năng liền nhau)
+const FEATURE_VIDEO: Partial<Record<Feature["id"], VideoId>> = {
+  booking: "booking",
+  calendar: "booking",
+  checkout: "checkout",
+  reports: "checkout",
+  marketing: "marketing",
+  payroll: "payroll",
+  branches: "branches",
+};
 
 // Phần chi tiết trang Tính năng: 3 phần theo một ngày làm việc của salon,
 // mỗi tính năng có ảnh màn hình lớn và 4 việc bạn có thể làm
 export async function FeatureChapters() {
   const t = await getTranslations("featuresV2");
+  const v = await getTranslations("videos");
+  const videoLabels = { label: v("watch"), playLabel: v("play"), closeLabel: v("close"), note: v("note") };
   let n = 0;
 
   return (
@@ -27,7 +42,13 @@ export async function FeatureChapters() {
 
             <div className="mt-8 space-y-14 sm:mt-10 lg:space-y-20">
               {FEATURES.filter((f) => f.chapter === c).map((f) => (
-                <FeatureShowcase key={f.id} feature={f} index={++n} t={t} />
+                <FeatureShowcase
+                  key={f.id}
+                  feature={f}
+                  index={++n}
+                  t={t}
+                  video={FEATURE_VIDEO[f.id] && { id: FEATURE_VIDEO[f.id]!, title: v(`items.${FEATURE_VIDEO[f.id]!}.title`), ...videoLabels }}
+                />
               ))}
             </div>
           </div>
@@ -39,7 +60,9 @@ export async function FeatureChapters() {
 
 type T = Awaited<ReturnType<typeof getTranslations<"featuresV2">>>;
 
-function FeatureShowcase({ feature, index, t }: { feature: Feature; index: number; t: T }) {
+type VideoProps = { id: VideoId; title: string; label: string; playLabel: string; closeLabel: string; note: string };
+
+function FeatureShowcase({ feature, index, t, video }: { feature: Feature; index: number; t: T; video?: VideoProps }) {
   const { id, anchor, views, phones } = feature;
   const Icon = FEATURE_ICONS[id];
   const k = (s: string) => `f.${id}.${s}` as Parameters<T>[0];
@@ -59,6 +82,17 @@ function FeatureShowcase({ feature, index, t }: { feature: Feature; index: numbe
             </span>
           </div>
           <h3 className="mt-4 sg-h2-sm">{t(k("title"))}</h3>
+          {video && (
+            <VideoModalButton
+              video={videoById(video.id)}
+              title={video.title}
+              label={video.label}
+              playLabel={video.playLabel}
+              closeLabel={video.closeLabel}
+              note={video.note}
+              className="mt-5"
+            />
+          )}
         </div>
         <p className="sg-lead lg:col-span-5">{t(k("desc"))}</p>
       </div>

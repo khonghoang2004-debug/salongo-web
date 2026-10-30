@@ -1052,5 +1052,43 @@
         "a": "Každá technička má mzdu jako procento z vlastních tržeb, nebo pevnou měsíční mzdu. Majitel volí, zda spropitné dostane ta, které ho klient dal, nebo se dělí rovným dílem."
       }
     ]
+  },
+  "videos": {
+    "kicker": "Video ukázky",
+    "title": "Podívejte se, jak SalonGo funguje",
+    "lead": "Každé video je natočené ve skutečné aplikaci a jde krok za krokem. Komentář ve vietnamštině s českými titulky.",
+    "play": "Přehrát video",
+    "watch": "Přehrát video",
+    "close": "Zavřít",
+    "note": "Vietnamsky · české titulky",
+    "more": "Podrobnosti o funkci",
+    "heroVideo": "Přehrát video ukázku",
+    "items": {
+      "booking": {
+        "tab": "Rezervace",
+        "title": "Rezervace a online objednávky",
+        "desc": "Zákazníci se objednají přes odkaz vašeho salonu, vy potvrdíte a přiřadíte pracovníka a aplikace pošle potvrzovací e-mail i připomínku před termínem."
+      },
+      "checkout": {
+        "tab": "Pokladna",
+        "title": "Pokladna, účtenky a tržby",
+        "desc": "Klepnete na službu a pracovníka, aplikace spočítá, kolik vrátit, a účtenka je hotová. Tržby po dnech, pracovnících a službách jsou vždy aktuální."
+      },
+      "marketing": {
+        "tab": "Marketing",
+        "title": "E-maily se slevou a narozeniny",
+        "desc": "Vyberte hotovou šablonu pro danou příležitost, upravte pár řádků a pošlete ji zákazníkům, kteří souhlasili. Aplikace připomene blížící se narozeniny."
+      },
+      "payroll": {
+        "tab": "Mzdy",
+        "title": "Automatický výpočet mezd",
+        "desc": "Procenta nebo pevná mzda, spropitné podle zákazníka nebo rovným dílem. Detail až na jednotlivé účtenky, export do Excelu nebo PDF."
+      },
+      "branches": {
+        "tab": "Pobočky",
+        "title": "Správa více poboček",
+        "desc": "Tržby, termíny a čekající online rezervace všech poboček na jedné obrazovce. Pobočku přepnete jedním klepnutím."
+      }
+    }
   }
 }

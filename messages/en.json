@@ -1051,5 +1051,43 @@
         "a": "Each technician is paid a percentage of their own revenue or a fixed monthly salary. The owner chooses how tips are shared: to whoever the client tipped, or split equally."
       }
     ]
+  },
+  "videos": {
+    "kicker": "Video tour",
+    "title": "See SalonGo at work in one minute",
+    "lead": "Every video is recorded in the real app and goes step by step. Voice-over in Vietnamese with Czech subtitles.",
+    "play": "Watch video",
+    "watch": "Watch video",
+    "close": "Close",
+    "note": "Vietnamese · Czech subtitles",
+    "more": "See feature details",
+    "heroVideo": "Watch the video tour",
+    "items": {
+      "booking": {
+        "tab": "Appointments",
+        "title": "Appointments & online booking",
+        "desc": "Clients book through your salon's own link, you confirm and assign a staff member, and the app sends the confirmation email and a reminder before the visit."
+      },
+      "checkout": {
+        "tab": "Checkout",
+        "title": "Checkout, receipts & revenue",
+        "desc": "Tap the service and the staff member, the app works out the change and the receipt is ready. Revenue by day, staff and service is always up to date."
+      },
+      "marketing": {
+        "tab": "Marketing",
+        "title": "Offer emails & birthday reminders",
+        "desc": "Pick a ready-made email for the occasion, edit a few lines and send it to clients who agreed. The app reminds you of upcoming birthdays."
+      },
+      "payroll": {
+        "tab": "Payroll",
+        "title": "Automatic staff payroll",
+        "desc": "Commission or fixed salary, tips per client or split evenly. Details down to every receipt, export to Excel or PDF."
+      },
+      "branches": {
+        "tab": "Branches",
+        "title": "Manage several branches",
+        "desc": "Revenue, appointments and pending online bookings of every branch on one screen. Switch branches with one tap."
+      }
+    }
   }
 }

@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react";
-import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, ArrowUpRight, Check, Lock } from "lucide-react";
+import { ArrowUpRight, Check, Lock, Play } from "lucide-react";
 import { CountUp } from "../motion/CountUp";
 import { PhoneShot } from "../ui/AppShot";
 import { DeviceSwitch } from "../ui/DeviceSwitch";
@@ -18,6 +17,7 @@ const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 export async function HomeHero() {
   const t = await getTranslations("hero");
   const h = await getTranslations("home2");
+  const v = await getTranslations("videos");
 
   let delay = 120;
   const words = (s: string) =>
@@ -61,10 +61,10 @@ export async function HomeHero() {
                 {t("cta")}
                 <ArrowUpRight className="size-[18px]" aria-hidden />
               </a>
-              <Link href="/tinh-nang" className="btn-secondary sg-arrow px-7 py-4 text-base">
-                {t("ctaSecondary")}
-                <ArrowRight className="size-[18px]" aria-hidden />
-              </Link>
+              <a href="#video" className="btn-secondary px-7 py-4 text-base">
+                <Play className="size-[18px] fill-current text-brand-700" aria-hidden />
+                {v("heroVideo")}
+              </a>
             </div>
 
             <ul className="sg-in mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted" style={d(780)}>

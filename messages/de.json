@@ -1051,5 +1051,43 @@
         "a": "Jede Mitarbeiterin erhält Prozent vom eigenen Umsatz oder ein festes Monatsgehalt. Der Inhaber wählt, wie Trinkgeld geteilt wird: an die Person, der der Kunde es gab, oder gleichmäßig."
       }
     ]
+  },
+  "videos": {
+    "kicker": "Video-Tour",
+    "title": "SalonGo in einer Minute erleben",
+    "lead": "Jedes Video ist in der echten App aufgenommen und zeigt alles Schritt für Schritt. Sprecher auf Vietnamesisch mit tschechischen Untertiteln.",
+    "play": "Video ansehen",
+    "watch": "Video ansehen",
+    "close": "Schließen",
+    "note": "Vietnamesisch · tschechische Untertitel",
+    "more": "Funktion im Detail",
+    "heroVideo": "Video-Tour ansehen",
+    "items": {
+      "booking": {
+        "tab": "Termine",
+        "title": "Termine & Online-Buchung",
+        "desc": "Kunden buchen über den eigenen Link Ihres Salons, Sie bestätigen und teilen einen Mitarbeiter zu, die App sendet Bestätigungs-E-Mail und Erinnerung vor dem Termin."
+      },
+      "checkout": {
+        "tab": "Kasse",
+        "title": "Kasse, Belege & Umsatz",
+        "desc": "Leistung und Mitarbeiter antippen, die App berechnet das Wechselgeld und der Beleg ist fertig. Umsatz nach Tag, Mitarbeiter und Leistung immer aktuell."
+      },
+      "marketing": {
+        "tab": "Marketing",
+        "title": "Angebots-E-Mails & Geburtstage",
+        "desc": "Fertige Vorlage für den Anlass wählen, ein paar Zeilen anpassen und an zustimmende Kunden senden. Die App erinnert an bevorstehende Geburtstage."
+      },
+      "payroll": {
+        "tab": "Löhne",
+        "title": "Automatische Lohnabrechnung",
+        "desc": "Provision oder Festgehalt, Trinkgeld pro Kunde oder gleich verteilt. Details bis zu jedem Beleg, Export nach Excel oder PDF."
+      },
+      "branches": {
+        "tab": "Filialen",
+        "title": "Mehrere Filialen verwalten",
+        "desc": "Umsatz, Termine und offene Online-Buchungen aller Filialen auf einem Bildschirm. Filiale mit einem Tipp wechseln."
+      }
+    }
   }
 }

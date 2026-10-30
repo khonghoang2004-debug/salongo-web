@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
 import { PageHero } from "@/components/ui/PageHero";
+import { HomeVideos } from "@/components/home/HomeVideos";
 import { PhoneShot } from "@/components/ui/AppShot";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { SIGNUP_URL } from "@/lib/app-links";
@@ -137,6 +138,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
           </div>
         </div>
       </section>
+      <HomeVideos />
     </PageShell>
   );
 }

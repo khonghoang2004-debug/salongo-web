@@ -944,5 +944,112 @@
     "phone": "Phone",
     "pc": "Computer",
     "zoomHint": "Tap the image to enlarge"
+  },
+  "guide": {
+    "metaTitle": "Salon & nail salon management software guide",
+    "metaDesc": "What salon and nail salon management software should do: online booking, checkout, staff payroll, tip sharing, email marketing. SalonGo, with a 150-day free trial.",
+    "crumb": "Salon management software",
+    "h1": "Salon and nail salon management software for Europe",
+    "intro": "Bookings, checkout, staff pay, tips and regular clients, all in one app. This is what salon management software should do, and how SalonGo does it.",
+    "ctaTrial": "Try 150 days free",
+    "ctaFeatures": "See features",
+    "ctaPricing": "See pricing",
+    "shotAlt": "SalonGo salon management software Overview screen on a phone",
+    "boxTitle": "150-day free trial, no card",
+    "boxText": "Every plan has every feature, from 199 CZK/month. Support in Vietnamese and Czech.",
+    "sections": [
+      {
+        "h": "What is salon management software?",
+        "p": "Salon management software puts the salon's daily work in one place: taking bookings, scheduling staff, checkout, client records, revenue and payroll. Instead of a paper diary, spreadsheets and scattered messages, the owner opens the app and sees who is doing what today and how much came in. SalonGo is salon management software made for Vietnamese-run nail, hair, lash and beauty salons in Europe, used in the browser, on Windows and Mac computers and on phones."
+      },
+      {
+        "h": "What should nail salon software do?",
+        "p": "Nail salons have several technicians, many short services, lots of regulars and tips. Good nail salon software should:",
+        "points": [
+          "Give the salon its own online booking page where clients pick a service, a technician and a free time",
+          "Show a calendar per technician, so you see at a glance who is free",
+          "Take payments at the desk by cash, card or bank transfer and record tips",
+          "Calculate pay automatically as a percentage of revenue or a fixed salary, with tips shared the way the owner chooses",
+          "Report revenue by day, by technician and by service"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "See all features"
+        }
+      },
+      {
+        "h": "Online booking 24/7, no phone calls",
+        "p": "Each salon gets its own booking link for Facebook, Instagram or Google Maps. Clients book in Czech, German, English and more, while the owner confirms in Vietnamese. The booking page only shows times when staff are free, so there are no double bookings, and clients with an email get automatic reminders 24 hours and 1 hour before.",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "See online booking"
+        }
+      },
+      {
+        "h": "Clear staff pay and tip sharing",
+        "p": "Each staff member has one pay type: a percentage of their own revenue (optionally per service) or a fixed monthly salary. Tips are recorded on the invoice; the owner chooses whether each tip goes to the technician the client tipped or all tips are split equally. At month end, open payroll and export.",
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "See automatic payroll"
+        }
+      },
+      {
+        "h": "Keep regulars coming back with email marketing",
+        "p": "Clients → Marketing has 10 occasion templates such as Christmas, New Year, Valentine's Day, Women's Day, Mother's Day and Black Friday. Edit a few lines, add a discount, preview and send to clients who agreed to offers. The app also reminds you of client birthdays.",
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "See email marketing"
+        }
+      },
+      {
+        "h": "Multiple locations, staff schedule on the phone",
+        "p": "One owner account runs every location, switches between them from the menu and sees all locations' revenue on one page. Staff have their own login on the phone and see only their own appointments.",
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "See multiple locations"
+        }
+      },
+      {
+        "h": "Salon software pricing",
+        "p": "Every plan has every feature; plans differ only by staff per location and number of locations: Basic 199 CZK/month (3 staff, 1 location), Pro 499 CZK/month (8 staff per location, up to 3 locations) and Premium 799 CZK/month (unlimited). Paying yearly saves 10%. New salons get a free 150-day trial, no card needed.",
+        "link": {
+          "href": "/bang-gia",
+          "label": "See pricing"
+        }
+      },
+      {
+        "h": "Up and running in an afternoon",
+        "p": "No technical skills or complicated setup needed:",
+        "points": [
+          "Create a free account, enter the salon name and opening hours",
+          "Add staff, services, prices and how you pay staff",
+          "Share your booking link on Facebook, Instagram and Google",
+          "Stuck? Support answers in Vietnamese and Czech"
+        ]
+      }
+    ],
+    "faqTitle": "Salon management software questions",
+    "faq": [
+      {
+        "q": "Which salon software suits a Vietnamese-run nail salon in Czechia?",
+        "a": "SalonGo is made for Vietnamese-run nail and beauty salons in Europe: the app is in Vietnamese, clients book in Czech, Slovak, German, English, French or Vietnamese, prices are in CZK and support speaks Vietnamese and Czech."
+      },
+      {
+        "q": "Do I need to install anything?",
+        "a": "No. It runs in the browser on computers and phones. There is also a desktop app for Windows and Mac if you want it at the desk."
+      },
+      {
+        "q": "Is the trial free?",
+        "a": "Yes. Every new salon gets 150 days with every feature, no card needed."
+      },
+      {
+        "q": "Can staff see their schedule on their phone?",
+        "a": "Yes. Each staff member has their own login on the phone and sees only their own appointments."
+      },
+      {
+        "q": "How does the software calculate nail technicians' pay?",
+        "a": "Each technician is paid a percentage of their own revenue or a fixed monthly salary. The owner chooses how tips are shared: to whoever the client tipped, or split equally."
+      }
+    ]
   }
 }

@@ -945,5 +945,112 @@
     "phone": "Telefon",
     "pc": "Počítač",
     "zoomHint": "Klepnutím obrázek zvětšíte"
+  },
+  "guide": {
+    "metaTitle": "Rezervační systém pro salon a nehtové studio",
+    "metaDesc": "Co má umět rezervační systém a software pro salon a nehtové studio: online rezervace, pokladna, mzdy, spropitné, e-mailový marketing. SalonGo, 150 dní zdarma.",
+    "crumb": "Software pro salon",
+    "h1": "Rezervační systém a software pro salony a nehtová studia",
+    "intro": "Rezervace, pokladna, mzdy, spropitné a stálí klienti v jedné aplikaci. Co má software pro salon umět a jak to dělá SalonGo.",
+    "ctaTrial": "Vyzkoušet 150 dní zdarma",
+    "ctaFeatures": "Zobrazit funkce",
+    "ctaPricing": "Zobrazit ceník",
+    "shotAlt": "Přehled v softwaru pro salony SalonGo na telefonu",
+    "boxTitle": "150 dní zdarma, bez karty",
+    "boxText": "Každý tarif má všechny funkce, od 199 Kč měsíčně. Podpora česky a vietnamsky.",
+    "sections": [
+      {
+        "h": "Co je software pro správu salonu?",
+        "p": "Software pro salon spojí každodenní práci na jedno místo: rezervace, rozvrh personálu, pokladnu, karty klientů, tržby i mzdy. Místo papírového diáře, Excelu a zpráv vidí majitel v aplikaci, kdo dnes co dělá a kolik salon vydělal. SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje v prohlížeči, na počítačích s Windows a Mac i v telefonu."
+      },
+      {
+        "h": "Co má umět software pro nehtové studio?",
+        "p": "Nehtové studio má více techniček, hodně krátkých služeb, stálé klientky a spropitné. Dobrý systém by měl:",
+        "points": [
+          "Mít vlastní online rezervační stránku, kde si klient vybere službu, techničku a volný čas",
+          "Ukazovat kalendář pro každou techničku, abyste hned viděli, kdo má volno",
+          "Přijímat platby hotově, kartou i převodem a zapsat spropitné",
+          "Počítat mzdy automaticky procentem z tržeb nebo pevnou mzdou a dělit spropitné podle volby majitele",
+          "Ukazovat tržby po dnech, podle personálu a služeb"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "Všechny funkce"
+        }
+      },
+      {
+        "h": "Online rezervace nonstop, bez telefonování",
+        "p": "Každý salon má vlastní rezervační odkaz pro Facebook, Instagram nebo Google Mapy. Klienti se objednávají česky, německy, anglicky a dalšími jazyky. Rezervační stránka nabízí jen volné časy, takže nevznikají dvojité rezervace, a klienti s e-mailem dostanou připomínku 24 hodin a 1 hodinu předem.",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "Online rezervace"
+        }
+      },
+      {
+        "h": "Jasné mzdy a dělení spropitného",
+        "p": "Každý zaměstnanec má jeden způsob odměny: procento z vlastních tržeb (případně pro každou službu jiné) nebo pevnou měsíční mzdu. Spropitné se zapíše na doklad; majitel zvolí, zda ho dostane ten, komu ho klient dal, nebo se rozdělí rovným dílem. Na konci měsíce stačí otevřít mzdy a exportovat.",
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "Automatické mzdy"
+        }
+      },
+      {
+        "h": "Udržte si stálé klienty e-mailovým marketingem",
+        "p": "V části Klienti → Marketing je 10 šablon k příležitostem, například Vánoce, Nový rok, Valentýn, MDŽ, Den matek a Black Friday. Upravte pár řádků, přidejte slevu, zobrazte náhled a pošlete klientům se souhlasem. Aplikace také připomíná narozeniny klientů.",
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "E-mailový marketing"
+        }
+      },
+      {
+        "h": "Více poboček, personál v telefonu",
+        "p": "Jeden účet majitele spravuje všechny pobočky, přepíná mezi nimi v menu a tržby všech poboček vidí na jedné stránce. Zaměstnanci mají vlastní přihlášení v telefonu a vidí jen své rezervace.",
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "Více poboček"
+        }
+      },
+      {
+        "h": "Cena rezervačního systému",
+        "p": "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic 199 Kč/měsíc (3 zaměstnanci, 1 pobočka), Pro 499 Kč/měsíc (8 na pobočku, až 3 pobočky) a Premium 799 Kč/měsíc (neomezeně). Při roční platbě sleva 10 %. Nový salon má 150 dní zdarma, bez karty.",
+        "link": {
+          "href": "/bang-gia",
+          "label": "Ceník"
+        }
+      },
+      {
+        "h": "Spuštění za jedno odpoledne",
+        "p": "Bez technických znalostí a složitého nastavení:",
+        "points": [
+          "Založte účet zdarma, zadejte název salonu a otevírací dobu",
+          "Přidejte personál, služby, ceny a způsob odměňování",
+          "Sdílejte rezervační odkaz na Facebooku, Instagramu a Googlu",
+          "Podpora odpovídá česky a vietnamsky"
+        ]
+      }
+    ],
+    "faqTitle": "Otázky k rezervačnímu systému pro salony",
+    "faq": [
+      {
+        "q": "Jaký rezervační systém se hodí pro nehtové studio?",
+        "a": "SalonGo je určen pro nehtová studia a salony v Evropě, hlavně s vietnamskými majiteli: aplikace je česky i vietnamsky, klienti se objednávají v šesti jazycích, ceny jsou v Kč a podpora mluví česky a vietnamsky."
+      },
+      {
+        "q": "Musím něco instalovat?",
+        "a": "Ne. Funguje v prohlížeči na počítači i telefonu. Pro recepci je k dispozici také aplikace pro Windows a Mac."
+      },
+      {
+        "q": "Je zkušební doba zdarma?",
+        "a": "Ano. Každý nový salon má 150 dní se všemi funkcemi, bez platební karty."
+      },
+      {
+        "q": "Vidí zaměstnanci svůj rozvrh v telefonu?",
+        "a": "Ano. Každý zaměstnanec má vlastní přihlášení v telefonu a vidí jen své rezervace."
+      },
+      {
+        "q": "Jak systém počítá mzdy techniček?",
+        "a": "Každá technička má mzdu jako procento z vlastních tržeb, nebo pevnou měsíční mzdu. Majitel volí, zda spropitné dostane ta, které ho klient dal, nebo se dělí rovným dílem."
+      }
+    ]
   }
 }

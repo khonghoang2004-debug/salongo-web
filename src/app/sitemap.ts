@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 const paths = [
   "",
   "/tinh-nang",
+  "/phan-mem-quan-ly-salon",
   "/giai-phap",
   "/bang-gia",
   "/ve-salongo",

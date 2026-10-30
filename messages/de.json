@@ -944,5 +944,112 @@
     "phone": "Handy",
     "pc": "Computer",
     "zoomHint": "Zum Vergrößern auf das Bild tippen"
+  },
+  "guide": {
+    "metaTitle": "Salonsoftware für Nagelstudio und Salon",
+    "metaDesc": "Was Salonsoftware für Nagelstudios und Salons können sollte: Online-Terminbuchung, Kasse, Lohnabrechnung, Trinkgeld, E-Mail-Marketing. SalonGo, 150 Tage gratis.",
+    "crumb": "Salonsoftware",
+    "h1": "Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons",
+    "intro": "Termine, Kasse, Löhne, Trinkgeld und Stammkunden in einer App. Was eine Salonsoftware können sollte und wie SalonGo es macht.",
+    "ctaTrial": "150 Tage gratis testen",
+    "ctaFeatures": "Funktionen ansehen",
+    "ctaPricing": "Preise ansehen",
+    "shotAlt": "Übersicht der Salonsoftware SalonGo am Handy",
+    "boxTitle": "150 Tage gratis, ohne Karte",
+    "boxText": "Jeder Tarif mit allen Funktionen, ab 199 CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
+    "sections": [
+      {
+        "h": "Was ist eine Salonsoftware?",
+        "p": "Eine Salonsoftware bündelt die tägliche Arbeit an einem Ort: Terminbuchung, Dienstplan, Kasse, Kundenkartei, Umsatz und Lohnabrechnung. Statt Papierkalender, Excel und verstreuten Nachrichten sieht der Inhaber in der App, wer heute was macht und wie viel eingenommen wurde. SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa – im Browser, auf Windows- und Mac-Computern und am Handy."
+      },
+      {
+        "h": "Was sollte Software für ein Nagelstudio können?",
+        "p": "Nagelstudios haben mehrere Mitarbeiterinnen, viele kurze Leistungen, Stammkunden und Trinkgeld. Gute Software sollte:",
+        "points": [
+          "Eine eigene Online-Buchungsseite bieten, auf der Kunden Leistung, Mitarbeiterin und freie Zeit wählen",
+          "Einen Kalender pro Mitarbeiterin zeigen, damit man sofort sieht, wer frei ist",
+          "Zahlungen bar, per Karte oder Überweisung annehmen und Trinkgeld erfassen",
+          "Löhne automatisch als Prozent vom Umsatz oder als Festgehalt berechnen und Trinkgeld nach Wahl des Inhabers teilen",
+          "Umsatz nach Tag, Mitarbeiterin und Leistung auswerten"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "Alle Funktionen"
+        }
+      },
+      {
+        "h": "Online-Terminbuchung rund um die Uhr",
+        "p": "Jeder Salon bekommt einen eigenen Buchungslink für Facebook, Instagram oder Google Maps. Kunden buchen auf Deutsch, Tschechisch, Englisch und in weiteren Sprachen. Die Buchungsseite zeigt nur freie Zeiten, damit es keine Doppelbuchungen gibt, und Kunden mit E-Mail werden 24 Stunden und 1 Stunde vorher erinnert.",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "Online-Buchung"
+        }
+      },
+      {
+        "h": "Klare Löhne und Trinkgeld-Teilung",
+        "p": "Jede Mitarbeiterin hat eine Lohnart: Prozent vom eigenen Umsatz (auf Wunsch je Leistung) oder ein festes Monatsgehalt. Trinkgeld steht auf dem Beleg; der Inhaber wählt, ob es die Person bekommt, der der Kunde es gab, oder ob alles gleichmäßig geteilt wird. Am Monatsende die Abrechnung öffnen und exportieren.",
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "Automatische Lohnabrechnung"
+        }
+      },
+      {
+        "h": "Stammkunden halten mit E-Mail-Marketing",
+        "p": "Unter Kunden → Marketing gibt es 10 Vorlagen zu Anlässen wie Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Muttertag und Black Friday. Ein paar Zeilen anpassen, Rabatt hinzufügen, Vorschau ansehen und an Kunden mit Einwilligung senden. Die App erinnert außerdem an Kundengeburtstage.",
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "E-Mail-Marketing"
+        }
+      },
+      {
+        "h": "Mehrere Filialen, Team am Handy",
+        "p": "Ein Inhaberkonto führt alle Filialen, wechselt im Menü und zeigt den Umsatz aller Filialen auf einer Seite. Mitarbeiter haben ein eigenes Login am Handy und sehen nur ihre eigenen Termine.",
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "Mehrere Filialen"
+        }
+      },
+      {
+        "h": "Was kostet die Salonsoftware?",
+        "p": "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic 199 CZK/Monat (3 Mitarbeiter, 1 Filiale), Pro 499 CZK/Monat (8 pro Filiale, bis zu 3 Filialen) und Premium 799 CZK/Monat (unbegrenzt). Jährlich 10 % günstiger. Neue Salons testen 150 Tage gratis, ohne Karte.",
+        "link": {
+          "href": "/bang-gia",
+          "label": "Preise"
+        }
+      },
+      {
+        "h": "Startklar an einem Nachmittag",
+        "p": "Ohne Technikkenntnisse und ohne komplizierte Einrichtung:",
+        "points": [
+          "Kostenloses Konto anlegen, Salonname und Öffnungszeiten eingeben",
+          "Team, Leistungen, Preise und Lohnart hinzufügen",
+          "Buchungslink auf Facebook, Instagram und Google teilen",
+          "Support antwortet auf Vietnamesisch und Tschechisch"
+        ]
+      }
+    ],
+    "faqTitle": "Fragen zur Salonsoftware",
+    "faq": [
+      {
+        "q": "Welche Salonsoftware passt zu einem vietnamesischen Nagelstudio?",
+        "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in sechs Sprachen, und der Support spricht Vietnamesisch und Tschechisch."
+      },
+      {
+        "q": "Muss ich etwas installieren?",
+        "a": "Nein. Es läuft im Browser am Computer und Handy. Für die Theke gibt es zusätzlich eine App für Windows und Mac."
+      },
+      {
+        "q": "Ist der Test kostenlos?",
+        "a": "Ja. Jeder neue Salon testet 150 Tage mit allen Funktionen, ohne Kreditkarte."
+      },
+      {
+        "q": "Sehen Mitarbeiter ihren Kalender am Handy?",
+        "a": "Ja. Jede Mitarbeiterin hat ein eigenes Login am Handy und sieht nur ihre eigenen Termine."
+      },
+      {
+        "q": "Wie berechnet die Software die Löhne im Nagelstudio?",
+        "a": "Jede Mitarbeiterin erhält Prozent vom eigenen Umsatz oder ein festes Monatsgehalt. Der Inhaber wählt, wie Trinkgeld geteilt wird: an die Person, der der Kunde es gab, oder gleichmäßig."
+      }
+    ]
   }
 }

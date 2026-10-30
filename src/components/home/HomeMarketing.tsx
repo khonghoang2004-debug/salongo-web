@@ -79,8 +79,8 @@ export async function HomeMarketing() {
               </div>
               <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:hidden">
                 {([
-                  ["m-marketing-giang-sinh-v2.webp", "tplChristmas"],
-                  ["m-marketing-8-3-v2.webp", "tplWomensDay"],
+                  ["m-marketing-giang-sinh.webp", "tplChristmas"],
+                  ["m-marketing-8-3.webp", "tplWomensDay"],
                   ["m-marketing-soan.webp", "mkShotCompose"],
                 ] as const).map(([src, label]) => (
                   <figure key={src} className="w-[62vw] max-w-[240px] shrink-0 snap-center">

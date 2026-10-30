@@ -1,4 +1,4 @@
-/** Đường dẫn vào app Salora (web app, cũng mở được trong app desktop). */
+/** Đường dẫn vào app SalonGo (web app, cũng mở được trong app desktop). */
 export const APP_URL = "https://app.salongo.eu";
 
 export const SIGNUP_URL = `${APP_URL}/signup`;

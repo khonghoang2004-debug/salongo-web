@@ -128,7 +128,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 xl:px-4 ${
+                className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 2xl:px-4 ${
                   active
                     ? "bg-white text-brand-700 shadow-[0_0_0_1px_#ECE6E7]"
                     : "text-ink/70 hover:text-ink"
@@ -157,7 +157,7 @@ export function Navbar() {
           >
             {t("login")}
           </a>
-          <div className="relative hidden lg:block" ref={downloadRef}>
+          <div className="relative hidden xl:block" ref={downloadRef}>
             <button
               type="button"
               onClick={() => setDownloadOpen((v) => !v)}

@@ -26,6 +26,7 @@ const nextConfig = {
         permanent: true,
       })),
       { source: "/images/hero-image.png", destination: "/images/app/tong-quan.webp", permanent: true },
+      { source: "/images/og-image.png", destination: "/images/og-image-v2.png", permanent: false },
     ];
   },
 };

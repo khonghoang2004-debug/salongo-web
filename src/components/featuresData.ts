@@ -87,8 +87,8 @@ export const FEATURES: Feature[] = [
     anchor: "marketing",
     chapter: "c2",
     views: [
-      { src: A + "marketing-giang-sinh-v2.webp", icon: "Megaphone", mobile: A + "m-marketing-giang-sinh-v2.webp" },
-      { src: A + "marketing-8-3-v2.webp", icon: "Megaphone", mobile: A + "m-marketing-8-3-v2.webp" },
+      { src: A + "marketing-giang-sinh-v2.webp", icon: "Megaphone", mobile: A + "m-marketing-giang-sinh.webp" },
+      { src: A + "marketing-8-3-v2.webp", icon: "Megaphone", mobile: A + "m-marketing-8-3.webp" },
       { src: A + "sinh-nhat-noi-dung.webp", icon: "Cake", mobile: A + "m-sinh-nhat.webp" },
     ],
   },

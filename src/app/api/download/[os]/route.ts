@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 /**
- * /api/download/windows | /api/download/mac → 302 to the installer of the NEWEST published Salora Desktop version.
+ * /api/download/windows | /api/download/mac → 302 to the installer of the NEWEST published SalonGo Desktop version.
  *
  * GitHub's ".../releases/latest/download/…" only sees full releases, so builds published as pre-releases (unsigned
  * builds: download only, not pushed to the auto-update feed) were never offered. This picks the highest x.y.z among

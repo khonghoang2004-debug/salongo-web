@@ -30,7 +30,7 @@ const SOCIALS = [
 const linkBase = "rounded text-[15px] text-ink/70 transition-colors duration-200 hover:text-brand-700";
 const colTitle = "text-xs font-semibold uppercase tracking-[0.14em] text-muted";
 
-// Chân trang nền sáng: thương hiệu, điều hướng, liên hệ và chữ Salora lớn
+// Chân trang nền sáng: thương hiệu, điều hướng, liên hệ và chữ SalonGo lớn
 export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");

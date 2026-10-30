@@ -21,7 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "pages" });
   const pageUrl = `${siteConfig.url}/${locale}`;
   return {
-    title: t("homeTitle"),
+    // Trang chủ cùng cấp với layout nên title.template không áp dụng: tự ghép tên thương hiệu
+    title: `${t("homeTitle")} | ${siteConfig.name}`,
     description: t("homeDesc"),
     openGraph: {
       title: t("homeTitle"),

@@ -253,20 +253,20 @@
     "tagline": "Wachsen Sie mit SalonGo — die All-in-One-SaaS-Plattform für moderne Salonteams."
   },
   "pages": {
-    "homeTitle": "Startseite",
-    "homeDesc": "SalonGo – Salon-App für vietnamesische Salons in Europa: Kalender, Online-Buchung, Kasse, Lohn, Berichte. 150 Tage kostenlos.",
-    "featuresTitle": "Funktionen",
-    "featuresDesc": "Kernfunktionen: Termine, POS, Gehaltsabrechnung, Berichte, Mitarbeiter, Online-Buchung.",
-    "solutionsTitle": "Lösungen",
-    "solutionsDesc": "Typische Salon-Herausforderungen und wie SalonGo sie löst.",
-    "pricingTitle": "Preise",
+    "homeTitle": "Salonsoftware: Terminbuchung, Kasse, Lohn",
+    "homeDesc": "Software für Nagelstudios, Friseur- und Kosmetiksalons: Online-Terminbuchung, Kasse, Lohnabrechnung und Umsatzberichte, auch auf Vietnamesisch. 150 Tage gratis.",
+    "featuresTitle": "Funktionen: Online-Buchung, Kasse, Lohn",
+    "featuresDesc": "Online-Terminbuchung, Kalender pro Mitarbeiter, Kasse, Kunden, E-Mail-Marketing, Umsatzberichte, Lohnabrechnung und mehrere Filialen in einer Salon-App.",
+    "solutionsTitle": "Lösungen für Nagelstudios und Salons",
+    "solutionsDesc": "Keine Doppelbuchungen, falschen Löhne oder Kassenverluste: wie SalonGo Nagelstudios und Salons in Europa den Alltag erleichtert.",
+    "pricingTitle": "Preise der Salonsoftware",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 CZK/Monat, jährlich 10 % günstiger. Jeder Tarif mit allen Funktionen. 150 Tage testen, direkt in der App verlängern.",
     "aboutTitle": "Über SalonGo",
-    "aboutDesc": "Mission, Entstehung und Roadmap von SalonGo.",
-    "faqTitle": "FAQ",
-    "faqDesc": "SalonGo FAQ: Testphase, Tarif verlängern, Zahlung, Handy, Sprachen, mehrere Salons.",
-    "contactTitle": "Kontakt",
-    "contactDesc": "Kontakt per Formular oder E-Mail. Antwort innerhalb von 24 Stunden.",
+    "aboutDesc": "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons vietnamesischer Inhaber in Europa: Mission und Entwicklung.",
+    "faqTitle": "Häufige Fragen zur Salonsoftware",
+    "faqDesc": "Antworten zu SalonGo: 150 Tage gratis, Tarife, Verlängerung, Zahlung, Handy, Sprachen, mehrere Filialen, Lohn und Trinkgeld.",
+    "contactTitle": "Kontakt – Support auf Vietnamesisch",
+    "contactDesc": "Kontaktieren Sie SalonGo per Telefon, E-Mail, Facebook oder WhatsApp. Support auf Vietnamesisch und Tschechisch, Antwort innerhalb von 24 Stunden.",
     "privacyTitle": "Datenschutz",
     "privacyDesc": "SalonGo Datenschutzrichtlinie – wie wir die Privatsphäre der Nutzer schützen.",
     "termsTitle": "Nutzungsbedingungen",
@@ -821,11 +821,12 @@
   "metadata": {
     "description": "SalonGo – Salon-App: Kalender, Online-Buchung, Kasse, Lohnabrechnung und Umsatzberichte.",
     "keywords": [
-      "Salonverwaltung",
-      "Salon-Software",
-      "Salon-Terminbuchung",
-      "Mitarbeitergehälter",
-      "Salon-Umsatz"
+      "Salonsoftware",
+      "Terminbuchung Nagelstudio",
+      "Kassensystem Salon",
+      "Online-Terminbuchung Friseur",
+      "Lohnabrechnung Salon",
+      "SalonGo"
     ]
   },
   "notFound": {

@@ -253,20 +253,20 @@
     "tagline": "Rozvíjejte svůj salon se SalonGo — komplexní platforma pro moderní salony."
   },
   "pages": {
-    "homeTitle": "Domů",
-    "homeDesc": "SalonGo – aplikace pro vietnamské salony v Evropě: kalendář, online rezervace, pokladna, mzdy, přehledy. 150 dní zdarma.",
-    "featuresTitle": "Funkce",
-    "featuresDesc": "Základní funkce: rezervace, POS, mzdy, reporty, zaměstnanci, online rezervace.",
-    "solutionsTitle": "Řešení",
-    "solutionsDesc": "Typické obtíže salonů a jak je SalonGo řeší.",
-    "pricingTitle": "Ceník",
+    "homeTitle": "Rezervační systém a pokladna pro salony",
+    "homeDesc": "Software pro nehtová studia, kadeřnictví a kosmetické salony: online rezervace, pokladna, mzdy a přehledy tržeb. Česky i vietnamsky. 150 dní zdarma.",
+    "featuresTitle": "Funkce: online rezervace, pokladna, mzdy",
+    "featuresDesc": "Online rezervace, kalendář podle personálu, pokladna, klienti, e-mailový marketing, přehledy tržeb, mzdy a více poboček v jedné aplikaci pro salony.",
+    "solutionsTitle": "Řešení pro nehtová studia a salony",
+    "solutionsDesc": "Žádné dvojité rezervace, chyby ve mzdách ani ztráty na pokladně: jak SalonGo pomáhá nehtovým studiím a salonům v Česku a v Evropě.",
+    "pricingTitle": "Ceník rezervačního systému pro salony",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 Kč/měsíc, ročně o 10 % levněji. Každý tarif má všechny funkce. 150 dní zdarma, prodloužení přímo v aplikaci.",
     "aboutTitle": "O SalonGo",
-    "aboutDesc": "Mise, důvody vzniku a roadmapa SalonGo.",
-    "faqTitle": "FAQ",
-    "faqDesc": "Časté dotazy k Saloře: zkušební doba, prodloužení tarifu, platba, telefon, jazyky, více salonů.",
-    "contactTitle": "Kontakt",
-    "contactDesc": "Kontakt přes formulář nebo e-mail. Odpověď do 24 hodin.",
+    "aboutDesc": "SalonGo je software pro správu salonů, vytvořený pro nehtová studia, kadeřnictví a kosmetické salony vietnamských majitelů v Evropě.",
+    "faqTitle": "Časté dotazy k rezervačnímu systému",
+    "faqDesc": "Odpovědi o SalonGo: 150 dní zdarma, tarify, prodloužení, platba, telefon, jazyky, více poboček, mzdy a spropitné.",
+    "contactTitle": "Kontakt – podpora česky a vietnamsky",
+    "contactDesc": "Kontaktujte SalonGo telefonem, e-mailem, přes Facebook nebo WhatsApp. Podpora česky a vietnamsky, odpověď do 24 hodin.",
     "privacyTitle": "Zásady ochrany osobních údajů",
     "privacyDesc": "Zásady ochrany osobních údajů SalonGo – jak chráníme soukromí uživatelů.",
     "termsTitle": "Podmínky užití",
@@ -821,11 +821,13 @@
   "metadata": {
     "description": "SalonGo – aplikace pro salony: kalendář, online rezervace, pokladna, mzdy a přehled tržeb.",
     "keywords": [
-      "správa salonu",
-      "software pro salony",
-      "rezervace salonu",
-      "mzdy zaměstnanců",
-      "příjmy salonu"
+      "rezervační systém pro salon",
+      "software pro kosmetický salon",
+      "aplikace pro nehtové studio",
+      "pokladna pro salon",
+      "online rezervace salon",
+      "mzdy v salonu",
+      "SalonGo"
     ]
   },
   "notFound": {

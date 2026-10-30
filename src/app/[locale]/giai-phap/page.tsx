@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
@@ -12,10 +13,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages" });
-  return {
-    title: t("solutionsTitle"),
-    description: t("solutionsDesc"),
-  };
+  return pageMetadata({ locale, path: "/giai-phap", title: t("solutionsTitle"), description: t("solutionsDesc") });
 }
 
 export default async function SolutionsPage({ params }: Props) {

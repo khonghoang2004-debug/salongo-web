@@ -253,20 +253,20 @@
     "tagline": "SalonGo — chuẩn mực mới cho vận hành salon"
   },
   "pages": {
-    "homeTitle": "Trang chủ",
-    "homeDesc": "SalonGo – app quản lý salon cho người Việt ở châu Âu: lịch hẹn, đặt lịch online, tính tiền, tính lương, báo cáo. Dùng thử 150 ngày.",
-    "featuresTitle": "Tính năng",
-    "featuresDesc": "Khám phá các tính năng cốt lõi: lịch hẹn, POS, tính lương, báo cáo, quản lý nhân viên, đặt lịch online.",
-    "solutionsTitle": "Giải pháp",
-    "solutionsDesc": "Những khó khăn salon thường gặp và cách SalonGo giải quyết – vấn đề, giải pháp, kết quả.",
-    "pricingTitle": "Bảng giá",
+    "homeTitle": "Phần mềm quản lý salon, tiệm nail cho người Việt",
+    "homeDesc": "Phần mềm quản lý tiệm nail, salon tóc, mi, spa của người Việt ở châu Âu: đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử 150 ngày miễn phí.",
+    "featuresTitle": "Tính năng: đặt lịch online, tính tiền, tính lương",
+    "featuresDesc": "Đặt lịch online, lịch hẹn theo thợ, tính tiền, khách hàng, email marketing, báo cáo doanh thu, tính lương và đa chi nhánh trong một app tiếng Việt.",
+    "solutionsTitle": "Giải pháp quản lý tiệm nail, salon tóc",
+    "solutionsDesc": "Hết trùng lịch, tính sai lương, thất thoát ở quầy: cách SalonGo giúp tiệm nail và salon của người Việt ở châu Âu quản lý gọn từng việc.",
+    "pricingTitle": "Bảng giá phần mềm quản lý salon",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 CZK/tháng, trả theo năm giảm 10%. Gói nào cũng đủ tính năng. Dùng thử 150 ngày, gia hạn ngay trong app.",
     "aboutTitle": "Về SalonGo",
-    "aboutDesc": "Sứ mệnh, lý do ra đời và định hướng phát triển của SalonGo.",
-    "faqTitle": "FAQ",
-    "faqDesc": "Câu hỏi thường gặp về SalonGo: dùng thử, gia hạn gói, thanh toán, điện thoại, ngôn ngữ, nhiều salon.",
-    "contactTitle": "Liên hệ",
-    "contactDesc": "Liên hệ SalonGo qua form hoặc email. Cam kết phản hồi trong 24 giờ.",
+    "aboutDesc": "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. Sứ mệnh và định hướng phát triển.",
+    "faqTitle": "Câu hỏi thường gặp về phần mềm quản lý salon",
+    "faqDesc": "Giải đáp về SalonGo: dùng thử 150 ngày, giá gói, gia hạn, thanh toán, dùng trên điện thoại, ngôn ngữ, nhiều chi nhánh, tính lương và tip.",
+    "contactTitle": "Liên hệ hỗ trợ tiếng Việt, tiếng Séc",
+    "contactDesc": "Liên hệ SalonGo qua điện thoại, email, Facebook hoặc WhatsApp. Hỗ trợ bằng tiếng Việt và tiếng Séc, phản hồi trong 24 giờ.",
     "privacyTitle": "Chính sách bảo mật",
     "privacyDesc": "Chính sách bảo mật của SalonGo – cách chúng tôi bảo vệ quyền riêng tư của người dùng.",
     "termsTitle": "Điều khoản sử dụng",
@@ -821,11 +821,13 @@
   "metadata": {
     "description": "SalonGo – app quản lý salon: lịch hẹn, đặt lịch online, tính tiền, tính lương và báo cáo doanh thu. Đơn giản, bằng tiếng Việt.",
     "keywords": [
-      "quản lý salon",
-      "phần mềm salon",
-      "đặt lịch salon",
-      "tính lương thợ",
-      "doanh thu salon"
+      "phần mềm quản lý salon",
+      "phần mềm quản lý tiệm nail",
+      "app quản lý tiệm nail",
+      "đặt lịch online cho salon",
+      "tính lương thợ nail",
+      "quản lý salon ở Séc",
+      "SalonGo"
     ]
   },
   "notFound": {

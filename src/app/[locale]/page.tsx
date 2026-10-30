@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
@@ -13,36 +14,15 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/lib/metadata";
+import { CONTACT_EMAIL, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_PHONE } from "@/lib/contact";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages" });
-  const pageUrl = `${siteConfig.url}/${locale}`;
-  return {
-    // Trang chủ cùng cấp với layout nên title.template không áp dụng: tự ghép tên thương hiệu
-    title: `${t("homeTitle")} | ${siteConfig.name}`,
-    description: t("homeDesc"),
-    openGraph: {
-      title: t("homeTitle"),
-      description: t("homeDesc"),
-      url: pageUrl,
-      images: [
-        {
-          url: `${siteConfig.url}${siteConfig.ogImage}`,
-          width: 1200,
-          height: 630,
-          alt: t("homeTitle"),
-        },
-      ],
-    },
-    twitter: {
-      title: t("homeTitle"),
-      description: t("homeDesc"),
-      images: [`${siteConfig.url}${siteConfig.ogImage}`],
-    },
-  };
+  // Trang chủ: tiêu đề đầy đủ có từ khoá + tên thương hiệu (template của layout không áp dụng ở cùng cấp)
+  return pageMetadata({ locale, title: `${t("homeTitle")} | ${siteConfig.name}`, description: t("homeDesc"), absolute: true });
 }
 
 export default async function Home({ params }: Props) {
@@ -53,6 +33,7 @@ export default async function Home({ params }: Props) {
   const ogImageUrl = `${base}${siteConfig.ogImage}`;
   const pageUrl = `${base}/${locale}`;
   const tPage = await getTranslations({ locale, namespace: "pages" });
+  const org = `${base}/#organization`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -62,25 +43,48 @@ export default async function Home({ params }: Props) {
         url: pageUrl,
         name: siteConfig.name,
         description: tPage("homeDesc"),
-        image: ogImageUrl,
+        inLanguage: locale,
+        publisher: { "@id": org },
       },
       {
         "@type": "Organization",
-        "@id": `${base}/#organization`,
+        "@id": org,
         name: siteConfig.name,
         url: base,
-        logo: `${base}${siteConfig.logo}`,
+        logo: `${base}/icon-512.png`,
         image: ogImageUrl,
+        email: CONTACT_EMAIL,
+        telephone: CONTACT_PHONE,
+        sameAs: [CONTACT_FACEBOOK, CONTACT_INSTAGRAM],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          email: CONTACT_EMAIL,
+          telephone: CONTACT_PHONE,
+          availableLanguage: ["vi", "cs"],
+        },
       },
       {
         "@type": "SoftwareApplication",
         "@id": `${base}/#software`,
         name: siteConfig.name,
-        url: base,
+        url: pageUrl,
         applicationCategory: "BusinessApplication",
-        operatingSystem: "Web",
+        applicationSubCategory: "Salon management software",
+        operatingSystem: "Web, Windows, macOS",
+        inLanguage: ["vi", "cs", "sk", "en", "de", "fr"],
         image: ogImageUrl,
         description: tPage("homeDesc"),
+        publisher: { "@id": org },
+        // Giá các gói đang bán trong app (Basic 199, Pro 499, Premium 799 CZK/tháng)
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "CZK",
+          lowPrice: 199,
+          highPrice: 799,
+          offerCount: 3,
+          url: `${pageUrl}/bang-gia`,
+        },
       },
     ],
   };

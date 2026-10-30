@@ -253,20 +253,20 @@
     "tagline": "Grow your business with SalonGo — the all-in-one SaaS platform for modern teams."
   },
   "pages": {
-    "homeTitle": "Home",
-    "homeDesc": "SalonGo – salon management app for Vietnamese salons in Europe: calendar, online booking, checkout, payroll, reports. 150-day free trial.",
-    "featuresTitle": "Features",
-    "featuresDesc": "Core features: appointments, POS, payroll, reports, staff management, online booking.",
-    "solutionsTitle": "Solutions",
-    "solutionsDesc": "Common salon challenges and how SalonGo solves them – problem, solution, result.",
-    "pricingTitle": "Pricing",
+    "homeTitle": "Salon & nail salon management software",
+    "homeDesc": "Software for nail, hair, lash and beauty salons in Europe: online booking, checkout, payroll and revenue reports, in Vietnamese and Czech. 150-day free trial.",
+    "featuresTitle": "Features: online booking, checkout, payroll",
+    "featuresDesc": "Online booking, staff calendar, checkout, clients, email marketing, revenue reports, payroll and multiple locations in one salon management app.",
+    "solutionsTitle": "Solutions for nail and beauty salons",
+    "solutionsDesc": "No double bookings, payroll mistakes or cash losses: how SalonGo helps Vietnamese-run nail and beauty salons in Europe run smoothly.",
+    "pricingTitle": "Salon software pricing",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 CZK/month, 10% off yearly. Every plan has every feature. 150-day trial, renew right in the app.",
     "aboutTitle": "About SalonGo",
-    "aboutDesc": "Our mission, why we built SalonGo and product roadmap.",
-    "faqTitle": "FAQ",
-    "faqDesc": "SalonGo FAQ: trial, plan renewal, payment, phone use, languages, several salons.",
-    "contactTitle": "Contact",
-    "contactDesc": "Contact SalonGo via form or email. We respond within 24 hours.",
+    "aboutDesc": "SalonGo is salon management software built for Vietnamese-run nail, hair, lash and beauty salons in Europe: our mission and roadmap.",
+    "faqTitle": "Salon software FAQ",
+    "faqDesc": "Answers about SalonGo: 150-day trial, plans, renewal, payment, phone use, languages, multiple locations, payroll and tips.",
+    "contactTitle": "Contact – support in Vietnamese and Czech",
+    "contactDesc": "Contact SalonGo by phone, email, Facebook or WhatsApp. Support in Vietnamese and Czech, with a reply within 24 hours.",
     "privacyTitle": "Privacy policy",
     "privacyDesc": "SalonGo privacy policy – how we protect user privacy.",
     "termsTitle": "Terms of Service",
@@ -821,11 +821,12 @@
   "metadata": {
     "description": "SalonGo – salon management app: calendar, online booking, checkout, payroll and revenue reports.",
     "keywords": [
-      "salon management",
-      "salon software",
-      "salon booking",
-      "staff payroll",
-      "salon revenue"
+      "salon management software",
+      "nail salon software",
+      "salon booking software",
+      "salon POS",
+      "salon payroll",
+      "SalonGo"
     ]
   },
   "notFound": {

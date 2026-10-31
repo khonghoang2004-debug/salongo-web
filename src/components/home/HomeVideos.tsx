@@ -20,7 +20,7 @@ export async function HomeVideos() {
     <section id="video" className="sg-section scroll-mt-20">
       <div className="sg-container">
         <div className="rounded-[24px] bg-[#FBF7F7] px-3 py-8 ring-1 ring-[#F1E8EA] sm:rounded-[32px] sm:px-8 sm:py-12 lg:px-12 lg:py-14">
-          <SectionHead kicker={t("kicker")} title={t("title")} lead={t("lead")} />
+          <SectionHead kicker={t("kicker")} title={t("title")} />
           <VideoTabs items={items} playLabel={t("play")} note={t("note")} moreLabel={t("more")} />
         </div>
       </div>

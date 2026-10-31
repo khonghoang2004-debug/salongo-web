@@ -332,7 +332,9 @@
     "title": "Có cả app cho máy tính",
     "subtitle": "Để sẵn ở quầy lễ tân, mở là dùng. Đăng nhập bằng cùng tài khoản SalonGo.",
     "windows": "Tải cho Windows",
-    "mac": "Tải cho Mac"
+    "mac": "Tải cho Mac",
+    "for": "Tải về cho",
+    "note": "Luôn là bản mới nhất"
   },
   "trust": {
     "eyebrow": "Vì sao chọn SalonGo",

@@ -332,7 +332,9 @@
     "title": "K dispozici i pro počítač",
     "subtitle": "Mějte ji otevřenou na recepci. Přihlásíte se stejným účtem SalonGo.",
     "windows": "Stáhnout pro Windows",
-    "mac": "Stáhnout pro Mac"
+    "mac": "Stáhnout pro Mac",
+    "for": "Stáhnout pro",
+    "note": "Vždy nejnovější verze"
   },
   "trust": {
     "eyebrow": "Proč SalonGo",

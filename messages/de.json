@@ -332,7 +332,9 @@
     "title": "Auch als Desktop-App",
     "subtitle": "Am Empfang immer offen. Anmeldung mit demselben SalonGo-Konto.",
     "windows": "Download für Windows",
-    "mac": "Download für Mac"
+    "mac": "Download für Mac",
+    "for": "Download für",
+    "note": "Immer die neueste Version"
   },
   "trust": {
     "eyebrow": "Warum SalonGo",

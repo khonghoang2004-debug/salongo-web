@@ -8,7 +8,7 @@ const MAC_DOWNLOAD_URL = DOWNLOAD_LINKS.mac;
 
 const WindowsIcon = () => (
   <svg
-    className="size-5 shrink-0"
+    className="size-7 shrink-0"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden
@@ -22,7 +22,7 @@ const WindowsIcon = () => (
 
 const AppleIcon = () => (
   <svg
-    className="size-5 shrink-0"
+    className="size-7 shrink-0"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden
@@ -31,13 +31,14 @@ const AppleIcon = () => (
   </svg>
 );
 
-// Thẻ tải ứng dụng máy tính (dùng trong khối giá trên trang chủ)
+// Thẻ tải ứng dụng máy tính (dùng trong khối giá trên trang chủ). Nút tải kiểu huy hiệu cửa hàng ứng dụng:
+// nền tối, logo hệ điều hành, dòng nhỏ "Tải về cho" + tên nền tảng.
 export async function DownloadCard() {
   const t = await getTranslations("download");
 
   const items = [
-    { href: WINDOWS_DOWNLOAD_URL, file: "SalonGo-Setup.exe", label: t("windows"), Icon: WindowsIcon, ext: ".exe" },
-    { href: MAC_DOWNLOAD_URL, file: "SalonGo-Setup.dmg", label: t("mac"), Icon: AppleIcon, ext: ".dmg" },
+    { href: WINDOWS_DOWNLOAD_URL, file: "SalonGo-Setup.exe", label: t("windows"), platform: "Windows", Icon: WindowsIcon },
+    { href: MAC_DOWNLOAD_URL, file: "SalonGo-Setup.dmg", label: t("mac"), platform: "macOS", Icon: AppleIcon },
   ];
 
   return (
@@ -47,26 +48,36 @@ export async function DownloadCard() {
         {t("title")}
       </h2>
       <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("subtitle")}</p>
-      <div className="mt-6 grid gap-3 lg:mt-auto lg:pt-8">
-        {items.map(({ href, file, label, Icon, ext }) => (
-          <a
-            key={file}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            download={file}
-            className="group flex min-h-14 items-center gap-4 rounded-2xl border border-line bg-[#FBF7F7] px-4 py-3 transition-colors hover:border-ink"
-          >
-            <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-ink text-white">
+      <div className="mt-6 lg:mt-auto lg:pt-8">
+        <div className="grid gap-3 sm:grid-cols-2">
+          {items.map(({ href, file, label, platform, Icon }) => (
+            <a
+              key={file}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              download={file}
+              aria-label={label}
+              className="group relative flex h-[64px] items-center gap-3.5 overflow-hidden rounded-2xl bg-ink pl-4 pr-5 text-white shadow-[0_14px_30px_-16px_rgba(20,8,12,0.75)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#2b2226] hover:shadow-[0_18px_36px_-16px_rgba(20,8,12,0.8)]"
+            >
+              {/* ánh sáng nhẹ phía trên cho cảm giác nổi khối */}
+              <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/[0.07] to-transparent" />
               <Icon />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block font-semibold text-ink">{label}</span>
-              <span className="block text-xs text-muted">{ext}</span>
-            </span>
-            <Download className="size-5 shrink-0 text-muted transition group-hover:translate-y-0.5 group-hover:text-ink" aria-hidden />
-          </a>
-        ))}
+              <span className="min-w-0 flex-1 leading-none">
+                <span className="block text-[11px] font-medium text-white/60">{t("for")}</span>
+                <span className="mt-1 block font-display text-[1.25rem] font-semibold tracking-[-0.02em]">{platform}</span>
+              </span>
+              <Download
+                className="hidden size-[18px] shrink-0 text-white/45 transition max-sm:block xl:block duration-200 group-hover:translate-y-0.5 group-hover:text-white"
+                aria-hidden
+              />
+            </a>
+          ))}
+        </div>
+        <p className="mt-3 flex items-center gap-2 text-xs text-muted">
+          <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden />
+          {t("note")}
+        </p>
       </div>
     </div>
   );

@@ -4,6 +4,8 @@ import { ArrowRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PhoneShot } from "../ui/AppShot";
 import { DeviceSwitch } from "../ui/DeviceSwitch";
+import { VideoModalButton } from "../video/VideoModalButton";
+import { videoById } from "@/lib/videos";
 
 const A = "/images/app/";
 const POINTS = [1, 2, 3, 4] as const;
@@ -12,6 +14,7 @@ const POINTS = [1, 2, 3, 4] as const;
 // vì thợ đi làm chỉ mang điện thoại). Ảnh chụp thật từ app.
 export async function HomeHighlights() {
   const h = await getTranslations("home2");
+  const v = await getTranslations("videos");
 
   return (
     <>
@@ -21,12 +24,21 @@ export async function HomeHighlights() {
           <div data-reveal className="lg:col-span-5">
             <p className="sg-kicker">{h("hlBranchEyebrow")}</p>
             <h2 className="sg-h2 mt-4">{h("hlBranchTitle")}</h2>
-            <p className="sg-lead mt-5">{h("hlBranchLead")}</p>
             <Points h={h} prefix="hlBranch" />
-            <Link href="/tinh-nang#da-chi-nhanh" className="btn-secondary sg-arrow mt-6 px-6 py-3 text-sm lg:mt-9">
-              {h("featureMore")}
-              <ArrowRight className="size-4" aria-hidden />
-            </Link>
+            <div className="mt-6 flex flex-wrap items-center gap-3 lg:mt-9">
+              <VideoModalButton
+                video={videoById("branches")}
+                title={v("items.branches.title")}
+                label={v("watch")}
+                playLabel={v("play")}
+                closeLabel={v("close")}
+                note={v("note")}
+              />
+              <Link href="/tinh-nang#da-chi-nhanh" className="btn-secondary sg-arrow px-6 py-3 text-sm">
+                {h("featureMore")}
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </div>
           </div>
 
           <div data-reveal="scale" className="lg:col-span-7">

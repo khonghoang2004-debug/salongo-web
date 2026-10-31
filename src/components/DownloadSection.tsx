@@ -60,8 +60,6 @@ export async function DownloadCard() {
               aria-label={label}
               className="group relative flex h-[64px] items-center gap-3.5 overflow-hidden rounded-2xl bg-ink pl-4 pr-5 text-white shadow-[0_14px_30px_-16px_rgba(20,8,12,0.75)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#2b2226] hover:shadow-[0_18px_36px_-16px_rgba(20,8,12,0.8)]"
             >
-              {/* ánh sáng nhẹ phía trên cho cảm giác nổi khối */}
-              <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/[0.07] to-transparent" />
               <Icon />
               <span className="min-w-0 flex-1 leading-none">
                 <span className="block text-[11px] font-medium text-white/60">{t("for")}</span>
@@ -75,7 +73,7 @@ export async function DownloadCard() {
           ))}
         </div>
         <p className="mt-3 flex items-center gap-2 text-xs text-muted">
-          <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden />
+          <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
           {t("note")}
         </p>
       </div>

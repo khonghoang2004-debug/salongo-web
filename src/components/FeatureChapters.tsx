@@ -126,19 +126,31 @@ function FeatureShowcase({ feature, index, t, video }: { feature: Feature; index
 
       <div className="mt-6 sm:mt-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t("youCan")}</p>
-        <ul data-stagger className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-          {[1, 2, 3, 4].map((i) => (
-            <li key={i} className="rounded-2xl border border-line bg-white p-5">
-              <div className="flex items-start gap-2.5">
-                <CircleCheck className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-                <div>
-                  <h4 className="font-semibold leading-snug text-ink">{t(k(`p${i}Title`))}</h4>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">{t(k(`p${i}Text`))}</p>
+        {/* Tính năng đã có video: chỉ giữ 4 ý chính, phần giải thích đã có trong video */}
+        {video ? (
+          <ul data-stagger className="mt-3 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
+            {[1, 2, 3, 4].map((i) => (
+              <li key={i} className="flex items-center gap-2.5 rounded-xl border border-line bg-white px-4 py-3.5">
+                <CircleCheck className="size-5 shrink-0 text-accent" aria-hidden />
+                <span className="font-semibold leading-snug text-ink">{t(k(`p${i}Title`))}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <ul data-stagger className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <li key={i} className="rounded-2xl border border-line bg-white p-5">
+                <div className="flex items-start gap-2.5">
+                  <CircleCheck className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+                  <div>
+                    <h4 className="font-semibold leading-snug text-ink">{t(k(`p${i}Title`))}</h4>
+                    <p className="mt-1 text-sm leading-relaxed text-muted">{t(k(`p${i}Text`))}</p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </article>
   );

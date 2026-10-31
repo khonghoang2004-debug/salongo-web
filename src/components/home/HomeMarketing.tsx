@@ -2,6 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight, Cake, Check, Eye, Languages, MailCheck, Megaphone } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PhoneShot } from "../ui/AppShot";
+import { VideoModalButton } from "../video/VideoModalButton";
+import { videoById } from "@/lib/videos";
 
 const A = "/images/app/";
 
@@ -30,6 +32,7 @@ const POINTS = [
 // Email marketing ngay trong app: khối nổi bật trên trang chủ, ảnh chụp thật từ trình soạn
 export async function HomeMarketing() {
   const h = await getTranslations("home2");
+  const v = await getTranslations("videos");
 
   return (
     <section id="marketing" className="sg-section scroll-mt-24 pt-0 sm:pt-0 lg:pt-0">
@@ -44,7 +47,6 @@ export async function HomeMarketing() {
               <h2 className="mt-4 font-display text-[1.875rem] font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-[2.375rem] lg:text-[2.75rem]">
                 {h("mkTitle")}
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-[1.0625rem]">{h("mkLead")}</p>
 
               <ul data-stagger className="mt-6 space-y-3.5">
                 {POINTS.map(({ i, Icon }) => (
@@ -57,13 +59,23 @@ export async function HomeMarketing() {
                 ))}
               </ul>
 
-              <Link
-                href="/tinh-nang#marketing"
-                className="sg-arrow mt-8 inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50"
-              >
-                {h("mkCta")}
-                <ArrowRight className="size-4" aria-hidden />
-              </Link>
+              <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <VideoModalButton
+                  video={videoById("marketing")}
+                  title={v("items.marketing.title")}
+                  label={v("watch")}
+                  playLabel={v("play")}
+                  closeLabel={v("close")}
+                  note={v("note")}
+                />
+                <Link
+                  href="/tinh-nang#marketing"
+                  className="sg-arrow inline-flex min-h-11 items-center gap-2 px-2 text-sm font-semibold text-white/90 hover:text-white"
+                >
+                  {h("mkCta")}
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+              </div>
             </div>
 
             <div data-reveal="scale" className="min-w-0 lg:col-span-7">

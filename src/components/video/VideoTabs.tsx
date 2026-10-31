@@ -87,11 +87,8 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
 
       <div className="mt-5 lg:col-span-8 lg:mt-0">
         <FeatureVideo key={cur.id} video={video} title={cur.title} playLabel={playLabel} note={note} />
-        <div className="mt-5 flex flex-col gap-3 px-1 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
-          <div>
-            <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink sm:text-xl">{cur.title}</h3>
-            <p className="mt-1.5 max-w-[560px] text-[15px] leading-relaxed text-muted">{cur.desc}</p>
-          </div>
+        <div className="mt-4 flex flex-col gap-1 px-1 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+          <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink sm:text-xl">{cur.title}</h3>
           <Link
             href={`/tinh-nang#${cur.anchor}`}
             className="sg-arrow inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-brand-700 hover:text-brand-800"

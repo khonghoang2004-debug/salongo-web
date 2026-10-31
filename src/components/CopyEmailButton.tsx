@@ -39,7 +39,7 @@ export function CopyEmailButton() {
         <Copy className="size-4" strokeWidth={2} aria-hidden />
       </button>
       {copied && (
-        <span className="text-xs font-medium text-emerald-600" role="status">
+        <span className="text-xs font-medium text-brand-700" role="status">
           {t("copyCopied")}
         </span>
       )}

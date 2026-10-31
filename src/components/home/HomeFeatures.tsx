@@ -33,6 +33,7 @@ export async function HomeFeatures() {
     <section className="sg-section">
       <div className="sg-container">
         <SectionHead
+          cols="content"
           kicker={h("bentoEyebrow")}
           title={h("bentoTitle")}
           lead={h("bentoLead")}

@@ -36,7 +36,7 @@ export async function HomeHero() {
     <>
       <section className="pt-1.5 sm:pt-3">
         <div className="sg-panel overflow-hidden !border-brand-700 !bg-brand-700">
-          <div className="mx-auto max-w-[1160px] px-1.5 pt-7 text-center sm:px-8 sm:pt-14 lg:pt-16">
+          <div className="mx-auto max-w-[1160px] px-1.5 pb-9 pt-7 text-center sm:px-8 sm:pb-0 sm:pt-14 lg:pt-16">
             <span className="sg-eyebrow sg-in !border-white/25 !bg-white/10 !text-white" style={d(0)}>
               <span className="size-1.5 rounded-full bg-white" aria-hidden />
               {t("badge")}
@@ -77,8 +77,8 @@ export async function HomeHero() {
             </ul>
           </div>
 
-          {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn */}
-          <div className="relative mx-auto mt-8 max-w-[1180px] px-3 pb-4 sm:mt-12 sm:px-10 sm:pb-12 lg:mt-14 lg:px-16 lg:pb-16">
+          {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn. Điện thoại: ẩn để màn hình đầu gọn */}
+          <div className="relative mx-auto mt-8 hidden max-w-[1180px] sm:block px-3 pb-4 sm:mt-12 sm:px-10 sm:pb-12 lg:mt-14 lg:px-16 lg:pb-16">
             {/* Mobile: nút gạt Điện thoại / Máy tính; PC: ảnh máy tính */}
             <DeviceSwitch
               className="sg-stage"

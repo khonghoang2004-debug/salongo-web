@@ -14,9 +14,9 @@ export type SalonVideo = {
 
 export const VIDEOS: SalonVideo[] = [
   { id: "booking", file: "salongo-lich-hen", duration: "0:59", iso: "PT59S" },
-  { id: "checkout", file: "salongo-tinh-tien", duration: "1:00", iso: "PT1M" },
-  { id: "marketing", file: "salongo-marketing", duration: "0:51", iso: "PT51S" },
-  { id: "payroll", file: "salongo-tinh-luong", duration: "0:50", iso: "PT50S" },
+  { id: "checkout", file: "salongo-tinh-tien", duration: "0:59", iso: "PT59S" },
+  { id: "marketing", file: "salongo-marketing", duration: "0:50", iso: "PT50S" },
+  { id: "payroll", file: "salongo-tinh-luong", duration: "0:51", iso: "PT51S" },
   { id: "branches", file: "salongo-chi-nhanh", duration: "0:46", iso: "PT46S" },
 ];
 

@@ -35,19 +35,19 @@ export async function HomeHero() {
   return (
     <>
       <section className="pt-1.5 sm:pt-3">
-        <div className="sg-panel overflow-hidden">
+        <div className="sg-panel overflow-hidden !border-brand-700 !bg-brand-700">
           <div className="mx-auto max-w-[1160px] px-1.5 pt-7 text-center sm:px-8 sm:pt-14 lg:pt-16">
-            <span className="sg-eyebrow sg-in" style={d(0)}>
-              <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
+            <span className="sg-eyebrow sg-in !border-white/25 !bg-white/10 !text-white" style={d(0)}>
+              <span className="size-1.5 rounded-full bg-white" aria-hidden />
               {t("badge")}
             </span>
 
-            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.045em] text-ink sm:text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
+            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.045em] text-white sm:text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
               <span className="block">{words(t("title1"))}</span>
-              <span className="block text-brand-700">{words(t("titleAccent"))}</span>
+              <span className="block text-[#F7C6D3]">{words(t("titleAccent"))}</span>
             </h1>
 
-            <p className="sg-lead sg-in mx-auto mt-5 max-w-[640px]" style={d(560)}>
+            <p className="sg-lead sg-in mx-auto mt-5 max-w-[640px] !text-white/85" style={d(560)}>
               {t("subtitle")}
             </p>
 
@@ -56,21 +56,21 @@ export async function HomeHero() {
                 href={SIGNUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary sg-arrow sg-arrow-up px-7 py-4 text-base"
+                className="btn-on-gradient sg-arrow sg-arrow-up px-7 py-4 text-base"
               >
                 {t("cta")}
                 <ArrowUpRight className="size-[18px]" aria-hidden />
               </a>
-              <a href="#video" className="btn-secondary px-7 py-4 text-base">
-                <Play className="size-[18px] fill-current text-brand-700" aria-hidden />
+              <a href="#video" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/50 px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-white/10">
+                <Play className="size-[18px] fill-current" aria-hidden />
                 {v("heroVideo")}
               </a>
             </div>
 
-            <ul className="sg-in mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted" style={d(780)}>
+            <ul className="sg-in mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/85" style={d(780)}>
               {(["trial1", "trial2", "trial3"] as const).map((k) => (
                 <li key={k} className="flex items-center gap-1.5">
-                  <Check className="size-4 text-brand-700" strokeWidth={2.5} aria-hidden />
+                  <Check className="size-4 text-white" strokeWidth={2.5} aria-hidden />
                   {t(k)}
                 </li>
               ))}
@@ -84,7 +84,7 @@ export async function HomeHero() {
               className="sg-stage"
               phone={<PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority className="mx-auto max-w-[270px]" />}
               pc={
-              <div className="sg-browser shadow-[0_50px_100px_-50px_rgba(77,0,20,0.45)]">
+              <div className="sg-browser border-white/20 shadow-[0_6px_20px_rgba(20,0,6,0.28)]">
                 <div className="sg-browser-bar">
                   <span className="sg-browser-dot" />
                   <span className="sg-browser-dot" />

@@ -50,7 +50,7 @@ export function VideoModalButton({
         onClose={() => setOpen(false)}
         onClick={(e) => e.target === ref.current && setOpen(false)}
         aria-label={title}
-        className="m-auto w-[min(92vw,1100px)] max-w-none overflow-visible bg-transparent p-0 backdrop:bg-[#1a0409]/80 backdrop:backdrop-blur-sm max-md:w-[min(92vw,480px)]"
+        className="m-auto w-[min(92vw,1100px)] max-w-none overflow-visible bg-transparent p-0 backdrop:bg-[#1a0409]/90 max-md:w-[min(92vw,480px)]"
       >
         {open && (
           <div className="relative">

@@ -64,7 +64,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
                 aria-selected={on}
                 onClick={() => setActive(i)}
                 className={`group flex w-full items-center gap-4 rounded-2xl border px-4 py-4 text-left transition-all ${
-                  on ? "border-brand-700/25 bg-white shadow-[0_18px_40px_-28px_rgba(77,0,20,0.5)]" : "border-transparent hover:bg-white/70"
+                  on ? "border-brand-700/25 bg-white shadow-[0_1px_4px_rgba(77,0,20,0.10)]" : "border-transparent hover:bg-white/70"
                 }`}
               >
                 <span

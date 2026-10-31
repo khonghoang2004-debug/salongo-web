@@ -206,6 +206,11 @@ export function Navbar() {
             {t("tryFree")}
           </a>
 
+          {/* Mobile: đổi ngôn ngữ nhanh ngay trên thanh logo */}
+          <div className="lg:hidden">
+            <LocaleSwitcher compact />
+          </div>
+
           {/* Mobile: nút menu bên phải */}
           <button
             type="button"

@@ -593,21 +593,21 @@
       },
       "staff": {
         "short": "Nhân viên",
-        "tile": "Thợ xem lịch trên điện thoại",
-        "title": "Tài khoản nhân viên trên điện thoại",
-        "desc": "Mỗi thợ có tài khoản riêng, đăng nhập trên điện thoại và chỉ thấy lịch hẹn của mình. Chủ salon gửi lời mời từ màn Nhân viên, chọn vai trò nhân viên hoặc quản lý.",
+        "tile": "Thợ xem lịch và doanh thu",
+        "title": "Tài khoản thợ: lịch và doanh thu của mình",
+        "desc": "Mỗi thợ có tài khoản riêng trên điện thoại, thấy lịch hẹn của mình và, nếu chủ cho phép, doanh thu mình làm được trong ngày. Chủ salon gửi lời mời từ màn Nhân viên và chọn thợ được xem gì.",
         "p1Title": "Mời bằng email",
         "p1Text": "Bấm Mời ở hồ sơ thợ, thợ mở email, đặt mật khẩu là dùng được.",
         "p2Title": "Lịch của tôi",
         "p2Text": "Lịch hôm nay và các ngày tới, kèm tóm tắt số lịch, đã xong, còn lại.",
-        "p3Title": "Chỉ xem",
-        "p3Text": "Thợ không sửa lịch, không thấy doanh thu hay dữ liệu salon; muốn đổi lịch thì báo quản lý.",
-        "p4Title": "Phân quyền theo vai trò",
-        "p4Text": "Chủ salon, quản lý, nhân viên: mỗi người thấy đúng phần việc của mình.",
+        "p3Title": "Doanh thu của tôi",
+        "p3Text": "Tab Doanh thu: tổng tiền trong ngày, số khách, trung bình mỗi khách và từng khách đã thanh toán. Xem lại được các ngày trước.",
+        "p4Title": "Chủ quyết định thợ xem gì",
+        "p4Text": "Khi mời thợ, chủ chọn Chỉ lịch hoặc Lịch + doanh thu, đổi lại bất cứ lúc nào. Thợ không bao giờ thấy doanh thu của cả salon.",
         "tab1": "Nhân viên",
-        "shot1": "Lịch ngày mai",
-        "shot2": "Hôm nay đã xong",
-        "shot3": "Menu của thợ"
+        "shot1": "Lịch + doanh thu hôm nay",
+        "shot2": "Doanh thu của tôi",
+        "shot3": "Chủ chọn thợ được xem gì"
       },
       "branches": {
         "short": "Đa chi nhánh",
@@ -892,14 +892,14 @@
     "hlBranchShotPhone": "Danh sách chi nhánh trên điện thoại",
     "hlStaffEyebrow": "Tài khoản nhân viên",
     "hlStaffTitle": "Thợ chỉ cần điện thoại",
-    "hlStaffLead": "Chủ salon gửi lời mời, thợ tự đặt mật khẩu và đăng nhập trên điện thoại. Mở app là biết hôm nay làm cho ai, lúc mấy giờ.",
+    "hlStaffLead": "Chủ salon gửi lời mời, thợ đăng nhập trên điện thoại. Mở app là biết hôm nay làm cho ai, lúc mấy giờ, và đã làm được bao nhiêu tiền.",
     "hlStaff1": "Lịch của tôi: chỉ lịch hẹn của mình, theo hôm nay và các ngày tới",
-    "hlStaff2": "Tóm tắt trong ngày: số lịch, đã xong, còn lại và khách đầu tiên",
-    "hlStaff3": "Chỉ xem, không sửa được lịch hay xem doanh thu của salon",
+    "hlStaff2": "Mới: tab Doanh thu, thợ xem mình làm được bao nhiêu trong ngày, từng khách, từng dịch vụ",
+    "hlStaff3": "Chủ salon quyết định: thợ chỉ xem lịch, hoặc xem lịch và doanh thu của riêng mình",
     "hlStaff4": "Thợ tự chọn ngôn ngữ app: Việt, Séc, Anh, Đức, Slovakia, Pháp",
-    "hlStaffShot1": "Lịch ngày mai",
-    "hlStaffShot2": "Hôm nay đã xong",
-    "hlStaffShot3": "Menu của thợ",
+    "hlStaffShot1": "Lịch + doanh thu hôm nay",
+    "hlStaffShot2": "Doanh thu của tôi",
+    "hlStaffShot3": "Chủ chọn thợ được xem gì",
     "mkEyebrow": "Mới · Email marketing",
     "mkTitle": "Gửi ưu đãi cho khách quen ngay trong app",
     "mkLead": "Không cần thuê agency hay dùng thêm công cụ email nào. Chọn một mẫu theo dịp, sửa vài dòng, bấm gửi là khách đã đồng ý nhận ưu đãi nhận được email mang tên salon của bạn.",
@@ -1004,7 +1004,7 @@
       },
       {
         "h": "Nhiều chi nhánh, thợ xem lịch trên điện thoại",
-        "p": "Một tài khoản chủ quản lý mọi chi nhánh, chuyển qua lại ngay trên menu và xem doanh thu của tất cả chi nhánh trên một trang. Thợ có tài khoản riêng, đăng nhập trên điện thoại và chỉ thấy lịch hẹn của mình.",
+        "p": "Một tài khoản chủ quản lý mọi chi nhánh, chuyển qua lại ngay trên menu và xem doanh thu của tất cả chi nhánh trên một trang. Thợ có tài khoản riêng, đăng nhập trên điện thoại và thấy lịch hẹn của mình, và nếu chủ cho phép, cả doanh thu mình làm được.",
         "link": {
           "href": "/tinh-nang#da-chi-nhanh",
           "label": "Xem đa chi nhánh"
@@ -1045,7 +1045,7 @@
       },
       {
         "q": "Thợ có xem được lịch của mình trên điện thoại không?",
-        "a": "Có. Mỗi thợ có tài khoản riêng, đăng nhập trên điện thoại và chỉ thấy lịch hẹn của mình."
+        "a": "Có. Mỗi thợ có tài khoản riêng, đăng nhập trên điện thoại và thấy lịch hẹn của mình, và nếu chủ cho phép, cả doanh thu mình làm được."
       },
       {
         "q": "Phần mềm tính lương thợ nail như thế nào?",

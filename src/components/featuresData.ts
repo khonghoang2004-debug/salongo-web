@@ -113,7 +113,7 @@ export const FEATURES: Feature[] = [
       { src: A + "tat-ca-salon-noi-dung.webp", icon: "LayoutDashboard", mobile: A + "m-tat-ca-salon.webp" },
     ],
   },
-  { id: "staff", anchor: "nhan-vien", chapter: "c3", views: [], phones: [A + "m-nv-ngay-mai.webp", A + "m-nv-hom-nay.webp", A + "m-nv-menu.webp"] },
+  { id: "staff", anchor: "nhan-vien", chapter: "c3", views: [], phones: [A + "m-nv-hom-nay-doanh-thu.webp", A + "m-nv-doanh-thu.webp", A + "m-quyen-doanh-thu.webp"] },
 ];
 
 export const CHAPTERS: ChapterId[] = ["c1", "c2", "c3"];

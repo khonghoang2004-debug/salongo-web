@@ -67,9 +67,9 @@ export async function HomeHighlights() {
               {/* Điện thoại nhỏ: cuộn ngang qua 3 màn; từ sm: 3 máy cạnh nhau */}
               <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0">
                 {([
-                  ["m-nv-ngay-mai.webp", "hlStaffShot1"],
-                  ["m-nv-hom-nay.webp", "hlStaffShot2"],
-                  ["m-nv-menu.webp", "hlStaffShot3"],
+                  ["m-nv-hom-nay-doanh-thu.webp", "hlStaffShot1"],
+                  ["m-nv-doanh-thu.webp", "hlStaffShot2"],
+                  ["m-quyen-doanh-thu.webp", "hlStaffShot3"],
                 ] as const).map(([src, label], i) => (
                   <figure key={src} className="w-[62vw] max-w-[240px] shrink-0 snap-center sm:w-auto sm:max-w-none" style={{ "--d": `${150 + i * 150}ms` } as CSSProperties}>
                     <PhoneShot src={A + src} alt={h(label)} />

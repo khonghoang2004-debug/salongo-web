@@ -593,21 +593,21 @@
       },
       "staff": {
         "short": "Personál",
-        "tile": "Personál vidí rozvrh v telefonu",
-        "title": "Účty pro personál v telefonu",
-        "desc": "Každý zaměstnanec má vlastní přihlášení, používá ho v telefonu a vidí jen své rezervace. Majitel pošle pozvánku z obrazovky Personál a zvolí roli zaměstnanec nebo manažer.",
+        "tile": "Rozvrh i tržby personálu",
+        "title": "Účty personálu: vlastní rozvrh i tržby",
+        "desc": "Každý zaměstnanec má vlastní přihlášení v telefonu, vidí své rezervace a pokud to majitel povolí, i kolik dnes vydělal. Majitel pošle pozvánku z obrazovky Personál a zvolí, co uvidí.",
         "p1Title": "Pozvánka e-mailem",
         "p1Text": "Klepněte na Pozvat v kartě zaměstnance; ten otevře e-mail, nastaví heslo a může začít.",
         "p2Title": "Můj rozvrh",
         "p2Text": "Dnešek i další dny, se shrnutím rezervací, hotovo a zbývá.",
-        "p3Title": "Jen pro čtení",
-        "p3Text": "Personál nemění rezervace ani nevidí tržby; změny řeší s manažerem.",
-        "p4Title": "Práva podle role",
-        "p4Text": "Majitel, manažer, personál: každý vidí svou část práce.",
+        "p3Title": "Moje tržby",
+        "p3Text": "Karta Tržby: celkem za den, počet klientů, průměr na klienta a každý zaplacený klient. Předchozí dny o klepnutí dál.",
+        "p4Title": "Rozhoduje majitel",
+        "p4Text": "Při pozvání majitel zvolí Jen rozvrh nebo Rozvrh + tržby a může to kdykoli změnit. Tržby celého salonu personál nikdy nevidí.",
         "tab1": "Personál",
-        "shot1": "Rozvrh na zítra",
-        "shot2": "Dnes hotovo",
-        "shot3": "Menu personálu"
+        "shot1": "Dnešní rozvrh + tržby",
+        "shot2": "Moje tržby",
+        "shot3": "Majitel volí, co personál vidí"
       },
       "branches": {
         "short": "Více poboček",
@@ -728,7 +728,7 @@
     "block4ViewRequestsDesc": "Nové rezervace se hned zobrazí v aplikaci s upozorněním – potvrdíte nebo odmítnete jedním klepnutím.",
     "block5Title": "Vlastní účty pro zaměstnance",
     "block5Desc": "Každý zaměstnanec má vlastní účet pro přihlášení a sledování svých rezervací v reálném čase – žádné záměny ani závislost na majiteli salonu.",
-    "block5Bullet1": "Zaměstnanci vidí jen své rezervace",
+    "block5Bullet1": "Zaměstnanci vidí své rezervace a pokud to majitel povolí, i své tržby",
     "block5Bullet2": "Aktualizace stavu dokončených služeb",
     "block5Bullet3": "Přehled vlastních tržeb a provizí",
     "block5Bullet4": "Jasná oprávnění podle role (majitel, manažer, zaměstnanec)",
@@ -892,14 +892,14 @@
     "hlBranchShotPhone": "Seznam poboček v telefonu",
     "hlStaffEyebrow": "Účty pro personál",
     "hlStaffTitle": "Personálu stačí telefon",
-    "hlStaffLead": "Majitel pošle pozvánku, zaměstnanec si nastaví heslo a přihlásí se v telefonu. Hned vidí, koho má a v kolik.",
+    "hlStaffLead": "Majitel pošle pozvánku, zaměstnanec se přihlásí v telefonu. Hned vidí, koho má, v kolik a kolik už dnes vydělal.",
     "hlStaff1": "Můj rozvrh: jen vlastní rezervace, dnes i v dalších dnech",
-    "hlStaff2": "Shrnutí dne: počet rezervací, hotovo, zbývá a první klient",
-    "hlStaff3": "Jen pro čtení: bez úprav rezervací a bez tržeb salonu",
+    "hlStaff2": "Novinka: karta Tržby, zaměstnanec vidí, kolik dnes vydělal, po klientech i službách",
+    "hlStaff3": "Rozhoduje majitel: jen rozvrh, nebo rozvrh i vlastní tržby",
     "hlStaff4": "Jazyk aplikace si zvolí sám: vietnamština, čeština, angličtina, němčina, slovenština, francouzština",
-    "hlStaffShot1": "Rozvrh na zítra",
-    "hlStaffShot2": "Dnes hotovo",
-    "hlStaffShot3": "Menu personálu",
+    "hlStaffShot1": "Dnešní rozvrh + tržby",
+    "hlStaffShot2": "Moje tržby",
+    "hlStaffShot3": "Majitel volí, co personál vidí",
     "mkEyebrow": "Novinka · E-mailový marketing",
     "mkTitle": "Posílejte stálým klientům nabídky přímo z aplikace",
     "mkLead": "Bez agentury a bez dalšího e-mailového nástroje. Vyberte šablonu k příležitosti, upravte pár řádků, odešlete a klienti se souhlasem dostanou e-mail jménem vašeho salonu.",
@@ -1004,7 +1004,7 @@
       },
       {
         "h": "Více poboček, personál v telefonu",
-        "p": "Jeden účet majitele spravuje všechny pobočky, přepíná mezi nimi v menu a tržby všech poboček vidí na jedné stránce. Zaměstnanci mají vlastní přihlášení v telefonu a vidí jen své rezervace.",
+        "p": "Jeden účet majitele spravuje všechny pobočky, přepíná mezi nimi v menu a tržby všech poboček vidí na jedné stránce. Zaměstnanci mají vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby.",
         "link": {
           "href": "/tinh-nang#da-chi-nhanh",
           "label": "Více poboček"
@@ -1045,7 +1045,7 @@
       },
       {
         "q": "Vidí zaměstnanci svůj rozvrh v telefonu?",
-        "a": "Ano. Každý zaměstnanec má vlastní přihlášení v telefonu a vidí jen své rezervace."
+        "a": "Ano. Každý zaměstnanec má vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby."
       },
       {
         "q": "Jak systém počítá mzdy techniček?",

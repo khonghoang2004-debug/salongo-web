@@ -330,7 +330,7 @@
   "download": {
     "eyebrow": "Ứng dụng máy tính",
     "title": "Có cả app cho máy tính",
-    "subtitle": "Để sẵn ở quầy, mở là dùng. Dành cho Windows và Mac.",
+    "subtitle": "Để sẵn ở quầy lễ tân, mở là dùng. Đăng nhập bằng cùng tài khoản SalonGo.",
     "windows": "Tải cho Windows",
     "mac": "Tải cho Mac"
   },
@@ -866,9 +866,9 @@
     "type3Text": "Hồ sơ và ghi chú từng khách, chương trình thành viên, nhắc lịch qua email.",
     "type4Title": "Chuỗi nhiều chi nhánh",
     "type4Text": "Một tài khoản cho mọi chi nhánh, xem doanh thu tất cả chi nhánh trên một trang.",
-    "priceEyebrow": "Giá rõ ràng",
-    "priceTitle": "Dùng thử 150 ngày. Sau đó từ 199 CZK/tháng.",
-    "priceLead": "Không phí cài đặt, không hợp đồng dài hạn. Đổi gói hoặc gia hạn ngay trong app.",
+    "priceEyebrow": "Bảng giá",
+    "priceTitle": "Dùng thử miễn phí 150 ngày",
+    "priceLead": "Không phí cài đặt, không hợp đồng dài hạn. Hết thời gian dùng thử, bạn chọn gói hợp với salon.",
     "priceCta": "Xem bảng giá",
     "price1": "Không cần thẻ thanh toán",
     "price2": "Hỗ trợ thiết lập bằng tiếng Việt",

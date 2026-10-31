@@ -330,7 +330,7 @@
   "download": {
     "eyebrow": "Desktop app",
     "title": "There’s a desktop app too",
-    "subtitle": "Keep it open at the front desk. For Windows and Mac.",
+    "subtitle": "Keep it open at the front desk. Sign in with the same SalonGo account.",
     "windows": "Download for Windows",
     "mac": "Download for Mac"
   },
@@ -865,9 +865,9 @@
     "type3Text": "Client profiles and notes, a membership program and email reminders.",
     "type4Title": "Multi-location chains",
     "type4Text": "One account for every location, with revenue of all locations on one page.",
-    "priceEyebrow": "Clear pricing",
-    "priceTitle": "150 days free. Then from 199 CZK/month.",
-    "priceLead": "No setup fee, no long contract. Change or renew your plan right in the app.",
+    "priceEyebrow": "Pricing",
+    "priceTitle": "Try it free for 150 days",
+    "priceLead": "No setup fee, no long contract. When the trial ends, pick the plan that fits your salon.",
     "priceCta": "See pricing",
     "price1": "No card required",
     "price2": "Setup help in Vietnamese",

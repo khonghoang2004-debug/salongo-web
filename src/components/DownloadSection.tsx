@@ -41,11 +41,13 @@ export async function DownloadCard() {
   ];
 
   return (
-    <div className="flex h-full flex-col rounded-[28px] border border-line bg-white p-5 sm:p-8 lg:p-10">
-      <p className="sg-kicker">{t("eyebrow")}</p>
-      <h2 className="sg-h2-sm mt-4">{t("title")}</h2>
+    <div className="flex h-full flex-col rounded-[28px] border border-line bg-white p-6 sm:p-8 lg:p-10">
+      <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">{t("eyebrow")}</p>
+      <h2 className="mt-4 font-display text-[1.75rem] font-semibold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[2.125rem]">
+        {t("title")}
+      </h2>
       <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("subtitle")}</p>
-      <div className="mt-auto grid gap-3 pt-8">
+      <div className="mt-6 grid gap-3 lg:mt-auto lg:pt-8">
         {items.map(({ href, file, label, Icon, ext }) => (
           <a
             key={file}
@@ -53,7 +55,7 @@ export async function DownloadCard() {
             target="_blank"
             rel="noopener noreferrer"
             download={file}
-            className="group flex min-h-14 items-center gap-4 rounded-2xl border border-line px-4 py-3 transition-colors hover:border-ink"
+            className="group flex min-h-14 items-center gap-4 rounded-2xl border border-line bg-[#FBF7F7] px-4 py-3 transition-colors hover:border-ink"
           >
             <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-ink text-white">
               <Icon />

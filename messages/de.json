@@ -330,7 +330,7 @@
   "download": {
     "eyebrow": "Desktop-App",
     "title": "Auch als Desktop-App",
-    "subtitle": "Am Empfang immer offen. Für Windows und Mac.",
+    "subtitle": "Am Empfang immer offen. Anmeldung mit demselben SalonGo-Konto.",
     "windows": "Download für Windows",
     "mac": "Download für Mac"
   },
@@ -865,9 +865,9 @@
     "type3Text": "Kundenkarte und Notizen, Mitgliedsprogramm und Erinnerungen per E-Mail.",
     "type4Title": "Ketten mit Filialen",
     "type4Text": "Ein Konto für alle Filialen, Umsatz aller Filialen auf einer Seite.",
-    "priceEyebrow": "Klare Preise",
-    "priceTitle": "150 Tage kostenlos. Danach ab 199 CZK im Monat.",
-    "priceLead": "Keine Einrichtungsgebühr, kein langer Vertrag. Tarif direkt in der App ändern oder verlängern.",
+    "priceEyebrow": "Preise",
+    "priceTitle": "150 Tage kostenlos testen",
+    "priceLead": "Keine Einrichtungsgebühr, kein langer Vertrag. Nach der Testphase wählen Sie den passenden Tarif.",
     "priceCta": "Preise ansehen",
     "price1": "Keine Kreditkarte",
     "price2": "Hilfe bei der Einrichtung auf Vietnamesisch",

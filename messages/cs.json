@@ -330,7 +330,7 @@
   "download": {
     "eyebrow": "Aplikace pro počítač",
     "title": "K dispozici i pro počítač",
-    "subtitle": "Mějte ji otevřenou na recepci. Pro Windows a Mac.",
+    "subtitle": "Mějte ji otevřenou na recepci. Přihlásíte se stejným účtem SalonGo.",
     "windows": "Stáhnout pro Windows",
     "mac": "Stáhnout pro Mac"
   },
@@ -866,9 +866,9 @@
     "type3Text": "Karta a poznámky ke každému klientovi, věrnostní program a připomínky e-mailem.",
     "type4Title": "Řetězce s pobočkami",
     "type4Text": "Jeden účet pro všechny pobočky, tržby všech poboček na jedné stránce.",
-    "priceEyebrow": "Jasné ceny",
-    "priceTitle": "150 dní zdarma. Pak od 199 Kč měsíčně.",
-    "priceLead": "Bez poplatku za zřízení a bez dlouhé smlouvy. Tarif změníte nebo prodloužíte přímo v aplikaci.",
+    "priceEyebrow": "Ceník",
+    "priceTitle": "150 dní zdarma",
+    "priceLead": "Bez poplatku za zřízení a bez dlouhé smlouvy. Po zkušební době si vyberete tarif, který vašemu salonu sedí.",
     "priceCta": "Zobrazit ceník",
     "price1": "Bez platební karty",
     "price2": "Pomoc s nastavením vietnamsky",

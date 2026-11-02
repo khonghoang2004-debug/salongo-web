@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { appLink, SIGNUP_URL } from "@/lib/app-links";
+import { useLocale, useTranslations } from "next-intl";
 import { Copy, Minus, Plus } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { CONTACT_EMAIL } from "@/lib/contact";
@@ -27,6 +28,7 @@ function useCopyTooltip() {
 
 export function SectionFAQ() {
   const t = useTranslations("faq");
+  const locale = useLocale();
   const [openId, setOpenId] = useState<string | null>("q1");
   const { copied, copy } = useCopyTooltip();
 
@@ -123,7 +125,7 @@ export function SectionFAQ() {
               {t("contactSupportCta")}
             </Link>
             <a
-              href="https://app.salongo.eu/signup"
+              href={appLink(SIGNUP_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary px-7 py-4 text-base"

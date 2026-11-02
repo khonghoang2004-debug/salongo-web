@@ -1,13 +1,14 @@
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import { RENEW_URL } from "@/lib/app-links";
+import { RENEW_URL, appLink } from "@/lib/app-links";
 import { DownloadCard } from "../DownloadSection";
 
 // Giá + tải app: hai thẻ bằng nhau, cùng bố cục (nhãn, tiêu đề, mô tả, nội dung, nút ở đáy)
 export async function HomePricingTeaser() {
   const h = await getTranslations("home2");
+  const locale = await getLocale();
 
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
@@ -37,7 +38,7 @@ export async function HomePricingTeaser() {
               <ArrowRight className="size-4" aria-hidden />
             </Link>
             <a
-              href={RENEW_URL}
+              href={appLink(RENEW_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="sg-arrow sg-arrow-up inline-flex min-h-11 items-center justify-center gap-1.5 whitespace-nowrap px-2 text-[15px] font-semibold text-white/90 hover:text-white"

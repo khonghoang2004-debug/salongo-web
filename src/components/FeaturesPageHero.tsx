@@ -1,11 +1,13 @@
 import { ArrowDown } from "lucide-react";
+import { appLink, SIGNUP_URL } from "@/lib/app-links";
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { FEATURES, FEATURE_ICONS } from "./featuresData";
 import { PageHero } from "./ui/PageHero";
 
 export async function FeaturesPageHero() {
   const t = await getTranslations("featuresV2");
+  const locale = await getLocale();
   const tNav = await getTranslations("nav");
 
   return (
@@ -16,7 +18,7 @@ export async function FeaturesPageHero() {
       actions={
         <>
           <a
-            href="https://app.salongo.eu/signup"
+            href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary px-7 py-4 text-base"

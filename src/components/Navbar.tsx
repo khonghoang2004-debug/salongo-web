@@ -3,11 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/metadata";
 import { ArrowRight, Download, RefreshCw } from "lucide-react";
-import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, RENEW_URL } from "@/lib/app-links";
+import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib/app-links";
 
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
@@ -27,6 +27,7 @@ const menuItems = [
 
 export function Navbar() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
@@ -142,7 +143,7 @@ export function Navbar() {
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href={RENEW_URL}
+            href={appLink(RENEW_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
@@ -150,7 +151,7 @@ export function Navbar() {
             {t("renew")}
           </a>
           <a
-            href={LOGIN_URL}
+            href={appLink(LOGIN_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
@@ -198,7 +199,7 @@ export function Navbar() {
             <LocaleSwitcher compact />
           </div>
           <a
-            href={SIGNUP_URL}
+            href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary hidden px-5 py-2.5 text-sm lg:inline-flex"
@@ -276,7 +277,7 @@ export function Navbar() {
             </nav>
             <div className="mt-6 grid gap-2.5">
               <a
-                href={SIGNUP_URL}
+                href={appLink(SIGNUP_URL, locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
@@ -285,7 +286,7 @@ export function Navbar() {
                 {t("tryFree")}
               </a>
               <a
-                href={LOGIN_URL}
+                href={appLink(LOGIN_URL, locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
@@ -294,7 +295,7 @@ export function Navbar() {
                 {t("login")}
               </a>
               <a
-                href={RENEW_URL}
+                href={appLink(RENEW_URL, locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}

@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
-import { getTranslations } from "next-intl/server";
+import { appLink, SIGNUP_URL } from "@/lib/app-links";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowRight, UserPlus, Settings2, CalendarCheck } from "lucide-react";
 import { SectionHead } from "./ui/SectionHead";
 
@@ -12,6 +13,7 @@ const steps = [
 // 3 bước bắt đầu: số lớn, đường kẻ nối các bước
 export async function HowItWorks() {
   const t = await getTranslations("howItWorks");
+  const locale = await getLocale();
 
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
@@ -44,7 +46,7 @@ export async function HowItWorks() {
           <div data-reveal className="mt-8 flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-relaxed text-muted">{t("closingLine")}</p>
             <a
-              href="https://app.salongo.eu/signup"
+              href={appLink(SIGNUP_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary sg-arrow shrink-0 px-7 py-3.5 text-base"

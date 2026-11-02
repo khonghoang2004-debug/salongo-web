@@ -1,6 +1,6 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, CreditCard, LogIn, MousePointerClick, Store } from "lucide-react";
-import { RENEW_URL } from "@/lib/app-links";
+import { RENEW_URL, appLink } from "@/lib/app-links";
 import { PhoneShot } from "./ui/AppShot";
 import { DeviceSwitch } from "./ui/DeviceSwitch";
 
@@ -14,6 +14,7 @@ const STEPS = [
 // "Gia hạn gói": nút trên website mở thẳng màn Nâng cấp gói trong app (app.salongo.eu/dashboard/subscription)
 export async function SectionRenew() {
   const t = await getTranslations("renew");
+  const locale = await getLocale();
 
   return (
     <section id="gia-han" className="sg-section scroll-mt-24">
@@ -35,7 +36,7 @@ export async function SectionRenew() {
               </li>
             ))}
           </ol>
-          <a href={RENEW_URL} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full px-7 py-4 text-base sm:w-auto">
+          <a href={appLink(RENEW_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full px-7 py-4 text-base sm:w-auto">
             {t("cta")}
             <ArrowUpRight className="size-[18px]" aria-hidden />
           </a>

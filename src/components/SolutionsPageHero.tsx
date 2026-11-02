@@ -1,9 +1,11 @@
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { appLink, SIGNUP_URL } from "@/lib/app-links";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "./ui/PageHero";
 
 export async function SolutionsPageHero() {
   const t = await getTranslations("solutionsPage");
+  const locale = await getLocale();
   const tNav = await getTranslations("nav");
 
   return (
@@ -14,7 +16,7 @@ export async function SolutionsPageHero() {
       actions={
         <>
           <a
-            href="https://app.salongo.eu/signup"
+            href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary px-7 py-4 text-base"

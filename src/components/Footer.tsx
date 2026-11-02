@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import {
@@ -10,7 +10,7 @@ import {
 } from "@/lib/contact";
 import { siteConfig } from "@/lib/metadata";
 import { BackToTop } from "./BackToTop";
-import { LOGIN_URL, SIGNUP_URL, RENEW_URL } from "@/lib/app-links";
+import { LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib/app-links";
 
 const footerNavItems = [
   { href: "/", labelKey: "home" as const },
@@ -35,6 +35,7 @@ const colTitle = "text-xs font-semibold uppercase tracking-[0.14em] text-muted";
 // Chân trang nền sáng: thương hiệu, điều hướng, liên hệ và chữ SalonGo lớn
 export async function Footer() {
   const t = await getTranslations("footer");
+  const locale = await getLocale();
   const tNav = await getTranslations("nav");
   const tGuide = await getTranslations("guide");
   const tPages = await getTranslations("pages");
@@ -100,9 +101,9 @@ export async function Footer() {
                 </a>
               </li>
               {([
-                [SIGNUP_URL, tNav("tryFree")],
-                [LOGIN_URL, tNav("login")],
-                [RENEW_URL, tNav("renew")],
+                [appLink(SIGNUP_URL, locale), tNav("tryFree")],
+                [appLink(LOGIN_URL, locale), tNav("login")],
+                [appLink(RENEW_URL, locale), tNav("renew")],
               ] as const).map(([href, label]) => (
                 <li key={href}>
                   <a

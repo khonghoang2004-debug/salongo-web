@@ -1,9 +1,9 @@
 import type { CSSProperties } from "react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, Check, Lock, Play } from "lucide-react";
 import { CountUp } from "../motion/CountUp";
 import { PhoneShot } from "../ui/AppShot";
-import { SIGNUP_URL } from "@/lib/app-links";
+import { SIGNUP_URL, appLink } from "@/lib/app-links";
 
 const stats = [
   { value: "stat1Value", label: "stat1Label" },
@@ -17,6 +17,7 @@ const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 // Hero trang chủ: tiêu đề lớn căn giữa hiện từng chữ, ảnh chụp app thật (PC + điện thoại) nghiêng rồi đặt thẳng
 export async function HomeHero() {
   const t = await getTranslations("hero");
+  const locale = await getLocale();
   const h = await getTranslations("home2");
   const v = await getTranslations("videos");
 
@@ -54,7 +55,7 @@ export async function HomeHero() {
 
             <div className="sg-in mt-7 flex flex-col justify-center gap-2.5 sm:flex-row" style={d(680)}>
               <a
-                href={SIGNUP_URL}
+                href={appLink(SIGNUP_URL, locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-on-gradient sg-arrow sg-arrow-up px-7 py-4 text-base"

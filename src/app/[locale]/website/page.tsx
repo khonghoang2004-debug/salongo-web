@@ -121,19 +121,9 @@ export default async function WebsitePage({ params }: Props) {
 
       <section id="lien-he" className="sg-section scroll-mt-20 pt-0 sm:pt-0 lg:pt-0">
         <div className="sg-container">
-          <div className="grid gap-8 rounded-[28px] border border-line bg-[#FBF7F7] p-5 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-12">
-            <div className="lg:col-span-5">
-              <p className="sg-kicker">{t("contactKicker")}</p>
-              <h2 className="sg-h2-sm mt-4">{t("contactTitle")}</h2>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("contactLead")}</p>
-              <div className="mt-6">
-                <OfferPrice />
-              </div>
-              <div className="mt-5">
-                <HostingNote />
-              </div>
-            </div>
-            <div className="lg:col-span-7">
+          <div className="mx-auto max-w-3xl rounded-[28px] border border-line bg-[#FBF7F7] px-5 py-10 text-center sm:px-10 sm:py-14">
+            <h2 className="sg-h2-sm">{t("contactNow")}</h2>
+            <div className="mt-7 text-left">
               <WebsiteContactPanel />
             </div>
           </div>

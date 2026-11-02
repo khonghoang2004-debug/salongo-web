@@ -53,10 +53,10 @@ export async function HomeWebsiteOffer() {
                     <span className="size-2 rounded-full bg-[#E2D9D6]" />
                     <span className="size-2 rounded-full bg-[#E2D9D6]" />
                   </div>
-                  <img src={previewSrc("verra-hair", "pc", locale)} alt="" width={1200} height={750} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover object-top" />
+                  <img src={previewSrc("lumen-hair", "pc", locale)} alt="" width={1200} height={750} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover object-top" />
                 </div>
                 <div className="absolute bottom-0 right-0 w-[30%] rounded-[20px] bg-[#1F1A1A] p-1.5 shadow-[0_10px_30px_rgba(41,17,25,0.25)]">
-                  <img src={previewSrc("ivelle-nail", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
+                  <img src={previewSrc("velvet-lash", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
                 </div>
               </div>
             </div>

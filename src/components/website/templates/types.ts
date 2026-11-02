@@ -11,7 +11,7 @@ export const tr = (x: L, locale: string) => x[locale as Loc] ?? x.en;
 export const DEMO_PAGES = ["", "dich-vu", "gioi-thieu", "bo-suu-tap", "dat-lich"] as const;
 export type DemoPage = (typeof DEMO_PAGES)[number];
 
-export type Motif = "nail" | "hair" | "spa" | "barber";
+export type Motif = "nail" | "hair" | "spa" | "barber" | "lash" | "makeup";
 
 /** Hình minh hoạ vẽ bằng SVG (thay bằng ảnh thật: điền `photo` = đường dẫn trong /public) */
 export type Visual = {
@@ -29,6 +29,8 @@ export type ServiceItem = {
   price: number;
   /** giá "từ …" (phụ thuộc độ dài tóc / yêu cầu) */
   from?: boolean;
+  /** giá theo cấp thợ (mẫu có bảng giá nhiều cột), cùng thứ tự với services.tiers */
+  tiers?: number[];
 };
 
 export type ServiceGroup = { name: L; note?: L; items: ServiceItem[] };
@@ -56,7 +58,7 @@ export type TemplateContent = {
     featured: [number, number][];
     closing: { title: L; text: L };
   };
-  services: { title: L; lead: L; groups: ServiceGroup[]; note: L };
+  services: { title: L; lead: L; groups: ServiceGroup[]; note: L; tiers?: L[] };
   about: { title: L; lead: L; story: L[]; team: TeamMember[]; values: { title: L; text: L }[] };
   gallery: { title: L; lead: L; items: Visual[] };
   contact: {

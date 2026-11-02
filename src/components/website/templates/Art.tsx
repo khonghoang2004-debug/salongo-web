@@ -60,6 +60,9 @@ export function Art({ motif, v, palette, className = "", photo, alt, priority }:
   );
 }
 
+// Làm tròn toạ độ: Math.sin/cos ở Node và trình duyệt có thể lệch chữ số cuối → lệch hydration
+const rd = (n: number) => Math.round(n * 100) / 100;
+
 const MOTIFS: Record<Motif, (v: number, id: string, p: ArtPalette) => React.ReactNode> = {
   // Móng: dải mẫu sơn, móng hạnh nhân lớn, bảng màu tròn
   nail: (v, id, [a, , c, d]) => {
@@ -95,7 +98,7 @@ const MOTIFS: Record<Motif, (v: number, id: string, p: ArtPalette) => React.Reac
           {[0, 1, 2, 3, 4, 5].map((i) => {
             const ang = Math.PI * (0.15 + i * 0.14);
             return (
-              <circle key={i} cx={200 - Math.cos(ang) * 150} cy={320 - Math.sin(ang) * 170} r={30 - i * 1.5} fill={i % 2 ? d : c} opacity={0.55 + i * 0.07} />
+              <circle key={i} cx={rd(200 - Math.cos(ang) * 150)} cy={rd(320 - Math.sin(ang) * 170)} r={30 - i * 1.5} fill={i % 2 ? d : c} opacity={0.55 + i * 0.07} />
             );
           })}
           <circle cx="200" cy="300" r="54" fill={a} stroke={d} strokeOpacity="0.25" />
@@ -261,6 +264,94 @@ const MOTIFS: Record<Motif, (v: number, id: string, p: ArtPalette) => React.Reac
           <path d="M194 206 L184 240 M206 206 L216 240" stroke={c} strokeWidth="9" strokeLinecap="round" />
         </g>
         <rect x="80" y="80" width="240" height="240" fill={`url(#${id}-fg)`} opacity="0.12" />
+      </g>
+    );
+  },
+  // Mi & mày: đường mi cong, vòm mày, ánh mắt
+  lash: (v, id, [a, , c, d]) => {
+    const lashes = (cx: number, cy: number, r: number, n: number, w: number) => (
+      <g fill="none" strokeLinecap="round">
+        <path d={`M${cx - r} ${cy} Q ${cx} ${cy - r * 0.9} ${cx + r} ${cy}`} stroke={d} strokeWidth={w * 1.6} />
+        {Array.from({ length: n }, (_, i) => {
+          const tt = (i + 1) / (n + 1);
+          const x = cx - r + 2 * r * tt;
+          const y = cy - Math.sin(Math.PI * tt) * r * 0.45;
+          const ang = -Math.PI / 2 + (tt - 0.5) * 1.6;
+          const L = r * (0.28 + Math.sin(Math.PI * tt) * 0.22);
+          return <path key={i} d={`M${rd(x)} ${rd(y)} q ${rd(Math.cos(ang) * L * 0.4)} ${rd(Math.sin(ang) * L * 0.7)} ${rd(Math.cos(ang) * L)} ${rd(Math.sin(ang) * L)}`} stroke={d} strokeWidth={w} />;
+        })}
+      </g>
+    );
+    if (v === 0)
+      return (
+        <g>
+          <ellipse cx="200" cy="230" rx="140" ry="70" fill={a} opacity="0.7" />
+          <circle cx="200" cy="230" r="46" fill={`url(#${id}-fg)`} />
+          <circle cx="214" cy="216" r="9" fill="#fff" opacity="0.7" />
+          {lashes(200, 228, 150, 22, 3)}
+        </g>
+      );
+    if (v === 1)
+      return (
+        <g>
+          <path d="M70 210 C 140 120, 260 110, 340 170" fill="none" stroke={d} strokeWidth="18" strokeLinecap="round" />
+          <path d="M70 210 C 140 120, 260 110, 340 170" fill="none" stroke={c} strokeWidth="4" strokeLinecap="round" strokeDasharray="2 9" />
+          {lashes(200, 300, 120, 16, 2.5)}
+        </g>
+      );
+    if (v === 2)
+      return (
+        <g>
+          <rect x="120" y="60" width="160" height="280" rx="80" fill={`url(#${id}-fg)`} opacity="0.85" />
+          <rect x="140" y="80" width="120" height="240" rx="60" fill="none" stroke="#fff" strokeOpacity="0.5" strokeWidth="2" />
+          {lashes(200, 214, 70, 12, 2.5)}
+        </g>
+      );
+    return (
+      <g>
+        {[0, 1, 2].map((k) => (
+          <g key={k} transform={`translate(0 ${k * 90 - 60})`}>{lashes(200, 230, 110 - k * 14, 14, 2.2)}</g>
+        ))}
+        <circle cx="320" cy="90" r="16" fill={c} opacity="0.6" />
+      </g>
+    );
+  },
+  // Trang điểm: thỏi son, hộp phấn, cọ
+  makeup: (v, id, [a, b, c, d]) => {
+    if (v === 0)
+      return (
+        <g>
+          <rect x="160" y="200" width="80" height="140" rx="8" fill={d} />
+          <rect x="166" y="190" width="68" height="20" rx="4" fill={c} />
+          <path d="M172 190 V120 L228 96 V190Z" fill={`url(#${id}-fg)`} />
+          <rect x="160" y="250" width="80" height="4" fill={c} opacity="0.8" />
+        </g>
+      );
+    if (v === 1)
+      return (
+        <g>
+          <circle cx="200" cy="210" r="120" fill={d} />
+          <circle cx="200" cy="210" r="104" fill={c} opacity="0.35" />
+          <circle cx="200" cy="210" r="92" fill={`url(#${id}-fg)`} />
+          <circle cx="170" cy="180" r="30" fill="#fff" opacity="0.25" />
+          <path d="M200 90 A120 120 0 0 1 320 210" fill="none" stroke={a} strokeOpacity="0.6" strokeWidth="2" />
+        </g>
+      );
+    if (v === 2)
+      return (
+        <g transform="rotate(-28 200 200)">
+          <rect x="190" y="180" width="20" height="190" rx="10" fill={d} />
+          <rect x="186" y="160" width="28" height="30" rx="4" fill={c} />
+          <path d="M186 160 C 176 110, 186 60, 200 40 C 214 60, 224 110, 214 160Z" fill={`url(#${id}-fg)`} />
+          <circle cx="300" cy="300" r="40" fill={b} opacity="0.6" />
+        </g>
+      );
+    return (
+      <g>
+        {[0, 1, 2, 3].map((i) => (
+          <circle key={i} cx={110 + (i % 2) * 180} cy={130 + Math.floor(i / 2) * 150} r="62" fill={i % 2 ? c : `url(#${id}-fg)`} opacity={0.65 + i * 0.08} />
+        ))}
+        <rect x="60" y="60" width="280" height="280" rx="24" fill="none" stroke={d} strokeOpacity="0.4" strokeWidth="2" />
       </g>
     );
   },

@@ -339,3 +339,51 @@ export function DemoPhone({ phone, note, className = "" }: { phone: string; note
     </span>
   );
 }
+
+/** Ô chọn màu sơn (mẫu nail bar): bấm một màu, bộ móng minh hoạ đổi màu theo */
+export function SwatchPicker({
+  swatches,
+  label,
+  c,
+}: {
+  swatches: { name: string; hex: string }[];
+  label: string;
+  /** class: frame, swatch, swatchOn, name */
+  c: Record<"frame" | "swatch" | "swatchOn" | "name", string>;
+}) {
+  const [i, setI] = useState(0);
+  const cur = swatches[i];
+  return (
+    <div className={c.frame}>
+      <svg viewBox="0 0 320 220" role="img" aria-label={`${label}: ${cur.name}`} className="block h-auto w-full">
+        {[0, 1, 2, 3, 4].map((k) => {
+          const h = [120, 150, 165, 145, 110][k];
+          const x = 30 + k * 56;
+          return (
+            <g key={k}>
+              <rect x={x} y={200 - h} width="42" height={h} rx="21" fill={cur.hex} stroke="#121212" strokeWidth="2.5" style={{ transition: "fill 250ms ease" }} />
+              <rect x={x + 9} y={200 - h + 14} width="7" height={h * 0.35} rx="3.5" fill="#fff" opacity="0.5" />
+            </g>
+          );
+        })}
+      </svg>
+      <p className={c.name} aria-live="polite">
+        {cur.name}
+      </p>
+      <div role="radiogroup" aria-label={label} className="mt-3 flex flex-wrap gap-2">
+        {swatches.map((s, k) => (
+          <button
+            key={s.hex}
+            type="button"
+            role="radio"
+            aria-checked={k === i}
+            aria-label={s.name}
+            onClick={() => setI(k)}
+            className={`${c.swatch} ${k === i ? c.swatchOn : ""}`}
+            style={{ backgroundColor: s.hex }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

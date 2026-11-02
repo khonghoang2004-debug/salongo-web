@@ -1,11 +1,11 @@
-// Chụp ảnh xem trước từ demo thật: node docs/website-templates/shoot-previews.mjs <baseUrl> <outDir>  (4 mẫu × PC/điện thoại × 4 ngôn ngữ)
+// Chụp ảnh xem trước từ demo thật: node docs/website-templates/shoot-previews.mjs <baseUrl> <outDir>  (mọi mẫu × PC/điện thoại × 4 ngôn ngữ; SLUGS=a,b để chụp vài mẫu)
 import { chromium } from "playwright";
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 const [base, out] = process.argv.slice(2);
-const slugs = ["ivelle-nail", "verra-hair", "saluna-spa", "brass-barber"];
+const slugs = (process.env.SLUGS ?? "ivelle-nail,verra-hair,saluna-spa,brass-barber,lumen-hair,velvet-lash,chroma-nails,aurel-beauty").split(",");
 const tmp = path.join(os.tmpdir(), "salongo-previews/");
 fs.mkdirSync(tmp, { recursive: true });
 const browser = await chromium.launch();

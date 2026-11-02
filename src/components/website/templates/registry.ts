@@ -4,10 +4,14 @@ import { nail } from "./content/nail";
 import { hair } from "./content/hair";
 import { spa } from "./content/spa";
 import { barber } from "./content/barber";
+import { lumen } from "./content/lumen";
+import { velvet } from "./content/velvet";
+import { chroma } from "./content/chroma";
+import { aurel } from "./content/aurel";
 
 // Danh sách mẫu website. Thêm mẫu mới: tạo file nội dung trong content/, một component trong sites/,
 // rồi thêm vào đây (thư viện, trang demo và ảnh xem trước đều đọc từ danh sách này).
-export const TEMPLATES: TemplateContent[] = [nail, hair, spa, barber];
+export const TEMPLATES: TemplateContent[] = [nail, hair, spa, barber, lumen, velvet, chroma, aurel];
 
 export const getTemplate = (slug: string) => TEMPLATES.find((t) => t.slug === slug);
 
@@ -36,6 +40,30 @@ export const ART_PALETTES: Record<string, ArtPalette[]> = {
     ["#4A3F38", "#3A322D", "#B9844B", "#1F1B19"],
     ["#EDE3D3", "#D8C8B0", "#8E5F33", "#5C3F2C"],
     ["#3E3632", "#2F2A27", "#C08B52", "#F1E9DC"],
+  ],
+  "lumen-hair": [
+    ["#F6F2EA", "#E6DED0", "#6E1F2A", "#141414"],
+    ["#EFE8DC", "#D9CEBD", "#8A6A4F", "#1E1E1E"],
+    ["#F3EEE6", "#E2D8C8", "#B39F86", "#2A2422"],
+    ["#E9E2D6", "#CFC3B1", "#6E1F2A", "#3A3330"],
+  ],
+  "velvet-lash": [
+    ["#F7E6E1", "#EBCFC7", "#C98A8A", "#4A2236"],
+    ["#F3E1DB", "#E2C2BA", "#B36F7D", "#3F1D2E"],
+    ["#FAEFEB", "#EED8D1", "#D6A1A1", "#5B2C43"],
+    ["#F1DCD6", "#DDB9B0", "#A65F73", "#3F1D2E"],
+  ],
+  "chroma-nails": [
+    ["#F4F1EA", "#E8E2D3", "#2340D8", "#121212"],
+    ["#FFF4C7", "#F6D86B", "#2340D8", "#121212"],
+    ["#E6ECFF", "#C3CFFF", "#F6D86B", "#2340D8"],
+    ["#F4F1EA", "#F6D86B", "#FF6B4A", "#2340D8"],
+  ],
+  "aurel-beauty": [
+    ["#F5EFE4", "#E7DCC8", "#B8955A", "#1E3A32"],
+    ["#2A4A40", "#1E3A32", "#D9BC85", "#B8955A"],
+    ["#F1E9DA", "#E0D2B8", "#C9A66B", "#24443A"],
+    ["#EFE6D6", "#DCCDB2", "#1E3A32", "#B8955A"],
   ],
 };
 

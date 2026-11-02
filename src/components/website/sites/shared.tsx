@@ -1,4 +1,4 @@
-import { Cormorant_Garamond, Lora, Oswald, Space_Grotesk } from "next/font/google";
+import { Cormorant_Garamond, Fraunces, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
 import { UI, dur, price } from "../templates/common";
 import { artPalette, ART_PALETTES } from "../templates/registry";
 import { Art } from "../templates/Art";
@@ -9,6 +9,15 @@ export const fontNail = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "vi
 export const fontHair = Space_Grotesk({ subsets: ["latin", "latin-ext", "vietnamese"], weight: ["400", "500", "700"], display: "swap", preload: false });
 export const fontSpa = Lora({ subsets: ["latin", "latin-ext", "vietnamese"], weight: ["400", "500"], style: ["normal", "italic"], display: "swap", preload: false });
 export const fontBarber = Oswald({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false }); // font biến thiên (bản chia độ đậm làm Turbopack build lỗi)
+// 4 mẫu thời trang: font biến thiên (không liệt kê độ đậm). next/font cần tham số viết thẳng, không dùng biến
+export const fontLumen = Noto_Serif_Display({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
+export const fontLumenSans = Inter_Tight({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontVelvet = Playfair_Display({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
+export const fontVelvetSans = Josefin_Sans({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontChroma = Unbounded({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontChromaSans = Manrope({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontAurel = Fraunces({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
+export const fontAurelSans = Montserrat({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 
 export type SiteProps = { t: TemplateContent; page: DemoPage; locale: string };
 

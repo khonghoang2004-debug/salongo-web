@@ -110,7 +110,7 @@ export default async function WebsitePage({ params }: Props) {
               <div className="lg:col-span-7">
                 <Kicker n={t("studio")}>{t("eyebrow")}</Kicker>
                 <h1 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] text-balance sm:text-[3.5rem] lg:text-[3.75rem]`}>
-                  <span className="block">{h1a}</span> {h1b && <span className="block italic text-[#7A6347]">{h1b}</span>}
+                  <span className="block">{h1a}</span> {h1b && <span className="block italic text-brand-700">{h1b}</span>}
                 </h1>
                 <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
                   <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>

@@ -162,11 +162,9 @@ export default async function WebsitePage({ params }: Props) {
         {/* Thư viện mẫu */}
         <section id="mau" className="scroll-mt-20 py-10 sm:py-12 lg:py-12">
           <div className={wrap}>
-            <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
-              <div className="lg:col-span-8">
-                <Kicker n="01">{t("galleryKicker")}</Kicker>
-                <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem] lg:text-[3rem]`}>{t("galleryTitle")}</h2>
-              </div>
+            <div>
+              <Kicker n="01">{t("galleryKicker")}</Kicker>
+              <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem] lg:text-[2.75rem] xl:text-[3rem]`}>{t("galleryTitle")}</h2>
             </div>
             <div className="mt-8 lg:mt-10">
               <AtelierTemplateCards />

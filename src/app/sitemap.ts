@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/metadata";
 import { routing } from "@/i18n/routing";
+import { pageUrl } from "@/lib/seo";
 
-const paths = [
+// Trang được index (mỗi trang có đủ 4 ngôn ngữ). Thêm trang mới: thêm vào đây và vào chân trang/menu.
+export const SITEMAP_PATHS = [
   "",
   "/tinh-nang",
   "/phan-mem-quan-ly-salon",
@@ -15,29 +16,18 @@ const paths = [
   "/terms",
 ];
 
+// Không ghi lastmod / changefreq / priority: Google bỏ qua changefreq, priority, và chỉ tin lastmod khi nó
+// đúng là ngày nội dung đổi (trước đây là giờ build, mỗi lần deploy đều "mới").
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = siteConfig.url;
-
   return routing.locales.flatMap((locale) =>
-    paths.map((path) => {
-      const url = path ? `${baseUrl}/${locale}${path}` : `${baseUrl}/${locale}`;
-      return {
-        url,
-        lastModified: new Date(),
-        changeFrequency: path === "" ? ("weekly" as const) : ("monthly" as const),
-        priority: path === "" ? 1 : 0.8,
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              routing.locales.map((loc) => [
-                loc,
-                path ? `${baseUrl}/${loc}${path}` : `${baseUrl}/${loc}`,
-              ])
-            ),
-            "x-default": path ? `${baseUrl}/${routing.defaultLocale}${path}` : `${baseUrl}/${routing.defaultLocale}`,
-          },
+    SITEMAP_PATHS.map((path) => ({
+      url: pageUrl(locale, path),
+      alternates: {
+        languages: {
+          ...Object.fromEntries(routing.locales.map((l) => [l, pageUrl(l, path)])),
+          "x-default": pageUrl(routing.defaultLocale, path),
         },
-      };
-    })
+      },
+    }))
   );
 }

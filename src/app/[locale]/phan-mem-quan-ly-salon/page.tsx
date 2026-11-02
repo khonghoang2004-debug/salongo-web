@@ -48,8 +48,10 @@ export default async function SalonSoftwarePage({ params }: Props) {
       },
       {
         "@type": "SoftwareApplication",
+        "@id": `${siteConfig.url}/#software`,
         name: siteConfig.name,
-        url: pageUrl(locale, PATH),
+        url: pageUrl(locale),
+        publisher: { "@id": `${siteConfig.url}/#organization` },
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, Windows, macOS",
         offers: { "@type": "AggregateOffer", priceCurrency: "CZK", lowPrice: 199, highPrice: 799, offerCount: 3 },

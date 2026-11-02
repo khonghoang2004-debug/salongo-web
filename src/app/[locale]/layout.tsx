@@ -15,7 +15,7 @@ import deMessages from "../../../messages/de.json";
 
 // Be Vietnam Pro: font thiết kế cho tiếng Việt, đủ dấu Séc / Đức, dùng cho cả tiêu đề và nội dung
 const sans = Be_Vietnam_Pro({
-  subsets: ["latin", "latin-ext", "vietnamese"],
+  subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter",
   display: "swap",
@@ -49,7 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     metadataBase: new URL(siteConfig.url),
     title: {
-      default: `${siteConfig.name} — ${meta.description}`,
+      // Chỉ dùng khi trang không tự đặt tiêu đề (trang 404); mọi trang thật đều có tiêu đề riêng
+      default: siteConfig.name,
       template: `%s | ${siteConfig.name}`,
     },
     description: meta.description,
@@ -89,12 +90,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: meta.description,
       images: [`${siteConfig.url}${siteConfig.ogImage}`],
     },
+    // Không ghi "index, follow" (mặc định của Google): để trang 404 chỉ còn thẻ noindex của Next
     robots: {
-      index: true,
-      follow: true,
       googleBot: {
-        index: true,
-        follow: true,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
@@ -117,11 +115,28 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>
-        {children}
-        <MotionRoot />
-      </div>
-    </NextIntlClientProvider>
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        {/* Bật chuyển động trước khi vẽ trang để nội dung không bị nháy */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('sg-js')" }} />
+      </head>
+      <body>
+        <svg className="absolute size-0 overflow-hidden" aria-hidden>
+          <defs>
+            <linearGradient id="gradientPinkPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#6b1532" />
+              <stop offset="50%" stopColor="#800020" />
+              <stop offset="100%" stopColor="#c04a6e" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <NextIntlClientProvider messages={messages}>
+          <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>
+            {children}
+            <MotionRoot />
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

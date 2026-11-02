@@ -59,13 +59,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     creator: siteConfig.name,
     /** Favicon / logo tab & Google kết quả tìm kiếm - URLs tuyệt đối với metadataBase */
     icons: {
-      // ?v=3: đổi URL để trình duyệt (nhất là Safari) bỏ icon Next.js cũ đã lưu
+      // favicon.ico không có tham số: Bing / Google lấy icon kết quả tìm kiếm từ đúng đường dẫn này.
+      // Các file còn lại giữ ?v=3 để trình duyệt (nhất là Safari) bỏ icon Next.js cũ đã lưu
       icon: [
-        { url: "/favicon.ico?v=3", sizes: "48x48", type: "image/x-icon" },
+        { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
         { url: "/icon-192.png?v=3", sizes: "192x192", type: "image/png" },
         { url: "/salongo-logo.svg?v=3", type: "image/svg+xml", sizes: "any" },
       ],
-      shortcut: "/favicon.ico?v=3",
+      shortcut: "/favicon.ico",
       apple: [{ url: "/apple-touch-icon.png?v=3", type: "image/png", sizes: "180x180" }],
     },
     openGraph: {

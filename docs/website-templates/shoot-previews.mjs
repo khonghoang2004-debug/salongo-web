@@ -5,7 +5,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 const [base, out] = process.argv.slice(2);
-const slugs = (process.env.SLUGS ?? "ivelle-nail,verra-hair,saluna-spa,brass-barber,lumen-hair,velvet-lash,chroma-nails,aurel-beauty,tropicana-nails,cherry-hair,lilac-lash,matcha-spa,azure-barber,rose-bridal,saffron-color").split(",");
+const slugs = (process.env.SLUGS ?? "ivelle-nail,verra-hair,saluna-spa,brass-barber,lumen-hair,velvet-lash,chroma-nails,aurel-beauty,marelle-nails,hugo-hair,onyx-spa,iris-lash,kora-skin,nova-studio").split(",");
 const tmp = path.join(os.tmpdir(), "salongo-previews/");
 fs.mkdirSync(tmp, { recursive: true });
 const browser = await chromium.launch();

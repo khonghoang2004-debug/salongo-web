@@ -48,8 +48,8 @@ Nội dung các website mẫu **luôn bằng tiếng Séc** (`DEMO_LOCALE` trong
 
 ## Ảnh
 
-- Ảnh trong demo hiện là **hình minh hoạ vẽ bằng SVG** (`templates/Art.tsx`), không lấy ảnh của salon thật hay ảnh trên mạng.
-- Muốn dùng ảnh thật (ảnh có bản quyền phù hợp hoặc ảnh tạo mới): chép file vào `public/images/website/demo/…` rồi điền `photo: "/images/website/demo/…"` vào mục tương ứng trong file nội dung (hero, gallery, team). Ghi nguồn/giấy phép vào file này.
+- Ảnh trong demo là **ảnh Unsplash miễn phí** (giấy phép Unsplash), lưu trong `public/images/website/demo/`. Nguồn từng ảnh: `PHOTO-CREDITS.md`.
+- Ảnh nào ở mẫu nào (hero, gallery, đội ngũ) + chú thích: `src/components/website/templates/photos.ts`. Đổi ảnh: chép file WebP vào thư mục demo rồi sửa mã ở đây. Mẫu nào không có ảnh sẽ tự dùng hình minh hoạ SVG (`Art.tsx`).
 - **Ảnh xem trước trong thư viện / trang chủ** (`public/images/website/{mẫu}-{pc|m}.webp`, tiếng Séc) được chụp từ chính demo. Chụp lại sau khi sửa mẫu:
 
 ```bash

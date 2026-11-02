@@ -1,13 +1,14 @@
-import { Cormorant_Garamond, EB_Garamond, Fraunces, Geologica, Hanken_Grotesk, Jost, Newsreader, Plus_Jakarta_Sans, Spectral, Tenor_Sans, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
+import { Cormorant_Garamond, EB_Garamond, Fraunces, Geologica, Hanken_Grotesk, Jost, Newsreader, Plus_Jakarta_Sans, Source_Serif_4, Tenor_Sans, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
 import { UI, dur, price } from "../templates/common";
 import { artPalette, ART_PALETTES } from "../templates/registry";
 import { Art } from "../templates/Art";
 import { DEMO_PAGES, tr, type DemoPage, type L, type TemplateContent, type Visual } from "../templates/types";
 
-// Chữ riêng từng mẫu. preload: false → trình duyệt chỉ tải file font khi trang demo thật sự dùng tới
-export const fontNail = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "vietnamese"], weight: ["400", "500", "600"], style: ["normal", "italic"], display: "swap", preload: false });
-export const fontHair = Space_Grotesk({ subsets: ["latin", "latin-ext", "vietnamese"], weight: ["400", "500", "700"], display: "swap", preload: false });
-export const fontSpa = Lora({ subsets: ["latin", "latin-ext", "vietnamese"], weight: ["400", "500"], style: ["normal", "italic"], display: "swap", preload: false });
+// Chữ riêng từng mẫu. Chỉ dùng font biến thiên (không liệt kê độ đậm): bản chia độ đậm thỉnh thoảng làm Turbopack
+// build lỗi ("next/font/google queries have exactly one entry"). preload: false → trình duyệt chỉ tải file font khi trang demo thật sự dùng tới
+export const fontNail = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "vietnamese"], style: ["normal", "italic"], display: "swap", preload: false });
+export const fontHair = Space_Grotesk({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontSpa = Lora({ subsets: ["latin", "latin-ext", "vietnamese"], style: ["normal", "italic"], display: "swap", preload: false });
 export const fontBarber = Oswald({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false }); // font biến thiên (bản chia độ đậm làm Turbopack build lỗi)
 // 4 mẫu thời trang: font biến thiên (không liệt kê độ đậm). next/font cần tham số viết thẳng, không dùng biến
 export const fontLumen = Noto_Serif_Display({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
@@ -24,7 +25,7 @@ export const fontMarelle = Fraunces({ subsets: ["latin", "latin-ext", "vietnames
 export const fontMarelleSans = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 export const fontHugo = Jost({ subsets: ["latin", "latin-ext"], display: "swap", preload: false }); // Jost không có bộ tiếng Việt; demo luôn tiếng Séc
 export const fontNova = Newsreader({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
-export const fontIris = Spectral({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, weight: ["400", "600"] });
+export const fontIris = Source_Serif_4({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 export const fontIrisSans = Hanken_Grotesk({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 export const fontKora = Geologica({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 export const fontOnyx = Tenor_Sans({ subsets: ["latin", "latin-ext"], display: "swap", preload: false, weight: "400" });

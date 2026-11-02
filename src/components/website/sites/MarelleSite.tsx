@@ -21,7 +21,8 @@ export function MarelleSite(props: SiteProps) {
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
     <section className="relative overflow-hidden bg-[#8FB0AD]">
-      <div className="absolute inset-0 opacity-60">{s.art(t.gallery.items[1])}</div>
+      <div className="absolute inset-0">{s.art(t.gallery.items[1])}</div>
+      <div className="absolute inset-0 bg-[#2B211C]/45" aria-hidden />
       <div className="relative px-5 pb-6 pt-28 text-center text-[#FFF9E8] sm:pt-32">
         <h1 className={`${serif} text-[2.75rem] leading-none drop-shadow-[0_2px_12px_rgba(43,33,28,0.35)] sm:text-7xl`}>{title}</h1>
         <p className={`${sans} mt-3 text-[17px] font-medium`}>{lead}</p>

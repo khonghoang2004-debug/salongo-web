@@ -151,7 +151,7 @@ export function DemoLightbox({
         {idx !== null && (
           <figure>
             <div className="aspect-[4/3] max-h-[calc(100dvh-140px)] w-full">
-              <Art motif={motif} v={items[idx].v} palette={palettes[idx % palettes.length]} photo={items[idx].photo} alt={items[idx].alt} />
+              <Art motif={motif} v={items[idx].v} palette={palettes[idx % palettes.length]} photo={items[idx].photo} alt={items[idx].alt} className="!object-contain" />
             </div>
             <figcaption className="flex items-center justify-between gap-3 px-3 py-3 sm:px-4">
               <button type="button" onClick={() => go(-1)} className="inline-flex size-11 items-center justify-center rounded-full hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">

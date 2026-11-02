@@ -54,7 +54,7 @@ export function AurelSite(props: SiteProps) {
                 <p className={`${serif} text-[1.5rem] font-light leading-snug`}>{l(it.name)}</p>
                 <p className={`${sans} mt-2 text-[13px] uppercase tracking-[0.16em] ${soft}`}>
                   {it.desc ? `${l(it.desc)} · ` : ""}
-                  {s.dur(it.min)} · <span className="font-semibold text-[#1E3A32]">{s.price(it.price, it.from)}</span>
+                  {s.dur(it.min)} · <span className="whitespace-nowrap font-semibold normal-case tracking-normal text-[#1E3A32]">{s.price(it.price, it.from)}</span>
                 </p>
               </li>
             ))}

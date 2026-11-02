@@ -6,7 +6,7 @@
 |---|---|---|
 | Khu ưu đãi trên trang chủ (ngay dưới hero) | `/{locale}` | `src/components/home/HomeWebsiteOffer.tsx` |
 | Trang dịch vụ + thư viện mẫu (được index, có trong sitemap) | `/{locale}/website` | `src/app/[locale]/website/page.tsx` |
-| Demo 15 mẫu × 5 trang (noindex, không có trong sitemap) | `/{locale}/website/mau/{mẫu}/{trang}` | `src/app/[locale]/website/mau/[template]/[[...page]]/page.tsx` |
+| Demo 14 mẫu × 5 trang (noindex, không có trong sitemap) | `/{locale}/website/mau/{mẫu}/{trang}` | `src/app/[locale]/website/mau/[template]/[[...page]]/page.tsx` |
 | Thanh "Website mẫu / Quay lại thư viện / Chọn mẫu này" | trên mọi trang demo | `src/components/website/DemoBar.tsx` |
 | Hộp liên hệ (sao chép nội dung, gọi, Facebook, Instagram) | thư viện + demo | `src/components/website/WebsiteContact.tsx` |
 
@@ -22,15 +22,14 @@ Mẫu (font riêng trong `sites/shared.tsx`):
 | `velvet-lash` | Mi & chân mày | blush/mận, khung oval | Playfair Display + Josefin Sans |
 | `chroma-nails` | Nail bar | cobalt/vàng bơ, viền đậm, ô chọn màu sơn | Unbounded + Manrope |
 | `aurel-beauty` | Makeup & beauty | lục bảo/kem/vàng, monogram | Fraunces + Montserrat |
-| `tropicana-nails` | Nail studio | san hô/xanh ngọc/vàng, poster | Bricolage Grotesque |
-| `cherry-hair` | Salon tóc | đỏ cherry/mù tạt, retro | Archivo |
-| `lilac-lash` | Mi & mày | lilac/bạc hà, căn giữa | Lexend |
-| `matcha-spa` | Spa | matcha/cam đất | Newsreader |
-| `azure-barber` | Barbershop | navy/trắng/đỏ, chia đôi | Epilogue |
-| `rose-bridal` | Makeup cô dâu | hồng rosé/đào | Alegreya |
-| `saffron-color` | Studio màu tóc | vàng nghệ/tím, chia đôi | Familjen Grotesk |
+| `marelle-nails` | Nail (học Dephaus) | kem/cam đất, wordmark khổng lồ, menu viên thuốc | Fraunces đậm + Plus Jakarta Sans |
+| `hugo-hair` | Tóc, 1 stylist (James Hair, Měchurová) | đen trắng, giá in hoa 2 cột | Jost |
+| `onyx-spa` | Spa cao cấp (AVA, SPA SPA) | than chì/đá, thanh đặt lịch đáy mobile | Tenor Sans + EB Garamond |
+| `iris-lash` | Mi (Lash House, Sokolská) | hoạ tiết lá, thẻ menu, 2 chi nhánh | Spectral + Hanken Grotesk |
+| `kora-skin` | Da & mày (SkinArth) | xanh rừng, 4 bước, FAQ lưới | Geologica |
+| `nova-studio` | Nhiều dịch vụ (Studio Itta) | mận/vàng, thẻ có điện thoại từng mảng | Inter Tight + Newsreader |
 
-7 mẫu cuối dùng chung khung `sites/ThemedSite.tsx` (bảng màu, font, bo góc, kiểu đầu trang trong `THEMES`); nội dung lấy từ mẫu cùng ngành trong `content/vivid.ts`, đổi tên thương hiệu, câu đầu trang, tên thợ và liên hệ. Bộ lọc loại salon ở thư viện: `CATEGORY` trong `templates/registry.ts`. Trang chủ chỉ hiện 8 mẫu tuyển chọn (`HOME_PICKS` trong `HomeWebsiteOffer.tsx`).
+Nghiên cứu 15 website và lý do chọn hướng: `RESEARCH-2026-11.md`. 6 mẫu này chỉ viết nội dung tiếng Séc (`content/research.ts`).
 Trang trong mỗi mẫu: `""` trang chủ, `dich-vu`, `gioi-thieu`, `bo-suu-tap`, `dat-lich`.
 
 ## Ngôn ngữ

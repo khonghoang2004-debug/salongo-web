@@ -7,7 +7,12 @@ import { LumenSite } from "./LumenSite";
 import { VelvetSite } from "./VelvetSite";
 import { ChromaSite } from "./ChromaSite";
 import { AurelSite } from "./AurelSite";
-import { ThemedSite } from "./ThemedSite";
+import { MarelleSite } from "./MarelleSite";
+import { HugoSite } from "./HugoSite";
+import { OnyxSite } from "./OnyxSite";
+import { IrisSite } from "./IrisSite";
+import { KoraSite } from "./KoraSite";
+import { NovaSite } from "./NovaSite";
 
 // slug mẫu → component dựng website mẫu đó
 export const SITES: Record<string, (p: SiteProps) => React.ReactNode> = {
@@ -19,11 +24,10 @@ export const SITES: Record<string, (p: SiteProps) => React.ReactNode> = {
   "velvet-lash": VelvetSite,
   "chroma-nails": ChromaSite,
   "aurel-beauty": AurelSite,
-  "tropicana-nails": ThemedSite,
-  "cherry-hair": ThemedSite,
-  "lilac-lash": ThemedSite,
-  "matcha-spa": ThemedSite,
-  "azure-barber": ThemedSite,
-  "rose-bridal": ThemedSite,
-  "saffron-color": ThemedSite,
+  "marelle-nails": MarelleSite,
+  "hugo-hair": HugoSite,
+  "onyx-spa": OnyxSite,
+  "iris-lash": IrisSite,
+  "kora-skin": KoraSite,
+  "nova-studio": NovaSite,
 };

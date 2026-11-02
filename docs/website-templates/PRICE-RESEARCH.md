@@ -29,3 +29,16 @@ Nguồn (truy cập 02/11/2026):
 - Top.cz — giải thích giá cắt tóc (toàn quốc, không ghi ngày): https://www.top.cz/kroutite-hlavou-nad-cenami-kadernickych-salonu-zde-je-vysvetleni-cen-strihu
 
 Chưa tìm được giá balayage Praha đáng tin; giá demo "từ 3 290 Kč" là ước lượng theo mức cắt + nhuộm và độ dài tóc.
+
+## Bổ sung 02/11/2026 — bảng giá trực tiếp trên website salon (dùng cho 6 mẫu mới)
+
+Xem trực tiếp trang ceník (ảnh chụp Playwright, không chép nội dung). Giá trong demo được làm tròn / điều chỉnh, không trùng nguyên bảng giá của salon nào.
+
+| Nguồn | Mức thấy được | Dùng cho |
+|---|---|---|
+| James Hair, Praha 3 — https://www.jameshair.cz/cs/james | Dámský střih + foukání 2 700, pánský 2 300, foukání 1 500, barva 2 200, melír 5 900, částečný melír 2 200–5 500 | hugo hair (thấp hơn, mức salon nhỏ: 1 900 / 1 400 / 950, melír từ 3 900) |
+| Lash House, Praha 4 — https://lashhouse.cz/cenik/ | Řasa na řasu 1 400 (doplnění 900), 2D/3D 1 600, Hollywood 1 800, manikúra 600, + shellac 800, gelová modeláž 1 000, pedikúra 800, kosmetika 790–2 490 | Iris, Marelle |
+| Řasy Sokolská, Praha 1 — https://www.rasy-sokolska.cz/cenik/ | Řasa na řasu 1 300, doplnění 900, 2D 1 500, 3D 1 600, Hollywood 2 000, laminace řas / obočí 990, obojí 1 700, úprava a barvení obočí 550, odstranění 200 | Iris |
+| SkinArth, Praha 12 — https://skinarth.cz/cenik | Úprava obočí 390, úprava a barvení 590, laminace + úprava 1 000, lash lifting 1 300, kosmetická péče 1 590–2 490, líčení 1 290–2 190, svatební balíček od 7 490 | Kora |
+| Studio Itta, Praha 1 — https://studio-itta.cz/ | Kadeřnictví od 180, pedikúra od 350, manikúra od 690 | Studio Nova |
+| Carlo IV Spa / AVA Spa (Praha) | Không có bảng giá trên trang đã xem | Onyx dùng mức masáž/kosmetika ở trên + Ryor (900 Kč / 60 min) nâng lên mức spa khách sạn, ghi rõ chỉ minh hoạ |

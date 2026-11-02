@@ -258,8 +258,8 @@ export function DemoBookingForm({
           </option>
           {services.map((g) => (
             <optgroup key={g.group} label={g.group}>
-              {g.items.map((s) => (
-                <option key={s}>{s}</option>
+              {g.items.map((s, i) => (
+                <option key={`${g.group}-${i}`}>{s}</option>
               ))}
             </optgroup>
           ))}

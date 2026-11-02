@@ -1,4 +1,4 @@
-import { Alegreya, Archivo, Bricolage_Grotesque, Cormorant_Garamond, Epilogue, Familjen_Grotesk, Fraunces, Lexend, Newsreader, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
+import { Cormorant_Garamond, EB_Garamond, Fraunces, Geologica, Hanken_Grotesk, Jost, Newsreader, Plus_Jakarta_Sans, Spectral, Tenor_Sans, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
 import { UI, dur, price } from "../templates/common";
 import { artPalette, ART_PALETTES } from "../templates/registry";
 import { Art } from "../templates/Art";
@@ -18,14 +18,17 @@ export const fontChroma = Unbounded({ subsets: ["latin", "latin-ext", "vietnames
 export const fontChromaSans = Manrope({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 export const fontAurel = Fraunces({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
 export const fontAurelSans = Montserrat({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
-// 7 mẫu nhiều màu (ThemedSite)
-export const fontTropicana = Bricolage_Grotesque({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
-export const fontLilac = Lexend({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
-export const fontCherry = Archivo({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
-export const fontMatcha = Newsreader({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
-export const fontAzure = Epilogue({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
-export const fontRose = Alegreya({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
-export const fontSaffron = Familjen_Grotesk({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+
+// 6 mẫu dựng theo nghiên cứu 15 website salon Séc (docs/website-templates/RESEARCH-2026-11.md)
+export const fontMarelle = Fraunces({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, axes: ["SOFT", "opsz"] });
+export const fontMarelleSans = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontHugo = Jost({ subsets: ["latin", "latin-ext"], display: "swap", preload: false }); // Jost không có bộ tiếng Việt; demo luôn tiếng Séc
+export const fontNova = Newsreader({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
+export const fontIris = Spectral({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, weight: ["400", "600"] });
+export const fontIrisSans = Hanken_Grotesk({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontKora = Geologica({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
+export const fontOnyx = Tenor_Sans({ subsets: ["latin", "latin-ext"], display: "swap", preload: false, weight: "400" });
+export const fontOnyxSerif = EB_Garamond({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
 
 export type SiteProps = { t: TemplateContent; page: DemoPage; locale: string };
 

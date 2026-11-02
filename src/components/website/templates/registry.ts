@@ -8,24 +8,24 @@ import { lumen } from "./content/lumen";
 import { velvet } from "./content/velvet";
 import { chroma } from "./content/chroma";
 import { aurel } from "./content/aurel";
-import { azure, cherry, lilac, matcha, rose, saffron, tropicana } from "./content/vivid";
+import { hugo, iris, kora, marelle, nova, onyx } from "./content/research";
 
 // Danh sách mẫu website. Thêm mẫu mới: tạo file nội dung trong content/, một component trong sites/,
 // rồi thêm vào đây (thư viện, trang demo và ảnh xem trước đều đọc từ danh sách này).
 export const TEMPLATES: TemplateContent[] = [
+  marelle, hugo, onyx, iris, kora, nova, // dựng theo nghiên cứu 15 website salon Séc
   nail, hair, spa, barber, lumen, velvet, chroma, aurel,
-  tropicana, cherry, lilac, matcha, azure, rose, saffron,
 ];
 
 /** Nhóm loại salon cho bộ lọc thư viện */
 export type Category = "nail" | "hair" | "spa" | "lash" | "makeup" | "barber";
 export const CATEGORY: Record<string, Category> = {
-  "ivelle-nail": "nail", "chroma-nails": "nail", "tropicana-nails": "nail",
-  "verra-hair": "hair", "lumen-hair": "hair", "cherry-hair": "hair", "saffron-color": "hair",
-  "saluna-spa": "spa", "matcha-spa": "spa",
-  "velvet-lash": "lash", "lilac-lash": "lash",
-  "aurel-beauty": "makeup", "rose-bridal": "makeup",
-  "brass-barber": "barber", "azure-barber": "barber",
+  "marelle-nails": "nail", "ivelle-nail": "nail", "chroma-nails": "nail", "nova-studio": "nail",
+  "hugo-hair": "hair", "verra-hair": "hair", "lumen-hair": "hair",
+  "onyx-spa": "spa", "saluna-spa": "spa", "kora-skin": "spa",
+  "iris-lash": "lash", "velvet-lash": "lash",
+  "aurel-beauty": "makeup",
+  "brass-barber": "barber",
 };
 
 export const getTemplate = (slug: string) => TEMPLATES.find((t) => t.slug === slug);
@@ -80,47 +80,41 @@ export const ART_PALETTES: Record<string, ArtPalette[]> = {
     ["#F1E9DA", "#E0D2B8", "#C9A66B", "#24443A"],
     ["#EFE6D6", "#DCCDB2", "#1E3A32", "#B8955A"],
   ],
-  "tropicana-nails": [
-    ["#FFF6EC", "#FFD9C2", "#FF5A5F", "#00A79D"],
-    ["#E0FFF9", "#9BE7DE", "#FFD23F", "#FF5A5F"],
-    ["#FFF4CC", "#FFD23F", "#00A79D", "#FF5A5F"],
-    ["#FFE5E0", "#FFB8AE", "#00A79D", "#1B1B1B"],
+  "marelle-nails": [
+    ["#DCE8E6", "#8FB0AD", "#F3D3BF", "#B8470B"],
+    ["#C8DAD7", "#7FA3A0", "#FFF9E8", "#C76A3A"],
+    ["#FFF9E8", "#E9DFC6", "#E2A27F", "#B8470B"],
+    ["#E9DFC6", "#D7C8A6", "#B8470B", "#2B211C"],
   ],
-  "cherry-hair": [
-    ["#FFF3E4", "#F8D9B5", "#F2A541", "#D7263D"],
-    ["#FFE3D6", "#F5B7A0", "#D7263D", "#2B0F10"],
-    ["#FCEBC9", "#F2A541", "#D7263D", "#7A1420"],
-    ["#FFF3E4", "#EFC7A3", "#2B0F10", "#D7263D"],
+  "hugo-hair": [
+    ["#3A3A3A", "#222222", "#C9B400", "#EBEBEB"],
+    ["#DDE4EC", "#B9C6D3", "#4A4A4A", "#111111"],
+    ["#EBEBEB", "#D9D9D9", "#8A6A4F", "#1A1A1A"],
+    ["#2E2E2E", "#1A1A1A", "#9E9E9E", "#EBEBEB"],
   ],
-  "lilac-lash": [
-    ["#F6F2FF", "#DDD1FF", "#9FF0D0", "#6D4AFF"],
-    ["#ECFFF7", "#BFF5DF", "#B69CFF", "#2A1B4A"],
-    ["#F1EAFF", "#CBB8FF", "#6D4AFF", "#2A1B4A"],
-    ["#F6F2FF", "#E6DCFF", "#9FF0D0", "#4B2FD1"],
+  "onyx-spa": [
+    ["#3A342E", "#2A2622", "#C9B99E", "#E8DCC8"],
+    ["#4A433B", "#2A2622", "#8C7A5E", "#E8DCC8"],
+    ["#2F2B27", "#1E1B18", "#C9B99E", "#8C7A5E"],
+    ["#EFE8DE", "#D8CEC0", "#8C7A5E", "#3A342E"],
   ],
-  "matcha-spa": [
-    ["#F3F5E9", "#D9E6BE", "#D9663C", "#4D7A26"],
-    ["#FBEFE6", "#F2C9AE", "#7FA650", "#4D7A26"],
-    ["#EEF4DF", "#C6DBA0", "#4D7A26", "#23301A"],
-    ["#F3F5E9", "#E5D8C3", "#D9663C", "#23301A"],
+  "iris-lash": [
+    ["#F6E3DA", "#E7B9A8", "#C76B7E", "#1F4E4F"],
+    ["#F6EFE7", "#E3D6C8", "#8E3A55", "#1F4E4F"],
+    ["#E7B9A8", "#D99A8A", "#5A1E33", "#2B2226"],
+    ["#F6EFE7", "#E7CDBF", "#2E6B6A", "#5A1E33"],
   ],
-  "azure-barber": [
-    ["#F2F6FB", "#D3E0EE", "#C1121F", "#0F4C81"],
-    ["#E6EEF7", "#B9CDE3", "#0F4C81", "#0B1F33"],
-    ["#FFFFFF", "#DCE6F1", "#C1121F", "#0B1F33"],
-    ["#0F4C81", "#0B3A63", "#F2F6FB", "#C1121F"],
+  "kora-skin": [
+    ["#C7CDC9", "#8E9B94", "#E4E8E5", "#1E352B"],
+    ["#E4E8E5", "#C7CDC9", "#566A60", "#1E352B"],
+    ["#8E9B94", "#566A60", "#C7CDC9", "#E4E8E5"],
+    ["#E4E8E5", "#B8C2BC", "#1E352B", "#566A60"],
   ],
-  "rose-bridal": [
-    ["#FFF0F3", "#FAD0DB", "#F7C59F", "#C42E63"],
-    ["#FFF4EC", "#F9D7C2", "#C42E63", "#3B0D1E"],
-    ["#FFE8EE", "#F4B6C7", "#E0457B", "#3B0D1E"],
-    ["#FFF0F3", "#F7C59F", "#C42E63", "#7A1E40"],
-  ],
-  "saffron-color": [
-    ["#FFF8E6", "#FDE3A2", "#5B2A86", "#F4A300"],
-    ["#F3EAFF", "#D9C2F2", "#F4A300", "#5B2A86"],
-    ["#FFF1CC", "#F4A300", "#5B2A86", "#1F1033"],
-    ["#FFF8E6", "#EBD9FF", "#F4A300", "#1F1033"],
+  "nova-studio": [
+    ["#E6DDD3", "#D2C5B5", "#D2AE62", "#33243A"],
+    ["#F2EFEA", "#E6DDD3", "#7B4A7C", "#33243A"],
+    ["#4A3654", "#33243A", "#D2AE62", "#E6DDD3"],
+    ["#E9E2D8", "#D9CCBC", "#33243A", "#D2AE62"],
   ],
 };
 

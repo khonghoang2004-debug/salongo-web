@@ -6,8 +6,8 @@ import { tr } from "../website/templates/types";
 import { PREVIEW_TINT, previewSrc } from "../website/TemplatePreview";
 import { CustomIdeaNote, HostingNote, OfferPrice, offerVars } from "../website/WebsiteOfferParts";
 
-// 8 mẫu tuyển chọn trên trang chủ (đủ loại salon, nhiều màu); thư viện /website có đủ tất cả
-const HOME_PICKS = ["tropicana-nails", "lumen-hair", "cherry-hair", "lilac-lash", "chroma-nails", "saffron-color", "rose-bridal", "azure-barber"];
+// 8 mẫu tuyển chọn trên trang chủ (đủ loại salon, bố cục khác nhau); thư viện /website có đủ tất cả
+const HOME_PICKS = ["marelle-nails", "hugo-hair", "onyx-spa", "iris-lash", "kora-skin", "nova-studio", "lumen-hair", "brass-barber"];
 
 // Ưu đãi làm website ngay dưới hero: giá 999 Kč một lần, tối đa 5 trang, ảnh chụp thật từ demo (tải lười,
 // không ảnh hưởng hero), 4 mẫu tuyển chọn dẫn tới demo và thư viện /website
@@ -57,10 +57,10 @@ export async function HomeWebsiteOffer() {
                     <span className="size-2 rounded-full bg-[#E2D9D6]" />
                     <span className="size-2 rounded-full bg-[#E2D9D6]" />
                   </div>
-                  <img src={previewSrc("cherry-hair", "pc", locale)} alt="" width={1200} height={750} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover object-top" />
+                  <img src={previewSrc("onyx-spa", "pc", locale)} alt="" width={1200} height={750} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover object-top" />
                 </div>
                 <div className="absolute bottom-0 right-0 w-[30%] rounded-[20px] bg-[#1F1A1A] p-1.5 shadow-[0_10px_30px_rgba(41,17,25,0.25)]">
-                  <img src={previewSrc("tropicana-nails", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
+                  <img src={previewSrc("marelle-nails", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
                 </div>
               </div>
             </div>

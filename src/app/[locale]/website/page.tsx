@@ -4,7 +4,7 @@ import { ArrowDown, Check } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { PageShell } from "@/components/PageShell";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { CustomIdeaNote, OfferPrice, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
+import { CustomIdeaNote, OfferPrice, SplitTitle, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -35,7 +35,7 @@ export default async function WebsitePage({ params }: Props) {
               <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
               {t("eyebrow")}
             </span>
-            <h1 className="sg-h1 mt-5 max-w-4xl">{t("heroTitle")}</h1>
+            <h1 className="sg-h1 mt-5 max-w-4xl"><SplitTitle text={t("heroTitle")} /></h1>
             <p className="sg-lead mt-5 max-w-2xl">{t("heroLead", v)}</p>
             <div className="mt-7">
               <OfferPrice />

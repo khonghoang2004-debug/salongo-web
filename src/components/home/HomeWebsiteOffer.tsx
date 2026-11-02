@@ -4,10 +4,10 @@ import { Link } from "@/i18n/navigation";
 import { TEMPLATES } from "../website/templates/registry";
 import { tr } from "../website/templates/types";
 import { PREVIEW_TINT, previewSrc } from "../website/TemplatePreview";
-import { CustomIdeaNote, OfferPrice, offerVars } from "../website/WebsiteOfferParts";
+import { CustomIdeaNote, OfferPrice, SplitTitle, offerVars } from "../website/WebsiteOfferParts";
 
 // 8 mẫu tuyển chọn trên trang chủ (đủ loại salon, bố cục khác nhau); thư viện /website có đủ tất cả
-const HOME_PICKS = ["marelle-nails", "hugo-hair", "onyx-spa", "iris-lash", "kora-skin", "nova-studio", "lumen-hair", "brass-barber"];
+const HOME_PICKS = ["aurel-beauty", "marelle-nails", "onyx-spa", "hugo-hair", "iris-lash", "chroma-nails", "nova-studio", "brass-barber"];
 
 // Ưu đãi làm website ngay dưới hero: giá 999 Kč một lần, tối đa 5 trang, ảnh chụp thật từ demo (tải lười,
 // không ảnh hưởng hero), 4 mẫu tuyển chọn dẫn tới demo và thư viện /website
@@ -26,13 +26,13 @@ export async function HomeWebsiteOffer() {
                 <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
                 {t("eyebrow")}
               </span>
-              <h2 id="web-offer-title" className="sg-h2 mt-4 !text-[1.875rem] sm:!text-[2.375rem] lg:!text-[2.75rem]">
-                {t("homeTitle")}
+              <h2 id="web-offer-title" className="mt-5 font-display text-[2.125rem] font-semibold leading-[1.05] tracking-[-0.035em] text-ink sm:text-[2.75rem] lg:text-[3.25rem]">
+                <SplitTitle text={t("homeTitle")} />
               </h2>
-              <div className="mt-5">
+              <p className="sg-lead mt-4 max-w-md !text-base">{t("lead")}</p>
+              <div className="mt-6 border-t border-[#EADDE0] pt-5">
                 <OfferPrice />
               </div>
-              <p className="sg-lead mt-5 !text-base">{t("lead")}</p>
               <div className="mt-7 flex flex-col gap-2.5 sm:flex-row">
                 <Link href="/website" className="btn-primary min-h-12 px-6 text-base">
                   {t("ctaTemplates")}

@@ -66,7 +66,7 @@ export const PHOTOS: Record<string, Set> = {
   "iris-lash": {
     hero: ["l6", "Objemové řasy"],
     gallery: [["l4", "Objem 2D"], ["l3", "Laminace"], ["l7", "Úprava obočí"], ["l0", "Řasa na řasu"], ["l5", "Hollywood"], ["l2", "Aplikace"]],
-    team: [["l10", "Lash artist"], ["l9", "Lash artist"], ["l7", "Brow artist"]],
+    team: [["l9", "Lash artist"], ["l4", "Aplikace řas"], ["l7", "Brow artist"]],
   },
   "kora-skin": {
     hero: ["s13", "Ošetření obličeje"],

@@ -10,10 +10,10 @@ export const chroma: TemplateContent = {
   card: {
     type: t("Nail bar", "Nail bar", "Nail bar", "Nail Bar"),
     style: t(
-      "Trẻ, táo bạo: chữ to, màu cobalt và vàng bơ, viền đậm, có ô chọn màu sơn.",
-      "Mladý a odvážný: velké písmo, kobalt a máslově žlutá, výrazné linky, vzorník barev.",
-      "Young and bold: big type, cobalt and butter yellow, thick outlines, a colour picker.",
-      "Jung und mutig: große Schrift, Kobalt und Buttergelb, kräftige Linien, Farbwähler."
+      "Lưới bento ảnh lớn bo tròn, kem ấm, mocha và vàng bơ, chữ grotesk hiện đại. Trẻ và đang thịnh hành.",
+      "Bento mřížka s velkými fotkami, teplá krémová, mocha a máslově žlutá, moderní grotesk. Mladé a v trendu.",
+      "A bento grid of big rounded photos, warm cream, mocha and butter yellow, modern grotesk type.",
+      "Bento-Raster mit großen runden Fotos, warmes Creme, Mocha und Buttergelb, moderne Grotesk."
     ),
   },
   tagline: t("Nail bar · Praha 7", "Nail bar · Praha 7", "Nail bar · Prague 7", "Nail Bar · Prag 7"),

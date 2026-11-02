@@ -1100,7 +1100,7 @@
     "ctaContact": "Ask about a website",
     "previewLabel": "Preview of the {name} template",
     "allTemplates": "See all {count} templates",
-    "heroTitle": "A salon website that looks good on every screen",
+    "heroTitle": "A salon website|that looks good on every screen",
     "heroLead": "For SalonGo customers.",
     "galleryKicker": "Templates",
     "galleryTitle": "Choose a style for your salon",
@@ -1156,10 +1156,10 @@
     "navLabel": "Websites",
     "demoTitle": "{name} — sample {type} website",
     "demoDesc": "Interactive demo of a SalonGo {type} website template. Brand, contact details and prices are for illustration only.",
-    "homeTitle": "A beautiful website for your salon",
+    "homeTitle": "A beautiful website|for your salon",
     "contactNow": "Contact us now for a free consultation",
     "chosenShort": "Template",
-    "customIdea": "Have your own idea for the website? Just reach out, the price is still {price}.",
+    "customIdea": "If you have your own idea for your website, don't hesitate to share it with us. The price is still only {price}.",
     "faq6Q": "What if I want a website from my own idea?",
     "faq6A": "Just get in touch. The price stays {price}, for a website with up to {pages} pages.",
     "filterAll": "All",
@@ -1170,6 +1170,7 @@
     "catMakeup": "Makeup",
     "catBarber": "Barber",
     "filterLabel": "Filter by salon type",
-    "priceLine": "for one website with up to {pages} pages"
+    "priceLine": "for one website with up to {pages} pages",
+    "customIdeaLabel": "Your own idea"
   }
 }

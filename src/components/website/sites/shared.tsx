@@ -1,4 +1,4 @@
-import { Cormorant_Garamond, EB_Garamond, Fraunces, Geologica, Hanken_Grotesk, Jost, Newsreader, Plus_Jakarta_Sans, Source_Serif_4, Tenor_Sans, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
+import { Bricolage_Grotesque, Cormorant_Garamond, EB_Garamond, Fraunces, Geologica, Hanken_Grotesk, Jost, Newsreader, Plus_Jakarta_Sans, Source_Serif_4, Tenor_Sans, Inter_Tight, Josefin_Sans, Lora, Manrope, Montserrat, Noto_Serif_Display, Oswald, Playfair_Display, Space_Grotesk, Unbounded } from "next/font/google";
 import { UI, dur, price } from "../templates/common";
 import { artPalette, ART_PALETTES } from "../templates/registry";
 import { Art } from "../templates/Art";
@@ -30,6 +30,9 @@ export const fontIrisSans = Hanken_Grotesk({ subsets: ["latin", "latin-ext", "vi
 export const fontKora = Geologica({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 export const fontOnyx = Tenor_Sans({ subsets: ["latin", "latin-ext"], display: "swap", preload: false, weight: "400" });
 export const fontOnyxSerif = EB_Garamond({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false, style: ["normal", "italic"] });
+
+// Chroma (làm lại 02/11): grotesk hiện đại kiểu bento
+export const fontChromaNew = Bricolage_Grotesque({ subsets: ["latin", "latin-ext", "vietnamese"], display: "swap", preload: false });
 
 export type SiteProps = { t: TemplateContent; page: DemoPage; locale: string };
 

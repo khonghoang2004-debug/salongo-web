@@ -1100,7 +1100,7 @@
     "ctaContact": "Website anfragen",
     "previewLabel": "Vorschau der Vorlage {name}",
     "allTemplates": "Alle {count} Vorlagen",
-    "heroTitle": "Eine Salon-Website, die auf jedem Bildschirm gut aussieht",
+    "heroTitle": "Eine Salon-Website,|die überall gut aussieht",
     "heroLead": "Für SalonGo-Kunden.",
     "galleryKicker": "Vorlagen",
     "galleryTitle": "Wählen Sie einen Stil für Ihren Salon",
@@ -1156,10 +1156,10 @@
     "navLabel": "Websites",
     "demoTitle": "{name} — Muster-Website: {type}",
     "demoDesc": "Interaktive Demo einer SalonGo-Website-Vorlage ({type}). Marke, Kontaktdaten und Preise dienen nur zur Veranschaulichung.",
-    "homeTitle": "Eine schöne Website für Ihren Salon",
+    "homeTitle": "Eine schöne Website|für Ihren Salon",
     "contactNow": "Jetzt kontaktieren für eine kostenlose Beratung",
     "chosenShort": "Vorlage",
-    "customIdea": "Sie haben eine eigene Idee für die Website? Schreiben Sie uns einfach, der Preis bleibt bei {price}.",
+    "customIdea": "Sie haben eine eigene Idee für Ihre Website? Teilen Sie sie gern mit uns. Der Preis bleibt bei nur {price}.",
     "faq6Q": "Und wenn ich eine Website nach eigener Idee möchte?",
     "faq6A": "Melden Sie sich einfach. Der Preis bleibt {price}, für eine Website mit bis zu {pages} Seiten.",
     "filterAll": "Alle",
@@ -1170,6 +1170,7 @@
     "catMakeup": "Make-up",
     "catBarber": "Barber",
     "filterLabel": "Nach Salontyp filtern",
-    "priceLine": "für eine Website mit bis zu {pages} Seiten"
+    "priceLine": "für eine Website mit bis zu {pages} Seiten",
+    "customIdeaLabel": "Eigene Idee"
   }
 }

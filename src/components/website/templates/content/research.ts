@@ -319,10 +319,10 @@ export const iris: TemplateContent = {
   card: {
     type: t("Mi & chân mày", "Řasy a obočí", "Lash & brow", "Wimpern & Brauen"),
     style: t(
-      "Nền hoạ tiết lá xanh ngọc, bảng giá thành thẻ menu kem, hai chi nhánh. Học từ Lash House và Řasy Sokolská.",
-      "Vzor listů v tyrkysové, ceník jako krémové karty menu, dvě pobočky. Inspirace Lash House a Řasy Sokolská.",
-      "A teal leaf pattern, cream menu cards for prices, two branches. Learned from Lash House and Řasy Sokolská.",
-      "Türkisfarbenes Blattmuster, cremefarbene Menükarten, zwei Filialen. Inspiriert von Lash House und Řasy Sokolská."
+      "Kiểu \"quiet luxury\": ảnh tràn màn đầu, chữ serif nghiêng, nền trắng ấm, bảng giá gọn, hai chi nhánh.",
+      "Styl quiet luxury: fotka přes celou obrazovku, kurzíva, teplá bílá, přehledný ceník, dvě pobočky.",
+      "Quiet luxury: a full-bleed photo, serif italics, warm white, a clean price list, two branches.",
+      "Quiet Luxury: Vollbildfoto, Serifen-Kursive, warmes Weiß, klare Preisliste, zwei Filialen."
     ),
   },
   tagline: cz("Prodlužování řas · Praha 1"),

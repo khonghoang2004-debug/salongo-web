@@ -10,6 +10,17 @@ import { ChooseTemplateButton } from "./WebsiteContact";
 
 export const offerVars = () => ({ price: formatKc(WEBSITE_PRICE_KC), pages: WEBSITE_MAX_PAGES });
 
+/** Tiêu đề 2 dòng: phần sau dấu "|" ở dòng thứ hai, màu đỏ đô (nhấn mạnh như hero trang chủ) */
+export function SplitTitle({ text }: { text: string }) {
+  const [a, b] = text.split("|");
+  return (
+    <>
+      <span className="block">{a}</span>
+      {b && <span className="block text-brand-700">{b}</span>}
+    </>
+  );
+}
+
 /** Giá nổi bật trên một dòng: "999 Kč cho 1 website tối đa 5 trang" */
 export async function OfferPrice({ light = false }: { light?: boolean }) {
   const t = await getTranslations("webOffer");
@@ -24,13 +35,15 @@ export async function OfferPrice({ light = false }: { light?: boolean }) {
   );
 }
 
-/** "Web theo ý tưởng riêng, giá không đổi" (người dùng chốt 02/11/2026) */
+/** "Ý tưởng riêng, giá không đổi" (người dùng chốt câu chữ 02/11/2026): thẻ sáng, vạch nhấn bên trái */
 export async function CustomIdeaNote({ className = "" }: { className?: string }) {
   const t = await getTranslations("webOffer");
   return (
-    <p className={`rounded-2xl bg-brand-700 px-5 py-3.5 text-[15px] font-medium leading-snug text-white ${className}`}>
-      {t("customIdea", offerVars())}
-    </p>
+    <div className={`relative overflow-hidden rounded-2xl border border-brand-100 bg-white py-4 pl-6 pr-5 shadow-sg-sm ${className}`}>
+      <span className="absolute inset-y-3 left-0 w-1 rounded-full bg-brand-700" aria-hidden />
+      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-700">{t("customIdeaLabel")}</p>
+      <p className="mt-1 text-[15px] leading-relaxed text-ink sm:text-base">{t("customIdea", offerVars())}</p>
+    </div>
   );
 }
 

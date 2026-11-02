@@ -1101,7 +1101,7 @@
     "ctaContact": "Mám zájem o web",
     "previewLabel": "Náhled šablony {name}",
     "allTemplates": "Všechny šablony ({count})",
-    "heroTitle": "Web pro salon, který dobře vypadá na každé obrazovce",
+    "heroTitle": "Web pro váš salon,|který sluší každé obrazovce",
     "heroLead": "Pro zákazníky SalonGo.",
     "galleryKicker": "Šablony",
     "galleryTitle": "Vyberte styl pro svůj salon",
@@ -1157,10 +1157,10 @@
     "navLabel": "Web",
     "demoTitle": "{name} — ukázkový web: {type}",
     "demoDesc": "Interaktivní ukázka šablony webu od SalonGo ({type}). Značka, kontakty a ceny jsou pouze ilustrativní.",
-    "homeTitle": "Krásný web pro váš salon",
+    "homeTitle": "Krásný web|pro váš salon",
     "contactNow": "Ozvěte se nám pro konzultaci zdarma",
     "chosenShort": "Šablona",
-    "customIdea": "Máte vlastní představu o webu? Klidně se nám ozvěte, cena zůstává {price}.",
+    "customIdea": "Máte vlastní nápad, jak by měl váš web vypadat? Klidně se s námi podělte. Cena zůstává jen {price}.",
     "faq6Q": "Co když chci web podle vlastního nápadu?",
     "faq6A": "Ozvěte se nám. Cena zůstává {price}, web až o {pages} stránkách.",
     "filterAll": "Vše",
@@ -1171,6 +1171,7 @@
     "catMakeup": "Make-up",
     "catBarber": "Barber",
     "filterLabel": "Filtrovat podle typu salonu",
-    "priceLine": "za web až o {pages} stránkách"
+    "priceLine": "za web až o {pages} stránkách",
+    "customIdeaLabel": "Vlastní nápad"
   }
 }

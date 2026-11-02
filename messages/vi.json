@@ -1101,7 +1101,7 @@
     "ctaContact": "Liên hệ làm website",
     "previewLabel": "Xem trước mẫu {name}",
     "allTemplates": "Xem cả {count} mẫu",
-    "heroTitle": "Website giới thiệu salon, đẹp trên mọi màn hình",
+    "heroTitle": "Website giới thiệu salon,|đẹp trên mọi màn hình",
     "heroLead": "Dành cho khách hàng SalonGo.",
     "galleryKicker": "Thư viện mẫu",
     "galleryTitle": "Chọn phong cách cho salon",
@@ -1157,10 +1157,10 @@
     "navLabel": "Website",
     "demoTitle": "{name} — website mẫu {type}",
     "demoDesc": "Demo tương tác mẫu website {type} của SalonGo. Thương hiệu, liên hệ và giá chỉ mang tính minh họa.",
-    "homeTitle": "Website đẹp cho salon của bạn",
+    "homeTitle": "Website đẹp|cho salon của bạn",
     "contactNow": "Liên hệ ngay để nhận tư vấn miễn phí",
     "chosenShort": "Mẫu",
-    "customIdea": "Bạn có ý tưởng riêng cho website? Cứ nhắn cho chúng mình nhé, giá vẫn chỉ {price}.",
+    "customIdea": "Nếu bạn có ý tưởng riêng cho website của mình, đừng ngần ngại chia sẻ với chúng mình nhé. Giá vẫn chỉ {price}.",
     "faq6Q": "Tôi muốn web theo ý tưởng riêng thì sao?",
     "faq6A": "Cứ liên hệ. Giá vẫn {price}, website tối đa {pages} trang.",
     "filterAll": "Tất cả",
@@ -1171,6 +1171,7 @@
     "catMakeup": "Makeup",
     "catBarber": "Barber",
     "filterLabel": "Lọc theo loại salon",
-    "priceLine": "cho 1 website tối đa {pages} trang"
+    "priceLine": "cho 1 website tối đa {pages} trang",
+    "customIdeaLabel": "Ý tưởng riêng"
   }
 }

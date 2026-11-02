@@ -134,7 +134,6 @@ export function ChooseTemplateButton({
               <X className="size-5" aria-hidden />
             </button>
           </div>
-          <p className="mt-2 text-[15px] font-semibold text-brand-700">{t("customIdea", { price: formatKc(WEBSITE_PRICE_KC) })}</p>
           <div className="mt-5">{open && <WebsiteContactPanel template={template} stacked />}</div>
         </div>
       </dialog>

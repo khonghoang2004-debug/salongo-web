@@ -1,73 +1,68 @@
-import { MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
-import { fontIris, fontIrisSans, site, type SiteProps } from "./shared";
+import { fontLumenSans, fontNova, site, type SiteProps } from "./shared";
 
-// Mẫu Iris (mi) — học từ Lash House (bảng giá là các thẻ menu màu kem đặt trên nền hoạ tiết lá, tên dịch vụ in hoa serif)
-// + Řasy Sokolská (hai chi nhánh thành hai thẻ địa chỉ, nút "Chci se objednat" viền). Hoạ tiết vẽ bằng SVG riêng.
-const serif = fontIris.className;
-const sans = fontIrisSans.className;
-const soft = "text-[#5A4B4F]";
-const btn = `${sans} inline-flex min-h-12 items-center justify-center bg-[#5A1E33] px-7 text-[13px] font-semibold uppercase tracking-[0.16em] text-white hover:bg-[#74283F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5A1E33]`;
-const btnLine = `${sans} inline-flex min-h-12 items-center justify-center border-2 border-[#2B2226]/70 px-7 text-[13px] font-semibold uppercase tracking-[0.2em] hover:border-[#5A1E33] hover:text-[#5A1E33] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5A1E33]`;
-
-/** Hoạ tiết lá lặp lại (SVG pattern) — tương phản thấp để thẻ menu kem nổi lên */
-function LeafPattern({ id }: { id: string }) {
-  return (
-    <svg className="absolute inset-0 size-full" aria-hidden>
-      <defs>
-        <pattern id={id} width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
-          <rect width="120" height="120" fill="#1F4E4F" />
-          {[
-            [20, 20, 30, "#2E6B6A"],
-            [80, 30, -40, "#C76B7E"],
-            [50, 80, 60, "#E7B9A8"],
-            [100, 95, 10, "#2E6B6A"],
-            [10, 95, -20, "#8E3A55"],
-          ].map(([x, y, r, c], i) => (
-            <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
-              <path d="M0 -22 C 12 -12, 12 12, 0 22 C -12 12, -12 -12, 0 -22Z" fill={c as string} opacity="0.85" />
-              <path d="M0 -20 V20" stroke="#1F4E4F" strokeWidth="1.2" opacity="0.6" />
-            </g>
-          ))}
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill={`url(#${id})`} />
-    </svg>
-  );
-}
+// Mẫu Iris (mi & mày) — làm lại 02/11/2026 theo kiểu "quiet luxury" đang thịnh: ảnh tràn màn đầu, chữ serif nghiêng
+// lớn trắng trên ảnh, nền trắng ấm / greige, đường kẻ mảnh, chữ nhỏ in hoa giãn rộng, một màu nhấn taupe hồng.
+// Vẫn giữ ý từ Řasy Sokolská: bảng giá rõ ràng và hai chi nhánh. Bỏ nền hoạ tiết lá cũ.
+const serif = `${fontNova.className}`;
+const sans = fontLumenSans.className; // Inter Tight
+const soft = "text-[#6B6560]";
+const cap = "text-[11px] font-medium uppercase tracking-[0.24em]";
+const btnLight = `${cap} inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-7 text-[#1C1A19] hover:bg-[#F1ECE8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`;
+const btnDark = `${cap} inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#1C1A19] px-7 text-white hover:bg-[#3A3532] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1C1A19]`;
+const link = `${cap} inline-flex min-h-11 items-center gap-2 border-b border-[#1C1A19]/30 hover:border-[#1C1A19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1C1A19]`;
 
 export function IrisSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
 
-  const MenuCard = ({ g }: { g: (typeof t.services.groups)[number] }) => (
-    <div className="relative rounded-2xl bg-[#F6EFE7] px-6 py-7 shadow-[0_10px_30px_rgba(16,40,40,0.35)] sm:px-8">
-      <h2 className={`${sans} text-center text-3xl font-bold`}>Ceník</h2>
-      <p className={`${serif} mt-1 text-center text-[13px] uppercase tracking-[0.24em] ${soft}`}>{l(g.name)}</p>
-      <ul className="mt-5">
-        {g.items.map((it, i) => (
-          <li key={i} className="flex items-baseline justify-between gap-4 border-b border-[#E3D6C8] py-3 last:border-0">
-            <span>
-              <span className={`${serif} block text-[15px] font-semibold uppercase tracking-[0.04em]`}>{l(it.name)}</span>
-              <span className={`text-[13px] ${soft}`}>• {s.dur(it.min)}</span>
-            </span>
-            <span className={`${serif} whitespace-nowrap text-[15px] italic`}>{s.price(it.price, it.from)}</span>
-          </li>
-        ))}
-      </ul>
+  const Head = ({ title, lead }: { title: string; lead: string }) => (
+    <section className="mx-auto max-w-[1200px] px-5 pb-10 pt-14 sm:px-8 sm:pt-20">
+      <p className={`${cap} ${soft}`}>
+        {t.name} — {lead}
+      </p>
+      <h1 className={`${serif} mt-4 text-[3rem] font-light italic leading-[1] tracking-[-0.02em] sm:text-7xl`}>{title}</h1>
+      <div className="mt-8 h-px bg-[#E9E4DF]" />
+    </section>
+  );
+
+  const PriceTable = ({ groups }: { groups: typeof t.services.groups }) => (
+    <div className="grid gap-x-16 gap-y-10 md:grid-cols-2">
+      {groups.map((g, gi) => (
+        <div key={gi}>
+          <h3 className={`${cap} text-[#9A7563]`}>{l(g.name)}</h3>
+          <ul className="mt-3">
+            {g.items.map((it, i) => (
+              <li key={i} className="flex items-baseline gap-4 border-b border-[#E9E4DF] py-4">
+                <span className="min-w-0 flex-1">
+                  <span className={`${serif} block text-[1.375rem] leading-tight`}>{l(it.name)}</span>
+                  <span className={`text-[13px] ${soft}`}>{s.dur(it.min)}</span>
+                </span>
+                <span className="whitespace-nowrap text-[15px] font-medium tabular-nums">{s.price(it.price, it.from)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 
   const Branches = () => (
     <div className="grid gap-5 md:grid-cols-2">
       {t.about.values.slice(0, 2).map((v, i) => (
-        <article key={i} className="bg-white p-7 text-center shadow-[0_10px_30px_rgba(43,34,38,0.08)]">
-          <MapPin className="mx-auto size-5 text-[#8E3A55]" aria-hidden />
-          <h3 className={`${serif} mt-3 text-2xl`}>{l(v.title)}</h3>
-          <p className={`mt-2 text-[15px] ${soft}`}>{l(v.text)}</p>
+        <article key={i} className="group overflow-hidden rounded-[20px] bg-white">
+          <div className="aspect-[16/10] overflow-hidden bg-[#EFE9E4]">{s.art(t.gallery.items[i + 4] ?? t.gallery.items[0], "transition-transform duration-700 group-hover:scale-[1.03] motion-reduce:transition-none")}</div>
+          <div className="flex items-start gap-3 p-6">
+            <MapPin className="mt-1 size-4 shrink-0 text-[#9A7563]" aria-hidden />
+            <div>
+              <h3 className={`${serif} text-2xl`}>{l(v.title)}</h3>
+              <p className={`mt-1 text-[15px] ${soft}`}>{l(v.text)}</p>
+            </div>
+          </div>
         </article>
       ))}
     </div>
@@ -77,92 +72,104 @@ export function IrisSite(props: SiteProps) {
   if (page === "") {
     body = (
       <>
-        <section className="relative isolate overflow-hidden">
-          <LeafPattern id="iris-hero" />
-          <div className="relative mx-auto grid max-w-[1160px] items-stretch px-5 py-12 sm:px-8 md:grid-cols-2 md:py-20">
-            <div className="flex flex-col items-center justify-center bg-[#F6EFE7]/95 px-6 py-12 text-center md:px-10">
-              <p className={`${sans} text-[12px] font-bold uppercase tracking-[0.3em] text-[#1F4E4F]`}>{l(t.home.kicker)}</p>
-              <h1 className={`${sans} mt-4 text-[2.5rem] font-extrabold uppercase leading-[1.02] tracking-[-0.02em] sm:text-6xl`}>{t.name}</h1>
-              <p className={`${serif} mt-4 text-2xl italic`}>{l(t.home.title)}</p>
-              <p className={`mt-3 max-w-sm text-[15px] uppercase tracking-[0.08em] ${soft}`}>Řasy · obočí · laminace</p>
-              <Link href={s.href("dat-lich")} className={`${btn} mt-7`}>
+        <section className="relative isolate min-h-[78vh] overflow-hidden bg-[#2B2725] text-white sm:min-h-[640px]">
+          <div className="absolute inset-0 -z-10">{s.art(t.home.hero, "", true)}</div>
+          <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-black/20 to-black/10" aria-hidden />
+          <div className="mx-auto flex min-h-[78vh] max-w-[1200px] flex-col justify-end px-5 pb-12 sm:min-h-[640px] sm:px-8 sm:pb-16">
+            <p className={`${cap} text-white/80`}>{l(t.home.kicker)}</p>
+            <h1 className={`${serif} mt-4 max-w-3xl text-[3.25rem] font-light leading-[0.98] tracking-[-0.02em] sm:text-[5.5rem]`}>
+              {l(t.home.title).split(" ").slice(0, -2).join(" ")} <em className="italic">{l(t.home.title).split(" ").slice(-2).join(" ")}</em>
+            </h1>
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <Link href={s.href("dat-lich")} className={btnLight}>
                 {l(t.bookLabel)}
               </Link>
+              <Link href={s.href("dich-vu")} className={`${cap} inline-flex min-h-11 items-center gap-2 text-white hover:underline`}>
+                {l(t.nav["dich-vu"])}
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
             </div>
-            <div className="hidden aspect-[4/5] bg-[#E7B9A8] md:block">{s.art(t.home.hero, "", true)}</div>
           </div>
-          <p className={`${sans} relative bg-[#5A1E33] py-2.5 text-center text-sm font-semibold text-white`}>{l(t.home.lead)}</p>
         </section>
 
-        <section className="mx-auto max-w-[900px] px-5 py-16 text-center sm:px-8">
-          <h2 className={`${serif} text-3xl sm:text-4xl`}>{l(t.home.intro.title)}</h2>
-          <p className={`mt-4 text-[17px] leading-relaxed ${soft}`}>{l(t.home.intro.text)}</p>
-          <ul className="mt-10 grid gap-6 text-left sm:grid-cols-3">
+        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-28">
+          <p className={`${serif} text-[2rem] font-light leading-snug sm:text-[2.5rem] lg:col-span-7`}>{l(t.home.intro.text)}</p>
+          <ol className="lg:col-span-4 lg:col-start-9">
             {t.home.highlights.map((h, i) => (
-              <li key={i} className="border-t-2 border-[#C76B7E] pt-4">
-                <h3 className={`${serif} text-xl`}>{l(h.title)}</h3>
-                <p className={`mt-1 text-[15px] ${soft}`}>{l(h.text)}</p>
+              <li key={i} className="grid grid-cols-[40px_1fr] border-t border-[#E9E4DF] py-5">
+                <span className={`${serif} text-lg italic text-[#9A7563]`}>0{i + 1}</span>
+                <span>
+                  <span className="block font-medium">{l(h.title)}</span>
+                  <span className={`text-[15px] ${soft}`}>{l(h.text)}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="bg-[#F3EFEB]">
+          <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h2 className={`${serif} text-5xl font-light italic sm:text-6xl`}>{l(t.services.title)}</h2>
+              <Link href={s.href("dich-vu")} className={link}>
+                {l(UI.allServices)}
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </div>
+            <div className="mt-10">
+              <PriceTable groups={[{ name: t.services.groups[0].name, items: s.featured.slice(0, 2) }, { name: t.services.groups[1].name, items: s.featured.slice(2) }]} />
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+          <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            {t.gallery.items.slice(0, 4).map((g, i) => (
+              <li key={i} className={i % 2 ? "lg:mt-12" : ""}>
+                <div className="aspect-[3/4] overflow-hidden rounded-[20px] bg-[#EFE9E4]">{s.art(g)}</div>
+                <p className={`${cap} mt-3 ${soft}`}>{l(g.alt)}</p>
               </li>
             ))}
           </ul>
         </section>
 
-        <section className="relative isolate overflow-hidden">
-          <LeafPattern id="iris-menu" />
-          <div className="relative mx-auto grid max-w-[1000px] gap-6 px-5 py-14 sm:px-8 md:grid-cols-2">
-            <MenuCard g={{ name: t.services.groups[0].name, items: s.featured }} />
-            <div className="flex flex-col items-center justify-center gap-4 text-center text-white">
-              <p className={`${serif} text-3xl italic`}>{l(t.services.lead)}</p>
-              <Link href={s.href("dich-vu")} className={`${btnLine} !border-white !text-white hover:!bg-white hover:!text-[#1F4E4F]`}>
-                {l(UI.allServices)}
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-[1000px] px-5 py-16 sm:px-8">
-          <h2 className={`${serif} mb-8 text-center text-3xl`}>Máme dvě studia v centru Prahy</h2>
+        <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
+          <h2 className={`${serif} mb-8 text-4xl font-light italic`}>Dvě studia v centru Prahy</h2>
           <Branches />
-          <div className="mt-8 text-center">
-            <Link href={s.href("dat-lich")} className={btnLine}>
-              {l(t.bookLabel)}
-            </Link>
-          </div>
         </section>
+        <Closing {...props} />
       </>
     );
   } else if (page === "dich-vu") {
     body = (
-      <section className="relative isolate overflow-hidden">
-        <LeafPattern id="iris-cenik" />
-        <div className="relative mx-auto grid max-w-[1000px] gap-6 px-5 py-14 sm:px-8 md:grid-cols-2">
-          {t.services.groups.map((g, gi) => (
-            <MenuCard key={gi} g={g} />
-          ))}
-          <p className="text-center text-[15px] font-medium text-white md:col-span-2">{l(t.services.note)}</p>
-        </div>
-      </section>
+      <>
+        <Head title={l(t.services.title)} lead={l(t.services.lead)} />
+        <section className="mx-auto max-w-[1200px] px-5 pb-14 sm:px-8">
+          <PriceTable groups={t.services.groups} />
+          <p className={`mt-8 text-sm ${soft}`}>{l(t.services.note)}</p>
+        </section>
+        <Closing {...props} />
+      </>
     );
   } else if (page === "gioi-thieu") {
     body = (
       <>
-        <section className="mx-auto max-w-[900px] px-5 py-16 text-center sm:px-8">
-          <h1 className={`${serif} text-4xl sm:text-5xl`}>{l(t.about.title)}</h1>
-          <p className={`mt-2 uppercase tracking-[0.2em] ${soft} text-[13px]`}>{l(t.about.lead)}</p>
-          <p className="mt-6 text-lg leading-relaxed">{l(t.about.story[0])}</p>
+        <Head title={l(t.about.title)} lead={l(t.about.lead)} />
+        <section className="mx-auto max-w-[1200px] px-5 pb-14 sm:px-8">
+          <p className={`${serif} max-w-3xl text-[1.75rem] font-light leading-snug`}>{l(t.about.story[0])}</p>
+          <ul className="mt-12 grid gap-6 sm:grid-cols-3">
+            {t.about.team.map((m) => (
+              <li key={m.name}>
+                <div className="aspect-[4/5] overflow-hidden rounded-[20px] bg-[#EFE9E4]">{s.art(m.visual)}</div>
+                <h2 className={`${serif} mt-4 text-2xl`}>{m.name}</h2>
+                <p className={`${cap} mt-1 text-[#9A7563]`}>{l(m.role)}</p>
+                <p className={`mt-1 text-[15px] ${soft}`}>{l(m.bio)}</p>
+              </li>
+            ))}
+          </ul>
         </section>
-        <section className="mx-auto grid max-w-[1000px] gap-8 px-5 pb-14 sm:grid-cols-3 sm:px-8">
-          {t.about.team.map((m) => (
-            <article key={m.name} className="text-center">
-              <div className="mx-auto aspect-[3/4] max-w-[260px] overflow-hidden bg-[#E7B9A8]">{s.art(m.visual)}</div>
-              <h2 className={`${serif} mt-4 text-2xl`}>{m.name}</h2>
-              <p className={`${sans} text-[12px] font-semibold uppercase tracking-[0.14em] text-[#8E3A55]`}>{l(m.role)}</p>
-              <p className={`mt-1 text-[15px] ${soft}`}>{l(m.bio)}</p>
-            </article>
-          ))}
-        </section>
-        <section className="bg-[#F6EFE7]">
-          <div className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8">
+        <section className="bg-[#F3EFEB]">
+          <div className="mx-auto max-w-[1200px] px-5 py-14 sm:px-8">
             <Branches />
           </div>
         </section>
@@ -170,69 +177,66 @@ export function IrisSite(props: SiteProps) {
     );
   } else if (page === "bo-suu-tap") {
     body = (
-      <section className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
-        <h1 className={`${serif} text-center text-4xl sm:text-5xl`}>{l(t.gallery.title)}</h1>
-        <p className={`mt-2 text-center ${soft}`}>{l(t.gallery.lead)}</p>
-        <div className="mt-10">
+      <>
+        <Head title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
+        <section className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
-            gridClass="grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-5 md:grid-cols-3"
-            tileClass="bg-[#E7B9A8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5A1E33]"
-            shapes={["aspect-[4/5] pb-8"]}
+            gridClass="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-5 md:grid-cols-3 [&_p]:text-[11px] [&_p]:uppercase [&_p]:tracking-[0.2em]"
+            tileClass="rounded-[20px] bg-[#EFE9E4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1C1A19]"
+            shapes={["aspect-[3/4] pb-8", "aspect-[3/4] pb-8 md:mt-12", "aspect-[3/4] pb-8"]}
           />
-        </div>
-      </section>
+        </section>
+        <Closing {...props} />
+      </>
     );
   } else {
     body = (
-      <section className="relative isolate overflow-hidden">
-        <LeafPattern id="iris-rez" />
-        <div className="relative mx-auto grid max-w-[1100px] gap-6 px-5 py-14 sm:px-8 lg:grid-cols-12">
-          <div className="bg-[#F6EFE7] p-6 sm:p-9 lg:col-span-8">
-            <h1 className={`${serif} text-3xl`}>{l(t.contact.title)}</h1>
-            <p className={`mt-1 mb-6 ${soft}`}>{l(t.contact.lead)}</p>
+      <>
+        <Head title={l(t.contact.title)} lead={l(t.contact.lead)} />
+        <section className="mx-auto grid max-w-[1200px] gap-10 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+          <div className="lg:col-span-7">
             <DemoBookingForm
               {...s.form}
               staff={t.about.team.map((m) => m.name)}
               c={{
-                field: "mt-2 block min-h-12 w-full border border-[#D9C8B8] bg-white px-4 py-3 text-[16px] outline-none focus:border-[#5A1E33]",
-                label: `${sans} text-[12px] font-bold uppercase tracking-[0.14em]`,
-                chip: `${sans} min-h-11 border border-[#D9C8B8] bg-white px-4 text-sm font-semibold hover:border-[#5A1E33] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5A1E33]`,
-                chipOn: "!border-[#5A1E33] !bg-[#5A1E33] text-white",
-                submit: btn,
-                notice: "bg-white p-6",
+                field: "mt-2 block min-h-12 w-full border-0 border-b border-[#D9D2CB] bg-transparent px-0 py-3 text-[17px] outline-none focus:border-[#1C1A19]",
+                label: `${cap} ${soft}`,
+                chip: `${cap} min-h-11 rounded-full border border-[#D9D2CB] px-4 hover:border-[#1C1A19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1C1A19]`,
+                chipOn: "!border-[#1C1A19] bg-[#1C1A19] text-white",
+                submit: btnDark,
+                notice: "rounded-[20px] bg-[#F3EFEB] p-6",
               }}
             />
           </div>
-          <aside className="space-y-4 lg:col-span-4">
+          <aside className="space-y-4 lg:col-span-4 lg:col-start-9">
             {t.about.values.slice(0, 2).map((v, i) => (
-              <div key={i} className="bg-white p-5">
+              <div key={i} className="border-t border-[#E9E4DF] pt-4">
                 <h2 className={`${serif} text-xl`}>{l(v.title)}</h2>
                 <p className={`mt-1 text-[15px] ${soft}`}>{l(v.text)}</p>
               </div>
             ))}
-            <div className="bg-white p-5 text-[15px]">
+            <div className="border-t border-[#E9E4DF] pt-4 text-[15px]">
               {t.contact.hours.map((h, i) => (
                 <p key={i}>
                   {l(h.days)} · {h.time}
                 </p>
               ))}
-              <DemoPhone phone={t.contact.phone} note={l(UI.form.callDemo)} className="mt-2 font-semibold" />
+              <DemoPhone phone={t.contact.phone} note={l(UI.form.callDemo)} className="mt-2 font-medium" />
             </div>
           </aside>
-        </div>
-      </section>
+        </section>
+      </>
     );
   }
 
   return (
-    <div className={`bg-white text-[#2B2226] ${sans}`}>
+    <div className={`bg-[#FBFAF8] text-[#1C1A19] ${sans}`}>
       <DemoNav
         brand={
-          <Link href={s.href("")} className="flex min-h-11 flex-col justify-center leading-none">
-            <span className={`${sans} text-2xl font-extrabold uppercase tracking-[0.18em]`}>Iris</span>
-            <span className={`${serif} text-[11px] italic tracking-[0.1em] ${soft}`}>lash studio</span>
+          <Link href={s.href("")} className={`${serif} flex min-h-11 items-center text-[1.75rem] italic`}>
+            Iris
           </Link>
         }
         items={s.nav}
@@ -240,36 +244,51 @@ export function IrisSite(props: SiteProps) {
         menuLabel={l(UI.menu)}
         closeLabel={l(UI.close)}
         c={{
-          header: "border-b border-[#EADBD0] bg-white",
-          inner: "h-[72px] max-w-[1160px] px-5 sm:px-8",
-          link: `${sans} px-3 py-2 text-[14px] font-semibold text-[#2B2226] hover:text-[#8E3A55] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5A1E33]`,
-          active: "!text-[#8E3A55] underline underline-offset-8",
-          cta: `${btn} !min-h-11 !px-4 !text-[12px]`,
-          burger: "focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5A1E33]",
-          panel: "border-t border-[#EADBD0] bg-white",
-          panelLink: `${serif} flex min-h-12 items-center px-5 text-xl`,
+          header: "border-b border-[#E9E4DF] bg-[#FBFAF8]/90 backdrop-blur",
+          inner: "h-[68px] max-w-[1200px] px-5 sm:px-8",
+          link: `${cap} px-3 py-2 ${soft} hover:text-[#1C1A19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1C1A19]`,
+          active: "!text-[#1C1A19]",
+          cta: `${btnDark} !min-h-11 !px-5`,
+          burger: "rounded-full border border-[#D9D2CB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1C1A19]",
+          panel: "border-t border-[#E9E4DF] bg-[#FBFAF8]",
+          panelLink: `${serif} flex min-h-12 items-center px-5 text-2xl italic`,
         }}
       />
       <main>{body}</main>
-      <footer className="bg-[#E7CDBF] text-[#2B2226]">
-        <div className="mx-auto grid max-w-[1160px] gap-6 px-5 py-10 text-[15px] sm:px-8 md:grid-cols-4">
-          <p className={`${sans} text-2xl font-extrabold uppercase tracking-[0.18em]`}>Iris</p>
+      <footer className="bg-[#1C1A19] text-[#D9D2CB]">
+        <div className="mx-auto grid max-w-[1200px] gap-8 px-5 py-14 sm:px-8 md:grid-cols-4">
+          <p className={`${serif} text-4xl italic text-white`}>Iris</p>
           {t.about.values.slice(0, 2).map((v, i) => (
-            <div key={i}>
-              <p className={`${sans} text-[13px] font-bold uppercase tracking-[0.12em] text-[#5A1E33]`}>{l(v.title)}</p>
-              <p>{l(v.text)}</p>
+            <div key={i} className="text-[15px]">
+              <p className={`${cap} text-[#C4A99A]`}>{l(v.title)}</p>
+              <p className="mt-1">{l(v.text)}</p>
             </div>
           ))}
           <nav aria-label="Footer" className="flex flex-col items-start">
             {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-10 items-center font-semibold hover:underline">
+              <Link key={n.href} href={n.href} className={`${cap} inline-flex min-h-10 items-center hover:text-white`}>
                 {n.label}
               </Link>
             ))}
           </nav>
         </div>
-        <p className="border-t border-[#2B2226]/15 px-5 py-5 text-center text-[13px]">{l(UI.disclaimer)}</p>
+        <p className="border-t border-white/10 px-5 py-5 text-center text-[13px] text-[#A8A09A]">{l(UI.disclaimer)}</p>
       </footer>
     </div>
+  );
+}
+
+function Closing(props: SiteProps) {
+  const s = site(props);
+  const { t } = props;
+  return (
+    <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
+      <div className="flex flex-col items-start justify-between gap-6 border-t border-[#E9E4DF] pt-10 sm:flex-row sm:items-end">
+        <h2 className={`${serif} text-4xl font-light italic sm:text-5xl`}>{s.l(t.home.closing.title)}</h2>
+        <Link href={s.href("dat-lich")} className={btnDark}>
+          {s.l(t.bookLabel)}
+        </Link>
+      </div>
+    </section>
   );
 }

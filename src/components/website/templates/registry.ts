@@ -14,8 +14,8 @@ import { withPhotos } from "./photos";
 // Danh sách mẫu website. Thêm mẫu mới: tạo file nội dung trong content/, một component trong sites/,
 // rồi thêm vào đây (thư viện, trang demo và ảnh xem trước đều đọc từ danh sách này).
 export const TEMPLATES: TemplateContent[] = [
-  marelle, hugo, onyx, iris, kora, nova, // dựng theo nghiên cứu 15 website salon Séc
-  nail, hair, spa, barber, lumen, velvet, chroma, aurel,
+  aurel, marelle, onyx, hugo, iris, chroma, kora, nova,
+  nail, hair, spa, barber, lumen, velvet,
 ].map(withPhotos);
 
 /** Nhóm loại salon cho bộ lọc thư viện */

@@ -272,8 +272,8 @@
     "privacyDesc": "SalonGo Datenschutzrichtlinie – wie wir die Privatsphäre der Nutzer schützen.",
     "termsTitle": "Nutzungsbedingungen",
     "termsDesc": "SalonGo Nutzungsbedingungen – Regeln und Verpflichtungen bei der Nutzung der Plattform.",
-    "websiteTitle": "Salon-Websites für nur {price}",
-    "websiteDesc": "Website mit bis zu {pages} Seiten für SalonGo-Kunden, Designgebühr {price} einmalig. 8 Vorlagen für Nägel, Haare, Wimpern, Make-up, Spa und Barbershop mit Demo."
+    "websiteTitle": "Website für Salon & Nagelstudio für {price}",
+    "websiteDesc": "Website für Friseur, Nagelstudio, Spa und Barbershop: bis zu {pages} Seiten, mobil optimiert, {price} einmalig für SalonGo-Kunden. 14 Demos."
   },
   "privacyPolicy": {
     "intro": "SalonGo verpflichtet sich, die Privatsphäre der Nutzer bei der Nutzung unserer Website und Software zu schützen.",
@@ -1101,10 +1101,10 @@
     "ctaContact": "Website anfragen",
     "previewLabel": "Vorschau der Vorlage {name}",
     "allTemplates": "Alle {count} Vorlagen",
-    "heroTitle": "Eine Salon-Website,|die überall gut aussieht",
+    "heroTitle": "Websites für Salons,|schön auf jedem Bildschirm",
     "heroLead": "Für SalonGo-Kunden.",
     "galleryKicker": "Vorlagen",
-    "galleryTitle": "Wählen Sie einen Stil für Ihren Salon",
+    "galleryTitle": "Website-Vorlagen für Nägel, Haare, Spa, Wimpern und Barbershops",
     "galleryLead": "Jede Vorlage ist eine funktionierende Website. Tippen für die Demo.",
     "viewDemo": "Demo ansehen",
     "choose": "Diese Vorlage wählen",
@@ -1172,6 +1172,7 @@
     "catBarber": "Barber",
     "filterLabel": "Nach Salontyp filtern",
     "priceLine": "für eine Website mit bis zu {pages} Seiten",
-    "customIdeaLabel": "Eigene Idee"
+    "customIdeaLabel": "Eigene Idee",
+    "breadcrumb": "Salon-Website"
   }
 }

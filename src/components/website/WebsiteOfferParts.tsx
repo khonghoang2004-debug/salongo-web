@@ -15,7 +15,7 @@ export function SplitTitle({ text }: { text: string }) {
   const [a, b] = text.split("|");
   return (
     <>
-      <span className="block">{a}</span>
+      <span className="block">{a}</span>{" "}
       {b && <span className="block text-brand-700">{b}</span>}
     </>
   );

@@ -272,8 +272,8 @@
     "privacyDesc": "Zásady ochrany osobních údajů SalonGo – jak chráníme soukromí uživatelů.",
     "termsTitle": "Podmínky užití",
     "termsDesc": "Podmínky užití služby SalonGo – pravidla a závazky při používání platformy.",
-    "websiteTitle": "Web pro salon za {price}",
-    "websiteDesc": "Web až o {pages} stránkách pro zákazníky SalonGo, návrh za {price} jednorázově. Prohlédněte si 8 šablon pro nehty, vlasy, řasy, make-up, spa a barbershop."
+    "websiteTitle": "Tvorba webu pro salon a nehtové studio za {price}",
+    "websiteDesc": "Tvorba webu pro kadeřnictví, nehtové studio, kosmetiku i barbershop: až {pages} stránek, skvělý v mobilu, {price} jednorázově. 14 ukázek šablon."
   },
   "privacyPolicy": {
     "intro": "SalonGo se zavazuje chránit soukromí uživatelů při používání našich webových stránek a softwaru.",
@@ -1102,10 +1102,10 @@
     "ctaContact": "Mám zájem o web",
     "previewLabel": "Náhled šablony {name}",
     "allTemplates": "Všechny šablony ({count})",
-    "heroTitle": "Web pro váš salon,|který sluší každé obrazovce",
+    "heroTitle": "Tvorba webu pro salon,|který sluší každé obrazovce",
     "heroLead": "Pro zákazníky SalonGo.",
     "galleryKicker": "Šablony",
-    "galleryTitle": "Vyberte styl pro svůj salon",
+    "galleryTitle": "Šablony webů pro nehty, vlasy, spa, řasy a barbershopy",
     "galleryLead": "Každá šablona je funkční web. Klikněte na ukázku.",
     "viewDemo": "Otevřít ukázku",
     "choose": "Vybrat šablonu",
@@ -1173,6 +1173,7 @@
     "catBarber": "Barber",
     "filterLabel": "Filtrovat podle typu salonu",
     "priceLine": "za web až o {pages} stránkách",
-    "customIdeaLabel": "Vlastní nápad"
+    "customIdeaLabel": "Vlastní nápad",
+    "breadcrumb": "Tvorba webu pro salon"
   }
 }

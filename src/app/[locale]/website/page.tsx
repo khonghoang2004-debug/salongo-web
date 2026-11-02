@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowDown, Check } from "lucide-react";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, pageUrl } from "@/lib/seo";
+import { siteConfig } from "@/lib/metadata";
+import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
+import { TEMPLATES } from "@/components/website/templates/registry";
 import { PageShell } from "@/components/PageShell";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { CustomIdeaNote, OfferPrice, SplitTitle, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
@@ -9,7 +12,7 @@ import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 
 type Props = { params: Promise<{ locale: string }> };
 
-// Trang dịch vụ làm website + thư viện 4 mẫu: được index (có trong sitemap). Trang demo từng mẫu thì noindex.
+// Trang dịch vụ làm website + thư viện mẫu: được index (có trong sitemap). Trang demo từng mẫu thì noindex.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages" });
@@ -24,10 +27,65 @@ export default async function WebsitePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("webOffer");
+  const tp = await getTranslations("pages");
+  const tn = await getTranslations("nav");
   const v = offerVars();
+
+  // Dữ liệu có cấu trúc: dịch vụ thật của SalonGo (giá đã chốt), FAQ đúng như hiển thị, breadcrumb.
+  // Không đưa salon mẫu nào vào (chúng chỉ là demo, noindex).
+  const url = pageUrl(locale, "/website");
+  const org = `${siteConfig.url}/#organization`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: tp("websiteTitle", v),
+        description: tp("websiteDesc", v),
+        serviceType: "Website design for beauty salons",
+        url,
+        inLanguage: locale,
+        provider: { "@id": org },
+        brand: { "@type": "Brand", name: siteConfig.name },
+        areaServed: [{ "@type": "Country", name: "Czechia" }, { "@type": "Place", name: "European Union" }],
+        audience: { "@type": "BusinessAudience", name: "Hair, nail, beauty, spa and barber salons using SalonGo" },
+        offers: {
+          "@type": "Offer",
+          price: WEBSITE_PRICE_KC,
+          priceCurrency: "CZK",
+          url,
+          availability: "https://schema.org/InStock",
+          description: `${v.price} ${t("priceLine", v)}`,
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: t("galleryTitle"),
+          numberOfItems: TEMPLATES.length,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: FAQ.map((n) => ({
+          "@type": "Question",
+          name: t(`faq${n}Q`, v),
+          acceptedAnswer: { "@type": "Answer", text: t(`faq${n}A`, v) },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: tn("home"), item: pageUrl(locale) },
+          { "@type": "ListItem", position: 2, name: t("breadcrumb"), item: url },
+        ],
+      },
+    ],
+  };
 
   return (
     <PageShell>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="pt-1.5 sm:pt-3">
         <div className="sg-panel">
           <div className="mx-auto max-w-[1160px] px-4 py-10 sm:px-8 sm:py-14 lg:py-16">

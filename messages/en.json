@@ -272,8 +272,8 @@
     "privacyDesc": "SalonGo privacy policy – how we protect user privacy.",
     "termsTitle": "Terms of Service",
     "termsDesc": "SalonGo Terms of Service – rules and commitments when using the platform.",
-    "websiteTitle": "Salon websites for only {price}",
-    "websiteDesc": "A website with up to {pages} pages for SalonGo customers, {price} one-time design fee. See 8 templates for nail, hair, lash, makeup, spa and barber shops with live demos."
+    "websiteTitle": "Salon website design for {price}",
+    "websiteDesc": "Website design for hair, nail, spa and barber salons: up to {pages} pages, mobile-friendly, {price} one-time for SalonGo customers. See 14 demos."
   },
   "privacyPolicy": {
     "intro": "SalonGo is committed to protecting the privacy of users when using our website and software.",
@@ -1101,10 +1101,10 @@
     "ctaContact": "Ask about a website",
     "previewLabel": "Preview of the {name} template",
     "allTemplates": "See all {count} templates",
-    "heroTitle": "A salon website|that looks good on every screen",
+    "heroTitle": "Salon website design,|beautiful on every screen",
     "heroLead": "For SalonGo customers.",
     "galleryKicker": "Templates",
-    "galleryTitle": "Choose a style for your salon",
+    "galleryTitle": "Website templates for nail, hair, spa, lash and barber salons",
     "galleryLead": "Each template is a working website. Tap to open the demo.",
     "viewDemo": "View demo",
     "choose": "Choose this template",
@@ -1172,6 +1172,7 @@
     "catBarber": "Barber",
     "filterLabel": "Filter by salon type",
     "priceLine": "for one website with up to {pages} pages",
-    "customIdeaLabel": "Your own idea"
+    "customIdeaLabel": "Your own idea",
+    "breadcrumb": "Salon website design"
   }
 }

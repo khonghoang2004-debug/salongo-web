@@ -60,6 +60,14 @@ export default async function Home({ params }: Props) {
         email: CONTACT_EMAIL,
         telephone: CONTACT_PHONE,
         sameAs: [CONTACT_FACEBOOK, CONTACT_INSTAGRAM],
+        // Dịch vụ làm website cho khách SalonGo (chi tiết: JSON-LD Service trên trang /website)
+        makesOffer: {
+          "@type": "Offer",
+          price: 999,
+          priceCurrency: "CZK",
+          url: `${pageUrl}/website`,
+          itemOffered: { "@id": `${pageUrl}/website#service` },
+        },
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer support",

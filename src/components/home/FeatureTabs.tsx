@@ -95,25 +95,25 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
                 role="tab"
                 aria-selected={on}
                 onClick={() => pick(i)}
-                className="group flex w-full items-start gap-4 py-5 text-left"
+                className="group flex w-full items-center gap-3 py-2.5 text-left"
               >
                 <span
-                  className={`mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                  className={`flex size-8 shrink-0 items-center justify-center self-start rounded-md transition-colors ${
                     on ? "bg-brand-700 text-white" : "bg-brand-50 text-brand-700"
                   }`}
                   aria-hidden
                 >
-                  <Icon className="size-5" />
+                  <Icon className="size-4" />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span
-                    className={`block text-lg font-semibold tracking-[-0.01em] transition-colors ${
+                    className={`block text-[16px] font-semibold leading-8 tracking-[-0.01em] transition-colors ${
                       on ? "text-ink" : "text-ink/60 group-hover:text-ink"
                     }`}
                   >
                     {it.title}
                   </span>
-                  {on && <span className="sg-fade mt-2 block text-[15px] leading-relaxed text-muted">{it.desc}</span>}
+                  {on && <span className="sg-fade mt-0.5 block pb-1 text-[14px] leading-relaxed text-muted">{it.desc}</span>}
                 </span>
               </button>
               {on && (

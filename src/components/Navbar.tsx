@@ -16,11 +16,13 @@ const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.Lo
   ),
 });
 
+// "Trang chủ" chỉ hiện trên menu PC từ 1536 px (logo đã dẫn về trang chủ): đủ chỗ cho mục Website ở 1024–1535 px
 const menuItems = [
   { href: "/", labelKey: "home" as const },
   { href: "/tinh-nang", labelKey: "features" as const },
   { href: "/giai-phap", labelKey: "solutions" as const },
   { href: "/bang-gia", labelKey: "pricing" as const },
+  { href: "/website", labelKey: "website" as const },
   { href: "/faq", labelKey: "faq" as const },
   { href: "/lien-he", labelKey: "contact" as const },
 ];
@@ -130,6 +132,8 @@ export function Navbar() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 2xl:px-4 ${
+                  item.href === "/" ? "hidden 2xl:inline-block" : ""
+                } ${
                   active
                     ? "bg-white text-brand-700 shadow-[0_0_0_1px_#ECE6E7]"
                     : "text-ink/70 hover:text-ink"

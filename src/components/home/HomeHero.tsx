@@ -3,13 +3,14 @@ import { getTranslations } from "next-intl/server";
 import { ArrowUpRight, Check, Lock, Play } from "lucide-react";
 import { CountUp } from "../motion/CountUp";
 import { PhoneShot } from "../ui/AppShot";
-import { DeviceSwitch } from "../ui/DeviceSwitch";
 import { SIGNUP_URL } from "@/lib/app-links";
 
 const stats = [
   { value: "stat1Value", label: "stat1Label" },
   { value: "stat2Value", label: "stat2Label" },
 ] as const;
+
+const BLANK_GIF = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
@@ -79,11 +80,8 @@ export async function HomeHero() {
 
           {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn. Điện thoại: ẩn để màn hình đầu gọn */}
           <div className="relative mx-auto mt-8 hidden max-w-[1180px] sm:block px-3 pb-4 sm:mt-12 sm:px-10 sm:pb-12 lg:mt-14 lg:px-16 lg:pb-16">
-            {/* Mobile: nút gạt Điện thoại / Máy tính; PC: ảnh máy tính */}
-            <DeviceSwitch
-              className="sg-stage"
-              phone={<PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority className="mx-auto max-w-[270px]" />}
-              pc={
+            {/* Ảnh máy tính (từ sm trở lên) */}
+            <div className="sg-stage">
               <div className="sg-browser border-white/20 shadow-[0_6px_20px_rgba(20,0,6,0.28)]">
                 <div className="sg-browser-bar">
                   <span className="sg-browser-dot" />
@@ -95,21 +93,24 @@ export async function HomeHero() {
                   </span>
                   <span className="hidden w-[42px] sm:block" aria-hidden />
                 </div>
-                <img
-                  src="/images/app/tong-quan.webp"
-                  alt={t("imageAlt")}
-                  width={1600}
-                  height={1000}
-                  className="block h-auto w-full"
-                  fetchPriority="high"
-                />
+                {/* Điện thoại không tải ảnh này (khung bị ẩn): nguồn rỗng 1×1 cho màn hẹp */}
+                <picture>
+                  <source media="(max-width: 639.98px)" srcSet={BLANK_GIF} />
+                  <img
+                    src="/images/app/tong-quan.webp"
+                    alt={t("imageAlt")}
+                    width={1600}
+                    height={1000}
+                    className="block h-auto w-full"
+                    fetchPriority="high"
+                  />
+                </picture>
               </div>
-              }
-            />
+            </div>
 
             {/* Cùng màn Tổng quan trên điện thoại (PC: nổi góc phải; mobile: không hiện để ảnh PC đủ lớn) */}
             <div className="sg-float absolute bottom-6 right-2 hidden w-[190px] lg:block xl:-right-4 xl:w-[210px]" style={d(1300)}>
-              <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} priority />
+              <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("imageAltPhone")} />
             </div>
           </div>
         </div>

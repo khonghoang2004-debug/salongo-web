@@ -20,6 +20,7 @@ const footerNavItems = [
   { href: "/faq", labelKey: "faq" as const },
   { href: "/lien-he", labelKey: "contact" as const },
   { href: "/phan-mem-quan-ly-salon", labelKey: "guide" as const },
+  { href: "/ve-salongo", labelKey: "about" as const },
 ] as const;
 
 const SOCIALS = [
@@ -36,6 +37,7 @@ export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
   const tGuide = await getTranslations("guide");
+  const tPages = await getTranslations("pages");
 
   return (
     <footer className="mt-2 border-t border-line bg-[#FBF7F7]">
@@ -71,7 +73,13 @@ export async function Footer() {
               {footerNavItems.map(({ href, labelKey }) => (
                 <li key={href}>
                   <Link href={href} className={linkBase}>
-                    {labelKey === "home" ? t("home") : labelKey === "guide" ? tGuide("crumb") : tNav(labelKey)}
+                    {labelKey === "home"
+                      ? t("home")
+                      : labelKey === "guide"
+                        ? tGuide("crumb")
+                        : labelKey === "about"
+                          ? tPages("aboutTitle")
+                          : tNav(labelKey)}
                   </Link>
                 </li>
               ))}

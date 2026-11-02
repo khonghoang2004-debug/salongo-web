@@ -16,8 +16,21 @@ const OLD_IMAGES = {
   "hero-dashboard": "tong-quan",
 };
 
+// Domain chính duy nhất được index. Bản sao trên domain khác (salongo-web.vercel.app, bản preview…)
+// nhận X-Robots-Tag: noindex để Google không lập chỉ mục trùng; trên www.salongo.eu không có header này.
+const PRIMARY_HOST = "www.salongo.eu";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        missing: [{ type: "host", value: PRIMARY_HOST.replace(/\./g, "\\.") }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       ...Object.entries(OLD_IMAGES).map(([from, to]) => ({

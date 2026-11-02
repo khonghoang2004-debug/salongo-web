@@ -1171,7 +1171,7 @@
     "catMakeup": "Makeup",
     "catBarber": "Barber",
     "filterLabel": "Filter by salon type",
-    "priceLine": "for one {pages}-page website, only for SalonGo customers",
+    "priceLine": "for one {pages}-page website|only for SalonGo customers",
     "customIdeaLabel": "Your own idea",
     "breadcrumb": "Salon website design",
     "stat1": "{count} templates",
@@ -1181,6 +1181,6 @@
     "stat3": "Desktop & mobile",
     "stat3Text": "Looks great on every screen",
     "studio": "SalonGo Web Studio",
-    "priceLabel": "Design fee"
+    "priceLabel": "Only"
   }
 }

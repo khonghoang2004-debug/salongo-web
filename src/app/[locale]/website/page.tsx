@@ -57,7 +57,7 @@ export default async function WebsitePage({ params }: Props) {
           priceCurrency: "CZK",
           url,
           availability: "https://schema.org/InStock",
-          description: `${v.price} ${t("priceLine", v)}`,
+          description: `${v.price} ${t("priceLine", v).replace("|", " ")}`,
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -112,11 +112,17 @@ export default async function WebsitePage({ params }: Props) {
                 <h1 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] text-balance sm:text-[3.5rem] lg:text-[3.75rem]`}>
                   <span className="block">{h1a}</span> {h1b && <span className="block italic text-brand-700">{h1b}</span>}
                 </h1>
-                <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
+                <div className="mt-6 flex flex-wrap items-end gap-x-4 gap-y-2 border-y border-[#DCD5CA] py-4 sm:gap-x-5">
                   <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
                   <p className={`${serif} whitespace-nowrap text-[3rem] font-medium leading-[0.9] tracking-[-0.02em] sm:text-[3.5rem]`}>{v.price}</p>
-                  <p className="pb-1.5 text-[16px] font-medium leading-snug text-[#3A3631]">
-                    {t("priceLine", v)}
+                  <p className="pb-1 text-[15px] font-medium leading-snug text-[#3A3631] sm:text-[16px]">
+                    {t("priceLine", v)
+                      .split("|")
+                      .map((x) => (
+                        <span key={x} className="block">
+                          {x}
+                        </span>
+                      ))}
                   </p>
                 </div>
                 <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">

@@ -39,7 +39,15 @@ export async function HomeWebsiteOffer() {
               <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
                 <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
                 <p className={`${serif} whitespace-nowrap text-[2.75rem] font-medium leading-[0.9] tracking-[-0.02em] sm:text-[3.25rem]`}>{v.price}</p>
-                <p className="pb-1 text-[16px] font-medium leading-snug text-[#3A3631]">{t("priceLine", v)}</p>
+                <p className="pb-1 text-[15px] font-medium leading-snug text-[#3A3631] sm:text-[16px]">
+                  {t("priceLine", v)
+                    .split("|")
+                    .map((x) => (
+                      <span key={x} className="block">
+                        {x}
+                      </span>
+                    ))}
+                </p>
               </div>
               <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
                 <Link

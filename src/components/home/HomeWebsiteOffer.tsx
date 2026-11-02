@@ -8,8 +8,8 @@ import { previewSrc } from "../website/TemplatePreview";
 import { offerVars } from "../website/WebsiteOfferParts";
 import { fontAtelier } from "../website/atelier";
 
-// 8 mẫu tuyển chọn trên trang chủ (đủ loại salon, bố cục khác nhau); thư viện /website có đủ tất cả
-const HOME_PICKS = ["aurel-beauty", "atelier-noir", "thermae-wellness", "maison-claire", "glow-room", "north-barber", "lune-lash", "studio-grey"];
+// 2 mẫu tiêu biểu trên trang chủ (người dùng chốt 02/11: chỉ 2 mẫu, gọn); thư viện /website có đủ tất cả
+const HOME_PICKS = ["aurel-beauty", "atelier-noir"];
 
 // Ưu đãi làm website ngay dưới hero, cùng phong cách "atelier" với trang /website (kem đá, espresso, chữ Newsreader;
 // màu ghi chú trong website/atelier.ts). Ảnh chụp thật từ demo, tải lười nên không ảnh hưởng hero.
@@ -82,38 +82,34 @@ export async function HomeWebsiteOffer() {
             </div>
           </div>
 
-          <div className="border-t border-[#DCD5CA] p-5 sm:p-8 lg:px-12">
-            <ul className="grid grid-cols-2 gap-x-3 gap-y-5 sm:gap-x-5 lg:grid-cols-4">
-              {HOME_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug)!).map((tpl, i) => (
-                <li key={tpl.slug}>
-                  <Link
-                    href={`/website/mau/${tpl.slug}`}
-                    className="group block rounded-[6px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F1EB]"
-                  >
-                    <span className="block overflow-hidden rounded-[6px] bg-[#E6E0D6] ring-1 ring-black/5">
-                      <img
-                        src={previewSrc(tpl.slug, "pc", locale)}
-                        alt={t("previewLabel", { name: tpl.name })}
-                        width={1200}
-                        height={750}
-                        loading="lazy"
-                        decoding="async"
-                        className="block aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none"
-                      />
-                    </span>
-                    <span className="mt-3 flex items-baseline gap-2 border-b border-[#DCD5CA] pb-2">
-                      <span className="hidden text-[11px] font-semibold tabular-nums tracking-[0.12em] text-[#7A6347] sm:inline">{String(i + 1).padStart(2, "0")}</span>
-                      <span className={`${serif} min-w-0 flex-1 truncate text-[1.125rem] font-medium leading-tight sm:text-[1.25rem]`}>{tpl.name}</span>
-                      <ArrowRight className="size-4 shrink-0 self-center text-[#1C1A17] transition-transform group-hover:translate-x-0.5" aria-hidden />
-                    </span>
-                    <span className="mt-1.5 block truncate text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="grid gap-4 border-t border-[#DCD5CA] p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-12 lg:items-center lg:gap-6 lg:px-12">
+            {HOME_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug)!).map((tpl) => (
+              <Link
+                key={tpl.slug}
+                href={`/website/mau/${tpl.slug}`}
+                className="group flex items-center gap-4 rounded-[6px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F1EB] lg:col-span-4"
+              >
+                <span className="block w-[44%] shrink-0 overflow-hidden rounded-[6px] bg-[#E6E0D6] ring-1 ring-black/5">
+                  <img
+                    src={previewSrc(tpl.slug, "pc", locale)}
+                    alt={t("previewLabel", { name: tpl.name })}
+                    width={1200}
+                    height={750}
+                    loading="lazy"
+                    decoding="async"
+                    className="block aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none"
+                  />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className={`${serif} block truncate text-[1.25rem] font-medium leading-tight`}>{tpl.name}</span>
+                  <span className="mt-1 block truncate text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
+                </span>
+                <ArrowRight className="size-4 shrink-0 text-[#1C1A17] transition-transform group-hover:translate-x-0.5" aria-hidden />
+              </Link>
+            ))}
             <Link
               href="/website"
-              className="mt-6 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1C1A17] underline decoration-[#1C1A17]/35 underline-offset-[6px] hover:decoration-[#1C1A17]"
+              className="inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1C1A17] underline decoration-[#1C1A17]/35 underline-offset-[6px] hover:decoration-[#1C1A17] sm:col-span-2 lg:col-span-4 lg:justify-self-end"
             >
               {t("allTemplates", { count: TEMPLATE_COUNT_LABEL })}
               <ArrowRight className="size-4" aria-hidden />

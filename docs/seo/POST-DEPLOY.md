@@ -46,3 +46,11 @@ Mở thử `/vi`, `/cs`, `/de/bang-gia` trên điện thoại và máy tính: he
 ## 6. Google Business Profile
 
 Hồ sơ "SalonGo" (công ty phần mềm, địa chỉ ẩn, vùng phục vụ 20 nước EU) **vẫn chờ xác minh bằng video** — bạn phải tự quay. Lưu ý: GBP dành cho doanh nghiệp có tiếp xúc trực tiếp với khách; phần mềm thuần online có thể bị Google từ chối/tạm ngưng. Không dùng địa chỉ cửa hàng SAPA làm địa chỉ công khai. Không kỳ vọng GBP mang lại traffic chính — SEO chính vẫn là website.
+
+## Kết quả kiểm tra sau deploy (02/11/2026, ~10:15 UTC, commit d67c71c + 02d0f20)
+
+- `BASE_URL=https://www.salongo.eu npm run test:seo`: 8/8 pass (test đổi Host chỉ chạy local, đã kiểm bằng curl bên dưới).
+- `www.salongo.eu/vi`: không có X-Robots-Tag ✔ · `salongo-web.vercel.app/vi`: `x-robots-tag: noindex` ✔
+- Header Link không còn hreflang ✔ · sitemap 40 URL, không lastmod ✔ · robots.txt giữ nguyên ✔
+- Trang tĩnh từ CDN: `x-vercel-cache: HIT`, `x-vercel-id: fra1::…` (trước: `fra1::iad1::…`, MISS). TTFB đo từ máy này: 0,19–0,21 s (trước 0,26–0,35 s; cùng máy, cùng mạng, 3 lần mỗi bên).
+- Chưa có: PageSpeed/CrUX, trạng thái trong Search Console (cần bạn gửi lại sitemap).

@@ -34,9 +34,9 @@ export const PHOTOS: Record<string, Set> = {
     team: [["h10", "Salon"], ["h2", "Řada křesel"], ["h18", "Prostor salonu"]],
   },
   "velvet-lash": {
-    hero: ["l3", "Přirozené řasy"],
-    gallery: [["l0", "Přirozený pohled"], ["l1", "Objem"], ["l6", "Hustý objem"], ["l8", "Řasy a pinzeta"], ["l2", "Aplikace řas"], ["l5", "Detail aplikace"]],
-    team: [["l9", "Lash artist při práci"], ["l7", "Úprava obočí"]],
+    hero: ["e19", "Jemné oční linky a řasy"],
+    gallery: [["e1", "Přirozené řasy"], ["e24", "Měkký pohled"], ["e2", "Upravené obočí"], ["e13", "Obočí a řasy"], ["e15", "Výrazný pohled"], ["e0", "Přirozená krása"]],
+    team: [["e5", "Lash artist při práci"], ["e9", "Úprava obočí"]],
   },
   "chroma-nails": {
     hero: ["n1", "Barevný nail art"],
@@ -64,13 +64,13 @@ export const PHOTOS: Record<string, Set> = {
     team: [["s10", "Párová suita"], ["s6", "Masážní místnost"], ["s15", "Soukromé wellness"]],
   },
   "iris-lash": {
-    hero: ["l6", "Objemové řasy"],
-    gallery: [["l4", "Objem 2D"], ["l3", "Laminace"], ["l7", "Úprava obočí"], ["l0", "Řasa na řasu"], ["l5", "Hollywood"], ["l2", "Aplikace"]],
-    team: [["l9", "Lash artist"], ["l4", "Aplikace řas"], ["l7", "Brow artist"]],
+    hero: ["e27", "Řasy a zářivá pleť"],
+    gallery: [["e14", "Objem 2D"], ["e18", "Laminace řas"], ["e9", "Úprava obočí"], ["e6", "Řasa na řasu"], ["e10", "Hollywood objem"], ["e5", "Aplikace řas"]],
+    team: [["l9", "Lash artist"], ["e28", "Lash artist"], ["e3", "Brow artist"]],
   },
   "kora-skin": {
     hero: ["s13", "Ošetření obličeje"],
-    gallery: [["s3", "Pleťová maska"], ["l7", "Laminace obočí"], ["m10", "Líčení"], ["s2", "Olej na masáž"], ["s10", "Ošetřovna"], ["l3", "Lash lifting"]],
+    gallery: [["s3", "Pleťová maska"], ["e13", "Laminace obočí"], ["m10", "Líčení"], ["s2", "Olej na masáž"], ["s10", "Ošetřovna"], ["e1", "Lash lifting"]],
     team: [["s4", "Péče o pleť"], ["l9", "Brow & lash"]],
   },
   "nova-studio": {

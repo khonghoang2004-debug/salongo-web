@@ -2,7 +2,7 @@
 
 Tất cả ảnh lấy từ Unsplash (bộ lọc **Free**, không lấy Unsplash+), dùng theo [Unsplash License](https://unsplash.com/license): miễn phí cho mục đích thương mại, không bắt buộc ghi công, không được bán lại nguyên ảnh. Tải ngày 02/11/2026 từ `images.unsplash.com`, nén WebP rộng tối đa 1400 px, lưu tại `public/images/website/demo/<mã>.webp`. Ảnh chỉ minh hoạ, không phải khách hàng hay tác phẩm của salon nào.
 
-Mã: n = nail, h = tóc, s = spa, l = mi & mày, m = makeup, b = barber. Ảnh nào dùng ở mẫu nào: `src/components/website/templates/photos.ts`.
+Mã: n = nail, h = tóc, s = spa, l = mi & mày, e = mắt & da (cận cảnh), m = makeup, b = barber. Ảnh nào dùng ở mẫu nào: `src/components/website/templates/photos.ts`.
 
 | Mã | Ảnh gốc |
 |---|---|
@@ -103,3 +103,24 @@ Mã: n = nail, h = tóc, s = spa, l = mi & mày, m = makeup, b = barber. Ảnh n
 | b12 | https://images.unsplash.com/photo-1773904215697-e6c21fc27ac2 |
 | b13 | https://images.unsplash.com/photo-1781455793310-8427c96454c7 |
 | b14 | https://images.unsplash.com/photo-1781768526571-ef9c333279c7 |
+
+Bổ sung 02/11/2026 (ảnh mắt & mi, mã e*):
+
+| Mã | Ảnh gốc |
+|---|---|
+| e0 | https://images.unsplash.com/photo-1486649567693-aaa9b2e59385 |
+| e1 | https://images.unsplash.com/photo-1494869042583-f6c911f04b4c |
+| e2 | https://images.unsplash.com/photo-1516220362602-dba5272034e7 |
+| e3 | https://images.unsplash.com/photo-1519415387722-a1c3bbef716c |
+| e5 | https://images.unsplash.com/photo-1541088254193-0d6d787da995 |
+| e6 | https://images.unsplash.com/photo-1542833807-ad5af0977050 |
+| e9 | https://images.unsplash.com/photo-1581003250898-36050e78fcd3 |
+| e10 | https://images.unsplash.com/photo-1587910234573-d6fc84743bc8 |
+| e13 | https://images.unsplash.com/photo-1612864271882-5107e9e3b0ce |
+| e14 | https://images.unsplash.com/photo-1613057388812-029549dc3d39 |
+| e15 | https://images.unsplash.com/photo-1615318033096-429b664dac1d |
+| e18 | https://images.unsplash.com/photo-1633346152343-5486573d3d50 |
+| e19 | https://images.unsplash.com/photo-1637851497145-0faa2e456081 |
+| e24 | https://images.unsplash.com/photo-1761169563770-c6b8e61eb57a |
+| e27 | https://images.unsplash.com/photo-1778517436057-4ed5f9fe95bd |
+| e28 | https://images.unsplash.com/photo-1785860945533-918a531bcdeb |

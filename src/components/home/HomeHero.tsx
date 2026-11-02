@@ -48,10 +48,6 @@ export async function HomeHero() {
               <span className="block text-[#F7C6D3]">{words(t("titleAccent"))}</span>
             </h1>
 
-            <p className="sg-lead sg-in mx-auto mt-5 max-w-[640px] !text-white/85" style={d(560)}>
-              {t("subtitle")}
-            </p>
-
             <div className="sg-in mt-7 flex flex-col justify-center gap-2.5 sm:flex-row" style={d(680)}>
               <a
                 href={SIGNUP_URL}

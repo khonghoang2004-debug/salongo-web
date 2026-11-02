@@ -22,7 +22,7 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
 
   return (
     <section>
-      <div className="sg-panel px-4 pb-8 pt-5 sm:px-8 sm:pb-12 sm:pt-8 lg:pb-14 lg:pt-10">
+      <div className="sg-panel px-4 pb-8 pt-5 sm:px-8 sm:pb-10 sm:pt-7 lg:pb-12 lg:pt-8">
         <div className="sg-container">
           <nav aria-label="Breadcrumb" className="sg-in flex items-center gap-1.5 text-sm text-muted">
             <Link href="/" className="rounded transition-colors hover:text-ink">
@@ -35,7 +35,7 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
           </nav>
 
           {aside ? (
-            <div className="mt-6 grid gap-8 sm:mt-10 lg:grid-cols-12 lg:items-end lg:gap-12">
+            <div className="mt-5 grid gap-8 sm:mt-8 lg:grid-cols-12 lg:items-end lg:gap-12">
               <div className="lg:col-span-7">
                 {eyebrow && (
                   <div className="sg-in mb-4 sm:mb-6" style={d(60)}>
@@ -61,7 +61,7 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
               </div>
             </div>
           ) : (
-            <div className="mt-6 grid gap-6 sm:mt-10 lg:grid-cols-12 lg:items-end lg:gap-12">
+            <div className="mt-5 grid gap-6 sm:mt-8 lg:grid-cols-12 lg:items-end lg:gap-12">
               <div className="lg:col-span-8">
                 {eyebrow && (
                   <div className="sg-in mb-4 sm:mb-6" style={d(60)}>

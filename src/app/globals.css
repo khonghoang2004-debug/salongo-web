@@ -58,7 +58,7 @@
 @layer components {
   /* ---------- Bố cục & chữ thống nhất toàn site ---------- */
   .sg-section {
-    @apply px-3 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20;
+    @apply px-3 py-8 sm:px-6 sm:py-11 lg:px-8 lg:py-14;
   }
 
   /* Khung nội dung chung */
@@ -79,7 +79,7 @@
   }
 
   .sg-page-hero {
-    @apply px-3 pt-8 pb-8 sm:px-6 sm:pt-12 sm:pb-12 lg:px-8 lg:pt-14 lg:pb-14;
+    @apply px-3 pt-6 pb-6 sm:px-6 sm:pt-10 sm:pb-10 lg:px-8 lg:pt-12 lg:pb-12;
   }
 
   .sg-h1 {

@@ -106,7 +106,7 @@ export default async function WebsitePage({ params }: Props) {
         {/* Đầu trang: chữ có chân kiểu tạp chí + bố cục ảnh mẫu thật */}
         <section className="px-1.5 pt-1.5 sm:px-3 sm:pt-3 lg:px-4">
           <div className="overflow-hidden rounded-[20px] bg-[#F4F1EB] sm:rounded-[32px]">
-            <div className={`${wrap} grid gap-10 pb-10 pt-9 sm:pt-12 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-12 lg:pt-14`}>
+            <div className={`${wrap} grid gap-8 pb-8 pt-8 sm:pt-10 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-10 lg:pt-10`}>
               <div className="lg:col-span-7">
                 <Kicker n={t("studio")}>{t("eyebrow")}</Kicker>
                 <h1 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] text-balance sm:text-[3.5rem] lg:text-[3.75rem]`}>
@@ -154,7 +154,7 @@ export default async function WebsitePage({ params }: Props) {
         </section>
 
         {/* Thư viện mẫu */}
-        <section id="mau" className="scroll-mt-20 py-12 sm:py-14 lg:py-16">
+        <section id="mau" className="scroll-mt-20 py-10 sm:py-12 lg:py-12">
           <div className={wrap}>
             <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-8">
@@ -172,7 +172,7 @@ export default async function WebsitePage({ params }: Props) {
         {/* Gói gồm những gì: khối espresso */}
         <section className="px-1.5 sm:px-3 lg:px-4">
           <div className="rounded-[20px] bg-[#1F1C19] text-[#EFEAE2] sm:rounded-[32px]">
-            <div className={`${wrap} grid gap-8 py-12 sm:py-14 lg:grid-cols-12 lg:gap-10 lg:py-16`}>
+            <div className={`${wrap} grid gap-8 py-10 sm:py-12 lg:grid-cols-12 lg:gap-10 lg:py-12`}>
               <div className="lg:col-span-5">
                 <Kicker n="02" light>
                   {t("incKicker")}
@@ -192,7 +192,7 @@ export default async function WebsitePage({ params }: Props) {
         </section>
 
         {/* Ba bước */}
-        <section className="py-12 sm:py-14 lg:py-16">
+        <section className="py-10 sm:py-12 lg:py-12">
           <div className={wrap}>
             <Kicker n="03">{t("stepsKicker")}</Kicker>
             <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("stepsTitle")}</h2>
@@ -209,7 +209,7 @@ export default async function WebsitePage({ params }: Props) {
         </section>
 
         {/* Hỏi đáp */}
-        <section className="pb-12 sm:pb-14 lg:pb-16">
+        <section className="pb-10 sm:pb-12 lg:pb-12">
           <div className={`${wrap} grid gap-10 lg:grid-cols-12 lg:gap-12`}>
             <div className="lg:col-span-4">
               <Kicker n="04">{t("faqKicker")}</Kicker>
@@ -237,7 +237,7 @@ export default async function WebsitePage({ params }: Props) {
         {/* Liên hệ */}
         <section id="lien-he" className="scroll-mt-20 px-1.5 pb-10 sm:px-3 sm:pb-14 lg:px-4">
           <div className="rounded-[20px] bg-[#E9E4DB] sm:rounded-[32px]">
-            <div className="mx-auto max-w-[880px] px-5 py-10 text-center sm:px-8 sm:py-14">
+            <div className="mx-auto max-w-[880px] px-5 py-9 text-center sm:px-8 sm:py-12">
               <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("contactKicker")}</p>
               <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.75rem]`}>{t("contactNow")}</h2>
               <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-[#3A3631]">{t("customIdea", v)}</p>

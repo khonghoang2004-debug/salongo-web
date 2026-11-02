@@ -17,7 +17,7 @@ export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProp
   const locale = useLocale();
   return (
     <section>
-      <div className="sg-hero-card px-4 py-14 sm:px-8 sm:py-20 lg:py-24">
+      <div className="sg-hero-card px-4 py-12 sm:px-8 sm:py-14 lg:py-16">
         <div className="sg-container grid gap-10 lg:grid-cols-12 lg:items-end">
           <div data-reveal className="lg:col-span-8" style={{ "--d": "200ms" } as CSSProperties}>
             <h2 className="max-w-3xl font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-[2.75rem] lg:text-[3.5rem]">

@@ -22,10 +22,10 @@ export async function HomeWebsiteOffer() {
   const [ha, hb] = t("homeTitle").split("|");
 
   return (
-    <section className="px-3 pb-4 pt-10 sm:px-6 sm:pt-14 lg:px-8 lg:pt-16" aria-labelledby="web-offer-title">
+    <section className="px-3 pb-2 pt-8 sm:px-6 sm:pt-10 lg:px-8 lg:pt-12" aria-labelledby="web-offer-title">
       <div className="sg-container">
         <div data-reveal className="overflow-hidden rounded-[24px] bg-[#F4F1EB] text-[#1C1A17] sm:rounded-[32px]">
-          <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-10 lg:p-12">
+          <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-10 lg:px-12 lg:py-10">
             <div className="lg:col-span-6">
               <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">
                 <span className="whitespace-nowrap">{t("studio")}</span>

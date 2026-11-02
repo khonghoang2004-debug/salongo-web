@@ -3,17 +3,20 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import http from "node:http";
+import https from "node:https";
 
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
 const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/privacy", "/terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
+// Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
+const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);
 
 // node:http thay cho fetch: fetch không cho đổi header Host (cần để giả lập www.salongo.eu / *.vercel.app)
 const get = (path, init = {}) =>
   new Promise((resolve, reject) => {
-    const req = http.request(BASE + path, { headers: init.headers ?? {} }, (res) => {
+    const req = (BASE.startsWith("https:") ? https : http).request(BASE + path, { headers: init.headers ?? {} }, (res) => {
       let body = "";
       res.setEncoding("utf8");
       res.on("data", (c) => (body += c));
@@ -112,7 +115,7 @@ test("chuyển hướng: / và trang thiếu ngôn ngữ về /vi, dấu / cuố
   assert.equal(slash.headers.get("location"), "/vi");
 });
 
-test("domain khác www.salongo.eu (vd. *.vercel.app) nhận X-Robots-Tag: noindex", async () => {
+test("domain khác www.salongo.eu (vd. *.vercel.app) nhận X-Robots-Tag: noindex", { skip: !LOCAL && "chỉ chạy local" }, async () => {
   for (const host of ["salongo-web.vercel.app", "salongo.eu", "www.salongo.eu.example.com"]) {
     for (const p of ["/vi", "/robots.txt", "/sitemap.xml"]) {
       const res = await get(p, { headers: { host } });

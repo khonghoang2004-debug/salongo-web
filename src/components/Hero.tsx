@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { appLink, SIGNUP_URL } from "@/lib/app-links";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowRight, ArrowUpRight, Lock, Wallet } from "lucide-react";
 
 const stats = [
@@ -11,6 +12,7 @@ const stats = [
 
 export async function Hero() {
   const t = await getTranslations("hero");
+  const locale = await getLocale();
 
   return (
     <section className="sg-section-glow relative overflow-hidden px-4 pt-10 pb-4 sm:px-6 sm:pt-14 sm:pb-6 lg:px-8 lg:pt-20 lg:pb-8">
@@ -36,7 +38,7 @@ export async function Hero() {
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:mt-9">
               <a
-                href="https://app.salongo.eu/signup"
+                href={appLink(SIGNUP_URL, locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary px-6 py-3.5 text-base sm:px-7"

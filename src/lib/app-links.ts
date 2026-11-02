@@ -18,3 +18,13 @@ export const DOWNLOAD_LINKS = {
   windows: "/api/download/windows",
   mac: "/api/download/mac",
 };
+
+/**
+ * Link into the app that opens it in the website's language: the app saves `?lang=` as its own language
+ * (salon-go src/app/layout.tsx), so a visitor reading the Czech site lands in the Czech app.
+ */
+export function appLink(url: string, locale: string): string {
+  const u = new URL(url);
+  u.searchParams.set("lang", locale);
+  return u.toString();
+}

@@ -7,7 +7,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { HomeVideos } from "@/components/home/HomeVideos";
 import { PhoneShot } from "@/components/ui/AppShot";
 import { pageMetadata, pageUrl } from "@/lib/seo";
-import { SIGNUP_URL } from "@/lib/app-links";
+import { SIGNUP_URL, appLink } from "@/lib/app-links";
 import { siteConfig } from "@/lib/metadata";
 
 // Trang nội dung cho từ khoá chính ("phần mềm quản lý salon / tiệm nail", "rezervační systém pro salon",
@@ -68,7 +68,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
         lead={t("intro")}
         actions={
           <>
-            <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up px-7 py-4 text-base">
+            <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up px-7 py-4 text-base">
               {t("ctaTrial")}
               <ArrowUpRight className="size-[18px]" aria-hidden />
             </a>
@@ -112,7 +112,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
               <div className="mt-6 rounded-[20px] border border-line bg-[#FBF7F7] p-5">
                 <p className="font-semibold text-ink">{t("boxTitle")}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{t("boxText")}</p>
-                <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 w-full py-3 text-sm">
+                <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 w-full py-3 text-sm">
                   {t("ctaTrial")}
                 </a>
                 <Link href="/bang-gia" className="mt-2 flex min-h-11 items-center justify-center text-sm font-semibold text-brand-700">

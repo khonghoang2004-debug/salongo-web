@@ -1,4 +1,6 @@
 import type { CSSProperties } from "react";
+import { appLink, SIGNUP_URL } from "@/lib/app-links";
+import { useLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -12,6 +14,7 @@ type CtaBandProps = {
 
 // Dải kêu gọi hành động: khối đỏ đô đặc, chữ bên trái, nút bên phải (PC)
 export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProps) {
+  const locale = useLocale();
   return (
     <section className="py-2 sm:py-3">
       <div data-reveal="scale" className="sg-hero-card mx-2 rounded-[24px] px-6 py-14 sm:mx-3 sm:rounded-[32px] sm:px-10 sm:py-20 lg:mx-4 lg:px-12 lg:py-24">
@@ -28,7 +31,7 @@ export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProp
             style={{ "--d": "350ms" } as CSSProperties}
           >
             <a
-              href="https://app.salongo.eu/signup"
+              href={appLink(SIGNUP_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-on-gradient sg-arrow px-7 py-4 text-base"

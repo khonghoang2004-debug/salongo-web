@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale } from "next-intl";
 import { ArrowUpRight, Check, RefreshCw, Store, Users } from "lucide-react";
-import { SIGNUP_URL, RENEW_URL, type PlanCode } from "@/lib/app-links";
+import { SIGNUP_URL, RENEW_URL, type PlanCode, appLink } from "@/lib/app-links";
 
 export type PlanCard = {
   code: PlanCode;
@@ -34,6 +35,7 @@ const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigit
 
 export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: PricingLabels }) {
   const [yearly, setYearly] = useState(false);
+  const locale = useLocale();
 
   return (
     <>
@@ -129,7 +131,7 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
 
               <div className="mt-8 grid gap-2">
                 <a
-                  href={SIGNUP_URL}
+                  href={appLink(SIGNUP_URL, locale)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3.5 text-sm ${hi ? "btn-on-gradient" : "btn-primary"}`}
@@ -138,7 +140,7 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
                   <ArrowUpRight className="size-4" aria-hidden />
                 </a>
                 <a
-                  href={RENEW_URL}
+                  href={appLink(RENEW_URL, locale)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex min-h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold transition-colors ${

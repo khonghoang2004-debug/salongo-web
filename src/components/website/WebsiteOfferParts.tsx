@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WEBSITE_MAX_PAGES, WEBSITE_PRICE_KC, formatKc } from "@/lib/website-offer";
 import { CATEGORY, TEMPLATES } from "./templates/registry";
@@ -28,8 +28,7 @@ export async function OfferPrice({ light = false }: { light?: boolean }) {
 export async function CustomIdeaNote({ className = "" }: { className?: string }) {
   const t = await getTranslations("webOffer");
   return (
-    <p className={`flex items-start gap-2 rounded-2xl bg-brand-700 px-4 py-3 text-[15px] font-semibold leading-snug text-white ${className}`}>
-      <Sparkles className="mt-0.5 size-[18px] shrink-0" aria-hidden />
+    <p className={`rounded-2xl bg-brand-700 px-5 py-3.5 text-[15px] font-medium leading-snug text-white ${className}`}>
       {t("customIdea", offerVars())}
     </p>
   );

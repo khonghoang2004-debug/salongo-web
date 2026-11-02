@@ -71,4 +71,11 @@ export const PREVIEW_TINT: Record<string, string> = {
   "velvet-lash": "#EBCFC7",
   "chroma-nails": "#C3CFFF",
   "aurel-beauty": "#DCCDB2",
+  "tropicana-nails": "#9BE7DE",
+  "cherry-hair": "#F2A541",
+  "lilac-lash": "#CBB8FF",
+  "matcha-spa": "#C6DBA0",
+  "azure-barber": "#B9CDE3",
+  "rose-bridal": "#F4B6C7",
+  "saffron-color": "#FDE3A2",
 };

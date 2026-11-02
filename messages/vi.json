@@ -1162,6 +1162,17 @@
     "demoDesc": "Demo tương tác mẫu website {type} của SalonGo. Thương hiệu, liên hệ và giá chỉ mang tính minh họa.",
     "homeTitle": "Website đẹp cho salon của bạn",
     "contactNow": "Liên hệ ngay để nhận tư vấn miễn phí",
-    "chosenShort": "Mẫu"
+    "chosenShort": "Mẫu",
+    "customIdea": "Cần web theo ý tưởng riêng? Cứ liên hệ, giá vẫn {price}, không thay đổi.",
+    "faq6Q": "Tôi muốn web theo ý tưởng riêng thì sao?",
+    "faq6A": "Cứ liên hệ. Giá vẫn {price}, website tối đa {pages} trang.",
+    "filterAll": "Tất cả",
+    "catNail": "Nail",
+    "catHair": "Tóc",
+    "catSpa": "Spa",
+    "catLash": "Mi & mày",
+    "catMakeup": "Makeup",
+    "catBarber": "Barber",
+    "filterLabel": "Lọc theo loại salon"
   }
 }

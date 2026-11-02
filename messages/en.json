@@ -1161,6 +1161,17 @@
     "demoDesc": "Interactive demo of a SalonGo {type} website template. Brand, contact details and prices are for illustration only.",
     "homeTitle": "A beautiful website for your salon",
     "contactNow": "Contact us now for a free consultation",
-    "chosenShort": "Template"
+    "chosenShort": "Template",
+    "customIdea": "Want a website from your own idea? Just get in touch, the price stays {price}.",
+    "faq6Q": "What if I want a website from my own idea?",
+    "faq6A": "Just get in touch. The price stays {price}, for a website with up to {pages} pages.",
+    "filterAll": "All",
+    "catNail": "Nails",
+    "catHair": "Hair",
+    "catSpa": "Spa",
+    "catLash": "Lash & brow",
+    "catMakeup": "Makeup",
+    "catBarber": "Barber",
+    "filterLabel": "Filter by salon type"
   }
 }

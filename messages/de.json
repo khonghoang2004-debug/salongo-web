@@ -1161,6 +1161,17 @@
     "demoDesc": "Interaktive Demo einer SalonGo-Website-Vorlage ({type}). Marke, Kontaktdaten und Preise dienen nur zur Veranschaulichung.",
     "homeTitle": "Eine schöne Website für Ihren Salon",
     "contactNow": "Jetzt kontaktieren für eine kostenlose Beratung",
-    "chosenShort": "Vorlage"
+    "chosenShort": "Vorlage",
+    "customIdea": "Eigene Idee für die Website? Melden Sie sich, der Preis bleibt {price}.",
+    "faq6Q": "Und wenn ich eine Website nach eigener Idee möchte?",
+    "faq6A": "Melden Sie sich einfach. Der Preis bleibt {price}, für eine Website mit bis zu {pages} Seiten.",
+    "filterAll": "Alle",
+    "catNail": "Nägel",
+    "catHair": "Haare",
+    "catSpa": "Spa",
+    "catLash": "Wimpern & Brauen",
+    "catMakeup": "Make-up",
+    "catBarber": "Barber",
+    "filterLabel": "Nach Salontyp filtern"
   }
 }

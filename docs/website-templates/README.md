@@ -6,7 +6,7 @@
 |---|---|---|
 | Khu ưu đãi trên trang chủ (ngay dưới hero) | `/{locale}` | `src/components/home/HomeWebsiteOffer.tsx` |
 | Trang dịch vụ + thư viện mẫu (được index, có trong sitemap) | `/{locale}/website` | `src/app/[locale]/website/page.tsx` |
-| Demo 8 mẫu × 5 trang (noindex, không có trong sitemap) | `/{locale}/website/mau/{mẫu}/{trang}` | `src/app/[locale]/website/mau/[template]/[[...page]]/page.tsx` |
+| Demo 15 mẫu × 5 trang (noindex, không có trong sitemap) | `/{locale}/website/mau/{mẫu}/{trang}` | `src/app/[locale]/website/mau/[template]/[[...page]]/page.tsx` |
 | Thanh "Website mẫu / Quay lại thư viện / Chọn mẫu này" | trên mọi trang demo | `src/components/website/DemoBar.tsx` |
 | Hộp liên hệ (sao chép nội dung, gọi, Facebook, Instagram) | thư viện + demo | `src/components/website/WebsiteContact.tsx` |
 
@@ -22,6 +22,15 @@ Mẫu (font riêng trong `sites/shared.tsx`):
 | `velvet-lash` | Mi & chân mày | blush/mận, khung oval | Playfair Display + Josefin Sans |
 | `chroma-nails` | Nail bar | cobalt/vàng bơ, viền đậm, ô chọn màu sơn | Unbounded + Manrope |
 | `aurel-beauty` | Makeup & beauty | lục bảo/kem/vàng, monogram | Fraunces + Montserrat |
+| `tropicana-nails` | Nail studio | san hô/xanh ngọc/vàng, poster | Bricolage Grotesque |
+| `cherry-hair` | Salon tóc | đỏ cherry/mù tạt, retro | Archivo |
+| `lilac-lash` | Mi & mày | lilac/bạc hà, căn giữa | Lexend |
+| `matcha-spa` | Spa | matcha/cam đất | Newsreader |
+| `azure-barber` | Barbershop | navy/trắng/đỏ, chia đôi | Epilogue |
+| `rose-bridal` | Makeup cô dâu | hồng rosé/đào | Alegreya |
+| `saffron-color` | Studio màu tóc | vàng nghệ/tím, chia đôi | Familjen Grotesk |
+
+7 mẫu cuối dùng chung khung `sites/ThemedSite.tsx` (bảng màu, font, bo góc, kiểu đầu trang trong `THEMES`); nội dung lấy từ mẫu cùng ngành trong `content/vivid.ts`, đổi tên thương hiệu, câu đầu trang, tên thợ và liên hệ. Bộ lọc loại salon ở thư viện: `CATEGORY` trong `templates/registry.ts`. Trang chủ chỉ hiện 8 mẫu tuyển chọn (`HOME_PICKS` trong `HomeWebsiteOffer.tsx`).
 Trang trong mỗi mẫu: `""` trang chủ, `dich-vu`, `gioi-thieu`, `bo-suu-tap`, `dat-lich`.
 
 ## Sửa thường gặp

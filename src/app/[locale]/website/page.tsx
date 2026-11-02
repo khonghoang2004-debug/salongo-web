@@ -4,7 +4,7 @@ import { ArrowDown, Check } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { PageShell } from "@/components/PageShell";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { HostingNote, OfferPrice, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
+import { CustomIdeaNote, HostingNote, OfferPrice, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6", "inc7"] as const;
 const STEPS = [1, 2, 3] as const;
-const FAQ = [1, 2, 3, 4, 5] as const;
+const FAQ = [1, 6, 2, 3, 4, 5] as const;
 
 export default async function WebsitePage({ params }: Props) {
   const { locale } = await params;
@@ -52,6 +52,7 @@ export default async function WebsitePage({ params }: Props) {
             <div className="mt-6 max-w-xl">
               <HostingNote />
             </div>
+              <CustomIdeaNote className="mt-4 max-w-xl" />
           </div>
         </div>
       </section>
@@ -123,6 +124,7 @@ export default async function WebsitePage({ params }: Props) {
         <div className="sg-container">
           <div className="mx-auto max-w-3xl rounded-[28px] border border-line bg-[#FBF7F7] px-5 py-10 text-center sm:px-10 sm:py-14">
             <h2 className="sg-h2-sm">{t("contactNow")}</h2>
+            <CustomIdeaNote className="mx-auto mt-5 max-w-xl justify-center text-left" />
             <div className="mt-7 text-left">
               <WebsiteContactPanel />
             </div>

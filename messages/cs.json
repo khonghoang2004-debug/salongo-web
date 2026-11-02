@@ -1162,6 +1162,17 @@
     "demoDesc": "Interaktivní ukázka šablony webu od SalonGo ({type}). Značka, kontakty a ceny jsou pouze ilustrativní.",
     "homeTitle": "Krásný web pro váš salon",
     "contactNow": "Ozvěte se nám pro konzultaci zdarma",
-    "chosenShort": "Šablona"
+    "chosenShort": "Šablona",
+    "customIdea": "Máte vlastní nápad na web? Ozvěte se, cena zůstává {price}.",
+    "faq6Q": "Co když chci web podle vlastního nápadu?",
+    "faq6A": "Ozvěte se nám. Cena zůstává {price}, web až o {pages} stránkách.",
+    "filterAll": "Vše",
+    "catNail": "Nehty",
+    "catHair": "Vlasy",
+    "catSpa": "Spa",
+    "catLash": "Řasy a obočí",
+    "catMakeup": "Make-up",
+    "catBarber": "Barber",
+    "filterLabel": "Filtrovat podle typu salonu"
   }
 }

@@ -29,11 +29,9 @@ export async function HomeWebsiteOffer() {
             <div className="lg:col-span-6">
               <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">
                 <span className="whitespace-nowrap">{t("studio")}</span>
-                <span className="h-px w-8 bg-[#7A6347]/50" aria-hidden />
-                {t("eyebrow")}
               </p>
-              <h2 id="web-offer-title" className={`${serif} mt-5 text-[2.375rem] font-medium leading-[1.04] tracking-[-0.025em] sm:text-[3rem] lg:text-[3.5rem]`}>
-                <span className="block">{ha}</span> {hb && <span className="block italic text-brand-700">{hb}</span>}
+              <h2 id="web-offer-title" className={`${serif} mt-5 text-[2.25rem] font-medium leading-[1.04] tracking-[-0.025em] sm:text-[2.75rem] lg:text-[2.25rem] xl:text-[2.875rem]`}>
+                <span className="block">{ha}</span> {hb && <span className="block italic text-brand-700 sm:whitespace-nowrap">{hb}</span>}
               </h2>
               <p className="mt-4 max-w-md text-[16px] leading-relaxed text-[#6B645B]">{t("lead")}</p>
               <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">

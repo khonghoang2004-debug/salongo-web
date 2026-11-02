@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { HomeHero } from "@/components/home/HomeHero";
+import { HomeWebsiteOffer } from "@/components/home/HomeWebsiteOffer";
 import { HomeFeatures } from "@/components/home/HomeFeatures";
 import { HomeVideos } from "@/components/home/HomeVideos";
 import { HomeHighlights } from "@/components/home/HomeHighlights";
@@ -117,6 +118,7 @@ export default async function Home({ params }: Props) {
       <Navbar />
       <main>
         <HomeHero />
+        <HomeWebsiteOffer />
         <HomeVideos />
         <HomeFeatures />
         <HomeMarketing />

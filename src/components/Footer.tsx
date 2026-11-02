@@ -21,6 +21,7 @@ const footerNavItems = [
   { href: "/lien-he", labelKey: "contact" as const },
   { href: "/phan-mem-quan-ly-salon", labelKey: "guide" as const },
   { href: "/ve-salongo", labelKey: "about" as const },
+  { href: "/website", labelKey: "website" as const },
 ] as const;
 
 const SOCIALS = [
@@ -38,6 +39,7 @@ export async function Footer() {
   const tNav = await getTranslations("nav");
   const tGuide = await getTranslations("guide");
   const tPages = await getTranslations("pages");
+  const tWeb = await getTranslations("webOffer");
 
   return (
     <footer className="mt-2 border-t border-line bg-[#FBF7F7]">
@@ -79,7 +81,9 @@ export async function Footer() {
                         ? tGuide("crumb")
                         : labelKey === "about"
                           ? tPages("aboutTitle")
-                          : tNav(labelKey)}
+                          : labelKey === "website"
+                            ? tWeb("footerLink")
+                            : tNav(labelKey)}
                   </Link>
                 </li>
               ))}

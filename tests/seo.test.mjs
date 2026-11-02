@@ -8,7 +8,7 @@ import https from "node:https";
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
-const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/privacy", "/terms"];
+const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
 // Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);
@@ -128,4 +128,16 @@ test("domain khác www.salongo.eu (vd. *.vercel.app) nhận X-Robots-Tag: noinde
 test("trang Về SalonGo có link trong trang (không còn mồ côi)", async () => {
   const html = await (await get("/cs", PRIMARY)).text();
   assert.match(html, /href="\/cs\/ve-salongo"/);
+});
+
+test("demo website mẫu: noindex, không canonical, không có trong sitemap", async () => {
+  for (const p of ["/vi/website/mau/ivelle-nail", "/cs/website/mau/brass-barber/dich-vu"]) {
+    const res = await get(p, PRIMARY);
+    assert.equal(res.status, 200, p);
+    const h = (await res.text()).split("</head>")[0];
+    assert.match(h, /<meta name="robots" content="noindex, follow"/, p);
+    assert.doesNotMatch(h, /rel="canonical"/, p);
+  }
+  const xml = await (await get("/sitemap.xml", PRIMARY)).text();
+  assert.equal(xml.includes("/website/mau/"), false);
 });

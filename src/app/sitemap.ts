@@ -3,6 +3,7 @@ import { routing } from "@/i18n/routing";
 import { pageUrl } from "@/lib/seo";
 
 // Trang được index (mỗi trang có đủ 4 ngôn ngữ). Thêm trang mới: thêm vào đây và vào chân trang/menu.
+// Demo website mẫu (/website/mau/...) cố ý không có ở đây: noindex, chỉ để minh hoạ.
 export const SITEMAP_PATHS = [
   "",
   "/tinh-nang",
@@ -12,6 +13,7 @@ export const SITEMAP_PATHS = [
   "/ve-salongo",
   "/faq",
   "/lien-he",
+  "/website",
   "/privacy",
   "/terms",
 ];

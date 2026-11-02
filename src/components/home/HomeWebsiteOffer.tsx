@@ -4,75 +4,93 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { TEMPLATES } from "../website/templates/registry";
 import { tr } from "../website/templates/types";
-import { PREVIEW_TINT, previewSrc } from "../website/TemplatePreview";
-import { CustomIdeaNote, OfferPrice, SplitTitle, offerVars } from "../website/WebsiteOfferParts";
+import { previewSrc } from "../website/TemplatePreview";
+import { offerVars } from "../website/WebsiteOfferParts";
+import { fontAtelier } from "../website/atelier";
 
 // 8 mẫu tuyển chọn trên trang chủ (đủ loại salon, bố cục khác nhau); thư viện /website có đủ tất cả
-const HOME_PICKS = ["aurel-beauty", "marelle-nails", "onyx-spa", "hugo-hair", "iris-lash", "chroma-nails", "nova-studio", "brass-barber"];
+const HOME_PICKS = ["aurel-beauty", "atelier-noir", "thermae-wellness", "maison-claire", "glow-room", "north-barber", "lune-lash", "studio-grey"];
 
-// Ưu đãi làm website ngay dưới hero: giá 999 Kč một lần, tối đa 5 trang, ảnh chụp thật từ demo (tải lười,
-// không ảnh hưởng hero), 4 mẫu tuyển chọn dẫn tới demo và thư viện /website
+// Ưu đãi làm website ngay dưới hero, cùng phong cách "atelier" với trang /website (kem đá, espresso, chữ Newsreader;
+// màu ghi chú trong website/atelier.ts). Ảnh chụp thật từ demo, tải lười nên không ảnh hưởng hero.
 export async function HomeWebsiteOffer() {
   const t = await getTranslations("webOffer");
   const locale = await getLocale();
   const v = offerVars();
+  const serif = fontAtelier.className;
+  const [ha, hb] = t("homeTitle").split("|");
 
   return (
     <section className="px-3 pb-4 pt-10 sm:px-6 sm:pt-14 lg:px-8 lg:pt-16" aria-labelledby="web-offer-title">
       <div className="sg-container">
-        <div data-reveal className="overflow-hidden rounded-[24px] border border-[#EADDE0] bg-[#FBF7F7] sm:rounded-[32px]">
+        <div data-reveal className="overflow-hidden rounded-[24px] bg-[#F4F1EB] text-[#1C1A17] sm:rounded-[32px]">
           <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-10 lg:p-12">
             <div className="lg:col-span-6">
-              <span className="sg-eyebrow">
-                <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
+              <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">
+                <span className="whitespace-nowrap">{t("studio")}</span>
+                <span className="h-px w-8 bg-[#7A6347]/50" aria-hidden />
                 {t("eyebrow")}
-              </span>
-              <h2 id="web-offer-title" className="mt-5 font-display text-[2.125rem] font-semibold leading-[1.05] tracking-[-0.035em] text-ink sm:text-[2.75rem] lg:text-[3.25rem]">
-                <SplitTitle text={t("homeTitle")} />
+              </p>
+              <h2 id="web-offer-title" className={`${serif} mt-5 text-[2.375rem] font-medium leading-[1.04] tracking-[-0.025em] sm:text-[3rem] lg:text-[3.5rem]`}>
+                <span className="block">{ha}</span> {hb && <span className="block italic text-[#7A6347]">{hb}</span>}
               </h2>
-              <p className="sg-lead mt-4 max-w-md !text-base">{t("lead")}</p>
-              <div className="mt-6 border-t border-[#EADDE0] pt-5">
-                <OfferPrice />
+              <p className="mt-4 max-w-md text-[16px] leading-relaxed text-[#6B645B]">{t("lead")}</p>
+              <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
+                <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
+                <p className={`${serif} whitespace-nowrap text-[2.75rem] font-medium leading-[0.9] tracking-[-0.02em] sm:text-[3.25rem]`}>{v.price}</p>
+                <p className="pb-1 text-[16px] font-medium leading-snug text-[#3A3631]">{t("priceLine", v)}</p>
               </div>
-              <div className="mt-7 flex flex-col gap-2.5 sm:flex-row">
-                <Link href="/website" className="btn-primary min-h-12 px-6 text-base">
+              <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
+                <Link
+                  href="/website"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#1F1C19] px-6 text-[15px] font-semibold text-[#F4F1EB] transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2"
+                >
                   {t("ctaTemplates")}
                   <ArrowRight className="size-[18px]" aria-hidden />
                 </Link>
-                <Link href="/website#lien-he" className="btn-secondary min-h-12 px-6 text-base">
+                <Link
+                  href="/website#lien-he"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#1C1A17]/25 px-6 text-[15px] font-semibold text-[#1C1A17] transition-colors hover:border-[#1C1A17] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2"
+                >
                   {t("ctaContact")}
                 </Link>
               </div>
-              <CustomIdeaNote className="mt-6 max-w-xl" />
+              <p className="mt-6 max-w-xl border-l border-[#7A6347]/50 pl-5 text-[15px] leading-relaxed text-[#3A3631]">
+                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("customIdeaLabel")}</span>
+                {t("customIdea", v)}
+              </p>
             </div>
 
-            {/* Phối cảnh máy tính + điện thoại, ảnh chụp từ chính các demo */}
+            {/* Phối cảnh máy tính + 2 điện thoại, ảnh chụp từ chính các demo */}
             <div className="lg:col-span-6" aria-hidden>
-              <div className="relative mx-auto max-w-[560px] pb-6 pr-6 sm:pb-10 sm:pr-10">
-                <div className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-[0_10px_30px_rgba(41,17,25,0.12)]">
-                  <div className="flex gap-1.5 border-b border-black/5 bg-[#FAF8F6] px-3 py-2">
-                    <span className="size-2 rounded-full bg-[#E2D9D6]" />
-                    <span className="size-2 rounded-full bg-[#E2D9D6]" />
-                    <span className="size-2 rounded-full bg-[#E2D9D6]" />
+              <div className="relative mx-auto max-w-[580px] pb-8 pl-6 pt-6 sm:pl-10">
+                <div className="overflow-hidden rounded-[8px] bg-white shadow-[0_30px_60px_-20px_rgba(40,32,24,0.35)] ring-1 ring-black/5">
+                  <div className="flex gap-1.5 border-b border-black/5 bg-[#F7F5F1] px-3 py-2">
+                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
+                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
+                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
                   </div>
-                  <img src={previewSrc("onyx-spa", "pc", locale)} alt="" width={1200} height={750} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover object-top" />
+                  <img src={previewSrc("thermae-wellness", "pc", locale)} alt="" width={1200} height={750} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover object-top" />
                 </div>
-                <div className="absolute bottom-0 right-0 w-[30%] rounded-[20px] bg-[#1F1A1A] p-1.5 shadow-[0_10px_30px_rgba(41,17,25,0.25)]">
-                  <img src={previewSrc("marelle-nails", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
+                <div className="absolute bottom-0 left-0 w-[30%] rounded-[20px] bg-[#1F1C19] p-1.5 shadow-[0_24px_50px_-16px_rgba(40,32,24,0.45)]">
+                  <img src={previewSrc("maison-claire", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
+                </div>
+                <div className="absolute -right-1 top-0 hidden w-[24%] rounded-[18px] bg-[#1F1C19] p-1.5 shadow-[0_24px_50px_-16px_rgba(40,32,24,0.45)] sm:block">
+                  <img src={previewSrc("atelier-noir", "m", locale)} alt="" width={390} height={760} loading="lazy" decoding="async" className="block aspect-[390/760] w-full rounded-[13px] object-cover object-top" />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-[#EADDE0] p-5 sm:p-8 lg:px-12">
-            <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-              {HOME_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug)!).map((tpl) => (
+          <div className="border-t border-[#DCD5CA] p-5 sm:p-8 lg:px-12">
+            <ul className="grid grid-cols-2 gap-x-3 gap-y-5 sm:gap-x-5 lg:grid-cols-4">
+              {HOME_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug)!).map((tpl, i) => (
                 <li key={tpl.slug}>
                   <Link
                     href={`/website/mau/${tpl.slug}`}
-                    className="group block rounded-2xl border border-line bg-white p-2 transition-colors hover:border-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
+                    className="group block rounded-[6px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F1EB]"
                   >
-                    <span className="block overflow-hidden rounded-xl" style={{ backgroundColor: PREVIEW_TINT[tpl.slug] }}>
+                    <span className="block overflow-hidden rounded-[6px] bg-[#E6E0D6] ring-1 ring-black/5">
                       <img
                         src={previewSrc(tpl.slug, "pc", locale)}
                         alt={t("previewLabel", { name: tpl.name })}
@@ -83,18 +101,20 @@ export async function HomeWebsiteOffer() {
                         className="block aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none"
                       />
                     </span>
-                    <span className="flex items-center justify-between gap-2 px-1.5 pb-1 pt-2.5">
-                      <span className="min-w-0">
-                        <span className="block text-[15px] font-semibold leading-snug text-ink">{tpl.name}</span>
-                        <span className="block text-[13px] leading-snug text-muted">{tr(tpl.card.type, locale)}</span>
-                      </span>
-                      <ArrowRight className="size-4 shrink-0 text-brand-700 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                    <span className="mt-3 flex items-baseline gap-2 border-b border-[#DCD5CA] pb-2">
+                      <span className="hidden text-[11px] font-semibold tabular-nums tracking-[0.12em] text-[#7A6347] sm:inline">{String(i + 1).padStart(2, "0")}</span>
+                      <span className={`${serif} min-w-0 flex-1 truncate text-[1.125rem] font-medium leading-tight sm:text-[1.25rem]`}>{tpl.name}</span>
+                      <ArrowRight className="size-4 shrink-0 self-center text-[#1C1A17] transition-transform group-hover:translate-x-0.5" aria-hidden />
                     </span>
+                    <span className="mt-1.5 block truncate text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
                   </Link>
                 </li>
               ))}
             </ul>
-            <Link href="/website" className="mt-5 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand-700 hover:text-brand-800">
+            <Link
+              href="/website"
+              className="mt-6 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1C1A17] underline decoration-[#1C1A17]/35 underline-offset-[6px] hover:decoration-[#1C1A17]"
+            >
               {t("allTemplates", { count: TEMPLATE_COUNT_LABEL })}
               <ArrowRight className="size-4" aria-hidden />
             </Link>

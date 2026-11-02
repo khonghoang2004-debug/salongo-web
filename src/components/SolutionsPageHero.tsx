@@ -19,11 +19,11 @@ export async function SolutionsPageHero() {
             href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary px-7 py-4 text-base"
+            className="btn-primary min-h-12 px-7 text-base"
           >
             {t("heroCtaPrimary")}
           </a>
-          <Link href="/tinh-nang" className="btn-secondary px-7 py-4 text-base">
+          <Link href="/tinh-nang" className="btn-secondary min-h-12 px-7 text-base">
             {t("heroCtaSecondary")}
           </Link>
         </>

@@ -96,7 +96,7 @@ export function SectionFAQ() {
         </div>
 
         {/* Chưa tìm thấy câu trả lời */}
-        <div data-reveal className="mt-10 grid gap-6 rounded-[24px] bg-brand-50 p-5 sm:p-8 lg:p-10 lg:mt-20 lg:grid-cols-12 lg:items-center lg:p-12">
+        <div data-reveal className="mt-10 grid gap-6 rounded-xl bg-brand-50 p-5 sm:p-8 lg:p-10 lg:mt-20 lg:grid-cols-12 lg:items-center lg:p-12">
           <div className="lg:col-span-7">
             <h3 className="sg-h2-sm">{t("stillNotFound")}</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("closingParagraph")}</p>
@@ -121,14 +121,14 @@ export function SectionFAQ() {
             </div>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:flex-col">
-            <Link href="/lien-he" className="btn-primary px-7 py-4 text-base">
+            <Link href="/lien-he" className="btn-primary min-h-12 px-7 text-base">
               {t("contactSupportCta")}
             </Link>
             <a
               href={appLink(SIGNUP_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary px-7 py-4 text-base"
+              className="btn-secondary min-h-12 px-7 text-base"
             >
               {t("tryFreeCta")}
             </a>

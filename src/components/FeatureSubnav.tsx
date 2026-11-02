@@ -51,7 +51,7 @@ export function FeatureSubnav({ items, label }: { items: Item[]; label: string }
               href={`#${anchor}`}
               data-anchor={anchor}
               aria-current={on ? "true" : undefined}
-              className={`flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${
+              className={`flex shrink-0 items-center gap-1.5 rounded-md px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${
                 on ? "bg-brand-50 text-brand-700 ring-1 ring-brand-200" : "text-muted hover:bg-sand hover:text-ink"
               }`}
             >

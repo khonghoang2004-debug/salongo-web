@@ -36,7 +36,7 @@ export async function SectionRenew() {
               </li>
             ))}
           </ol>
-          <a href={appLink(RENEW_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full px-7 py-4 text-base sm:w-auto">
+          <a href={appLink(RENEW_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full min-h-12 px-7 text-base sm:w-auto">
             {t("cta")}
             <ArrowUpRight className="size-[18px]" aria-hidden />
           </a>

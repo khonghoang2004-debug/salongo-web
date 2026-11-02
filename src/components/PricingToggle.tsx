@@ -19,7 +19,7 @@ export function PricingToggle() {
           role="tab"
           aria-selected={!yearly}
           onClick={() => setYearly(false)}
-          className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
+          className={`rounded-md px-5 py-2.5 text-sm font-semibold transition-all ${
             !yearly
               ? "sg-gradient text-white shadow-sg-md [text-shadow:var(--sg-on-gradient-shadow)]"
               : "text-muted hover:text-ink"
@@ -32,7 +32,7 @@ export function PricingToggle() {
           role="tab"
           aria-selected={yearly}
           onClick={() => setYearly(true)}
-          className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
+          className={`rounded-md px-5 py-2.5 text-sm font-semibold transition-all ${
             yearly
               ? "sg-gradient text-white shadow-sg-md [text-shadow:var(--sg-on-gradient-shadow)]"
               : "text-muted hover:text-ink"

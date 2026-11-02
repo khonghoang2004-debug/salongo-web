@@ -13,7 +13,7 @@ export async function HomePricingTeaser() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container grid gap-4 lg:grid-cols-2 lg:gap-5">
-        <div data-reveal className="flex flex-col rounded-[28px] bg-brand-700 p-6 text-white sm:p-8 lg:p-10">
+        <div data-reveal className="flex flex-col rounded-xl bg-brand-700 p-6 text-white sm:p-8 lg:p-10">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/70">{h("priceEyebrow")}</p>
           <h2 className="mt-4 font-display text-[1.75rem] font-semibold leading-[1.1] tracking-[-0.03em] sm:text-[2.125rem]">
             {h("priceTitle")}
@@ -32,7 +32,7 @@ export async function HomePricingTeaser() {
           <div className="mt-auto flex flex-col gap-2 pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
             <Link
               href="/bang-gia"
-              className="sg-arrow inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+              className="sg-arrow inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-white px-6 py-3 text-[15px] font-semibold text-brand-700 transition-colors hover:bg-brand-50"
             >
               {h("priceCta")}
               <ArrowRight className="size-4" aria-hidden />

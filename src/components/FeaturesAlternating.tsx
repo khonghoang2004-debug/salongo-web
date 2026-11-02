@@ -54,7 +54,7 @@ export async function FeaturesAlternating() {
               >
                 <div className={!isEven ? "lg:order-2" : ""}>
                   <div
-                    className="flex size-20 shrink-0 items-center justify-center sg-icon-tile rounded-2xl"
+                    className="flex size-20 shrink-0 items-center justify-center sg-icon-tile rounded-xl"
                   >
                     <Icon />
                   </div>

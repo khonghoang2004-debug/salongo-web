@@ -18,7 +18,7 @@ export async function HowItWorks() {
   return (
     <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container">
-        <div className="rounded-[28px] border border-line p-5 sm:p-8 lg:p-12">
+        <div>
           <SectionHead kicker={t("eyebrow")} title={t("title")} lead={t("subtitle")} />
 
           <ol className="mt-7 grid gap-7 md:grid-cols-3 md:gap-8 lg:mt-12">

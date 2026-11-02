@@ -32,7 +32,7 @@ export function DeviceToggle({ value, onChange, className = "" }: { value: Devic
               role="radio"
               aria-checked={on}
               onClick={() => onChange(d)}
-              className={`relative z-10 flex min-h-10 items-center justify-center gap-1.5 rounded-full px-4 text-sm font-semibold transition-colors duration-300 ${
+              className={`relative z-10 flex min-h-10 items-center justify-center gap-1.5 rounded-md px-4 text-sm font-semibold transition-colors duration-300 ${
                 on ? "text-white" : "text-ink/70"
               }`}
             >

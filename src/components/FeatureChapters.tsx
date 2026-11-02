@@ -99,7 +99,7 @@ function FeatureShowcase({ feature, index, t, video }: { feature: Feature; index
 
       <div data-reveal="scale" className="mt-6 sm:mt-8">
         {phones ? (
-          <div className="rounded-2xl bg-brand-700 px-4 pb-6 pt-7 sm:rounded-3xl sm:px-10 sm:pb-9 sm:pt-10">
+          <div className="rounded-xl bg-brand-700 px-4 pb-6 pt-7 sm:rounded-xl sm:px-10 sm:pb-9 sm:pt-10">
             <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-auto sm:grid sm:max-w-[860px] sm:grid-cols-3 sm:gap-8 sm:overflow-visible sm:px-0">
               {phones.map((src, i) => (
                 <figure key={src} className="w-[62vw] max-w-[240px] shrink-0 snap-center sm:w-auto sm:max-w-none">
@@ -139,7 +139,7 @@ function FeatureShowcase({ feature, index, t, video }: { feature: Feature; index
         ) : (
           <ul data-stagger className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <li key={i} className="rounded-2xl border border-line bg-white p-5">
+              <li key={i} className="rounded-xl border border-line bg-white p-5">
                 <div className="flex items-start gap-2.5">
                   <CircleCheck className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
                   <div>

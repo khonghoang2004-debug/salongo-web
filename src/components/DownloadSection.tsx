@@ -42,7 +42,7 @@ export async function DownloadCard() {
   ];
 
   return (
-    <div className="flex h-full flex-col rounded-[28px] border border-line bg-white p-6 sm:p-8 lg:p-10">
+    <div className="flex h-full flex-col rounded-xl border border-line bg-white p-6 sm:p-8 lg:p-10">
       <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">{t("eyebrow")}</p>
       <h2 className="mt-4 font-display text-[1.75rem] font-semibold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[2.125rem]">
         {t("title")}
@@ -58,7 +58,7 @@ export async function DownloadCard() {
               rel="noopener noreferrer"
               download={file}
               aria-label={label}
-              className="group relative flex h-[64px] items-center gap-3.5 overflow-hidden rounded-2xl bg-ink pl-4 pr-5 text-white shadow-[0_14px_30px_-16px_rgba(20,8,12,0.75)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#2b2226] hover:shadow-[0_18px_36px_-16px_rgba(20,8,12,0.8)]"
+              className="group relative flex h-[64px] items-center gap-3.5 overflow-hidden rounded-xl bg-ink pl-4 pr-5 text-white shadow-[0_14px_30px_-16px_rgba(20,8,12,0.75)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#2b2226] hover:shadow-[0_18px_36px_-16px_rgba(20,8,12,0.8)]"
             >
               <Icon />
               <span className="min-w-0 flex-1 leading-none">

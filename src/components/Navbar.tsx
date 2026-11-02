@@ -12,7 +12,7 @@ import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
   loading: () => (
-    <div className="h-10 w-[76px] shrink-0 animate-pulse rounded-full border border-line bg-[#f3eeee]" />
+    <div className="h-10 w-[76px] shrink-0 animate-pulse rounded-lg border border-line bg-[#f3eeee]" />
   ),
 });
 
@@ -121,7 +121,7 @@ export function Navbar() {
 
         {/* Menu chính: nhóm link trong một khung bo tròn */}
         <nav
-          className="hidden items-center gap-0.5 rounded-full border border-line bg-[#FBF7F7] p-1 lg:flex"
+          className="hidden items-center gap-0.5 rounded-lg border border-line bg-[#FBF7F7] p-1 lg:flex"
           aria-label="Main"
         >
           {menuItems.map((item) => {
@@ -131,7 +131,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 2xl:px-4 ${
+                className={`whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 2xl:px-4 ${
                   item.href === "/" ? "hidden 2xl:inline-block" : ""
                 } ${
                   active
@@ -150,7 +150,7 @@ export function Navbar() {
             href={appLink(RENEW_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
+            className="hidden rounded-md px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
           >
             {t("renew")}
           </a>
@@ -158,7 +158,7 @@ export function Navbar() {
             href={appLink(LOGIN_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
+            className="hidden rounded-md px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
           >
             {t("login")}
           </a>
@@ -166,7 +166,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setDownloadOpen((v) => !v)}
-              className="flex size-10 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink"
+              className="flex size-10 items-center justify-center rounded-lg border border-line text-ink transition-colors hover:border-ink"
               aria-expanded={downloadOpen}
               aria-haspopup="true"
               aria-label={t("downloadApp")}
@@ -176,7 +176,7 @@ export function Navbar() {
             </button>
             {downloadOpen && (
               <div
-                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[220px] rounded-2xl border border-line bg-white p-1.5 shadow-sg-lg"
+                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[220px] rounded-xl border border-line bg-white p-1.5 shadow-sg-lg"
                 role="menu"
               >
                 {[
@@ -220,7 +220,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="relative flex size-10 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink lg:hidden"
+            className="relative flex size-10 shrink-0 items-center justify-center rounded-lg border border-line text-ink transition-colors hover:border-ink lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -303,7 +303,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 text-base font-semibold text-brand-700"
+                className="flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-3 text-base font-semibold text-brand-700"
               >
                 <RefreshCw className="size-4" aria-hidden />
                 {t("renew")}
@@ -315,7 +315,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-[#FBF7F7] px-3 py-3 text-sm font-medium text-ink"
+                className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#FBF7F7] px-3 py-3 text-sm font-medium text-ink"
               >
                 {winIcon}
                 Windows
@@ -325,7 +325,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-[#FBF7F7] px-3 py-3 text-sm font-medium text-ink"
+                className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#FBF7F7] px-3 py-3 text-sm font-medium text-ink"
               >
                 {macIcon}
                 macOS

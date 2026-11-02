@@ -80,14 +80,14 @@ export async function Hero() {
             </div>
 
             {/* Thẻ doanh thu — nền đỏ đô đặc */}
-            <div className="sg-hero-card absolute -bottom-10 left-3 w-[62%] max-w-[300px] rounded-xl border border-white/15 p-3 shadow-sg-xl sm:w-[72%] sm:rounded-2xl sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
+            <div className="sg-hero-card absolute -bottom-10 left-3 w-[62%] max-w-[300px] rounded-xl border border-white/15 p-3 shadow-sg-xl sm:w-[72%] sm:rounded-xl sm:-bottom-8 sm:-left-6 sm:p-4 lg:-left-10">
               <p className="flex items-center gap-2 text-xs font-semibold text-white/80 sm:text-sm">
                 <Wallet className="size-4 sm:size-5" aria-hidden />
                 {t("revenueToday")}
               </p>
               <p className="mt-1 flex items-center gap-2 sm:mt-2 sm:gap-2.5">
                 <span className="font-display text-xl font-extrabold tracking-tight sm:text-[1.75rem]">89&nbsp;230&nbsp;Kč</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-400/20 px-1.5 py-0.5 text-[11px] font-bold text-emerald-200 sm:px-2 sm:text-sm">
+                <span className="inline-flex items-center gap-1 rounded-md bg-emerald-400/20 px-1.5 py-0.5 text-[11px] font-bold text-emerald-200 sm:px-2 sm:text-sm">
                   <ArrowUpRight className="size-3.5" aria-hidden />
                   +100%
                 </span>
@@ -97,7 +97,7 @@ export async function Hero() {
         </div>
 
         {/* Dải số liệu */}
-        <dl className="mt-16 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-white shadow-sg-md sm:mt-20 lg:grid-cols-4">
+        <dl className="mt-16 grid grid-cols-2 overflow-hidden rounded-xl border border-line bg-white shadow-sg-md sm:mt-20 lg:grid-cols-4">
           {stats.map(({ value, label }, i) => (
             <div
               key={value}

@@ -16,8 +16,8 @@ type CtaBandProps = {
 export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProps) {
   const locale = useLocale();
   return (
-    <section className="py-2 sm:py-3">
-      <div data-reveal="scale" className="sg-hero-card mx-2 rounded-[24px] px-6 py-14 sm:mx-3 sm:rounded-[32px] sm:px-10 sm:py-20 lg:mx-4 lg:px-12 lg:py-24">
+    <section>
+      <div className="sg-hero-card px-4 py-14 sm:px-8 sm:py-20 lg:py-24">
         <div className="sg-container grid gap-10 lg:grid-cols-12 lg:items-end">
           <div data-reveal className="lg:col-span-8" style={{ "--d": "200ms" } as CSSProperties}>
             <h2 className="max-w-3xl font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-[2.75rem] lg:text-[3.5rem]">
@@ -34,7 +34,7 @@ export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProp
               href={appLink(SIGNUP_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-on-gradient sg-arrow px-7 py-4 text-base"
+              className="btn-on-gradient sg-arrow min-h-12 px-7 text-base"
             >
               {button}
               <ArrowRight className="size-[18px]" aria-hidden />
@@ -42,7 +42,7 @@ export function CtaBand({ title, subtitle, button, secondaryLabel }: CtaBandProp
             {secondaryLabel && (
               <Link
                 href="/lien-he"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-4 text-base font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 min-h-12 rounded-lg border border-white/40 px-7 text-base font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
               >
                 {secondaryLabel}
               </Link>

@@ -37,10 +37,10 @@ export async function HomeMarketing() {
   return (
     <section id="marketing" className="sg-section scroll-mt-24 pt-0 sm:pt-0 lg:pt-0">
       <div className="sg-container">
-        <div className="overflow-hidden rounded-[24px] bg-brand-700 text-white sm:rounded-[32px]">
+        <div className="overflow-hidden rounded-xl bg-brand-700 text-white sm:rounded-xl">
           <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-12">
             <div data-reveal className="lg:col-span-5">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] ring-1 ring-white/25">
+              <span className="inline-flex items-center gap-2 rounded-md bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] ring-1 ring-white/25">
                 <Megaphone className="size-3.5" aria-hidden />
                 {h("mkEyebrow")}
               </span>
@@ -106,7 +106,7 @@ export async function HomeMarketing() {
               <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-white/70">{h("mkTemplates")}</p>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {TEMPLATES.map(([emoji, key]) => (
-                  <li key={key} className="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[13px] font-medium text-white ring-1 ring-white/20">
+                  <li key={key} className="flex items-center gap-1.5 rounded-md bg-white/10 px-3 py-1.5 text-[13px] font-medium text-white ring-1 ring-white/20">
                     <span aria-hidden>{emoji}</span>
                     {h(key)}
                   </li>

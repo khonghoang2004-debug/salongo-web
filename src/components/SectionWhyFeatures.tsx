@@ -18,7 +18,7 @@ export async function SectionWhyFeatures() {
         <div data-stagger className="mt-7 grid border-t lg:mt-12 border-line md:grid-cols-3 md:divide-x md:divide-line">
           {cards.map(({ i, Icon }) => (
             <div key={i} className="border-b border-line py-8 md:border-b-0 md:px-8 md:first:pl-0 md:last:pr-0">
-              <span className="sg-icon-tile size-12 rounded-2xl" aria-hidden>
+              <span className="sg-icon-tile size-12 rounded-xl" aria-hidden>
                 <Icon className="size-6" />
               </span>
               <h3 className="mt-8 text-xl font-semibold tracking-[-0.02em] text-ink">{t(`why${i}Title`)}</h3>

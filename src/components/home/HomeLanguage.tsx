@@ -27,7 +27,7 @@ export async function HomeLanguage() {
 
         {/* Ảnh chụp thật: app của salon bằng tiếng Việt, trang đặt lịch của khách bằng tiếng Séc */}
         <div data-reveal="scale" className="lg:col-span-6">
-          <div className="rounded-[28px] bg-brand-700 px-5 pb-6 pt-7 sm:px-10 sm:pb-8 sm:pt-9">
+          <div className="rounded-xl bg-brand-700 px-5 pb-6 pt-7 sm:px-10 sm:pb-8 sm:pt-9">
             <div className="grid grid-cols-2 gap-4 sm:gap-8">
               {([
                 ["/images/app/m-lich-online.webp", "langShotApp", "VI"],
@@ -36,7 +36,7 @@ export async function HomeLanguage() {
                 <figure key={src} data-reveal={i ? "right" : undefined} style={{ "--d": `${250 + i * 250}ms` } as CSSProperties}>
                   <PhoneShot src={src} alt={h(label)} />
                   <figcaption className="mt-3 flex items-center justify-center gap-2 text-center text-xs font-semibold text-white/85 sm:text-sm">
-                    <span className="rounded-full bg-white/15 px-2 py-0.5 text-[11px]">{code}</span>
+                    <span className="rounded-md bg-white/15 px-2 py-0.5 text-[11px]">{code}</span>
                     {h(label)}
                   </figcaption>
                 </figure>

@@ -52,7 +52,7 @@ export async function TrustSection() {
         </div>
 
         <p className="mx-auto mt-10 flex w-fit items-center gap-2.5 rounded-full border border-line bg-white py-2 pl-2 pr-4 text-center text-sm font-medium text-ink/80 shadow-sg-sm sm:mt-12 sm:text-[15px]">
-          <span className="flex items-center gap-0.5 rounded-full bg-brand-50 px-2 py-1 text-brand-700" aria-hidden>
+          <span className="flex items-center gap-0.5 rounded-md bg-brand-50 px-2 py-1 text-brand-700" aria-hidden>
             {[0, 1, 2, 3, 4].map((i) => (
               <Star key={i} className="size-3 fill-current" />
             ))}

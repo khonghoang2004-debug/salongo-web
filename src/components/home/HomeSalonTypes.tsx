@@ -9,7 +9,7 @@ const TYPES = [
   { k: "type4", Icon: Building2 },
 ] as const;
 
-// Loại salon phù hợp: 4 thẻ hiện lần lượt, rê chuột chuyển nền đỏ đô
+// Loại salon phù hợp: 4 cột ngăn bằng đường kẻ mảnh, số thứ tự + icon nét
 export async function HomeSalonTypes() {
   const h = await getTranslations("home2");
 
@@ -17,24 +17,20 @@ export async function HomeSalonTypes() {
     <section className="sg-section">
       <div className="sg-container">
         <SectionHead kicker={h("typesEyebrow")} title={h("typesTitle")} lead={h("typesLead")} />
-        <div data-stagger className="mt-7 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-12 lg:grid-cols-4">
+        <div data-stagger className="mt-8 grid border-t border-line sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
           {TYPES.map(({ k, Icon }, i) => (
             <div
               key={k}
-              className="group flex min-h-[260px] flex-col rounded-[24px] border border-line bg-white p-7 transition-colors duration-500 hover:border-brand-700 hover:bg-brand-700 sm:min-h-[300px]"
+              className={`flex flex-col border-b border-line py-7 sm:px-6 lg:border-b-0 lg:py-8 ${i % 2 ? "sm:border-l" : "sm:pl-0"} ${i ? "lg:border-l lg:pl-6" : "lg:pl-0"}`}
             >
               <div className="flex items-center justify-between">
-                <span className="flex size-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 transition-colors duration-500 group-hover:bg-white/15 group-hover:text-white">
-                  <Icon className="size-6" aria-hidden />
-                </span>
-                <span className="font-display text-sm font-semibold text-ink/30 transition-colors duration-500 group-hover:text-white/60">
-                  0{i + 1}
-                </span>
+                <span className="font-display text-sm font-semibold tabular-nums text-brand-700">0{i + 1}</span>
+                <Icon className="size-6 text-ink/40" strokeWidth={1.5} aria-hidden />
               </div>
-              <h3 className="mt-auto pt-10 text-xl font-semibold tracking-[-0.02em] text-ink transition-colors duration-500 group-hover:text-white">
+              <h3 className="mt-10 text-xl font-semibold tracking-[-0.02em] text-ink">
                 {h(`${k}Title`)}
               </h3>
-              <p className="mt-2.5 text-[15px] leading-relaxed text-muted transition-colors duration-500 group-hover:text-white/80">
+              <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
                 {h(`${k}Text`)}
               </p>
             </div>

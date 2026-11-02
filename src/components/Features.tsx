@@ -63,7 +63,7 @@ export async function Features() {
               className="sg-card sg-card-hover p-6 sm:p-8"
             >
               <div
-                className="flex size-12 shrink-0 items-center justify-center sg-icon-tile rounded-2xl"
+                className="flex size-12 shrink-0 items-center justify-center sg-icon-tile rounded-xl"
               >
                 <Icon />
               </div>

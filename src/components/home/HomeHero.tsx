@@ -14,7 +14,7 @@ const BLANK_GIF = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAA
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
-// Hero trang chủ: tiêu đề lớn căn giữa hiện từng chữ, ảnh chụp app thật (PC + điện thoại) nghiêng rồi đặt thẳng
+// Hero trang chủ: tiêu đề lớn căn trái hiện từng chữ, dưới là dải lợi ích + nút ngăn bằng đường kẻ,, ảnh chụp app thật (PC + điện thoại) nghiêng rồi đặt thẳng
 export async function HomeHero() {
   const t = await getTranslations("hero");
   const locale = await getLocale();
@@ -36,43 +36,43 @@ export async function HomeHero() {
 
   return (
     <>
-      <section className="pt-1.5 sm:pt-3">
-        <div className="sg-panel overflow-hidden !border-brand-700 !bg-brand-700">
-          <div className="mx-auto max-w-[1160px] px-1.5 pb-9 pt-7 text-center sm:px-8 sm:pb-0 sm:pt-14 lg:pt-16">
-            <span className="sg-eyebrow sg-in !border-white/25 !bg-white/10 !text-white" style={d(0)}>
-              <span className="size-1.5 rounded-full bg-white" aria-hidden />
+      <section>
+        <div className="sg-panel overflow-hidden !border-brand-800 !bg-brand-700">
+          <div className="mx-auto max-w-[1200px] px-4 pb-9 pt-8 sm:px-8 sm:pb-0 sm:pt-14 lg:pt-16">
+            <span className="sg-eyebrow sg-in !text-white/80" style={d(0)}>
               {t("badge")}
             </span>
 
-            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.06] tracking-[-0.045em] text-white sm:text-balance sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.625rem]">
+            <h1 className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-[3.5rem] lg:mt-7 lg:text-[4.25rem] xl:text-[4.75rem]">
               <span className="block">{words(t("title1"))}</span>
               <span className="block text-[#F7C6D3]">{words(t("titleAccent"))}</span>
             </h1>
 
-            <div className="sg-in mt-7 flex flex-col justify-center gap-2.5 sm:flex-row" style={d(680)}>
-              <a
-                href={appLink(SIGNUP_URL, locale)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-on-gradient sg-arrow sg-arrow-up px-7 py-4 text-base"
-              >
-                {t("cta")}
-                <ArrowUpRight className="size-[18px]" aria-hidden />
-              </a>
-              <a href="#video" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/50 px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-white/10">
-                <Play className="size-[18px] fill-current" aria-hidden />
-                {v("heroVideo")}
-              </a>
+            <div className="sg-in mt-8 grid gap-6 border-t border-white/20 pt-6 lg:grid-cols-12 lg:items-center lg:gap-10" style={d(680)}>
+              <ul className="flex flex-col gap-2 text-[15px] text-white/85 sm:flex-row sm:flex-wrap sm:gap-x-7 lg:col-span-6">
+                {(["trial1", "trial2", "trial3"] as const).map((k) => (
+                  <li key={k} className="flex items-center gap-2.5">
+                    <Check className="size-4 shrink-0 text-white" strokeWidth={2.5} aria-hidden />
+                    {t(k)}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col gap-2.5 sm:flex-row lg:col-span-6 lg:justify-end [&>a]:whitespace-nowrap">
+                <a
+                  href={appLink(SIGNUP_URL, locale)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-on-gradient sg-arrow sg-arrow-up min-h-12 px-6 text-base"
+                >
+                  {t("cta")}
+                  <ArrowUpRight className="size-[18px]" aria-hidden />
+                </a>
+                <a href="#video" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/40 px-6 text-base font-semibold text-white transition-colors hover:bg-white/10">
+                  <Play className="size-[18px] fill-current" aria-hidden />
+                  {v("heroVideo")}
+                </a>
+              </div>
             </div>
-
-            <ul className="sg-in mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/85" style={d(780)}>
-              {(["trial1", "trial2", "trial3"] as const).map((k) => (
-                <li key={k} className="flex items-center gap-1.5">
-                  <Check className="size-4 text-white" strokeWidth={2.5} aria-hidden />
-                  {t(k)}
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Sân khấu ảnh app: ảnh hiển thị trọn vẹn. Điện thoại: ẩn để màn hình đầu gọn */}
@@ -84,7 +84,7 @@ export async function HomeHero() {
                   <span className="sg-browser-dot" />
                   <span className="sg-browser-dot" />
                   <span className="sg-browser-dot" />
-                  <span className="mx-auto hidden h-6 w-full max-w-[240px] items-center justify-center gap-1.5 rounded-full border border-line bg-white px-2 text-[11px] text-muted sm:flex">
+                  <span className="mx-auto hidden h-6 w-full max-w-[240px] items-center justify-center gap-1.5 rounded-md border border-line bg-white px-2 text-[11px] text-muted sm:flex">
                     <Lock className="size-3" aria-hidden />
                     app.salongo.eu
                   </span>
@@ -114,16 +114,16 @@ export async function HomeHero() {
       </section>
 
       {/* Dải số liệu, số đếm lên khi cuộn tới */}
-      <section className="px-3 pb-2 pt-10 sm:px-6 sm:pt-16 lg:px-8">
-        <div className="sg-container">
-          <p data-reveal className="mx-auto max-w-2xl text-center text-[15px] font-medium text-muted sm:text-base">
+      <section className="px-4 sm:px-8">
+        <div className="sg-container grid gap-6 border-b border-line py-8 sm:py-10 lg:grid-cols-12 lg:items-center">
+          <p data-reveal className="max-w-md text-[15px] font-medium leading-relaxed text-muted sm:text-base lg:col-span-6">
             {h("statsTitle")}
           </p>
-          <dl data-stagger className="mx-auto mt-7 grid max-w-[720px] grid-cols-2 gap-x-4 gap-y-7 lg:gap-x-0 lg:divide-x lg:divide-line">
-            {stats.map(({ value, label }) => (
-              <div key={value} className="flex flex-col-reverse justify-end text-center lg:px-6">
-                <dt className="mt-2 text-sm text-muted">{t(label)}</dt>
-                <dd className="font-display text-[2.25rem] font-semibold tracking-[-0.04em] text-ink sm:text-[3.25rem]">
+          <dl data-stagger className="grid grid-cols-2 lg:col-span-6">
+            {stats.map(({ value, label }, i) => (
+              <div key={value} className={`flex flex-col-reverse justify-end ${i ? "border-l border-line pl-6 sm:pl-10" : ""}`}>
+                <dt className="mt-1 text-sm text-muted">{t(label)}</dt>
+                <dd className="font-display text-[2.25rem] font-semibold leading-none tracking-[-0.04em] text-ink sm:text-[3rem]">
                   <CountUp value={t(value)} />
                 </dd>
               </div>

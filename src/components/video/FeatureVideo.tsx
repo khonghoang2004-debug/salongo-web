@@ -31,7 +31,7 @@ export function FeatureVideo({
 
   return (
     <div
-      className={`relative aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-[#F6EEF0] shadow-[0_2px_10px_rgba(77,0,20,0.10)] ring-1 ring-[#ECE6E7] md:aspect-video sm:rounded-[24px] ${className}`}
+      className={`relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#F6EEF0] shadow-[0_2px_10px_rgba(77,0,20,0.10)] ring-1 ring-[#ECE6E7] md:aspect-video sm:rounded-xl ${className}`}
     >
       {src ? (
         <video
@@ -65,10 +65,10 @@ export function FeatureVideo({
             </span>
           </span>
           <span className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center gap-2 sm:bottom-5 sm:left-5">
-            <span className="rounded-full bg-white px-3 py-1.5 text-[13px] font-semibold text-ink shadow-[0_1px_3px_rgba(0,0,0,0.15)]">
+            <span className="rounded-md bg-white px-3 py-1.5 text-[13px] font-semibold text-ink shadow-[0_1px_3px_rgba(0,0,0,0.15)]">
               {playLabel} · {video.duration}
             </span>
-            {note && <span className="rounded-full bg-ink px-3 py-1.5 text-[12px] font-medium text-white">{note}</span>}
+            {note && <span className="rounded-md bg-ink px-3 py-1.5 text-[12px] font-medium text-white">{note}</span>}
           </span>
         </button>
       )}

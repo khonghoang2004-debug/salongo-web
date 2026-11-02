@@ -75,7 +75,7 @@ export async function HomeHighlights() {
           </div>
 
           <div data-reveal="scale" className="min-w-0 lg:order-1 lg:col-span-7">
-            <div className="rounded-[28px] bg-brand-700 px-4 pb-6 pt-7 sm:px-8 sm:pb-8 sm:pt-9">
+            <div className="rounded-xl bg-brand-700 px-4 pb-6 pt-7 sm:px-8 sm:pb-8 sm:pt-9">
               {/* Điện thoại nhỏ: cuộn ngang qua 3 màn; từ sm: 3 máy cạnh nhau */}
               <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0">
                 {([

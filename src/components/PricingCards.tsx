@@ -48,13 +48,13 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
               role="radio"
               aria-checked={yearly === y}
               onClick={() => setYearly(y)}
-              className={`flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold transition-colors sm:px-5 ${
+              className={`flex min-h-11 items-center gap-2 rounded-md px-4 text-sm font-semibold transition-colors sm:px-5 ${
                 yearly === y ? "bg-brand-700 text-white" : "text-muted hover:text-ink"
               }`}
             >
               {y ? labels.yearly : labels.monthly}
               {y && (
-                <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${yearly ? "bg-white/20 text-white" : "bg-brand-50 text-brand-700"}`}>
+                <span className={`rounded-md px-2 py-0.5 text-[11px] font-bold ${yearly ? "bg-white/20 text-white" : "bg-brand-50 text-brand-700"}`}>
                   {labels.yearlyBadge}
                 </span>
               )}
@@ -71,12 +71,12 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
           return (
             <div
               key={plan.code}
-              className={`relative flex h-full flex-col rounded-[24px] p-6 sm:p-7 ${
+              className={`relative flex h-full flex-col rounded-xl p-6 sm:p-7 ${
                 hi ? "sg-dark" : "border border-line bg-white transition-colors duration-300 hover:border-brand-300"
               }`}
             >
               {hi && (
-                <span className="absolute right-5 top-5 inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white ring-1 ring-white/20">
+                <span className="absolute right-5 top-5 inline-flex items-center rounded-md bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white ring-1 ring-white/20">
                   {labels.popular}
                 </span>
               )}

@@ -73,7 +73,7 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
               role="tab"
               aria-selected={i === active}
               onClick={() => pick(i)}
-              className={`min-h-11 whitespace-nowrap rounded-full border px-4 text-sm font-medium transition-colors ${
+              className={`min-h-11 whitespace-nowrap rounded-md border px-4 text-sm font-medium transition-colors ${
                 i === active ? "border-brand-700 bg-brand-700 text-white" : "border-line bg-white text-ink/80"
               }`}
             >
@@ -132,7 +132,7 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
 
       {/* Ảnh + mô tả */}
       <div className="mt-6 lg:col-span-7 lg:mt-0">
-        <div className="rounded-[24px] bg-brand-50 p-3 sm:p-6 lg:sticky lg:top-24 lg:p-8">
+        <div className="rounded-xl bg-brand-50 p-3 sm:p-6 lg:sticky lg:top-24 lg:p-8">
           <div className={`sg-browser ${cur.mobile ? "max-sm:hidden" : ""}`}>
             <div className="sg-browser-bar">
               <span className="sg-browser-dot" />
@@ -159,7 +159,7 @@ export function FeatureTabs({ items, moreLabel }: { items: FeatureTabItem[]; mor
           </div>
           <Link
             href={`/tinh-nang#${cur.anchor}`}
-            className="sg-arrow mt-4 inline-flex min-h-11 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-brand-700 hover:text-brand-800 lg:mt-6"
+            className="sg-arrow mt-4 inline-flex min-h-11 items-center gap-1.5 rounded-md px-1 text-sm font-semibold text-brand-700 hover:text-brand-800 lg:mt-6"
           >
             {moreLabel}
             <ArrowRight className="size-4" aria-hidden />

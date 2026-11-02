@@ -41,7 +41,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
               role="tab"
               aria-selected={i === active}
               onClick={() => setActive(i)}
-              className={`min-h-11 whitespace-nowrap rounded-full border px-4 text-sm font-medium transition-colors ${
+              className={`min-h-11 whitespace-nowrap rounded-md border px-4 text-sm font-medium transition-colors ${
                 i === active ? "border-brand-700 bg-brand-700 text-white" : "border-line bg-white text-ink/80"
               }`}
             >
@@ -63,7 +63,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
                 role="tab"
                 aria-selected={on}
                 onClick={() => setActive(i)}
-                className={`group flex w-full items-center gap-4 rounded-2xl border px-4 py-4 text-left transition-all ${
+                className={`group flex w-full items-center gap-4 rounded-xl border px-4 py-4 text-left transition-all ${
                   on ? "border-brand-700/25 bg-white shadow-[0_1px_4px_rgba(77,0,20,0.10)]" : "border-transparent hover:bg-white/70"
                 }`}
               >
@@ -91,7 +91,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
           <h3 key={cur.id} className="sg-fade text-lg font-semibold tracking-[-0.01em] text-ink sm:text-xl">{cur.title}</h3>
           <Link
             href={`/tinh-nang#${cur.anchor}`}
-            className="sg-arrow inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-brand-700 hover:text-brand-800"
+            className="sg-arrow inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-md px-1 text-sm font-semibold text-brand-700 hover:text-brand-800"
           >
             {moreLabel}
             <ArrowRight className="size-4" aria-hidden />

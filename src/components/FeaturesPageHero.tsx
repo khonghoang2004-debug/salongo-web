@@ -21,11 +21,11 @@ export async function FeaturesPageHero() {
             href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary px-7 py-4 text-base"
+            className="btn-primary min-h-12 px-7 text-base"
           >
             {t("ctaPrimary")}
           </a>
-          <Link href="/bang-gia" className="btn-secondary px-7 py-4 text-base">
+          <Link href="/bang-gia" className="btn-secondary min-h-12 px-7 text-base">
             {t("ctaSecondary")}
           </Link>
         </>
@@ -40,18 +40,16 @@ export async function FeaturesPageHero() {
             {t("mapHint")}
           </p>
         </div>
-        <ul className="mt-5 grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-3">
+        <ul className="mt-4 grid grid-cols-2 gap-x-6 sm:gap-x-8 lg:grid-cols-3">
           {FEATURES.map(({ id, anchor }) => {
             const Icon = FEATURE_ICONS[id];
             return (
               <li key={id}>
                 <a
                   href={`#${anchor}`}
-                  className="group flex h-full items-start gap-3 rounded-2xl border border-line bg-white p-4 transition-colors hover:border-brand-700 sm:p-5"
+                  className="group flex h-full items-start gap-3 border-b border-line py-4"
                 >
-                  <span className="sg-icon-tile size-10 rounded-xl" aria-hidden>
-                    <Icon className="size-5" />
-                  </span>
+                  <Icon className="mt-0.5 size-5 shrink-0 text-brand-700" strokeWidth={1.75} aria-hidden />
                   <span className="min-w-0">
                     <span className="block text-[15px] font-semibold text-ink transition-colors group-hover:text-brand-700">
                       {t(`f.${id}.short`)}

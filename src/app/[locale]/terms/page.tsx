@@ -28,7 +28,7 @@ export default async function TermsPage({ params }: Props) {
         <div className="mx-auto max-w-3xl">
           <Link
             href="/"
-            className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
+            className="mb-5 inline-flex items-center gap-1.5 rounded-md border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
           >
             <ArrowLeft className="size-4" aria-hidden />
             {tNav("backHome")}

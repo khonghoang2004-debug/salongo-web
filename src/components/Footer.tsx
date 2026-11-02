@@ -33,7 +33,7 @@ const SOCIALS = [
 const linkBase = "rounded text-[15px] text-ink/70 transition-colors duration-200 hover:text-brand-700";
 const colTitle = "text-xs font-semibold uppercase tracking-[0.14em] text-muted";
 
-// Chân trang nền sáng: thương hiệu, điều hướng, liên hệ và chữ SalonGo lớn
+// Chân trang nền sáng: thương hiệu, điều hướng, liên hệ (bỏ chữ SalonGo khổng lồ 02/11: trông "AI")
 export async function Footer() {
   const t = await getTranslations("footer");
   const locale = await getLocale();
@@ -140,19 +140,6 @@ export async function Footer() {
         </div>
       </div>
 
-      {/* Chữ thương hiệu lớn ở đáy trang */}
-      <div className="overflow-hidden" aria-hidden>
-        <p
-          data-stagger
-          className="mx-auto max-w-[1280px] select-none px-4 pb-6 font-display text-[23vw] font-semibold leading-none tracking-[-0.06em] text-brand-100 sm:px-6 lg:px-8 xl:text-[17.5rem]"
-        >
-          {siteConfig.name.split("").map((c, i) => (
-            <span key={i} className="inline-block">
-              {c}
-            </span>
-          ))}
-        </p>
-      </div>
       <BackToTop />
     </footer>
   );

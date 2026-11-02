@@ -25,7 +25,7 @@ export async function SectionAbout() {
         crumb={t("title")}
         title={t("title")}
         aside={
-          <figure className="rounded-[24px] bg-brand-700 p-7 text-white sm:p-9">
+          <figure className="rounded-xl bg-brand-700 p-7 text-white sm:p-9">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">{t("missionTitle")}</p>
             <blockquote className="mt-4 text-xl font-semibold leading-snug tracking-[-0.01em] sm:text-2xl">
               “{t("missionDesc")}”
@@ -42,7 +42,7 @@ export async function SectionAbout() {
             {whyItems.map(({ key, Icon }, i) => (
               <div key={key} className="border-b border-line py-8 md:border-b-0 md:px-8 md:first:pl-0 md:last:pr-0">
                 <div className="flex items-center justify-between">
-                  <span className="sg-icon-tile size-12 rounded-2xl">
+                  <span className="sg-icon-tile size-12 rounded-xl">
                     <Icon className="size-6" strokeWidth={2} aria-hidden />
                   </span>
                   <span className="font-display text-sm font-semibold text-ink/30">0{i + 1}</span>
@@ -57,13 +57,13 @@ export async function SectionAbout() {
       {/* Định hướng phát triển */}
       <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
         <div className="sg-container">
-          <div data-reveal className="grid gap-10 rounded-[28px] bg-[#FBF7F7] p-5 sm:p-8 lg:p-10 lg:grid-cols-12 lg:p-14">
+          <div data-reveal className="grid gap-8 border-t border-line pt-6 sm:pt-8 lg:grid-cols-12 lg:gap-10">
             <div className="lg:col-span-5">
               <h2 className="sg-h2">{t("roadmapTitle")}</h2>
             </div>
-            <ol className="space-y-3 lg:col-span-7">
+            <ol className="border-t border-line lg:col-span-7">
               {roadmapItems.map(({ key, Icon }, i) => (
-                <li key={key} className="flex items-center gap-4 rounded-2xl border border-line bg-white p-5 sm:gap-5">
+                <li key={key} className="flex items-center gap-4 border-b border-line py-5 sm:gap-5">
                   <span className="font-display text-2xl font-semibold tracking-[-0.03em] text-brand-700">0{i + 1}</span>
                   <p className="flex-1 font-medium leading-relaxed text-ink">{t(key)}</p>
                   <Icon className="size-5 shrink-0 text-ink/35" strokeWidth={2} aria-hidden />

@@ -68,11 +68,11 @@ export default async function SalonSoftwarePage({ params }: Props) {
         lead={t("intro")}
         actions={
           <>
-            <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up px-7 py-4 text-base">
+            <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up min-h-12 px-7 text-base">
               {t("ctaTrial")}
               <ArrowUpRight className="size-[18px]" aria-hidden />
             </a>
-            <Link href="/tinh-nang" className="btn-secondary px-7 py-4 text-base">
+            <Link href="/tinh-nang" className="btn-secondary min-h-12 px-7 text-base">
               {t("ctaFeatures")}
             </Link>
           </>
@@ -109,7 +109,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
           <aside className="lg:col-span-4">
             <div className="lg:sticky lg:top-24">
               <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("shotAlt")} className="mx-auto max-w-[260px]" />
-              <div className="mt-6 rounded-[20px] border border-line bg-[#FBF7F7] p-5">
+              <div className="mt-6 rounded-xl border border-line bg-[#FBF7F7] p-5">
                 <p className="font-semibold text-ink">{t("boxTitle")}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{t("boxText")}</p>
                 <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 w-full py-3 text-sm">

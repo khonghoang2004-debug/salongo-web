@@ -31,7 +31,7 @@ export async function PricingComparisonTable() {
         <h2 className="sg-h2">{t("compareTitle")}</h2>
         <p className="sg-lead mt-4 max-w-2xl">{t("compareLead")}</p>
 
-        <div data-reveal className="mt-10 overflow-hidden rounded-[20px] border border-line bg-white">
+        <div data-reveal className="mt-10 overflow-hidden rounded-xl border border-line bg-white">
           <table className="w-full border-collapse text-left text-[13px] sm:text-sm">
             <thead>
               <tr className="border-b border-line">

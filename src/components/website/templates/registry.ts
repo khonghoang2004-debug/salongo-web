@@ -10,13 +10,15 @@ import { chroma } from "./content/chroma";
 import { aurel } from "./content/aurel";
 import { hugo, iris, kora, marelle, nova, onyx } from "./content/research";
 import { withPhotos } from "./photos";
+import { KIT_SPECS, KIT_TEMPLATES } from "../kit/specs";
 
 // Danh sách mẫu website. Thêm mẫu mới: tạo file nội dung trong content/, một component trong sites/,
 // rồi thêm vào đây (thư viện, trang demo và ảnh xem trước đều đọc từ danh sách này).
 export const TEMPLATES: TemplateContent[] = [
-  aurel, marelle, onyx, hugo, iris, chroma, kora, nova,
-  nail, hair, spa, barber, lumen, velvet,
-].map(withPhotos);
+  ...[aurel, marelle, onyx, hugo, iris, chroma, kora, nova].map(withPhotos),
+  ...KIT_TEMPLATES,
+  ...[nail, hair, spa, barber, lumen, velvet].map(withPhotos),
+];
 
 /** Nhóm loại salon cho bộ lọc thư viện */
 export type Category = "nail" | "hair" | "spa" | "lash" | "makeup" | "barber";
@@ -27,6 +29,7 @@ export const CATEGORY: Record<string, Category> = {
   "iris-lash": "lash", "velvet-lash": "lash",
   "aurel-beauty": "makeup",
   "brass-barber": "barber",
+  ...Object.fromEntries(Object.entries(KIT_SPECS).map(([slug, k]) => [slug, k.cat])),
 };
 
 export const getTemplate = (slug: string) => TEMPLATES.find((t) => t.slug === slug);

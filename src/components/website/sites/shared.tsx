@@ -51,7 +51,7 @@ export function site({ t, page, locale }: SiteProps) {
   };
   const gallery = {
     items: t.gallery.items.map((g) => ({ v: g.v, alt: l(g.alt), photo: g.photo })),
-    palettes: ART_PALETTES[t.slug],
+    palettes: ART_PALETTES[t.slug] ?? ART_PALETTES["ivelle-nail"],
     labels: { open: l(UI.openImage), close: l(UI.close), prev: l(UI.prev), next: l(UI.next) },
   };
   return {

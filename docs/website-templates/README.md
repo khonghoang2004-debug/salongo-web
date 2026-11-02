@@ -6,7 +6,7 @@
 |---|---|---|
 | Khu ưu đãi trên trang chủ (ngay dưới hero) | `/{locale}` | `src/components/home/HomeWebsiteOffer.tsx` |
 | Trang dịch vụ + thư viện mẫu (được index, có trong sitemap) | `/{locale}/website` | `src/app/[locale]/website/page.tsx` |
-| Demo 14 mẫu × 5 trang (noindex, không có trong sitemap) | `/{locale}/website/mau/{mẫu}/{trang}` | `src/app/[locale]/website/mau/[template]/[[...page]]/page.tsx` |
+| Demo 38 mẫu × 5 trang (noindex, không có trong sitemap) | `/{locale}/website/mau/{mẫu}/{trang}` | `src/app/[locale]/website/mau/[template]/[[...page]]/page.tsx` |
 | Thanh "Website mẫu / Quay lại thư viện / Chọn mẫu này" | trên mọi trang demo | `src/components/website/DemoBar.tsx` |
 | Hộp liên hệ (sao chép nội dung, gọi, Facebook, Instagram) | thư viện + demo | `src/components/website/WebsiteContact.tsx` |
 
@@ -45,6 +45,7 @@ Nội dung các website mẫu **luôn bằng tiếng Séc** (`DEMO_LOCALE` trong
 - **Chữ chung của demo** (ghi chú "Website mẫu…", nhãn form, thông báo form demo): `src/components/website/templates/common.ts`.
 - **Bố cục / màu / chữ từng mẫu**: `src/components/website/sites/*Site.tsx`; font riêng trong `sites/shared.tsx` (next/font: tham số phải viết thẳng, dùng font biến thiên, không liệt kê độ đậm).
 - **Thêm mẫu mới**: thêm file nội dung + component site, rồi khai báo trong `templates/registry.ts` và `sites/index.ts`; chụp lại ảnh xem trước.
+- **24 mẫu dựng từ khối (kit)**: `src/components/website/kit/`. Mỗi mẫu là một mục trong `kit/specs.ts` (nội dung tiếng Séc, ceník theo ngành, ảnh, màu `theme.c`, font `KIT_FONTS`, bố cục `layout`: kiểu đầu trang, bảng giá, bộ sưu tập, đội ngũ, menu, chân trang, thứ tự khối trang chủ). Một renderer chung `kit/KitSite.tsx`. Thêm mẫu kit = thêm một mục vào `SPECS` (tự vào thư viện, bộ lọc, demo), chuyển ảnh sang `public/images/website/demo/` và chụp ảnh xem trước. Nếu `accent` nhạt (vàng đồng), đặt `accentInk` đậm hơn cho chữ nhấn trên nền sáng.
 
 ## Ảnh
 

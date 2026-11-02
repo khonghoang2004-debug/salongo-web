@@ -1,4 +1,5 @@
 import { Lock } from "lucide-react";
+import { KIT_SPECS } from "./kit/specs";
 
 /** Ảnh chụp từ chính demo (nội dung demo luôn tiếng Séc, cách chụp lại: docs/website-templates/README.md): 1200×750 (PC), 780×1520 (điện thoại) */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -78,4 +79,5 @@ export const PREVIEW_TINT: Record<string, string> = {
   "iris-lash": "#E9E4DF",
   "kora-skin": "#C7CDC9",
   "nova-studio": "#E6DDD3",
+  ...Object.fromEntries(Object.entries(KIT_SPECS).map(([slug, k]) => [slug, k.tint])),
 };

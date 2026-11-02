@@ -13,6 +13,8 @@ import { OnyxSite } from "./OnyxSite";
 import { IrisSite } from "./IrisSite";
 import { KoraSite } from "./KoraSite";
 import { NovaSite } from "./NovaSite";
+import { KitSite } from "../kit/KitSite";
+import { KIT_SPECS } from "../kit/specs";
 
 // slug mẫu → component dựng website mẫu đó
 export const SITES: Record<string, (p: SiteProps) => React.ReactNode> = {
@@ -30,4 +32,6 @@ export const SITES: Record<string, (p: SiteProps) => React.ReactNode> = {
   "iris-lash": IrisSite,
   "kora-skin": KoraSite,
   "nova-studio": NovaSite,
+  // các mẫu dựng từ khối (kit/specs.ts)
+  ...Object.fromEntries(Object.keys(KIT_SPECS).map((slug) => [slug, KitSite])),
 };

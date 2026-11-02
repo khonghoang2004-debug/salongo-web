@@ -117,7 +117,6 @@ export default async function WebsitePage({ params }: Props) {
                   <p className={`${serif} whitespace-nowrap text-[3rem] font-medium leading-[0.9] tracking-[-0.02em] sm:text-[3.5rem]`}>{v.price}</p>
                   <p className="pb-1.5 text-[16px] font-medium leading-snug text-[#3A3631]">
                     {t("priceLine", v)}
-                    <span className="block text-[14px] font-normal text-[#6B645B]">{t("heroLead")}</span>
                   </p>
                 </div>
                 <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">

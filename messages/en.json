@@ -1171,7 +1171,7 @@
     "catMakeup": "Makeup",
     "catBarber": "Barber",
     "filterLabel": "Filter by salon type",
-    "priceLine": "for one website with up to {pages} pages",
+    "priceLine": "for one {pages}-page website, only for SalonGo customers",
     "customIdeaLabel": "Your own idea",
     "breadcrumb": "Salon website design",
     "stat1": "{count} templates",

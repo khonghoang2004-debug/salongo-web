@@ -1172,7 +1172,7 @@
     "catMakeup": "Makeup",
     "catBarber": "Barber",
     "filterLabel": "Lọc theo loại salon",
-    "priceLine": "cho 1 website tối đa {pages} trang",
+    "priceLine": "cho 1 website {pages} trang chỉ dành cho khách hàng của SalonGo",
     "customIdeaLabel": "Ý tưởng riêng",
     "breadcrumb": "Làm website salon",
     "stat1": "{count} mẫu",

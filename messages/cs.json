@@ -1172,7 +1172,7 @@
     "catMakeup": "Make-up",
     "catBarber": "Barber",
     "filterLabel": "Filtrovat podle typu salonu",
-    "priceLine": "za web až o {pages} stránkách",
+    "priceLine": "za web o {pages} stránkách, jen pro zákazníky SalonGo",
     "customIdeaLabel": "Vlastní nápad",
     "breadcrumb": "Tvorba webu pro salon",
     "stat1": "{count} šablon",

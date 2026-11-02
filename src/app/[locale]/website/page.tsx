@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowDown } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
-import { TEMPLATE_COUNT_LABEL, WEBSITE_PRICE_KC } from "@/lib/website-offer";
+import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
 import { TEMPLATES } from "@/components/website/templates/registry";
 import { PageShell } from "@/components/PageShell";
 import { AtelierTemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
@@ -98,11 +98,6 @@ export default async function WebsitePage({ params }: Props) {
     "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#1F1C19] px-7 text-[15px] font-semibold text-[#F4F1EB] transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
   const btnLine =
     "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#1C1A17]/25 px-7 text-[15px] font-semibold text-[#1C1A17] transition-colors hover:border-[#1C1A17] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
-  const stats = [
-    [t("stat1", { count: TEMPLATE_COUNT_LABEL }), t("stat1Text")],
-    [t("stat2", v), t("stat2Text")],
-    [t("stat3"), t("stat3Text")],
-  ];
 
   return (
     <PageShell>
@@ -156,14 +151,6 @@ export default async function WebsitePage({ params }: Props) {
                 </div>
               </div>
             </div>
-            <ul className={`${wrap} grid grid-cols-3 border-t border-[#DCD5CA]`}>
-              {stats.map(([a, b], i) => (
-                <li key={i} className={`py-4 sm:py-6 ${i ? "border-l border-[#DCD5CA] pl-3 sm:pl-8" : "pr-2"}`}>
-                  <p className={`${serif} text-[1.25rem] font-medium leading-tight sm:text-[1.625rem] sm:leading-none`}>{a}</p>
-                  <p className="mt-2 hidden text-[14px] text-[#6B645B] sm:block">{b}</p>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 

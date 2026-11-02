@@ -18,3 +18,6 @@ export const WEBSITE_CONTACT = {
   facebook: CONTACT_FACEBOOK,
   instagram: CONTACT_INSTAGRAM,
 };
+
+/** Số mẫu hiển thị cho khách: ghi tròn "35+" thay vì số chính xác (người dùng chốt 02/11/2026) */
+export const TEMPLATE_COUNT_LABEL = "35+";

@@ -38,7 +38,7 @@ export function TemplateFilter({
           </button>
         ))}
       </div>
-      <ul className={tone === "atelier" ? "mt-10 grid gap-x-6 gap-y-14 md:grid-cols-2 xl:grid-cols-3" : "mt-6 grid gap-5 md:grid-cols-2 md:gap-6"}>
+      <ul className={tone === "atelier" ? "mt-8 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3" : "mt-6 grid gap-5 md:grid-cols-2 md:gap-6"}>
         {items.map((it) => (
           <li
             key={it.key}

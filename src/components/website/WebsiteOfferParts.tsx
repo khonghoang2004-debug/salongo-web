@@ -127,7 +127,7 @@ export async function AtelierTemplateCards() {
             <div className="flex flex-1 flex-col pt-5">
               <div className="flex items-baseline gap-3 border-b border-[#DCD5CA] pb-3">
                 <span className="text-[12px] font-semibold tabular-nums tracking-[0.12em] text-[#7A6347]">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className={`${fontAtelier.className} min-w-0 flex-1 truncate text-[1.75rem] font-medium leading-none text-[#1C1A17]`}>{tpl.name}</h3>
+                <h3 className={`${fontAtelier.className} min-w-0 flex-1 truncate text-[1.5rem] font-medium leading-none tracking-[-0.01em] text-[#1C1A17]`}>{tpl.name}</h3>
                 <span className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
               </div>
               <p className="mt-3 text-[15px] leading-relaxed text-[#6B645B]">{tr(tpl.card.style, locale)}</p>

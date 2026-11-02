@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowDown } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
-import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
+import { TEMPLATE_COUNT_LABEL, WEBSITE_PRICE_KC } from "@/lib/website-offer";
 import { TEMPLATES } from "@/components/website/templates/registry";
 import { PageShell } from "@/components/PageShell";
 import { AtelierTemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
@@ -99,7 +99,7 @@ export default async function WebsitePage({ params }: Props) {
   const btnLine =
     "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#1C1A17]/25 px-7 text-[15px] font-semibold text-[#1C1A17] transition-colors hover:border-[#1C1A17] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
   const stats = [
-    [t("stat1", { count: TEMPLATES.length }), t("stat1Text")],
+    [t("stat1", { count: TEMPLATE_COUNT_LABEL }), t("stat1Text")],
     [t("stat2", v), t("stat2Text")],
     [t("stat3"), t("stat3Text")],
   ];
@@ -111,21 +111,21 @@ export default async function WebsitePage({ params }: Props) {
         {/* Đầu trang: chữ có chân kiểu tạp chí + bố cục ảnh mẫu thật */}
         <section className="px-1.5 pt-1.5 sm:px-3 sm:pt-3 lg:px-4">
           <div className="overflow-hidden rounded-[20px] bg-[#F4F1EB] sm:rounded-[32px]">
-            <div className={`${wrap} grid gap-14 pb-14 pt-12 sm:pt-16 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-20 lg:pt-20`}>
-              <div className="lg:col-span-6">
+            <div className={`${wrap} grid gap-10 pb-10 pt-9 sm:pt-12 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-12 lg:pt-14`}>
+              <div className="lg:col-span-7">
                 <Kicker n={t("studio")}>{t("eyebrow")}</Kicker>
-                <h1 className={`${serif} mt-6 text-[3rem] font-medium leading-[0.98] tracking-[-0.01em] sm:text-[4.25rem] lg:text-[5rem]`}>
+                <h1 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] sm:text-[3.5rem] lg:text-[4rem]`}>
                   <span className="block">{h1a}</span> {h1b && <span className="block italic text-[#7A6347]">{h1b}</span>}
                 </h1>
-                <div className="mt-8 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-5">
+                <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
                   <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
-                  <p className={`${serif} whitespace-nowrap text-[3.5rem] font-medium leading-[0.9] sm:text-[4.25rem]`}>{v.price}</p>
+                  <p className={`${serif} whitespace-nowrap text-[3rem] font-medium leading-[0.9] tracking-[-0.02em] sm:text-[3.5rem]`}>{v.price}</p>
                   <p className="pb-1.5 text-[16px] font-medium leading-snug text-[#3A3631]">
                     {t("priceLine", v)}
                     <span className="block text-[14px] font-normal text-[#6B645B]">{t("heroLead")}</span>
                   </p>
                 </div>
-                <div className="mt-8 flex flex-col gap-2.5 sm:flex-row">
+                <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
                   <a href="#mau" className={btnDark}>
                     {t("ctaTemplates")}
                     <ArrowDown className="size-[18px]" aria-hidden />
@@ -134,12 +134,12 @@ export default async function WebsitePage({ params }: Props) {
                     {t("ctaContact")}
                   </a>
                 </div>
-                <p className="mt-8 max-w-xl border-l border-[#7A6347]/50 pl-5 text-[15px] leading-relaxed text-[#3A3631]">
+                <p className="mt-6 max-w-xl border-l border-[#7A6347]/50 pl-5 text-[15px] leading-relaxed text-[#3A3631]">
                   <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("customIdeaLabel")}</span>
                   {t("customIdea", v)}
                 </p>
               </div>
-              <div className="relative mx-auto w-full max-w-[620px] pb-8 pl-6 pt-6 sm:pl-10 lg:col-span-6 lg:max-w-none" aria-hidden>
+              <div className="relative mx-auto w-full max-w-[620px] pb-8 pl-6 pt-6 sm:pl-10 lg:col-span-5 lg:max-w-none" aria-hidden>
                 <div className="overflow-hidden rounded-[8px] bg-white shadow-[0_30px_60px_-20px_rgba(40,32,24,0.35)] ring-1 ring-black/5">
                   <div className="flex gap-1.5 border-b border-black/5 bg-[#F7F5F1] px-3 py-2">
                     <span className="size-2 rounded-full bg-[#DCD5CA]" />
@@ -156,11 +156,11 @@ export default async function WebsitePage({ params }: Props) {
                 </div>
               </div>
             </div>
-            <ul className={`${wrap} grid border-t border-[#DCD5CA] sm:grid-cols-3`}>
+            <ul className={`${wrap} grid grid-cols-3 border-t border-[#DCD5CA]`}>
               {stats.map(([a, b], i) => (
-                <li key={i} className={`py-6 sm:py-8 ${i ? "border-t border-[#DCD5CA] sm:border-l sm:border-t-0 sm:pl-8" : ""}`}>
-                  <p className={`${serif} text-[2rem] font-medium leading-none`}>{a}</p>
-                  <p className="mt-2 text-[14px] text-[#6B645B]">{b}</p>
+                <li key={i} className={`py-4 sm:py-6 ${i ? "border-l border-[#DCD5CA] pl-3 sm:pl-8" : "pr-2"}`}>
+                  <p className={`${serif} text-[1.25rem] font-medium leading-tight sm:text-[1.625rem] sm:leading-none`}>{a}</p>
+                  <p className="mt-2 hidden text-[14px] text-[#6B645B] sm:block">{b}</p>
                 </li>
               ))}
             </ul>
@@ -168,16 +168,16 @@ export default async function WebsitePage({ params }: Props) {
         </section>
 
         {/* Thư viện mẫu */}
-        <section id="mau" className="scroll-mt-20 py-16 sm:py-20 lg:py-28">
+        <section id="mau" className="scroll-mt-20 py-12 sm:py-14 lg:py-16">
           <div className={wrap}>
             <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-8">
                 <Kicker n="01">{t("galleryKicker")}</Kicker>
-                <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] sm:text-[3.25rem] lg:text-[4rem]`}>{t("galleryTitle")}</h2>
+                <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem] lg:text-[3rem]`}>{t("galleryTitle")}</h2>
               </div>
               <p className="text-[16px] leading-relaxed text-[#6B645B] lg:col-span-4">{t("galleryLead", v)}</p>
             </div>
-            <div className="mt-10 lg:mt-14">
+            <div className="mt-8 lg:mt-10">
               <AtelierTemplateCards />
             </div>
           </div>
@@ -186,16 +186,16 @@ export default async function WebsitePage({ params }: Props) {
         {/* Gói gồm những gì: khối espresso */}
         <section className="px-1.5 sm:px-3 lg:px-4">
           <div className="rounded-[20px] bg-[#1F1C19] text-[#EFEAE2] sm:rounded-[32px]">
-            <div className={`${wrap} grid gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-24`}>
+            <div className={`${wrap} grid gap-8 py-12 sm:py-14 lg:grid-cols-12 lg:gap-10 lg:py-16`}>
               <div className="lg:col-span-5">
                 <Kicker n="02" light>
                   {t("incKicker")}
                 </Kicker>
-                <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.04] sm:text-[3.25rem]`}>{t("incTitle", v)}</h2>
+                <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("incTitle", v)}</h2>
               </div>
               <ol className="lg:col-span-7">
                 {INCLUDED.map((k, i) => (
-                  <li key={k} className="grid grid-cols-[44px_1fr] gap-x-3 border-t border-white/12 py-5 text-[16px] leading-relaxed last:border-b">
+                  <li key={k} className="grid grid-cols-[44px_1fr] gap-x-3 border-t border-white/12 py-4 text-[16px] leading-relaxed last:border-b">
                     <span className={`${serif} text-[1.375rem] italic leading-snug text-[#C9BBA6]`}>{String(i + 1).padStart(2, "0")}</span>
                     <span>{t(k, v)}</span>
                   </li>
@@ -206,15 +206,15 @@ export default async function WebsitePage({ params }: Props) {
         </section>
 
         {/* Ba bước */}
-        <section className="py-16 sm:py-20 lg:py-28">
+        <section className="py-12 sm:py-14 lg:py-16">
           <div className={wrap}>
             <Kicker n="03">{t("stepsKicker")}</Kicker>
-            <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] sm:text-[3.25rem]`}>{t("stepsTitle")}</h2>
-            <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("stepsTitle")}</h2>
+            <ol className="mt-8 grid gap-8 md:grid-cols-3 md:gap-8">
               {STEPS.map((n) => (
                 <li key={n} className="border-t border-[#1C1A17] pt-6">
-                  <span className={`${serif} block text-[4rem] font-medium italic leading-none text-[#7A6347]`}>{n}.</span>
-                  <h3 className={`${serif} mt-6 text-[1.75rem] font-medium leading-tight`}>{t(`step${n}Title`)}</h3>
+                  <span className={`${serif} block text-[3rem] font-medium italic leading-none text-[#7A6347]`}>{n}.</span>
+                  <h3 className={`${serif} mt-4 text-[1.5rem] font-medium leading-tight`}>{t(`step${n}Title`)}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-[#6B645B]">{t(`step${n}Text`)}</p>
                 </li>
               ))}
@@ -223,17 +223,17 @@ export default async function WebsitePage({ params }: Props) {
         </section>
 
         {/* Hỏi đáp */}
-        <section className="pb-16 sm:pb-20 lg:pb-28">
+        <section className="pb-12 sm:pb-14 lg:pb-16">
           <div className={`${wrap} grid gap-10 lg:grid-cols-12 lg:gap-12`}>
             <div className="lg:col-span-4">
               <Kicker n="04">{t("faqKicker")}</Kicker>
-              <h2 className={`${serif} mt-5 text-[2.25rem] font-medium leading-[1.05] sm:text-[2.75rem]`}>{t("faqTitle")}</h2>
+              <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("faqTitle")}</h2>
             </div>
             <div className="border-t border-[#DCD5CA] lg:col-span-8">
               {FAQ.map((n) => (
                 <details key={n} className="group border-b border-[#DCD5CA]" open={n === 1}>
-                  <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 [&::-webkit-details-marker]:hidden">
-                    <span className={`${serif} text-[1.5rem] font-medium leading-snug`}>{t(`faq${n}Q`, v)}</span>
+                  <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-4 [&::-webkit-details-marker]:hidden">
+                    <span className={`${serif} text-[1.25rem] font-medium leading-snug`}>{t(`faq${n}Q`, v)}</span>
                     <span
                       className="flex size-10 shrink-0 items-center justify-center rounded-full border border-[#DCD5CA] text-xl text-[#1C1A17] transition-transform group-open:rotate-45 motion-reduce:transition-none"
                       aria-hidden
@@ -241,7 +241,7 @@ export default async function WebsitePage({ params }: Props) {
                       +
                     </span>
                   </summary>
-                  <p className="max-w-2xl pb-6 text-[16px] leading-relaxed text-[#6B645B]">{t(`faq${n}A`, v)}</p>
+                  <p className="max-w-2xl pb-5 text-[16px] leading-relaxed text-[#6B645B]">{t(`faq${n}A`, v)}</p>
                 </details>
               ))}
             </div>
@@ -251,11 +251,11 @@ export default async function WebsitePage({ params }: Props) {
         {/* Liên hệ */}
         <section id="lien-he" className="scroll-mt-20 px-1.5 pb-10 sm:px-3 sm:pb-14 lg:px-4">
           <div className="rounded-[20px] bg-[#E9E4DB] sm:rounded-[32px]">
-            <div className="mx-auto max-w-[880px] px-5 py-14 text-center sm:px-8 sm:py-20">
+            <div className="mx-auto max-w-[880px] px-5 py-10 text-center sm:px-8 sm:py-14">
               <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("contactKicker")}</p>
-              <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.04] sm:text-[3.5rem]`}>{t("contactNow")}</h2>
-              <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-[#3A3631]">{t("customIdea", v)}</p>
-              <div className="mt-9 text-left">
+              <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.75rem]`}>{t("contactNow")}</h2>
+              <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-[#3A3631]">{t("customIdea", v)}</p>
+              <div className="mt-7 text-left">
                 <WebsiteContactPanel tone="atelier" />
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { TEMPLATE_COUNT_LABEL } from "@/lib/website-offer";
 import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -94,7 +95,7 @@ export async function HomeWebsiteOffer() {
               ))}
             </ul>
             <Link href="/website" className="mt-5 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand-700 hover:text-brand-800">
-              {t("allTemplates", { count: TEMPLATES.length })}
+              {t("allTemplates", { count: TEMPLATE_COUNT_LABEL })}
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>

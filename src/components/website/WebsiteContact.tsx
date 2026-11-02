@@ -130,7 +130,7 @@ export function ChooseTemplateButton({
           <div className="flex items-start justify-between gap-4">
             <h2
               id={titleId}
-              className={tone === "atelier" ? `${fontAtelier.className} text-[1.75rem] font-medium leading-tight sm:text-[2rem]` : "font-display text-[1.375rem] font-semibold leading-snug tracking-[-0.02em] sm:text-2xl"}
+              className={tone === "atelier" ? `${fontAtelier.className} text-[1.5rem] font-medium leading-tight tracking-[-0.01em] sm:text-[1.75rem]` : "font-display text-[1.375rem] font-semibold leading-snug tracking-[-0.02em] sm:text-2xl"}
             >
               {t("contactNow")}
             </h2>

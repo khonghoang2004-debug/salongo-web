@@ -84,6 +84,9 @@
   .sg-h1 {
     @apply font-display text-[2.375rem] font-semibold leading-[1.08] tracking-[-0.035em] text-ink sm:text-[3.25rem] lg:text-[4.25rem];
     text-wrap: balance;
+    /* Từ ghép dài tiếng Đức (Nutzungsbedingungen) không tràn màn hẹp */
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   .sg-h2 {

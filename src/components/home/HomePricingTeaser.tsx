@@ -41,7 +41,7 @@ export async function HomePricingTeaser() {
               href={appLink(RENEW_URL, locale)}
               target="_blank"
               rel="noopener noreferrer"
-              className="sg-arrow sg-arrow-up inline-flex min-h-11 items-center justify-center gap-1.5 whitespace-nowrap px-2 text-[15px] font-semibold text-white/90 hover:text-white"
+              className="sg-arrow sg-arrow-up inline-flex min-h-11 items-center justify-center gap-1.5 px-2 text-center text-[15px] font-semibold text-white/90 hover:text-white sm:whitespace-nowrap"
             >
               {h("priceRenew")}
               <ArrowUpRight className="size-4" aria-hidden />

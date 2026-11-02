@@ -8,8 +8,9 @@ import { previewSrc } from "../website/TemplatePreview";
 import { offerVars } from "../website/WebsiteOfferParts";
 import { fontAtelier } from "../website/atelier";
 
-// 2 mẫu tiêu biểu trên trang chủ (người dùng chốt 02/11: chỉ 2 mẫu, gọn); thư viện /website có đủ tất cả
-const HOME_PICKS = ["aurel-beauty", "atelier-noir"];
+// Mẫu tiêu biểu trên trang chủ, một dãy gọn (người dùng chốt 02/11): điện thoại 1 mẫu, máy tính bảng 2, máy tính 3
+const HOME_PICKS = ["aurel-beauty", "atelier-noir", "maison-claire"];
+const SHOW = ["", "hidden sm:flex", "hidden lg:flex"];
 
 // Ưu đãi làm website ngay dưới hero, cùng phong cách "atelier" với trang /website (kem đá, espresso, chữ Newsreader;
 // màu ghi chú trong website/atelier.ts). Ảnh chụp thật từ demo, tải lười nên không ảnh hưởng hero.
@@ -82,12 +83,12 @@ export async function HomeWebsiteOffer() {
             </div>
           </div>
 
-          <div className="grid gap-4 border-t border-[#DCD5CA] p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-12 lg:items-center lg:gap-6 lg:px-12">
-            {HOME_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug)!).map((tpl) => (
+          <div className="flex flex-col gap-4 border-t border-[#DCD5CA] p-5 sm:flex-row sm:flex-wrap sm:items-center sm:p-6 lg:flex-nowrap lg:gap-6 lg:px-12">
+            {HOME_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug)!).map((tpl, i) => (
               <Link
                 key={tpl.slug}
                 href={`/website/mau/${tpl.slug}`}
-                className="group flex items-center gap-4 rounded-[6px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F1EB] lg:col-span-4"
+                className={`group flex min-w-0 flex-1 items-center gap-3.5 rounded-[6px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F1EB] ${SHOW[i]}`}
               >
                 <span className="block w-[44%] shrink-0 overflow-hidden rounded-[6px] bg-[#E6E0D6] ring-1 ring-black/5">
                   <img
@@ -101,15 +102,15 @@ export async function HomeWebsiteOffer() {
                   />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className={`${serif} block truncate text-[1.25rem] font-medium leading-tight`}>{tpl.name}</span>
-                  <span className="mt-1 block truncate text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
+                  <span className={`${serif} block text-[1.125rem] font-medium leading-tight`}>{tpl.name}</span>
+                  <span className="mt-1 block truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
+                  <ArrowRight className="mt-2 block size-4 text-[#1C1A17] transition-transform group-hover:translate-x-0.5" aria-hidden />
                 </span>
-                <ArrowRight className="size-4 shrink-0 text-[#1C1A17] transition-transform group-hover:translate-x-0.5" aria-hidden />
               </Link>
             ))}
             <Link
               href="/website"
-              className="inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-[#1C1A17] underline decoration-[#1C1A17]/35 underline-offset-[6px] hover:decoration-[#1C1A17] sm:col-span-2 lg:col-span-4 lg:justify-self-end"
+              className="inline-flex min-h-11 shrink-0 items-center gap-1.5 whitespace-nowrap text-[15px] font-semibold text-[#1C1A17] underline decoration-[#1C1A17]/35 underline-offset-[6px] hover:decoration-[#1C1A17] sm:basis-full lg:basis-auto"
             >
               {t("allTemplates", { count: TEMPLATE_COUNT_LABEL })}
               <ArrowRight className="size-4" aria-hidden />

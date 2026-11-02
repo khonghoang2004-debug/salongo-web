@@ -1095,8 +1095,6 @@
   },
   "webOffer": {
     "eyebrow": "Ưu đãi dành cho khách hàng SalonGo",
-    "priceOnce": "một lần",
-    "pagesNote": "Website tối đa {pages} trang",
     "lead": "Thiết kế riêng cho salon, đẹp trên cả điện thoại và máy tính.",
     "hosting": "Phí thiết kế thanh toán một lần. Hosting được tư vấn và báo giá riêng.",
     "ctaTemplates": "Xem mẫu website",
@@ -1121,7 +1119,6 @@
     "inc4": "Hiển thị phù hợp trên máy tính và điện thoại.",
     "inc5": "Có thể đặt nút dẫn đến trang đặt lịch SalonGo, nếu salon đã có đường dẫn đặt lịch hợp lệ.",
     "inc6": "Giá thiết kế {price}, thanh toán một lần, dành cho khách hàng dùng SalonGo.",
-    "inc7": "Hosting được tư vấn và báo giá riêng khi bạn có nhu cầu.",
     "stepsKicker": "Cách làm",
     "stepsTitle": "Ba bước để có website",
     "step1Title": "Chọn mẫu",
@@ -1173,6 +1170,7 @@
     "catLash": "Mi & mày",
     "catMakeup": "Makeup",
     "catBarber": "Barber",
-    "filterLabel": "Lọc theo loại salon"
+    "filterLabel": "Lọc theo loại salon",
+    "priceLine": "cho 1 website tối đa {pages} trang"
   }
 }

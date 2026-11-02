@@ -1094,8 +1094,6 @@
   },
   "webOffer": {
     "eyebrow": "Offer for SalonGo customers",
-    "priceOnce": "one-time",
-    "pagesNote": "Website with up to {pages} pages",
     "lead": "Designed for salons, beautiful on phones and computers.",
     "hosting": "The design fee is paid once. Hosting is advised on and quoted separately.",
     "ctaTemplates": "See website templates",
@@ -1120,7 +1118,6 @@
     "inc4": "Works well on computers and phones.",
     "inc5": "A button to the salon's SalonGo booking page, if the salon has a valid booking link.",
     "inc6": "Design fee {price}, paid once, for SalonGo customers.",
-    "inc7": "Hosting advised on and quoted separately when you need it.",
     "stepsKicker": "How it works",
     "stepsTitle": "Three steps to your website",
     "step1Title": "Choose a template",
@@ -1172,6 +1169,7 @@
     "catLash": "Lash & brow",
     "catMakeup": "Makeup",
     "catBarber": "Barber",
-    "filterLabel": "Filter by salon type"
+    "filterLabel": "Filter by salon type",
+    "priceLine": "for one website with up to {pages} pages"
   }
 }

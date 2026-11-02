@@ -1095,8 +1095,6 @@
   },
   "webOffer": {
     "eyebrow": "Nabídka pro zákazníky SalonGo",
-    "priceOnce": "jednorázově",
-    "pagesNote": "Web až o {pages} stránkách",
     "lead": "Navrženo pro salony, skvěle vypadá v mobilu i na počítači.",
     "hosting": "Návrh webu platíte jednorázově. Hosting vám poradíme a naceníme zvlášť.",
     "ctaTemplates": "Prohlédnout šablony",
@@ -1121,7 +1119,6 @@
     "inc4": "Web se přizpůsobí počítači i mobilu.",
     "inc5": "Na web lze přidat tlačítko na rezervační stránku SalonGo, pokud má salon platný odkaz na rezervace.",
     "inc6": "Cena návrhu {price}, platba jednorázově, pro zákazníky SalonGo.",
-    "inc7": "Hosting vám podle potřeby poradíme a naceníme zvlášť.",
     "stepsKicker": "Postup",
     "stepsTitle": "Tři kroky k webu",
     "step1Title": "Vyberte šablonu",
@@ -1173,6 +1170,7 @@
     "catLash": "Řasy a obočí",
     "catMakeup": "Make-up",
     "catBarber": "Barber",
-    "filterLabel": "Filtrovat podle typu salonu"
+    "filterLabel": "Filtrovat podle typu salonu",
+    "priceLine": "za web až o {pages} stránkách"
   }
 }

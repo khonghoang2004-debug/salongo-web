@@ -1094,8 +1094,6 @@
   },
   "webOffer": {
     "eyebrow": "Angebot für SalonGo-Kunden",
-    "priceOnce": "einmalig",
-    "pagesNote": "Website mit bis zu {pages} Seiten",
     "lead": "Für Salons gestaltet, schön auf Smartphone und Computer.",
     "hosting": "Die Designgebühr zahlen Sie einmalig. Hosting beraten und kalkulieren wir separat.",
     "ctaTemplates": "Vorlagen ansehen",
@@ -1120,7 +1118,6 @@
     "inc4": "Gut nutzbar auf Computer und Smartphone.",
     "inc5": "Ein Button zur SalonGo-Buchungsseite des Salons, wenn ein gültiger Buchungslink vorhanden ist.",
     "inc6": "Designgebühr {price}, einmalig, für SalonGo-Kunden.",
-    "inc7": "Hosting wird bei Bedarf beraten und separat kalkuliert.",
     "stepsKicker": "Ablauf",
     "stepsTitle": "In drei Schritten zur Website",
     "step1Title": "Vorlage wählen",
@@ -1172,6 +1169,7 @@
     "catLash": "Wimpern & Brauen",
     "catMakeup": "Make-up",
     "catBarber": "Barber",
-    "filterLabel": "Nach Salontyp filtern"
+    "filterLabel": "Nach Salontyp filtern",
+    "priceLine": "für eine Website mit bis zu {pages} Seiten"
   }
 }

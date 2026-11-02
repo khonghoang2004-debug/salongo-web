@@ -4,7 +4,7 @@ import { ArrowDown, Check } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { PageShell } from "@/components/PageShell";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { CustomIdeaNote, HostingNote, OfferPrice, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
+import { CustomIdeaNote, OfferPrice, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ locale, path: "/website", title: t("websiteTitle", offerVars()), description: t("websiteDesc", offerVars()) });
 }
 
-const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6", "inc7"] as const;
+const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"] as const;
 const STEPS = [1, 2, 3] as const;
 const FAQ = [1, 6, 2, 3, 4, 5] as const;
 
@@ -49,10 +49,7 @@ export default async function WebsitePage({ params }: Props) {
                 {t("ctaContact")}
               </a>
             </div>
-            <div className="mt-6 max-w-xl">
-              <HostingNote />
-            </div>
-              <CustomIdeaNote className="mt-4 max-w-xl" />
+              <CustomIdeaNote className="mt-6 max-w-xl" />
           </div>
         </div>
       </section>

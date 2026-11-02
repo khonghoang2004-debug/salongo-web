@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowRight, Check, Info, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WEBSITE_MAX_PAGES, WEBSITE_PRICE_KC, formatKc } from "@/lib/website-offer";
 import { CATEGORY, TEMPLATES } from "./templates/registry";
@@ -10,37 +10,16 @@ import { ChooseTemplateButton } from "./WebsiteContact";
 
 export const offerVars = () => ({ price: formatKc(WEBSITE_PRICE_KC), pages: WEBSITE_MAX_PAGES });
 
-/** Giá nổi bật: "999 Kč · một lần" + "Website tối đa 5 trang" ngay cạnh */
+/** Giá nổi bật trên một dòng: "999 Kč cho 1 website tối đa 5 trang" */
 export async function OfferPrice({ light = false }: { light?: boolean }) {
   const t = await getTranslations("webOffer");
   const v = offerVars();
   return (
-    <div className="flex flex-wrap items-end gap-x-5 gap-y-2">
-      <p className="flex items-baseline gap-2">
-        <span className={`font-display text-[2.75rem] font-semibold leading-none tracking-[-0.04em] sm:text-[3.5rem] ${light ? "text-white" : "text-brand-700"}`}>
-          {v.price}
-        </span>
-        <span className={`text-base font-semibold ${light ? "text-white/85" : "text-ink"}`}>{t("priceOnce")}</span>
-      </p>
-      <p
-        className={`mb-1 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold ${
-          light ? "bg-white/10 text-white ring-1 ring-white/25" : "bg-brand-50 text-brand-800 ring-1 ring-brand-100"
-        }`}
-      >
-        <Check className="size-4" strokeWidth={2.5} aria-hidden />
-        {t("pagesNote", v)}
-      </p>
-    </div>
-  );
-}
-
-/** Ghi chú hosting: chữ thường, đủ tương phản, không ẩn trong tooltip */
-export async function HostingNote({ light = false }: { light?: boolean }) {
-  const t = await getTranslations("webOffer");
-  return (
-    <p className={`flex items-start gap-2 text-[15px] leading-relaxed ${light ? "text-white/90" : "text-ink/80"}`}>
-      <Info className={`mt-0.5 size-[18px] shrink-0 ${light ? "text-white" : "text-brand-700"}`} aria-hidden />
-      {t("hosting")}
+    <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+      <span className={`whitespace-nowrap font-display text-[2.75rem] font-semibold leading-none tracking-[-0.04em] sm:text-[3.5rem] ${light ? "text-white" : "text-brand-700"}`}>
+        {v.price}
+      </span>
+      <span className={`text-lg font-semibold sm:text-xl ${light ? "text-white/90" : "text-ink"}`}>{t("priceLine", v)}</span>
     </p>
   );
 }

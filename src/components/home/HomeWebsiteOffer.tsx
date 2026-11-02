@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { TEMPLATES } from "../website/templates/registry";
 import { tr } from "../website/templates/types";
 import { PREVIEW_TINT, previewSrc } from "../website/TemplatePreview";
-import { CustomIdeaNote, HostingNote, OfferPrice, offerVars } from "../website/WebsiteOfferParts";
+import { CustomIdeaNote, OfferPrice, offerVars } from "../website/WebsiteOfferParts";
 
 // 8 mẫu tuyển chọn trên trang chủ (đủ loại salon, bố cục khác nhau); thư viện /website có đủ tất cả
 const HOME_PICKS = ["marelle-nails", "hugo-hair", "onyx-spa", "iris-lash", "kora-skin", "nova-studio", "lumen-hair", "brass-barber"];
@@ -42,10 +42,7 @@ export async function HomeWebsiteOffer() {
                   {t("ctaContact")}
                 </Link>
               </div>
-              <div className="mt-6">
-                <HostingNote />
-              </div>
-              <CustomIdeaNote className="mt-4 max-w-xl" />
+              <CustomIdeaNote className="mt-6 max-w-xl" />
             </div>
 
             {/* Phối cảnh máy tính + điện thoại, ảnh chụp từ chính các demo */}

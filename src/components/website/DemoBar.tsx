@@ -8,7 +8,7 @@ import { ChooseTemplateButton } from "./WebsiteContact";
 export async function DemoBar({ name, type }: { name: string; type: string }) {
   const t = await getTranslations("webOffer");
   return (
-    <div data-demobar className="border-b border-white/10 bg-[#2A1219] text-white">
+    <div data-demobar className="relative z-50 border-b border-white/10 bg-[#2A1219] text-white">
       <div className="mx-auto flex min-h-14 max-w-[1280px] items-center gap-2 px-3 py-2 sm:gap-3 sm:px-6">
         <Link
           href="/website"

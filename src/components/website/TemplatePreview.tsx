@@ -1,7 +1,8 @@
 import { Lock } from "lucide-react";
 
-/** Ảnh chụp từ chính demo, theo từng ngôn ngữ (cách chụp lại: docs/website-templates/README.md): 1200×750 (PC), 780×1520 (điện thoại) */
-export const previewSrc = (slug: string, kind: "pc" | "m", locale: string) => `/images/website/${slug}-${kind}-${locale}.webp`;
+/** Ảnh chụp từ chính demo (nội dung demo luôn tiếng Séc, cách chụp lại: docs/website-templates/README.md): 1200×750 (PC), 780×1520 (điện thoại) */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const previewSrc = (slug: string, kind: "pc" | "m", _locale?: string) => `/images/website/${slug}-${kind}.webp`;
 
 // Ảnh xem trước một mẫu: khung trình duyệt (PC) + khung điện thoại đè góc phải
 export function TemplatePreview({

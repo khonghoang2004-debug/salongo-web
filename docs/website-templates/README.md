@@ -33,6 +33,10 @@ Mẫu (font riêng trong `sites/shared.tsx`):
 7 mẫu cuối dùng chung khung `sites/ThemedSite.tsx` (bảng màu, font, bo góc, kiểu đầu trang trong `THEMES`); nội dung lấy từ mẫu cùng ngành trong `content/vivid.ts`, đổi tên thương hiệu, câu đầu trang, tên thợ và liên hệ. Bộ lọc loại salon ở thư viện: `CATEGORY` trong `templates/registry.ts`. Trang chủ chỉ hiện 8 mẫu tuyển chọn (`HOME_PICKS` trong `HomeWebsiteOffer.tsx`).
 Trang trong mỗi mẫu: `""` trang chủ, `dich-vu`, `gioi-thieu`, `bo-suu-tap`, `dat-lich`.
 
+## Ngôn ngữ
+
+Nội dung các website mẫu **luôn bằng tiếng Séc** (`DEMO_LOCALE` trong trang demo), vì khách của salon ở Séc; thanh SalonGo phía trên, thư viện và trang chủ theo ngôn ngữ trang. File nội dung vẫn giữ đủ 4 ngôn ngữ, đổi `DEMO_LOCALE` nếu cần.
+
 ## Sửa thường gặp
 
 - **Giá / số trang của ưu đãi**: `src/lib/website-offer.ts` (`WEBSITE_PRICE_KC`, `WEBSITE_MAX_PAGES`). Mọi câu chữ dùng `{price}` / `{pages}` nên chỉ cần đổi ở đây. Không có thông tin VAT, đừng thêm "đã/chưa gồm VAT" khi chưa xác nhận.
@@ -47,7 +51,7 @@ Trang trong mỗi mẫu: `""` trang chủ, `dich-vu`, `gioi-thieu`, `bo-suu-tap`
 
 - Ảnh trong demo hiện là **hình minh hoạ vẽ bằng SVG** (`templates/Art.tsx`), không lấy ảnh của salon thật hay ảnh trên mạng.
 - Muốn dùng ảnh thật (ảnh có bản quyền phù hợp hoặc ảnh tạo mới): chép file vào `public/images/website/demo/…` rồi điền `photo: "/images/website/demo/…"` vào mục tương ứng trong file nội dung (hero, gallery, team). Ghi nguồn/giấy phép vào file này.
-- **Ảnh xem trước trong thư viện / trang chủ** (`public/images/website/{mẫu}-{pc|m}-{locale}.webp`) được chụp từ chính demo. Chụp lại sau khi sửa mẫu:
+- **Ảnh xem trước trong thư viện / trang chủ** (`public/images/website/{mẫu}-{pc|m}.webp`, tiếng Séc) được chụp từ chính demo. Chụp lại sau khi sửa mẫu:
 
 ```bash
 npm i -D --no-save playwright && npx playwright install chromium   # một lần

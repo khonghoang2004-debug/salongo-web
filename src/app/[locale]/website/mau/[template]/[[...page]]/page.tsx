@@ -7,6 +7,8 @@ import { TEMPLATES, getTemplate } from "@/components/website/templates/registry"
 import { DEMO_PAGES, tr, type DemoPage } from "@/components/website/templates/types";
 import { SITES } from "@/components/website/sites";
 
+const DEMO_LOCALE = "cs";
+
 type Props = { params: Promise<{ locale: string; template: string; page?: string[] }> };
 
 // 4 mẫu × 5 trang × 4 ngôn ngữ, dựng tĩnh
@@ -31,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r) return {};
   const w = await getTranslations({ locale, namespace: "webOffer" });
   const type = tr(r.t.card.type, locale);
-  const pageName = r.p ? ` · ${tr(r.t.nav[r.p], locale)}` : "";
+  const pageName = r.p ? ` · ${tr(r.t.nav[r.p], DEMO_LOCALE)}` : "";
   return {
     title: { absolute: `${w("demoTitle", { name: r.t.name, type })}${pageName}` },
     description: w("demoDesc", { type }),
@@ -48,7 +50,10 @@ export default async function DemoPage({ params }: Props) {
   return (
     <>
       <DemoBar name={r.t.name} type={tr(r.t.card.type, locale)} />
-      <Site t={r.t} page={r.p} locale={locale} />
+      {/* Nội dung website mẫu luôn bằng tiếng Séc (khách của salon ở Séc); thanh SalonGo theo ngôn ngữ trang */}
+      <div lang={DEMO_LOCALE}>
+        <Site t={r.t} page={r.p} locale={DEMO_LOCALE} />
+      </div>
     </>
   );
 }

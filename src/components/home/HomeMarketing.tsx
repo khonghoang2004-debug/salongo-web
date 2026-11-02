@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, Cake, Check, Eye, Languages, MailCheck, Megaphone } from "lucide-react";
+import { ArrowRight, Cake, Eye, Languages, MailCheck, Megaphone } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PhoneShot } from "../ui/AppShot";
 import { VideoModalButton } from "../video/VideoModalButton";
@@ -112,10 +112,6 @@ export async function HomeMarketing() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 flex items-start gap-2 text-sm text-white/75">
-                <Check className="mt-0.5 size-4 shrink-0" aria-hidden />
-                {h("mkNote")}
-              </p>
             </div>
           </div>
         </div>

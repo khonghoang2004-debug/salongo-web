@@ -6,5 +6,5 @@ export const siteConfig = {
   /** Domain chính — dùng cho metadataBase, Open Graph (Google lấy thumbnail) */
   url: "https://www.salongo.eu",
   /** Ảnh OG cho chia sẻ & kết quả tìm kiếm - 1200x630 pixels */
-  ogImage: "/images/og-image-v2.png",
+  ogImage: "/images/og-image-v3.png",
 };

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowDown, Check } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
 import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
 import { TEMPLATES } from "@/components/website/templates/registry";
 import { PageShell } from "@/components/PageShell";
-import { SectionHead } from "@/components/ui/SectionHead";
-import { CustomIdeaNote, OfferPrice, SplitTitle, TemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
+import { AtelierTemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
+import { previewSrc } from "@/components/website/TemplatePreview";
+import { fontAtelier } from "@/components/website/atelier";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -83,109 +84,184 @@ export default async function WebsitePage({ params }: Props) {
     ],
   };
 
+  const serif = fontAtelier.className;
+  const wrap = "mx-auto w-full max-w-[1200px] px-5 sm:px-8";
+  const Kicker = ({ n, children, light = false }: { n: string; children: React.ReactNode; light?: boolean }) => (
+    <p className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.2em] ${light ? "text-[#C9BBA6]" : "text-[#7A6347]"}`}>
+      <span className="whitespace-nowrap tabular-nums">{n}</span>
+      <span className={`h-px w-8 ${light ? "bg-[#C9BBA6]/60" : "bg-[#7A6347]/50"}`} aria-hidden />
+      {children}
+    </p>
+  );
+  const [h1a, h1b] = t("heroTitle").split("|");
+  const btnDark =
+    "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#1F1C19] px-7 text-[15px] font-semibold text-[#F4F1EB] transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
+  const btnLine =
+    "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#1C1A17]/25 px-7 text-[15px] font-semibold text-[#1C1A17] transition-colors hover:border-[#1C1A17] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
+  const stats = [
+    [t("stat1", { count: TEMPLATES.length }), t("stat1Text")],
+    [t("stat2", v), t("stat2Text")],
+    [t("stat3"), t("stat3Text")],
+  ];
+
   return (
     <PageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className="pt-1.5 sm:pt-3">
-        <div className="sg-panel">
-          <div className="mx-auto max-w-[1160px] px-4 py-10 sm:px-8 sm:py-14 lg:py-16">
-            <span className="sg-eyebrow">
-              <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
-              {t("eyebrow")}
-            </span>
-            <h1 className="sg-h1 mt-5 max-w-4xl"><SplitTitle text={t("heroTitle")} /></h1>
-            <p className="sg-lead mt-5 max-w-2xl">{t("heroLead", v)}</p>
-            <div className="mt-7">
-              <OfferPrice />
+      <div className="bg-[#FBFAF7] text-[#1C1A17]">
+        {/* Đầu trang: chữ có chân kiểu tạp chí + bố cục ảnh mẫu thật */}
+        <section className="px-1.5 pt-1.5 sm:px-3 sm:pt-3 lg:px-4">
+          <div className="overflow-hidden rounded-[20px] bg-[#F4F1EB] sm:rounded-[32px]">
+            <div className={`${wrap} grid gap-14 pb-14 pt-12 sm:pt-16 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-20 lg:pt-20`}>
+              <div className="lg:col-span-6">
+                <Kicker n={t("studio")}>{t("eyebrow")}</Kicker>
+                <h1 className={`${serif} mt-6 text-[3rem] font-medium leading-[0.98] tracking-[-0.01em] sm:text-[4.25rem] lg:text-[5rem]`}>
+                  <span className="block">{h1a}</span> {h1b && <span className="block italic text-[#7A6347]">{h1b}</span>}
+                </h1>
+                <div className="mt-8 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-5">
+                  <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
+                  <p className={`${serif} whitespace-nowrap text-[3.5rem] font-medium leading-[0.9] sm:text-[4.25rem]`}>{v.price}</p>
+                  <p className="pb-1.5 text-[16px] font-medium leading-snug text-[#3A3631]">
+                    {t("priceLine", v)}
+                    <span className="block text-[14px] font-normal text-[#6B645B]">{t("heroLead")}</span>
+                  </p>
+                </div>
+                <div className="mt-8 flex flex-col gap-2.5 sm:flex-row">
+                  <a href="#mau" className={btnDark}>
+                    {t("ctaTemplates")}
+                    <ArrowDown className="size-[18px]" aria-hidden />
+                  </a>
+                  <a href="#lien-he" className={btnLine}>
+                    {t("ctaContact")}
+                  </a>
+                </div>
+                <p className="mt-8 max-w-xl border-l border-[#7A6347]/50 pl-5 text-[15px] leading-relaxed text-[#3A3631]">
+                  <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("customIdeaLabel")}</span>
+                  {t("customIdea", v)}
+                </p>
+              </div>
+              <div className="relative mx-auto w-full max-w-[620px] pb-8 pl-6 pt-6 sm:pl-10 lg:col-span-6 lg:max-w-none" aria-hidden>
+                <div className="overflow-hidden rounded-[8px] bg-white shadow-[0_30px_60px_-20px_rgba(40,32,24,0.35)] ring-1 ring-black/5">
+                  <div className="flex gap-1.5 border-b border-black/5 bg-[#F7F5F1] px-3 py-2">
+                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
+                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
+                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
+                  </div>
+                  <img src={previewSrc("aurel-beauty", "pc")} alt="" width={1200} height={750} className="block aspect-[16/10] w-full object-cover object-top" />
+                </div>
+                <div className="absolute bottom-0 left-0 w-[30%] rounded-[20px] bg-[#1F1C19] p-1.5 shadow-[0_24px_50px_-16px_rgba(40,32,24,0.45)]">
+                  <img src={previewSrc("atelier-noir", "m")} alt="" width={390} height={760} className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
+                </div>
+                <div className="absolute -right-1 top-0 hidden w-[24%] rounded-[18px] bg-[#1F1C19] p-1.5 shadow-[0_24px_50px_-16px_rgba(40,32,24,0.45)] sm:block">
+                  <img src={previewSrc("thermae-wellness", "m")} alt="" width={390} height={760} className="block aspect-[390/760] w-full rounded-[13px] object-cover object-top" />
+                </div>
+              </div>
             </div>
-            <div className="mt-7 flex flex-col gap-2.5 sm:flex-row">
-              <a href="#mau" className="btn-primary min-h-12 px-7 text-base">
-                {t("ctaTemplates")}
-                <ArrowDown className="size-[18px]" aria-hidden />
-              </a>
-              <a href="#lien-he" className="btn-secondary min-h-12 px-7 text-base">
-                {t("ctaContact")}
-              </a>
+            <ul className={`${wrap} grid border-t border-[#DCD5CA] sm:grid-cols-3`}>
+              {stats.map(([a, b], i) => (
+                <li key={i} className={`py-6 sm:py-8 ${i ? "border-t border-[#DCD5CA] sm:border-l sm:border-t-0 sm:pl-8" : ""}`}>
+                  <p className={`${serif} text-[2rem] font-medium leading-none`}>{a}</p>
+                  <p className="mt-2 text-[14px] text-[#6B645B]">{b}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Thư viện mẫu */}
+        <section id="mau" className="scroll-mt-20 py-16 sm:py-20 lg:py-28">
+          <div className={wrap}>
+            <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+              <div className="lg:col-span-8">
+                <Kicker n="01">{t("galleryKicker")}</Kicker>
+                <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] sm:text-[3.25rem] lg:text-[4rem]`}>{t("galleryTitle")}</h2>
+              </div>
+              <p className="text-[16px] leading-relaxed text-[#6B645B] lg:col-span-4">{t("galleryLead", v)}</p>
             </div>
-              <CustomIdeaNote className="mt-6 max-w-xl" />
-          </div>
-        </div>
-      </section>
-
-      <section id="mau" className="sg-section scroll-mt-20">
-        <div className="sg-container">
-          <SectionHead kicker={t("galleryKicker")} title={t("galleryTitle")} lead={t("galleryLead", v)} />
-          <div className="mt-8 lg:mt-12">
-            <TemplateCards headingLevel="h3" />
-          </div>
-        </div>
-      </section>
-
-      <section className="sg-section sg-section-tint">
-        <div className="sg-container grid gap-10 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-5">
-            <p className="sg-kicker">{t("incKicker")}</p>
-            <h2 className="sg-h2 mt-4">{t("incTitle", v)}</h2>
-          </div>
-          <ul className="grid gap-3 lg:col-span-7">
-            {INCLUDED.map((k) => (
-              <li key={k} className="flex gap-3 rounded-2xl border border-line bg-white px-5 py-4 text-[15px] leading-relaxed text-ink">
-                <Check className="mt-0.5 size-5 shrink-0 text-brand-700" strokeWidth={2.5} aria-hidden />
-                {t(k, v)}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="sg-section">
-        <div className="sg-container">
-          <SectionHead kicker={t("stepsKicker")} title={t("stepsTitle")} layout="stack" />
-          <ol className="mt-8 grid gap-4 md:grid-cols-3">
-            {STEPS.map((n) => (
-              <li key={n} className="rounded-[24px] border border-line bg-white p-6 sm:p-7">
-                <span className="flex size-10 items-center justify-center rounded-full bg-brand-50 font-display font-semibold text-brand-700">{n}</span>
-                <h3 className="mt-5 text-lg font-semibold text-ink">{t(`step${n}Title`)}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted">{t(`step${n}Text`)}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="sg-section pt-0 sm:pt-0 lg:pt-0">
-        <div className="sg-container grid gap-10 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-4">
-            <p className="sg-kicker">{t("faqKicker")}</p>
-            <h2 className="sg-h2-sm mt-4">{t("faqTitle")}</h2>
-          </div>
-          <div className="divide-y divide-line rounded-[24px] border border-line bg-white lg:col-span-8">
-            {FAQ.map((n) => (
-              <details key={n} className="group px-5 sm:px-7" open={n === 1}>
-                <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-[16px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
-                  {t(`faq${n}Q`, v)}
-                  <span className="text-xl font-normal text-brand-700 transition-transform group-open:rotate-45" aria-hidden>
-                    +
-                  </span>
-                </summary>
-                <p className="pb-5 text-[15px] leading-relaxed text-muted">{t(`faq${n}A`, v)}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="lien-he" className="sg-section scroll-mt-20 pt-0 sm:pt-0 lg:pt-0">
-        <div className="sg-container">
-          <div className="mx-auto max-w-3xl rounded-[28px] border border-line bg-[#FBF7F7] px-5 py-10 text-center sm:px-10 sm:py-14">
-            <h2 className="sg-h2-sm">{t("contactNow")}</h2>
-            <CustomIdeaNote className="mx-auto mt-5 max-w-xl justify-center text-left" />
-            <div className="mt-7 text-left">
-              <WebsiteContactPanel />
+            <div className="mt-10 lg:mt-14">
+              <AtelierTemplateCards />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Gói gồm những gì: khối espresso */}
+        <section className="px-1.5 sm:px-3 lg:px-4">
+          <div className="rounded-[20px] bg-[#1F1C19] text-[#EFEAE2] sm:rounded-[32px]">
+            <div className={`${wrap} grid gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-24`}>
+              <div className="lg:col-span-5">
+                <Kicker n="02" light>
+                  {t("incKicker")}
+                </Kicker>
+                <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.04] sm:text-[3.25rem]`}>{t("incTitle", v)}</h2>
+              </div>
+              <ol className="lg:col-span-7">
+                {INCLUDED.map((k, i) => (
+                  <li key={k} className="grid grid-cols-[44px_1fr] gap-x-3 border-t border-white/12 py-5 text-[16px] leading-relaxed last:border-b">
+                    <span className={`${serif} text-[1.375rem] italic leading-snug text-[#C9BBA6]`}>{String(i + 1).padStart(2, "0")}</span>
+                    <span>{t(k, v)}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Ba bước */}
+        <section className="py-16 sm:py-20 lg:py-28">
+          <div className={wrap}>
+            <Kicker n="03">{t("stepsKicker")}</Kicker>
+            <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] sm:text-[3.25rem]`}>{t("stepsTitle")}</h2>
+            <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+              {STEPS.map((n) => (
+                <li key={n} className="border-t border-[#1C1A17] pt-6">
+                  <span className={`${serif} block text-[4rem] font-medium italic leading-none text-[#7A6347]`}>{n}.</span>
+                  <h3 className={`${serif} mt-6 text-[1.75rem] font-medium leading-tight`}>{t(`step${n}Title`)}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#6B645B]">{t(`step${n}Text`)}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* Hỏi đáp */}
+        <section className="pb-16 sm:pb-20 lg:pb-28">
+          <div className={`${wrap} grid gap-10 lg:grid-cols-12 lg:gap-12`}>
+            <div className="lg:col-span-4">
+              <Kicker n="04">{t("faqKicker")}</Kicker>
+              <h2 className={`${serif} mt-5 text-[2.25rem] font-medium leading-[1.05] sm:text-[2.75rem]`}>{t("faqTitle")}</h2>
+            </div>
+            <div className="border-t border-[#DCD5CA] lg:col-span-8">
+              {FAQ.map((n) => (
+                <details key={n} className="group border-b border-[#DCD5CA]" open={n === 1}>
+                  <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 [&::-webkit-details-marker]:hidden">
+                    <span className={`${serif} text-[1.5rem] font-medium leading-snug`}>{t(`faq${n}Q`, v)}</span>
+                    <span
+                      className="flex size-10 shrink-0 items-center justify-center rounded-full border border-[#DCD5CA] text-xl text-[#1C1A17] transition-transform group-open:rotate-45 motion-reduce:transition-none"
+                      aria-hidden
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="max-w-2xl pb-6 text-[16px] leading-relaxed text-[#6B645B]">{t(`faq${n}A`, v)}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Liên hệ */}
+        <section id="lien-he" className="scroll-mt-20 px-1.5 pb-10 sm:px-3 sm:pb-14 lg:px-4">
+          <div className="rounded-[20px] bg-[#E9E4DB] sm:rounded-[32px]">
+            <div className="mx-auto max-w-[880px] px-5 py-14 text-center sm:px-8 sm:py-20">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("contactKicker")}</p>
+              <h2 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.04] sm:text-[3.5rem]`}>{t("contactNow")}</h2>
+              <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-[#3A3631]">{t("customIdea", v)}</p>
+              <div className="mt-9 text-left">
+                <WebsiteContactPanel tone="atelier" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </PageShell>
   );
 }

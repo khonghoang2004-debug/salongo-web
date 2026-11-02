@@ -1174,6 +1174,14 @@
     "filterLabel": "Filtrovat podle typu salonu",
     "priceLine": "za web až o {pages} stránkách",
     "customIdeaLabel": "Vlastní nápad",
-    "breadcrumb": "Tvorba webu pro salon"
+    "breadcrumb": "Tvorba webu pro salon",
+    "stat1": "{count} šablon",
+    "stat1Text": "Nehty, vlasy, spa, řasy, make-up, barber",
+    "stat2": "{pages} stránek",
+    "stat2Text": "Úvod, ceník, o nás, galerie, kontakt",
+    "stat3": "PC i mobil",
+    "stat3Text": "Skvěle vypadá na každé obrazovce",
+    "studio": "SalonGo Web Studio",
+    "priceLabel": "Cena návrhu"
   }
 }

@@ -1173,6 +1173,14 @@
     "filterLabel": "Filter by salon type",
     "priceLine": "for one website with up to {pages} pages",
     "customIdeaLabel": "Your own idea",
-    "breadcrumb": "Salon website design"
+    "breadcrumb": "Salon website design",
+    "stat1": "{count} templates",
+    "stat1Text": "Nail, hair, spa, lash, makeup, barber",
+    "stat2": "{pages} pages",
+    "stat2Text": "Home, prices, about, gallery, contact",
+    "stat3": "Desktop & mobile",
+    "stat3Text": "Looks great on every screen",
+    "studio": "SalonGo Web Studio",
+    "priceLabel": "Design fee"
   }
 }

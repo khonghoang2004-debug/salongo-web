@@ -1174,6 +1174,14 @@
     "filterLabel": "Lọc theo loại salon",
     "priceLine": "cho 1 website tối đa {pages} trang",
     "customIdeaLabel": "Ý tưởng riêng",
-    "breadcrumb": "Làm website salon"
+    "breadcrumb": "Làm website salon",
+    "stat1": "{count} mẫu",
+    "stat1Text": "Nail, tóc, spa, mi, makeup, barber",
+    "stat2": "{pages} trang",
+    "stat2Text": "Trang chủ, bảng giá, giới thiệu, ảnh, liên hệ",
+    "stat3": "PC & điện thoại",
+    "stat3Text": "Đẹp trên mọi màn hình",
+    "studio": "SalonGo Web Studio",
+    "priceLabel": "Phí thiết kế"
   }
 }

@@ -1173,6 +1173,14 @@
     "filterLabel": "Nach Salontyp filtern",
     "priceLine": "für eine Website mit bis zu {pages} Seiten",
     "customIdeaLabel": "Eigene Idee",
-    "breadcrumb": "Salon-Website"
+    "breadcrumb": "Salon-Website",
+    "stat1": "{count} Vorlagen",
+    "stat1Text": "Nägel, Haare, Spa, Wimpern, Make-up, Barber",
+    "stat2": "{pages} Seiten",
+    "stat2Text": "Start, Preise, Über uns, Galerie, Kontakt",
+    "stat3": "Desktop & Handy",
+    "stat3Text": "Sieht auf jedem Bildschirm gut aus",
+    "studio": "SalonGo Web Studio",
+    "priceLabel": "Designpreis"
   }
 }

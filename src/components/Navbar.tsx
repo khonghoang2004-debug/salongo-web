@@ -121,7 +121,7 @@ export function Navbar() {
 
         {/* Menu chính: nhóm link trong một khung bo tròn */}
         <nav
-          className="hidden items-center gap-0.5 rounded-lg border border-line bg-[#FBF7F7] p-1 lg:flex"
+          className="hidden items-center gap-0.5 rounded-lg border border-line bg-white p-1 lg:flex"
           aria-label="Main"
         >
           {menuItems.map((item) => {

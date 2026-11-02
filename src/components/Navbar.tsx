@@ -135,7 +135,7 @@ export function Navbar() {
                   item.href === "/" ? "hidden 2xl:inline-block" : ""
                 } ${
                   active
-                    ? "bg-white text-brand-700 shadow-[0_0_0_1px_#ECE6E7]"
+                    ? "bg-white text-brand-700 shadow-[inset_0_0_0_1.5px_#800020]"
                     : "text-ink/70 hover:text-ink"
                 }`}
               >

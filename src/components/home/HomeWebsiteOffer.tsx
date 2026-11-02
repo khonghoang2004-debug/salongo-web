@@ -33,7 +33,6 @@ export async function HomeWebsiteOffer() {
               <h2 id="web-offer-title" className={`${serif} mt-5 text-[2.25rem] font-medium leading-[1.04] tracking-[-0.025em] sm:text-[2.75rem] lg:text-[2.25rem] xl:text-[2.875rem]`}>
                 <span className="block">{ha}</span> {hb && <span className="block italic text-brand-700 sm:whitespace-nowrap">{hb}</span>}
               </h2>
-              <p className="mt-4 max-w-md text-[16px] leading-relaxed text-[#6B645B]">{t("lead")}</p>
               <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
                 <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
                 <p className={`${serif} whitespace-nowrap text-[2.75rem] font-medium leading-[0.9] tracking-[-0.02em] sm:text-[3.25rem]`}>{v.price}</p>

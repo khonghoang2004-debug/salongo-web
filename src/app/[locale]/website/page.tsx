@@ -108,7 +108,7 @@ export default async function WebsitePage({ params }: Props) {
           <div className="overflow-hidden rounded-[20px] bg-[#F4F1EB] sm:rounded-[32px]">
             <div className={`${wrap} grid gap-8 pb-8 pt-8 sm:pt-10 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-10 lg:pt-10`}>
               <div className="lg:col-span-7">
-                <Kicker n={t("studio")}>{t("eyebrow")}</Kicker>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("studio")}</p>
                 <h1 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] text-balance sm:text-[3.5rem] lg:text-[3.75rem]`}>
                   <span className="block">{h1a}</span> {h1b && <span className="block italic text-brand-700">{h1b}</span>}
                 </h1>

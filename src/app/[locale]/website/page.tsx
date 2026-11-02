@@ -167,7 +167,6 @@ export default async function WebsitePage({ params }: Props) {
                 <Kicker n="01">{t("galleryKicker")}</Kicker>
                 <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem] lg:text-[3rem]`}>{t("galleryTitle")}</h2>
               </div>
-              <p className="text-[16px] leading-relaxed text-[#6B645B] lg:col-span-4">{t("galleryLead", v)}</p>
             </div>
             <div className="mt-8 lg:mt-10">
               <AtelierTemplateCards />

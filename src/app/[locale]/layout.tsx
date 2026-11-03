@@ -36,6 +36,8 @@ const metadataMap = {
   de: (deMessages as { metadata: { description: string; keywords: string[] } }).metadata,
 } as const;
 
+const CLIENT_NAMESPACES = ["nav", "device", "faq", "contact", "pricingPage", "webOffer"] as const;
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -113,7 +115,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
   setRequestLocale(locale);
 
-  const messages = await getMessages();
+  // Chỉ gửi xuống trình duyệt các nhóm chữ mà component "use client" dùng (useTranslations) — trước đây
+  // cả file ngôn ngữ (~70 KB) bị nhúng vào mọi trang. Thêm client component dùng nhóm mới thì thêm vào đây.
+  const all = await getMessages();
+  const messages = Object.fromEntries(CLIENT_NAMESPACES.filter((k) => k in all).map((k) => [k, all[k]]));
 
   return (
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>

@@ -28,7 +28,11 @@ export async function GET(_req: Request, { params }: { params: Promise<{ os: str
 
   try {
     const res = await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=30`, {
-      headers: { Accept: "application/vnd.github+json" },
+      // GITHUB_TOKEN (tuỳ chọn, biến môi trường trên Vercel): nâng giới hạn từ 60 lên 5000 lượt/giờ
+      headers: {
+        Accept: "application/vnd.github+json",
+        ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}),
+      },
       next: { revalidate: 300 },
     });
     if (!res.ok) throw new Error(`GitHub ${res.status}`);

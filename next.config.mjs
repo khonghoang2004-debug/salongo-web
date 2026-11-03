@@ -29,6 +29,13 @@ const nextConfig = {
         missing: [{ type: "host", value: PRIMARY_HOST.replace(/\./g, "\\.") }],
         headers: [{ key: "X-Robots-Tag", value: "noindex" }],
       },
+      // Ảnh / video trong /public mặc định "max-age=0, must-revalidate": trình duyệt hỏi lại server mỗi lần xem.
+      // Cho giữ 1 ngày, sau đó vẫn dùng bản cũ thêm 1 tuần trong lúc tải bản mới ở nền.
+      // Thay ảnh mà giữ tên file thì khách quen có thể thấy ảnh cũ tối đa 1 ngày — muốn đổi ngay thì đổi tên (…-v2.webp).
+      ...["/images/:path*", "/videos/:path*"].map((source) => ({
+        source,
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      })),
     ];
   },
   async redirects() {

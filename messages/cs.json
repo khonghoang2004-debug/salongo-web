@@ -254,13 +254,13 @@
     "tagline": "Rozvíjejte svůj salon se SalonGo — komplexní platforma pro moderní salony."
   },
   "pages": {
-    "homeTitle": "Rezervační systém a pokladna pro salony",
-    "homeDesc": "Software pro nehtová studia, kadeřnictví a kosmetické salony: online rezervace, pokladna, mzdy a přehledy tržeb. Česky i vietnamsky. 150 dní zdarma.",
-    "featuresTitle": "Funkce: online rezervace, pokladna, mzdy",
+    "homeTitle": "Rezervační systém a aplikace pro salony: pokladna, mzdy",
+    "homeDesc": "Objednávkový systém a aplikace pro nehtová studia, kadeřnictví a kosmetiku: online rezervace, kalendář, pokladna, mzdy, přehledy tržeb. Česky i vietnamsky. 150 dní zdarma.",
+    "featuresTitle": "Funkce: online rezervace, objednávky, pokladna, mzdy",
     "featuresDesc": "Online rezervace, kalendář podle personálu, pokladna, klienti, e-mailový marketing, přehledy tržeb, mzdy a více poboček v jedné aplikaci pro salony.",
     "solutionsTitle": "Řešení pro nehtová studia a salony",
     "solutionsDesc": "Žádné dvojité rezervace, chyby ve mzdách ani ztráty na pokladně: jak SalonGo pomáhá nehtovým studiím a salonům v Česku a v Evropě.",
-    "pricingTitle": "Ceník rezervačního systému pro salony",
+    "pricingTitle": "Ceník rezervačního systému a aplikace pro salony",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 Kč/měsíc, ročně o 10 % levněji. Každý tarif má všechny funkce. 150 dní zdarma, prodloužení přímo v aplikaci.",
     "aboutTitle": "O SalonGo",
     "aboutDesc": "SalonGo je software pro správu salonů, vytvořený pro nehtová studia, kadeřnictví a kosmetické salony vietnamských majitelů v Evropě.",
@@ -827,8 +827,11 @@
     "description": "SalonGo – aplikace pro salony: kalendář, online rezervace, pokladna, mzdy a přehled tržeb.",
     "keywords": [
       "rezervační systém pro salon",
-      "software pro kosmetický salon",
+      "objednávkový systém pro salon",
+      "aplikace pro salon",
+      "rezervační aplikace",
       "aplikace pro nehtové studio",
+      "software pro kosmetický salon",
       "pokladna pro salon",
       "online rezervace salon",
       "mzdy v salonu",
@@ -991,6 +994,19 @@
         }
       },
       {
+        "h": "Pokladna na recepci a automatické účty",
+        "p": "Vyberte službu, zaměstnance a způsob platby a účet je hotový. Každá platba se hned propíše do přehledů tržeb, nic nezadáváte dvakrát:",
+        "points": [
+          "Hotovost, karta, převod: zaznamenáte, jak klient platil, a na konci dne vše sedí.",
+          "Každá platba vytvoří účet, který snadno dohledáte.",
+          "Spropitné se zapíše na doklad a rozdělí podle volby majitele."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "Pokladna"
+        }
+      },
+      {
         "h": "Jasné mzdy a dělení spropitného",
         "p": "Každý zaměstnanec má jeden způsob odměny: procento z vlastních tržeb (případně pro každou službu jiné) nebo pevnou měsíční mzdu. Spropitné se zapíše na doklad; majitel zvolí, zda ho dostane ten, komu ho klient dal, nebo se rozdělí rovným dílem. Na konci měsíce stačí otevřít mzdy a exportovat.",
         "link": {
@@ -1035,6 +1051,10 @@
     ],
     "faqTitle": "Otázky k rezervačnímu systému pro salony",
     "faq": [
+      {
+        "q": "Existuje aplikace, která zvládne objednávky, pokladnu i mzdy?",
+        "a": "Ano. SalonGo je jedna aplikace na všechno: klienti se objednávají online přes vlastní odkaz salonu, kalendář je rozdělený podle personálu, na recepci zaúčtujete platbu se spropitným a na konci měsíce se mzdy spočítají samy (procentem nebo pevnou mzdou). Funguje v telefonu, tabletu i počítači, česky i vietnamsky, 150 dní zdarma."
+      },
       {
         "q": "Jaký rezervační systém se hodí pro nehtové studio?",
         "a": "SalonGo je určen pro nehtová studia a salony v Evropě, hlavně s vietnamskými majiteli: aplikace je česky i vietnamsky, klienti se objednávají v šesti jazycích, ceny jsou v Kč a podpora mluví česky a vietnamsky."

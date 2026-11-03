@@ -254,13 +254,13 @@
     "tagline": "Grow your business with SalonGo — the all-in-one SaaS platform for modern teams."
   },
   "pages": {
-    "homeTitle": "Salon & nail salon management software",
+    "homeTitle": "Salon management app: booking, checkout, payroll",
     "homeDesc": "Software for nail, hair, lash and beauty salons in Europe: online booking, checkout, payroll and revenue reports, in Vietnamese and Czech. 150-day free trial.",
-    "featuresTitle": "Features: online booking, checkout, payroll",
+    "featuresTitle": "Salon booking app, appointments, checkout, payroll",
     "featuresDesc": "Online booking, staff calendar, checkout, clients, email marketing, revenue reports, payroll and multiple locations in one salon management app.",
     "solutionsTitle": "Solutions for nail and beauty salons",
     "solutionsDesc": "No double bookings, payroll mistakes or cash losses: how SalonGo helps Vietnamese-run nail and beauty salons in Europe run smoothly.",
-    "pricingTitle": "Salon software pricing",
+    "pricingTitle": "Salon management app pricing",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 CZK/month, 10% off yearly. Every plan has every feature. 150-day trial, renew right in the app.",
     "aboutTitle": "About SalonGo",
     "aboutDesc": "SalonGo is salon management software built for Vietnamese-run nail, hair, lash and beauty salons in Europe: our mission and roadmap.",
@@ -826,10 +826,12 @@
   "metadata": {
     "description": "SalonGo – salon management app: calendar, online booking, checkout, payroll and revenue reports.",
     "keywords": [
+      "salon management app",
+      "salon booking app",
+      "nail salon app",
+      "salon appointment app",
       "salon management software",
-      "nail salon software",
-      "salon booking software",
-      "salon POS",
+      "salon checkout",
       "salon payroll",
       "SalonGo"
     ]
@@ -990,6 +992,19 @@
         }
       },
       {
+        "h": "Front-desk checkout with automatic invoices",
+        "p": "Pick the service, the staff member and how the customer pays, and the invoice is done. Every payment goes straight into your revenue reports:",
+        "points": [
+          "Cash, card, bank transfer: record how each customer paid, so the till matches at closing.",
+          "Every payment creates an invoice you can look up later.",
+          "Tips are recorded on the invoice and shared the way the owner chooses."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "See checkout"
+        }
+      },
+      {
         "h": "Clear staff pay and tip sharing",
         "p": "Each staff member has one pay type: a percentage of their own revenue (optionally per service) or a fixed monthly salary. Tips are recorded on the invoice; the owner chooses whether each tip goes to the technician the client tipped or all tips are split equally. At month end, open payroll and export.",
         "link": {
@@ -1034,6 +1049,10 @@
     ],
     "faqTitle": "Salon management software questions",
     "faq": [
+      {
+        "q": "Is there one app for appointments, checkout and staff payroll?",
+        "a": "Yes. SalonGo does all of it in one app: customers book online through your salon's own link, the calendar is split by staff member, checkout records payment and tips with an invoice, and payroll is calculated at month end (percentage or fixed salary). It works on phone, tablet and computer, with a 150-day free trial."
+      },
       {
         "q": "Which salon software suits a Vietnamese-run nail salon in Czechia?",
         "a": "SalonGo is made for Vietnamese-run nail and beauty salons in Europe: the app is in Vietnamese, clients book in Czech, Slovak, German, English, French or Vietnamese, prices are in CZK and support speaks Vietnamese and Czech."

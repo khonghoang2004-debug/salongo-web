@@ -254,17 +254,17 @@
     "tagline": "SalonGo — chuẩn mực mới cho vận hành salon"
   },
   "pages": {
-    "homeTitle": "Phần mềm quản lý salon, tiệm nail cho người Việt",
-    "homeDesc": "Phần mềm quản lý tiệm nail, salon tóc, mi, spa của người Việt ở châu Âu: đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử 150 ngày miễn phí.",
-    "featuresTitle": "Tính năng: đặt lịch online, tính tiền, tính lương",
-    "featuresDesc": "Đặt lịch online, lịch hẹn theo thợ, tính tiền, khách hàng, email marketing, báo cáo doanh thu, tính lương và đa chi nhánh trong một app tiếng Việt.",
+    "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính tiền, tính lương",
+    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: nhận lịch hẹn, đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử 150 ngày.",
+    "featuresTitle": "App đặt lịch, nhận lịch hẹn, tính tiền, tính lương thợ",
+    "featuresDesc": "Một app tiếng Việt cho salon: khách đặt lịch online, nhận lịch hẹn theo thợ, tính tiền tại quầy, khách hàng, email marketing, báo cáo, tính lương thợ, đa chi nhánh.",
     "solutionsTitle": "Giải pháp quản lý tiệm nail, salon tóc",
     "solutionsDesc": "Hết trùng lịch, tính sai lương, thất thoát ở quầy: cách SalonGo giúp tiệm nail và salon của người Việt ở châu Âu quản lý gọn từng việc.",
-    "pricingTitle": "Bảng giá phần mềm quản lý salon",
+    "pricingTitle": "Bảng giá app quản lý salon, tiệm nail",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 CZK/tháng, trả theo năm giảm 10%. Gói nào cũng đủ tính năng. Dùng thử 150 ngày, gia hạn ngay trong app.",
     "aboutTitle": "Về SalonGo",
     "aboutDesc": "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. Sứ mệnh và định hướng phát triển.",
-    "faqTitle": "Câu hỏi thường gặp về phần mềm quản lý salon",
+    "faqTitle": "Câu hỏi thường gặp về app quản lý salon",
     "faqDesc": "Giải đáp về SalonGo: dùng thử 150 ngày, giá gói, gia hạn, thanh toán, dùng trên điện thoại, ngôn ngữ, nhiều chi nhánh, tính lương và tip.",
     "contactTitle": "Liên hệ hỗ trợ tiếng Việt, tiếng Séc",
     "contactDesc": "Liên hệ SalonGo qua điện thoại, email, Facebook hoặc WhatsApp. Hỗ trợ bằng tiếng Việt và tiếng Séc, phản hồi trong 24 giờ.",
@@ -826,11 +826,15 @@
   "metadata": {
     "description": "SalonGo – app quản lý salon: lịch hẹn, đặt lịch online, tính tiền, tính lương và báo cáo doanh thu. Đơn giản, bằng tiếng Việt.",
     "keywords": [
+      "app quản lý salon",
+      "app quản lý tiệm nail",
       "phần mềm quản lý salon",
       "phần mềm quản lý tiệm nail",
-      "app quản lý tiệm nail",
+      "app đặt lịch salon",
+      "app nhận lịch hẹn",
+      "app tính tiền tiệm nail",
+      "app tính lương thợ nail",
       "đặt lịch online cho salon",
-      "tính lương thợ nail",
       "quản lý salon ở Séc",
       "SalonGo"
     ]
@@ -983,7 +987,7 @@
         }
       },
       {
-        "h": "Đặt lịch online 24/7, không cần nghe điện thoại",
+        "h": "App đặt lịch online 24/7, tự nhận lịch hẹn",
         "p": "Mỗi salon có một đường link đặt lịch riêng để gắn lên Facebook, Instagram hay Google Maps. Khách người Séc, Đức, Anh đặt bằng ngôn ngữ của họ, còn chủ tiệm duyệt lịch bằng tiếng Việt. Trang đặt lịch chỉ hiện giờ thợ còn trống nên không bị trùng lịch, và khách có email được nhắc tự động 24 giờ và 1 giờ trước giờ hẹn.",
         "link": {
           "href": "/tinh-nang#dat-lich-online",
@@ -991,7 +995,20 @@
         }
       },
       {
-        "h": "Tính lương thợ và chia tip rõ ràng",
+        "h": "App tính tiền tại quầy, hoá đơn tự động",
+        "p": "Chọn dịch vụ, thợ và cách khách trả là xong một hoá đơn. Mọi khoản thu tự vào báo cáo doanh thu, không phải ghi sổ hay nhập lại:",
+        "points": [
+          "Tiền mặt, thẻ, chuyển khoản: ghi đúng cách khách trả, cuối ngày khớp sổ.",
+          "Mỗi lần thu tiền tạo một hoá đơn, tra lại dễ dàng.",
+          "Tip ghi riêng trên hoá đơn, chia cho thợ theo cách chủ salon chọn."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "Xem tính tiền"
+        }
+      },
+      {
+        "h": "App tính lương thợ và chia tip rõ ràng",
         "p": "Mỗi thợ một cách tính: % trên doanh thu cá nhân (có thể đặt % riêng cho từng dịch vụ) hoặc lương cố định theo tháng. Tip được ghi riêng trên hoá đơn; chủ salon chọn khách tip thợ nào thì thợ đó nhận, hoặc gộp lại chia đều cho các thợ. Cuối tháng chỉ cần mở bảng lương và xuất file.",
         "link": {
           "href": "/tinh-nang#tinh-luong",
@@ -1035,6 +1052,10 @@
     ],
     "faqTitle": "Câu hỏi về phần mềm quản lý salon",
     "faq": [
+      {
+        "q": "Có app nào vừa nhận lịch hẹn, vừa tính tiền và tính lương thợ không?",
+        "a": "Có. SalonGo là một app gồm cả: khách tự đặt lịch online qua link riêng của salon, lịch hẹn xếp theo từng thợ, tính tiền tại quầy có hoá đơn và tip, cuối tháng tự tính lương thợ theo % hoặc lương cố định. Dùng trên điện thoại, máy tính bảng và máy tính, bằng tiếng Việt, dùng thử 150 ngày miễn phí."
+      },
       {
         "q": "Phần mềm quản lý salon nào phù hợp với tiệm nail người Việt ở Séc?",
         "a": "SalonGo được làm cho tiệm nail và salon của người Việt ở châu Âu: app bằng tiếng Việt, khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh, Pháp hoặc tiếng Việt, giá tính bằng CZK và hỗ trợ bằng tiếng Việt, tiếng Séc."

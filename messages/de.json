@@ -254,13 +254,13 @@
     "tagline": "Wachsen Sie mit SalonGo — die All-in-One-SaaS-Plattform für moderne Salonteams."
   },
   "pages": {
-    "homeTitle": "Salonsoftware: Terminbuchung, Kasse, Lohn",
+    "homeTitle": "Salon-App: Terminbuchung, Kasse und Lohn",
     "homeDesc": "Software für Nagelstudios, Friseur- und Kosmetiksalons: Online-Terminbuchung, Kasse, Lohnabrechnung und Umsatzberichte, auch auf Vietnamesisch. 150 Tage gratis.",
-    "featuresTitle": "Funktionen: Online-Buchung, Kasse, Lohn",
+    "featuresTitle": "Termin-App, Online-Buchung, Kasse, Lohn",
     "featuresDesc": "Online-Terminbuchung, Kalender pro Mitarbeiter, Kasse, Kunden, E-Mail-Marketing, Umsatzberichte, Lohnabrechnung und mehrere Filialen in einer Salon-App.",
     "solutionsTitle": "Lösungen für Nagelstudios und Salons",
     "solutionsDesc": "Keine Doppelbuchungen, falschen Löhne oder Kassenverluste: wie SalonGo Nagelstudios und Salons in Europa den Alltag erleichtert.",
-    "pricingTitle": "Preise der Salonsoftware",
+    "pricingTitle": "Preise der Salon-App und Salonsoftware",
     "pricingDesc": "Basic 199, Pro 499, Premium 799 CZK/Monat, jährlich 10 % günstiger. Jeder Tarif mit allen Funktionen. 150 Tage testen, direkt in der App verlängern.",
     "aboutTitle": "Über SalonGo",
     "aboutDesc": "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons vietnamesischer Inhaber in Europa: Mission und Entwicklung.",
@@ -826,10 +826,12 @@
   "metadata": {
     "description": "SalonGo – Salon-App: Kalender, Online-Buchung, Kasse, Lohnabrechnung und Umsatzberichte.",
     "keywords": [
+      "Salon App",
       "Salonsoftware",
-      "Terminbuchung Nagelstudio",
+      "Terminbuchung App Salon",
+      "Nagelstudio App",
+      "Online-Terminbuchung Salon",
       "Kassensystem Salon",
-      "Online-Terminbuchung Friseur",
       "Lohnabrechnung Salon",
       "SalonGo"
     ]
@@ -990,6 +992,19 @@
         }
       },
       {
+        "h": "Kasse am Empfang mit automatischen Rechnungen",
+        "p": "Service, Mitarbeiter und Zahlungsart wählen, und die Rechnung ist fertig. Jede Zahlung fließt direkt in die Umsatzberichte:",
+        "points": [
+          "Bar, Karte, Überweisung: erfassen, wie der Kunde zahlt, damit die Kasse am Abend stimmt.",
+          "Jede Zahlung erzeugt eine Rechnung, die Sie später leicht finden.",
+          "Trinkgeld steht auf dem Beleg und wird so geteilt, wie der Inhaber es wählt."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "Kasse ansehen"
+        }
+      },
+      {
         "h": "Klare Löhne und Trinkgeld-Teilung",
         "p": "Jede Mitarbeiterin hat eine Lohnart: Prozent vom eigenen Umsatz (auf Wunsch je Leistung) oder ein festes Monatsgehalt. Trinkgeld steht auf dem Beleg; der Inhaber wählt, ob es die Person bekommt, der der Kunde es gab, oder ob alles gleichmäßig geteilt wird. Am Monatsende die Abrechnung öffnen und exportieren.",
         "link": {
@@ -1034,6 +1049,10 @@
     ],
     "faqTitle": "Fragen zur Salonsoftware",
     "faq": [
+      {
+        "q": "Gibt es eine App für Termine, Kasse und Lohn zugleich?",
+        "a": "Ja. SalonGo erledigt alles in einer App: Kunden buchen online über den eigenen Link des Salons, der Kalender ist nach Mitarbeitern geteilt, an der Kasse werden Zahlung und Trinkgeld mit Rechnung erfasst, und am Monatsende wird der Lohn berechnet (Prozent oder Fixgehalt). Läuft auf Handy, Tablet und Computer, 150 Tage gratis."
+      },
       {
         "q": "Welche Salonsoftware passt zu einem vietnamesischen Nagelstudio?",
         "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in sechs Sprachen, und der Support spricht Vietnamesisch und Tschechisch."

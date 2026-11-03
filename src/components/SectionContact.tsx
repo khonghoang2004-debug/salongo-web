@@ -1,4 +1,5 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { OperatorBox } from "@/components/LegalDocumentPage";
 import { Check, Clock, Mail, MessageCircle, Phone } from "lucide-react";
 import { CopyEmailButton } from "./CopyEmailButton";
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_WHATSAPP } from "@/lib/contact";
@@ -31,6 +32,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export async function SectionContact() {
   const t = await getTranslations("contact");
+  const locale = await getLocale();
   const supports = [t("supportSetup"), t("supportData"), t("supportMultilang")];
 
   return (
@@ -106,6 +108,9 @@ export async function SectionContact() {
               </div>
             </div>
           </dl>
+          <div className="mt-6">
+            <OperatorBox locale={locale} />
+          </div>
         </div>
 
         <div data-reveal="right" className="sg-dark relative overflow-hidden rounded-xl p-5 sm:p-8 lg:p-10 lg:col-span-5">

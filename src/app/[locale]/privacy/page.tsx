@@ -1,44 +1,19 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
-import { PageShell } from "@/components/PageShell";
-import { Link } from "@/i18n/navigation";
-import { ArrowLeft } from "lucide-react";
-import { PrivacyPolicyContent } from "@/components/PrivacyPolicyContent";
+import { pageMetadata } from "@/lib/seo";
+import { getLegalPack } from "@/content/legal";
+import { LegalDocumentPage } from "@/components/LegalDocumentPage";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "pages" });
-  return pageMetadata({ locale, path: "/privacy", title: t("privacyTitle"), description: t("privacyDesc") });
+  const doc = getLegalPack(locale).docs.privacy;
+  return pageMetadata({ locale, path: "/privacy", title: doc.title, description: doc.description });
 }
 
-export default async function PrivacyPage({ params }: Props) {
+export default async function Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const t = await getTranslations("pages");
-  const tNav = await getTranslations("nav");
-
-  return (
-    <PageShell>
-      <header className="border-b border-line bg-white px-4 pt-8 pb-8 sm:px-6 sm:pt-10 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <Link
-            href="/"
-            className="mb-5 inline-flex items-center gap-1.5 rounded-md border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
-          >
-            <ArrowLeft className="size-4" aria-hidden />
-            {tNav("backHome")}
-          </Link>
-          <h1 className="sg-h1">
-            {t("privacyTitle")}
-          </h1>
-        </div>
-      </header>
-      <PrivacyPolicyContent />
-    </PageShell>
-  );
+  return <LegalDocumentPage locale={locale} docKey="privacy" />;
 }

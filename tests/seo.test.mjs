@@ -8,7 +8,7 @@ import https from "node:https";
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
-const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms"];
+const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
 // Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);

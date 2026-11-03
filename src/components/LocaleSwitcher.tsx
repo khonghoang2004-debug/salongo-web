@@ -11,17 +11,48 @@ const locales = [
   { code: "de", label: "Deutsch", flagCode: "de" },
 ] as const;
 
+/**
+ * Cờ vẽ bằng SVG ngay trong trang (trước đây tải từ flagcdn.com: lộ IP người xem cho bên thứ ba,
+ * trái với chính sách "không tải nội dung bên thứ ba").
+ */
 function FlagImg({ code, className }: { code: string; className?: string }) {
-  return (
-    <img
-      src={`https://flagcdn.com/w40/${code}.png`}
-      alt=""
-      className={className}
-      width={20}
-      height={15}
-      loading="lazy"
-    />
-  );
+  const common = { className, width: 20, height: 15, viewBox: "0 0 20 15", "aria-hidden": true } as const;
+  switch (code) {
+    case "vn":
+      return (
+        <svg {...common}>
+          <rect width="20" height="15" fill="#DA251D" />
+          <polygon fill="#FFFF00" points="10,3 11.18,6.62 15,6.62 11.91,8.86 13.09,12.47 10,10.24 6.91,12.47 8.09,8.86 5,6.62 8.82,6.62" />
+        </svg>
+      );
+    case "cz":
+      return (
+        <svg {...common}>
+          <rect width="20" height="7.5" fill="#FFFFFF" />
+          <rect y="7.5" width="20" height="7.5" fill="#D7141A" />
+          <polygon fill="#11457E" points="0,0 10,7.5 0,15" />
+        </svg>
+      );
+    case "de":
+      return (
+        <svg {...common}>
+          <rect width="20" height="5" fill="#000000" />
+          <rect y="5" width="20" height="5" fill="#DD0000" />
+          <rect y="10" width="20" height="5" fill="#FFCE00" />
+        </svg>
+      );
+    default:
+      // us
+      return (
+        <svg {...common}>
+          <rect width="20" height="15" fill="#FFFFFF" />
+          {[0, 2, 4, 6, 8, 10, 12].map((i) => (
+            <rect key={i} y={(i * 15) / 13} width="20" height={15 / 13} fill="#B22234" />
+          ))}
+          <rect width="8" height={(7 * 15) / 13} fill="#3C3B6E" />
+        </svg>
+      );
+  }
 }
 
 export function LocaleSwitcher({ compact = false, up = false }: { compact?: boolean; up?: boolean }) {

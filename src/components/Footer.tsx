@@ -11,6 +11,8 @@ import {
 import { siteConfig } from "@/lib/metadata";
 import { BackToTop } from "./BackToTop";
 import { LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib/app-links";
+import { LEGAL_DOCS, OPERATOR } from "@/lib/legal";
+import { getLegalPack } from "@/content/legal";
 
 const footerNavItems = [
   { href: "/", labelKey: "home" as const },
@@ -41,6 +43,7 @@ export async function Footer() {
   const tGuide = await getTranslations("guide");
   const tPages = await getTranslations("pages");
   const tWeb = await getTranslations("webOffer");
+  const legal = getLegalPack(locale);
 
   return (
     <footer className="mt-2 border-t border-line bg-[#FBF7F7]">
@@ -126,17 +129,31 @@ export async function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-line py-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. {t("rights")}
-          </p>
-          <div className="flex gap-5">
-            <Link href="/privacy" className="rounded transition-colors hover:text-ink">
-              {t("privacy")}
-            </Link>
-            <Link href="/terms" className="rounded transition-colors hover:text-ink">
-              {t("terms")}
-            </Link>
+          <div>
+            <p>
+              &copy; {new Date().getFullYear()} {siteConfig.name}. {t("rights")}
+            </p>
+            {/* Thông tin người bán bắt buộc (§ 435 OZ): tên, IČO, địa chỉ lấy từ src/lib/legal.ts */}
+            <p className="mt-1 text-xs">
+              {[
+                `${legal.ui.operator}: ${OPERATOR.name}`,
+                OPERATOR.ico ? `${legal.ui.ico}: ${OPERATOR.ico}` : null,
+                OPERATOR.address || null,
+                OPERATOR.vatId ? `${legal.ui.vatId}: ${OPERATOR.vatId}` : OPERATOR.vatPayer === false ? legal.ui.notVatPayer : null,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
           </div>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 sm:pr-12">
+            {LEGAL_DOCS.map((d) => (
+              <li key={d.key}>
+                <Link href={d.path} className="rounded transition-colors hover:text-ink">
+                  {legal.docs[d.key].title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

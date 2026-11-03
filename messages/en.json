@@ -248,8 +248,6 @@
   "footer": {
     "quickLinks": "Quick links",
     "home": "Home",
-    "privacy": "Privacy policy",
-    "terms": "Terms of use",
     "rights": "All rights reserved.",
     "tagline": "Grow your business with SalonGo — the all-in-one SaaS platform for modern teams."
   },
@@ -268,33 +266,8 @@
     "faqDesc": "Answers about SalonGo: 150-day trial, plans, renewal, payment, phone use, languages, multiple locations, payroll and tips.",
     "contactTitle": "Contact – support in Vietnamese and Czech",
     "contactDesc": "Contact SalonGo by phone, email, Facebook or WhatsApp. Support in Vietnamese and Czech, with a reply within 24 hours.",
-    "privacyTitle": "Privacy policy",
-    "privacyDesc": "SalonGo privacy policy – how we protect user privacy.",
-    "termsTitle": "Terms of Service",
-    "termsDesc": "SalonGo Terms of Service – rules and commitments when using the platform.",
     "websiteTitle": "Salon website design for {price}",
     "websiteDesc": "Website design for hair, nail, spa and barber salons: up to {pages} pages, mobile-friendly, {price} one-time for SalonGo customers. See 35+ demos."
-  },
-  "privacyPolicy": {
-    "intro": "SalonGo is committed to protecting the privacy of users when using our website and software.",
-    "serviceDescription": "SalonGo is a software platform that helps salons manage business activities such as appointments, services, and staff.",
-    "userData": "SalonGo only stores the information necessary to operate user accounts such as registration email and login credentials.",
-    "responsibility": "SalonGo only provides software tools. Users are responsible for the data they enter into the system.",
-    "security": "We apply reasonable technical measures to protect data and maintain system security.",
-    "changes": "This policy may be updated from time to time. The latest version will always be published on the website.",
-    "contact": "If you have questions about this privacy policy, please contact:"
-  },
-  "termsOfService": {
-    "intro": "By accessing or using the SalonGo website and software, you agree to comply with the following Terms of Service.",
-    "serviceDescription": "SalonGo is a software platform that helps salons manage business activities such as appointments, services, and staff.",
-    "accounts": "Users are responsible for providing accurate information when creating an account and for keeping their login credentials secure.",
-    "usage": "Users may not use the service for illegal purposes, interfere with the system, or disrupt the operation of the service.",
-    "userData": "Users are responsible for the data they enter into the system. SalonGo only provides software tools.",
-    "payments": "Some features of the service may require payment according to the pricing listed on the website.",
-    "limitation": "SalonGo is not liable for indirect damages, data loss, or service interruptions beyond reasonable control.",
-    "termination": "SalonGo may suspend or terminate access to the service if users violate these terms.",
-    "law": "These terms are governed by the laws of the European Union and the Czech Republic.",
-    "contact": "If you have questions about these Terms of Service, please contact:"
   },
   "hero": {
     "trialNote": "150 days free · No card required",

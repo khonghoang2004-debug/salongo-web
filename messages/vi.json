@@ -248,8 +248,6 @@
   "footer": {
     "quickLinks": "Điều hướng nhanh",
     "home": "Trang chủ",
-    "privacy": "Chính sách bảo mật",
-    "terms": "Điều khoản sử dụng",
     "rights": "Bảo lưu mọi quyền.",
     "tagline": "SalonGo — chuẩn mực mới cho vận hành salon"
   },
@@ -268,33 +266,8 @@
     "faqDesc": "Giải đáp về SalonGo: dùng thử 150 ngày, giá gói, gia hạn, thanh toán, dùng trên điện thoại, ngôn ngữ, nhiều chi nhánh, tính lương và tip.",
     "contactTitle": "Liên hệ hỗ trợ tiếng Việt, tiếng Séc",
     "contactDesc": "Liên hệ SalonGo qua điện thoại, email, Facebook hoặc WhatsApp. Hỗ trợ bằng tiếng Việt và tiếng Séc, phản hồi trong 24 giờ.",
-    "privacyTitle": "Chính sách bảo mật",
-    "privacyDesc": "Chính sách bảo mật của SalonGo – cách chúng tôi bảo vệ quyền riêng tư của người dùng.",
-    "termsTitle": "Điều khoản sử dụng",
-    "termsDesc": "Điều khoản sử dụng dịch vụ SalonGo – quy định và cam kết khi sử dụng nền tảng.",
     "websiteTitle": "Làm website salon, tiệm nail giá {price}",
     "websiteDesc": "Làm website cho salon, tiệm nail, spa, barbershop: tối đa {pages} trang, đẹp trên điện thoại, {price} một lần cho khách SalonGo. Xem 35+ mẫu demo."
-  },
-  "privacyPolicy": {
-    "intro": "SalonGo cam kết bảo vệ quyền riêng tư của người dùng khi sử dụng website và phần mềm của chúng tôi.",
-    "serviceDescription": "SalonGo là nền tảng phần mềm giúp các salon quản lý hoạt động kinh doanh như lịch hẹn, dịch vụ và nhân viên.",
-    "userData": "SalonGo chỉ lưu trữ các thông tin cần thiết để vận hành tài khoản người dùng, ví dụ như email đăng ký và thông tin đăng nhập.",
-    "responsibility": "SalonGo chỉ cung cấp công cụ phần mềm. Người dùng chịu trách nhiệm đối với dữ liệu mà họ nhập vào hệ thống.",
-    "security": "Chúng tôi áp dụng các biện pháp kỹ thuật hợp lý để bảo vệ dữ liệu và đảm bảo an toàn cho hệ thống.",
-    "changes": "Chính sách này có thể được cập nhật theo thời gian. Phiên bản mới sẽ được đăng trên website.",
-    "contact": "Nếu bạn có câu hỏi về chính sách bảo mật, vui lòng liên hệ:"
-  },
-  "termsOfService": {
-    "intro": "Bằng việc truy cập hoặc sử dụng website và phần mềm SalonGo, bạn đồng ý tuân thủ các điều khoản sử dụng dưới đây.",
-    "serviceDescription": "SalonGo là nền tảng phần mềm giúp các salon quản lý hoạt động kinh doanh như lịch hẹn, dịch vụ và nhân viên.",
-    "accounts": "Người dùng có trách nhiệm cung cấp thông tin chính xác khi tạo tài khoản và bảo mật thông tin đăng nhập của mình.",
-    "usage": "Người dùng không được sử dụng dịch vụ cho mục đích bất hợp pháp, can thiệp vào hệ thống hoặc gây ảnh hưởng đến hoạt động của dịch vụ.",
-    "userData": "Người dùng chịu trách nhiệm đối với dữ liệu mà họ nhập vào hệ thống. SalonGo chỉ cung cấp công cụ phần mềm.",
-    "payments": "Một số tính năng của dịch vụ có thể yêu cầu thanh toán theo bảng giá được công bố trên website.",
-    "limitation": "SalonGo không chịu trách nhiệm đối với thiệt hại gián tiếp, mất dữ liệu hoặc gián đoạn dịch vụ ngoài tầm kiểm soát hợp lý.",
-    "termination": "SalonGo có quyền tạm ngưng hoặc chấm dứt quyền truy cập dịch vụ nếu người dùng vi phạm điều khoản.",
-    "law": "Các điều khoản này được điều chỉnh theo pháp luật của Liên minh Châu Âu và Cộng hòa Séc.",
-    "contact": "Nếu bạn có câu hỏi về điều khoản sử dụng, vui lòng liên hệ:"
   },
   "hero": {
     "trialNote": "150 ngày miễn phí · Không cần thẻ thanh toán",

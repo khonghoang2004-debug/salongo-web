@@ -248,8 +248,6 @@
   "footer": {
     "quickLinks": "Quicklinks",
     "home": "Startseite",
-    "privacy": "Datenschutz",
-    "terms": "Nutzungsbedingungen",
     "rights": "Alle Rechte vorbehalten.",
     "tagline": "Wachsen Sie mit SalonGo — die All-in-One-SaaS-Plattform für moderne Salonteams."
   },
@@ -268,33 +266,8 @@
     "faqDesc": "Antworten zu SalonGo: 150 Tage gratis, Tarife, Verlängerung, Zahlung, Handy, Sprachen, mehrere Filialen, Lohn und Trinkgeld.",
     "contactTitle": "Kontakt – Support auf Vietnamesisch",
     "contactDesc": "Kontaktieren Sie SalonGo per Telefon, E-Mail, Facebook oder WhatsApp. Support auf Vietnamesisch und Tschechisch, Antwort innerhalb von 24 Stunden.",
-    "privacyTitle": "Datenschutz",
-    "privacyDesc": "SalonGo Datenschutzrichtlinie – wie wir die Privatsphäre der Nutzer schützen.",
-    "termsTitle": "Nutzungsbedingungen",
-    "termsDesc": "SalonGo Nutzungsbedingungen – Regeln und Verpflichtungen bei der Nutzung der Plattform.",
     "websiteTitle": "Website für Salon & Nagelstudio für {price}",
     "websiteDesc": "Website für Friseur, Nagelstudio, Spa und Barbershop: bis zu {pages} Seiten, mobil optimiert, {price} einmalig für SalonGo-Kunden. 35+ Demos."
-  },
-  "privacyPolicy": {
-    "intro": "SalonGo verpflichtet sich, die Privatsphäre der Nutzer bei der Nutzung unserer Website und Software zu schützen.",
-    "serviceDescription": "SalonGo ist eine Softwareplattform, die Salons dabei hilft, Geschäftsabläufe wie Termine, Dienstleistungen und Mitarbeiter zu verwalten.",
-    "userData": "SalonGo speichert nur die Informationen, die für den Betrieb von Benutzerkonten erforderlich sind, wie Registrierungs-E-Mail und Anmeldedaten.",
-    "responsibility": "SalonGo stellt lediglich Softwaretools bereit. Nutzer sind für die Daten verantwortlich, die sie in das System eingeben.",
-    "security": "Wir verwenden angemessene technische Maßnahmen, um Daten zu schützen und die Sicherheit des Systems zu gewährleisten.",
-    "changes": "Diese Richtlinie kann von Zeit zu Zeit aktualisiert werden. Die neueste Version wird immer auf der Website veröffentlicht.",
-    "contact": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:"
-  },
-  "termsOfService": {
-    "intro": "Durch die Nutzung der SalonGo-Website oder Software stimmen Sie den folgenden Nutzungsbedingungen zu.",
-    "serviceDescription": "SalonGo ist eine Softwareplattform, die Salons dabei hilft, Geschäftsabläufe wie Termine, Dienstleistungen und Mitarbeiter zu verwalten.",
-    "accounts": "Benutzer sind verpflichtet, bei der Erstellung eines Kontos korrekte Informationen anzugeben und ihre Anmeldedaten zu schützen.",
-    "usage": "Benutzer dürfen den Dienst nicht für illegale Zwecke verwenden oder das System stören.",
-    "userData": "Benutzer sind für die Daten verantwortlich, die sie in das System eingeben. SalonGo stellt lediglich Softwaretools bereit.",
-    "payments": "Einige Funktionen des Dienstes können eine Zahlung gemäß der auf der Website veröffentlichten Preise erfordern.",
-    "limitation": "SalonGo haftet nicht für indirekte Schäden, Datenverlust oder Serviceunterbrechungen außerhalb angemessener Kontrolle.",
-    "termination": "SalonGo kann den Zugriff auf den Dienst aussetzen oder beenden, wenn Benutzer gegen diese Bedingungen verstoßen.",
-    "law": "Diese Bedingungen unterliegen dem Recht der Europäischen Union und der Tschechischen Republik.",
-    "contact": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:"
   },
   "hero": {
     "trialNote": "150 Tage kostenlos · Keine Kreditkarte",

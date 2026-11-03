@@ -16,6 +16,9 @@ export const SITEMAP_PATHS = [
   "/website",
   "/privacy",
   "/terms",
+  "/cookies",
+  "/dpa",
+  "/website-terms",
 ];
 
 // Không ghi lastmod / changefreq / priority: Google bỏ qua changefreq, priority, và chỉ tin lastmod khi nó

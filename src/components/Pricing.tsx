@@ -1,4 +1,6 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { getLegalPack } from "@/content/legal";
 import { PricingCards, type PlanCard } from "./PricingCards";
 
 // Khớp với các gói đang bán trong app (SubscriptionPlan, đối chiếu 29/10/2026): giá niêm yết / tháng,
@@ -15,6 +17,7 @@ const COMMON = ["allFeature1", "allFeature2", "allFeature3", "allFeature4"] as c
 export async function Pricing() {
   const t = await getTranslations("pricing");
   const tPage = await getTranslations("pricingPage");
+  const locale = await getLocale();
 
   const plans: PlanCard[] = PLANS.map((p) => ({
     code: p.code,
@@ -44,7 +47,11 @@ export async function Pricing() {
             common: COMMON.map((k) => tPage(k)),
           }}
         />
-        <p className="mx-auto mt-6 max-w-[1080px] text-center text-sm text-muted">{tPage("plansNote")}</p>
+        <p className="mx-auto mt-6 max-w-[1080px] text-center text-sm text-muted">{tPage("plansNote")}{" "}
+          <Link href="/terms" className="font-medium text-brand-700 hover:underline">
+            {getLegalPack(locale).docs.terms.title}
+          </Link>
+        </p>
       </div>
     </section>
   );

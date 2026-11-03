@@ -248,8 +248,6 @@
   "footer": {
     "quickLinks": "Rychlé odkazy",
     "home": "Domů",
-    "privacy": "Zásady ochrany osobních údajů",
-    "terms": "Podmínky užití",
     "rights": "Všechna práva vyhrazena.",
     "tagline": "Rozvíjejte svůj salon se SalonGo — komplexní platforma pro moderní salony."
   },
@@ -268,33 +266,8 @@
     "faqDesc": "Odpovědi o SalonGo: 150 dní zdarma, tarify, prodloužení, platba, telefon, jazyky, více poboček, mzdy a spropitné.",
     "contactTitle": "Kontakt – podpora česky a vietnamsky",
     "contactDesc": "Kontaktujte SalonGo telefonem, e-mailem, přes Facebook nebo WhatsApp. Podpora česky a vietnamsky, odpověď do 24 hodin.",
-    "privacyTitle": "Zásady ochrany osobních údajů",
-    "privacyDesc": "Zásady ochrany osobních údajů SalonGo – jak chráníme soukromí uživatelů.",
-    "termsTitle": "Podmínky užití",
-    "termsDesc": "Podmínky užití služby SalonGo – pravidla a závazky při používání platformy.",
     "websiteTitle": "Tvorba webu pro salon a nehtové studio za {price}",
     "websiteDesc": "Tvorba webu pro kadeřnictví, nehtové studio, kosmetiku i barbershop: až {pages} stránek, skvělý v mobilu, {price} jednorázově. 35+ ukázek šablon."
-  },
-  "privacyPolicy": {
-    "intro": "SalonGo se zavazuje chránit soukromí uživatelů při používání našich webových stránek a softwaru.",
-    "serviceDescription": "SalonGo je softwarová platforma, která pomáhá salonům spravovat jejich podnikání, například rezervace, služby a zaměstnance.",
-    "userData": "SalonGo ukládá pouze informace nezbytné pro provoz uživatelského účtu, například registrační e-mail a přihlašovací údaje.",
-    "responsibility": "SalonGo poskytuje pouze softwarové nástroje. Uživatelé nesou odpovědnost za data, která do systému zadávají.",
-    "security": "Používáme přiměřená technická opatření k ochraně dat a zajištění bezpečnosti systému.",
-    "changes": "Tyto zásady mohou být čas od času aktualizovány. Nejnovější verze bude vždy zveřejněna na webových stránkách.",
-    "contact": "Pokud máte dotazy ohledně těchto zásad ochrany osobních údajů, kontaktujte nás:"
-  },
-  "termsOfService": {
-    "intro": "Používáním webových stránek nebo softwaru SalonGo souhlasíte s následujícími podmínkami používání.",
-    "serviceDescription": "SalonGo je softwarová platforma, která pomáhá salonům spravovat jejich podnikání, například rezervace, služby a zaměstnance.",
-    "accounts": "Uživatelé jsou povinni poskytovat přesné informace při vytváření účtu a chránit své přihlašovací údaje.",
-    "usage": "Uživatelé nesmí používat službu k nezákonným účelům ani zasahovat do systému nebo narušovat provoz služby.",
-    "userData": "Uživatelé jsou odpovědní za data, která do systému zadávají. SalonGo poskytuje pouze softwarové nástroje.",
-    "payments": "Některé funkce služby mohou vyžadovat platbu podle ceníku uvedeného na webových stránkách.",
-    "limitation": "SalonGo nenese odpovědnost za nepřímé škody, ztrátu dat nebo přerušení služby mimo přiměřenou kontrolu.",
-    "termination": "SalonGo může pozastavit nebo ukončit přístup ke službě, pokud uživatel poruší tyto podmínky.",
-    "law": "Tyto podmínky se řídí právem Evropské unie a České republiky.",
-    "contact": "Máte-li dotazy ohledně těchto podmínek, kontaktujte nás:"
   },
   "hero": {
     "trialNote": "150 dní zdarma · Bez platební karty",

@@ -1,3 +1,4 @@
+import { getLegalPack } from "@/content/legal";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowDown } from "lucide-react";
@@ -5,6 +6,7 @@ import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
 import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
 import { TEMPLATES } from "@/components/website/templates/registry";
+import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
 import { AtelierTemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
 import { previewSrc } from "@/components/website/TemplatePreview";
@@ -190,6 +192,11 @@ export default async function WebsitePage({ params }: Props) {
                   </li>
                 ))}
               </ol>
+              <p className="mt-5 text-sm text-white/70">
+                <Link href="/website-terms" className="underline underline-offset-4 hover:text-white">
+                  {getLegalPack(locale).docs.websiteTerms.title}
+                </Link>
+              </p>
             </div>
           </div>
         </section>

@@ -34,45 +34,45 @@ export async function HomeHero() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Nền nude: phủ cả hero trên màn nhỏ; PC dừng giữa ảnh máy tính để ảnh "bước ra" nền trắng */}
-      <div className="absolute inset-x-0 top-0 h-full bg-nude lg:h-[calc(100%-240px)]" aria-hidden />
+      {/* Nền đỏ đô cho nổi bật: phủ cả hero trên màn nhỏ; PC dừng giữa ảnh máy tính để ảnh "bước ra" nền trắng */}
+      <div className="absolute inset-x-0 top-0 h-full bg-brand-700 lg:h-[calc(100%-240px)]" aria-hidden />
 
       <div className="sg-container relative grid px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-12 lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:pb-20 lg:pt-16">
         <div className="lg:col-span-7 lg:row-start-1 lg:self-center lg:pb-10">
-          <p className="sg-eyebrow sg-in" style={d(0)}>
+          <p className="sg-eyebrow sg-in !text-white/85" style={d(0)}>
             {t("badge")}
           </p>
 
-          <h1 className="mt-5 font-display text-[2.625rem] font-semibold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[3.75rem] lg:mt-7 lg:text-[4rem] xl:text-[4.5rem]">
+          <h1 className="mt-5 font-display text-[2.625rem] font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-[3.75rem] lg:mt-7 lg:text-[4rem] xl:text-[4.5rem]">
             <span className="block text-balance">{words(t("title1"))}</span>
-            <span className="block text-balance">{words(t("titleAccent"))}</span>
+            <span className="block text-balance text-[#F7C6D3]">{words(t("titleAccent"))}</span>
           </h1>
 
           <div className="sg-in mt-8 flex flex-col gap-3 sm:flex-row" style={d(640)}>
-            <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up px-7 text-base">
+            <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-on-gradient sg-arrow sg-arrow-up px-7 text-base">
               {t("cta")}
               <ArrowUpRight className="size-[18px]" aria-hidden />
             </a>
-            <a href="#video" className="btn-secondary px-6 text-base">
-              <Play className="size-4 fill-current text-brand-700" aria-hidden />
+            <a href="#video" className="btn-ghost-light px-6 text-base">
+              <Play className="size-4 fill-current" aria-hidden />
               {v("heroVideo")}
             </a>
           </div>
 
-          <ul className="sg-in mt-8 flex flex-col gap-2.5 text-[15px] text-ink/80 sm:flex-row sm:flex-wrap sm:gap-x-7" style={d(760)}>
+          <ul className="sg-in mt-8 flex flex-col gap-2.5 text-[15px] text-white/85 sm:flex-row sm:flex-wrap sm:gap-x-7" style={d(760)}>
             {(["trial1", "trial2", "trial3"] as const).map((k) => (
               <li key={k} className="flex items-center gap-2.5">
-                <Check className="size-4 shrink-0 text-brand-700" strokeWidth={2.5} aria-hidden />
+                <Check className="size-4 shrink-0 text-white" strokeWidth={2.5} aria-hidden />
                 {t(k)}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Vòm đỏ đô + điện thoại + thông báo đẩy */}
+        {/* Vòm đỏ đô đậm (trên nền đỏ đô) + điện thoại + thông báo đẩy */}
         <div className="relative z-10 mx-auto mt-12 w-full max-w-[360px] sm:max-w-[400px] lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:mt-0 lg:max-w-none lg:translate-y-28 lg:self-end lg:pl-8">
           <div className="sg-float relative" style={d(700)}>
-            <div className="sg-arch relative mx-auto aspect-[10/15] w-[86%] [--arch-v:33.3%] lg:aspect-[10/17] lg:[--arch-v:29.4%]" aria-hidden>
+            <div className="sg-arch sg-arch-deep relative mx-auto aspect-[10/15] w-[86%] [--arch-v:33.3%] lg:aspect-[10/17] lg:[--arch-v:29.4%]" aria-hidden>
               <span className="sg-arch-shine" />
             </div>
             <div className="absolute inset-x-0 bottom-[5%] mx-auto w-[50%]">

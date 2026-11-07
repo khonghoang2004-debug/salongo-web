@@ -305,6 +305,12 @@
     background-color: var(--nude-deep);
   }
 
+  /* Vòm trên nền đỏ đô (hero trang chủ): đỏ đô đậm hơn, viền sáng mảnh để vẫn thấy dáng "đầu móng" */
+  .sg-arch-deep {
+    background-color: #5a0017;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  }
+
   /* Vệt bóng sơn mài trên vòm (một nét trắng mờ, không phải gradient) */
   .sg-arch-shine {
     position: absolute;

@@ -19,7 +19,8 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages" });
-  return pageMetadata({ locale, path: "/website", title: t("websiteTitle", offerVars()), description: t("websiteDesc", offerVars()) });
+  // The title already starts with the brand ("SalonGo Web Studio – …"): no extra " | SalonGo" at the end.
+  return pageMetadata({ locale, path: "/website", title: t("websiteTitle", offerVars()), description: t("websiteDesc", offerVars()), absolute: true });
 }
 
 const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"] as const;
@@ -44,7 +45,8 @@ export default async function WebsitePage({ params }: Props) {
       {
         "@type": "Service",
         "@id": `${url}#service`,
-        name: tp("websiteTitle", v),
+        name: "SalonGo Web Studio",
+        alternateName: tp("websiteTitle", v),
         description: tp("websiteDesc", v),
         serviceType: "Website design for beauty salons",
         url,

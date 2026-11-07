@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Be_Vietnam_Pro, Noto_Serif_Display } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
@@ -19,6 +19,15 @@ const sans = Be_Vietnam_Pro({
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter",
   display: "swap",
+});
+
+// Noto Serif Display: chữ có chân tương phản cao (kiểu tạp chí làm đẹp), đủ dấu tiếng Việt / Séc / Đức — chỉ dùng cho tiêu đề và số lớn
+const display = Noto_Serif_Display({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["500"],
+  variable: "--font-serif",
+  display: "swap",
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -137,7 +146,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </defs>
         </svg>
         <NextIntlClientProvider messages={messages}>
-          <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>
+          <div id="sg-root" className={`${sans.variable} ${display.variable} font-sans antialiased`}>
             {children}
             <MotionRoot />
           </div>

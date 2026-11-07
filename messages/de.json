@@ -82,7 +82,7 @@
     "q13": "Ich habe mehrere Filialen. Geht das?",
     "a13": "Ja. Ein Inhaberkonto führt alle Filialen und wechselt im Menü. Jede Filiale hat eigenen Tarif und eigenes Enddatum.",
     "q14": "In welchen Sprachen gibt es die App?",
-    "a14": "Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch und Französisch, in der Salon-App und auf der Buchungsseite.",
+    "a14": "Die Salon-App gibt es auf Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch und Französisch, die Buchungsseite für Kunden auf Tschechisch, Slowakisch, Englisch, Deutsch und Französisch.",
     "q15": "Wie sende ich Kunden eine Marketing-E-Mail?",
     "a15": "Unter Kunden → Marketing eine von 10 Vorlagen wählen, Text anpassen, optional Rabatt hinzufügen, Vorschau ansehen und senden. Sie erreicht nur Kunden mit E-Mail und Einwilligung; eine Kampagne pro Salon und Tag. In jedem Tarif enthalten."
   },
@@ -95,7 +95,7 @@
     "why2": "Komplexe Gehaltsberechnung, Fehler und Streit zwischen Inhaber und Personal.",
     "why3": "Doppelbuchungen, Kundenverlust, schwer den Umsatz aus der Ferne im Blick zu behalten.",
     "roadmapTitle": "Produkt-Roadmap",
-    "roadmap1": "Intelligenteres Booking: Erinnerungen mehrkanalig, SMS-Integration.",
+    "roadmap1": "SalonGo-Apps für iPhone und Android, für Inhaber und Mitarbeiter.",
     "roadmap2": "Tiefere Berichte: Zeiträume und Salons vergleichen.",
     "roadmap3": "Mehr Länder und Sprachen."
   },
@@ -249,7 +249,7 @@
     "quickLinks": "Quicklinks",
     "home": "Startseite",
     "rights": "Alle Rechte vorbehalten.",
-    "tagline": "Wachsen Sie mit SalonGo — die All-in-One-SaaS-Plattform für moderne Salonteams."
+    "tagline": "Salon-Software für Salons vietnamesischer Inhaber in Europa."
   },
   "pages": {
     "homeTitle": "Salon-App: Terminbuchung, Kasse und Lohn",
@@ -285,7 +285,7 @@
     "proof1": "150 Tage kostenlos, ohne Karte",
     "proof2": "Support auf Vietnamesisch und Tschechisch",
     "proof3": "App in 6 Sprachen",
-    "imageAlt": "Übersicht der SalonGo-App am Computer",
+    "imageAlt": "SalonGo-Kalender nach Mitarbeitern am Computer",
     "revenueToday": "Umsatz heute",
     "stat1Value": "150 Tage",
     "stat1Label": "Testphase",
@@ -301,16 +301,20 @@
     "trial1": "150 Tage kostenlos",
     "trial2": "Keine Kreditkarte",
     "trial3": "Hilfe bei der Einrichtung",
-    "imageAltPhone": "Übersicht der SalonGo-App am Handy"
+    "imageAltPhone": "Kalender nach Mitarbeitern auf dem Handy",
+    "lead": "Kunden buchen online, Sie bestätigen und teilen Mitarbeiter in einem Schritt zu, kassieren am Empfang und haben am Monatsende die Lohnabrechnung fertig. Auf Deutsch, Vietnamesisch und in vier weiteren Sprachen, am Computer und auf dem Handy."
   },
   "download": {
-    "eyebrow": "Desktop-App",
-    "title": "Auch als Desktop-App",
-    "subtitle": "Am Empfang immer offen. Anmeldung mit demselben SalonGo-Konto.",
+    "eyebrow": "Computer und Handy",
+    "title": "Am Empfang, am Computer oder auf dem Handy",
+    "subtitle": "Ein Konto auf allen Geräten. Die Desktop-App bleibt am Empfang einfach geöffnet.",
     "windows": "Download für Windows",
     "mac": "Download für Mac",
     "for": "Download für",
-    "note": "Immer die neueste Version"
+    "note": "Immer die neueste Version",
+    "macSigned": "Die Mac-App ist von Apple signiert.",
+    "phone": "Auf dem Handy öffnen Sie app.salongo.eu im Browser: Termine, Kasse und Umsatz.",
+    "ios": "Eine iPhone-App zum Anmelden in bestehende Konten kommt bald in den App Store."
   },
   "trust": {
     "eyebrow": "Warum SalonGo",
@@ -416,7 +420,7 @@
     "title": "Kernfunktionen",
     "subtitle": "Alles, was Sie für einen effizienten Salonbetrieb brauchen – auf einer Plattform.",
     "item1Title": "Intelligente Terminverwaltung",
-    "item1Desc": "Kalender pro Mitarbeiter, keine Zeitüberschneidungen, automatische Erinnerungen per SMS oder Zalo.",
+    "item1Desc": "Kalender nach Mitarbeitern, keine Doppelbuchungen, Bestätigungen und Erinnerungen per E-Mail.",
     "item2Title": "Kasse & Zahlungen",
     "item2Desc": "Bargeld, Überweisung, auf Rechnung – Standard-Elektronikrechnungen, einfache Nachverfolgung.",
     "item3Title": "Automatische Gehaltsabrechnung",
@@ -468,10 +472,10 @@
         "p1Text": "Auf Facebook, Instagram, Google Maps einbinden oder per Nachricht senden.",
         "p2Title": "Buchen in 4 Schritten",
         "p2Text": "Service, Termin, Daten, Übersicht. Ohne App und ohne Konto.",
-        "p3Title": "Lieblingsmitarbeiter oder wer frei ist",
-        "p3Text": "Kunden wählen ihre Mitarbeiterin oder lassen den Salon zuteilen.",
-        "p4Title": "Mit einem Tipp bestätigen",
-        "p4Text": "Neue Buchungen erscheinen sofort in der App; bestätigen oder ablehnen mit einem Tipp.",
+        "p3Title": "Mitarbeiter wählen oder die App entscheiden lassen",
+        "p3Text": "Kunden wählen ihren Lieblingsmitarbeiter oder Egal; die automatische Zuteilung gibt die Buchung an den, der frei ist und am wenigsten zu tun hat.",
+        "p4Title": "Bestätigen und zuteilen in einem Fenster",
+        "p4Text": "Neue Buchungen erscheinen sofort in der App, mit Mitteilung aufs Handy. Auf Bestätigen tippen und im selben Fenster Mitarbeiter oder Uhrzeit wählen.",
         "tab1": "Kundenseite",
         "tab2": "In der App bestätigen"
       },
@@ -481,25 +485,25 @@
         "title": "Ein klarer Kalender für jeden Mitarbeiter",
         "desc": "Der ganze Salontag auf einem Bildschirm: wer frei ist, wer ausgebucht ist und welche Termine noch niemanden haben.",
         "p1Title": "Ansicht nach Mitarbeitern",
-        "p1Text": "Eine Spalte pro Mitarbeiter nach Stunden, freie Zeiten auf einen Blick.",
-        "p2Title": "Listenansicht",
-        "p2Text": "Termine nach Zeitfenster gruppiert, nicht zugewiesene hervorgehoben.",
+        "p1Text": "Eine Spalte pro Mitarbeiter nach Stunden, am Computer und auf dem Handy. Freie Zeiten auf einen Blick.",
+        "p2Title": "Automatische Zuteilung",
+        "p2Text": "Von Anfang an aktiv: Buchungen ohne Mitarbeiterwahl gehen an den, der frei ist und am wenigsten zu tun hat. Ihre eigene Wahl gilt immer.",
         "p3Title": "Nur freie Zeiten",
         "p3Text": "Die Buchungsseite bietet nur Zeiten an, in denen das Team frei ist.",
-        "p4Title": "Erinnerung per E-Mail",
-        "p4Text": "Kunden mit E-Mail werden 24 Stunden und 1 Stunde vorher automatisch erinnert.",
+        "p4Title": "Bestätigung und Erinnerung per E-Mail",
+        "p4Text": "Kunden mit E-Mail erhalten eine Bestätigung und eine Erinnerung 1 Stunde vorher.",
         "tab1": "Nach Mitarbeiter",
         "tab2": "Liste"
       },
       "checkout": {
         "short": "Kasse",
-        "tile": "Kassieren und Rechnungen erstellen",
+        "tile": "Bar, Karte, Überweisung mit QR",
         "title": "Schnell kassieren am Empfang",
         "desc": "Service, Mitarbeiter und Zahlungsart wählen, und die Rechnung ist fertig. Jede Zahlung fließt direkt in Ihre Berichte.",
         "p1Title": "Bar, Karte, Überweisung",
-        "p1Text": "Erfassen, wie der Kunde zahlt, damit die Kasse am Abend stimmt.",
-        "p2Title": "Automatische Rechnungen",
-        "p2Text": "Jede Zahlung erzeugt eine Rechnung, die Sie später leicht finden.",
+        "p1Text": "Bei Überweisung zeigt die App einen QR-Code mit dem Betrag zum Scannen.",
+        "p2Title": "Belege für 80-mm-Drucker",
+        "p2Text": "Jede Zahlung erzeugt einen Beleg für 80-mm-Bondrucker, später leicht wiederzufinden.",
         "p3Title": "Trinkgeld für Mitarbeiter",
         "p3Text": "Trinkgeld steht auf dem Beleg und wird so geteilt, wie der Inhaber es wählt.",
         "p4Title": "Keine doppelte Eingabe",
@@ -513,8 +517,8 @@
         "desc": "Jeder Kunde hat ein Profil: Besuche, letzter Besuch, kommende Termine und Gesamtumsatz. Stammkunden erkennen Sie sofort.",
         "p1Title": "Profil für jeden Kunden",
         "p1Text": "Servicehistorie und Ausgaben an einem Ort.",
-        "p2Title": "In Sekunden gefunden",
-        "p2Text": "Suche nach Name, Telefon oder E-Mail.",
+        "p2Title": "VIP, neu und lange nicht da",
+        "p2Text": "Jede Gruppe mit einem Tipp filtern, auch Geburtstage in diesem Monat.",
         "p3Title": "Automatische VIPs",
         "p3Text": "Regeln einmal festlegen, VIP-Kunden werden automatisch erkannt.",
         "p4Title": "Mitgliedsprogramm",
@@ -549,7 +553,7 @@
         "p3Title": "Rechnungsverwaltung",
         "p3Text": "Summen nach Bar, Karte und Überweisung; Belege als PDF.",
         "p4Title": "Datenexport",
-        "p4Text": "Umsatz und Lohnabrechnung als Datei exportieren, ohne Handarbeit.",
+        "p4Text": "Umsatz und Lohn als Excel, CSV oder PDF exportieren, ohne Rechnen von Hand.",
         "tab1": "Überblick",
         "tab2": "Umsatz",
         "tab3": "Rechnungen"
@@ -566,7 +570,7 @@
         "p3Title": "Trinkgeld nach Ihrer Wahl",
         "p3Text": "Trinkgeld bekommt, wem der Kunde es gegeben hat, oder alles Trinkgeld im Zeitraum wird gleichmäßig geteilt.",
         "p4Title": "Lohn pro Zeitraum",
-        "p4Text": "Lohn, Umsatz, Trinkgeld und Belege je Mitarbeiter; Export mit einem Tipp.",
+        "p4Text": "Lohn, Umsatz, Trinkgeld und Belege pro Mitarbeiter; Export als Excel, CSV oder PDF.",
         "tab1": "Lohn"
       },
       "staff": {
@@ -577,15 +581,15 @@
         "p1Title": "Einladung per E-Mail",
         "p1Text": "Im Mitarbeiterprofil auf Einladen tippen; E-Mail öffnen, Passwort setzen, fertig.",
         "p2Title": "Mein Kalender",
-        "p2Text": "Heute und die nächsten Tage, mit Terminen, erledigt und offen.",
+        "p2Text": "Heute und die nächsten Tage, mit Terminen, erledigt und offen, plus Mitteilung bei jeder neuen Buchung.",
         "p3Title": "Mein Umsatz",
-        "p3Text": "Der Tab Umsatz: Tagessumme, Anzahl Kunden, Durchschnitt pro Kunde und jeder bezahlte Kunde. Frühere Tage mit einem Tipp.",
+        "p3Text": "Eine separate Umsatz-Seite: Tagessumme, Kunden, Durchschnitt pro Kunde und jeder bezahlte Besuch. Auch für frühere Tage.",
         "p4Title": "Der Inhaber entscheidet",
         "p4Text": "Beim Einladen wählt der Inhaber Nur Kalender oder Kalender + Umsatz, jederzeit änderbar. Den Salonumsatz sehen Mitarbeiter nie.",
         "tab1": "Team",
-        "shot1": "Heute: Kalender + Umsatz",
-        "shot2": "Mein Umsatz",
-        "shot3": "Inhaber wählt die Sichtbarkeit"
+        "shot1": "Heutige Termine",
+        "shot2": "Mein Umsatz, wenn erlaubt",
+        "shot3": "Sie bestimmen, was Mitarbeiter sehen"
       },
       "branches": {
         "short": "Mehrere Filialen",
@@ -605,9 +609,9 @@
       },
       "marketing": {
         "short": "Marketing",
-        "tile": "Angebots-Mails, Geburtstage",
-        "title": "E-Mail-Marketing & Geburtstage",
-        "desc": "Angebote im Namen Ihres Salons an Kunden mit Einwilligung senden, aus 10 Vorlagen zu Anlässen. Die App erinnert außerdem an Kundengeburtstage.",
+        "tile": "Angebots-E-Mails, Geburtstage",
+        "title": "E-Mail-Marketing & Geburtstagsangebote",
+        "desc": "Senden Sie Angebots-E-Mails im Namen Ihres Salons an Kunden mit Einwilligung, mit 10 Vorlagen zu Anlässen. Die App meldet Geburtstage 2 Tage vorher, damit Sie Glückwünsche mit Angebot senden können.",
         "p1Title": "10 Vorlagen zu Anlässen",
         "p1Text": "Rabatt, neue Leistung, Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Ostern, Muttertag, Sommer, Black Friday.",
         "p2Title": "Rabatt und Gültigkeit",
@@ -618,7 +622,7 @@
         "p4Text": "Einwilligung im Kundenprofil ankreuzen; jede E-Mail hat einen Abmeldelink.",
         "tab1": "Vorlage Weihnachten",
         "tab2": "Vorlage Weltfrauentag",
-        "tab3": "Geburtstage"
+        "tab3": "Geburtstagsangebot"
       }
     },
     "staffDemo": {
@@ -751,16 +755,6 @@
     "whyCard2Desc": "Transparente %-Berechnung – Inhaber und Personal zufrieden.",
     "whyCard3Title": "Wissen, ob der Salon Gewinn macht",
     "whyCard3Desc": "Umsatzberichte nach Tag, Monat, Mitarbeiter – Entscheidungen mit echten Daten.",
-    "testimonialsHeading": "Über 1000+ Salons nutzen SalonGo täglich.",
-    "testimonial1Quote": "Seit der Eröffnung mit SalonGo – keine vergessenen Termine mehr. Online-Buchung sehr praktisch.",
-    "testimonial1Name": "Huong",
-    "testimonial1Role": "Saloninhaberin, Prag",
-    "testimonial2Quote": "Automatische Gehaltsabrechnung, keine Streitereien. Verwalte aus der Ferne mit Ruhe.",
-    "testimonial2Name": "Tuan",
-    "testimonial2Role": "Saloninhaber, Berlin",
-    "testimonial3Quote": "Klarer Überblick über Gewinn und Verlust. Investition in die richtigen Leistungen.",
-    "testimonial3Name": "Lan",
-    "testimonial3Role": "Saloninhaberin, Brno",
     "ctaTitle": "Bereit für einen professionelleren Salonbetrieb?",
     "ctaSubtext": "150 Tage (5 Monate) kostenlos testen. Keine Karte nötig.",
     "ctaButton": "Jetzt starten"
@@ -817,7 +811,7 @@
   },
   "home2": {
     "notifTitle": "Neue Buchung",
-    "notifText": "Linh · Gelnägel · 14:30",
+    "notifText": "Denisa hat Gelnägel gebucht, heute 14:30",
     "notifAction": "Bestätigen",
     "staffTitle": "Verdienst diesen Monat",
     "staffName": "Mitarbeiterin: Mai",
@@ -829,10 +823,10 @@
     "featureMore": "Mehr erfahren",
     "langEyebrow": "Für vietnamesische Inhaber",
     "langTitle": "Sie arbeiten auf Vietnamesisch. Kunden buchen in ihrer Sprache.",
-    "langLead": "Inhaber und Team nutzen die App auf Vietnamesisch. Kunden buchen auf Tschechisch, Slowakisch, Deutsch, Englisch, Französisch oder Vietnamesisch.",
+    "langLead": "Sie und Ihr Team nutzen die App auf Vietnamesisch. Kunden buchen auf Tschechisch, Slowakisch, Deutsch, Englisch oder Französisch.",
     "lang1": "App in 6 Sprachen: Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch, Französisch",
     "lang2": "Kunden wählen ihre Sprache direkt auf der Buchungsseite",
-    "lang3": "Belege in der Sprache, die Sie für den Salon wählen",
+    "lang3": "Mitteilungen aufs Handy kommen in der Sprache jeder Person",
     "lang4": "Support per Telefon, Facebook oder WhatsApp",
     "typesEyebrow": "Für Sie gemacht",
     "typesTitle": "Vom kleinen Studio bis zur Salonkette",
@@ -846,8 +840,8 @@
     "type4Title": "Ketten mit Filialen",
     "type4Text": "Ein Konto für alle Filialen, Umsatz aller Filialen auf einer Seite.",
     "priceEyebrow": "Preise",
-    "priceTitle": "150 Tage kostenlos testen",
-    "priceLead": "Keine Einrichtungsgebühr, kein langer Vertrag. Nach der Testphase wählen Sie den passenden Tarif.",
+    "priceTitle": "150 Tage kostenlos, danach ab 199 CZK im Monat",
+    "priceLead": "Jeder Tarif enthält alle Funktionen, sie unterscheiden sich nur bei Mitarbeitern und Filialen. Bei jährlicher Zahlung sparen Sie 10 %.",
     "priceCta": "Preise ansehen",
     "price1": "Keine Kreditkarte",
     "price2": "Hilfe bei der Einrichtung auf Vietnamesisch",
@@ -870,23 +864,23 @@
     "hlBranchShotPc": "Filiale am Computer wählen",
     "hlBranchShotPhone": "Filialliste am Handy",
     "hlStaffEyebrow": "Mitarbeiterkonten",
-    "hlStaffTitle": "Ein eigenes Konto für jeden Mitarbeiter",
-    "hlStaffLead": "Der Inhaber schickt eine Einladung, Mitarbeiter melden sich auf dem eigenen Handy an. Sie sehen sofort die Kunden des Tages, die Uhrzeiten und was sie schon verdient haben.",
-    "hlStaff1": "Mein Kalender: nur eigene Termine, heute und an den nächsten Tagen",
-    "hlStaff2": "Tab Umsatz: Mitarbeiter sehen ihren Tagesumsatz nach Kunde und Leistung",
-    "hlStaff3": "Zugriff legt der Inhaber fest: nur Kalender oder Kalender plus eigener Umsatz",
-    "hlStaff4": "App-Sprache selbst wählen: Vietnamesisch, Tschechisch, Englisch, Deutsch, Slowakisch, Französisch",
-    "hlStaffShot1": "Heute: Kalender + Umsatz",
-    "hlStaffShot2": "Mein Umsatz",
-    "hlStaffShot3": "Inhaber wählt die Sichtbarkeit",
-    "mkEyebrow": "Neu · E-Mail-Marketing",
+    "hlStaffTitle": "Jeder Mitarbeiter hat ein Konto auf dem eigenen Handy",
+    "hlStaffLead": "Laden Sie Mitarbeiter per E-Mail ein, sie legen ein Passwort fest und können loslegen. Ein Blick in die App zeigt, welche Kunden heute wann kommen.",
+    "hlStaff1": "Mein Kalender: nur die eigenen Termine, heute und an den nächsten Tagen",
+    "hlStaff2": "Mitteilungen aufs Handy bei neuen oder verschobenen Terminen, in der gewählten Sprache",
+    "hlStaff3": "Der eigene Umsatz steht auf einer separaten Umsatz-Seite, nur wenn Sie es erlauben",
+    "hlStaff4": "Sie wählen Nur Kalender oder Kalender + Umsatz und können es jederzeit ändern. Den Umsatz des ganzen Salons sehen Mitarbeiter nie",
+    "hlStaffShot1": "Heutige Termine",
+    "hlStaffShot2": "Mein Umsatz, wenn erlaubt",
+    "hlStaffShot3": "Sie bestimmen, was Mitarbeiter sehen",
+    "mkEyebrow": "E-Mail-Marketing",
     "mkTitle": "Angebote an Stammkunden direkt aus der App",
     "mkLead": "Keine Agentur, kein zusätzliches E-Mail-Tool. Vorlage zum Anlass wählen, ein paar Zeilen anpassen, senden – Kunden mit Einwilligung erhalten eine E-Mail im Namen Ihres Salons.",
     "mk1Title": "10 E-Mail-Vorlagen zu Anlässen",
     "mk2Title": "In 6 Sprachen vorbereitet",
     "mk3Title": "Vorschau und Testversand",
     "mk4Title": "Nur an Kunden mit Einwilligung",
-    "mk5Title": "Geburtstagserinnerung für Kunden",
+    "mk5Title": "Geburtstagsangebote, 2 Tage vorher erinnert",
     "mkCta": "Marketing ansehen",
     "mkShotPc": "Marketing-E-Mail · Vorlage Weihnachten",
     "mkShotCompose": "E-Mail verfassen",
@@ -900,7 +894,10 @@
     "tplEaster": "Ostern",
     "tplMothersDay": "Muttertag",
     "tplSummer": "Sommer",
-    "tplBlackFriday": "Black Friday"
+    "tplBlackFriday": "Black Friday",
+    "notifNow": "jetzt",
+    "notifAssigned": "Automatisch zugeteilt: Linh",
+    "mkShotBirthday": "Geburtstagsangebot"
   },
   "renew": {
     "eyebrow": "Tarif verlängern",
@@ -915,7 +912,7 @@
     "step4Title": "Tarif wählen und bezahlen",
     "step4Text": "Tarif wählen, monatlich oder jährlich, dann per Karte oder Überweisung zahlen, je nachdem, was die App dem Salon anbietet.",
     "cta": "Tarif verlängern",
-    "note": "Sie nutzen die SalonGo-App aus App Store oder Google Play? Verlängern Sie im Browser oder in der Desktop-App.",
+    "note": "Verlängern Sie im Browser oder in der Desktop-App; die iPhone-App dient nur zur Anmeldung.",
     "shotLabel": "Tarife"
   },
   "device": {
@@ -958,7 +955,7 @@
       },
       {
         "h": "Online-Terminbuchung rund um die Uhr",
-        "p": "Jeder Salon bekommt einen eigenen Buchungslink für Facebook, Instagram oder Google Maps. Kunden buchen auf Deutsch, Tschechisch, Englisch und in weiteren Sprachen. Die Buchungsseite zeigt nur freie Zeiten, damit es keine Doppelbuchungen gibt, und Kunden mit E-Mail werden 24 Stunden und 1 Stunde vorher erinnert.",
+        "p": "Jeder Salon bekommt einen eigenen Buchungslink für Facebook, Instagram oder Google Maps. Kunden buchen auf Deutsch, Tschechisch, Englisch und in weiteren Sprachen, und der Inhaber bestätigt und teilt Mitarbeiter in einem einzigen Fenster zu. Die Buchungsseite zeigt nur freie Zeiten, damit es keine Doppelbuchungen gibt, und Kunden mit E-Mail erhalten eine Bestätigung und eine Erinnerung 1 Stunde vorher.",
         "link": {
           "href": "/tinh-nang#dat-lich-online",
           "label": "Online-Buchung"
@@ -987,7 +984,7 @@
       },
       {
         "h": "Stammkunden halten mit E-Mail-Marketing",
-        "p": "Unter Kunden → Marketing gibt es 10 Vorlagen zu Anlässen wie Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Muttertag und Black Friday. Ein paar Zeilen anpassen, Rabatt hinzufügen, Vorschau ansehen und an Kunden mit Einwilligung senden. Die App erinnert außerdem an Kundengeburtstage.",
+        "p": "Unter Kunden → Marketing gibt es 10 Vorlagen zu Anlässen wie Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Muttertag und Black Friday. Ein paar Zeilen anpassen, Rabatt hinzufügen, Vorschau ansehen und an Kunden mit Einwilligung senden. Die App meldet außerdem Geburtstage 2 Tage vorher, damit Sie Glückwünsche mit Angebot senden können.",
         "link": {
           "href": "/tinh-nang#marketing",
           "label": "E-Mail-Marketing"
@@ -1028,7 +1025,7 @@
       },
       {
         "q": "Welche Salonsoftware passt zu einem vietnamesischen Nagelstudio?",
-        "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in sechs Sprachen, und der Support spricht Vietnamesisch und Tschechisch."
+        "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in fünf Sprachen, und der Support spricht Vietnamesisch und Tschechisch."
       },
       {
         "q": "Muss ich etwas installieren?",
@@ -1174,5 +1171,54 @@
     "stat3Text": "Sieht auf jedem Bildschirm gut aus",
     "studio": "SalonGo Web Studio",
     "priceLabel": "Nur"
+  },
+  "day": {
+    "kicker": "Ein Tag im Salon",
+    "title": "Von der ersten Buchung bis zum Feierabend",
+    "lead": "Jede Funktion von SalonGo passt zu einer Aufgabe, die Sie jeden Tag erledigen. Was automatisch gehen kann, übernimmt die App.",
+    "all": "Alle Funktionen",
+    "more": "Mehr zur Funktion",
+    "items": {
+      "s1": {
+        "time": "07:40",
+        "title": "Kunden buchen selbst, auch vor der Öffnung",
+        "desc": "Jeder Salon hat eine eigene Buchungsseite. Kunden wählen Leistung und Termin, geben ihre Daten ein und prüfen die Übersicht: 4 Schritte, ohne App-Download. Die Seite gibt es auf Tschechisch, Slowakisch, Deutsch, Englisch und Französisch."
+      },
+      "s2": {
+        "time": "08:55",
+        "title": "Bestätigen und zuteilen in einem Fenster",
+        "desc": "Neue Buchungen erscheinen in der App, dazu eine Mitteilung aufs Handy. Tippen Sie auf Bestätigen und wählen Sie im selben Fenster den Mitarbeiter oder eine andere Uhrzeit. Kunden erhalten eine Bestätigung per E-Mail und eine Erinnerung 1 Stunde vorher."
+      },
+      "s3": {
+        "time": "09:00",
+        "title": "Kalender nach Mitarbeitern, Arbeit fair verteilt",
+        "desc": "Eine Spalte pro Mitarbeiter, am Computer und auf dem Handy. Die automatische Zuteilung ist von Anfang an aktiv: Buchungen ohne Mitarbeiterwahl gehen an den, der frei ist und an dem Tag am wenigsten zu tun hat. Wählen Sie jemanden aus, gilt immer Ihre Wahl."
+      },
+      "s4": {
+        "time": "09:10",
+        "title": "Mitarbeiter sehen ihre Termine auf dem Handy",
+        "desc": "Jeder Mitarbeiter hat ein eigenes Konto mit heute und den nächsten Tagen und Mitteilungen in seiner Sprache. Der eigene Umsatz steht auf einer separaten Seite, nur wenn Sie es erlauben."
+      },
+      "s5": {
+        "time": "14:30",
+        "title": "Kasse am Empfang, mit QR-Code für Überweisungen",
+        "desc": "Leistungen und Mitarbeiter wählen, bar, Karte oder Überweisung erfassen. Bei Überweisung zeigt die App einen QR-Code mit dem Betrag. Belege drucken Sie auf 80-mm-Bondruckern."
+      },
+      "s6": {
+        "time": "16:00",
+        "title": "Stammkunden erkennen, Geburtstage nicht vergessen",
+        "desc": "Ein Profil für jeden Kunden mit Verlauf und Umsatz. Filter für VIP, neue und lange nicht gekommene Kunden. Die App meldet Geburtstage 2 Tage vorher, damit Sie Glückwünsche mit Angebot senden können."
+      },
+      "s7": {
+        "time": "20:00",
+        "title": "Feierabend: der Umsatz ist schon gezählt",
+        "desc": "Umsatz nach Tag, Mitarbeiter, Leistung und Zahlungsart. Ein Bericht pro Filiale, alle Filialen auf einer Seite."
+      },
+      "s8": {
+        "time": "Monatsende",
+        "title": "Lohn, schon berechnet",
+        "desc": "Provision in % vom Umsatz oder Festgehalt pro Mitarbeiter, Trinkgeld pro Kunde oder gleichmäßig verteilt. Lohnabrechnung als Excel, CSV oder PDF exportieren."
+      }
+    }
   }
 }

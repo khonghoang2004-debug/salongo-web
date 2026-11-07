@@ -8,7 +8,7 @@ const MAC_DOWNLOAD_URL = DOWNLOAD_LINKS.mac;
 
 const WindowsIcon = () => (
   <svg
-    className="size-7 shrink-0"
+    className="size-6 shrink-0"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden
@@ -22,7 +22,7 @@ const WindowsIcon = () => (
 
 const AppleIcon = () => (
   <svg
-    className="size-7 shrink-0"
+    className="size-6 shrink-0"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden
@@ -31,8 +31,8 @@ const AppleIcon = () => (
   </svg>
 );
 
-// Thẻ tải ứng dụng máy tính (dùng trong khối giá trên trang chủ). Nút tải kiểu huy hiệu cửa hàng ứng dụng:
-// nền tối, logo hệ điều hành, dòng nhỏ "Tải về cho" + tên nền tảng.
+// Thẻ "dùng ở đâu": nút tải app máy tính (Windows, macOS) và các cách dùng trên điện thoại.
+// iPhone: app chỉ để đăng nhập, chưa phát hành trên App Store (không ghi là đã có).
 export async function DownloadCard() {
   const t = await getTranslations("download");
 
@@ -42,40 +42,39 @@ export async function DownloadCard() {
   ];
 
   return (
-    <div className="flex h-full flex-col rounded-xl border border-line bg-white p-6 sm:p-8 lg:p-10">
-      <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">{t("eyebrow")}</p>
-      <h2 className="mt-4 font-display text-[1.75rem] font-semibold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[2.125rem]">
+    <div className="flex h-full flex-col rounded-[28px] border border-line bg-white p-6 sm:p-10">
+      <p className="text-[15px] font-medium text-brand-700">{t("eyebrow")}</p>
+      <h2 className="mt-3 font-display text-[2rem] font-medium leading-[1.14] tracking-[-0.015em] text-ink text-balance sm:text-[2.5rem]">
         {t("title")}
       </h2>
       <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("subtitle")}</p>
-      <div className="mt-6 lg:mt-auto lg:pt-8">
-        <div className="grid gap-3 sm:grid-cols-2">
-          {items.map(({ href, file, label, platform, Icon }) => (
-            <a
-              key={file}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              download={file}
-              aria-label={label}
-              className="group relative flex h-[64px] items-center gap-3.5 overflow-hidden rounded-xl bg-ink pl-4 pr-5 text-white shadow-[0_14px_30px_-16px_rgba(20,8,12,0.75)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#2b2226] hover:shadow-[0_18px_36px_-16px_rgba(20,8,12,0.8)]"
-            >
-              <Icon />
-              <span className="min-w-0 flex-1 leading-none">
-                <span className="block text-[11px] font-medium text-white/60">{t("for")}</span>
-                <span className="mt-1 block font-display text-[1.25rem] font-semibold tracking-[-0.02em]">{platform}</span>
-              </span>
-              <Download
-                className="hidden size-[18px] shrink-0 text-white/45 transition max-sm:block xl:block duration-200 group-hover:translate-y-0.5 group-hover:text-white"
-                aria-hidden
-              />
-            </a>
-          ))}
-        </div>
-        <p className="mt-3 flex items-center gap-2 text-xs text-muted">
-          <span className="size-1.5 rounded-full bg-brand-700" aria-hidden />
-          {t("note")}
-        </p>
+      <ul className="mt-6 space-y-3 text-[15px] leading-relaxed text-ink/80">
+        {(["macSigned", "phone", "ios"] as const).map((k) => (
+          <li key={k} className="flex items-start gap-2.5">
+            <span className="mt-[7px] h-2.5 w-[7px] shrink-0 rounded-t-full rounded-b-[2px] bg-brand-700" aria-hidden />
+            {t(k)}
+          </li>
+        ))}
+      </ul>
+      <div className="mt-8 grid gap-3 border-t border-line pt-8 sm:grid-cols-2 lg:mt-auto lg:grid-cols-1 xl:grid-cols-2">
+        {items.map(({ href, file, label, platform, Icon }) => (
+          <a
+            key={file}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            download={file}
+            aria-label={label}
+            className="group flex min-h-[60px] items-center gap-3.5 rounded-full bg-ink pl-5 pr-6 text-white transition-colors duration-200 hover:bg-brand-800"
+          >
+            <Icon />
+            <span className="min-w-0 flex-1 leading-none">
+              <span className="block text-[11px] font-medium text-white/65">{t("for")}</span>
+              <span className="mt-1 block text-[1.125rem] font-semibold tracking-[-0.01em]">{platform}</span>
+            </span>
+            <Download className="size-[18px] shrink-0 text-white/50 transition-transform duration-200 group-hover:translate-y-0.5 group-hover:text-white motion-reduce:transition-none" aria-hidden />
+          </a>
+        ))}
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ type Props = {
 };
 
 // Tiêu đề section dùng chung: căn trái, kiểu biên tập; đường kẻ mảnh phía trên ngăn các phần (rule=false để bỏ)
-export function SectionHead({ kicker, title, lead, action, layout = "split", cols = "wide-title", rule = true, className: extra = "" }: Props) {
+export function SectionHead({ kicker, title, lead, action, layout = "split", cols = "wide-title", rule = false, className: extra = "" }: Props) {
   const className = `${rule ? "border-t border-line pt-6 sm:pt-8" : ""} ${extra}`;
   if (layout === "stack") {
     return (

@@ -21,11 +21,11 @@ export async function FeaturesPageHero() {
             href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary min-h-12 px-7 text-base"
+            className="btn-primary px-7 text-base"
           >
             {t("ctaPrimary")}
           </a>
-          <Link href="/bang-gia" className="btn-secondary min-h-12 px-7 text-base">
+          <Link href="/bang-gia" className="btn-secondary px-7 text-base">
             {t("ctaSecondary")}
           </Link>
         </>
@@ -34,7 +34,7 @@ export async function FeaturesPageHero() {
       {/* Bản đồ tính năng: bấm để nhảy tới phần chi tiết */}
       <div className="mt-8 border-t border-line pt-6 lg:mt-12">
         <div className="flex flex-wrap items-end justify-between gap-2">
-          <h2 className="text-lg font-semibold text-ink">{t("mapTitle")}</h2>
+          <h2 className="font-display text-[1.5rem] font-medium text-ink">{t("mapTitle")}</h2>
           <p className="flex items-center gap-1.5 text-sm text-muted">
             <ArrowDown className="size-4" aria-hidden />
             {t("mapHint")}
@@ -47,7 +47,7 @@ export async function FeaturesPageHero() {
               <li key={id}>
                 <a
                   href={`#${anchor}`}
-                  className="group flex h-full items-start gap-3 border-b border-line py-4"
+                  className="group flex h-full min-h-14 items-start gap-3 border-b border-line py-4"
                 >
                   <Icon className="mt-0.5 size-5 shrink-0 text-brand-700" strokeWidth={1.75} aria-hidden />
                   <span className="min-w-0">

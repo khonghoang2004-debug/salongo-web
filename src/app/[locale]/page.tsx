@@ -127,10 +127,10 @@ export default async function Home({ params }: Props) {
       <main>
         <HomeHero />
         <HomeWebsiteOffer />
-        <HomeVideos />
         <HomeFeatures />
-        <HomeMarketing />
+        <HomeVideos />
         <HomeHighlights />
+        <HomeMarketing />
         <HomeLanguage />
         <HomeSalonTypes />
         <HowItWorks />

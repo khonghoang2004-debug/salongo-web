@@ -22,10 +22,10 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
 
   return (
     <section>
-      <div className="sg-panel px-4 pb-8 pt-5 sm:px-8 sm:pb-10 sm:pt-7 lg:pb-12 lg:pt-8">
+      <div className="sg-panel relative overflow-hidden px-4 pb-10 pt-3 sm:px-8 sm:pb-14 sm:pt-5 lg:pb-20 lg:pt-6">
         <div className="sg-container">
           <nav aria-label="Breadcrumb" className="sg-in flex items-center gap-1.5 text-sm text-muted">
-            <Link href="/" className="rounded transition-colors hover:text-ink">
+            <Link href="/" className="inline-flex min-h-11 items-center transition-colors hover:text-ink">
               {tNav("home")}
             </Link>
             <ChevronRight className="size-3.5" aria-hidden />
@@ -35,7 +35,7 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
           </nav>
 
           {aside ? (
-            <div className="mt-5 grid gap-8 sm:mt-8 lg:grid-cols-12 lg:items-end lg:gap-12">
+            <div className="mt-4 grid gap-8 sm:mt-8 lg:grid-cols-12 lg:items-end lg:gap-12">
               <div className="lg:col-span-7">
                 {eyebrow && (
                   <div className="sg-in mb-4 sm:mb-6" style={d(60)}>
@@ -61,8 +61,8 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
               </div>
             </div>
           ) : (
-            <div className="mt-5 grid gap-6 sm:mt-8 lg:grid-cols-12 lg:items-end lg:gap-12">
-              <div className="lg:col-span-8">
+            <div className="mt-4 grid gap-6 sm:mt-8 lg:grid-cols-12 lg:items-end lg:gap-12">
+              <div className="lg:col-span-7">
                 {eyebrow && (
                   <div className="sg-in mb-4 sm:mb-6" style={d(60)}>
                     {eyebrow}
@@ -73,7 +73,7 @@ export async function PageHero({ crumb, eyebrow, title, lead, actions, aside, ch
                 </h1>
               </div>
               {(lead || actions) && (
-                <div className="sg-in lg:col-span-4 lg:pb-2" style={d(260)}>
+                <div className="sg-in lg:col-span-5 lg:pb-2 lg:pl-8" style={d(260)}>
                   {lead && <p className="sg-lead">{lead}</p>}
                   {actions && <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{actions}</div>}
                 </div>

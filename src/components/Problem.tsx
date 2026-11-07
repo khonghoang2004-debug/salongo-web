@@ -91,7 +91,7 @@ export async function Problem() {
                 key={index}
                 className="space-y-4 sg-card sg-card-hover p-6 sm:p-8"
               >
-                <div className="sg-icon-tile size-14 rounded-xl">
+                <div className="sg-icon-tile size-14">
                   {isComposite ? (
                     <IconOrComponent />
                   ) : (

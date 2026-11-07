@@ -22,9 +22,9 @@ export async function ProblemSolutionResult() {
           {indices.map((i) => (
             <div
               key={i}
-              className="rounded-xl border border-line bg-sand p-8 shadow-sg-sm"
+              className="rounded-[22px] border border-line bg-sand p-8 shadow-sg-sm"
             >
-              <p className="text-sm font-semibold uppercase tracking-wide text-muted">
+              <p className="text-sm font-medium text-muted">
                 {tSolution("problemLabel")}
               </p>
               <h3 className="mt-2 text-lg font-bold text-ink">
@@ -53,7 +53,7 @@ export async function ProblemSolutionResult() {
           ))}
         </div>
 
-        <div className="sg-section-tint mt-10 rounded-xl p-8 text-center ring-1 ring-brand-100 lg:mt-14">
+        <div className="sg-section-tint mt-10 rounded-[22px] p-8 text-center ring-1 ring-brand-100 lg:mt-14">
           <h3 className="text-xl font-bold text-ink">
             {tSolution("title")}
           </h3>

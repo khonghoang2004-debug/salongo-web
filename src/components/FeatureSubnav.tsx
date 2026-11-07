@@ -36,11 +36,11 @@ export function FeatureSubnav({ items, label }: { items: Item[]; label: string }
   return (
     <nav
       aria-label={label}
-      className="sticky top-[65px] z-30 lg:top-[73px] border-b border-line bg-white"
+      className="sticky top-16 z-30 border-b border-line bg-white lg:top-[72px]"
     >
       <div
         ref={listRef}
-        className="mx-auto flex max-w-[1200px] gap-1.5 overflow-x-auto px-4 py-2.5 [scrollbar-width:none] sm:px-6 lg:justify-center lg:px-8"
+        className="no-scrollbar mx-auto flex max-w-[1200px] gap-1.5 overflow-x-auto px-4 py-2 sm:px-6 lg:justify-center lg:px-8"
       >
         {items.map(({ id, anchor, label: text }) => {
           const Icon = FEATURE_ICONS[id];
@@ -51,8 +51,8 @@ export function FeatureSubnav({ items, label }: { items: Item[]; label: string }
               href={`#${anchor}`}
               data-anchor={anchor}
               aria-current={on ? "true" : undefined}
-              className={`flex shrink-0 items-center gap-1.5 rounded-md px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${
-                on ? "bg-brand-50 text-brand-700 ring-1 ring-brand-200" : "text-muted hover:bg-sand hover:text-ink"
+              className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-medium transition-colors duration-200 ${
+                on ? "bg-brand-700 text-white" : "text-ink/70 hover:bg-nude hover:text-ink"
               }`}
             >
               <Icon className="size-4" aria-hidden />

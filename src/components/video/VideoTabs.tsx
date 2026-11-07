@@ -32,7 +32,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
 
   return (
     <div data-reveal className="mt-7 lg:mt-12 lg:grid lg:grid-cols-12 lg:gap-10">
-      <div ref={chips} className="relative -mx-3 overflow-x-auto px-3 pb-1 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:hidden" role="tablist">
+      <div ref={chips} className="no-scrollbar relative -mx-4 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 lg:hidden" role="tablist">
         <div className="flex w-max gap-2">
           {items.map((it, i) => (
             <button
@@ -41,7 +41,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
               role="tab"
               aria-selected={i === active}
               onClick={() => setActive(i)}
-              className={`min-h-11 whitespace-nowrap rounded-md border px-4 text-sm font-medium transition-colors ${
+              className={`min-h-11 whitespace-nowrap rounded-full border px-4 text-sm font-medium transition-colors ${
                 i === active ? "border-brand-700 bg-brand-700 text-white" : "border-line bg-white text-ink/80"
               }`}
             >
@@ -63,12 +63,12 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
                 role="tab"
                 aria-selected={on}
                 onClick={() => setActive(i)}
-                className={`group flex w-full items-center gap-4 rounded-xl border px-4 py-4 text-left transition-all ${
-                  on ? "border-brand-700/25 bg-white shadow-[0_1px_4px_rgba(77,0,20,0.10)]" : "border-transparent hover:bg-white/70"
+                className={`group flex w-full items-center gap-4 rounded-2xl border px-4 py-3.5 text-left transition-colors ${
+                  on ? "border-line bg-white" : "border-transparent hover:bg-white/60"
                 }`}
               >
                 <span
-                  className={`flex size-11 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                  className={`flex size-11 shrink-0 items-center justify-center rounded-full transition-colors ${
                     on ? "bg-brand-700 text-white" : "bg-white text-brand-700 ring-1 ring-line"
                   }`}
                   aria-hidden

@@ -17,7 +17,7 @@ export async function SectionPricingWhoIsFor() {
         <div data-stagger className="mt-7 grid border-t lg:mt-12 border-line md:grid-cols-3 md:divide-x md:divide-line">
           {CARDS.map(({ planKey, titleKey, descKey }) => (
             <div key={planKey} className="border-b border-line py-8 md:border-b-0 md:px-6 md:first:pl-0 md:last:pr-0 lg:px-8">
-              <p className="inline-flex rounded-md bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700">{tPricing(planKey)}</p>
+              <p className="inline-flex rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700">{tPricing(planKey)}</p>
               <h3 className="mt-5 text-lg font-semibold tracking-[-0.01em] text-ink">{t(titleKey)}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{t(descKey)}</p>
             </div>

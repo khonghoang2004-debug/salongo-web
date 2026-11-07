@@ -26,12 +26,12 @@ export async function PricingComparisonTable() {
   const planNames = [tPricing("plan1Name"), tPricing("plan2Name"), tPricing("plan3Name")];
 
   return (
-    <section className="sg-section bg-[#FBF7F7]">
+    <section className="sg-section bg-nude">
       <div className="sg-container">
         <h2 className="sg-h2">{t("compareTitle")}</h2>
         <p className="sg-lead mt-4 max-w-2xl">{t("compareLead")}</p>
 
-        <div data-reveal className="mt-10 overflow-hidden rounded-xl border border-line bg-white">
+        <div data-reveal className="mt-10 overflow-hidden rounded-[22px] border border-line bg-white">
           <table className="w-full border-collapse text-left text-[13px] sm:text-sm">
             <thead>
               <tr className="border-b border-line">
@@ -45,10 +45,10 @@ export async function PricingComparisonTable() {
             </thead>
             <tbody>
               {LIMITS.map((row) => (
-                <tr key={row.key} className="border-b border-line bg-brand-50/60">
+                <tr key={row.key} className="border-b border-line bg-nude">
                   <td className="px-3 py-3.5 font-semibold text-ink sm:px-5 sm:py-4">{t(row.key)}</td>
                   {row.values.map((n, i) => (
-                    <td key={i} className="px-1 py-3.5 text-center font-display text-base font-semibold text-brand-700 sm:px-4 sm:py-4 sm:text-lg">
+                    <td key={i} className="px-1 py-3.5 text-center font-display text-base font-medium text-brand-700 sm:px-4 sm:py-4 sm:text-xl">
                       {n ?? t("unlimited")}
                     </td>
                   ))}

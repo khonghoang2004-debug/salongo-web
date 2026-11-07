@@ -109,7 +109,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
           <aside className="lg:col-span-4">
             <div className="lg:sticky lg:top-24">
               <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("shotAlt")} className="mx-auto max-w-[260px]" />
-              <div className="mt-6 rounded-xl border border-line bg-[#FBF7F7] p-5">
+              <div className="mt-6 rounded-xl border border-line bg-nude p-5">
                 <p className="font-semibold text-ink">{t("boxTitle")}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{t("boxText")}</p>
                 <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 w-full py-3 text-sm">
@@ -124,7 +124,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="sg-section bg-[#FBF7F7]">
+      <section className="sg-section bg-nude">
         <div className="sg-container max-w-[860px]">
           <h2 className="sg-h2">{t("faqTitle")}</h2>
           <div className="mt-6 border-t border-line">

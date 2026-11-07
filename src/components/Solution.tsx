@@ -42,7 +42,7 @@ const ITEM_ICONS = [
 ] as const;
 
 const iconBoxClass =
-  "flex size-14 shrink-0 items-center justify-center sg-icon-tile rounded-xl";
+  "flex size-14 shrink-0 items-center justify-center sg-icon-tile";
 export async function Solution() {
   const t = await getTranslations("solution");
 

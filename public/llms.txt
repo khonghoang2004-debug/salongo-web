@@ -1,18 +1,18 @@
 # SalonGo
 
-> SalonGo is salon management software for nail, hair, lash and beauty salons in Europe, built for Vietnamese-run salons (app in Vietnamese, Czech, Slovak, English, German and French). It runs in the browser, as a desktop app for Windows and macOS, and in the phone browser. Every plan has every feature; plans differ only by staff per location and number of locations.
+> SalonGo is salon management software for nail, hair, lash and beauty salons in Europe, built for Vietnamese-run salons (app in Vietnamese, Czech, Slovak, English, German and French). It runs in the browser, as a desktop app for Windows and macOS (Mac build signed), and in the phone browser. An iPhone app for signing in is coming to the App Store. Client booking page languages: Czech, Slovak, English, German, French. Every plan has every feature; plans differ only by staff per location and number of locations.
 
 Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://app.salongo.eu. Support in Vietnamese and Czech: salongosupport@gmail.com, +420 728 568 807.
 
 ## Features
 - Online booking page for each salon (client picks service, staff and a free time; the salon confirms in the app).
-- Appointment calendar per staff member and as a list; email reminders to clients 24 h and 1 h before.
-- Checkout (POS): cash, card, bank transfer, tips recorded on the invoice; invoices exported to PDF.
-- Clients: profiles, visit history, VIP rules, membership/points program, birthdays.
-- Email marketing: 10 occasion templates (sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday), sent only to clients who agreed, with one-click unsubscribe; birthday reminders for the owner.
+- Appointment calendar per staff member and as a list, on computer and phone; auto-assign (on by default) gives unassigned bookings to the free staff member with the least work that day; email confirmations and a reminder to clients 1 h before.
+- Checkout (POS): cash, card, bank transfer with a payment QR code (QR Platba / EPC), tips recorded on the invoice; receipts for 80 mm printers; invoices exported to PDF.
+- Clients: profiles, visit history, VIP / new / lapsed filters, VIP rules, membership/points program, birthdays.
+- Email marketing: 10 occasion templates (sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday), sent only to clients who agreed, with one-click unsubscribe; birthday reminders for the owner 2 days ahead, to send a birthday offer.
 - Reports: overview, revenue by staff/service/payment method, invoices.
 - Payroll: each staff member is paid a percentage of their own revenue (optionally per service) or a fixed monthly salary; tips go to the staff member the client tipped or are split equally, as the owner chooses.
-- Staff accounts on the phone: staff see only their own schedule (view only).
+- Staff accounts on the phone: staff see only their own schedule for today and the coming days (view only); their own revenue is on a separate page only if the owner allows it. Push notifications in each user's app language.
 - Multiple locations in one owner account, with an "All salons" overview; each location has its own plan.
 
 ## Pricing (CZK per month, from the app)

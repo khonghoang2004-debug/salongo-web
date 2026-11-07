@@ -26,7 +26,7 @@ export async function SectionRenew() {
           <ol className="mt-6 space-y-4 lg:mt-8 lg:space-y-5">
             {STEPS.map(({ i, Icon }) => (
               <li key={i} className="flex gap-4">
-                <span className="sg-icon-tile size-10 shrink-0 rounded-xl" aria-hidden>
+                <span className="sg-icon-tile size-10 shrink-0" aria-hidden>
                   <Icon className="size-5" />
                 </span>
                 <div>

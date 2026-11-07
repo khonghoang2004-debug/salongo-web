@@ -43,7 +43,7 @@ export async function HomeHero() {
             {t("badge")}
           </p>
 
-          <h1 className="mt-5 font-display text-[2.625rem] font-medium leading-[1.1] tracking-[-0.02em] text-ink sm:text-[3.75rem] lg:mt-7 lg:text-[4rem] xl:text-[4.5rem]">
+          <h1 className="mt-5 font-display text-[2.625rem] font-semibold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[3.75rem] lg:mt-7 lg:text-[4rem] xl:text-[4.5rem]">
             <span className="block text-balance">{words(t("title1"))}</span>
             <span className="block text-balance">{words(t("titleAccent"))}</span>
           </h1>

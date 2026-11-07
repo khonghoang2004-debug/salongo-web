@@ -10,8 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        /* Tiêu đề: Noto Serif Display (chữ có chân tương phản cao), dự phòng serif hệ thống */
-        display: ["var(--font-serif)", "Georgia", "serif"],
+        display: ["var(--font-display)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
         "sg-sm": "0 1px 2px rgba(34, 22, 26, 0.05)",

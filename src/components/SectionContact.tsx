@@ -118,7 +118,7 @@ export async function SectionContact() {
             <Clock className="size-3.5" aria-hidden />
             24h
           </span>
-          <h2 className="mt-6 font-display text-2xl font-medium tracking-[-0.02em] sm:text-[1.75rem]">{t("quickSupportTitle")}</h2>
+          <h2 className="mt-6 font-display text-2xl font-semibold tracking-[-0.02em] sm:text-[1.75rem]">{t("quickSupportTitle")}</h2>
           <p className="mt-2 text-sm leading-relaxed text-white/70">{t("response24h")}</p>
           <ul className="mt-6 space-y-3 border-t border-white/10 pt-6">
             {supports.map((label) => (

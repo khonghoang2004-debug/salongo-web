@@ -44,7 +44,7 @@ export async function DownloadCard() {
   return (
     <div className="flex h-full flex-col rounded-[28px] border border-line bg-white p-6 sm:p-10">
       <p className="text-[15px] font-medium text-brand-700">{t("eyebrow")}</p>
-      <h2 className="mt-3 font-display text-[2rem] font-medium leading-[1.14] tracking-[-0.015em] text-ink text-balance sm:text-[2.5rem]">
+      <h2 className="mt-3 font-display text-[2rem] font-semibold leading-[1.14] tracking-[-0.015em] text-ink text-balance sm:text-[2.5rem]">
         {t("title")}
       </h2>
       <p className="mt-3 text-[15px] leading-relaxed text-muted">{t("subtitle")}</p>

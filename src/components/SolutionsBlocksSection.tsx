@@ -21,7 +21,7 @@ export async function SolutionsBlocksSection() {
           {GROUPS.map(({ groupTitleKey, indices }, gi) => (
             <div key={groupTitleKey} data-reveal className="grid gap-5 border-t border-line pt-8 lg:grid-cols-12 lg:gap-10">
               <div className="lg:col-span-3">
-                <span className="font-display text-sm font-medium text-brand-700">0{gi + 1}</span>
+                <span className="font-display text-sm font-semibold text-brand-700">0{gi + 1}</span>
                 <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-ink lg:sticky lg:top-24">{t(groupTitleKey)}</h3>
               </div>
               <div className="space-y-4 lg:col-span-9">

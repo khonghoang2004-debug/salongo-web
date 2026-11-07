@@ -32,7 +32,7 @@ export async function HowItWorks() {
                   aria-hidden
                 />
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-[2.5rem] font-medium leading-none tracking-[-0.01em] text-brand-700">
+                  <span className="font-display text-[2.5rem] font-semibold leading-none tracking-[-0.01em] text-brand-700">
                     0{index + 1}
                   </span>
                   <Icon className="size-6 text-ink/40" aria-hidden />

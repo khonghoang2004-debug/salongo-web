@@ -48,7 +48,7 @@ export async function PricingComparisonTable() {
                 <tr key={row.key} className="border-b border-line bg-nude">
                   <td className="px-3 py-3.5 font-semibold text-ink sm:px-5 sm:py-4">{t(row.key)}</td>
                   {row.values.map((n, i) => (
-                    <td key={i} className="px-1 py-3.5 text-center font-display text-base font-medium text-brand-700 sm:px-4 sm:py-4 sm:text-xl">
+                    <td key={i} className="px-1 py-3.5 text-center font-display text-base font-semibold text-brand-700 sm:px-4 sm:py-4 sm:text-xl">
                       {n ?? t("unlimited")}
                     </td>
                   ))}

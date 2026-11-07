@@ -45,7 +45,7 @@ export async function SectionAbout() {
                   <span className="sg-icon-tile size-12">
                     <Icon className="size-6" strokeWidth={2} aria-hidden />
                   </span>
-                  <span className="font-display text-sm font-medium text-ink/30">0{i + 1}</span>
+                  <span className="font-display text-sm font-semibold text-ink/30">0{i + 1}</span>
                 </div>
                 <p className="mt-8 text-lg font-medium leading-relaxed text-ink">{t(key)}</p>
               </div>
@@ -64,7 +64,7 @@ export async function SectionAbout() {
             <ol className="border-t border-line lg:col-span-7">
               {roadmapItems.map(({ key, Icon }, i) => (
                 <li key={key} className="flex items-center gap-4 border-b border-line py-5 sm:gap-5">
-                  <span className="font-display text-2xl font-medium tracking-[-0.01em] text-brand-700">0{i + 1}</span>
+                  <span className="font-display text-2xl font-semibold tracking-[-0.01em] text-brand-700">0{i + 1}</span>
                   <p className="flex-1 font-medium leading-relaxed text-ink">{t(key)}</p>
                   <Icon className="size-5 shrink-0 text-ink/35" strokeWidth={2} aria-hidden />
                 </li>

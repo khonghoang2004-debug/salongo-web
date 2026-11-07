@@ -20,7 +20,7 @@ export async function HomePricingTeaser() {
       <div className="sg-container grid gap-5 lg:grid-cols-12 lg:gap-6">
         <div data-reveal className="flex flex-col rounded-[28px] bg-brand-700 p-6 text-white sm:p-10 lg:col-span-7">
           <p className="text-[15px] font-medium text-white/75">{h("priceEyebrow")}</p>
-          <h2 className="mt-3 font-display text-[2rem] font-medium leading-[1.14] tracking-[-0.015em] text-balance sm:text-[2.5rem]">{h("priceTitle")}</h2>
+          <h2 className="mt-3 font-display text-[2rem] font-semibold leading-[1.14] tracking-[-0.015em] text-balance sm:text-[2.5rem]">{h("priceTitle")}</h2>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-white/80 sm:text-base">{h("priceLead")}</p>
 
           <dl className="mt-7 border-t border-white/20">

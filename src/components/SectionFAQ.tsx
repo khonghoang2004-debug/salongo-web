@@ -39,7 +39,7 @@ export function SectionFAQ() {
           {GROUPS.map((group, gi) => (
             <div key={group.titleKey} data-reveal className="grid gap-6 lg:grid-cols-12 lg:gap-12">
               <div className="lg:col-span-4">
-                <span className="font-display text-sm font-medium text-brand-700">0{gi + 1}</span>
+                <span className="font-display text-sm font-semibold text-brand-700">0{gi + 1}</span>
                 <h2 className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-ink">{t(group.titleKey)}</h2>
               </div>
               <div className="border-t border-line lg:col-span-8">

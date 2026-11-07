@@ -13,7 +13,8 @@ const ITEMS = [
   { id: "s4", anchor: "nhan-vien", img: A + "nhan-vien-noi-dung.webp", mobile: A + "m-nv-hom-nay.webp" },
   { id: "s5", anchor: "tinh-tien", img: A + "tinh-tien-noi-dung.webp", mobile: A + "m-tinh-tien.webp" },
   { id: "s6", anchor: "khach-hang", img: A + "khach-hang-noi-dung.webp", mobile: A + "m-khach-hang.webp" },
-  { id: "s7", anchor: "bao-cao", img: A + "tong-quan-30-ngay-noi-dung.webp", mobile: A + "m-tong-quan.webp" },
+  // 20:00 chốt sổ: doanh thu của chính ngày đó (Tổng quan "Hôm nay"), không phải 30 ngày
+  { id: "s7", anchor: "bao-cao", img: A + "tong-quan-noi-dung.webp", mobile: A + "m-tong-quan.webp" },
   { id: "s8", anchor: "tinh-luong", img: A + "tinh-luong-noi-dung.webp", mobile: A + "m-tinh-luong.webp" },
 ] as const;
 

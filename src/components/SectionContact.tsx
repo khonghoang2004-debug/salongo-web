@@ -38,7 +38,7 @@ export async function SectionContact() {
   return (
     <section className="sg-section">
       <div className="sg-container grid gap-4 sm:gap-5 lg:grid-cols-12">
-        <div data-reveal className="rounded-xl border border-line bg-white p-5 sm:p-8 lg:p-10 lg:col-span-7">
+        <div data-reveal className="rounded-[22px] border border-line bg-white p-5 sm:p-8 lg:p-10 lg:col-span-7">
           <h2 className="sg-h2-sm">{t("companyInfo")}</h2>
 
           <dl className="mt-6 divide-y divide-line">
@@ -47,7 +47,7 @@ export async function SectionContact() {
                 <Mail className="size-5" aria-hidden />
               </span>
               <div className="min-w-0">
-                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{t("emailLabel")}</dt>
+                <dt className="text-sm font-medium text-muted">{t("emailLabel")}</dt>
                 <dd className="mt-1">
                   <CopyEmailButton />
                 </dd>
@@ -58,7 +58,7 @@ export async function SectionContact() {
                 <Phone className="size-5" aria-hidden />
               </span>
               <div className="min-w-0">
-                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{t("phoneLabel")}</dt>
+                <dt className="text-sm font-medium text-muted">{t("phoneLabel")}</dt>
                 <dd className="mt-1">
                   <a
                     href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
@@ -74,7 +74,7 @@ export async function SectionContact() {
                 <MessageCircle className="size-5" aria-hidden />
               </span>
               <div className="min-w-0">
-                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{t("socialLabel")}</dt>
+                <dt className="text-sm font-medium text-muted">{t("socialLabel")}</dt>
                 <dd className="mt-2 flex items-center gap-2">
                   <a
                     href={CONTACT_FACEBOOK}
@@ -113,8 +113,8 @@ export async function SectionContact() {
           </div>
         </div>
 
-        <div data-reveal="right" className="sg-dark relative overflow-hidden rounded-xl p-5 sm:p-8 lg:p-10 lg:col-span-5">
-          <span className="inline-flex items-center gap-2 rounded-md bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
+        <div data-reveal="right" className="sg-dark relative overflow-hidden rounded-[22px] p-5 sm:p-8 lg:p-10 lg:col-span-5">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
             <Clock className="size-3.5" aria-hidden />
             24h
           </span>

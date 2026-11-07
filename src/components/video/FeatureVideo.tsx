@@ -31,7 +31,7 @@ export function FeatureVideo({
 
   return (
     <div
-      className={`relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#F6EEF0] shadow-[0_2px_10px_rgba(77,0,20,0.10)] ring-1 ring-[#ECE6E7] md:aspect-video sm:rounded-xl ${className}`}
+      className={`relative aspect-[4/5] w-full overflow-hidden rounded-[22px] bg-nude-deep shadow-sg-lg ring-1 ring-line md:aspect-video ${className}`}
     >
       {src ? (
         <video
@@ -42,7 +42,7 @@ export function FeatureVideo({
           autoPlay
           playsInline
           preload="auto"
-          className="absolute inset-0 size-full bg-[#F6EEF0] object-contain"
+          className="absolute inset-0 size-full bg-nude-deep object-contain"
           aria-label={title}
         />
       ) : (
@@ -56,19 +56,19 @@ export function FeatureVideo({
               height={720}
               loading={priority ? "eager" : "lazy"}
               decoding="async"
-              className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.015]"
+              className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.015] motion-reduce:transition-none"
             />
           </picture>
           <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
-            <span className="relative flex size-[72px] items-center justify-center rounded-full bg-brand-700 text-white shadow-[0_4px_12px_rgba(128,0,32,0.35)] ring-[5px] ring-white transition-transform duration-200 group-hover:scale-105 sm:size-20">
+            <span className="relative flex size-[72px] items-center justify-center rounded-full bg-brand-700 text-white ring-[5px] ring-white transition-transform duration-200 group-hover:scale-105 motion-reduce:transition-none sm:size-20">
               <Play className="ml-1 size-8 fill-current sm:size-9" aria-hidden />
             </span>
           </span>
           <span className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center gap-2 sm:bottom-5 sm:left-5">
-            <span className="rounded-md bg-white px-3 py-1.5 text-[13px] font-semibold text-ink shadow-[0_1px_3px_rgba(0,0,0,0.15)]">
-              {playLabel} · {video.duration}
+            <span className="rounded-full bg-white px-3.5 py-1.5 text-[13px] font-semibold text-ink shadow-sg-sm">
+              {playLabel} <span className="ml-1 font-medium text-muted">{video.duration}</span>
             </span>
-            {note && <span className="rounded-md bg-ink px-3 py-1.5 text-[12px] font-medium text-white">{note}</span>}
+            {note && <span className="rounded-full bg-ink px-3.5 py-1.5 text-[12px] font-medium text-white">{note}</span>}
           </span>
         </button>
       )}

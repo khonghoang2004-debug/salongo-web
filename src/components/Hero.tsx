@@ -97,7 +97,7 @@ export async function Hero() {
         </div>
 
         {/* Dải số liệu */}
-        <dl className="mt-16 grid grid-cols-2 overflow-hidden rounded-xl border border-line bg-white shadow-sg-md sm:mt-20 lg:grid-cols-4">
+        <dl className="mt-10 grid grid-cols-2 overflow-hidden rounded-xl border border-line bg-white shadow-sg-md sm:mt-12 lg:grid-cols-4">
           {stats.map(({ value, label }, i) => (
             <div
               key={value}

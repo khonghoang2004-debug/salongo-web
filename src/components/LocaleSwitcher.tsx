@@ -96,7 +96,7 @@ export function LocaleSwitcher({ compact = false, up = false }: { compact?: bool
 
   if (!mounted) {
     return (
-      <div className={`h-10 shrink-0 animate-pulse rounded-md border border-line bg-[#f3eeee] ${compact ? "w-[76px]" : "w-[150px]"}`} />
+      <div className={`h-11 shrink-0 animate-pulse rounded-full border border-line bg-nude ${compact ? "w-[76px]" : "w-[150px]"}`} />
     );
   }
 
@@ -105,7 +105,7 @@ export function LocaleSwitcher({ compact = false, up = false }: { compact?: bool
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-10 items-center gap-2 rounded-md border border-line bg-white px-3 text-sm font-medium text-ink/80 transition-colors hover:border-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/40"
+        className="flex h-11 items-center gap-2 rounded-full border border-line bg-white px-3.5 text-sm font-medium text-ink/80 transition-colors hover:border-ink"
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label="Select language"
@@ -125,14 +125,14 @@ export function LocaleSwitcher({ compact = false, up = false }: { compact?: bool
       {open && (
         <ul
           role="listbox"
-          className={`sg-pop absolute z-50 min-w-[170px] rounded-xl border border-line bg-white p-1.5 shadow-sg-lg ${up ? "bottom-full left-0 mb-2" : "right-0 top-full mt-2"}`}
+          className={`sg-pop absolute z-50 min-w-[170px] rounded-2xl border border-line bg-white p-1.5 shadow-sg-lg ${up ? "bottom-full left-0 mb-2" : "right-0 top-full mt-2"}`}
         >
           {locales.map((loc) => (
             <li key={loc.code} role="option" aria-selected={locale === loc.code}>
               <button
                 type="button"
                 onClick={() => handleSelect(loc.code)}
-                className={`flex w-full items-center gap-2 rounded-xl px-3 py-2.5 text-left text-sm transition-colors ${
+                className={`flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-left text-sm transition-colors ${
                   locale === loc.code
                     ? "bg-brand-50 font-medium text-brand-700"
                     : "text-ink/80 hover:bg-sand"

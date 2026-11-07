@@ -82,7 +82,7 @@
     "q13": "I have several locations. Is that OK?",
     "a13": "Yes. One owner account runs every location and switches from the menu. Each location has its own plan and end date.",
     "q14": "Which languages does the app have?",
-    "a14": "Vietnamese, Czech, Slovak, English, German and French, for both the salon app and the client booking page.",
+    "a14": "The salon app is in Vietnamese, Czech, Slovak, English, German and French. The client booking page is in Czech, Slovak, English, German and French.",
     "q15": "How do I send a marketing email to clients?",
     "a15": "Go to Clients → Marketing, pick one of 10 occasion templates, edit the text, add an offer if you like, preview and send. It only reaches clients with an email who agreed to offers; one campaign per salon per day. Included in every plan."
   },
@@ -95,7 +95,7 @@
     "why2": "Complex payroll calculations, errors and disputes between owners and staff.",
     "why3": "Double bookings, lost customers, hard to track revenue when away.",
     "roadmapTitle": "Product roadmap",
-    "roadmap1": "Smarter booking: multi-channel reminders, SMS integration.",
+    "roadmap1": "SalonGo apps for iPhone and Android, for owners and staff.",
     "roadmap2": "Deeper reports: compare periods and salons.",
     "roadmap3": "Multi-country and multi-language expansion."
   },
@@ -249,7 +249,7 @@
     "quickLinks": "Quick links",
     "home": "Home",
     "rights": "All rights reserved.",
-    "tagline": "Grow your business with SalonGo — the all-in-one SaaS platform for modern teams."
+    "tagline": "Salon software made for Vietnamese-run salons in Europe."
   },
   "pages": {
     "homeTitle": "Salon management app: booking, checkout, payroll",
@@ -285,7 +285,7 @@
     "proof1": "150-day free trial, no card needed",
     "proof2": "Support in Vietnamese and Czech",
     "proof3": "The app speaks 6 languages",
-    "imageAlt": "SalonGo Overview screen on a computer",
+    "imageAlt": "SalonGo calendar by staff member on a computer",
     "revenueToday": "Revenue today",
     "stat1Value": "150 days",
     "stat1Label": "free trial",
@@ -301,16 +301,19 @@
     "trial1": "150 days free",
     "trial2": "No card required",
     "trial3": "Setup help included",
-    "imageAltPhone": "SalonGo Overview screen on a phone"
+    "imageAltPhone": "Staff calendar on the phone"
   },
   "download": {
-    "eyebrow": "Desktop app",
-    "title": "There’s a desktop app too",
-    "subtitle": "Keep it open at the front desk. Sign in with the same SalonGo account.",
+    "eyebrow": "Computer and phone",
+    "title": "At the desk, on a computer or a phone",
+    "subtitle": "One account on every device. Keep the desktop app open at the front desk.",
     "windows": "Download for Windows",
     "mac": "Download for Mac",
     "for": "Download for",
-    "note": "Always the latest version"
+    "note": "Always the latest version",
+    "macSigned": "The Mac app is signed with Apple.",
+    "phone": "On a phone, open app.salongo.eu in the browser for bookings, checkout and revenue.",
+    "ios": "An iPhone app for signing in to existing accounts is coming to the App Store."
   },
   "trust": {
     "eyebrow": "Why SalonGo",
@@ -416,7 +419,7 @@
     "title": "Core features",
     "subtitle": "Everything you need for efficient salon operations – on one platform.",
     "item1Title": "Smart appointments",
-    "item1Desc": "Calendar per staff, no time clashes, automatic reminders via SMS or Zalo.",
+    "item1Desc": "Calendar by staff member, no double bookings, email confirmations and reminders for clients.",
     "item2Title": "POS & payments",
     "item2Desc": "Cash, transfer, on account – standard e-invoices, easy tracking.",
     "item3Title": "Automatic pay calculation",
@@ -468,10 +471,10 @@
         "p1Text": "Add it to Facebook, Instagram, Google Maps or send it by message.",
         "p2Title": "Booking in 4 steps",
         "p2Text": "Service, time, details, summary. No app download or account needed.",
-        "p3Title": "A favourite stylist or anyone free",
-        "p3Text": "Customers choose their stylist or let the salon assign whoever is free.",
-        "p4Title": "Approve with one tap",
-        "p4Text": "New bookings show up in the app at once; confirm or decline in one tap.",
+        "p3Title": "Pick a staff member, or let the app choose",
+        "p3Text": "Clients pick a favourite or Anyone; auto-assign gives the booking to whoever is free and least busy.",
+        "p4Title": "Confirm and assign in one box",
+        "p4Text": "New bookings show up in the app with a phone notification. Tap Confirm, then pick staff or change the time in the same box.",
         "tab1": "Customer page",
         "tab2": "Approve in app"
       },
@@ -481,25 +484,25 @@
         "title": "A clear calendar for every staff member",
         "desc": "The salon's whole day on one screen: who is free, who is fully booked, and which bookings still need someone.",
         "p1Title": "Staff view",
-        "p1Text": "One column per staff member by hour, so you see who is free at a glance.",
-        "p2Title": "List view",
-        "p2Text": "Bookings grouped by time slot, with unassigned ones highlighted.",
+        "p1Text": "One column per staff member by hour, on computer and phone, so you see who is free at a glance.",
+        "p2Title": "Auto-assign",
+        "p2Text": "On by default: bookings without a staff choice go to whoever is free and least busy that day. Your own choice always wins.",
         "p3Title": "Only free times are shown",
         "p3Text": "The booking page only offers times when staff are free.",
-        "p4Title": "Email reminders",
-        "p4Text": "Clients with an email get automatic reminders 24 hours and 1 hour before.",
+        "p4Title": "Confirmation and reminder emails",
+        "p4Text": "Clients with an email get a confirmation and a reminder 1 hour before.",
         "tab1": "By staff",
         "tab2": "List"
       },
       "checkout": {
         "short": "Checkout",
-        "tile": "Take payment and create invoices",
+        "tile": "Cash, card, transfer with QR",
         "title": "Fast checkout at the front desk",
         "desc": "Pick the service, the staff member and how the customer pays, and the invoice is done. Every payment goes straight into your reports.",
         "p1Title": "Cash, card, bank transfer",
-        "p1Text": "Record how each customer paid, so the till matches at closing.",
-        "p2Title": "Automatic invoices",
-        "p2Text": "Every payment creates an invoice you can look up later.",
+        "p1Text": "For bank transfers the app shows a QR code with the amount, ready to scan.",
+        "p2Title": "Receipts on 80 mm printers",
+        "p2Text": "Every payment creates a receipt you can print on an 80 mm receipt printer and look up later.",
         "p3Title": "Tips for staff",
         "p3Text": "Tips are recorded on the invoice and shared the way the owner chooses.",
         "p4Title": "No double entry",
@@ -513,8 +516,8 @@
         "desc": "Every customer has a profile: visits, last visit, upcoming bookings and total spend. Regulars are recognised instantly.",
         "p1Title": "A profile for every customer",
         "p1Text": "Service history and spending in one place.",
-        "p2Title": "Find anyone in seconds",
-        "p2Text": "Search by name, phone or email.",
+        "p2Title": "VIP, new and lapsed clients",
+        "p2Text": "Filter each group in a tap, including birthdays this month.",
         "p3Title": "Automatic VIPs",
         "p3Text": "Set the rules once and VIP customers are recognised automatically.",
         "p4Title": "Membership program",
@@ -549,7 +552,7 @@
         "p3Title": "Invoice management",
         "p3Text": "Totals by cash, card and transfer; invoices export to PDF.",
         "p4Title": "Data export",
-        "p4Text": "Revenue and payroll export to files, no manual totals.",
+        "p4Text": "Export revenue and payroll to Excel, CSV or PDF, no manual totals.",
         "tab1": "Overview",
         "tab2": "Revenue",
         "tab3": "Invoices"
@@ -566,7 +569,7 @@
         "p3Title": "Tips shared your way",
         "p3Text": "Each tip goes to the staff member the client tipped, or all tips in the period are split equally.",
         "p4Title": "Payroll per period",
-        "p4Text": "Pay, revenue, tips and invoices per staff member; export in one tap.",
+        "p4Text": "Pay, revenue, tips and receipts per staff member; export to Excel, CSV or PDF.",
         "tab1": "Payroll"
       },
       "staff": {
@@ -577,15 +580,15 @@
         "p1Title": "Invite by email",
         "p1Text": "Tap Invite on the staff profile; they open the email, set a password and they're in.",
         "p2Title": "My schedule",
-        "p2Text": "Today and the coming days, with bookings, done and remaining.",
+        "p2Text": "Today and the coming days, with bookings, done and remaining, plus a notification for each new booking.",
         "p3Title": "My revenue",
-        "p3Text": "The Revenue tab: the day's total, clients served, average per client and every paid client. Earlier days are one tap away.",
+        "p3Text": "A separate Revenue page: the day's total, clients, average per client and every paid visit. Earlier days too.",
         "p4Title": "The owner decides",
         "p4Text": "When inviting, the owner picks Schedule only or Schedule + revenue and can change it any time. Staff never see the salon's revenue.",
         "tab1": "Staff",
-        "shot1": "Today's schedule + revenue",
-        "shot2": "My revenue",
-        "shot3": "Owner picks what staff see"
+        "shot1": "Today's schedule",
+        "shot2": "My revenue, when allowed",
+        "shot3": "You choose what staff see"
       },
       "branches": {
         "short": "Multi-location",
@@ -605,9 +608,9 @@
       },
       "marketing": {
         "short": "Marketing",
-        "tile": "Offer emails, birthday reminders",
-        "title": "Email marketing & birthday reminders",
-        "desc": "Send offer emails in your salon's name to clients who agreed, from 10 occasion templates. The app also reminds you of client birthdays.",
+        "tile": "Offer emails, birthday offers",
+        "title": "Email marketing & birthday offers",
+        "desc": "Send offer emails in your salon's name to clients who agreed, from 10 occasion templates. The app flags client birthdays 2 days ahead so you can send wishes with an offer.",
         "p1Title": "10 occasion templates",
         "p1Text": "Sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday.",
         "p2Title": "Offer and expiry",
@@ -618,7 +621,7 @@
         "p4Text": "Tick consent in the client profile; each email has a one-click unsubscribe link.",
         "tab1": "Christmas template",
         "tab2": "Women's Day template",
-        "tab3": "Birthday reminder"
+        "tab3": "Birthday offer"
       }
     },
     "staffDemo": {
@@ -751,16 +754,6 @@
     "whyCard2Desc": "Transparent % calculation per staff revenue – owners and staff both at ease.",
     "whyCard3Title": "Know if your salon is profitable",
     "whyCard3Desc": "Revenue reports by day, month, per staff – business decisions based on real data.",
-    "testimonialsHeading": "Over 1000+ salons use SalonGo every day.",
-    "testimonial1Quote": "Using SalonGo since opening – no more forgotten appointments or double bookings. Online booking is very convenient.",
-    "testimonial1Name": "Huong",
-    "testimonial1Role": "Salon owner, Prague",
-    "testimonial2Quote": "Automatic payroll, no more disputes with staff. I manage remotely and feel at ease.",
-    "testimonial2Name": "Tuan",
-    "testimonial2Role": "Salon owner, Berlin",
-    "testimonial3Quote": "Clear reports, I know profit and loss each month. Investing in the right services.",
-    "testimonial3Name": "Lan",
-    "testimonial3Role": "Salon owner, Brno",
     "ctaTitle": "Ready to run your salon more professionally?",
     "ctaSubtext": "150-day (5-month) free trial. No card required.",
     "ctaButton": "Get started"
@@ -817,7 +810,7 @@
   },
   "home2": {
     "notifTitle": "New booking",
-    "notifText": "Linh · Gel nails · 2:30 PM",
+    "notifText": "Denisa booked gel nails, today 14:30",
     "notifAction": "Approve",
     "staffTitle": "Earnings this month",
     "staffName": "Staff: Mai",
@@ -829,10 +822,10 @@
     "featureMore": "Learn more",
     "langEyebrow": "Made for Vietnamese owners",
     "langTitle": "You work in Vietnamese. Clients book in theirs.",
-    "langLead": "Owners and staff use the app in Vietnamese. Clients book in Czech, Slovak, German, English, French or Vietnamese.",
+    "langLead": "You and your staff use the app in Vietnamese. Clients book in Czech, Slovak, German, English or French.",
     "lang1": "6 app languages: Vietnamese, Czech, Slovak, English, German, French",
     "lang2": "Clients pick their language right on the booking page",
-    "lang3": "Invoices printed in the language you choose for the salon",
+    "lang3": "Phone notifications arrive in each person's own language",
     "lang4": "Support by phone, Facebook or WhatsApp",
     "typesEyebrow": "Built for you",
     "typesTitle": "From a small studio to a salon chain",
@@ -846,8 +839,8 @@
     "type4Title": "Multi-location chains",
     "type4Text": "One account for every location, with revenue of all locations on one page.",
     "priceEyebrow": "Pricing",
-    "priceTitle": "Try it free for 150 days",
-    "priceLead": "No setup fee, no long contract. When the trial ends, pick the plan that fits your salon.",
+    "priceTitle": "150 days free, then from 199 CZK a month",
+    "priceLead": "Every plan has every feature; plans differ only in staff and locations. Pay yearly and save 10%.",
     "priceCta": "See pricing",
     "price1": "No card required",
     "price2": "Setup help in Vietnamese",
@@ -870,23 +863,23 @@
     "hlBranchShotPc": "Choosing a location on a computer",
     "hlBranchShotPhone": "Location list on a phone",
     "hlStaffEyebrow": "Staff accounts",
-    "hlStaffTitle": "Every staff member gets their own account",
-    "hlStaffLead": "The owner sends an invite and staff sign in on their own phone. They open the app and see today's clients, the times, and what they've earned so far.",
-    "hlStaff1": "My schedule: only their own bookings, today and the days ahead",
-    "hlStaff2": "Revenue tab: staff see what they earned today, by client and by service",
-    "hlStaff3": "The owner sets access: schedule only, or schedule plus their own revenue",
-    "hlStaff4": "Staff choose the app language: Vietnamese, Czech, English, German, Slovak, French",
-    "hlStaffShot1": "Today's schedule + revenue",
-    "hlStaffShot2": "My revenue",
-    "hlStaffShot3": "Owner picks what staff see",
-    "mkEyebrow": "New · Email marketing",
+    "hlStaffTitle": "Every staff member has an account on their own phone",
+    "hlStaffLead": "Invite staff by email; they set a password and they're in. Opening the app shows today's clients and times.",
+    "hlStaff1": "My schedule: only their own bookings, today and the coming days",
+    "hlStaff2": "Phone notifications for new or moved bookings, in the language they chose",
+    "hlStaff3": "Their earnings are on a separate Revenue page, shown only if you allow it",
+    "hlStaff4": "You choose Schedule only or Schedule + revenue and can change it any time. Staff never see the salon's total revenue",
+    "hlStaffShot1": "Today's schedule",
+    "hlStaffShot2": "My revenue, when allowed",
+    "hlStaffShot3": "You choose what staff see",
+    "mkEyebrow": "Email marketing",
     "mkTitle": "Send offers to your regulars right from the app",
     "mkLead": "No agency, no extra email tool. Pick a template for the occasion, edit a few lines, hit send, and clients who agreed to offers get an email in your salon's name.",
     "mk1Title": "10 occasion email templates",
     "mk2Title": "Written in 6 languages",
     "mk3Title": "Preview and test send",
     "mk4Title": "Only to clients who agreed to offers",
-    "mk5Title": "Client birthday reminders",
+    "mk5Title": "Birthday offers, flagged 2 days ahead",
     "mkCta": "See Marketing",
     "mkShotPc": "Marketing email · Christmas template",
     "mkShotCompose": "Compose",
@@ -900,7 +893,10 @@
     "tplEaster": "Easter",
     "tplMothersDay": "Mother's Day",
     "tplSummer": "Summer",
-    "tplBlackFriday": "Black Friday"
+    "tplBlackFriday": "Black Friday",
+    "notifNow": "now",
+    "notifAssigned": "Auto-assigned to Linh",
+    "mkShotBirthday": "Birthday offer"
   },
   "renew": {
     "eyebrow": "Renew plan",
@@ -915,7 +911,7 @@
     "step4Title": "Choose plan and pay",
     "step4Text": "Pick a plan, monthly or yearly, then pay by card or bank transfer, depending on what the app offers the salon.",
     "cta": "Renew plan",
-    "note": "Using the SalonGo app from the App Store or Google Play? Renew in a browser or the desktop app.",
+    "note": "Renew in a browser or the desktop app; the iPhone app is for signing in only.",
     "shotLabel": "Plan screen"
   },
   "device": {
@@ -958,7 +954,7 @@
       },
       {
         "h": "Online booking 24/7, no phone calls",
-        "p": "Each salon gets its own booking link for Facebook, Instagram or Google Maps. Clients book in Czech, German, English and more, while the owner confirms in Vietnamese. The booking page only shows times when staff are free, so there are no double bookings, and clients with an email get automatic reminders 24 hours and 1 hour before.",
+        "p": "Each salon gets its own booking link for Facebook, Instagram or Google Maps. Clients book in Czech, German, English and more, while the owner confirms and assigns staff in Vietnamese, in a single confirm box. The booking page only shows times when staff are free, so there are no double bookings, and clients with an email get a confirmation and a reminder 1 hour before.",
         "link": {
           "href": "/tinh-nang#dat-lich-online",
           "label": "See online booking"
@@ -987,7 +983,7 @@
       },
       {
         "h": "Keep regulars coming back with email marketing",
-        "p": "Clients → Marketing has 10 occasion templates such as Christmas, New Year, Valentine's Day, Women's Day, Mother's Day and Black Friday. Edit a few lines, add a discount, preview and send to clients who agreed to offers. The app also reminds you of client birthdays.",
+        "p": "Clients → Marketing has 10 occasion templates such as Christmas, New Year, Valentine's Day, Women's Day, Mother's Day and Black Friday. Edit a few lines, add a discount, preview and send to clients who agreed to offers. The app also flags client birthdays 2 days ahead so you can send wishes with an offer.",
         "link": {
           "href": "/tinh-nang#marketing",
           "label": "See email marketing"
@@ -1028,7 +1024,7 @@
       },
       {
         "q": "Which salon software suits a Vietnamese-run nail salon in Czechia?",
-        "a": "SalonGo is made for Vietnamese-run nail and beauty salons in Europe: the app is in Vietnamese, clients book in Czech, Slovak, German, English, French or Vietnamese, prices are in CZK and support speaks Vietnamese and Czech."
+        "a": "SalonGo is made for Vietnamese-run nail and beauty salons in Europe: the app is in Vietnamese, clients book in Czech, Slovak, German, English or French, prices are in CZK and support speaks Vietnamese and Czech."
       },
       {
         "q": "Do I need to install anything?",
@@ -1174,5 +1170,54 @@
     "stat3Text": "Looks great on every screen",
     "studio": "SalonGo Web Studio",
     "priceLabel": "Only"
+  },
+  "day": {
+    "kicker": "A day at the salon",
+    "title": "From the first booking to closing time",
+    "lead": "Every SalonGo feature matches something you already do each day. Whatever can run on its own, the app does for you.",
+    "all": "See all features",
+    "more": "Feature details",
+    "items": {
+      "s1": {
+        "time": "07:40",
+        "title": "Clients book on their own, even before you open",
+        "desc": "Every salon gets its own booking page. Clients pick a service and a time, fill in their details and review: 4 steps, no app to install. The page is in Czech, Slovak, German, English and French."
+      },
+      "s2": {
+        "time": "08:55",
+        "title": "Confirm and assign staff in one box",
+        "desc": "New bookings appear in the app with a notification on your phone. Tap Confirm, then pick a staff member or change the time in the same box. The client gets a confirmation email and a reminder 1 hour before."
+      },
+      "s3": {
+        "time": "09:00",
+        "title": "Calendar by staff, work shared evenly",
+        "desc": "One column per staff member, on computer and phone. Auto-assign is on by default: bookings without a staff choice go to whoever is free and least busy that day. When you pick someone, your choice always stands."
+      },
+      "s4": {
+        "time": "09:10",
+        "title": "Staff see their own schedule on the phone",
+        "desc": "Every staff member has their own account with today and the coming days, and notifications in the language they chose. Their earnings sit on a separate page, shown only if you allow it."
+      },
+      "s5": {
+        "time": "14:30",
+        "title": "Checkout at the desk, with a payment QR code",
+        "desc": "Choose services and staff, record cash, card or bank transfer. For transfers the app shows a QR code with the amount filled in. Receipts print on 80 mm receipt printers."
+      },
+      "s6": {
+        "time": "16:00",
+        "title": "Know your regulars, remember birthdays",
+        "desc": "A profile for every client with history and spending. Filter VIP, new and lapsed clients. The app flags birthdays 2 days ahead so you can send wishes with an offer."
+      },
+      "s7": {
+        "time": "20:00",
+        "title": "Closing time: revenue is already counted",
+        "desc": "Revenue by day, staff member, service and payment method. A report for every location, and all locations on one page."
+      },
+      "s8": {
+        "time": "Month end",
+        "title": "Payroll, already calculated",
+        "desc": "Commission as % of revenue or a fixed salary per staff member, tips per client or split evenly. Export payroll to Excel, CSV or PDF."
+      }
+    }
   }
 }

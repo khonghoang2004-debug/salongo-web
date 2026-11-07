@@ -9,7 +9,7 @@ const TYPES = [
   { k: "type4", Icon: Building2 },
 ] as const;
 
-// Loại salon phù hợp: 4 cột ngăn bằng đường kẻ mảnh, số thứ tự + icon nét
+// Loại salon phù hợp: 4 cột ngăn bằng đường kẻ mảnh, icon trong ô hình đầu móng
 export async function HomeSalonTypes() {
   const h = await getTranslations("home2");
 
@@ -23,11 +23,10 @@ export async function HomeSalonTypes() {
               key={k}
               className={`flex flex-col border-b border-line py-7 sm:px-6 lg:border-b-0 lg:py-8 ${i % 2 ? "sm:border-l" : "sm:pl-0"} ${i ? "lg:border-l lg:pl-6" : "lg:pl-0"}`}
             >
-              <div className="flex items-center justify-between">
-                <span className="font-display text-sm font-semibold tabular-nums text-brand-700">0{i + 1}</span>
-                <Icon className="size-6 text-ink/40" strokeWidth={1.5} aria-hidden />
-              </div>
-              <h3 className="mt-10 text-xl font-semibold tracking-[-0.02em] text-ink">
+              <span className="flex h-14 w-11 items-center justify-center rounded-[50%_50%_12px_12px/40%_40%_12px_12px] bg-brand-50 text-brand-700" aria-hidden>
+                <Icon className="mt-2 size-5" strokeWidth={1.75} />
+              </span>
+              <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-ink">
                 {h(`${k}Title`)}
               </h3>
               <p className="mt-2.5 text-[15px] leading-relaxed text-muted">

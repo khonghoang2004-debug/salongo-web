@@ -38,26 +38,26 @@ export function VideoModalButton({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className={`inline-flex min-h-11 items-center gap-2.5 rounded-full border border-brand-700/20 bg-white py-1.5 pl-1.5 pr-4 text-sm font-semibold text-brand-700 shadow-sm transition-colors hover:border-brand-700/50 ${className}`}
+        className={`inline-flex min-h-12 items-center gap-2.5 rounded-full border border-line bg-white py-1.5 pl-1.5 pr-5 text-sm font-semibold text-ink transition-colors hover:border-ink ${className}`}
       >
-        <span className="flex size-8 items-center justify-center rounded-full bg-brand-700 text-white" aria-hidden>
+        <span className="flex size-9 items-center justify-center rounded-full bg-brand-700 text-white" aria-hidden>
           <Play className="ml-0.5 size-3.5 fill-current" />
         </span>
-        {label} · {video.duration}
+        {label} <span className="font-medium text-muted">{video.duration}</span>
       </button>
       <dialog
         ref={ref}
         onClose={() => setOpen(false)}
         onClick={(e) => e.target === ref.current && setOpen(false)}
         aria-label={title}
-        className="m-auto w-[min(92vw,1100px)] max-w-none overflow-visible bg-transparent p-0 backdrop:bg-[#1a0409]/90 max-md:w-[min(92vw,480px)]"
+        className="m-auto w-[min(92vw,1100px)] max-w-none overflow-visible bg-transparent p-0 backdrop:bg-[#22161a]/85 max-md:w-[min(92vw,480px)]"
       >
         {open && (
           <div className="relative">
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="absolute -top-12 right-0 flex size-10 items-center justify-center rounded-full bg-white/15 text-white transition-colors hover:bg-white/25"
+              className="absolute -top-14 right-0 flex size-11 items-center justify-center rounded-full bg-white/15 text-white transition-colors hover:bg-white/25 focus-visible:!outline-white"
               aria-label={closeLabel}
             >
               <X className="size-5" aria-hidden />

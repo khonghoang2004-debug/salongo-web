@@ -6,7 +6,7 @@ import { PricingCards, type PlanCard } from "./PricingCards";
 // Khớp với các gói đang bán trong app (SubscriptionPlan, đối chiếu 29/10/2026): giá niêm yết / tháng,
 // nhân viên mỗi chi nhánh (maxStaff) và số chi nhánh (limitsJson.maxLocations); null = không giới hạn.
 // Mọi gói đều có toàn bộ tính năng; trả theo năm giảm 10%. Giá thật luôn do app tính khi thanh toán.
-const PLANS = [
+export const PLANS = [
   { code: "BASIC", nameKey: "plan1Name", subtitleKey: "plan1Subtitle", staff: 3, branches: 1, monthly: 199, highlighted: false },
   { code: "PRO", nameKey: "plan2Name", subtitleKey: "plan2Subtitle", staff: 8, branches: 3, monthly: 499, highlighted: true },
   { code: "PREMIUM", nameKey: "plan3Name", subtitleKey: "plan3Subtitle", staff: null, branches: null, monthly: 799, highlighted: false },

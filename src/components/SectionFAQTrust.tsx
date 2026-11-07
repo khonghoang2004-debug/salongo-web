@@ -19,7 +19,7 @@ export async function SectionFAQTrust() {
           <div data-stagger className="mt-8 grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
             {ITEMS.map(({ key, Icon }) => (
               <div key={key} className="flex items-center gap-3">
-                <span className="sg-icon-tile size-11 rounded-xl">
+                <span className="sg-icon-tile size-11">
                   <Icon className="size-5" strokeWidth={2} aria-hidden />
                 </span>
                 <p className="text-[15px] font-medium leading-snug text-ink/85">{t(key)}</p>

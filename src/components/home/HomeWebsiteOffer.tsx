@@ -22,19 +22,19 @@ export async function HomeWebsiteOffer() {
   const [ha, hb] = t("homeTitle").split("|");
 
   return (
-    <section className="px-3 pb-2 pt-8 sm:px-6 sm:pt-10 lg:px-8 lg:pt-12" aria-labelledby="web-offer-title">
+    <section className="px-4 pb-2 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16" aria-labelledby="web-offer-title">
       <div className="sg-container">
-        <div data-reveal className="overflow-hidden rounded-[24px] bg-[#F4F1EB] text-[#1C1A17] sm:rounded-[32px]">
+        <div data-reveal className="overflow-hidden rounded-[28px] bg-[#F4F1EB] text-[#1C1A17]">
           <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-10 lg:px-12 lg:py-10">
             <div className="lg:col-span-6">
-              <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">
+              <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[15px] font-medium text-[#7A6347]">
                 <span className="whitespace-nowrap">{t("studio")}</span>
               </p>
               <h2 id="web-offer-title" className={`${serif} mt-5 text-[2.25rem] font-medium leading-[1.04] tracking-[-0.025em] sm:text-[2.75rem] lg:text-[2.25rem] xl:text-[2.875rem]`}>
                 <span className="block">{ha}</span> {hb && <span className="block italic text-brand-700 sm:whitespace-nowrap">{hb}</span>}
               </h2>
               <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 border-y border-[#DCD5CA] py-4">
-                <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
+                <p className="w-full text-sm font-medium text-[#6B645B]">{t("priceLabel")}</p>
                 <p className={`${serif} whitespace-nowrap text-[2.75rem] font-medium leading-[0.9] tracking-[-0.02em] text-brand-700 sm:text-[3.25rem]`}>{v.price}</p>
                 <p className="pb-1 text-[15px] font-medium leading-snug text-[#3A3631] sm:text-[16px]">
                   {t("priceLine", v)
@@ -62,7 +62,7 @@ export async function HomeWebsiteOffer() {
                 </Link>
               </div>
               <p className="mt-6 max-w-xl border-l border-[#7A6347]/50 pl-5 text-[15px] leading-relaxed text-[#3A3631]">
-                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("customIdeaLabel")}</span>
+                <span className="mb-1 block text-sm font-medium text-[#7A6347]">{t("customIdeaLabel")}</span>
                 {t("customIdea", v)}
               </p>
             </div>
@@ -108,7 +108,7 @@ export async function HomeWebsiteOffer() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className={`${serif} block text-[1.125rem] font-medium leading-tight`}>{tpl.name}</span>
-                  <span className="mt-1 block truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
+                  <span className="mt-1 block truncate text-[13px] font-medium text-[#6B645B]">{tr(tpl.card.type, locale)}</span>
                   <ArrowRight className="mt-2 block size-4 text-[#1C1A17] transition-transform group-hover:translate-x-0.5" aria-hidden />
                 </span>
               </Link>

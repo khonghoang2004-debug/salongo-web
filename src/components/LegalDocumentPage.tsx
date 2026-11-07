@@ -67,7 +67,7 @@ export function OperatorBox({ locale }: { locale: string }) {
   rows.push([ui.email, <a key="e" href={`mailto:${OPERATOR.email}`} className="font-medium text-brand-700 hover:underline [overflow-wrap:anywhere]">{OPERATOR.email}</a>]);
   rows.push([ui.phone, <a key="p" href={`tel:${OPERATOR.phone.replace(/\s/g, "")}`} className="font-medium text-brand-700 hover:underline">{OPERATOR.phone}</a>]);
   return (
-    <div className="rounded-xl border border-line bg-sand p-4 text-sm sm:p-5">
+    <div className="rounded-[22px] border border-line bg-sand p-4 text-sm sm:p-5">
       <p className="font-semibold text-ink">{ui.operator}</p>
       <dl className="mt-2 grid gap-x-4 gap-y-1 sm:grid-cols-[auto,1fr]">
         {rows.map(([k, v]) => (
@@ -94,7 +94,7 @@ export async function LegalDocumentPage({ locale, docKey }: { locale: string; do
         <div className="mx-auto max-w-3xl">
           <Link
             href="/"
-            className="mb-5 inline-flex items-center gap-1.5 rounded-md border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
+            className="mb-5 inline-flex min-h-11 items-center gap-1.5 rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
           >
             <ArrowLeft className="size-4" aria-hidden />
             {tNav("backHome")}

@@ -21,6 +21,7 @@ const sans = Be_Vietnam_Pro({
   display: "swap",
 });
 
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,

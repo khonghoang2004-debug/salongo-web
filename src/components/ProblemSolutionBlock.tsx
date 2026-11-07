@@ -48,14 +48,14 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
   const bullets = BULLET_KEYS[i];
 
   return (
-    <div data-reveal className="grid overflow-hidden rounded-xl border border-line bg-white md:grid-cols-2">
+    <div data-reveal className="grid overflow-hidden rounded-[22px] border border-line bg-white md:grid-cols-2">
       {/* Vấn đề */}
       <div className="p-6 sm:p-7">
         <div className="flex items-center gap-3">
-          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#FBF7F7] text-ink/60">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-[22px] bg-nude text-ink/60">
             <Icon {...ICON_PROPS} />
           </span>
-          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{tPage("problemLabel")}</span>
+          <span className="text-sm font-medium text-muted">{tPage("problemLabel")}</span>
         </div>
         <h3 className="mt-5 text-lg font-semibold tracking-[-0.01em] text-ink">{tProblem(`item${index}Title`)}</h3>
         <p className="mt-2 text-[15px] leading-relaxed text-muted">{tProblem(`item${index}Desc`)}</p>
@@ -63,7 +63,7 @@ export async function ProblemSolutionBlock({ index }: { index: Index }) {
 
       {/* Giải pháp */}
       <div className="border-t border-line bg-brand-50 p-6 sm:p-7 md:border-l md:border-t-0">
-        <span className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">{tPage("solutionLabel")}</span>
+        <span className="text-sm font-medium text-brand-700">{tPage("solutionLabel")}</span>
         <h4 className="mt-3 text-lg font-semibold tracking-[-0.01em] text-ink">{tSolution(`item${index}Title`)}</h4>
         <ul className="mt-3 space-y-2">
           {bullets.map((key) => (

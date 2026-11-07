@@ -4,28 +4,28 @@
 
 @layer base {
   :root {
-    /* Bộ màu chuẩn của SalonGo */
-    --primary: #800020; /* Màu chính, nút bấm */
-    --primary-hover: #66001A; /* Khi rê chuột */
-    --primary-soft: #F8EEF1; /* Nền menu đang chọn */
-    --background: #FFFFFF; /* Nền giao diện */
-    --foreground: #1a1416;
+    /* Bộ màu SalonGo — "sơn mài đỏ đô": một màu thương hiệu, nền trắng sứ và nude, viền trung tính */
+    --primary: #800020; /* Đỏ đô: nút, trạng thái đang chọn, viền focus */
+    --primary-hover: #66001a;
+    --primary-deep: #4d0014; /* Nền tối: chân trang */
+    --primary-soft: #f8eef1; /* Nền nhạt khi chọn */
+    --nude: #f7f1ef; /* Nền phụ (màu sơn nude rất nhạt) */
+    --nude-deep: #ede2df;
+    --background: #ffffff;
+    --foreground: #22161a;
 
-    /* Màu đặc, không gradient (giữ tên biến cũ cho các chỗ đang dùng) */
+    /* Giữ tên biến cũ: màu đặc, không gradient */
     --sg-gradient: linear-gradient(var(--primary), var(--primary));
-    /* Nền nhạt: ô icon, nền phụ */
     --sg-gradient-soft: linear-gradient(var(--primary-soft), var(--primary-soft));
-    /* Chữ nhấn trên nền trắng */
     --sg-gradient-text: linear-gradient(var(--primary), var(--primary));
-    --sg-on-gradient-shadow: 0 1px 1px rgba(44, 8, 20, 0.25);
-    --sg-shadow-btn: 0 1px 2px rgba(44, 8, 20, 0.18), 0 2px 6px rgba(128, 0, 32, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.14);
-    --sg-line: #ece6e7;
+    --sg-on-gradient-shadow: none;
+    --sg-shadow-btn: none;
+    --sg-line: #e6e1e0;
     --sg-accent: var(--primary);
     --sg-accent-strong: var(--primary);
-    --sg-ink: #1a1416;
-    --sg-muted: #6e6568;
+    --sg-ink: #22161a;
+    --sg-muted: #6b5f62;
   }
-
 
   html {
     scroll-behavior: smooth;
@@ -41,6 +41,7 @@
     background: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
   }
 
   h1,
@@ -50,42 +51,46 @@
     font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
   }
 
+  /* Vòng focus đỏ đô, thấy rõ trên nền sáng */
+  :where(a, button, [role="tab"], [role="radio"], summary, input, select, textarea):focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
   ::selection {
-    background: rgba(207, 110, 138, 0.28);
+    background: rgba(128, 0, 32, 0.16);
   }
 }
 
 @layer components {
   /* ---------- Bố cục & chữ thống nhất toàn site ---------- */
   .sg-section {
-    @apply px-3 py-8 sm:px-6 sm:py-11 lg:px-8 lg:py-14;
+    @apply px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16;
   }
 
-  /* Khung nội dung chung */
   .sg-container {
     @apply mx-auto w-full max-w-[1200px];
   }
 
-  /* Khối nền lùi vào so với mép trang (hero, CTA) */
-  /* Dải nền tràn viền (hero, đầu trang con): không bo góc, chỉ một đường kẻ dưới */
+  /* Dải nền đầu trang con: nude, một đường kẻ dưới */
   .sg-panel {
-    @apply border-b border-[#F1E8EA] bg-[#FBF7F7];
+    @apply border-b border-line bg-nude;
   }
 
-  .sg-section-alt {
-    background-color: #faf7f6;
-    border-top: 1px solid #f1ebea;
-    border-bottom: 1px solid #f1ebea;
+  .sg-section-alt,
+  .sg-section-tint {
+    background-color: var(--nude);
   }
 
   .sg-page-hero {
-    @apply px-3 pt-6 pb-6 sm:px-6 sm:pt-10 sm:pb-10 lg:px-8 lg:pt-12 lg:pb-12;
+    @apply px-4 pb-8 pt-6 sm:px-6 sm:pb-10 sm:pt-10 lg:px-8 lg:pb-12 lg:pt-12;
   }
 
+  /* Vietnamese có dấu chồng: line-height tối thiểu 1.12 để dấu không chạm dòng trên */
   .sg-h1 {
     @apply font-display text-[2.375rem] font-semibold leading-[1.08] tracking-[-0.035em] text-ink sm:text-[3.25rem] lg:text-[4.25rem];
     text-wrap: balance;
-    /* Từ ghép dài tiếng Đức (Nutzungsbedingungen) không tràn màn hẹp */
     hyphens: auto;
     overflow-wrap: break-word;
   }
@@ -93,6 +98,8 @@
   .sg-h2 {
     @apply font-display text-[1.875rem] font-semibold leading-[1.12] tracking-[-0.03em] text-ink sm:text-[2.375rem] lg:text-[3rem];
     text-wrap: balance;
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   .sg-h2-sm {
@@ -101,69 +108,67 @@
   }
 
   .sg-lead {
-    @apply text-base leading-relaxed text-muted sm:text-[1.125rem] sm:leading-[1.7];
+    @apply text-base leading-[1.7] text-muted sm:text-[1.125rem];
     text-wrap: pretty;
   }
 
-  /* ---------- Nền & chữ gradient ---------- */
+  /* ---------- Màu đặc (tên cũ) ---------- */
   .sg-gradient {
     background-color: var(--primary);
-    background-image: var(--sg-gradient);
   }
 
   .sg-gradient-soft {
-    background-image: var(--sg-gradient-soft);
+    background-color: var(--primary-soft);
   }
 
-  /* Chữ nhấn: đỏ đô đặc, không gradient */
   .sg-gradient-text {
     color: var(--primary);
   }
 
   .sg-gradient-border {
-    border: 1.5px solid transparent;
-    background:
-      linear-gradient(#fff, #fff) padding-box,
-      var(--sg-gradient) border-box;
+    border: 1.5px solid var(--primary);
+    background: #fff;
   }
 
-  /* ---------- Nút ---------- */
+  /* ---------- Nút: viên thuốc bo tròn như đầu móng ---------- */
   .btn-primary,
-  .btn-secondary {
+  .btn-secondary,
+  .btn-on-gradient {
     display: inline-flex;
+    min-height: 48px;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 8px;
+    border-radius: 9999px;
     font-weight: 600;
     white-space: nowrap;
     letter-spacing: -0.005em;
     transition:
-      transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
-      box-shadow 180ms ease,
-      background-color 180ms ease,
-      border-color 180ms ease,
-      color 180ms ease;
+      transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      background-color 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease;
   }
-
 
   .btn-primary:active,
   .btn-secondary:active,
   .btn-on-gradient:active {
-    transform: translateY(0) scale(0.98);
+    transform: scale(0.98);
     transition-duration: 80ms;
   }
 
   .btn-primary:focus-visible,
   .btn-secondary:focus-visible,
   .btn-on-gradient:focus-visible {
-    outline: none;
-    box-shadow:
-      0 0 0 3px #fff,
-      0 0 0 5px rgba(128, 0, 32, 0.55);
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 9999px;
   }
 
-  /* Nút chính: đỏ đô đặc, chữ trắng */
+  .btn-on-gradient:focus-visible {
+    outline-color: #fff;
+  }
+
   .btn-primary {
     color: #fff;
     background-color: var(--primary);
@@ -173,67 +178,65 @@
     background-color: var(--primary-hover);
   }
 
-  /* Nút phụ: nền trắng, viền mảnh */
   .btn-secondary {
     color: var(--sg-ink);
     background: #fff;
-    border: 1px solid #ddd3d5;
+    border: 1px solid #d9d2d1;
   }
 
   .btn-secondary:hover {
     border-color: var(--sg-ink);
   }
 
-  /* Nút trắng trên nền đỏ đô (CTA) */
+  /* Nút trắng trên nền đỏ đô */
   .btn-on-gradient {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    white-space: nowrap;
     background: #fff;
     color: var(--primary);
-    transition:
-      transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
-      background-color 180ms ease;
   }
 
   .btn-on-gradient:hover {
     background: var(--primary-soft);
   }
 
-  /* ---------- Ô icon: nền đỏ đô nhạt, icon đỏ đô ---------- */
+  /* Nút viền trắng trên nền đỏ đô */
+  .btn-ghost-light {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/45 px-6 font-semibold text-white transition-colors hover:border-white hover:bg-white/10;
+  }
+
+  .btn-ghost-light:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+    border-radius: 9999px;
+  }
+
+  /* ---------- Ô icon ---------- */
   .sg-icon-tile {
     display: flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 9999px;
     color: var(--primary);
-    background: transparent;
-    border: 1px solid var(--sg-line);
+    background: var(--primary-soft);
   }
 
   .sg-icon-tile svg {
     color: var(--primary);
   }
 
-  /* Ô icon đặc (dùng khi cần nhấn mạnh) */
   .sg-icon-tile-solid {
     display: flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 9999px;
     color: #fff;
     background-color: var(--primary);
   }
 
   /* ---------- Thẻ ---------- */
   .sg-card {
-    border-radius: 0.75rem;
+    border-radius: 1.25rem;
     border: 1px solid var(--sg-line);
     background: #fff;
     transition: border-color 200ms ease;
@@ -241,147 +244,102 @@
 
   @media (hover: hover) {
     .sg-card-hover:hover {
-      border-color: var(--sg-ink);
+      border-color: #bdb3b2;
     }
   }
 
-  /* Thẻ lớn nền đỏ đô: vòng tròn mờ góc phải, đường cong mảnh góc trái dưới */
+  /* Khối nền đỏ đô (CTA) */
   .sg-hero-card {
     position: relative;
     overflow: hidden;
     isolation: isolate;
     color: #fff;
     background-color: var(--primary);
-    background-image: var(--sg-gradient);
-    text-shadow: var(--sg-on-gradient-shadow);
   }
 
-  .sg-hero-card :is(h2, h3) {
-    text-shadow: none;
-  }
-
-  .sg-hero-card::before {
-    display: none;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -40%;
-    right: -6%;
-    width: min(55%, 440px);
-    aspect-ratio: 1;
-    border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.07);
-  }
-
-  .sg-hero-card::after {
-    display: none;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: max(-18%, -90px);
-    bottom: max(-75%, -190px);
-    width: min(45%, 260px);
-    aspect-ratio: 1;
-    border-radius: 9999px;
-    border: 1.5px solid rgba(255, 255, 255, 0.28);
-  }
-
-  /* Chip nhãn nhỏ phía trên tiêu đề section */
-  /* Nhãn nhỏ phía trên tiêu đề: chữ in hoa + đường kẻ ngắn (không dùng viên thuốc có chấm) */
-  .sg-eyebrow {
+  /* Nhãn nhỏ phía trên tiêu đề: chữ thường, đỏ đô, có dấu hình đầu móng phía trước */
+  .sg-eyebrow,
+  .sg-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.4;
     color: var(--primary);
   }
 
-  .sg-eyebrow::before {
+  .sg-eyebrow::before,
+  .sg-kicker::before {
     content: "";
-    width: 1.5rem;
-    height: 1px;
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.75rem;
+    border-radius: 50% 50% 2px 2px / 4px 4px 2px 2px;
     background: currentColor;
-    opacity: 0.6;
   }
 
   .sg-eyebrow > span[aria-hidden] {
     display: none;
   }
 
-  /* Nhãn chữ nhỏ in hoa phía trên tiêu đề section */
-  .sg-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--primary);
-  }
-
-  .sg-kicker::before {
-    content: "";
-    width: 1.5rem;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.6;
-  }
-
-  /* Nền hero: lưới mảnh nhạt dần + quầng đỏ đô rất nhẹ */
   .sg-section-glow {
     position: relative;
     isolation: isolate;
   }
 
-  .sg-section-glow::before {
-    display: none;
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-image:
-      linear-gradient(to right, rgba(128, 0, 32, 0.055) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(128, 0, 32, 0.055) 1px, transparent 1px);
-    background-size: 48px 48px;
-    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
-  }
-
-  .sg-section-glow::after {
-    content: none;
-  }
-
-  .sg-section-tint {
-    background-color: #faf7f6;
-    border-top: 1px solid #f1ebea;
-    border-bottom: 1px solid #f1ebea;
-  }
-
-  /* Nền đỏ đô đặc cho dải CTA / thẻ nổi bật */
   .sg-dark {
     color: #fff;
     background-color: var(--primary);
+  }
+
+  /* ---------- Hình "đầu móng": vòm tròn phía trên, góc dưới bo nhẹ — dấu hiệu riêng của SalonGo ---------- */
+  /* Bán kính elip (ngang 50%, dọc --arch-v) để góc dưới không bị trình duyệt thu nhỏ như khi dùng 9999px */
+  .sg-arch,
+  .sg-arch-nude {
+    border-radius: 50% 50% 1.75rem 1.75rem / var(--arch-v, 32%) var(--arch-v, 32%) 1.75rem 1.75rem;
+    background-color: var(--primary);
+  }
+
+  .sg-arch-nude {
+    background-color: var(--nude-deep);
+  }
+
+  /* Vòm trên nền đỏ đô (hero trang chủ): đỏ đô đậm hơn, viền sáng mảnh để vẫn thấy dáng "đầu móng" */
+  .sg-arch-deep {
+    background-color: #5a0017;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  }
+
+  /* Vệt bóng sơn mài trên vòm (một nét trắng mờ, không phải gradient) */
+  .sg-arch-shine {
+    position: absolute;
+    left: 14%;
+    top: 9%;
+    width: 9%;
+    height: 22%;
+    border-radius: 9999px;
+    border-left: 3px solid rgba(255, 255, 255, 0.22);
+    pointer-events: none;
   }
 
   /* Khung trình duyệt chứa ảnh chụp app */
   .sg-browser {
     overflow: hidden;
     border-radius: 0.875rem;
-    border: 1px solid #e6dfe0;
+    border: 1px solid #ddd6d5;
     background: #fff;
+    box-shadow:
+      0 1px 2px rgba(34, 22, 26, 0.05),
+      0 24px 48px -28px rgba(34, 22, 26, 0.3);
   }
 
   .sg-browser-bar {
     display: flex;
     align-items: center;
     gap: 0.375rem;
-    border-bottom: 1px solid #efe9ea;
-    background: #faf7f6;
+    border-bottom: 1px solid #ece7e6;
+    background: #faf8f8;
     padding: 0.625rem 0.875rem;
   }
 
@@ -389,16 +347,21 @@
     width: 0.625rem;
     height: 0.625rem;
     border-radius: 9999px;
-    background: #e2d9db;
+    background: #ddd6d5;
   }
 
-  /* Khung điện thoại chứa ảnh chụp app trên mobile */
+  /* Khung điện thoại */
   .sg-phone {
-    border-radius: 30px;
-    background: #1d1416;
-    padding: 8px;
-    box-shadow: 0 4px 14px rgba(77, 0, 20, 0.16);
+    border-radius: 32px;
+    background: #22161a;
+    padding: 7px;
+    box-shadow: 0 30px 50px -30px rgba(34, 22, 26, 0.55);
   }
+}
+
+/* Cửa sổ nổi: chỉ làm tối nền phía sau, không làm mờ */
+.sg-dialog::backdrop {
+  background: rgba(34, 22, 26, 0.6);
 }
 
 @layer utilities {
@@ -406,10 +369,21 @@
     text-wrap: balance;
   }
 
-  /* Giữ tương thích: chữ gradient cho các chỗ cũ */
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
   .btn-glass-text {
     color: var(--primary);
     font-weight: 600;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -463,7 +437,7 @@
 @keyframes sg-rise-lg {
   from {
     opacity: 0;
-    transform: translate3d(0, 28px, 0);
+    transform: translate3d(0, 16px, 0);
   }
   to {
     opacity: 1;
@@ -475,7 +449,7 @@
 @keyframes sg-stage-in {
   from {
     opacity: 0;
-    transform: perspective(1600px) translate3d(0, 72px, 0) rotateX(14deg) scale(0.96);
+    transform: perspective(1600px) translate3d(0, 40px, 0) rotateX(8deg) scale(0.98);
   }
   to {
     opacity: 1;
@@ -580,10 +554,10 @@
 /* Hiện dần khi cuộn tới: chỉ ẩn khi JS đã chạy (class sg-js), không JS vẫn thấy đủ */
 .sg-js [data-reveal] {
   opacity: 0;
-  transform: translate3d(0, 32px, 0);
+  transform: translate3d(0, 16px, 0);
   transition:
-    opacity 900ms var(--sg-ease),
-    transform 1100ms var(--sg-ease);
+    opacity 700ms var(--sg-ease),
+    transform 800ms var(--sg-ease);
   transition-delay: var(--d, 0ms);
 }
 
@@ -592,15 +566,15 @@
 }
 
 .sg-js [data-reveal="scale"] {
-  transform: translate3d(0, 48px, 0) scale(0.96);
+  transform: translate3d(0, 20px, 0) scale(0.98);
 }
 
 .sg-js [data-reveal="left"] {
-  transform: translate3d(-36px, 0, 0);
+  transform: translate3d(-16px, 0, 0);
 }
 
 .sg-js [data-reveal="right"] {
-  transform: translate3d(36px, 0, 0);
+  transform: translate3d(16px, 0, 0);
 }
 
 .sg-js [data-reveal].is-in {
@@ -611,11 +585,11 @@
 /* Các phần tử con hiện lần lượt */
 .sg-js [data-stagger] > * {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
+  transform: translate3d(0, 12px, 0);
   transition:
-    opacity 800ms var(--sg-ease),
-    transform 1000ms var(--sg-ease);
-  transition-delay: calc(var(--i, 0) * 90ms + var(--d, 0ms));
+    opacity 600ms var(--sg-ease),
+    transform 700ms var(--sg-ease);
+  transition-delay: calc(var(--i, 0) * 70ms + var(--d, 0ms));
 }
 
 .sg-js [data-stagger].is-in > * {
@@ -661,8 +635,8 @@
   }
 
   .sg-lift:hover {
-    transform: translateY(-4px);
-    border-color: #e3b6c1;
+    transform: translateY(-3px);
+    border-color: #bdb3b2;
   }
 
   .sg-arrow svg:last-child {
@@ -713,7 +687,8 @@ button {
   .btn-secondary,
   .btn-on-gradient,
   .sg-card,
-  .sg-lift {
+  .sg-lift,
+  .btn-ghost-light {
     transition: none;
   }
 }

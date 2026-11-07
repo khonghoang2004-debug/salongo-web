@@ -15,7 +15,7 @@ type Props = {
 };
 
 // Tiêu đề section dùng chung: căn trái, kiểu biên tập; đường kẻ mảnh phía trên ngăn các phần (rule=false để bỏ)
-export function SectionHead({ kicker, title, lead, action, layout = "split", cols = "wide-title", rule = true, className: extra = "" }: Props) {
+export function SectionHead({ kicker, title, lead, action, layout = "split", cols = "wide-title", rule = false, className: extra = "" }: Props) {
   const className = `${rule ? "border-t border-line pt-6 sm:pt-8" : ""} ${extra}`;
   if (layout === "stack") {
     return (
@@ -23,7 +23,7 @@ export function SectionHead({ kicker, title, lead, action, layout = "split", col
         {kicker && <p className="sg-kicker">{kicker}</p>}
         <h2 className={`sg-h2 ${kicker ? "mt-4" : ""}`}>{title}</h2>
         {lead && <p className="sg-lead mt-4 max-w-2xl">{lead}</p>}
-        {action && <div className="mt-7">{action}</div>}
+        {action && <div className="mt-5">{action}</div>}
       </div>
     );
   }
@@ -42,7 +42,7 @@ export function SectionHead({ kicker, title, lead, action, layout = "split", col
             style={{ "--d": "140ms" } as CSSProperties}
           >
             {lead && <p className="sg-lead lg:max-w-md">{lead}</p>}
-            {action && <div className="mt-6 shrink-0 lg:mt-0">{action}</div>}
+            {action && <div className="mt-5 shrink-0 lg:mt-0">{action}</div>}
           </div>
         )}
       </div>

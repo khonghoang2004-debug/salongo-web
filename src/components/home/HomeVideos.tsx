@@ -17,7 +17,7 @@ export async function HomeVideos() {
   }));
 
   return (
-    <section id="video" className="sg-section scroll-mt-20">
+    <section id="video" className="sg-section scroll-mt-20 bg-nude">
       <div className="sg-container">
         <SectionHead kicker={t("kicker")} title={t("title")} />
         <VideoTabs items={items} playLabel={t("play")} note={t("note")} moreLabel={t("more")} />

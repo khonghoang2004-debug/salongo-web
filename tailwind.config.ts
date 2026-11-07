@@ -13,10 +13,10 @@ const config: Config = {
         display: ["var(--font-display)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        "sg-sm": "0 1px 2px rgba(41, 17, 25, 0.05)",
-        "sg-md": "0 1px 2px rgba(41, 17, 25, 0.06), 0 2px 6px rgba(41, 17, 25, 0.06)",
-        "sg-lg": "0 1px 2px rgba(41, 17, 25, 0.06), 0 4px 12px rgba(41, 17, 25, 0.08)",
-        "sg-xl": "0 1px 2px rgba(41, 17, 25, 0.06), 0 6px 16px rgba(41, 17, 25, 0.1)",
+        "sg-sm": "0 1px 2px rgba(34, 22, 26, 0.05)",
+        "sg-md": "0 1px 2px rgba(34, 22, 26, 0.05), 0 8px 20px -12px rgba(34, 22, 26, 0.18)",
+        "sg-lg": "0 1px 2px rgba(34, 22, 26, 0.06), 0 18px 40px -22px rgba(34, 22, 26, 0.28)",
+        "sg-xl": "0 1px 2px rgba(34, 22, 26, 0.06), 0 30px 60px -28px rgba(34, 22, 26, 0.35)",
       },
       /* Tiêu đề chỉ đậm hơn chữ thường một chút */
       fontWeight: {
@@ -49,10 +49,17 @@ const config: Config = {
           DEFAULT: "#800020",
           strong: "#66001A",
         },
-        ink: "#1A1416",
-        line: "#ECE6E7",
-        muted: "#6E6568",
-        sand: "#FAF7F6",
+        /* Mực: nâu mận rất đậm (không dùng đen pha) */
+        ink: "#22161A",
+        /* Viền trung tính */
+        line: "#E6E1E0",
+        muted: "#6B5F62",
+        /* Nude: màu sơn móng nude rất nhạt, nền các dải phụ */
+        sand: "#F7F1EF",
+        nude: {
+          DEFAULT: "#F7F1EF",
+          deep: "#EDE2DF",
+        },
       },
     },
   },

@@ -21,7 +21,7 @@ export async function SectionPricingCommitment() {
             {COMMITMENTS.map(({ key, Icon }) => (
               <li
                 key={key}
-                className="flex min-h-11 items-center gap-2.5 rounded-md border border-line bg-white px-4 py-2 text-[15px] font-medium text-ink/85"
+                className="flex min-h-11 items-center gap-2.5 rounded-full border border-line bg-white px-4 py-2 text-[15px] font-medium text-ink/85"
               >
                 <Icon className="size-[18px] text-brand-700" strokeWidth={2} aria-hidden />
                 {t(key)}

@@ -12,7 +12,7 @@ import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
   loading: () => (
-    <div className="h-10 w-[76px] shrink-0 animate-pulse rounded-lg border border-line bg-[#f3eeee]" />
+    <div className="h-11 w-[76px] shrink-0 animate-pulse rounded-full border border-line bg-nude" />
   ),
 });
 
@@ -111,19 +111,16 @@ export function Navbar() {
         scrolled || menuOpen ? "border-line" : "border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-3 px-3 sm:h-16 sm:px-6 lg:h-[72px] lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-2 rounded-lg transition-opacity hover:opacity-80">
+      <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] lg:px-8">
+        <Link href="/" className="flex min-h-11 shrink-0 items-center gap-2 rounded-lg transition-opacity hover:opacity-80">
           <img src={siteConfig.logo} alt="" width={36} height={36} className="size-7 shrink-0 sm:size-9" />
-          <span className="font-display text-[1.125rem] font-semibold tracking-[-0.03em] text-ink sm:text-[1.375rem]">
+          <span className="text-[1.1875rem] font-semibold tracking-[-0.03em] text-ink sm:text-[1.375rem]">
             {siteConfig.name}
           </span>
         </Link>
 
         {/* Menu chính: nhóm link trong một khung bo tròn */}
-        <nav
-          className="hidden items-center gap-0.5 rounded-lg border border-line bg-white p-1 lg:flex"
-          aria-label="Main"
-        >
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
           {menuItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -131,15 +128,13 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 2xl:px-4 ${
-                  item.href === "/" ? "hidden 2xl:inline-block" : ""
-                } ${
-                  active
-                    ? "bg-brand-700 text-white"
-                    : "text-ink/70 hover:text-ink"
-                }`}
+                className={`relative flex min-h-11 items-center whitespace-nowrap rounded-full px-3 text-[15px] font-medium transition-colors duration-200 2xl:px-4 ${
+                  item.href === "/" ? "hidden 2xl:flex" : ""
+                } ${active ? "text-brand-700" : "text-ink/75 hover:text-ink"}`}
               >
                 {t(item.labelKey)}
+                {/* Trang đang xem: vạch đỏ đô dưới chữ */}
+                {active && <span className="absolute inset-x-3 bottom-1.5 h-[2px] rounded-full bg-brand-700 2xl:inset-x-4" aria-hidden />}
               </Link>
             );
           })}
@@ -150,7 +145,7 @@ export function Navbar() {
             href={appLink(RENEW_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-md px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
+            className="hidden min-h-11 items-center rounded-full px-3 text-[15px] font-medium text-ink/75 transition-colors hover:text-brand-700 xl:inline-flex"
           >
             {t("renew")}
           </a>
@@ -158,7 +153,7 @@ export function Navbar() {
             href={appLink(LOGIN_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-md px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:text-brand-700 xl:inline-block"
+            className="hidden min-h-11 items-center rounded-full px-3 text-[15px] font-medium text-ink/75 transition-colors hover:text-brand-700 xl:inline-flex"
           >
             {t("login")}
           </a>
@@ -166,7 +161,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setDownloadOpen((v) => !v)}
-              className="flex size-10 items-center justify-center rounded-lg border border-line text-ink transition-colors hover:border-ink"
+              className="flex size-11 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink"
               aria-expanded={downloadOpen}
               aria-haspopup="true"
               aria-label={t("downloadApp")}
@@ -176,7 +171,7 @@ export function Navbar() {
             </button>
             {downloadOpen && (
               <div
-                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[220px] rounded-xl border border-line bg-white p-1.5 shadow-sg-lg"
+                className="sg-pop absolute right-0 top-full z-50 mt-2 min-w-[240px] rounded-2xl border border-line bg-white p-1.5 shadow-sg-lg"
                 role="menu"
               >
                 {[
@@ -188,7 +183,7 @@ export function Navbar() {
                     href={d.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-brand-50 hover:text-brand-700"
+                    className="flex min-h-11 items-center gap-2.5 rounded-xl px-3 text-sm font-medium text-ink transition-colors hover:bg-brand-50 hover:text-brand-700"
                     role="menuitem"
                     onClick={() => setDownloadOpen(false)}
                   >
@@ -206,7 +201,7 @@ export function Navbar() {
             href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary hidden px-5 py-2.5 text-sm lg:inline-flex"
+            className="btn-primary hidden !min-h-11 px-5 text-sm lg:inline-flex"
           >
             {t("tryFree")}
           </a>
@@ -220,7 +215,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="relative flex size-10 shrink-0 items-center justify-center rounded-lg border border-line text-ink transition-colors hover:border-ink lg:hidden"
+            className="relative flex size-11 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -249,13 +244,13 @@ export function Navbar() {
               aria-label="Close menu"
               tabIndex={-1}
               onClick={closeMobileMenu}
-              className="sg-fade fixed inset-0 z-40 cursor-default bg-[#1a0a10]/30 lg:hidden"
+              className="sg-fade fixed inset-0 z-40 cursor-default bg-[#22161a]/40 lg:hidden"
             />,
             document.body,
           )}
           <div
             id="mobile-menu"
-            className="sg-menu-panel absolute inset-x-0 top-full flex max-h-[calc(100dvh-3.5rem)] flex-col overflow-y-auto border-b border-line bg-white px-4 pb-6 pt-2 sm:px-6 lg:hidden"
+            className="sg-menu-panel absolute inset-x-0 top-full flex max-h-[calc(100dvh-4rem)] flex-col overflow-y-auto border-b border-line bg-white px-4 pb-6 pt-2 sm:px-6 lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile menu"
@@ -269,7 +264,7 @@ export function Navbar() {
                     href={item.href}
                     onClick={closeMobileMenu}
                     aria-current={active ? "page" : undefined}
-                    className={`flex items-center justify-between border-b border-line py-4 text-[1.375rem] font-semibold tracking-[-0.02em] transition-colors ${
+                    className={`flex min-h-14 items-center justify-between border-b border-line py-3 font-display text-[1.5rem] font-medium tracking-[-0.01em] transition-colors ${
                       active ? "text-brand-700" : "text-ink hover:text-brand-700"
                     }`}
                   >
@@ -285,7 +280,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="btn-primary px-5 py-3.5 text-base"
+                className="btn-primary px-5 text-base"
               >
                 {t("tryFree")}
               </a>
@@ -294,7 +289,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="btn-secondary px-5 py-3.5 text-base"
+                className="btn-secondary px-5 text-base"
               >
                 {t("login")}
               </a>
@@ -303,7 +298,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-3 text-base font-semibold text-brand-700"
+                className="flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-base font-semibold text-brand-700"
               >
                 <RefreshCw className="size-4" aria-hidden />
                 {t("renew")}
@@ -315,7 +310,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#FBF7F7] px-3 py-3 text-sm font-medium text-ink"
+                className="flex min-h-12 items-center justify-center gap-2 rounded-full border border-line px-3 text-sm font-medium text-ink"
               >
                 {winIcon}
                 Windows
@@ -325,7 +320,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#FBF7F7] px-3 py-3 text-sm font-medium text-ink"
+                className="flex min-h-12 items-center justify-center gap-2 rounded-full border border-line px-3 text-sm font-medium text-ink"
               >
                 {macIcon}
                 macOS
@@ -333,7 +328,7 @@ export function Navbar() {
             </div>
             <div className="mt-6 flex items-center justify-between gap-3">
               <LocaleSwitcher up />
-              <button type="button" onClick={closeMobileMenu} className="btn-secondary px-4 py-2.5 text-sm">
+              <button type="button" onClick={closeMobileMenu} className="btn-secondary !min-h-11 px-5 text-sm">
                 {t("closeMenu")}
               </button>
             </div>

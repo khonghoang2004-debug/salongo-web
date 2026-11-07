@@ -54,7 +54,7 @@ export function ScreenTabsMockup({
   return (
     <>
     {hasMobile && <DeviceToggle value={device} onChange={setDevice} className="mb-4" />}
-    <div className={`overflow-hidden rounded-xl border border-brand-100 bg-white shadow-sg-lg sm:rounded-xl ${className}`}>
+    <div className={`overflow-hidden rounded-[18px] border border-line bg-white shadow-sg-lg ${className}`}>
       <div className="flex items-center gap-3 border-b border-line bg-white px-3 py-2.5 sm:px-5 sm:py-3">
         <div className="hidden gap-1.5 sm:flex" aria-hidden>
           <span className="size-3 rounded-full bg-[#e2d9db]" />
@@ -63,7 +63,7 @@ export function ScreenTabsMockup({
         </div>
         {views.length > 1 ? (
           <div
-            className="-mx-1 flex min-w-0 gap-1 overflow-x-auto px-1 [scrollbar-width:none] sm:mx-auto sm:rounded-md sm:border sm:border-line sm:bg-sand sm:p-1"
+            className="-mx-1 flex min-w-0 gap-1 overflow-x-auto px-1 [scrollbar-width:none] sm:mx-auto sm:rounded-full sm:border sm:border-line sm:bg-sand sm:p-1"
             role="tablist"
           >
             {views.map((v, i) => {
@@ -79,9 +79,9 @@ export function ScreenTabsMockup({
                     setActive(i);
                     setAuto(false);
                   }}
-                  className={`flex shrink-0 items-center gap-2 rounded-md px-3.5 py-1.5 text-[13px] font-semibold transition-all duration-200 sm:px-4 sm:text-sm ${
+                  className={`flex min-h-10 shrink-0 items-center gap-2 rounded-full px-3.5 py-1.5 text-[13px] font-semibold transition-all duration-200 sm:px-4 sm:text-sm ${
                     on
-                      ? "bg-white text-brand-700 ring-1 ring-line"
+                      ? "bg-brand-700 text-white"
                       : "text-muted hover:bg-white/70 hover:text-ink"
                   }`}
                 >
@@ -100,7 +100,7 @@ export function ScreenTabsMockup({
             setZoom(true);
             setAuto(false);
           }}
-          className="ml-auto flex size-8 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-brand-50 hover:text-brand-700 sm:ml-0"
+          className="ml-auto flex size-11 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-brand-50 hover:text-brand-700 sm:ml-0"
           aria-label={zoomLabel}
           title={zoomLabel}
         >
@@ -151,7 +151,7 @@ export function ScreenTabsMockup({
               <button
                 type="button"
                 onClick={() => setZoom(false)}
-                className="flex items-center gap-1.5 rounded-md bg-white/15 px-3.5 py-1.5 text-sm font-semibold transition-colors hover:bg-white/25"
+                className="flex min-h-11 items-center gap-1.5 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold transition-colors hover:bg-white/25"
               >
                 <X className="size-4" aria-hidden />
                 {closeLabel}

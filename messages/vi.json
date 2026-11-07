@@ -82,7 +82,7 @@
     "q13": "Tôi có nhiều chi nhánh thì sao?",
     "a13": "Một tài khoản chủ quản lý mọi chi nhánh, chuyển qua lại ngay trên menu. Mỗi chi nhánh có gói và thời hạn riêng.",
     "q14": "App có những ngôn ngữ nào?",
-    "a14": "Tiếng Việt, Séc, Slovakia, Anh, Đức và Pháp, cho cả app của salon lẫn trang đặt lịch của khách.",
+    "a14": "App của salon có tiếng Việt, Séc, Slovakia, Anh, Đức và Pháp. Trang đặt lịch của khách có tiếng Séc, Slovakia, Anh, Đức và Pháp.",
     "q15": "Gửi email marketing cho khách như thế nào?",
     "a15": "Vào Khách hàng → Marketing, chọn một trong 10 mẫu theo dịp, sửa nội dung, thêm ưu đãi nếu muốn, xem trước rồi gửi. Email chỉ tới khách có email và đã đồng ý nhận ưu đãi; mỗi salon gửi 1 chiến dịch mỗi ngày. Có trong mọi gói."
   },
@@ -95,7 +95,7 @@
     "why2": "Tính lương phức tạp, dễ sai và tranh cãi giữa chủ và thợ.",
     "why3": "Trùng lịch, mất khách, khó theo dõi doanh thu khi vắng mặt.",
     "roadmapTitle": "Định hướng phát triển",
-    "roadmap1": "Booking thông minh hơn: nhắc lịch đa kênh, tích hợp SMS.",
+    "roadmap1": "App SalonGo cho iPhone và Android, cho chủ salon và thợ.",
     "roadmap2": "Báo cáo sâu hơn: so sánh nhiều kỳ và nhiều salon.",
     "roadmap3": "Mở rộng đa quốc gia và đa ngôn ngữ."
   },
@@ -249,7 +249,7 @@
     "quickLinks": "Điều hướng nhanh",
     "home": "Trang chủ",
     "rights": "Bảo lưu mọi quyền.",
-    "tagline": "SalonGo — chuẩn mực mới cho vận hành salon"
+    "tagline": "Phần mềm quản lý salon làm cho tiệm của người Việt ở châu Âu."
   },
   "pages": {
     "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính tiền, tính lương",
@@ -285,7 +285,7 @@
     "proof1": "Dùng thử 150 ngày, không cần thẻ",
     "proof2": "Hỗ trợ tiếng Việt và tiếng Séc",
     "proof3": "App có 6 ngôn ngữ",
-    "imageAlt": "Màn Tổng quan của app SalonGo trên máy tính",
+    "imageAlt": "Lịch hẹn theo nhân viên trong app SalonGo trên máy tính",
     "revenueToday": "Doanh thu hôm nay",
     "stat1Value": "150 ngày",
     "stat1Label": "dùng thử",
@@ -301,16 +301,19 @@
     "trial1": "150 ngày miễn phí",
     "trial2": "Không cần thẻ thanh toán",
     "trial3": "Hỗ trợ tiếng Việt, tiếng Séc",
-    "imageAltPhone": "Màn Tổng quan của app SalonGo trên điện thoại"
+    "imageAltPhone": "Lịch hẹn theo nhân viên trên điện thoại"
   },
   "download": {
-    "eyebrow": "Ứng dụng máy tính",
-    "title": "Có cả app cho máy tính",
-    "subtitle": "Để sẵn ở quầy lễ tân, mở là dùng. Đăng nhập bằng cùng tài khoản SalonGo.",
+    "eyebrow": "Máy tính và điện thoại",
+    "title": "Ở quầy, trên máy tính hay điện thoại",
+    "subtitle": "Cùng một tài khoản trên mọi thiết bị. Để sẵn app máy tính ở quầy lễ tân, mở là dùng.",
     "windows": "Tải cho Windows",
     "mac": "Tải cho Mac",
     "for": "Tải về cho",
-    "note": "Luôn là bản mới nhất"
+    "note": "Luôn là bản mới nhất",
+    "macSigned": "Bản Mac đã được ký với Apple.",
+    "phone": "Trên điện thoại: mở app.salongo.eu trong trình duyệt để xem lịch, tính tiền, xem doanh thu.",
+    "ios": "App SalonGo cho iPhone, để đăng nhập tài khoản có sẵn: sắp có trên App Store."
   },
   "trust": {
     "eyebrow": "Vì sao chọn SalonGo",
@@ -416,7 +419,7 @@
     "title": "Tính năng cốt lõi",
     "subtitle": "Mọi thứ bạn cần để vận hành salon hiệu quả, gói gọn trong một nền tảng.",
     "item1Title": "Lịch hẹn thông minh",
-    "item1Desc": "Quản lý lịch theo thợ, tránh trùng giờ, nhắc khách tự động qua SMS hoặc Zalo.",
+    "item1Desc": "Quản lý lịch theo thợ, tránh trùng giờ, khách nhận email xác nhận và nhắc lịch.",
     "item2Title": "POS & thanh toán",
     "item2Desc": "Thu tiền mặt, chuyển khoản, ghi nợ – hóa đơn điện tử chuẩn, dễ tra cứu.",
     "item3Title": "Tính lương tự động",
@@ -468,10 +471,10 @@
         "p1Text": "Gắn vào Facebook, Instagram, Google Maps hoặc gửi qua tin nhắn.",
         "p2Title": "Đặt lịch trong 4 bước",
         "p2Text": "Chọn dịch vụ, chọn giờ, điền thông tin, xem lại và gửi. Không cần tải app hay tạo tài khoản.",
-        "p3Title": "Chọn thợ hoặc ai rảnh cũng được",
-        "p3Text": "Khách chọn thợ quen, hoặc để salon xếp người đang rảnh.",
-        "p4Title": "Duyệt lịch một chạm",
-        "p4Text": "Lịch mới hiện ngay trong app, xác nhận hoặc từ chối chỉ một chạm.",
+        "p3Title": "Khách chọn thợ, hoặc để app chia",
+        "p3Text": "Khách chọn thợ quen hoặc Bất kỳ ai; tự động phân công giao lịch cho người rảnh và ít việc nhất.",
+        "p4Title": "Duyệt và chia thợ trong một hộp",
+        "p4Text": "Lịch mới hiện ngay trong app kèm thông báo trên điện thoại. Bấm Xác nhận, chọn thợ hoặc đổi giờ trong cùng một hộp.",
         "tab1": "Trang của khách",
         "tab2": "Duyệt trong app"
       },
@@ -481,25 +484,25 @@
         "title": "Lịch hẹn rõ ràng theo từng thợ",
         "desc": "Cả ngày của salon trên một màn hình: ai đang rảnh, ai đã kín lịch, lịch nào chưa có người làm.",
         "p1Title": "Xem theo nhân viên",
-        "p1Text": "Mỗi thợ một cột theo giờ, nhìn là biết ai đang rảnh.",
-        "p2Title": "Xem dạng danh sách",
-        "p2Text": "Lịch gom theo khung giờ, lịch chưa phân công được làm nổi bật.",
+        "p1Text": "Mỗi thợ một cột theo giờ, trên máy tính và điện thoại; nhìn là biết ai đang rảnh.",
+        "p2Title": "Tự động phân công",
+        "p2Text": "Bật sẵn: lịch chưa chọn thợ được giao cho người rảnh và ít việc nhất trong ngày. Bạn chọn thợ cụ thể thì luôn theo bạn.",
         "p3Title": "Chỉ hiện giờ còn trống",
         "p3Text": "Trang đặt lịch chỉ cho khách chọn giờ thợ còn rảnh.",
-        "p4Title": "Nhắc lịch qua email",
-        "p4Text": "Khách có email được nhắc tự động 24 giờ và 1 giờ trước giờ hẹn.",
+        "p4Title": "Email xác nhận và nhắc lịch",
+        "p4Text": "Khách có email nhận email xác nhận và email nhắc 1 giờ trước giờ hẹn.",
         "tab1": "Theo nhân viên",
         "tab2": "Danh sách"
       },
       "checkout": {
         "short": "Tính tiền",
-        "tile": "Thu tiền và tạo hoá đơn tại quầy",
+        "tile": "Tiền mặt, thẻ, chuyển khoản có QR",
         "title": "Tính tiền nhanh tại quầy",
         "desc": "Chọn dịch vụ, thợ và cách khách trả là xong một hoá đơn. Mọi khoản thu tự vào báo cáo.",
         "p1Title": "Tiền mặt, thẻ, chuyển khoản",
-        "p1Text": "Ghi đúng cách khách trả, cuối ngày khớp sổ.",
-        "p2Title": "Hoá đơn tự động",
-        "p2Text": "Mỗi lần thu tiền tạo một hoá đơn, tra lại dễ dàng.",
+        "p1Text": "Chuyển khoản thì app hiện mã QR có sẵn số tiền, khách quét là trả.",
+        "p2Title": "Hoá đơn, in khổ 80 mm",
+        "p2Text": "Mỗi lần thu tiền tạo một hoá đơn, in trên máy in hoá đơn 80 mm và tra lại dễ dàng.",
         "p3Title": "Ghi tip cho thợ",
         "p3Text": "Tip ghi riêng trên hoá đơn, chia cho thợ theo cách chủ salon chọn.",
         "p4Title": "Không nhập lại",
@@ -513,8 +516,8 @@
         "desc": "Mỗi khách có hồ sơ riêng: số lần ghé, lần gần nhất, lịch sắp tới và tổng chi tiêu. Khách quen được nhận ra ngay.",
         "p1Title": "Hồ sơ từng khách",
         "p1Text": "Lịch sử dịch vụ và chi tiêu ở cùng một chỗ.",
-        "p2Title": "Tìm trong vài giây",
-        "p2Text": "Theo tên, số điện thoại hoặc email.",
+        "p2Title": "Khách VIP, mới, lâu chưa quay lại",
+        "p2Text": "Lọc nhanh từng nhóm khách, cả khách có sinh nhật trong tháng.",
         "p3Title": "Khách VIP tự động",
         "p3Text": "Đặt quy tắc một lần, hệ thống tự nhận diện khách VIP.",
         "p4Title": "Chương trình thành viên",
@@ -549,7 +552,7 @@
         "p3Title": "Quản lý hoá đơn",
         "p3Text": "Tổng thu theo tiền mặt, thẻ, chuyển khoản; xuất hoá đơn ra PDF.",
         "p4Title": "Xuất dữ liệu",
-        "p4Text": "Doanh thu và bảng lương xuất ra file, không phải tổng hợp tay.",
+        "p4Text": "Doanh thu và bảng lương xuất ra Excel, CSV hoặc PDF, không phải tổng hợp tay.",
         "tab1": "Tổng quan",
         "tab2": "Doanh thu",
         "tab3": "Hoá đơn"
@@ -566,7 +569,7 @@
         "p3Title": "Chia tip theo ý chủ salon",
         "p3Text": "Khách tip thợ nào thì thợ đó nhận, hoặc gộp tip trong kỳ chia đều cho các thợ.",
         "p4Title": "Bảng lương theo kỳ",
-        "p4Text": "Lương, doanh thu, tip và số hoá đơn từng thợ; xuất một chạm.",
+        "p4Text": "Lương, doanh thu, tip và số hoá đơn từng thợ; xuất Excel, CSV hoặc PDF.",
         "tab1": "Tính lương"
       },
       "staff": {
@@ -577,14 +580,14 @@
         "p1Title": "Mời bằng email",
         "p1Text": "Bấm Mời ở hồ sơ thợ, thợ mở email, đặt mật khẩu là dùng được.",
         "p2Title": "Lịch của tôi",
-        "p2Text": "Lịch hôm nay và các ngày tới, kèm tóm tắt số lịch, đã xong, còn lại.",
+        "p2Text": "Lịch hôm nay và các ngày tới, kèm tóm tắt số lịch, đã xong, còn lại; có thông báo khi có lịch mới.",
         "p3Title": "Doanh thu của tôi",
-        "p3Text": "Tab Doanh thu: tổng tiền trong ngày, số khách, trung bình mỗi khách và từng khách đã thanh toán. Xem lại được các ngày trước.",
+        "p3Text": "Trang Doanh thu riêng: tổng tiền trong ngày, số khách, trung bình mỗi khách và từng khách đã thanh toán. Xem lại được các ngày trước.",
         "p4Title": "Chủ quyết định thợ xem gì",
         "p4Text": "Khi mời thợ, chủ chọn Chỉ lịch hoặc Lịch + doanh thu, đổi lại bất cứ lúc nào. Thợ không bao giờ thấy doanh thu của cả salon.",
         "tab1": "Nhân viên",
-        "shot1": "Lịch + doanh thu hôm nay",
-        "shot2": "Doanh thu của tôi",
+        "shot1": "Lịch hôm nay",
+        "shot2": "Doanh thu của tôi, khi chủ cho phép",
         "shot3": "Chủ chọn thợ được xem gì"
       },
       "branches": {
@@ -605,9 +608,9 @@
       },
       "marketing": {
         "short": "Marketing",
-        "tile": "Email ưu đãi, nhắc sinh nhật",
-        "title": "Email marketing & nhắc sinh nhật",
-        "desc": "Gửi email ưu đãi mang tên salon cho khách đã đồng ý nhận, chọn từ 10 mẫu theo dịp lễ. App còn nhắc sinh nhật khách để bạn kịp chúc mừng.",
+        "tile": "Email ưu đãi, ưu đãi sinh nhật",
+        "title": "Email marketing & ưu đãi sinh nhật",
+        "desc": "Gửi email ưu đãi mang tên salon cho khách đã đồng ý nhận, chọn từ 10 mẫu theo dịp lễ. App báo trước sinh nhật khách 2 ngày để bạn gửi lời chúc kèm ưu đãi.",
         "p1Title": "10 mẫu theo dịp",
         "p1Text": "Giảm giá, dịch vụ mới, Giáng sinh, Năm mới, Valentine, 8/3, Phục sinh, Ngày của Mẹ, mùa hè, Black Friday.",
         "p2Title": "Ưu đãi và hạn dùng",
@@ -618,7 +621,7 @@
         "p4Text": "Đánh dấu đồng ý nhận ưu đãi ở hồ sơ khách; email có link huỷ nhận một chạm.",
         "tab1": "Mẫu Giáng sinh",
         "tab2": "Mẫu Ngày Phụ nữ 8/3",
-        "tab3": "Nhắc sinh nhật"
+        "tab3": "Ưu đãi sinh nhật"
       }
     },
     "staffDemo": {
@@ -751,16 +754,6 @@
     "whyCard2Desc": "Hệ thống tính % minh bạch theo doanh thu từng thợ – chủ và thợ đều an tâm.",
     "whyCard3Title": "Biết rõ doanh thu của salon",
     "whyCard3Desc": "Báo cáo doanh thu theo ngày, tháng, theo thợ – quyết định kinh doanh dựa trên số liệu thật.",
-    "testimonialsHeading": "Hơn 1000+ salon đang sử dụng SalonGo mỗi ngày.",
-    "testimonial1Quote": "Dùng SalonGo từ khi mở tiệm, không còn quên lịch hay trùng khách. Khách đặt online rất tiện.",
-    "testimonial1Name": "Chị Hương",
-    "testimonial1Role": "Chủ salon, Praha",
-    "testimonial2Quote": "Tính lương tự động, không còn tranh cãi với thợ. Mình quản lý từ xa vẫn yên tâm.",
-    "testimonial2Name": "Anh Tuấn",
-    "testimonial2Role": "Chủ salon, Berlin",
-    "testimonial3Quote": "Báo cáo rõ ràng, biết salon lãi lỗ từng tháng. Đầu tư thêm dịch vụ đúng hướng.",
-    "testimonial3Name": "Chị Lan",
-    "testimonial3Role": "Chủ salon, Brno",
     "ctaTitle": "Sẵn sàng vận hành salon chuyên nghiệp hơn?",
     "ctaSubtext": "Trải nghiệm miễn phí 150 ngày (5 tháng). Không cần thẻ.",
     "ctaButton": "Bắt đầu ngay"
@@ -820,7 +813,7 @@
   },
   "home2": {
     "notifTitle": "Lịch hẹn mới",
-    "notifText": "Linh · Gel nails · 14:30",
+    "notifText": "Denisa đặt Gel nails, hôm nay 14:30",
     "notifAction": "Duyệt",
     "staffTitle": "Thu nhập tháng này",
     "staffName": "Thợ: Mai",
@@ -832,10 +825,10 @@
     "featureMore": "Tìm hiểu thêm",
     "langEyebrow": "Làm cho người Việt",
     "langTitle": "Bạn dùng tiếng Việt. Khách dùng tiếng của họ.",
-    "langLead": "Chủ tiệm và thợ dùng app bằng tiếng Việt. Khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh, Pháp hoặc tiếng Việt.",
+    "langLead": "Chủ tiệm và thợ dùng app bằng tiếng Việt. Khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp.",
     "lang1": "App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp",
     "lang2": "Khách tự chọn ngôn ngữ ngay trên trang đặt lịch",
-    "lang3": "Hoá đơn in theo ngôn ngữ bạn chọn cho salon",
+    "lang3": "Thông báo trên điện thoại hiện bằng ngôn ngữ của từng người",
     "lang4": "Hỗ trợ qua điện thoại, Facebook hoặc WhatsApp",
     "typesEyebrow": "Phù hợp với bạn",
     "typesTitle": "Tiệm nhỏ hay chuỗi lớn đều vừa",
@@ -849,8 +842,8 @@
     "type4Title": "Chuỗi nhiều chi nhánh",
     "type4Text": "Một tài khoản cho mọi chi nhánh, xem doanh thu tất cả chi nhánh trên một trang.",
     "priceEyebrow": "Bảng giá",
-    "priceTitle": "Dùng thử miễn phí 150 ngày",
-    "priceLead": "Không phí cài đặt, không hợp đồng dài hạn. Hết thời gian dùng thử, bạn chọn gói hợp với salon.",
+    "priceTitle": "150 ngày miễn phí, rồi từ 199 CZK/tháng",
+    "priceLead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và số chi nhánh. Trả theo năm giảm 10%.",
     "priceCta": "Xem bảng giá",
     "price1": "Không cần thẻ thanh toán",
     "price2": "Hỗ trợ thiết lập bằng tiếng Việt",
@@ -873,23 +866,23 @@
     "hlBranchShotPc": "Chọn chi nhánh trên máy tính",
     "hlBranchShotPhone": "Danh sách chi nhánh trên điện thoại",
     "hlStaffEyebrow": "Tài khoản nhân viên",
-    "hlStaffTitle": "Mỗi thợ một tài khoản riêng",
-    "hlStaffLead": "Chủ salon gửi lời mời, thợ đăng nhập ngay trên điện thoại của mình. Mở app là thấy hôm nay có khách nào, lúc mấy giờ và đã làm được bao nhiêu.",
-    "hlStaff1": "Lịch của tôi: chỉ thấy lịch hẹn của mình, hôm nay và các ngày tới",
-    "hlStaff2": "Tab Doanh thu: thợ xem mình làm được bao nhiêu trong ngày, theo từng khách và từng dịch vụ",
-    "hlStaff3": "Chủ salon phân quyền: thợ chỉ xem lịch, hoặc xem cả lịch và doanh thu của riêng mình",
-    "hlStaff4": "Mỗi thợ tự chọn ngôn ngữ app: Việt, Séc, Anh, Đức, Slovakia, Pháp",
-    "hlStaffShot1": "Lịch + doanh thu hôm nay",
-    "hlStaffShot2": "Doanh thu của tôi",
+    "hlStaffTitle": "Mỗi thợ một tài khoản, trên điện thoại của mình",
+    "hlStaffLead": "Chủ salon mời thợ qua email, thợ đặt mật khẩu là dùng được. Mở app là thấy hôm nay có khách nào, lúc mấy giờ.",
+    "hlStaff1": "Lịch của tôi: chỉ lịch hẹn của mình, hôm nay và các ngày tới",
+    "hlStaff2": "Thông báo trên điện thoại khi có lịch mới hoặc lịch đổi giờ, bằng ngôn ngữ thợ chọn",
+    "hlStaff3": "Doanh thu của thợ nằm ở trang Doanh thu riêng, chỉ hiện khi chủ cho phép",
+    "hlStaff4": "Chủ chọn Chỉ lịch hoặc Lịch + doanh thu, đổi lại lúc nào cũng được. Thợ không bao giờ thấy doanh thu cả salon",
+    "hlStaffShot1": "Lịch hôm nay",
+    "hlStaffShot2": "Doanh thu của tôi, khi chủ cho phép",
     "hlStaffShot3": "Chủ chọn thợ được xem gì",
-    "mkEyebrow": "Mới · Email marketing",
+    "mkEyebrow": "Email marketing",
     "mkTitle": "Gửi ưu đãi cho khách quen ngay trong app",
     "mkLead": "Không cần thuê agency hay dùng thêm công cụ email nào. Chọn một mẫu theo dịp, sửa vài dòng, bấm gửi là khách đã đồng ý nhận ưu đãi nhận được email mang tên salon của bạn.",
     "mk1Title": "10 mẫu email theo dịp",
     "mk2Title": "Viết sẵn 6 ngôn ngữ",
     "mk3Title": "Xem trước, gửi thử",
     "mk4Title": "Chỉ gửi khách đã đồng ý nhận ưu đãi",
-    "mk5Title": "Nhắc sinh nhật khách",
+    "mk5Title": "Ưu đãi sinh nhật, app nhắc trước 2 ngày",
     "mkCta": "Xem tính năng Marketing",
     "mkShotPc": "Gửi tin marketing · mẫu Giáng sinh",
     "mkShotCompose": "Soạn email",
@@ -903,7 +896,10 @@
     "tplEaster": "Phục sinh",
     "tplMothersDay": "Ngày của Mẹ",
     "tplSummer": "Mùa hè",
-    "tplBlackFriday": "Black Friday"
+    "tplBlackFriday": "Black Friday",
+    "notifNow": "bây giờ",
+    "notifAssigned": "Đã tự phân công cho Linh",
+    "mkShotBirthday": "Ưu đãi sinh nhật"
   },
   "renew": {
     "eyebrow": "Gia hạn gói",
@@ -918,7 +914,7 @@
     "step4Title": "Chọn gói và thanh toán",
     "step4Text": "Chọn gói, theo tháng hoặc theo năm, rồi thanh toán bằng thẻ hoặc chuyển khoản, tuỳ lựa chọn app hiện cho salon.",
     "cta": "Gia hạn gói",
-    "note": "Dùng app SalonGo trên iPhone hoặc Android tải từ cửa hàng ứng dụng? Hãy gia hạn trên trình duyệt hoặc app máy tính.",
+    "note": "Gia hạn gói trên trình duyệt hoặc app máy tính; app iPhone chỉ dùng để đăng nhập.",
     "shotLabel": "Nâng cấp gói"
   },
   "device": {
@@ -961,7 +957,7 @@
       },
       {
         "h": "App đặt lịch online 24/7, tự nhận lịch hẹn",
-        "p": "Mỗi salon có một đường link đặt lịch riêng để gắn lên Facebook, Instagram hay Google Maps. Khách người Séc, Đức, Anh đặt bằng ngôn ngữ của họ, còn chủ tiệm duyệt lịch bằng tiếng Việt. Trang đặt lịch chỉ hiện giờ thợ còn trống nên không bị trùng lịch, và khách có email được nhắc tự động 24 giờ và 1 giờ trước giờ hẹn.",
+        "p": "Mỗi salon có một đường link đặt lịch riêng để gắn lên Facebook, Instagram hay Google Maps. Khách người Séc, Đức, Anh đặt bằng ngôn ngữ của họ, còn chủ tiệm duyệt lịch và chia thợ bằng tiếng Việt, trong cùng một hộp xác nhận. Trang đặt lịch chỉ hiện giờ thợ còn trống nên không bị trùng lịch, và khách có email nhận email xác nhận cùng email nhắc 1 giờ trước giờ hẹn.",
         "link": {
           "href": "/tinh-nang#dat-lich-online",
           "label": "Xem đặt lịch online"
@@ -990,7 +986,7 @@
       },
       {
         "h": "Giữ chân khách quen bằng email marketing",
-        "p": "Trong mục Khách hàng có sẵn 10 mẫu email theo dịp như Giáng sinh, Năm mới, Valentine, 8/3, Ngày của Mẹ và Black Friday. Bạn sửa vài dòng, thêm % giảm giá, xem trước rồi gửi cho những khách đã đồng ý nhận ưu đãi. App còn nhắc sinh nhật khách để bạn kịp chúc mừng.",
+        "p": "Trong mục Khách hàng có sẵn 10 mẫu email theo dịp như Giáng sinh, Năm mới, Valentine, 8/3, Ngày của Mẹ và Black Friday. Bạn sửa vài dòng, thêm % giảm giá, xem trước rồi gửi cho những khách đã đồng ý nhận ưu đãi. App báo trước sinh nhật khách 2 ngày để bạn gửi lời chúc kèm ưu đãi.",
         "link": {
           "href": "/tinh-nang#marketing",
           "label": "Xem email marketing"
@@ -1031,7 +1027,7 @@
       },
       {
         "q": "Phần mềm quản lý salon nào phù hợp với tiệm nail người Việt ở Séc?",
-        "a": "SalonGo được làm cho tiệm nail và salon của người Việt ở châu Âu: app bằng tiếng Việt, khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh, Pháp hoặc tiếng Việt, giá tính bằng CZK và hỗ trợ bằng tiếng Việt, tiếng Séc."
+        "a": "SalonGo được làm cho tiệm nail và salon của người Việt ở châu Âu: app bằng tiếng Việt, khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp, giá tính bằng CZK và hỗ trợ bằng tiếng Việt, tiếng Séc."
       },
       {
         "q": "Có cần cài đặt gì không?",
@@ -1177,5 +1173,54 @@
     "stat3Text": "Đẹp trên mọi màn hình",
     "studio": "SalonGo Web Studio",
     "priceLabel": "Chỉ"
+  },
+  "day": {
+    "kicker": "Một ngày ở tiệm",
+    "title": "Từ lịch hẹn đầu tiên đến lúc chốt sổ",
+    "lead": "Mỗi tính năng của SalonGo ứng với một việc bạn đang làm hằng ngày. Việc gì tự động được, app làm thay bạn.",
+    "all": "Xem tất cả tính năng",
+    "more": "Xem chi tiết tính năng",
+    "items": {
+      "s1": {
+        "time": "07:40",
+        "title": "Khách tự đặt lịch, kể cả khi tiệm chưa mở",
+        "desc": "Mỗi salon có trang đặt lịch riêng. Khách chọn dịch vụ, chọn giờ, điền thông tin, xem lại và gửi: 4 bước, không cần tải app. Trang có tiếng Séc, Slovakia, Đức, Anh và Pháp."
+      },
+      "s2": {
+        "time": "08:55",
+        "title": "Duyệt lịch và chia thợ trong một hộp",
+        "desc": "Lịch mới hiện trong app kèm thông báo trên điện thoại. Bấm Xác nhận, chọn thợ hoặc đổi giờ ngay trong cùng một hộp. Khách nhận email xác nhận và email nhắc 1 giờ trước giờ hẹn."
+      },
+      "s3": {
+        "time": "09:00",
+        "title": "Lịch theo từng thợ, việc được chia đều",
+        "desc": "Mỗi thợ một cột, trên máy tính lẫn điện thoại. Tự động phân công bật sẵn: lịch chưa chọn thợ được giao cho người đang rảnh và ít việc nhất trong ngày. Bạn chọn thợ cụ thể thì luôn theo bạn."
+      },
+      "s4": {
+        "time": "09:10",
+        "title": "Thợ xem lịch của mình trên điện thoại",
+        "desc": "Mỗi thợ có tài khoản riêng, thấy lịch hôm nay và các ngày tới, nhận thông báo bằng ngôn ngữ mình chọn. Doanh thu của thợ nằm ở trang riêng, chỉ hiện khi chủ cho phép."
+      },
+      "s5": {
+        "time": "14:30",
+        "title": "Tính tiền tại quầy, có mã QR chuyển khoản",
+        "desc": "Chọn dịch vụ và thợ, ghi khách trả tiền mặt, thẻ hay chuyển khoản. Chuyển khoản thì app hiện mã QR có sẵn số tiền để khách quét. Hoá đơn in trên máy in khổ 80 mm."
+      },
+      "s6": {
+        "time": "16:00",
+        "title": "Nhận ra khách quen, nhớ sinh nhật",
+        "desc": "Hồ sơ từng khách với lịch sử và chi tiêu. Lọc khách VIP, khách mới, khách lâu chưa quay lại. App báo trước sinh nhật khách 2 ngày để bạn gửi lời chúc kèm ưu đãi."
+      },
+      "s7": {
+        "time": "20:00",
+        "title": "Đóng cửa, doanh thu đã tính xong",
+        "desc": "Doanh thu theo ngày, theo thợ, theo dịch vụ và cách thanh toán. Mỗi chi nhánh một báo cáo, xem tất cả chi nhánh trên một trang."
+      },
+      "s8": {
+        "time": "Cuối tháng",
+        "title": "Bảng lương tự tính",
+        "desc": "Lương theo % doanh thu hoặc lương cố định cho từng thợ, tip theo khách hoặc chia đều. Xuất bảng lương ra Excel, CSV hoặc PDF."
+      }
+    }
   }
 }

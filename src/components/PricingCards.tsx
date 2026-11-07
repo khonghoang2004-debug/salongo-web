@@ -48,13 +48,13 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
               role="radio"
               aria-checked={yearly === y}
               onClick={() => setYearly(y)}
-              className={`flex min-h-11 items-center gap-2 rounded-md px-4 text-sm font-semibold transition-colors sm:px-5 ${
+              className={`flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold transition-colors sm:px-5 ${
                 yearly === y ? "bg-brand-700 text-white" : "text-muted hover:text-ink"
               }`}
             >
               {y ? labels.yearly : labels.monthly}
               {y && (
-                <span className={`rounded-md px-2 py-0.5 text-[11px] font-bold ${yearly ? "bg-white/20 text-white" : "bg-brand-50 text-brand-700"}`}>
+                <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${yearly ? "bg-white/20 text-white" : "bg-brand-50 text-brand-700"}`}>
                   {labels.yearlyBadge}
                 </span>
               )}
@@ -71,30 +71,30 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
           return (
             <div
               key={plan.code}
-              className={`relative flex h-full flex-col rounded-xl p-6 sm:p-7 ${
-                hi ? "sg-dark" : "border border-line bg-white transition-colors duration-300 hover:border-brand-300"
+              className={`relative flex h-full flex-col rounded-[28px] p-6 sm:p-8 ${
+                hi ? "sg-dark" : "border border-line bg-white transition-colors duration-300 hover:border-[#bdb3b2]"
               }`}
             >
               {hi && (
-                <span className="absolute right-5 top-5 inline-flex items-center rounded-md bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white ring-1 ring-white/20">
+                <span className="absolute right-6 top-6 inline-flex items-center rounded-full bg-white px-3 py-1 text-[12px] font-semibold text-brand-700">
                   {labels.popular}
                 </span>
               )}
-              <h3 className={`font-display text-xl font-semibold ${hi ? "text-white" : "text-ink"}`}>{plan.name}</h3>
+              <h3 className={`font-display text-[1.75rem] font-medium leading-none ${hi ? "text-white" : "text-ink"}`}>{plan.name}</h3>
               <p className={`mt-2 text-sm ${hi ? "text-white/70" : "text-muted"}`}>{plan.subtitle}</p>
 
               <div className={`mt-6 border-b pb-6 ${hi ? "border-white/15" : "border-line"}`}>
                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className={`font-display text-[2.75rem] font-semibold tracking-[-0.04em] lg:text-[3.25rem] ${hi ? "text-white" : "text-ink"}`}>
+                  <span className={`font-display text-[3rem] font-medium leading-none tracking-[-0.02em] tabular-nums lg:text-[3.5rem] ${hi ? "text-white" : "text-ink"}`}>
                     {fmt(perMonth)}
                   </span>
                   <span className={hi ? "text-white/70" : "text-muted"}>{labels.perMonth}</span>
                 </div>
-                <p className={`mt-1 flex min-h-5 flex-wrap items-center gap-x-2 text-sm ${hi ? "text-white/65" : "text-[#8a7f82]"}`}>
+                <p className={`mt-3 flex min-h-5 flex-wrap items-center gap-x-3 text-sm ${hi ? "text-white/75" : "text-muted"}`}>
                   {yearly ? (
                     <>
                       <span className="line-through">{fmt(plan.monthly)} CZK</span>
-                      <span>· {labels.billedYearly.replace("{total}", fmt(perYear))}</span>
+                      <span>{labels.billedYearly.replace("{total}", fmt(perYear))}</span>
                     </>
                   ) : (
                     <span>{labels.perYear.replace("{total}", fmt(perYear))}</span>
@@ -134,7 +134,7 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
                   href={appLink(SIGNUP_URL, locale)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full py-3.5 text-sm ${hi ? "btn-on-gradient" : "btn-primary"}`}
+                  className={`w-full text-[15px] ${hi ? "btn-on-gradient" : "btn-primary"}`}
                 >
                   {labels.trialCta}
                   <ArrowUpRight className="size-4" aria-hidden />

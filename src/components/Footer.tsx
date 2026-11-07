@@ -47,7 +47,7 @@ export async function Footer() {
 
   return (
     <footer className="bg-brand-900 text-white">
-      <div className="mx-auto max-w-[1280px] px-4 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
+      <div className="mx-auto max-w-[1280px] px-4 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-2.5 rounded-lg transition-opacity hover:opacity-80 focus-visible:!outline-white">

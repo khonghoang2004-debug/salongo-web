@@ -58,7 +58,7 @@ export function FeatureTabs({ items, moreLabel, listLabel }: { items: FeatureTab
   };
 
   return (
-    <div ref={ref} data-reveal className="mt-10 lg:mt-14 lg:grid lg:grid-cols-12 lg:gap-12" onMouseEnter={() => setPaused(true)}>
+    <div ref={ref} data-reveal className="mt-7 lg:mt-10 lg:grid lg:grid-cols-12 lg:gap-12" onMouseEnter={() => setPaused(true)}>
       {/* Mobile / tablet: chip mốc giờ */}
       <div ref={chips} className="no-scrollbar relative -mx-4 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 lg:hidden" role="tablist" aria-label={listLabel}>
         <div className="flex w-max gap-2">
@@ -85,8 +85,8 @@ export function FeatureTabs({ items, moreLabel, listLabel }: { items: FeatureTab
           const on = i === active;
           return (
             <li key={it.id} className="relative border-b border-line">
-              <button type="button" role="tab" aria-selected={on} onClick={() => pick(i)} className="group grid w-full grid-cols-[6.5rem_1fr] items-baseline gap-4 py-4 text-left">
-                <span className={`font-display text-[1.375rem] tabular-nums leading-tight transition-colors ${on ? "text-brand-700" : "text-ink/55 group-hover:text-ink"}`}>
+              <button type="button" role="tab" aria-selected={on} onClick={() => pick(i)} className="group grid w-full grid-cols-[7.75rem_1fr] items-baseline gap-4 py-4 text-left">
+                <span className={`whitespace-nowrap font-display text-[1.375rem] tabular-nums leading-tight transition-colors ${on ? "text-brand-700" : "text-ink/55 group-hover:text-ink"}`}>
                   {it.time}
                 </span>
                 <span className="min-w-0">
@@ -107,7 +107,15 @@ export function FeatureTabs({ items, moreLabel, listLabel }: { items: FeatureTab
       </ol>
 
       {/* Ảnh + mô tả */}
-      <div className="mt-6 lg:col-span-7 lg:mt-0" role="tabpanel">
+      <div className="mt-4 lg:col-span-7 lg:mt-0" role="tabpanel">
+        {/* Mobile / tablet: chọn giờ là thấy ngay tiêu đề + mô tả, ngay dưới hàng chip, trước ảnh */}
+        <div className="mb-5 lg:hidden">
+          <h3 key={cur.id} className="sg-fade text-[1.1875rem] font-semibold leading-snug tracking-[-0.01em] text-ink">
+            <span className="mr-2 font-display tabular-nums text-brand-700">{cur.time}</span>
+            {cur.title}
+          </h3>
+          <p className="mt-1.5 text-[15px] leading-relaxed text-muted">{cur.desc}</p>
+        </div>
         <div className="lg:sticky lg:top-28">
           {/* Từ 640 px: ảnh máy tính trên nền nude */}
           <div className="rounded-[28px] bg-nude p-4 max-sm:hidden sm:p-8 lg:p-10">
@@ -122,18 +130,11 @@ export function FeatureTabs({ items, moreLabel, listLabel }: { items: FeatureTab
           </div>
 
           {/* Điện thoại: ảnh app trên điện thoại, đứng trước một "đầu móng" nude */}
-          <div className="relative mx-auto max-w-[320px] sm:hidden">
+          <div className="relative mx-auto max-w-[280px] sm:hidden">
             <div className="sg-arch-nude absolute inset-x-[6%] bottom-0 top-[8%]" aria-hidden />
             <PhoneShot key={cur.mobile} src={cur.mobile} alt={cur.title} className="sg-swap relative mx-auto w-[74%]" />
           </div>
 
-          <div className="mt-6 lg:hidden">
-            <p className="font-display text-[1.125rem] tabular-nums text-brand-700">{cur.time}</p>
-            <h3 key={cur.id} className="sg-fade mt-1 text-[1.1875rem] font-semibold tracking-[-0.01em] text-ink">
-              {cur.title}
-            </h3>
-            <p className="mt-2 text-[15px] leading-relaxed text-muted">{cur.desc}</p>
-          </div>
           <Link
             href={`/tinh-nang#${cur.anchor}`}
             className="sg-arrow mt-3 inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand-700 hover:text-brand-800 lg:mt-5"

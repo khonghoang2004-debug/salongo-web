@@ -37,7 +37,7 @@ export async function HomeHero() {
       {/* Nền đỏ đô cho nổi bật: phủ cả hero trên màn nhỏ; PC dừng giữa ảnh máy tính để ảnh "bước ra" nền trắng */}
       <div className="absolute inset-x-0 top-0 h-full bg-brand-700 lg:h-[calc(100%-240px)]" aria-hidden />
 
-      <div className="sg-container relative grid px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-12 lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:pb-20 lg:pt-16">
+      <div className="sg-container relative grid px-4 pb-10 pt-7 sm:px-6 sm:pb-12 sm:pt-10 lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:pb-14 lg:pt-12">
         <div className="lg:col-span-7 lg:row-start-1 lg:self-center lg:pb-10">
           <p className="sg-eyebrow sg-in !text-white/85" style={d(0)}>
             {t("badge")}

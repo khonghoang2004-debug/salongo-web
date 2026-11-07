@@ -48,10 +48,6 @@ export async function HomeHero() {
             <span className="block text-balance">{words(t("titleAccent"))}</span>
           </h1>
 
-          <p className="sg-in mt-6 max-w-[38rem] text-[17px] leading-[1.7] text-ink/75 sm:text-lg" style={d(520)}>
-            {t("lead")}
-          </p>
-
           <div className="sg-in mt-8 flex flex-col gap-3 sm:flex-row" style={d(640)}>
             <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up px-7 text-base">
               {t("cta")}

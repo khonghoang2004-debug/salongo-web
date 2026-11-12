@@ -1,8 +1,8 @@
 import type { CSSProperties } from "react";
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowUpRight, Check, Lock, Play, UserCheck } from "lucide-react";
+import { ArrowUpRight, Check, Lock, LogIn, Play, UserCheck } from "lucide-react";
 import { PhoneShot } from "../ui/AppShot";
-import { SIGNUP_URL, appLink } from "@/lib/app-links";
+import { LOGIN_URL, SIGNUP_URL, appLink } from "@/lib/app-links";
 import { siteConfig } from "@/lib/metadata";
 
 const BLANK_GIF = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
@@ -18,6 +18,7 @@ export async function HomeHero() {
   const locale = await getLocale();
   const h = await getTranslations("home2");
   const v = await getTranslations("videos");
+  const nav = await getTranslations("nav");
 
   let delay = 100;
   const words = (s: string) =>
@@ -52,6 +53,11 @@ export async function HomeHero() {
             <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-on-gradient sg-arrow sg-arrow-up px-7 text-base">
               {t("cta")}
               <ArrowUpRight className="size-[18px]" aria-hidden />
+            </a>
+            {/* Điện thoại: menu đăng nhập nằm trong nút ☰, nên đặt thêm nút Đăng nhập ngay dưới nút dùng thử */}
+            <a href={appLink(LOGIN_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-ghost-light px-6 text-base sm:hidden">
+              <LogIn className="size-[18px]" aria-hidden />
+              {nav("login")}
             </a>
             <a href="#video" className="btn-ghost-light px-6 text-base">
               <Play className="size-4 fill-current" aria-hidden />

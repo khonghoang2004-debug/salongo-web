@@ -16,6 +16,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/lib/metadata";
+import { getPlans, priceRange } from "@/lib/plans";
 import { VIDEOS, videoSrc } from "@/lib/videos";
 import { CONTACT_EMAIL, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_PHONE } from "@/lib/contact";
 
@@ -38,6 +39,7 @@ export default async function Home({ params }: Props) {
   const tPage = await getTranslations({ locale, namespace: "pages" });
   const tVid = await getTranslations({ locale, namespace: "videos" });
   const org = `${base}/#organization`;
+  const prices = priceRange(await getPlans());
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,13 +90,13 @@ export default async function Home({ params }: Props) {
         image: ogImageUrl,
         description: tPage("homeDesc"),
         publisher: { "@id": org },
-        // Giá các gói đang bán trong app (Basic 199, Pro 499, Premium 799 CZK/tháng)
+        // Giá các gói đang bán trong app (lib/plans: lấy từ app, dự phòng Basic 199 / Pro 499 / Premium 799 CZK/tháng)
         offers: {
           "@type": "AggregateOffer",
           priceCurrency: "CZK",
-          lowPrice: 199,
-          highPrice: 799,
-          offerCount: 3,
+          lowPrice: prices.low,
+          highPrice: prices.high,
+          offerCount: prices.count,
           url: `${pageUrl}/bang-gia`,
         },
       },

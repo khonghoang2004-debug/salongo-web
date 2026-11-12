@@ -1,16 +1,15 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getLegalPack } from "@/content/legal";
+import { getPlans, maxYearlyDiscount } from "@/lib/plans";
 import { PricingCards, type PlanCard } from "./PricingCards";
 
-// Khớp với các gói đang bán trong app (SubscriptionPlan, đối chiếu 29/10/2026): giá niêm yết / tháng,
-// nhân viên mỗi chi nhánh (maxStaff) và số chi nhánh (limitsJson.maxLocations); null = không giới hạn.
-// Mọi gói đều có toàn bộ tính năng; trả theo năm giảm 10%. Giá thật luôn do app tính khi thanh toán.
-export const PLANS = [
-  { code: "BASIC", nameKey: "plan1Name", subtitleKey: "plan1Subtitle", staff: 3, branches: 1, monthly: 199, highlighted: false },
-  { code: "PRO", nameKey: "plan2Name", subtitleKey: "plan2Subtitle", staff: 8, branches: 3, monthly: 499, highlighted: true },
-  { code: "PREMIUM", nameKey: "plan3Name", subtitleKey: "plan3Subtitle", staff: null, branches: null, monthly: 799, highlighted: false },
-] as const;
+/** Nhãn của từng gói trên website (tên + mô tả ngắn); giá và giới hạn lấy từ app qua getPlans(). */
+export const PLAN_KEYS = {
+  BASIC: { nameKey: "plan1Name", subtitleKey: "plan1Subtitle" },
+  PRO: { nameKey: "plan2Name", subtitleKey: "plan2Subtitle" },
+  PREMIUM: { nameKey: "plan3Name", subtitleKey: "plan3Subtitle" },
+} as const;
 
 const COMMON = ["allFeature1", "allFeature2", "allFeature3", "allFeature4"] as const;
 
@@ -18,12 +17,15 @@ export async function Pricing() {
   const t = await getTranslations("pricing");
   const tPage = await getTranslations("pricingPage");
   const locale = await getLocale();
+  const data = await getPlans();
+  const discount = maxYearlyDiscount(data);
 
-  const plans: PlanCard[] = PLANS.map((p) => ({
+  const plans: PlanCard[] = data.plans.map((p) => ({
     code: p.code,
-    name: t(p.nameKey),
-    subtitle: t(p.subtitleKey),
+    name: t(PLAN_KEYS[p.code].nameKey),
+    subtitle: t(PLAN_KEYS[p.code].subtitleKey),
     monthly: p.monthly,
+    yearly: p.yearly,
     staffLabel: p.staff ? tPage("staffLimit", { n: p.staff }) : tPage("staffUnlimited"),
     branchLabel: p.branches ? tPage("branchLimit", { n: p.branches }) : tPage("branchUnlimited"),
     highlighted: p.highlighted,
@@ -37,7 +39,7 @@ export async function Pricing() {
           labels={{
             monthly: tPage("toggleMonth"),
             yearly: tPage("toggleYear"),
-            yearlyBadge: "-10%",
+            yearlyBadge: discount ? `-${discount}%` : "",
             perMonth: t("perMonth"),
             perYear: tPage.raw("perYear") as string,
             billedYearly: tPage.raw("billedYearly") as string,

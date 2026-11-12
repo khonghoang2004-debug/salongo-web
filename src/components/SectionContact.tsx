@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { OperatorBox } from "@/components/LegalDocumentPage";
 import { Check, Clock, Mail, MessageCircle, Phone } from "lucide-react";
 import { CopyEmailButton } from "./CopyEmailButton";
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_WHATSAPP } from "@/lib/contact";
+import { CONTACT_PHONE, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_WHATSAPP } from "@/lib/contact";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (

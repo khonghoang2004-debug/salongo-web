@@ -1,17 +1,30 @@
+import type { PlanCode } from "./plans-core";
+
+export type { PlanCode };
+
 /** Đường dẫn vào app SalonGo (web app, cũng mở được trong app desktop). */
 export const APP_URL = "https://app.salongo.eu";
 
 export const SIGNUP_URL = `${APP_URL}/signup`;
 export const LOGIN_URL = `${APP_URL}/login`;
 
-export type PlanCode = "BASIC" | "PRO" | "PREMIUM";
+export type BillingCycle = "month" | "year";
 
 /**
- * "Gia hạn gói": màn Nâng cấp gói hiện có trong app (/dashboard/subscription) của chi nhánh đang mở.
- * Chưa đăng nhập: app chuyển sang /login?callbackUrl=/dashboard/subscription rồi quay lại màn này.
- * Giá luôn lấy từ app; không có thanh toán nào bắt đầu khi chỉ bấm link.
+ * "Gia hạn / Mua gói": trang /renew của app. Không dùng /dashboard/subscription: trên iPhone có app SalonGo,
+ * link đó mở app từ App Store (không mua gói được trong app), còn /renew luôn mở trong trình duyệt.
+ * Chưa đăng nhập thì app tự chuyển sang đăng nhập rồi quay lại. Giá luôn do app tính khi thanh toán.
  */
-export const RENEW_URL = `${APP_URL}/dashboard/subscription`;
+export const RENEW_URL = `${APP_URL}/renew`;
+
+/** Link Gia hạn / Mua gói theo ngôn ngữ web; trên thẻ gói thêm plan + cycle (tháng/năm) đang chọn. */
+export function renewLink(locale: string, plan?: PlanCode, cycle?: BillingCycle): string {
+  const u = new URL(RENEW_URL);
+  u.searchParams.set("lang", locale);
+  if (plan) u.searchParams.set("plan", plan);
+  if (plan && cycle) u.searchParams.set("cycle", cycle);
+  return u.toString();
+}
 
 export const DOWNLOAD_LINKS = {
   // Our own redirect: newest published version (full or pre-release), see src/app/api/download/[os]/route.ts

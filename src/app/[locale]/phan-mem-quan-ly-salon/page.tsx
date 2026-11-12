@@ -9,6 +9,7 @@ import { PhoneShot } from "@/components/ui/AppShot";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { SIGNUP_URL, appLink } from "@/lib/app-links";
 import { siteConfig } from "@/lib/metadata";
+import { getPlans, priceRange } from "@/lib/plans";
 
 // Trang nội dung cho từ khoá chính ("phần mềm quản lý salon / tiệm nail", "rezervační systém pro salon",
 // "Salonsoftware", "salon management software"): giải thích đầy đủ, liên kết sang trang tính năng, giá, FAQ.
@@ -31,6 +32,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
   const tNav = await getTranslations("nav");
   const sections = t.raw("sections") as Section[];
   const faq = t.raw("faq") as Qa[];
+  const prices = priceRange(await getPlans());
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -54,7 +56,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
         publisher: { "@id": `${siteConfig.url}/#organization` },
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, Windows, macOS",
-        offers: { "@type": "AggregateOffer", priceCurrency: "CZK", lowPrice: 199, highPrice: 799, offerCount: 3 },
+        offers: { "@type": "AggregateOffer", priceCurrency: "CZK", lowPrice: prices.low, highPrice: prices.high, offerCount: prices.count },
       },
     ],
   };

@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, CreditCard, LogIn, MousePointerClick, Store } from "lucide-react";
-import { RENEW_URL, appLink } from "@/lib/app-links";
+import { renewLink } from "@/lib/app-links";
 import { PhoneShot } from "./ui/AppShot";
 import { DeviceSwitch } from "./ui/DeviceSwitch";
 
@@ -11,7 +11,7 @@ const STEPS = [
   { i: 4, Icon: CreditCard },
 ] as const;
 
-// "Gia hạn gói": nút trên website mở thẳng màn Nâng cấp gói trong app (app.salongo.eu/dashboard/subscription)
+// "Gia hạn gói": nút trên website mở thẳng màn Nâng cấp gói trong app (app.salongo.eu/renew)
 export async function SectionRenew() {
   const t = await getTranslations("renew");
   const locale = await getLocale();
@@ -36,7 +36,7 @@ export async function SectionRenew() {
               </li>
             ))}
           </ol>
-          <a href={appLink(RENEW_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full min-h-12 px-7 text-base sm:w-auto">
+          <a href={renewLink(locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up mt-7 w-full min-h-12 px-7 text-base sm:w-auto">
             {t("cta")}
             <ArrowUpRight className="size-[18px]" aria-hidden />
           </a>

@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/metadata";
 import { ArrowRight, Download, RefreshCw } from "lucide-react";
-import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib/app-links";
+import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, appLink, renewLink } from "@/lib/app-links";
 
 const LocaleSwitcher = dynamic(() => import("./LocaleSwitcher").then((m) => m.LocaleSwitcher), {
   ssr: false,
@@ -111,7 +111,7 @@ export function Navbar() {
         scrolled || menuOpen ? "border-line" : "border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] lg:px-8">
+      <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] xl:px-8">
         <Link href="/" className="flex min-h-11 shrink-0 items-center gap-2 rounded-lg transition-opacity hover:opacity-80">
           <img src={siteConfig.logo} alt="" width={36} height={36} className="size-7 shrink-0 sm:size-9" />
           <span className="text-[1.1875rem] font-semibold tracking-[-0.03em] text-ink sm:text-[1.375rem]">
@@ -120,7 +120,7 @@ export function Navbar() {
         </Link>
 
         {/* Menu chính: nhóm link trong một khung bo tròn */}
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
+        <nav className="hidden items-center lg:flex xl:gap-1" aria-label="Main">
           {menuItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -128,32 +128,34 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`relative flex min-h-11 items-center whitespace-nowrap rounded-full px-3 text-[15px] font-medium transition-colors duration-200 2xl:px-4 ${
+                className={`relative flex min-h-11 items-center whitespace-nowrap rounded-full px-2 text-[14px] font-medium transition-colors duration-200 xl:px-3 xl:text-[15px] ${
                   item.href === "/" ? "hidden 2xl:flex" : ""
                 } ${active ? "text-brand-700" : "text-ink/75 hover:text-ink"}`}
               >
                 {t(item.labelKey)}
                 {/* Trang đang xem: vạch đỏ đô dưới chữ */}
-                {active && <span className="absolute inset-x-3 bottom-1.5 h-[2px] rounded-full bg-brand-700 2xl:inset-x-4" aria-hidden />}
+                {active && <span className="absolute inset-x-2 bottom-1.5 h-[2px] rounded-full bg-brand-700 xl:inset-x-3" aria-hidden />}
               </Link>
             );
           })}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1 xl:gap-2">
           <a
-            href={appLink(RENEW_URL, locale)}
+            href={renewLink(locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden min-h-11 items-center rounded-full px-3 text-[15px] font-medium text-ink/75 transition-colors hover:text-brand-700 xl:inline-flex"
+            title={t("renew")}
+            className="hidden min-h-11 items-center whitespace-nowrap rounded-full px-2 text-[14px] font-medium text-ink/75 transition-colors hover:text-brand-700 lg:inline-flex xl:px-3 xl:text-[15px]"
           >
-            {t("renew")}
+            {/* Nhãn ngắn ("Gia hạn"): Đăng nhập + Gia hạn vừa một hàng cạnh menu từ 1024 px; tên đầy đủ ở title + menu mobile */}
+            {t("renewShort")}
           </a>
           <a
             href={appLink(LOGIN_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden min-h-11 items-center rounded-full px-3 text-[15px] font-medium text-ink/75 transition-colors hover:text-brand-700 xl:inline-flex"
+            className="hidden min-h-11 items-center whitespace-nowrap rounded-full px-2 text-[14px] font-medium text-ink/75 transition-colors hover:text-brand-700 lg:inline-flex xl:px-3 xl:text-[15px]"
           >
             {t("login")}
           </a>
@@ -201,9 +203,10 @@ export function Navbar() {
             href={appLink(SIGNUP_URL, locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary hidden !min-h-11 px-5 text-sm lg:inline-flex"
+            className="btn-primary hidden !min-h-11 whitespace-nowrap px-4 text-sm lg:inline-flex xl:px-5"
           >
-            {t("tryFree")}
+            <span className="xl:hidden">{t("tryFreeShort")}</span>
+            <span className="hidden xl:inline">{t("tryFree")}</span>
           </a>
 
           {/* Mobile: đổi ngôn ngữ nhanh ngay trên thanh logo */}
@@ -294,7 +297,7 @@ export function Navbar() {
                 {t("login")}
               </a>
               <a
-                href={appLink(RENEW_URL, locale)}
+                href={renewLink(locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}

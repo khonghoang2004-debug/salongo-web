@@ -25,6 +25,8 @@ export async function Pricing() {
     name: t(PLAN_KEYS[p.code].nameKey),
     subtitle: t(PLAN_KEYS[p.code].subtitleKey),
     monthly: p.monthly,
+    listMonthly: p.listMonthly,
+    monthlyDiscountPct: p.monthlyDiscountPct,
     yearly: p.yearly,
     staffLabel: p.staff ? tPage("staffLimit", { n: p.staff }) : tPage("staffUnlimited"),
     branchLabel: p.branches ? tPage("branchLimit", { n: p.branches }) : tPage("branchUnlimited"),

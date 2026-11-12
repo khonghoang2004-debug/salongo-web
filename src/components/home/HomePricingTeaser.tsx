@@ -35,6 +35,7 @@ export async function HomePricingTeaser() {
                   </span>
                 </dt>
                 <dd className="shrink-0 text-right">
+                  {p.listMonthly !== null && <span className="mr-2 text-[15px] text-white/60 line-through tabular-nums">{fmt(p.listMonthly)}</span>}
                   <span className="font-display text-[2rem] leading-none tabular-nums sm:text-[2.375rem]">{fmt(p.monthly)}</span>
                   <span className="ml-1.5 text-[13px] text-white/75">{tp("perMonth")}</span>
                 </dd>

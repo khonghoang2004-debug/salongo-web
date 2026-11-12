@@ -7,8 +7,12 @@ export type PlanCode = "BASIC" | "PRO" | "PREMIUM";
 
 export type SitePlan = {
   code: PlanCode;
-  /** Giá niêm yết / tháng (CZK) */
+  /** Giá phải trả / tháng (CZK), đã trừ giảm giá theo tháng nếu có */
   monthly: number;
+  /** Giá gốc / tháng trước giảm giá (CZK); null = gói không giảm giá */
+  listMonthly: number | null;
+  /** % giảm theo tháng (nhãn "-20%"); null = không giảm */
+  monthlyDiscountPct: number | null;
   /** Tổng trả theo năm (CZK); null = gói không bán theo năm */
   yearly: number | null;
   /** % giảm khi trả theo năm (để hiện nhãn "-10%"); null = không có */
@@ -33,6 +37,8 @@ const FALLBACK_DISCOUNT = 10;
 const fb = (code: PlanCode, monthly: number, staff: number | null, branches: number | null, highlighted: boolean): SitePlan => ({
   code,
   monthly,
+  listMonthly: null,
+  monthlyDiscountPct: null,
   yearly: Math.round(monthly * 12 * (1 - FALLBACK_DISCOUNT / 100)), // như màn Nâng cấp gói trong app
   yearlyDiscountPct: FALLBACK_DISCOUNT,
   staff,
@@ -68,12 +74,22 @@ export function mapPlansResponse(json: unknown): SitePlans | null {
     const yearlyCents = raw.yearlyPriceCents;
     if (yearlyCents !== null && yearlyCents !== undefined && !posInt(yearlyCents)) return null;
     const pct = raw.yearlyDiscountPct;
+    // Giảm giá theo tháng (tuỳ chọn): app gửi giá gốc + % thì web hiện giá gốc gạch ngang
+    const list = raw.monthlyListPriceCents;
+    const hasList = posInt(list) && list > raw.monthlyPriceCents;
+    const mPct = raw.monthlyDiscountPct;
     const staff = limit(raw.maxStaff);
     const branches = limit(raw.maxLocations);
     if (staff === undefined || branches === undefined) return null;
     plans.push({
       code,
       monthly: raw.monthlyPriceCents / 100,
+      listMonthly: hasList ? list / 100 : null,
+      monthlyDiscountPct: !hasList
+        ? null
+        : typeof mPct === "number" && mPct > 0 && mPct < 100
+          ? mPct
+          : Math.round((1 - raw.monthlyPriceCents / list) * 100),
       yearly: posInt(yearlyCents) ? yearlyCents / 100 : null,
       yearlyDiscountPct: typeof pct === "number" && pct > 0 && pct < 100 ? pct : null,
       staff,

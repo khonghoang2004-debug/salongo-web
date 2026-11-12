@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useLocale } from "next-intl";
-import { ArrowUpRight, Check, RefreshCw, Store, Users } from "lucide-react";
+import { ArrowUpRight, Check, Flame, RefreshCw, Store, Users } from "lucide-react";
 import { SIGNUP_URL, type PlanCode, appLink, renewLink } from "@/lib/app-links";
 
 export type PlanCard = {
@@ -11,6 +11,9 @@ export type PlanCard = {
   subtitle: string;
   /** Giá niêm yết / tháng (CZK), khớp SubscriptionPlan.priceMonthly trong app */
   monthly: number;
+  /** Giá gốc / tháng khi gói đang giảm giá (gạch ngang); null = không giảm */
+  listMonthly: number | null;
+  monthlyDiscountPct: number | null;
   /** Tổng trả theo năm (CZK) do app tính; null = gói không bán theo năm */
   yearly: number | null;
   staffLabel: string;
@@ -80,7 +83,8 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
               }`}
             >
               {hi && (
-                <span className="absolute right-6 top-6 inline-flex items-center rounded-full bg-white px-3 py-1 text-[12px] font-semibold text-brand-700">
+                <span className="absolute right-6 top-6 inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-[12px] font-semibold text-brand-700">
+                  <Flame className="size-3.5 fill-[#F97316] text-[#EA580C]" aria-hidden />
                   {labels.popular}
                 </span>
               )}
@@ -100,9 +104,21 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
                       <span className="line-through">{fmtExact(plan.monthly)} CZK</span>
                       <span>{labels.billedYearly.replace("{total}", fmtExact(perYear))}</span>
                     </>
-                  ) : plan.yearly !== null ? (
-                    <span>{labels.perYear.replace("{total}", fmtExact(perYear))}</span>
-                  ) : null}
+                  ) : (
+                    <>
+                      {plan.listMonthly !== null && (
+                        <>
+                          <span className="line-through">{fmtExact(plan.listMonthly)} CZK</span>
+                          {plan.monthlyDiscountPct !== null && (
+                            <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${hi ? "bg-white/20 text-white" : "bg-brand-50 text-brand-700"}`}>
+                              -{plan.monthlyDiscountPct}%
+                            </span>
+                          )}
+                        </>
+                      )}
+                      {plan.yearly !== null && <span>{labels.perYear.replace("{total}", fmtExact(perYear))}</span>}
+                    </>
+                  )}
                 </p>
               </div>
 

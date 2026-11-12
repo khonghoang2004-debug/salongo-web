@@ -6,6 +6,8 @@ export { FALLBACK_PLANS, priceRange, maxYearlyDiscount, type SitePlan, type Site
 
 // PLANS_API_URL chỉ để thử với API giả ở máy local; mặc định là API thật của app
 const PLANS_API = process.env.PLANS_API_URL || `${APP_URL}/api/public/plans?currency=CZK`;
+// API của app được CDN giữ 10 phút; thêm số phút hiện tại vào URL để mỗi lần web làm mới đều lấy giá mới nhất
+const freshUrl = () => `${PLANS_API}${PLANS_API.includes("?") ? "&" : "?"}m=${Math.floor(Date.now() / 60000)}`;
 
 const state: PlansLoaderState = { lastGood: null };
 
@@ -16,7 +18,7 @@ const state: PlansLoaderState = { lastGood: null };
 export function getPlans(): Promise<SitePlans> {
   return loadPlans(
     () =>
-      fetch(PLANS_API, {
+      fetch(freshUrl(), {
         next: { revalidate: 60 },
         signal: AbortSignal.timeout(3000),
         headers: { accept: "application/json" },

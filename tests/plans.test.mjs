@@ -20,7 +20,7 @@ test("API hợp lệ: CZK từ cents, yearly dùng nguyên giá app, sắp xếp
   assert.equal(r.source, "api");
   assert.equal(r.trialDays, 120);
   assert.deepEqual(r.plans.map((p) => p.code), ["BASIC", "PRO", "PREMIUM"]);
-  assert.deepEqual(r.plans[0], { code: "BASIC", monthly: 199, yearly: 2149.5, yearlyDiscountPct: 10, staff: 3, branches: 1, highlighted: false });
+  assert.deepEqual(r.plans[0], { code: "BASIC", monthly: 199, listMonthly: null, monthlyDiscountPct: null, yearly: 2149.5, yearlyDiscountPct: 10, staff: 3, branches: 1, highlighted: false });
   assert.equal(r.plans[1].yearly, null);
   assert.equal(r.plans[1].highlighted, true);
   assert.equal(r.plans[2].staff, null);
@@ -95,4 +95,16 @@ test("điền số liệu vào văn bản; không có giảm giá năm thì bỏ
   const t2 = planTokens(noDisc, "cs");
   assert.equal(fillPlanText("Ceník.[[discount: Ročně sleva {discount} %.]] {days} dní", t2), "Ceník. 120 dní");
   assert.deepEqual(fillPlanMessages({ a: { b: ["{from} Kč", "{n} x"] }, c: 1 }, t2), { a: { b: ["199 Kč", "{n} x"] }, c: 1 });
+});
+
+test("giảm giá theo tháng: giá gốc + % khi app gửi monthlyListPriceCents", () => {
+  const sale = { ...ok, plans: [{ ...ok.plans[1], monthlyPriceCents: 15900, monthlyListPriceCents: 19900, monthlyDiscountPct: 20 }] };
+  const p = mapPlansResponse(sale).plans[0];
+  assert.equal(p.monthly, 159);
+  assert.equal(p.listMonthly, 199);
+  assert.equal(p.monthlyDiscountPct, 20);
+  const noPct = mapPlansResponse({ ...ok, plans: [{ ...ok.plans[1], monthlyPriceCents: 15000, monthlyListPriceCents: 20000 }] }).plans[0];
+  assert.equal(noPct.monthlyDiscountPct, 25);
+  const same = mapPlansResponse({ ...ok, plans: [{ ...ok.plans[1], monthlyListPriceCents: 19900 }] }).plans[0];
+  assert.equal(same.listMonthly, null);
 });

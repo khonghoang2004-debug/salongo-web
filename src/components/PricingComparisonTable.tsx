@@ -1,12 +1,7 @@
 import { Check } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-
-// Mọi gói đều có đủ tính năng; chỉ khác số nhân viên mỗi chi nhánh và số chi nhánh (2 dòng đầu). null = không giới hạn
-const LIMITS = [
-  { key: "compareRowStaff", values: [3, 8, null] },
-  { key: "compareRowBranches", values: [1, 3, null] },
-] as const;
-const COLS = [0, 1, 2];
+import { getPlans } from "@/lib/plans";
+import { PLAN_KEYS } from "./Pricing";
 
 const ROW_KEYS = [
   "compareRow1",
@@ -23,7 +18,14 @@ export async function PricingComparisonTable() {
   const t = await getTranslations("pricingPage");
   const tPricing = await getTranslations("pricing");
 
-  const planNames = [tPricing("plan1Name"), tPricing("plan2Name"), tPricing("plan3Name")];
+  // Mọi gói đều có đủ tính năng; chỉ khác số nhân viên mỗi chi nhánh và số chi nhánh (2 dòng đầu, lấy từ app). null = không giới hạn
+  const { plans } = await getPlans();
+  const planNames = plans.map((p) => tPricing(PLAN_KEYS[p.code].nameKey));
+  const LIMITS = [
+    { key: "compareRowStaff", values: plans.map((p) => p.staff) },
+    { key: "compareRowBranches", values: plans.map((p) => p.branches) },
+  ] as const;
+  const COLS = plans.map((_, i) => i);
 
   return (
     <section className="sg-section bg-nude">

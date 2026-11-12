@@ -11,13 +11,26 @@ import { SectionPricingCommitment } from "@/components/SectionPricingCommitment"
 import { SectionPricingCTA } from "@/components/SectionPricingCTA";
 import { SectionPricingFAQ } from "@/components/PricingPageDynamic";
 import { SectionRenew } from "@/components/SectionRenew";
+import { getPlans, maxYearlyDiscount } from "@/lib/plans";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages" });
-  return pageMetadata({ locale, path: "/bang-gia", title: t("pricingTitle"), description: t("pricingDesc") });
+  const data = await getPlans();
+  const price = (code: string) => {
+    const n = data.plans.find((p) => p.code === code)?.monthly;
+    return n === undefined ? "–" : new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 2 }).format(n);
+  };
+  const description = t("pricingDesc", {
+    basic: price("BASIC"),
+    pro: price("PRO"),
+    premium: price("PREMIUM"),
+    discount: maxYearlyDiscount(data) ?? 0,
+    days: data.trialDays,
+  });
+  return pageMetadata({ locale, path: "/bang-gia", title: t("pricingTitle"), description });
 }
 
 export default async function PricingPage({ params }: Props) {

@@ -216,7 +216,7 @@ const MOTIFS: Record<Motif, (v: number, id: string, p: ArtPalette) => React.Reac
     );
   },
   // Barber: sọc cột barber, dao cạo, khung đồng
-  barber: (v, id, [a, b, c, d]) => {
+  barber: (v, id, [a, , c, d]) => {
     if (v === 0)
       return (
         <g>

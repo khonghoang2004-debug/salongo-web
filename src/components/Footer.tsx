@@ -10,7 +10,7 @@ import {
 } from "@/lib/contact";
 import { siteConfig } from "@/lib/metadata";
 import { BackToTop } from "./BackToTop";
-import { LOGIN_URL, SIGNUP_URL, RENEW_URL, appLink } from "@/lib/app-links";
+import { LOGIN_URL, SIGNUP_URL, appLink, renewLink } from "@/lib/app-links";
 import { LEGAL_DOCS, OPERATOR } from "@/lib/legal";
 import { getLegalPack } from "@/content/legal";
 
@@ -112,7 +112,7 @@ export async function Footer() {
               {([
                 [appLink(SIGNUP_URL, locale), tNav("tryFree")],
                 [appLink(LOGIN_URL, locale), tNav("login")],
-                [appLink(RENEW_URL, locale), tNav("renew")],
+                [renewLink(locale), tNav("renew")],
               ] as const).map(([href, label]) => (
                 <li key={href}>
                   <a
@@ -136,15 +136,23 @@ export async function Footer() {
               &copy; {new Date().getFullYear()} {siteConfig.name}. {t("rights")}
             </p>
             {/* Thông tin người bán bắt buộc (§ 435 OZ): tên, IČO, địa chỉ lấy từ src/lib/legal.ts */}
-            <p className="mt-1 text-xs">
+            <p className="mt-1 text-xs leading-relaxed">
               {[
                 `${legal.ui.operator}: ${OPERATOR.name}`,
                 OPERATOR.ico ? `${legal.ui.ico}: ${OPERATOR.ico}` : null,
-                OPERATOR.address || null,
+                OPERATOR.address ? `${legal.ui.address}: ${OPERATOR.address}` : null,
                 OPERATOR.vatId ? `${legal.ui.vatId}: ${OPERATOR.vatId}` : OPERATOR.vatPayer === false ? legal.ui.notVatPayer : null,
               ]
                 .filter(Boolean)
                 .join(" · ")}
+              {" · "}
+              <a href={`mailto:${OPERATOR.email}`} className="underline-offset-2 hover:text-white hover:underline focus-visible:!outline-white [overflow-wrap:anywhere]">
+                {OPERATOR.email}
+              </a>
+              {" · "}
+              <a href={`tel:${OPERATOR.phone.replace(/\s/g, "")}`} className="whitespace-nowrap underline-offset-2 hover:text-white hover:underline focus-visible:!outline-white">
+                {OPERATOR.phone}
+              </a>
             </p>
           </div>
           <ul className="flex flex-wrap gap-x-5 sm:pr-14">

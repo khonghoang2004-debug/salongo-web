@@ -2,11 +2,12 @@ import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, Check } from "lucide-react";
-import { RENEW_URL, appLink } from "@/lib/app-links";
+import { renewLink } from "@/lib/app-links";
 import { DownloadCard } from "../DownloadSection";
-import { PLANS } from "../Pricing";
+import { PLAN_KEYS } from "../Pricing";
+import { getPlans } from "@/lib/plans";
 
-const fmt = (n: number) => new Intl.NumberFormat("cs-CZ").format(n);
+const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 2 }).format(n);
 
 // Giá + thiết bị: hai khối cạnh nhau. Bên trái là ba gói như ba dòng trong bảng giá ở tiệm, cùng số với trang Bảng giá
 export async function HomePricingTeaser() {
@@ -14,6 +15,7 @@ export async function HomePricingTeaser() {
   const tp = await getTranslations("pricing");
   const tpp = await getTranslations("pricingPage");
   const locale = await getLocale();
+  const { plans } = await getPlans();
 
   return (
     <section className="sg-section">
@@ -24,10 +26,10 @@ export async function HomePricingTeaser() {
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-white/80 sm:text-base">{h("priceLead")}</p>
 
           <dl className="mt-7 border-t border-white/20">
-            {PLANS.map((p) => (
+            {plans.map((p) => (
               <div key={p.code} className="flex items-baseline justify-between gap-4 border-b border-white/20 py-4">
                 <dt className="min-w-0">
-                  <span className="block text-[17px] font-semibold">{tp(p.nameKey)}</span>
+                  <span className="block text-[17px] font-semibold">{tp(PLAN_KEYS[p.code].nameKey)}</span>
                   <span className="block text-[13px] text-white/70">
                     {p.staff ? tpp("staffLimit", { n: p.staff }) : tpp("staffUnlimited")}
                   </span>
@@ -54,7 +56,7 @@ export async function HomePricingTeaser() {
               {h("priceCta")}
             </Link>
             <a
-              href={appLink(RENEW_URL, locale)}
+              href={renewLink(locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="sg-arrow sg-arrow-up inline-flex min-h-11 items-center justify-center gap-1.5 px-2 text-center text-[15px] font-semibold text-white/90 hover:text-white focus-visible:!outline-white sm:whitespace-nowrap"

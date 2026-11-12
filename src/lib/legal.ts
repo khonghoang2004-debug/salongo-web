@@ -3,16 +3,15 @@ import { CONTACT_EMAIL, CONTACT_PHONE } from "./contact";
 /**
  * Thông tin người vận hành SalonGo, in ở chân trang, trang Liên hệ và đầu mọi văn bản pháp lý
  * (§ 435 občanský zákoník, § 5 zákona 480/2004 Sb.). Ô để trống ("") thì không hiển thị.
- * Điền IČO và địa chỉ ngay khi có: luật Séc bắt buộc ghi trên website.
+ * Theo giấy phép kinh doanh (živnostenský rejstřík, Městský úřad Černošice). Không đăng ngày sinh, quốc tịch.
  */
 export const OPERATOR = {
-  name: "Khong Nguyen Duc Hoang",
+  name: "Nguyen Đuc Hoang Khong",
   brand: "SalonGo",
-  /** IČO, ví dụ "12345678" */
-  ico: "",
-  /** Místo podnikání, ví dụ "Václavské náměstí 1, 110 00 Praha 1" */
-  address: "",
-  /** Hình thức: "osvc" = fyzická osoba podnikající (OSVČ); câu hiển thị lấy theo ngôn ngữ (ui.legalForm) */
+  ico: "30241464",
+  /** Sídlo */
+  address: "Svornosti 189, 252 42 Jesenice, Česká republika",
+  /** Hình thức: "osvc" = podnikatel – fyzická osoba (živnostenský rejstřík); câu hiển thị lấy theo ngôn ngữ (ui.legalForm) */
   legalForm: "osvc" as "osvc" | "",
   /** DIČ nếu là plátce DPH, ví dụ "CZ12345678"; để trống nếu chưa đăng ký DPH */
   vatId: "",
@@ -23,7 +22,7 @@ export const OPERATOR = {
 } as const;
 
 /** Ngày hiệu lực của bộ văn bản hiện tại (YYYY-MM-DD). Đổi khi sửa nội dung. */
-export const LEGAL_EFFECTIVE = "2026-11-03";
+export const LEGAL_EFFECTIVE = "2026-11-12";
 
 /** Các văn bản pháp lý: đường dẫn trên web (giống nhau ở 4 ngôn ngữ). */
 export const LEGAL_DOCS = [

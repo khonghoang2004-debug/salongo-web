@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLocale } from "next-intl";
 import { ArrowUpRight, Check, RefreshCw, Store, Users } from "lucide-react";
-import { SIGNUP_URL, RENEW_URL, type PlanCode, appLink } from "@/lib/app-links";
+import { SIGNUP_URL, type PlanCode, appLink, renewLink } from "@/lib/app-links";
 
 export type PlanCard = {
   code: PlanCode;
@@ -11,6 +11,8 @@ export type PlanCard = {
   subtitle: string;
   /** Giá niêm yết / tháng (CZK), khớp SubscriptionPlan.priceMonthly trong app */
   monthly: number;
+  /** Tổng trả theo năm (CZK) do app tính; null = gói không bán theo năm */
+  yearly: number | null;
   staffLabel: string;
   branchLabel: string;
   highlighted: boolean;
@@ -29,9 +31,9 @@ export type PricingLabels = {
   common: string[];
 };
 
-// Trả theo năm giảm 10% (BillingDiscountCycle 1 năm, mọi gói) — làm tròn như màn Nâng cấp gói trong app
-const YEARLY_DISCOUNT = 10;
 const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 }).format(Math.round(n));
+// Tổng năm / giá niêm yết: in đúng số app gửi (có thể lẻ haléř), không tự làm tròn
+const fmtExact = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 2 }).format(n);
 
 export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: PricingLabels }) {
   const [yearly, setYearly] = useState(false);
@@ -53,7 +55,7 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
               }`}
             >
               {y ? labels.yearly : labels.monthly}
-              {y && (
+              {y && labels.yearlyBadge && (
                 <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${yearly ? "bg-white/20 text-white" : "bg-brand-50 text-brand-700"}`}>
                   {labels.yearlyBadge}
                 </span>
@@ -66,8 +68,10 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
       <div data-stagger className="mx-auto mt-8 grid max-w-[1080px] gap-4 md:grid-cols-3 md:items-stretch lg:gap-5">
         {plans.map((plan) => {
           const hi = plan.highlighted;
-          const perMonth = yearly ? plan.monthly * (1 - YEARLY_DISCOUNT / 100) : plan.monthly;
-          const perYear = plan.monthly * 12 * (1 - YEARLY_DISCOUNT / 100);
+          // Tổng năm lấy nguyên từ app (lib/plans); gói không bán theo năm thì vẫn hiện giá tháng
+          const yearlyOn = yearly && plan.yearly !== null;
+          const perYear = plan.yearly ?? plan.monthly * 12;
+          const perMonth = yearlyOn ? perYear / 12 : plan.monthly;
           return (
             <div
               key={plan.code}
@@ -86,19 +90,19 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
               <div className={`mt-6 border-b pb-6 ${hi ? "border-white/15" : "border-line"}`}>
                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                   <span className={`font-display text-[3rem] font-medium leading-none tracking-[-0.02em] tabular-nums lg:text-[3.5rem] ${hi ? "text-white" : "text-ink"}`}>
-                    {fmt(perMonth)}
+                    {yearlyOn ? fmt(perMonth) : fmtExact(perMonth)}
                   </span>
                   <span className={hi ? "text-white/70" : "text-muted"}>{labels.perMonth}</span>
                 </div>
                 <p className={`mt-3 flex min-h-5 flex-wrap items-center gap-x-3 text-sm ${hi ? "text-white/75" : "text-muted"}`}>
-                  {yearly ? (
+                  {yearlyOn ? (
                     <>
-                      <span className="line-through">{fmt(plan.monthly)} CZK</span>
-                      <span>{labels.billedYearly.replace("{total}", fmt(perYear))}</span>
+                      <span className="line-through">{fmtExact(plan.monthly)} CZK</span>
+                      <span>{labels.billedYearly.replace("{total}", fmtExact(perYear))}</span>
                     </>
-                  ) : (
-                    <span>{labels.perYear.replace("{total}", fmt(perYear))}</span>
-                  )}
+                  ) : plan.yearly !== null ? (
+                    <span>{labels.perYear.replace("{total}", fmtExact(perYear))}</span>
+                  ) : null}
                 </p>
               </div>
 
@@ -140,7 +144,7 @@ export function PricingCards({ plans, labels }: { plans: PlanCard[]; labels: Pri
                   <ArrowUpRight className="size-4" aria-hidden />
                 </a>
                 <a
-                  href={appLink(RENEW_URL, locale)}
+                  href={renewLink(locale, plan.code, yearlyOn ? "year" : "month")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex min-h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold transition-colors ${

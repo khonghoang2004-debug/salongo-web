@@ -1,7 +1,7 @@
 // Ánh xạ giá gói từ app (src/lib/plans-core.ts): `npm test` (Node 22.6+, chạy thẳng file .ts nhờ --experimental-strip-types)
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { FALLBACK_PLANS, mapPlansResponse, maxYearlyDiscount, priceRange } from "../src/lib/plans-core.ts";
+import { FALLBACK_PLANS, fillPlanMessages, fillPlanText, loadPlans, mapPlansResponse, maxYearlyDiscount, planTokens, priceRange } from "../src/lib/plans-core.ts";
 
 const ok = {
   ok: true,
@@ -59,4 +59,40 @@ test("giá dự phòng = bảng giá hiện tại trên web", () => {
     ["PRO", 499, 5389, 8, 3, true],
     ["PREMIUM", 799, 8629, null, null, false],
   ]);
+});
+
+test("mã gói trùng: giữ bản đầu tiên", () => {
+  const r = mapPlansResponse({ ...ok, plans: [...ok.plans, { ...ok.plans[1], monthlyPriceCents: 99900 }] });
+  assert.equal(r.plans.length, 3);
+  assert.equal(r.plans.find((p) => p.code === "BASIC").monthly, 199);
+});
+
+const reply = (status, body) => async () => ({ status, ok: status >= 200 && status < 300, json: async () => body });
+const boom = async () => { throw new Error("timeout"); };
+
+test("loadPlans: 404 → dự phòng; thành công được nhớ; lỗi sau đó → lần tốt gần nhất", async () => {
+  const st = { lastGood: null };
+  assert.equal(await loadPlans(reply(404, null), st, false), FALLBACK_PLANS);
+  const good = await loadPlans(reply(200, ok), st, false);
+  assert.equal(good.source, "api");
+  assert.equal(await loadPlans(boom, st, false), good);
+  assert.equal(await loadPlans(reply(503, null), st, false), good);
+  assert.equal(await loadPlans(reply(200, { ok: false }), st, false), good);
+});
+
+test("loadPlans: chưa từng tải được — lúc build dùng dự phòng, lúc ISR ném lỗi", async () => {
+  assert.equal(await loadPlans(boom, { lastGood: null }, true), FALLBACK_PLANS);
+  assert.equal(await loadPlans(reply(500, null), { lastGood: null }, true), FALLBACK_PLANS);
+  await assert.rejects(loadPlans(boom, { lastGood: null }, false));
+  await assert.rejects(loadPlans(reply(502, null), { lastGood: null }, false));
+  await assert.rejects(loadPlans(reply(200, { ok: true }), { lastGood: null }, false));
+});
+
+test("điền số liệu vào văn bản; không có giảm giá năm thì bỏ đoạn [[discount:…]]", () => {
+  const t = planTokens(FALLBACK_PLANS, "en");
+  assert.equal(fillPlanText("{days} days, from {from} CZK.[[discount: Save {discount}%.]] Pro {staffPro}/{branchesPro}", t), "150 days, from 199 CZK. Save 10%. Pro 8/3");
+  const noDisc = mapPlansResponse({ ...ok, plans: ok.plans.map((p) => ({ ...p, yearlyPriceCents: null, yearlyDiscountPct: null })) });
+  const t2 = planTokens(noDisc, "cs");
+  assert.equal(fillPlanText("Ceník.[[discount: Ročně sleva {discount} %.]] {days} dní", t2), "Ceník. 120 dní");
+  assert.deepEqual(fillPlanMessages({ a: { b: ["{from} Kč", "{n} x"] }, c: 1 }, t2), { a: { b: ["199 Kč", "{n} x"] }, c: 1 });
 });

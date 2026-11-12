@@ -62,7 +62,7 @@
     "q7": "SalonGo phù hợp với salon nhỏ hay lớn?",
     "a7": "Phù hợp cả hai. Bạn có thể bắt đầu nhỏ và nâng cấp khi salon phát triển.",
     "q8": "Tôi có thể dùng thử trước không?",
-    "a8": "Có. Mỗi salon mới được dùng thử miễn phí 150 ngày với đủ tính năng, không cần thẻ.",
+    "a8": "Có. Mỗi salon mới được dùng thử miễn phí {days} ngày với đủ tính năng, không cần thẻ.",
     "q9": "Nếu tôi cần hỗ trợ thì sao?",
     "a9": "Chúng tôi phản hồi trong vòng 24 giờ, hỗ trợ bằng tiếng Việt và tiếng Séc. Bạn sẽ không phải tự xoay xở một mình.",
     "closingParagraph": "Vẫn còn phân vân? Cách tốt nhất là dùng thử và tự trải nghiệm trước khi quyết định.",
@@ -154,9 +154,9 @@
     "ctaSubtext": "Không cần cài đặt phức tạp."
   },
   "pricingPage": {
-    "heroBadge": "Dùng thử miễn phí 150 ngày",
+    "heroBadge": "Dùng thử miễn phí {days} ngày",
     "heroTitle": "Một giá rõ ràng, trả theo số thợ",
-    "heroSubtext": "Gói nào cũng có toàn bộ tính năng. Bạn chỉ chọn theo số nhân viên mỗi chi nhánh và số chi nhánh. Trả theo năm giảm 10%.",
+    "heroSubtext": "Gói nào cũng có toàn bộ tính năng. Bạn chỉ chọn theo số nhân viên mỗi chi nhánh và số chi nhánh.[[discount: Trả theo năm giảm {discount}%.]]",
     "toggleMonth": "Theo tháng",
     "toggleYear": "Theo năm",
     "popularMost": "Phổ biến nhất",
@@ -171,9 +171,9 @@
     "compareRow8": "Hỗ trợ tiếng Việt, tiếng Séc",
     "whoTitle": "Phù hợp với ai?",
     "whoBasic": "Salon nhỏ mới mở",
-    "whoBasicDesc": "Một tiệm, 1 đến 3 thợ, mới bắt đầu quản lý bằng app.",
+    "whoBasicDesc": "Một tiệm, 1 đến {staffBasic} thợ, mới bắt đầu quản lý bằng app.",
     "whoPro": "Salon đang phát triển",
-    "whoProDesc": "Tiệm đến 8 thợ, hoặc đã mở thêm 2 đến 3 chi nhánh.",
+    "whoProDesc": "Tiệm đến {staffPro} thợ, hoặc đã mở thêm 2 đến {branchesPro} chi nhánh.",
     "whoPremium": "Chuỗi salon",
     "whoPremiumDesc": "Không giới hạn thợ và chi nhánh cho salon lớn.",
     "commitmentTitle": "Cam kết của chúng tôi",
@@ -196,14 +196,14 @@
     "faqQ8": "Có nâng cấp / hạ cấp được không?",
     "faqA8": "Có. Bạn đổi gói ngay trong app ở màn Nâng cấp gói. Nâng lên gói cao hơn có hiệu lực ngay; hạ xuống gói thấp hơn áp dụng từ kỳ sau.",
     "ctaTitle": "Bắt đầu quản lý salon chuyên nghiệp ngay hôm nay",
-    "ctaSubtext": "Trải nghiệm miễn phí 150 ngày (5 tháng) – không cần thẻ.",
+    "ctaSubtext": "Trải nghiệm miễn phí {days} ngày – không cần thẻ.",
     "ctaButton": "Trải nghiệm ngay",
     "staffLimit": "Tối đa {n} nhân viên mỗi chi nhánh",
     "allFeature1": "Toàn bộ tính năng của app",
     "allFeature2": "Đặt lịch online, tính tiền, tính lương",
     "allFeature3": "Không giới hạn khách hàng và lịch hẹn",
     "allFeature4": "Hỗ trợ tiếng Việt và tiếng Séc",
-    "plansNote": "Giá giống màn Nâng cấp gói trong app. Trả theo năm giảm {discount}%. Salon mới được dùng thử {days} ngày, không cần thẻ. Khi thanh toán, app luôn tính giá theo gói hiện hành.",
+    "plansNote": "Giá giống màn Nâng cấp gói trong app.[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử {days} ngày, không cần thẻ. Khi thanh toán, app luôn tính giá theo gói hiện hành.",
     "compareLead": "Các gói chỉ khác nhau ở số nhân viên và số chi nhánh. Mọi tính năng khác đều giống nhau.",
     "compareRowStaff": "Nhân viên mỗi chi nhánh",
     "staffUnlimited": "Không giới hạn nhân viên",
@@ -229,24 +229,24 @@
   },
   "pages": {
     "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính tiền, tính lương",
-    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: nhận lịch hẹn, đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử 150 ngày.",
+    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: nhận lịch hẹn, đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử {days} ngày.",
     "featuresTitle": "App đặt lịch, nhận lịch hẹn, tính tiền, tính lương thợ",
     "featuresDesc": "Một app tiếng Việt cho salon: khách đặt lịch online, nhận lịch hẹn theo thợ, tính tiền tại quầy, khách hàng, email marketing, báo cáo, tính lương thợ, đa chi nhánh.",
     "solutionsTitle": "Giải pháp quản lý tiệm nail, salon tóc",
     "solutionsDesc": "Hết trùng lịch, tính sai lương, thất thoát ở quầy: cách SalonGo giúp tiệm nail và salon của người Việt ở châu Âu quản lý gọn từng việc.",
     "pricingTitle": "Bảng giá app quản lý salon, tiệm nail",
-    "pricingDesc": "Basic {basic}, Pro {pro}, Premium {premium} CZK/tháng, trả theo năm giảm {discount}%. Gói nào cũng đủ tính năng. Dùng thử {days} ngày, gia hạn ngay trong app.",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/tháng[[discount:, trả theo năm giảm {discount}%]]. Gói nào cũng đủ tính năng. Dùng thử {days} ngày, gia hạn ngay trong app.",
     "aboutTitle": "Về SalonGo",
     "aboutDesc": "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. Sứ mệnh và định hướng phát triển.",
     "faqTitle": "Câu hỏi thường gặp về app quản lý salon",
-    "faqDesc": "Giải đáp về SalonGo: dùng thử 150 ngày, giá gói, gia hạn, thanh toán, dùng trên điện thoại, ngôn ngữ, nhiều chi nhánh, tính lương và tip.",
+    "faqDesc": "Giải đáp về SalonGo: dùng thử {days} ngày, giá gói, gia hạn, thanh toán, dùng trên điện thoại, ngôn ngữ, nhiều chi nhánh, tính lương và tip.",
     "contactTitle": "Liên hệ hỗ trợ tiếng Việt, tiếng Séc",
     "contactDesc": "Liên hệ SalonGo qua điện thoại, email, Facebook hoặc WhatsApp. Hỗ trợ bằng tiếng Việt và tiếng Séc, phản hồi trong 24 giờ.",
     "websiteTitle": "SalonGo Web Studio – làm website salon, tiệm nail {price}",
     "websiteDesc": "SalonGo Web Studio làm website cho salon, tiệm nail, spa, barbershop: tối đa {pages} trang, đẹp trên điện thoại, {price} một lần cho khách SalonGo. Xem 35+ mẫu demo."
   },
   "hero": {
-    "trialNote": "150 ngày miễn phí · Không cần thẻ thanh toán",
+    "trialNote": "{days} ngày miễn phí · Không cần thẻ thanh toán",
     "titleBefore": "Vận hành",
     "titleSalon": "salon",
     "titleAfter": "thông minh – chính xác và tiết kiệm thời gian.",
@@ -258,23 +258,23 @@
     "subtitle": "Bạn chỉ việc chăm sóc khách hàng.",
     "cta": "Dùng thử miễn phí",
     "ctaSecondary": "Xem app hoạt động",
-    "proof1": "Dùng thử 150 ngày, không cần thẻ",
+    "proof1": "Dùng thử {days} ngày, không cần thẻ",
     "proof2": "Hỗ trợ tiếng Việt và tiếng Séc",
     "proof3": "App có 6 ngôn ngữ",
     "imageAlt": "Lịch hẹn theo nhân viên trong app SalonGo trên máy tính",
     "revenueToday": "Doanh thu hôm nay",
-    "stat1Value": "150 ngày",
+    "stat1Value": "{days} ngày",
     "stat1Label": "dùng thử",
     "stat2Value": "6",
     "stat2Label": "ngôn ngữ trong app",
     "stat3Value": "3 gói",
-    "stat3Label": "gói nào cũng đủ tính năng, từ 199 CZK/tháng",
+    "stat3Label": "gói nào cũng đủ tính năng, từ {from} CZK/tháng",
     "stat4Value": "24 giờ",
     "stat4Label": "là có phản hồi, bằng tiếng Việt hoặc tiếng Séc",
     "badge": "Quản lý salon cho người Việt ở châu Âu",
     "title1": "Lịch hẹn, tính tiền, bảng lương.",
     "titleAccent": "Cả salon trong một app.",
-    "trial1": "150 ngày miễn phí",
+    "trial1": "{days} ngày miễn phí",
     "trial2": "Không cần thẻ thanh toán",
     "trial3": "Hỗ trợ tiếng Việt, tiếng Séc",
     "imageAltPhone": "Lịch hẹn theo nhân viên trên điện thoại"
@@ -572,7 +572,7 @@
         "title": "Đa chi nhánh trong một tài khoản",
         "desc": "Mở thêm chi nhánh ngay trong app, không cần đăng ký lại. Chọn chi nhánh trên đầu menu và xem doanh thu, lịch hẹn của tất cả chi nhánh trên một trang.",
         "p1Title": "Thêm chi nhánh trong vài phút",
-        "p1Text": "Mỗi chi nhánh có lịch hẹn, nhân viên, dịch vụ và hoá đơn riêng; chi nhánh mới được dùng thử 150 ngày.",
+        "p1Text": "Mỗi chi nhánh có lịch hẹn, nhân viên, dịch vụ và hoá đơn riêng; chi nhánh mới được dùng thử {days} ngày.",
         "p2Title": "Chuyển chi nhánh một chạm",
         "p2Text": "Trên máy tính ở đầu menu, trên điện thoại ngay trong Menu; không cần đăng xuất.",
         "p3Title": "Trang Tất cả salon",
@@ -731,7 +731,7 @@
     "whyCard3Title": "Biết rõ doanh thu của salon",
     "whyCard3Desc": "Báo cáo doanh thu theo ngày, tháng, theo thợ – quyết định kinh doanh dựa trên số liệu thật.",
     "ctaTitle": "Sẵn sàng vận hành salon chuyên nghiệp hơn?",
-    "ctaSubtext": "Trải nghiệm miễn phí 150 ngày (5 tháng). Không cần thẻ.",
+    "ctaSubtext": "Trải nghiệm miễn phí {days} ngày. Không cần thẻ.",
     "ctaButton": "Bắt đầu ngay"
   },
   "pricing": {
@@ -742,12 +742,12 @@
     "plan1Name": "Basic",
     "plan1Subtitle": "Dành cho tiệm nhỏ mới bắt đầu",
     "plan2Name": "Pro",
-    "plan2Subtitle": "Dành cho tiệm đang lớn, đến 3 chi nhánh",
+    "plan2Subtitle": "Dành cho tiệm đang lớn, đến {branchesPro} chi nhánh",
     "plan3Name": "Premium",
     "plan3Subtitle": "Dành cho chuỗi salon"
   },
   "cta": {
-    "title": "150 ngày trải nghiệm miễn phí SalonGo.",
+    "title": "{days} ngày trải nghiệm miễn phí SalonGo.",
     "subtitle": "Hỗ trợ tiếng Việt và tiếng Séc.",
     "button": "Dùng thử miễn phí"
   },
@@ -804,8 +804,8 @@
     "type4Title": "Chuỗi nhiều chi nhánh",
     "type4Text": "Một tài khoản cho mọi chi nhánh, xem doanh thu tất cả chi nhánh trên một trang.",
     "priceEyebrow": "Bảng giá",
-    "priceTitle": "150 ngày miễn phí, rồi từ 199 CZK/tháng",
-    "priceLead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và số chi nhánh. Trả theo năm giảm 10%.",
+    "priceTitle": "{days} ngày miễn phí, rồi từ {from} CZK/tháng",
+    "priceLead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và số chi nhánh.[[discount: Trả theo năm giảm {discount}%.]]",
     "priceCta": "Xem bảng giá",
     "price1": "Không cần thẻ thanh toán",
     "price2": "Hỗ trợ thiết lập bằng tiếng Việt",
@@ -821,7 +821,7 @@
     "hlBranchEyebrow": "Đa chi nhánh",
     "hlBranchTitle": "Mọi chi nhánh trong một tài khoản",
     "hlBranchLead": "Mở thêm chi nhánh ngay trong app, không cần đăng ký lại. Chuyển qua lại giữa các chi nhánh chỉ một chạm, trên máy tính lẫn điện thoại.",
-    "hlBranch1": "Thêm chi nhánh mới trong vài phút, mỗi chi nhánh mới được dùng thử 150 ngày",
+    "hlBranch1": "Thêm chi nhánh mới trong vài phút, mỗi chi nhánh mới được dùng thử {days} ngày",
     "hlBranch2": "Mỗi chi nhánh có lịch hẹn, nhân viên, dịch vụ, hoá đơn và trang đặt lịch riêng",
     "hlBranch3": "Trang Tất cả salon: doanh thu, lịch hẹn, lịch online chờ duyệt của từng chi nhánh",
     "hlBranch4": "Mỗi chi nhánh chọn gói và gia hạn riêng",
@@ -887,16 +887,16 @@
   },
   "guide": {
     "metaTitle": "App quản lý salon, tiệm nail ở Séc và châu Âu",
-    "metaDesc": "Phần mềm quản lý salon và tiệm nail cần những gì: đặt lịch online, tính tiền, tính lương thợ, chia tip, email marketing. SalonGo bằng tiếng Việt, dùng thử 150 ngày.",
+    "metaDesc": "Phần mềm quản lý salon và tiệm nail cần những gì: đặt lịch online, tính tiền, tính lương thợ, chia tip, email marketing. SalonGo bằng tiếng Việt, dùng thử {days} ngày.",
     "crumb": "Phần mềm quản lý salon",
     "h1": "App, phần mềm quản lý salon và tiệm nail cho người Việt ở Séc, châu Âu",
     "intro": "Lịch hẹn, tính tiền, lương thợ, tip và khách quen: tất cả trong một app tiếng Việt. Đây là những gì một phần mềm quản lý salon cần làm được, và cách SalonGo làm.",
-    "ctaTrial": "Dùng thử 150 ngày miễn phí",
+    "ctaTrial": "Dùng thử {days} ngày miễn phí",
     "ctaFeatures": "Xem tính năng",
     "ctaPricing": "Xem bảng giá",
     "shotAlt": "Màn Tổng quan của phần mềm quản lý salon SalonGo trên điện thoại",
-    "boxTitle": "Dùng thử 150 ngày, không cần thẻ",
-    "boxText": "Gói nào cũng đủ tính năng, từ 199 CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+    "boxTitle": "Dùng thử {days} ngày, không cần thẻ",
+    "boxText": "Gói nào cũng đủ tính năng, từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
     "sections": [
       {
         "h": "Phần mềm quản lý salon là gì?",
@@ -964,7 +964,7 @@
       },
       {
         "h": "Giá phần mềm quản lý salon",
-        "p": "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic 199 CZK/tháng (3 thợ, 1 chi nhánh), Pro 499 CZK/tháng (8 thợ mỗi chi nhánh, tối đa 3 chi nhánh) và Premium 799 CZK/tháng (không giới hạn). Trả theo năm giảm 10%. Salon mới được dùng thử miễn phí 150 ngày, không cần thẻ.",
+        "p": "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng (không giới hạn).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
         "link": {
           "href": "/bang-gia",
           "label": "Xem bảng giá"
@@ -985,7 +985,7 @@
     "faq": [
       {
         "q": "Có app nào vừa nhận lịch hẹn, vừa tính tiền và tính lương thợ không?",
-        "a": "Có. SalonGo là một app gồm cả: khách tự đặt lịch online qua link riêng của salon, lịch hẹn xếp theo từng thợ, tính tiền tại quầy có hoá đơn và tip, cuối tháng tự tính lương thợ theo % hoặc lương cố định. Dùng trên điện thoại, máy tính bảng và máy tính, bằng tiếng Việt, dùng thử 150 ngày miễn phí."
+        "a": "Có. SalonGo là một app gồm cả: khách tự đặt lịch online qua link riêng của salon, lịch hẹn xếp theo từng thợ, tính tiền tại quầy có hoá đơn và tip, cuối tháng tự tính lương thợ theo % hoặc lương cố định. Dùng trên điện thoại, máy tính bảng và máy tính, bằng tiếng Việt, dùng thử {days} ngày miễn phí."
       },
       {
         "q": "Phần mềm quản lý salon nào phù hợp với tiệm nail người Việt ở Séc?",
@@ -997,7 +997,7 @@
       },
       {
         "q": "Dùng thử có mất phí không?",
-        "a": "Không. Mỗi salon mới được dùng thử 150 ngày với đủ tính năng, không cần thẻ thanh toán."
+        "a": "Không. Mỗi salon mới được dùng thử {days} ngày với đủ tính năng, không cần thẻ thanh toán."
       },
       {
         "q": "Thợ có xem được lịch của mình trên điện thoại không?",

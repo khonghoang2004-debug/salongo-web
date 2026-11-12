@@ -49,7 +49,7 @@ export async function Pricing() {
             common: COMMON.map((k) => tPage(k)),
           }}
         />
-        <p className="mx-auto mt-6 max-w-[1080px] text-center text-sm text-muted">{tPage("plansNote", { days: data.trialDays, discount: discount ?? 0 })}{" "}
+        <p className="mx-auto mt-6 max-w-[1080px] text-center text-sm text-muted">{tPage("plansNote")}{" "}
           <Link href="/terms" className="font-medium text-brand-700 hover:underline">
             {getLegalPack(locale).docs.terms.title}
           </Link>

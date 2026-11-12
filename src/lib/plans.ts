@@ -10,14 +10,14 @@ const PLANS_API = process.env.PLANS_API_URL || `${APP_URL}/api/public/plans?curr
 const state: PlansLoaderState = { lastGood: null };
 
 /**
- * Giá gói lấy từ app (ISR: làm mới tối đa 10 phút một lần, chờ tối đa 3 s). Quy tắc dự phòng: xem loadPlans.
+ * Giá gói lấy từ app (ISR: làm mới tối đa 1 phút một lần, chờ tối đa 3 s). Quy tắc dự phòng: xem loadPlans.
  * Chưa có endpoint (404) → giá cố định FALLBACK_PLANS; lỗi tạm thời lúc ISR → ném lỗi, Next giữ trang cũ.
  */
 export function getPlans(): Promise<SitePlans> {
   return loadPlans(
     () =>
       fetch(PLANS_API, {
-        next: { revalidate: 600 },
+        next: { revalidate: 60 },
         signal: AbortSignal.timeout(3000),
         headers: { accept: "application/json" },
       }),

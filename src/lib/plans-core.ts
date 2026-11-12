@@ -112,7 +112,7 @@ export type PlansLoaderState = { lastGood: SitePlans | null };
  * - 404: endpoint chưa có trên app → giá dự phòng (bình thường cho tới khi app deploy endpoint).
  * - Lỗi mạng / timeout / 5xx / JSON sai: dùng lần tải tốt gần nhất trong bộ nhớ; nếu chưa có thì
  *   lúc build → giá dự phòng (build không được hỏng), lúc chạy (ISR) → ném lỗi để Next giữ trang tốt cũ
- *   thay vì lưu trang có giá dự phòng 10 phút.
+ *   thay vì lưu trang có giá dự phòng.
  */
 export async function loadPlans(fetcher: PlansFetcher, state: PlansLoaderState, isBuild: boolean): Promise<SitePlans> {
   const failed = (err: unknown): SitePlans => {

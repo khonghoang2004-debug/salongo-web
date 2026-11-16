@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Minus, Plus } from "lucide-react";
+import { PRICING_FAQ_KEYS } from "@/lib/pricing-faq";
 
-export const PRICING_FAQ_KEYS = [1, 2, 3, 9, 10, 5, 8, 7] as const;
+
 
 export function SectionPricingFAQ() {
   const t = useTranslations("pricingPage");

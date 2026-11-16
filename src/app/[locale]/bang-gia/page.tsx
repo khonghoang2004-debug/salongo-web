@@ -9,7 +9,8 @@ import { PricingComparisonTable } from "@/components/PricingComparisonTable";
 import { SectionPricingWhoIsFor } from "@/components/SectionPricingWhoIsFor";
 import { SectionPricingCommitment } from "@/components/SectionPricingCommitment";
 import { SectionPricingCTA } from "@/components/SectionPricingCTA";
-import { SectionPricingFAQ, PRICING_FAQ_KEYS } from "@/components/SectionPricingFAQ";
+import { SectionPricingFAQ } from "@/components/SectionPricingFAQ";
+import { PRICING_FAQ_KEYS } from "@/lib/pricing-faq";
 import { SectionRenew } from "@/components/SectionRenew";
 
 type Props = { params: Promise<{ locale: string }> };

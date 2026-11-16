@@ -141,3 +141,13 @@ test("demo website mẫu: noindex, không canonical, không có trong sitemap", 
   const xml = await (await get("/sitemap.xml", PRIMARY)).text();
   assert.equal(xml.includes("/website/mau/"), false);
 });
+
+test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), câu hỏi là H3", async () => {
+  for (const [path, re, n] of [["/vi/faq", /id="faq-a-q\d+"/g, 15], ["/vi/bang-gia", /id="pricing-faq-a\d+"/g, 8]]) {
+    const html = await (await get(path, PRIMARY)).text();
+    assert.equal((html.match(re) ?? []).length, n, path);
+    assert.match(html, /<h3[^>]*><button[^>]*aria-controls=/, path);
+  }
+  const ld = await (await get("/vi/bang-gia", PRIMARY)).text();
+  assert.match(ld, /"@type":"FAQPage"/);
+});

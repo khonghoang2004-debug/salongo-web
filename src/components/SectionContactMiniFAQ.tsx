@@ -19,8 +19,12 @@ export function SectionContactMiniFAQ() {
             const isOpen = openIndex === i - 1;
             return (
               <div key={i} className="border-b border-line">
+                {/* Câu hỏi là H3; câu trả lời luôn có trong HTML từ server, chỉ ẩn khi đóng */}
+                <h3 className="m-0" style={{ fontFamily: "inherit" }}>
                 <button
                   type="button"
+                  id={`contact-faq-q${i}`}
+                  aria-controls={`contact-faq-a${i}`}
                   onClick={() => setOpenIndex(isOpen ? null : i - 1)}
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold text-ink transition-colors hover:text-brand-700 sm:py-6 sm:text-lg"
@@ -35,7 +39,8 @@ export function SectionContactMiniFAQ() {
                     {isOpen ? <Minus className="size-4" /> : <Plus className="size-4" />}
                   </span>
                 </button>
-                {isOpen && <p className="max-w-2xl pb-6 text-[15px] leading-relaxed text-muted sm:text-base">{t(`faqA${i}`)}</p>}
+                </h3>
+                <p id={`contact-faq-a${i}`} hidden={!isOpen} className="max-w-2xl pb-6 text-[15px] leading-relaxed text-muted sm:text-base">{t(`faqA${i}`)}</p>
               </div>
             );
           })}

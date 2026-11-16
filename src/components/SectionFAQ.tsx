@@ -49,10 +49,14 @@ export function SectionFAQ() {
 
                   return (
                     <div key={item.qKey} className="border-b border-line">
+                      {/* Câu hỏi là H3 (có trong dàn ý trang); câu trả lời luôn nằm trong HTML từ server, chỉ ẩn khi đóng */}
+                      <h3 className="m-0" style={{ fontFamily: "inherit" }}>
                       <button
                         type="button"
+                        id={`faq-q-${item.qKey}`}
                         onClick={() => setOpenId(isOpen ? null : item.qKey)}
                         aria-expanded={isOpen}
+                        aria-controls={`faq-a-${item.qKey}`}
                         className="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold text-ink transition-colors hover:text-brand-700 sm:py-6 sm:text-lg"
                       >
                         <span>{t(item.qKey)}</span>
@@ -65,8 +69,14 @@ export function SectionFAQ() {
                           {isOpen ? <Minus className="size-4" /> : <Plus className="size-4" />}
                         </span>
                       </button>
-                      {isOpen && (
-                        <div className="relative pb-6 pr-12">
+                      </h3>
+                      <div
+                        id={`faq-a-${item.qKey}`}
+                        role="region"
+                        aria-labelledby={`faq-q-${item.qKey}`}
+                        hidden={!isOpen}
+                        className="relative pb-6 pr-12"
+                      >
                           <p className="max-w-2xl text-[15px] leading-relaxed text-muted sm:text-base">{answerText}</p>
                           <button
                             type="button"
@@ -85,8 +95,7 @@ export function SectionFAQ() {
                               {t("copyCopied")}
                             </span>
                           )}
-                        </div>
-                      )}
+                      </div>
                     </div>
                   );
                 })}

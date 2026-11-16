@@ -9,7 +9,7 @@ import { PricingComparisonTable } from "@/components/PricingComparisonTable";
 import { SectionPricingWhoIsFor } from "@/components/SectionPricingWhoIsFor";
 import { SectionPricingCommitment } from "@/components/SectionPricingCommitment";
 import { SectionPricingCTA } from "@/components/SectionPricingCTA";
-import { SectionPricingFAQ } from "@/components/PricingPageDynamic";
+import { SectionPricingFAQ, PRICING_FAQ_KEYS } from "@/components/SectionPricingFAQ";
 import { SectionRenew } from "@/components/SectionRenew";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -23,9 +23,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PricingPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "pricingPage" });
+  // FAQPage: đúng các câu hỏi/đáp đang hiện ở mục FAQ của trang giá (render sẵn từ server)
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: PRICING_FAQ_KEYS.map((i) => ({
+      "@type": "Question",
+      name: t(`faqQ${i}`),
+      acceptedAnswer: { "@type": "Answer", text: t(`faqA${i}`) },
+    })),
+  };
 
   return (
     <PageShell>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <PricingPageHero />
       <Pricing />
       <PricingComparisonTable />

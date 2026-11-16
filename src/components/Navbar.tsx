@@ -205,8 +205,9 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary hidden !min-h-11 whitespace-nowrap px-4 text-sm lg:inline-flex xl:px-5"
           >
-            <span className="xl:hidden">{t("tryFreeShort")}</span>
-            <span className="hidden xl:inline">{t("tryFree")}</span>
+            {/* Một nhãn cho máy đọc / máy tìm kiếm: nhãn ngắn chỉ để nhìn, nhãn đầy đủ luôn có trong cây trợ năng */}
+            <span className="xl:hidden" aria-hidden="true">{t("tryFreeShort")}</span>{" "}
+            <span className="sr-only xl:not-sr-only">{t("tryFree")}</span>
           </a>
 
           {/* Mobile: đổi ngôn ngữ nhanh ngay trên thanh logo */}

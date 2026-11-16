@@ -38,7 +38,7 @@ export async function HomeLanguage() {
                   <PhoneShot src={src} alt={h(label)} className="relative mx-auto w-[82%] -translate-y-[3%]" />
                 </div>
                 <figcaption className="mt-4 flex items-center justify-center gap-2 text-center text-[13px] font-medium text-ink/75 sm:text-sm">
-                  <span className="rounded-full border border-line bg-white px-2 py-0.5 text-[11px] font-semibold text-ink">{code}</span>
+                  <span className="rounded-full border border-line bg-white px-2 py-0.5 text-[11px] font-semibold text-ink">{code}</span>{" "}
                   {h(label)}
                 </figcaption>
               </figure>

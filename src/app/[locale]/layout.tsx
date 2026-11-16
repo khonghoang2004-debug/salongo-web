@@ -31,10 +31,10 @@ export const viewport: Viewport = {
 const localeToOg = { en: "en_US", vi: "vi_VN", cs: "cs_CZ", de: "de_DE" } as const;
 
 const metadataMap = {
-  en: (enMessages as { metadata: { description: string; keywords: string[] } }).metadata,
-  vi: (viMessages as { metadata: { description: string; keywords: string[] } }).metadata,
-  cs: (csMessages as { metadata: { description: string; keywords: string[] } }).metadata,
-  de: (deMessages as { metadata: { description: string; keywords: string[] } }).metadata,
+  en: (enMessages as { metadata: { description: string } }).metadata,
+  vi: (viMessages as { metadata: { description: string } }).metadata,
+  cs: (csMessages as { metadata: { description: string } }).metadata,
+  de: (deMessages as { metadata: { description: string } }).metadata,
 } as const;
 
 const CLIENT_NAMESPACES = ["nav", "device", "faq", "contact", "pricingPage", "webOffer"] as const;
@@ -46,7 +46,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const meta = (hasLocale(routing.locales, locale) ? metadataMap[locale as keyof typeof metadataMap] : metadataMap.vi) as { description: string; keywords: string[] };
+  const meta = (hasLocale(routing.locales, locale) ? metadataMap[locale as keyof typeof metadataMap] : metadataMap.vi) as { description: string };
   const ogLocale = localeToOg[locale as keyof typeof localeToOg] || "vi_VN";
 
   return {
@@ -57,7 +57,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s | ${siteConfig.name}`,
     },
     description: meta.description,
-    keywords: meta.keywords,
     authors: [{ name: siteConfig.name, url: siteConfig.url }],
     creator: siteConfig.name,
     /** Favicon / logo tab & Google kết quả tìm kiếm - URLs tuyệt đối với metadataBase */

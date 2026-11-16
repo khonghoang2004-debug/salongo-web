@@ -18,7 +18,8 @@ import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/lib/metadata";
 import { getPlans, priceRange } from "@/lib/plans";
 import { VIDEOS, videoSrc } from "@/lib/videos";
-import { CONTACT_EMAIL, CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_PHONE } from "@/lib/contact";
+import { CONTACT_EMAIL, CONTACT_FACEBOOK, CONTACT_PHONE } from "@/lib/contact";
+import { OPERATOR } from "@/lib/legal";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -61,7 +62,18 @@ export default async function Home({ params }: Props) {
         image: ogImageUrl,
         email: CONTACT_EMAIL,
         telephone: CONTACT_PHONE,
-        sameAs: [CONTACT_FACEBOOK, CONTACT_INSTAGRAM],
+        // Người vận hành theo živnostenský rejstřík (giống chân trang); IČO giúp Google/AI nhận đúng thực thể
+        legalName: OPERATOR.name,
+        identifier: { "@type": "PropertyValue", propertyID: "IČO", value: OPERATOR.ico },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Svornosti 189",
+          postalCode: "252 42",
+          addressLocality: "Jesenice",
+          addressCountry: "CZ",
+        },
+        // Chỉ trang của doanh nghiệp; Instagram hiện là tài khoản cá nhân nên không đưa vào sameAs
+        sameAs: [CONTACT_FACEBOOK],
         // Dịch vụ làm website cho khách SalonGo (chi tiết: JSON-LD Service trên trang /website)
         makesOffer: {
           "@type": "Offer",

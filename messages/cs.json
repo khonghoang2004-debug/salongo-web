@@ -228,7 +228,7 @@
     "tagline": "Software pro salony vietnamských majitelů v Evropě."
   },
   "pages": {
-    "homeTitle": "Rezervační systém a aplikace pro salony: pokladna, mzdy",
+    "homeTitle": "Rezervační systém pro salony: pokladna i mzdy",
     "homeDesc": "Objednávkový systém a aplikace pro nehtová studia, kadeřnictví a kosmetiku: online rezervace, kalendář, pokladna, mzdy, přehledy tržeb. Česky i vietnamsky. {days} dní zdarma.",
     "featuresTitle": "Funkce: online rezervace, objednávky, pokladna, mzdy",
     "featuresDesc": "Online rezervace, kalendář podle personálu, pokladna, klienti, e-mailový marketing, přehledy tržeb, mzdy a více poboček v jedné aplikaci pro salony.",
@@ -752,19 +752,7 @@
     "button": "Vyzkoušet zdarma"
   },
   "metadata": {
-    "description": "SalonGo – aplikace pro salony: kalendář, online rezervace, pokladna, mzdy a přehled tržeb.",
-    "keywords": [
-      "rezervační systém pro salon",
-      "objednávkový systém pro salon",
-      "aplikace pro salon",
-      "rezervační aplikace",
-      "aplikace pro nehtové studio",
-      "software pro kosmetický salon",
-      "pokladna pro salon",
-      "online rezervace salon",
-      "mzdy v salonu",
-      "SalonGo"
-    ]
+    "description": "SalonGo – aplikace pro salony: kalendář, online rezervace, pokladna, mzdy a přehled tržeb."
   },
   "notFound": {
     "title": "Stránka nenalezena",

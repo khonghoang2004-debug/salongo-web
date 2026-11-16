@@ -228,7 +228,7 @@
     "tagline": "Phần mềm quản lý salon làm cho tiệm của người Việt ở châu Âu."
   },
   "pages": {
-    "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính tiền, tính lương",
+    "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính lương",
     "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: nhận lịch hẹn, đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử {days} ngày.",
     "featuresTitle": "App đặt lịch, nhận lịch hẹn, tính tiền, tính lương thợ",
     "featuresDesc": "Một app tiếng Việt cho salon: khách đặt lịch online, nhận lịch hẹn theo thợ, tính tiền tại quầy, khách hàng, email marketing, báo cáo, tính lương thợ, đa chi nhánh.",
@@ -752,20 +752,7 @@
     "button": "Dùng thử miễn phí"
   },
   "metadata": {
-    "description": "SalonGo – app quản lý salon: lịch hẹn, đặt lịch online, tính tiền, tính lương và báo cáo doanh thu. Đơn giản, bằng tiếng Việt.",
-    "keywords": [
-      "app quản lý salon",
-      "app quản lý tiệm nail",
-      "phần mềm quản lý salon",
-      "phần mềm quản lý tiệm nail",
-      "app đặt lịch salon",
-      "app nhận lịch hẹn",
-      "app tính tiền tiệm nail",
-      "app tính lương thợ nail",
-      "đặt lịch online cho salon",
-      "quản lý salon ở Séc",
-      "SalonGo"
-    ]
+    "description": "SalonGo – app quản lý salon: lịch hẹn, đặt lịch online, tính tiền, tính lương và báo cáo doanh thu. Đơn giản, bằng tiếng Việt."
   },
   "notFound": {
     "title": "Không tìm thấy trang",

@@ -28,6 +28,7 @@ const PAGES = `- [Home (Vietnamese)](https://www.salongo.eu/vi)
 - [Pricing](https://www.salongo.eu/en/bang-gia)
 - [FAQ](https://www.salongo.eu/en/faq)
 - [Contact](https://www.salongo.eu/en/lien-he)
+- [Facebook page](https://www.facebook.com/people/SalonGo/61583765805698/)
 - [Salon websites](https://www.salongo.eu/en/website): offer for SalonGo customers, a website with up to 5 pages for a one-time design fee of 999 Kč; hosting is quoted separately. 35+ sample templates (nail, hair, spa, barber, lash & brow, makeup); their demo pages are illustrations only.
 - [Czech site](https://www.salongo.eu/cs) · [German site](https://www.salongo.eu/de) · [English site](https://www.salongo.eu/en)
 `;

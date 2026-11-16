@@ -6,6 +6,8 @@ import { DemoBar } from "@/components/website/DemoBar";
 import { TEMPLATES, getTemplate } from "@/components/website/templates/registry";
 import { DEMO_PAGES, tr, type DemoPage } from "@/components/website/templates/types";
 import { SITES } from "@/components/website/sites";
+import { pageUrl } from "@/lib/seo";
+import { siteConfig } from "@/lib/metadata";
 
 const DEMO_LOCALE = "cs";
 
@@ -34,10 +36,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const w = await getTranslations({ locale, namespace: "webOffer" });
   const type = tr(r.t.card.type, locale);
   const pageName = r.p ? ` · ${tr(r.t.nav[r.p], DEMO_LOCALE)}` : "";
+  const title = `${w("demoTitle", { name: r.t.name, type })}${pageName}`;
+  const description = w("demoDesc", { type });
+  // URL riêng của trang mẫu (trước đây kế thừa og:url = trang chủ và tiêu đề SalonGo của layout)
+  const url = pageUrl(locale, `/website/mau/${r.t.slug}${r.p ? `/${r.p}` : ""}`);
   return {
-    title: { absolute: `${w("demoTitle", { name: r.t.name, type })}${pageName}` },
-    description: w("demoDesc", { type }),
+    title: { absolute: title },
+    description,
     robots: { index: false, follow: true },
+    alternates: { canonical: url },
+    openGraph: { type: "website", siteName: siteConfig.name, url, title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

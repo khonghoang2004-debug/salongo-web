@@ -35,7 +35,7 @@
   "faq": {
     "title": "Häufige Fragen",
     "subtitle": "Schnelle Antworten auf häufige Fragen.",
-    "heroTitle": "Was Salons uns am häufigsten fragen",
+    "heroTitle": "Häufige Fragen zur Salon-App",
     "heroSubtext": "Nicht fündig geworden? Schreiben Sie uns, wir antworten innerhalb von 24 Stunden auf Vietnamesisch oder Tschechisch.",
     "heroBadge1": "Antwort innerhalb 24h",
     "heroBadge2": "Support auf Vietnamesisch und Tschechisch",
@@ -155,7 +155,7 @@
   },
   "pricingPage": {
     "heroBadge": "{days} Tage kostenlos testen",
-    "heroTitle": "Klare Preise nach Teamgröße",
+    "heroTitle": "Preise der Salon-App, nach Teamgröße",
     "heroSubtext": "Jeder Tarif hat alle Funktionen. Sie wählen nur nach Mitarbeitern pro Filiale und Anzahl der Filialen.[[discount: Jährlich zahlen spart {discount} %.]]",
     "toggleMonth": "Monatlich",
     "toggleYear": "Jährlich",

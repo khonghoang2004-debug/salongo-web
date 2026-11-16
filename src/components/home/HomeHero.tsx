@@ -40,13 +40,16 @@ export async function HomeHero() {
 
       <div className="sg-container relative grid px-4 pb-10 pt-7 sm:px-6 sm:pb-12 sm:pt-10 lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:pb-14 lg:pt-12">
         <div className="lg:col-span-7 lg:row-start-1 lg:self-center lg:pb-10">
-          <p className="sg-eyebrow sg-in !text-white/85" style={d(0)}>
-            {t("badge")}
-          </p>
-
-          <h1 className="mt-5 font-display text-[2.625rem] font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-[3.75rem] lg:mt-7 lg:text-[4rem] xl:text-[4.5rem]">
-            <span className="block text-balance">{words(t("title1"))}</span>
-            <span className="block text-balance text-[#F7C6D3]">{words(t("titleAccent"))}</span>
+          {/* H1 gồm cả dòng nhỏ phía trên (có từ khoá "quản lý salon"); giao diện giữ nguyên như trước */}
+          <h1>
+            <span className="sg-eyebrow sg-in font-sans !text-white/85" style={d(0)}>
+              {t("badge")}
+            </span>
+            <span className="sr-only">: </span>
+            <span className="mt-5 block font-display text-[2.625rem] font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-[3.75rem] lg:mt-7 lg:text-[4rem] xl:text-[4.5rem]">
+              <span className="block text-balance">{words(t("title1"))}</span>
+              <span className="block text-balance text-[#F7C6D3]">{words(t("titleAccent"))}</span>
+            </span>
           </h1>
 
           <div className="sg-in mt-8 flex flex-col gap-3 sm:flex-row" style={d(640)}>

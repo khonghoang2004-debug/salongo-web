@@ -35,7 +35,7 @@
   "faq": {
     "title": "Frequently asked questions",
     "subtitle": "Quick answers to common questions.",
-    "heroTitle": "The questions salons ask us most",
+    "heroTitle": "Salon software FAQ: what salons ask us most",
     "heroSubtext": "Can’t find yours? Message us and we reply within 24 hours, in Vietnamese or Czech.",
     "heroBadge1": "Response within 24h",
     "heroBadge2": "Vietnamese and Czech support",
@@ -155,7 +155,7 @@
   },
   "pricingPage": {
     "heroBadge": "{days}-day free trial",
-    "heroTitle": "Clear pricing, based on team size",
+    "heroTitle": "Salon software pricing, based on team size",
     "heroSubtext": "Every plan has every feature. You only choose by staff per location and number of locations.[[discount: Paying yearly saves {discount}%.]]",
     "toggleMonth": "Monthly",
     "toggleYear": "Yearly",

@@ -35,7 +35,7 @@
   "faq": {
     "title": "Časté dotazy",
     "subtitle": "Rychlé odpovědi na běžné otázky.",
-    "heroTitle": "Na co se salony ptají nejčastěji",
+    "heroTitle": "Časté dotazy k aplikaci pro salony",
     "heroSubtext": "Nenašli jste odpověď? Napište nám, odpovíme do 24 hodin vietnamsky nebo česky.",
     "heroBadge1": "Odpověď do 24 h",
     "heroBadge2": "Podpora vietnamsky a česky",
@@ -155,7 +155,7 @@
   },
   "pricingPage": {
     "heroBadge": "{days} dní zdarma",
-    "heroTitle": "Jasné ceny podle velikosti týmu",
+    "heroTitle": "Ceník aplikace pro salony podle velikosti týmu",
     "heroSubtext": "Každý tarif má všechny funkce. Vybíráte jen podle počtu personálu na pobočku a počtu poboček.[[discount: Při roční platbě ušetříte {discount} %.]]",
     "toggleMonth": "Měsíčně",
     "toggleYear": "Ročně",

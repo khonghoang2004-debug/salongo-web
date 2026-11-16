@@ -35,7 +35,7 @@
   "faq": {
     "title": "Câu hỏi thường gặp",
     "subtitle": "Tìm câu trả lời nhanh cho các thắc mắc phổ biến.",
-    "heroTitle": "Những câu salon hay hỏi nhất",
+    "heroTitle": "Câu hỏi thường gặp về app quản lý salon",
     "heroSubtext": "Không thấy câu bạn cần? Nhắn cho chúng tôi, hỗ trợ bằng tiếng Việt và tiếng Séc trong 24 giờ.",
     "heroBadge1": "Phản hồi trong 24h",
     "heroBadge2": "Hỗ trợ tiếng Việt, tiếng Séc",
@@ -155,7 +155,7 @@
   },
   "pricingPage": {
     "heroBadge": "Dùng thử miễn phí {days} ngày",
-    "heroTitle": "Một giá rõ ràng, trả theo số thợ",
+    "heroTitle": "Bảng giá app quản lý salon, trả theo số thợ",
     "heroSubtext": "Gói nào cũng có toàn bộ tính năng. Bạn chỉ chọn theo số nhân viên mỗi chi nhánh và số chi nhánh.[[discount: Trả theo năm giảm {discount}%.]]",
     "toggleMonth": "Theo tháng",
     "toggleYear": "Theo năm",

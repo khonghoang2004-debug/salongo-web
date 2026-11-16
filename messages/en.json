@@ -175,7 +175,7 @@
     "whoPro": "Growing salon",
     "whoProDesc": "Up to {staffPro} staff, or a salon that has opened 2 to {branchesPro} locations.",
     "whoPremium": "Salon chains",
-    "whoPremiumDesc": "Unlimited staff and locations for large salons.",
+    "whoPremiumDesc": "{premiumLimitsCap} for large salons.",
     "commitmentTitle": "Our commitment",
     "commit1": "No hidden fees",
     "commit2": "Cancel anytime",
@@ -961,7 +961,7 @@
       },
       {
         "h": "Salon software pricing",
-        "p": "Every plan has every feature; plans differ only by staff per location and number of locations: Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month (unlimited).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
+        "p": "Every plan has every feature; plans differ only by staff per location and number of locations: Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
         "link": {
           "href": "/bang-gia",
           "label": "See pricing"

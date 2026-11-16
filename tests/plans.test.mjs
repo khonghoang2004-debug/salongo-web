@@ -108,3 +108,17 @@ test("giảm giá theo tháng: giá gốc + % khi app gửi monthlyListPriceCent
   const same = mapPlansResponse({ ...ok, plans: [{ ...ok.plans[1], monthlyListPriceCents: 19900 }] }).plans[0];
   assert.equal(same.listMonthly, null);
 });
+
+test("giới hạn Premium thành chữ theo số liệu app (không ghi 'không giới hạn' khi app đặt giới hạn)", () => {
+  const unlimited = planTokens(FALLBACK_PLANS, "vi");
+  assert.equal(unlimited.premiumLimitsCap, "Không giới hạn thợ và chi nhánh");
+  const limited = mapPlansResponse({
+    ...ok,
+    plans: ok.plans.map((p) => (p.code === "PREMIUM" ? { ...p, maxStaff: null, maxLocations: 10 } : p)),
+  });
+  assert.equal(planTokens(limited, "vi").premiumLimits, "không giới hạn thợ, tối đa 10 chi nhánh");
+  assert.equal(planTokens(limited, "en").premiumLimitsCap, "Unlimited staff, up to 10 locations");
+  assert.equal(planTokens(limited, "cs").premiumLimits, "neomezený personál, až 10 poboček");
+  assert.equal(planTokens(limited, "de").premiumLimits, "unbegrenzt Mitarbeiter, bis zu 10 Filialen");
+  assert.equal(fillPlanText("{premiumLimitsCap} cho salon lớn.", planTokens(limited, "vi")), "Không giới hạn thợ, tối đa 10 chi nhánh cho salon lớn.");
+});

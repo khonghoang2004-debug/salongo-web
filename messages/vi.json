@@ -175,7 +175,7 @@
     "whoPro": "Salon đang phát triển",
     "whoProDesc": "Tiệm đến {staffPro} thợ, hoặc đã mở thêm 2 đến {branchesPro} chi nhánh.",
     "whoPremium": "Chuỗi salon",
-    "whoPremiumDesc": "Không giới hạn thợ và chi nhánh cho salon lớn.",
+    "whoPremiumDesc": "{premiumLimitsCap} cho salon lớn.",
     "commitmentTitle": "Cam kết của chúng tôi",
     "commit1": "Không phí ẩn",
     "commit2": "Hủy bất cứ lúc nào",
@@ -964,7 +964,7 @@
       },
       {
         "h": "Giá phần mềm quản lý salon",
-        "p": "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng (không giới hạn).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
+        "p": "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
         "link": {
           "href": "/bang-gia",
           "label": "Xem bảng giá"

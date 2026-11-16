@@ -157,7 +157,7 @@ export async function loadPlans(fetcher: PlansFetcher, state: PlansLoaderState, 
 
 // ---------------------------------------------------------------------------------------------
 // Số liệu trong văn bản (messages/*.json): {days}, {from}, {discount}, {priceBasic|Pro|Premium},
-// {staffBasic|Pro}, {branchesBasic|Pro}. Đoạn "[[discount:…]]" chỉ hiện khi có giảm giá theo năm.
+// {staffBasic|Pro}, {branchesBasic|Pro}, {premiumLimits} / {premiumLimitsCap} (giới hạn gói Premium thành chữ). Đoạn "[[discount:…]]" chỉ hiện khi có giảm giá theo năm.
 
 export function planTokens(p: SitePlans, locale: string): Record<string, string> {
   const tag = { vi: "vi-VN", cs: "cs-CZ", en: "en-GB", de: "de-DE" }[locale] ?? "cs-CZ";
@@ -176,10 +176,46 @@ export function planTokens(p: SitePlans, locale: string): Record<string, string>
     staffPro: lim(by("PRO").staff),
     branchesBasic: lim(by("BASIC").branches),
     branchesPro: lim(by("PRO").branches),
+    premiumLimits: limitsPhrase(by("PREMIUM"), locale, num),
+    premiumLimitsCap: capitalize(limitsPhrase(by("PREMIUM"), locale, num)),
   };
 }
 
-const TOKEN = /\{(days|from|discount|priceBasic|pricePro|pricePremium|staffBasic|staffPro|branchesBasic|branchesPro)\}/g;
+const capitalize = (s: string) => (s ? s[0].toLocaleUpperCase() + s.slice(1) : s);
+
+/**
+ * Giới hạn của một gói thành cụm từ tự nhiên theo ngôn ngữ, lấy từ số liệu app gửi
+ * (để chữ "không giới hạn" không mâu thuẫn với thẻ giá khi app đặt giới hạn cho gói).
+ */
+export function limitsPhrase(plan: SitePlan, locale: string, num: (n: number) => string): string {
+  const s = plan.staff;
+  const b = plan.branches;
+  const csBranches = (n: number) => (n >= 2 && n <= 4 ? "pobočky" : n === 1 ? "pobočka" : "poboček");
+  switch (locale) {
+    case "en":
+      if (s === null && b === null) return "unlimited staff and locations";
+      if (s === null) return `unlimited staff, up to ${num(b!)} locations`;
+      if (b === null) return `up to ${num(s)} staff per location, unlimited locations`;
+      return `up to ${num(s)} staff per location and ${num(b)} locations`;
+    case "cs":
+      if (s === null && b === null) return "neomezený personál i\u00a0pobočky";
+      if (s === null) return `neomezený personál, až ${num(b!)} ${csBranches(b!)}`;
+      if (b === null) return `až ${num(s)} zaměstnanců na pobočku, neomezeně poboček`;
+      return `až ${num(s)} zaměstnanců na pobočku a ${num(b)} ${csBranches(b)}`;
+    case "de":
+      if (s === null && b === null) return "unbegrenzt Mitarbeiter und Filialen";
+      if (s === null) return `unbegrenzt Mitarbeiter, bis zu ${num(b!)} Filialen`;
+      if (b === null) return `bis zu ${num(s)} Mitarbeiter pro Filiale, unbegrenzt Filialen`;
+      return `bis zu ${num(s)} Mitarbeiter pro Filiale und ${num(b)} Filialen`;
+    default:
+      if (s === null && b === null) return "không giới hạn thợ và chi nhánh";
+      if (s === null) return `không giới hạn thợ, tối đa ${num(b!)} chi nhánh`;
+      if (b === null) return `tối đa ${num(s)} thợ mỗi chi nhánh, không giới hạn chi nhánh`;
+      return `tối đa ${num(s)} thợ mỗi chi nhánh và ${num(b)} chi nhánh`;
+  }
+}
+
+const TOKEN = /\{(days|from|discount|priceBasic|pricePro|pricePremium|staffBasic|staffPro|branchesBasic|branchesPro|premiumLimits|premiumLimitsCap)\}/g;
 const DISCOUNT_PART = /\[\[discount:([\s\S]*?)\]\]/g;
 
 export function fillPlanText(text: string, tokens: Record<string, string>): string {

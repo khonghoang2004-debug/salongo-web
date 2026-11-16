@@ -175,7 +175,7 @@
     "whoPro": "Wachsender Salon",
     "whoProDesc": "Bis zu {staffPro} Mitarbeiter oder ein Salon mit 2 bis {branchesPro} Filialen.",
     "whoPremium": "Salonketten",
-    "whoPremiumDesc": "Unbegrenzt Mitarbeiter und Filialen für große Salons.",
+    "whoPremiumDesc": "{premiumLimitsCap} für große Salons.",
     "commitmentTitle": "Unser Versprechen",
     "commit1": "Keine versteckten Gebühren",
     "commit2": "Jederzeit kündbar",
@@ -961,7 +961,7 @@
       },
       {
         "h": "Was kostet die Salonsoftware?",
-        "p": "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat (unbegrenzt).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
+        "p": "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
         "link": {
           "href": "/bang-gia",
           "label": "Preise"

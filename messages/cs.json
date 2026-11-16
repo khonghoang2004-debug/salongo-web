@@ -175,7 +175,7 @@
     "whoPro": "Rostoucí salon",
     "whoProDesc": "Až {staffPro} zaměstnanců, nebo salon se 2 až {branchesPro} pobočkami.",
     "whoPremium": "Řetězce salonů",
-    "whoPremiumDesc": "Neomezený personál i pobočky pro velké salony.",
+    "whoPremiumDesc": "{premiumLimitsCap} pro velké salony.",
     "commitmentTitle": "Naše závazky",
     "commit1": "Žádné skryté poplatky",
     "commit2": "Zrušení kdykoli",
@@ -963,7 +963,7 @@
       },
       {
         "h": "Cena rezervačního systému",
-        "p": "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc (neomezeně).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
+        "p": "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
         "link": {
           "href": "/bang-gia",
           "label": "Ceník"

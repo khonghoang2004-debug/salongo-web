@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
-import { ArrowDown, Armchair, Store } from "lucide-react";
+import { ArrowRight, Armchair, Store } from "lucide-react";
 import { getPlans } from "@/lib/plans";
 
 const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 }).format(Math.round(n));
@@ -78,7 +78,7 @@ export async function PricingAudiencePicker() {
                   {price && <span className="text-[15px] font-semibold tabular-nums text-ink">{price}</span>}
                   <span className="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-[15px] font-semibold text-brand-700">
                     {cta}
-                    <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
                   </span>
                 </div>
               </a>

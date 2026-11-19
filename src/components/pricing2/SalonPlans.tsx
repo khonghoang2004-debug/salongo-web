@@ -36,12 +36,8 @@ export async function SalonPlans({ data }: { data: SitePlans }) {
   return (
     <section id="salon" className="x-section scroll-mt-20 bg-porcelain" aria-labelledby="salon-title">
       <div className="x-wrap">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 id="salon-title" className="x-h2 max-w-[40rem] text-ink">{t("title")}</h2>
-            <p className="x-lead mt-4">{t("lead")}</p>
-          </div>
-        </div>
+        <h2 id="salon-title" className="x-h2 max-w-[40rem] text-ink">{t("title")}</h2>
+        <p className="x-lead mt-4">{t("lead")}</p>
         <div className="mt-10">
           <PlanTable
             rows={rows}

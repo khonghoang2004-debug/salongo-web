@@ -1685,7 +1685,7 @@
       "rowMarketing": "E-Mail-Marketing"
     },
     "renew": {
-      "title": "Wie verlängere ich meinen SalonGo-Tarif?",
+      "title": "Wie verlängere ich meinen Tarif?",
       "lead": "Im Web. Nach der Zahlung ist die App sofort aktuell.",
       "s1": "Auf Tarif verlängern klicken",
       "s2": "Mit dem Inhaber- oder Stuhl-Konto anmelden",
@@ -1695,7 +1695,7 @@
       "cta": "Tarif verlängern"
     },
     "faq": {
-      "title": "Fragen zu den SalonGo-Preisen",
+      "title": "Fragen zu den Preisen",
       "trialCta": "{days} Tage kostenlos testen",
       "all": "Alle Fragen",
       "q1": "Brauche ich für den Test eine Karte?",

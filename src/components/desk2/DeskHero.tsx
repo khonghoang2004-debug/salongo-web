@@ -44,8 +44,8 @@ export async function DeskHero({ desk }: { desk: DeskPlan }) {
         <figure className="relative lg:col-span-6">
           <div className="absolute -inset-x-5 -bottom-16 top-10 rounded-[28px] bg-porcelain sm:-inset-x-8 lg:-right-[50vw] lg:left-6 lg:rounded-r-none" aria-hidden />
           <div className="relative flex items-start justify-center gap-0 pt-4 sm:justify-start sm:pl-[8%]">
-            <PhoneShot id="desk" alt={t("phoneAlt")} priority className="x-hero-desktop w-[46%] max-w-[270px] shrink-0 sm:w-[42%]" />
-            <DeskReceipt alt={t("receiptAlt")} className="x-hero-phone relative -ml-[6%] mt-[16%] w-[214px] shrink-0 rotate-[2deg] !px-4 !text-[10.5px] sm:-ml-[5%] sm:w-[280px] sm:!px-6 sm:!text-[12.5px]" />
+            <PhoneShot id="desk" alt={t("phoneAlt")} priority className="x-hero-desktop w-[44%] max-w-[270px] shrink-0 sm:w-[42%]" />
+            <DeskReceipt alt={t("receiptAlt")} className="x-hero-phone relative -ml-[4%] mt-[16%] w-[200px] shrink-0 rotate-[2deg] px-4 !text-[10.5px] sm:-ml-[5%] sm:w-[280px] sm:px-6 sm:!text-[12.5px]" />
           </div>
           <figcaption className="relative mt-8 text-[14px] text-muted sm:pl-[8%]">{t("receiptCaption")}</figcaption>
         </figure>

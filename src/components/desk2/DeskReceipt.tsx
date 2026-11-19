@@ -9,7 +9,7 @@ export function DeskReceipt({ alt, className = "" }: { alt: string; className?: 
     ["Spropitné", "50,00"],
   ];
   return (
-    <div className={`x-receipt w-[272px] px-6 pt-7 shadow-[0_30px_60px_-30px_rgba(42,15,23,0.45)] ${className}`} role="img" aria-label={alt}>
+    <div className={`x-receipt pt-7 shadow-[0_30px_60px_-30px_rgba(42,15,23,0.45)] ${className}`} role="img" aria-label={alt}>
       <p className="text-center text-[1.12em] font-semibold">Mai Tran</p>
       <p className="text-center text-ink/60">IČO 87654321</p>
       <p className="text-center text-ink/60">Lotus Nails, místo 2</p>

@@ -144,18 +144,23 @@ test("demo website mẫu: noindex, không canonical, không có trong sitemap", 
   assert.equal(xml.includes("/website/mau/"), false);
 });
 
-test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), câu hỏi là H3", async () => {
-  // Số câu hỏi đổi theo nội dung: chỉ cần mỗi nút mở (aria-controls) có câu trả lời tương ứng trong HTML
-  for (const [path, id] of [["/vi/faq", "faq-a-q"], ["/vi/bang-gia", "pricing-faq-a"]]) {
+test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), số câu khớp FAQPage", async () => {
+  for (const path of ["/vi/faq", "/cs/faq", "/vi/bang-gia"]) {
     const html = await (await get(path, PRIMARY)).text();
-    const answers = (html.match(new RegExp(`id="${id}\\d+"`, "g")) ?? []).length;
-    const buttons = (html.match(new RegExp(`aria-controls="${id}\\d+"`, "g")) ?? []).length;
-    assert.ok(answers >= 5, `${path}: ${answers} câu trả lời`);
-    assert.equal(answers, buttons, path);
-    assert.match(html, /<h3[^>]*><button[^>]*aria-controls=/, path);
+    // Hai kiểu đang dùng: <details><summary> (nội dung đóng vẫn nằm trong HTML) hoặc nút aria-controls + vùng có id
+    const details = (html.match(/<details[\s>]/g) ?? []).length;
+    const buttons = (html.match(/aria-controls="[a-z-]*faq-a[a-z-]*\d+"/g) ?? []).length;
+    const panels = (html.match(/id="[a-z-]*faq-a[a-z-]*\d+"/g) ?? []).length;
+    const shown = details || panels;
+    assert.ok(shown >= 5, `${path}: ${shown} câu`);
+    if (!details) assert.equal(panels, buttons, path);
+    const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((m) => JSON.parse(m[1]))
+      .flatMap((b) => b["@graph"] ?? [b])
+      .find((n) => n["@type"] === "FAQPage");
+    assert.ok(ld, `${path}: thiếu FAQPage`);
+    assert.equal(ld.mainEntity.length, shown, `${path}: FAQPage khác số câu đang hiện`);
   }
-  const ld = await (await get("/vi/bang-gia", PRIMARY)).text();
-  assert.match(ld, /"@type":"FAQPage"/);
 });
 
 // Trang /cs, /en, /de mà còn chữ tiếng Việt thì Google coi là bản sao của /vi (và người Séc không hiểu):

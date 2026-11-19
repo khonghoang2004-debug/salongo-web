@@ -6,7 +6,7 @@ import type { DeskPlan } from "@/lib/plans";
 
 const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 2 }).format(n);
 
-export const DESK_FEATURES = ["f1", "f2", "f3", "f4", "f5", "f6"] as const;
+export const DESK_FEATURES = ["f1", "f2", "f3", "f4"] as const;
 
 /**
  * Thẻ giá gói Bàn (dùng ở trang Bảng giá và trang /goi-ban). Giá lấy từ app (lib/plans → desk).

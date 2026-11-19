@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowUpRight, BadgeCheck, ChartColumn, Check, FileText, Lock, Minus, Receipt, Tags } from "lucide-react";
+import { ArrowUpRight, Check, Minus } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
 import { PageHero } from "@/components/ui/PageHero";
@@ -26,24 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ locale, path: PATH, title: t("deskTitle"), description: t("deskDesc") });
 }
 
-const WHAT = [
-  { icon: Receipt, t: "w1t", d: "w1d" },
-  { icon: FileText, t: "w2t", d: "w2d" },
-  { icon: ChartColumn, t: "w3t", d: "w3d" },
-  { icon: BadgeCheck, t: "w4t", d: "w4d" },
-  { icon: Tags, t: "w5t", d: "w5d" },
-  { icon: Lock, t: "w6t", d: "w6d" },
-] as const;
-
-// [nhãn, gói Bàn, gói salon]: true = có, false = không, chuỗi = giá trị
-const COMPARE = [
-  ["r1", true, true],
-  ["r2", true, true],
-  ["r3", true, true],
-  ["r4", false, true],
-  ["r5", false, true],
-  ["r6", false, true],
-] as const;
+const YES = ["y1", "y2", "y3", "y4", "y5"] as const;
+const NO = ["n1", "n2", "n3"] as const;
 
 const STEPS = [
   ["s1t", "s1d"],
@@ -51,30 +35,18 @@ const STEPS = [
   ["s3t", "s3d"],
 ] as const;
 
-const FAQ = [1, 2, 3, 4, 5, 6] as const;
-
-const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 2 }).format(n);
-
-function Mark({ on, label }: { on: boolean; label: string }) {
-  return on ? (
-    <Check className="mx-auto size-[18px] text-brand-700" strokeWidth={2.5} aria-label={label} />
-  ) : (
-    <Minus className="mx-auto size-[18px] text-muted/60" strokeWidth={2.5} aria-label={label} />
-  );
-}
+const FAQ = [1, 2, 3, 4] as const;
 
 export default async function DeskPlanPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("desk");
   const tNav = await getTranslations("nav");
-  const tPricing = await getTranslations("pricingPage");
   const tPages = await getTranslations("pages");
   const tVid = await getTranslations("videos");
   const vs = videoSrc(DESK_VIDEO);
   const plans = await getPlans();
   const { desk } = plans;
-  const salonFrom = Math.min(...plans.plans.map((p) => p.monthly));
 
   // JSON-LD: FAQPage (đúng các câu đang hiện) + Product/Offer khi app đang bán gói
   const url = pageUrl(locale, PATH);
@@ -162,22 +134,64 @@ export default async function DeskPlanPage({ params }: Props) {
 
       <section className="sg-section">
         <div className="sg-container">
-          <SectionHead title={t("whatTitle")} lead={t("whatLead")} />
-          <div data-stagger className="mt-8 grid gap-4 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-5">
-            {WHAT.map(({ icon: Icon, t: tk, d: dk }) => (
-              <div key={tk} className="rounded-[22px] border border-line bg-white p-6 sm:p-7">
-                <span className="flex size-11 items-center justify-center rounded-2xl bg-brand-50 text-brand-700" aria-hidden>
-                  <Icon className="size-5" />
-                </span>
-                <h3 className="mt-5 text-lg font-semibold tracking-[-0.01em] text-ink">{t(tk)}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted">{t(dk)}</p>
-              </div>
-            ))}
+          <SectionHead title={t("whatTitle")} layout="stack" />
+          <div data-stagger className="mt-8 grid gap-4 md:grid-cols-2 lg:mt-10 lg:gap-5">
+            <div className="rounded-[22px] border border-line bg-white p-6 sm:p-8">
+              <h3 className="text-lg font-semibold tracking-[-0.01em] text-ink">{t("yesTitle")}</h3>
+              <ul className="mt-5 space-y-3.5">
+                {YES.map((k) => (
+                  <li key={k} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink/85 sm:text-base">
+                    <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700" aria-hidden>
+                      <Check className="size-3.5" strokeWidth={3} />
+                    </span>
+                    {t(k)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col rounded-[22px] bg-nude p-6 sm:p-8">
+              <h3 className="text-lg font-semibold tracking-[-0.01em] text-ink">{t("noTitle")}</h3>
+              <ul className="mt-5 space-y-3.5">
+                {NO.map((k) => (
+                  <li key={k} className="flex items-start gap-3 text-[15px] leading-relaxed text-muted sm:text-base">
+                    <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-white text-muted" aria-hidden>
+                      <Minus className="size-3.5" strokeWidth={3} />
+                    </span>
+                    {t(k)}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 border-t border-line pt-5 text-[14px] leading-relaxed text-muted">{t("noNote")}</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="sg-section !pt-0" aria-labelledby="desk-video-title">
+      <section className="sg-section bg-nude">
+        <div className="sg-container grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div data-reveal className="lg:col-span-5">
+            <DeskPlanCard desk={desk} />
+          </div>
+          <div data-reveal className="lg:col-span-7" style={d(120)}>
+            <h2 className="sg-h2">{t("stepsTitle")}</h2>
+            <ol className="mt-8 grid gap-3">
+              {STEPS.map(([tk, dk], i) => (
+                <li key={tk} className="flex items-start gap-4 rounded-[20px] bg-white p-5 sm:p-6">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-50 font-display text-lg font-semibold text-brand-700 tabular-nums" aria-hidden>
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold tracking-[-0.01em] text-ink sm:text-lg">{t(tk)}</h3>
+                    <p className="mt-1 text-[15px] leading-relaxed text-muted">{t(dk)}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section className="sg-section" aria-labelledby="desk-video-title">
         <div data-reveal className="sg-container">
           <h2 id="desk-video-title" className="sg-h2-sm mb-5 text-ink sm:mb-6">
             {t("videoTitle")}
@@ -189,84 +203,6 @@ export default async function DeskPlanPage({ params }: Props) {
       </section>
 
       <section className="sg-section bg-nude">
-        <div className="sg-container grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <div data-reveal className="lg:col-span-5">
-            <DeskPlanCard desk={desk} />
-          </div>
-          <div data-reveal className="lg:col-span-7" style={d(120)}>
-            <h2 className="sg-h2">{t("compareTitle")}</h2>
-            <p className="sg-lead mt-4 max-w-2xl">{t("compareLead")}</p>
-            <div className="mt-8 overflow-hidden rounded-[22px] border border-line bg-white">
-              <table className="w-full border-collapse text-left text-[13px] sm:text-sm">
-                <thead>
-                  <tr className="border-b border-line">
-                    <th scope="col" className="px-3 py-4 font-semibold text-muted sm:px-5">
-                      <span className="sr-only">{tPricing("compareFeatureCol")}</span>
-                    </th>
-                    <th scope="col" className="w-[24%] px-1 py-4 text-center font-semibold text-brand-700 sm:px-3">{t("colDesk")}</th>
-                    <th scope="col" className="w-[30%] px-1 py-4 text-center font-semibold text-ink sm:px-3">{t("colSalon")}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-line bg-nude">
-                    <th scope="row" className="px-3 py-3.5 font-semibold text-ink sm:px-5">{t("rPrice")}</th>
-                    <td className="px-1 py-3.5 text-center font-display text-base font-semibold text-brand-700 sm:text-xl">{fmt(desk.monthly)} Kč</td>
-                    <td className="px-1 py-3.5 text-center font-display text-base font-semibold text-ink sm:text-lg">
-                      {t("rPriceSalon").replace("{from}", fmt(salonFrom))}
-                    </td>
-                  </tr>
-                  <tr className="border-b border-line">
-                    <th scope="row" className="px-3 py-3.5 font-medium text-ink/85 sm:px-5">{t("r7")}</th>
-                    <td className="px-1 py-3.5 text-center text-ink">{t("r7desk")}</td>
-                    <td className="px-1 py-3.5 text-center text-ink">{t("r7salon")}</td>
-                  </tr>
-                  {COMPARE.map(([k, a, b]) => (
-                    <tr key={k} className="border-b border-line last:border-b-0">
-                      <th scope="row" className="px-3 py-3.5 font-medium text-ink/85 sm:px-5">{t(k)}</th>
-                      <td className="px-1 py-3.5 text-center">
-                        <Mark on={a} label={a ? "✓" : "–"} />
-                      </td>
-                      <td className="px-1 py-3.5 text-center">
-                        <Mark on={b} label={b ? "✓" : "–"} />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sg-section">
-        <div className="sg-container">
-          <SectionHead title={t("stepsTitle")} layout="stack" />
-          <ol data-stagger className="mt-8 grid border-t border-line md:grid-cols-3 md:divide-x md:divide-line lg:mt-12">
-            {STEPS.map(([tk, dk], i) => (
-              <li key={tk} className="border-b border-line py-8 md:border-b-0 md:px-6 md:first:pl-0 md:last:pr-0 lg:px-8">
-                <span className="font-display text-[2.5rem] leading-none text-brand-700 tabular-nums" aria-hidden>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-4 text-lg font-semibold tracking-[-0.01em] text-ink">{t(tk)}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted">{t(dk)}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="sg-section bg-nude">
-        <div data-reveal className="sg-container grid gap-6 lg:grid-cols-12 lg:gap-12">
-          <h2 className="sg-h2 lg:col-span-5">{t("lawTitle")}</h2>
-          <div className="space-y-4 text-base leading-relaxed text-ink/85 lg:col-span-7 sm:text-[17px]">
-            <p>{t("lawP1")}</p>
-            <p>{t("lawP2")}</p>
-            <p className="text-[15px] text-muted">{t("lawNote")}</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="sg-section">
         <div data-reveal className="sg-container grid gap-8 lg:grid-cols-12 lg:gap-12">
           <h2 className="sg-h2 lg:col-span-4">{t("faqTitle")}</h2>
           {/* <details>: câu trả lời luôn có trong HTML, mở/đóng không cần JavaScript */}

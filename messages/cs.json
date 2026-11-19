@@ -1606,9 +1606,8 @@
     }
   },
   "pricing2": {
-    "metaDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/měsíc[[discount:, ročně o {discount} % levněji]]. Každý tarif má všechny funkce. Tarif Křeslo {priceDesk} Kč/měsíc pro nájemce v salonu. {days} dní zdarma.",
     "hero": {
-      "title": "Ceník SalonGo",
+      "title": "Ceník SalonGo: od {from} Kč měsíčně, EET 2.0 v ceně",
       "lead": "Každý tarif má všechny funkce. Vybíráte podle počtu zaměstnanců a poboček.",
       "jump": "Rychlá volba",
       "salon": "Mám salon",
@@ -1660,7 +1659,7 @@
     "desk": {
       "title": "Kolik platí nájemce křesla s vlastním IČO?",
       "lead": "Tarif Křeslo: pokladna, účtenky a EET na vaše IČO. Majitel salonu vaše tržby nevidí.",
-      "name": "Křeslo",
+      "name": "Tarif Křeslo",
       "perMonth": "Kč/měsíc",
       "orYearly": "nebo {total} Kč/rok",
       "trial": "1 měsíc zdarma",
@@ -1674,7 +1673,7 @@
       "caption": "Tarif Křeslo ve srovnání s tarify pro salon",
       "colFeature": "Funkce",
       "colSalon": "Tarify pro salon",
-      "colDesk": "Křeslo",
+      "colDesk": "Tarif Křeslo",
       "yes": "Ano",
       "no": "Ne",
       "rowCheckout": "Pokladna a účtenky",

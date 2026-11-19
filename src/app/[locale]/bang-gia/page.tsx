@@ -10,6 +10,7 @@ import { SIGNUP_URL, appLink } from "@/lib/app-links";
 import { getPlans } from "@/lib/plans";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
+import { jsonLdString } from "@/lib/json-ld";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 
@@ -22,14 +23,14 @@ const FAQ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages" });
-  const t2 = await getTranslations({ locale, namespace: "pricing2" });
-  return pageMetadata({ locale, path: PATH, title: t("pricingTitle"), description: t2("metaDesc") });
+  return pageMetadata({ locale, path: PATH, title: t("pricingTitle"), description: t("pricingDesc") });
 }
 
 export default async function PricingPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("pricing2");
+  const tPages = await getTranslations("pages");
   const data = await getPlans();
   const faq = FAQ.map((i) => ({ q: t(`faq.q${i}`), a: t(`faq.a${i}`) }));
 
@@ -56,11 +57,11 @@ export default async function PricingPage({ params }: Props) {
         "@type": "Product",
         "@id": `${url}#product`,
         name: siteConfig.name,
-        description: t("metaDesc"),
+        description: tPages("pricingDesc"),
         brand: { "@type": "Brand", name: siteConfig.name },
         offers: [
           ...data.plans.map((p) => offer(`${siteConfig.name} ${PLAN_NAMES[p.code]}`, p.monthly)),
-          ...(data.desk.live ? [offer(`${siteConfig.name} ${t("desk.name")}`, data.desk.monthly)] : []),
+          ...(data.desk.live ? [offer(`${siteConfig.name} – ${t("desk.name")}`, data.desk.monthly)] : []),
         ],
       },
     ],
@@ -68,7 +69,7 @@ export default async function PricingPage({ params }: Props) {
 
   return (
     <PageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
       <PricingHero />
       <SalonPlans data={data} />
       <DeskBand desk={data.desk} />

@@ -1,7 +1,6 @@
 {
-  "metaDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Every plan has every feature. Chair plan {priceDesk} CZK/month for chair renters. {days}-day free trial.",
   "hero": {
-    "title": "SalonGo pricing",
+    "title": "SalonGo pricing: from {from} CZK a month, EET 2.0 included",
     "lead": "Every plan has every feature. You choose by staff and locations.",
     "jump": "Jump to",
     "salon": "I own a salon",
@@ -36,14 +35,24 @@
     "renew": "Renew",
     "renewAria": "Renew the {plan} plan",
     "includedTitle": "Every plan includes",
-    "included": ["Calendar per staff member", "Online booking", "Checkout and receipts", "EET 2.0", "Income & expenses", "Payroll", "Clients and email marketing", "Reports and exports", "Unlimited clients and appointments"],
+    "included": [
+      "Calendar per staff member",
+      "Online booking",
+      "Checkout and receipts",
+      "EET 2.0",
+      "Income & expenses",
+      "Payroll",
+      "Clients and email marketing",
+      "Reports and exports",
+      "Unlimited clients and appointments"
+    ],
     "note": "No hidden fees.[[discount: Paying yearly saves {discount}%.]] At checkout the app always uses the current price.",
     "terms": "Terms of use"
   },
   "desk": {
     "title": "What does a chair renter with their own IČO pay?",
     "lead": "The Chair plan: checkout, receipts and EET under your IČO. The salon owner can't see your revenue.",
-    "name": "Chair",
+    "name": "Chair plan",
     "perMonth": "CZK/month",
     "orYearly": "or {total} CZK/year",
     "trial": "1-month free trial",
@@ -57,7 +66,7 @@
     "caption": "Chair plan compared with salon plans",
     "colFeature": "Feature",
     "colSalon": "Salon plans",
-    "colDesk": "Chair",
+    "colDesk": "Chair plan",
     "yes": "Yes",
     "no": "No",
     "rowCheckout": "Checkout and receipts",

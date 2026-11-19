@@ -1,7 +1,6 @@
 {
-  "metaDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Jeder Tarif mit allen Funktionen. Tarif Stuhl {priceDesk} CZK/Monat für Stuhlmieter. {days} Tage kostenlos testen.",
   "hero": {
-    "title": "SalonGo Preise",
+    "title": "SalonGo Preise: ab {from} CZK im Monat, EET 2.0 inklusive",
     "lead": "Jeder Tarif hat alle Funktionen. Sie wählen nach Mitarbeitern und Filialen.",
     "jump": "Schnellwahl",
     "salon": "Ich habe einen Salon",
@@ -36,14 +35,24 @@
     "renew": "Verlängern",
     "renewAria": "Tarif {plan} verlängern",
     "includedTitle": "In jedem Tarif",
-    "included": ["Kalender pro Mitarbeiter", "Online-Buchung", "Kasse und Belege", "EET 2.0", "Einnahmen und Ausgaben", "Lohnabrechnung", "Kunden und E-Mail-Marketing", "Berichte und Exporte", "Unbegrenzt Kunden und Termine"],
+    "included": [
+      "Kalender pro Mitarbeiter",
+      "Online-Buchung",
+      "Kasse und Belege",
+      "EET 2.0",
+      "Einnahmen und Ausgaben",
+      "Lohnabrechnung",
+      "Kunden und E-Mail-Marketing",
+      "Berichte und Exporte",
+      "Unbegrenzt Kunden und Termine"
+    ],
     "note": "Keine versteckten Gebühren.[[discount: Jährlich {discount} % günstiger.]] Beim Bezahlen nutzt die App immer den aktuellen Preis.",
     "terms": "Nutzungsbedingungen"
   },
   "desk": {
     "title": "Was zahlen Stuhlmieter mit eigener IČO?",
     "lead": "Der Tarif Stuhl: Kasse, Belege und EET auf Ihre IČO. Der Salonbesitzer sieht Ihren Umsatz nicht.",
-    "name": "Stuhl",
+    "name": "Tarif Stuhl",
     "perMonth": "CZK/Monat",
     "orYearly": "oder {total} CZK/Jahr",
     "trial": "1 Monat kostenlos",
@@ -57,7 +66,7 @@
     "caption": "Tarif Stuhl im Vergleich zu den Salon-Tarifen",
     "colFeature": "Funktion",
     "colSalon": "Salon-Tarife",
-    "colDesk": "Stuhl",
+    "colDesk": "Tarif Stuhl",
     "yes": "Ja",
     "no": "Nein",
     "rowCheckout": "Kasse und Belege",

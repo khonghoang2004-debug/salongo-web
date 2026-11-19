@@ -11,6 +11,7 @@ import { DESK_VIDEO, videoSrc } from "@/lib/videos";
 import { getPlans } from "@/lib/plans";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
+import { jsonLdString } from "@/lib/json-ld";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -59,7 +60,7 @@ export default async function DeskPlanPage({ params }: Props) {
             {
               "@type": "Product",
               "@id": `${url}#product`,
-              name: `${siteConfig.name} ${tName("name")}`,
+              name: `${siteConfig.name} – ${tName("name")}`,
               description: tPages("deskDesc"),
               brand: { "@type": "Brand", name: siteConfig.name },
               offers: {
@@ -78,7 +79,7 @@ export default async function DeskPlanPage({ params }: Props) {
   return (
     // Nút dính dưới trên điện thoại mời salon dùng thử {days} ngày: không hợp với người thuê bàn, nên tắt ở trang này
     <PageShell cta={false}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
       <DeskHero desk={desk} />
       <DeskIncluded />
       <DeskPrice desk={desk} />

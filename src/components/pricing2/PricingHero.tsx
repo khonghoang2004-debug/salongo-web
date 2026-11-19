@@ -14,7 +14,7 @@ export async function PricingHero() {
     <section className="bg-white pb-16 pt-10 sm:pt-14 lg:pb-20 lg:pt-20" aria-labelledby="pricing-title">
       <div className="x-wrap grid gap-12 lg:grid-cols-12 lg:gap-8 [&>*]:min-w-0">
         <div className="lg:col-span-7">
-          <h1 id="pricing-title" className="x-display text-ink">{t("title")}</h1>
+          <h1 id="pricing-title" className="x-display max-w-[44rem] text-ink lg:!text-[clamp(2.75rem,0.9rem+2.9vw,4rem)]">{t("title")}</h1>
           <p className="x-lead mt-6 max-w-[32rem]">{t("lead")}</p>
           <nav aria-label={t("jump")} className="mt-10 max-w-[36rem]">
             <ul className="border-t border-line">

@@ -138,7 +138,7 @@ export default async function FeaturesPage({ params }: Props) {
           wide={"wide" in r}
           extra={
             r.key === "checkout" ? (
-              <Link href="/faq" className="x-link mt-6 min-h-11">
+              <Link href="/eet-2-0" className="x-link mt-6 min-h-11">
                 {t("items.checkout.eetLink")}
                 <ArrowRight className="size-4" aria-hidden />
               </Link>

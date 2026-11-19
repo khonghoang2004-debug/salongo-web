@@ -1,139 +1,139 @@
 {
-  "crumb": "Tính năng",
-  "h1": "Tính năng app quản lý tiệm nail và salon",
-  "lead": "Đặt lịch, tính tiền có EET, thu chi, khách hàng và lương thợ trong một app. Dùng trên điện thoại, iPad và máy tính.",
-  "cta": "Dùng thử {days} ngày miễn phí",
-  "pricing": "Xem bảng giá",
-  "indexLabel": "Trên trang này",
+  "crumb": "Funkce",
+  "h1": "Funkce rezervačního systému a pokladny pro salon",
+  "lead": "Rezervace, pokladna s EET, příjmy a výdaje, klienti a mzdy v jedné aplikaci. V telefonu, na iPadu i v počítači.",
+  "cta": "{days} dní zdarma",
+  "pricing": "Ceník",
+  "indexLabel": "Na této stránce",
   "items": {
     "booking": {
-      "nav": "Đặt lịch online",
-      "title": "Trang đặt lịch online cho salon",
-      "lead": "Tiệm có link đặt lịch riêng để gắn lên Facebook, Instagram, Google Maps. Khách tự chọn dịch vụ, thợ và giờ còn trống, không cần tải app.",
+      "nav": "Online rezervace",
+      "title": "Online rezervace pro salon",
+      "lead": "Salon má vlastní rezervační odkaz pro Facebook, Instagram a Google Mapy. Klient si sám vybere službu, pracovníka a volný čas, bez instalace aplikace.",
       "points": [
-        "Khách đặt bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp",
-        "Lịch mới báo về điện thoại, duyệt và chia thợ trong một hộp",
-        "Email xác nhận và email nhắc 1 giờ trước giờ hẹn"
+        "Klienti se objednávají česky, slovensky, německy, anglicky nebo francouzsky",
+        "Nová rezervace přijde do mobilu, potvrdíte a přidělíte v jednom okně",
+        "Potvrzovací e-mail a připomínka hodinu předem"
       ],
-      "alt": "Duyệt lịch đặt online và chọn thợ trong SalonGo trên máy tính",
-      "altPhone": "Trang đặt lịch online của salon trên điện thoại của khách, bước chọn giờ"
+      "alt": "Potvrzení online rezervací a přidělení pracovníka v SalonGo na počítači",
+      "altPhone": "Rezervační stránka salonu v telefonu klienta, výběr času"
     },
     "calendar": {
-      "nav": "Lịch hẹn",
-      "title": "Lịch hẹn theo từng thợ",
-      "lead": "Mỗi thợ một cột, nhìn là biết ai đang rảnh. Lịch chưa chọn thợ được tự giao cho người rảnh và ít việc nhất.",
+      "nav": "Kalendář",
+      "title": "Kalendář rezervací podle personálu",
+      "lead": "Každý pracovník má svůj sloupec, hned vidíte, kdo má volno. Rezervace bez zvoleného pracovníka dostane ten, kdo je volný a má nejméně práce.",
       "points": [
-        "Xem theo thợ hoặc dạng danh sách",
-        "Mỗi lịch tự lấy đúng thời lượng của dịch vụ",
-        "Trang đặt lịch chỉ hiện giờ còn trống, không trùng lịch"
+        "Zobrazení podle personálu nebo jako seznam",
+        "Každá rezervace má délku podle služby",
+        "Rezervační stránka nabízí jen volné časy, žádné dvojité rezervace"
       ],
-      "alt": "Lịch hẹn theo từng thợ trong một ngày trên SalonGo"
+      "alt": "Den rezervací podle personálu v SalonGo"
     },
     "checkout": {
-      "nav": "Tính tiền và EET",
-      "title": "Tính tiền tại quầy, có EET 2.0",
-      "lead": "Chọn dịch vụ, thợ và cách khách trả là xong hoá đơn. Bật EET một lần, sau đó mỗi hoá đơn tự gửi lên sở thuế.",
+      "nav": "Pokladna a EET",
+      "title": "Pokladna pro salon s EET 2.0",
+      "lead": "Vyberete službu, pracovníka a způsob platby a účtenka je hotová. EET zapnete jednou, pak se každá účtenka odešle finanční správě sama.",
       "points": [
-        "Tiền mặt, thẻ hoặc chuyển khoản bằng mã QR có sẵn số tiền",
-        "Tip ghi riêng cho thợ",
-        "In hoá đơn khổ 80 mm, kèm mã FIK",
-        "EET 2.0 bắt buộc từ 1.1.2027, có trong mọi gói"
+        "Hotovost, karta nebo převod přes QR kód s vyplněnou částkou",
+        "Spropitné zvlášť pro pracovníka",
+        "Tisk účtenek 80 mm s kódem FIK",
+        "EET 2.0 je povinná od 1. 1. 2027, v každém tarifu"
       ],
-      "alt": "Màn tính tiền của SalonGo: dịch vụ, thợ và cách thanh toán",
-      "eetLink": "Hỏi về EET"
+      "alt": "Pokladna SalonGo: služby, pracovník a způsob platby",
+      "eetLink": "Vše o EET 2.0"
     },
     "thuchi": {
-      "nav": "Thu & Chi",
-      "title": "Sổ thu chi của tiệm",
-      "lead": "Tab Thu tự cộng từ hoá đơn. Tab Chi để ghi tiền hàng, tiền nhà: số tiền, ngày, cách trả và một dòng ghi chú.",
+      "nav": "Příjmy a výdaje",
+      "title": "Příjmy a výdaje salonu",
+      "lead": "Záložka Příjmy se sečte sama z účtenek. Do záložky Výdaje zapíšete zboží nebo nájem: částku, datum, způsob platby a krátkou poznámku.",
       "points": [
-        "Thu trừ chi hiện ngay, theo từng chi nhánh",
-        "Xuất CSV, Excel hoặc PDF cho kế toán"
+        "Příjmy minus výdaje hned, pro každou pobočku",
+        "Export do CSV, Excelu nebo PDF pro účetní"
       ],
-      "alt": "Thu & Chi trong SalonGo: khoản thu từ hoá đơn và khoản chi của tiệm"
+      "alt": "Příjmy a výdaje v SalonGo: příjmy z účtenek a výdaje salonu"
     },
     "customers": {
-      "nav": "Khách hàng",
-      "title": "Hồ sơ khách hàng và khách quen",
-      "lead": "Mỗi khách có lịch sử dịch vụ, số lần ghé và tổng chi tiêu. Khách quen được nhận ra ngay.",
+      "nav": "Klienti",
+      "title": "Karta klienta a stálí klienti",
+      "lead": "U každého klienta vidíte historii služeb, počet návštěv a celkovou útratu. Stálé klienty poznáte hned.",
       "points": [
-        "Lọc khách VIP, khách mới, khách lâu chưa quay lại",
-        "Khách VIP tự nhận theo quy tắc bạn đặt",
-        "App báo trước sinh nhật khách 2 ngày"
+        "Filtr VIP, nových a dlouho neviděných klientů",
+        "VIP podle pravidla, které nastavíte jednou",
+        "Upozornění na narozeniny 2 dny předem"
       ],
-      "alt": "Danh sách khách hàng trong SalonGo với số lần ghé và chi tiêu"
+      "alt": "Seznam klientů v SalonGo s počtem návštěv a útratou"
     },
     "marketing": {
-      "nav": "Email marketing",
-      "title": "Email ưu đãi cho khách quen",
-      "lead": "Chọn mẫu theo dịp như 8/3, Giáng sinh hay sinh nhật, thêm % giảm giá rồi gửi. Chỉ gửi cho khách đã đồng ý nhận ưu đãi.",
+      "nav": "E-mailový marketing",
+      "title": "E-maily s nabídkou pro stálé klienty",
+      "lead": "Vyberete šablonu na MDŽ, Vánoce nebo narozeniny, přidáte slevu a odešlete. Dostanou ji jen klienti, kteří souhlasili.",
       "points": [
-        "10 mẫu viết sẵn 6 ngôn ngữ, sửa được",
-        "Xem trước và gửi thử cho mình",
-        "Email mang tên salon, có link huỷ nhận"
+        "10 šablon v 6 jazycích, vše jde upravit",
+        "Náhled a zkušební e-mail sobě",
+        "Odesílá se jménem salonu, s odkazem na odhlášení"
       ],
-      "alt": "Mẫu email ưu đãi Ngày Phụ nữ 8/3 trong SalonGo trên điện thoại",
-      "alt2": "Nhắc sinh nhật khách trong SalonGo trên điện thoại"
+      "alt": "E-mail s nabídkou k MDŽ v SalonGo v telefonu",
+      "alt2": "Upozornění na narozeniny klienta v SalonGo v telefonu"
     },
     "payroll": {
-      "nav": "Tính lương",
-      "title": "Tính lương thợ tự động",
-      "lead": "Mỗi thợ một cách tính: % doanh thu hoặc lương cố định. Tip theo khách hoặc chia đều, tuỳ bạn chọn.",
+      "nav": "Mzdy",
+      "title": "Automatický výpočet mezd v salonu",
+      "lead": "Každý pracovník má jeden způsob odměny: procento z tržeb nebo pevnou mzdu. Spropitné dostane ten, komu ho klient dal, nebo se dělí rovným dílem.",
       "points": [
-        "Đặt % riêng cho từng dịch vụ nếu cần",
-        "Bảng lương theo kỳ: lương, doanh thu, tip, số hoá đơn",
-        "Xuất Excel, CSV hoặc PDF"
+        "Jiné procento pro každou službu, pokud chcete",
+        "Mzdy za období: mzda, tržby, spropitné, počet účtenek",
+        "Export do Excelu, CSV nebo PDF"
       ],
-      "alt": "Bảng lương thợ theo kỳ trong SalonGo"
+      "alt": "Mzdy personálu za období v SalonGo"
     },
     "staff": {
-      "nav": "Tài khoản thợ",
-      "title": "App cho thợ: lịch và doanh thu của mình",
-      "lead": "Mỗi thợ có tài khoản riêng trên điện thoại, nhận thông báo bằng ngôn ngữ mình chọn. Chủ quyết định thợ xem gì.",
+      "nav": "Účty personálu",
+      "title": "Aplikace pro personál: vlastní rozvrh a tržby",
+      "lead": "Každý pracovník má vlastní přihlášení v telefonu a upozornění ve svém jazyce. O tom, co vidí, rozhodujete vy.",
       "points": [
-        "Mời bằng email, thợ đặt mật khẩu là dùng được",
-        "Chỉ lịch, hoặc lịch và doanh thu của mình",
-        "Thợ không bao giờ thấy doanh thu cả salon"
+        "Pozvánka e-mailem, pracovník nastaví heslo a začne",
+        "Jen rozvrh, nebo rozvrh i vlastní tržby",
+        "Tržby celého salonu personál nikdy nevidí"
       ],
-      "cap1": "Lịch hôm nay của thợ",
-      "cap2": "Chủ chọn thợ được xem gì"
+      "cap1": "Dnešní rozvrh pracovníka",
+      "cap2": "Majitel volí, co pracovník vidí"
     },
     "branches": {
-      "nav": "Nhiều chi nhánh",
-      "title": "Quản lý nhiều chi nhánh trong một tài khoản",
-      "lead": "Mở thêm chi nhánh ngay trong app. Đổi chi nhánh bằng một chạm, xem doanh thu và lịch hẹn của tất cả trên một trang.",
+      "nav": "Více poboček",
+      "title": "Správa více poboček v jednom účtu",
+      "lead": "Pobočku přidáte přímo v aplikaci. Přepnete jedním klepnutím a tržby i rezervace všech poboček vidíte na jedné stránce.",
       "points": [
-        "Mỗi chi nhánh có lịch, thợ, dịch vụ và hoá đơn riêng",
-        "Chi nhánh mới được dùng thử {days} ngày",
-        "Mỗi chi nhánh chọn gói và gia hạn riêng"
+        "Každá pobočka má vlastní kalendář, personál, služby a účtenky",
+        "Nová pobočka má {days} dní zdarma",
+        "Každá pobočka má vlastní tarif a prodloužení"
       ],
-      "alt": "Trang Tất cả salon trong SalonGo: doanh thu và lịch hẹn của từng chi nhánh"
+      "alt": "Stránka Všechny salony v SalonGo: tržby a rezervace každé pobočky"
     }
   },
   "more": {
-    "title": "Và những phần còn lại",
+    "title": "A k tomu",
     "services": {
-      "title": "Dịch vụ và bảng giá",
-      "text": "Danh mục có màu, thời gian và giá. Bật hoặc tắt từng dịch vụ trên trang đặt lịch."
+      "title": "Služby a ceník",
+      "text": "Kategorie s barvou, délka a cena. Každou službu zapnete nebo vypnete pro online rezervace."
     },
     "reports": {
-      "title": "Báo cáo doanh thu và hoá đơn",
-      "text": "Doanh thu theo ngày, thợ, dịch vụ và cách thanh toán. Tìm, in lại hoặc xuất hoá đơn ra PDF."
+      "title": "Přehled tržeb a účtenky",
+      "text": "Tržby po dnech, podle pracovníků, služeb a způsobu platby. Účtenky najdete, vytisknete znovu nebo uložíte do PDF."
     },
     "devices": {
-      "title": "iPhone, Android, iPad, Mac, Windows và trình duyệt",
-      "text": "Một tài khoản trên mọi máy, dữ liệu luôn giống nhau. App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp."
+      "title": "iPhone, Android, iPad, Mac, Windows a prohlížeč",
+      "text": "Jeden účet na všech zařízeních, vždy stejná data. Aplikace umí 6 jazyků: vietnamsky, česky, slovensky, anglicky, německy, francouzsky."
     },
     "desk": {
-      "title": "Gói Bàn cho thợ thuê bàn",
-      "text": "Có IČO riêng? Tính tiền, hoá đơn và EET đứng tên bạn, {priceDesk} Kč/tháng.",
-      "link": "Xem gói Bàn"
+      "title": "Tarif Křeslo pro nájemce",
+      "text": "Máte vlastní IČO? Pokladna, účtenky a EET na vaše jméno za {priceDesk} Kč měsíčně.",
+      "link": "Tarif Křeslo"
     }
   },
   "closing": {
-    "title": "Dùng thử {days} ngày, đủ mọi tính năng",
-    "lead": "Không cần thẻ. Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh.",
-    "cta": "Dùng thử miễn phí",
-    "link": "Xem bảng giá"
+    "title": "{days} dní zdarma se všemi funkcemi",
+    "lead": "Bez platební karty. Každý tarif má všechny funkce, liší se jen počtem personálu a poboček.",
+    "cta": "Vyzkoušet zdarma",
+    "link": "Ceník"
   }
 }

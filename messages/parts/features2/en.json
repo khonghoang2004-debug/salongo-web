@@ -1,139 +1,139 @@
 {
-  "crumb": "Tính năng",
-  "h1": "Tính năng app quản lý tiệm nail và salon",
-  "lead": "Đặt lịch, tính tiền có EET, thu chi, khách hàng và lương thợ trong một app. Dùng trên điện thoại, iPad và máy tính.",
-  "cta": "Dùng thử {days} ngày miễn phí",
-  "pricing": "Xem bảng giá",
-  "indexLabel": "Trên trang này",
+  "crumb": "Features",
+  "h1": "SalonGo features: online booking, checkout, EET 2.0, payroll",
+  "lead": "Bookings, checkout with EET, income and expenses, clients and staff pay in one app. On phone, iPad and computer.",
+  "cta": "Try free for {days} days",
+  "pricing": "See pricing",
+  "indexLabel": "On this page",
   "items": {
     "booking": {
-      "nav": "Đặt lịch online",
-      "title": "Trang đặt lịch online cho salon",
-      "lead": "Tiệm có link đặt lịch riêng để gắn lên Facebook, Instagram, Google Maps. Khách tự chọn dịch vụ, thợ và giờ còn trống, không cần tải app.",
+      "nav": "Online booking",
+      "title": "Online booking page for your salon",
+      "lead": "Your salon gets its own booking link for Facebook, Instagram and Google Maps. Clients pick a service, a staff member and a free time, with no app to install.",
       "points": [
-        "Khách đặt bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp",
-        "Lịch mới báo về điện thoại, duyệt và chia thợ trong một hộp",
-        "Email xác nhận và email nhắc 1 giờ trước giờ hẹn"
+        "Clients book in Czech, Slovak, German, English or French",
+        "New bookings arrive on your phone; confirm and assign staff in one box",
+        "Confirmation email and a reminder 1 hour before"
       ],
-      "alt": "Duyệt lịch đặt online và chọn thợ trong SalonGo trên máy tính",
-      "altPhone": "Trang đặt lịch online của salon trên điện thoại của khách, bước chọn giờ"
+      "alt": "Confirming online bookings and assigning staff in SalonGo on a computer",
+      "altPhone": "The salon's online booking page on a client's phone, choosing a time"
     },
     "calendar": {
-      "nav": "Lịch hẹn",
-      "title": "Lịch hẹn theo từng thợ",
-      "lead": "Mỗi thợ một cột, nhìn là biết ai đang rảnh. Lịch chưa chọn thợ được tự giao cho người rảnh và ít việc nhất.",
+      "nav": "Calendar",
+      "title": "Appointment calendar per staff member",
+      "lead": "One column per staff member, so you see at a glance who is free. Bookings without a chosen person go to whoever is free and least busy.",
       "points": [
-        "Xem theo thợ hoặc dạng danh sách",
-        "Mỗi lịch tự lấy đúng thời lượng của dịch vụ",
-        "Trang đặt lịch chỉ hiện giờ còn trống, không trùng lịch"
+        "View by staff member or as a list",
+        "Every booking takes the service's real duration",
+        "The booking page only shows free times, so no double bookings"
       ],
-      "alt": "Lịch hẹn theo từng thợ trong một ngày trên SalonGo"
+      "alt": "A day of appointments per staff member in SalonGo"
     },
     "checkout": {
-      "nav": "Tính tiền và EET",
-      "title": "Tính tiền tại quầy, có EET 2.0",
-      "lead": "Chọn dịch vụ, thợ và cách khách trả là xong hoá đơn. Bật EET một lần, sau đó mỗi hoá đơn tự gửi lên sở thuế.",
+      "nav": "Checkout and EET",
+      "title": "Salon checkout with Czech EET 2.0",
+      "lead": "Pick the service, the staff member and how the client pays, and the receipt is done. Turn on EET once, then every receipt is sent to the tax office by itself.",
       "points": [
-        "Tiền mặt, thẻ hoặc chuyển khoản bằng mã QR có sẵn số tiền",
-        "Tip ghi riêng cho thợ",
-        "In hoá đơn khổ 80 mm, kèm mã FIK",
-        "EET 2.0 bắt buộc từ 1.1.2027, có trong mọi gói"
+        "Cash, card or bank transfer by QR code with the amount filled in",
+        "Tips recorded separately for staff",
+        "80 mm receipts with the FIK code",
+        "EET 2.0 is mandatory from 1 Jan 2027 and included in every plan"
       ],
-      "alt": "Màn tính tiền của SalonGo: dịch vụ, thợ và cách thanh toán",
-      "eetLink": "Hỏi về EET"
+      "alt": "SalonGo checkout: services, staff member and payment method",
+      "eetLink": "All about EET 2.0"
     },
     "thuchi": {
-      "nav": "Thu & Chi",
-      "title": "Sổ thu chi của tiệm",
-      "lead": "Tab Thu tự cộng từ hoá đơn. Tab Chi để ghi tiền hàng, tiền nhà: số tiền, ngày, cách trả và một dòng ghi chú.",
+      "nav": "Income & expenses",
+      "title": "Salon income and expenses",
+      "lead": "The income tab adds up your receipts by itself. The expenses tab records stock, rent and the like: amount, date, payment method and a short note.",
       "points": [
-        "Thu trừ chi hiện ngay, theo từng chi nhánh",
-        "Xuất CSV, Excel hoặc PDF cho kế toán"
+        "Income minus expenses at a glance, per location",
+        "Export to CSV, Excel or PDF for your accountant"
       ],
-      "alt": "Thu & Chi trong SalonGo: khoản thu từ hoá đơn và khoản chi của tiệm"
+      "alt": "Income and expenses in SalonGo: income from receipts and salon expenses"
     },
     "customers": {
-      "nav": "Khách hàng",
-      "title": "Hồ sơ khách hàng và khách quen",
-      "lead": "Mỗi khách có lịch sử dịch vụ, số lần ghé và tổng chi tiêu. Khách quen được nhận ra ngay.",
+      "nav": "Clients",
+      "title": "Client records and regulars",
+      "lead": "Every client has their service history, number of visits and total spend. Regulars are recognised straight away.",
       "points": [
-        "Lọc khách VIP, khách mới, khách lâu chưa quay lại",
-        "Khách VIP tự nhận theo quy tắc bạn đặt",
-        "App báo trước sinh nhật khách 2 ngày"
+        "Filter VIP, new and lapsed clients",
+        "VIP status set automatically by your own rule",
+        "Birthday reminder 2 days ahead"
       ],
-      "alt": "Danh sách khách hàng trong SalonGo với số lần ghé và chi tiêu"
+      "alt": "Client list in SalonGo with visits and spend"
     },
     "marketing": {
       "nav": "Email marketing",
-      "title": "Email ưu đãi cho khách quen",
-      "lead": "Chọn mẫu theo dịp như 8/3, Giáng sinh hay sinh nhật, thêm % giảm giá rồi gửi. Chỉ gửi cho khách đã đồng ý nhận ưu đãi.",
+      "title": "Offer emails for regular clients",
+      "lead": "Pick a template for Women's Day, Christmas or a birthday, add a discount and send. Only clients who agreed to offers receive it.",
       "points": [
-        "10 mẫu viết sẵn 6 ngôn ngữ, sửa được",
-        "Xem trước và gửi thử cho mình",
-        "Email mang tên salon, có link huỷ nhận"
+        "10 templates, written in 6 languages, all editable",
+        "Preview and send a test to yourself",
+        "Sent in your salon's name, with a one-tap unsubscribe link"
       ],
-      "alt": "Mẫu email ưu đãi Ngày Phụ nữ 8/3 trong SalonGo trên điện thoại",
-      "alt2": "Nhắc sinh nhật khách trong SalonGo trên điện thoại"
+      "alt": "Women's Day offer email in SalonGo on a phone",
+      "alt2": "Client birthday reminder in SalonGo on a phone"
     },
     "payroll": {
-      "nav": "Tính lương",
-      "title": "Tính lương thợ tự động",
-      "lead": "Mỗi thợ một cách tính: % doanh thu hoặc lương cố định. Tip theo khách hoặc chia đều, tuỳ bạn chọn.",
+      "nav": "Staff pay",
+      "title": "Automatic staff payroll",
+      "lead": "Each staff member has one pay type: a percentage of revenue or a fixed salary. Tips go to whoever was tipped or are split equally, your choice.",
       "points": [
-        "Đặt % riêng cho từng dịch vụ nếu cần",
-        "Bảng lương theo kỳ: lương, doanh thu, tip, số hoá đơn",
-        "Xuất Excel, CSV hoặc PDF"
+        "A different percentage per service if you need it",
+        "Payroll per period: pay, revenue, tips, number of receipts",
+        "Export to Excel, CSV or PDF"
       ],
-      "alt": "Bảng lương thợ theo kỳ trong SalonGo"
+      "alt": "Staff payroll for a period in SalonGo"
     },
     "staff": {
-      "nav": "Tài khoản thợ",
-      "title": "App cho thợ: lịch và doanh thu của mình",
-      "lead": "Mỗi thợ có tài khoản riêng trên điện thoại, nhận thông báo bằng ngôn ngữ mình chọn. Chủ quyết định thợ xem gì.",
+      "nav": "Staff accounts",
+      "title": "Staff app: their own schedule and revenue",
+      "lead": "Every staff member has their own login on the phone, with notifications in their own language. You decide what they see.",
       "points": [
-        "Mời bằng email, thợ đặt mật khẩu là dùng được",
-        "Chỉ lịch, hoặc lịch và doanh thu của mình",
-        "Thợ không bao giờ thấy doanh thu cả salon"
+        "Invite by email; they set a password and start",
+        "Schedule only, or schedule plus their own revenue",
+        "Staff never see the whole salon's revenue"
       ],
-      "cap1": "Lịch hôm nay của thợ",
-      "cap2": "Chủ chọn thợ được xem gì"
+      "cap1": "A staff member's schedule for today",
+      "cap2": "The owner chooses what staff can see"
     },
     "branches": {
-      "nav": "Nhiều chi nhánh",
-      "title": "Quản lý nhiều chi nhánh trong một tài khoản",
-      "lead": "Mở thêm chi nhánh ngay trong app. Đổi chi nhánh bằng một chạm, xem doanh thu và lịch hẹn của tất cả trên một trang.",
+      "nav": "Multiple locations",
+      "title": "Manage multiple salon locations in one account",
+      "lead": "Add a location right in the app. Switch with one tap and see revenue and bookings for all locations on one page.",
       "points": [
-        "Mỗi chi nhánh có lịch, thợ, dịch vụ và hoá đơn riêng",
-        "Chi nhánh mới được dùng thử {days} ngày",
-        "Mỗi chi nhánh chọn gói và gia hạn riêng"
+        "Each location has its own calendar, staff, services and receipts",
+        "New locations get a {days}-day trial",
+        "Each location has its own plan and renewal"
       ],
-      "alt": "Trang Tất cả salon trong SalonGo: doanh thu và lịch hẹn của từng chi nhánh"
+      "alt": "The All salons page in SalonGo: revenue and bookings per location"
     }
   },
   "more": {
-    "title": "Và những phần còn lại",
+    "title": "And the rest",
     "services": {
-      "title": "Dịch vụ và bảng giá",
-      "text": "Danh mục có màu, thời gian và giá. Bật hoặc tắt từng dịch vụ trên trang đặt lịch."
+      "title": "Services and price list",
+      "text": "Colour-coded categories, durations and prices. Show or hide each service on the booking page."
     },
     "reports": {
-      "title": "Báo cáo doanh thu và hoá đơn",
-      "text": "Doanh thu theo ngày, thợ, dịch vụ và cách thanh toán. Tìm, in lại hoặc xuất hoá đơn ra PDF."
+      "title": "Revenue reports and receipts",
+      "text": "Revenue by day, staff member, service and payment method. Find, reprint or export receipts to PDF."
     },
     "devices": {
-      "title": "iPhone, Android, iPad, Mac, Windows và trình duyệt",
-      "text": "Một tài khoản trên mọi máy, dữ liệu luôn giống nhau. App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp."
+      "title": "iPhone, Android, iPad, Mac, Windows and browser",
+      "text": "One account on every device, always the same data. The app speaks 6 languages: Vietnamese, Czech, Slovak, English, German, French."
     },
     "desk": {
-      "title": "Gói Bàn cho thợ thuê bàn",
-      "text": "Có IČO riêng? Tính tiền, hoá đơn và EET đứng tên bạn, {priceDesk} Kč/tháng.",
-      "link": "Xem gói Bàn"
+      "title": "Chair plan for renters",
+      "text": "Your own IČO? Checkout, receipts and EET in your name for {priceDesk} CZK a month.",
+      "link": "See the Chair plan"
     }
   },
   "closing": {
-    "title": "Dùng thử {days} ngày, đủ mọi tính năng",
-    "lead": "Không cần thẻ. Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh.",
-    "cta": "Dùng thử miễn phí",
-    "link": "Xem bảng giá"
+    "title": "Try every feature free for {days} days",
+    "lead": "No card needed. Every plan has every feature; they differ only by staff and locations.",
+    "cta": "Start free trial",
+    "link": "See pricing"
   }
 }

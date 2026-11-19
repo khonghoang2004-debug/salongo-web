@@ -1760,7 +1760,7 @@
   },
   "features2": {
     "crumb": "Tính năng",
-    "h1": "Tính năng app quản lý tiệm nail và salon",
+    "h1": "Tính năng SalonGo: đặt lịch, tính tiền, EET 2.0, tính lương",
     "lead": "Đặt lịch, tính tiền có EET, thu chi, khách hàng và lương thợ trong một app. Dùng trên điện thoại, iPad và máy tính.",
     "cta": "Dùng thử {days} ngày miễn phí",
     "pricing": "Xem bảng giá",
@@ -1800,7 +1800,7 @@
           "EET 2.0 bắt buộc từ 1.1.2027, có trong mọi gói"
         ],
         "alt": "Màn tính tiền của SalonGo: dịch vụ, thợ và cách thanh toán",
-        "eetLink": "Hỏi về EET"
+        "eetLink": "Tìm hiểu EET 2.0"
       },
       "thuchi": {
         "nav": "Thu & Chi",
@@ -1968,8 +1968,8 @@
           "Tải chứng chỉ từ cổng DIS+, nhập mật khẩu và mã chỗ bán trong app. Từ đó mỗi hoá đơn tự gửi EET và in kèm mã FIK. EET có trong mọi gói, kể cả gói Bàn, không tính thêm tiền."
         ],
         "link": {
-          "href": "/faq",
-          "label": "Hỏi về EET"
+          "href": "/eet-2-0",
+          "label": "Tìm hiểu EET 2.0"
         }
       },
       {
@@ -2080,7 +2080,7 @@
   },
   "solutions2": {
     "crumb": "Giải pháp theo loại tiệm",
-    "h1": "Phần mềm cho tiệm nail, salon tóc, mi và spa",
+    "h1": "Giải pháp cho từng loại tiệm: nail, tóc, mi, spa",
     "lead": "Mỗi kiểu tiệm có cách làm riêng. Đây là phần SalonGo làm cho từng kiểu, kể cả khi bạn chỉ thuê một bàn.",
     "cta": "Dùng thử {days} ngày miễn phí",
     "features": "Xem tính năng",

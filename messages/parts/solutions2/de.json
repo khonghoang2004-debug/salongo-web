@@ -1,84 +1,132 @@
 {
-  "crumb": "Giải pháp theo loại tiệm",
-  "h1": "Phần mềm cho tiệm nail, salon tóc, mi và spa",
-  "lead": "Mỗi kiểu tiệm có cách làm riêng. Đây là phần SalonGo làm cho từng kiểu, kể cả khi bạn chỉ thuê một bàn.",
-  "cta": "Dùng thử {days} ngày miễn phí",
-  "features": "Xem tính năng",
-  "indexLabel": "Chọn kiểu tiệm",
-  "problem": "Chuyện quen thuộc",
-  "answer": "SalonGo làm gì",
+  "crumb": "Lösungen nach Salontyp",
+  "h1": "Lösungen für jeden Salontyp: Nägel, Friseur, Wimpern, Spa",
+  "lead": "Jeder Salon arbeitet anders. Das macht SalonGo für jeden Typ, auch wenn Sie nur einen Stuhl mieten.",
+  "cta": "{days} Tage kostenlos testen",
+  "features": "Funktionen ansehen",
+  "indexLabel": "Salontyp wählen",
+  "problem": "Das Alltagsproblem",
+  "answer": "Was SalonGo macht",
   "types": {
     "nail": {
-      "nav": "Tiệm nail",
-      "title": "Phần mềm quản lý tiệm nail",
-      "lead": "Nhiều thợ, nhiều dịch vụ ngắn, nhiều tip. SalonGo giữ lịch từng thợ và tự tính lương cuối tháng.",
+      "nav": "Nagelstudio",
+      "title": "Software für Nagelstudios",
+      "lead": "Viele Mitarbeiterinnen, kurze Leistungen, viel Trinkgeld. SalonGo führt den Kalender jeder Mitarbeiterin und rechnet am Monatsende die Löhne ab.",
       "pairs": [
-        { "problem": "Khách nhắn tin hỏi giờ cả ngày", "answer": "Link đặt lịch riêng, khách tự chọn giờ còn trống" },
-        { "problem": "Lương % và tip tính tay cuối tháng", "answer": "Lương theo % hoặc cố định, tip theo khách hoặc chia đều" },
-        { "problem": "EET 2.0 bắt buộc từ 1.1.2027", "answer": "Hoá đơn tự gửi EET khi tính tiền, không cần mua thêm máy" }
+        {
+          "problem": "Kunden schreiben den ganzen Tag wegen Terminen",
+          "answer": "Eigener Buchungslink, Kunden wählen freie Zeiten selbst"
+        },
+        {
+          "problem": "Provision und Trinkgeld von Hand gerechnet",
+          "answer": "Lohn als Prozent oder fest, Trinkgeld pro Kunde oder gleich geteilt"
+        },
+        {
+          "problem": "EET 2.0 ab 1. 1. 2027 Pflicht",
+          "answer": "Belege gehen beim Kassieren an EET, keine extra Registrierkasse"
+        }
       ],
-      "link": "Xem tính lương",
-      "alt": "Bảng lương thợ nail theo % doanh thu và tip trong SalonGo"
+      "link": "Zur Lohnabrechnung",
+      "alt": "Löhne im Nagelstudio als Prozent vom Umsatz und Trinkgeld in SalonGo"
     },
     "hair": {
-      "nav": "Salon tóc",
-      "title": "Phần mềm đặt lịch cho salon tóc",
-      "lead": "Cắt, nhuộm, uốn: mỗi dịch vụ một thời lượng. Lịch tự lấy đúng thời gian nên không chồng giờ.",
+      "nav": "Friseursalon",
+      "title": "Terminbuchung für Friseursalons",
+      "lead": "Schnitt, Farbe, Dauerwelle: jede Leistung dauert anders. Der Kalender rechnet mit der echten Dauer, nichts überschneidet sich.",
       "pairs": [
-        { "problem": "Dịch vụ dài ngắn khác nhau", "answer": "Mỗi dịch vụ có thời lượng và giá riêng, lịch tự xếp đúng" },
-        { "problem": "Khách quen muốn đúng thợ", "answer": "Khách chọn thợ khi đặt, hoặc để app giao cho người rảnh" },
-        { "problem": "Khách đặt rồi quên", "answer": "Email xác nhận và email nhắc 1 giờ trước giờ hẹn" }
+        {
+          "problem": "Leistungen mit sehr unterschiedlicher Dauer",
+          "answer": "Jede Leistung hat eigene Dauer und Preis, der Kalender plant sie richtig ein"
+        },
+        {
+          "problem": "Stammkunden wollen ihre Friseurin",
+          "answer": "Kunden wählen beim Buchen, oder die App teilt der freien Person zu"
+        },
+        {
+          "problem": "Gebucht und vergessen",
+          "answer": "Bestätigungs-E-Mail und Erinnerung 1 Stunde vorher"
+        }
       ],
-      "link": "Xem lịch hẹn",
-      "alt": "Lịch hẹn theo từng thợ của salon tóc trong SalonGo"
+      "link": "Zum Terminkalender",
+      "alt": "Kalender eines Friseursalons pro Mitarbeiterin in SalonGo"
     },
     "beauty": {
-      "nav": "Mi, spa, thẩm mỹ",
-      "title": "Phần mềm cho tiệm mi, spa và thẩm mỹ",
-      "lead": "Khách quay lại theo chu kỳ. Hồ sơ khách và email ưu đãi giúp họ quay lại đúng lúc.",
+      "nav": "Wimpern, Spa, Kosmetik",
+      "title": "Software für Wimpern-, Kosmetik- und Spa-Salons",
+      "lead": "Kunden kommen in Abständen wieder. Kundenkartei und Angebots-E-Mails holen sie zur richtigen Zeit zurück.",
       "pairs": [
-        { "problem": "Không nhớ lần trước khách làm gì", "answer": "Hồ sơ khách: lịch sử dịch vụ, số lần ghé, chi tiêu" },
-        { "problem": "Khách lâu không quay lại", "answer": "Lọc khách lâu chưa quay lại, gửi email ưu đãi" },
-        { "problem": "Quên sinh nhật khách", "answer": "App báo trước 2 ngày để bạn gửi lời chúc kèm ưu đãi" }
+        {
+          "problem": "Nicht mehr wissen, was die Kundin zuletzt hatte",
+          "answer": "Kundenkartei: Leistungen, Besuche, Umsatz"
+        },
+        {
+          "problem": "Kunden, die nicht mehr kommen",
+          "answer": "Lange nicht gesehene Kunden filtern und ein Angebot mailen"
+        },
+        {
+          "problem": "Vergessene Geburtstage",
+          "answer": "Die App erinnert 2 Tage vorher, damit Sie Glückwünsche mit Angebot senden"
+        }
       ],
-      "link": "Xem khách hàng",
-      "alt": "Danh sách khách hàng của tiệm mi và spa trong SalonGo"
+      "link": "Zu den Kunden",
+      "alt": "Kundenliste eines Wimpern- und Spa-Salons in SalonGo"
     },
     "chain": {
-      "nav": "Nhiều chi nhánh",
-      "title": "Quản lý chuỗi salon nhiều chi nhánh",
-      "lead": "Một tài khoản cho mọi tiệm. Chủ xem doanh thu và lịch hẹn của tất cả chi nhánh trên một trang.",
+      "nav": "Mehrere Filialen",
+      "title": "Software für Salonketten mit mehreren Filialen",
+      "lead": "Ein Konto für alle Salons. Der Inhaber sieht Umsatz und Termine aller Filialen auf einer Seite.",
       "pairs": [
-        { "problem": "Phải gọi từng tiệm hỏi doanh thu", "answer": "Trang Tất cả salon: doanh thu, lịch hẹn, lịch chờ duyệt" },
-        { "problem": "Không có mặt ở tiệm", "answer": "Xem trên điện thoại mọi lúc, thợ có tài khoản riêng" },
-        { "problem": "Mỗi tiệm một quy mô", "answer": "Mỗi chi nhánh chọn gói theo số thợ và gia hạn riêng" }
+        {
+          "problem": "Jede Filiale wegen Umsatz anrufen",
+          "answer": "Seite Alle Salons: Umsatz, Termine, offene Online-Buchungen"
+        },
+        {
+          "problem": "Nicht im Salon sein",
+          "answer": "Jederzeit am Handy nachsehen, Mitarbeiter mit eigenem Login"
+        },
+        {
+          "problem": "Jede Filiale ist anders groß",
+          "answer": "Jede Filiale wählt ihren Tarif nach Teamgröße und verlängert separat"
+        }
       ],
-      "link": "Xem đa chi nhánh",
-      "alt": "Trang Tất cả salon: doanh thu của từng chi nhánh trong SalonGo"
+      "link": "Zu mehreren Filialen",
+      "alt": "Seite Alle Salons: Umsatz je Filiale in SalonGo"
     }
   },
   "desk": {
-    "nav": "Thuê bàn, IČO riêng",
-    "title": "Phần mềm tính tiền cho thợ thuê bàn có IČO",
-    "lead": "Gói Bàn chỉ có tính tiền, hoá đơn, thu chi và EET đứng tên bạn. Chủ tiệm không xem được doanh thu của bạn.",
-    "price": "{priceDesk} Kč/tháng",
-    "note": "Không có lịch hẹn và tính lương. Cần thì đổi sang Basic bất cứ lúc nào.",
-    "cta": "Xem gói Bàn",
-    "alt": "Màn tính tiền của gói Bàn trên điện thoại"
+    "nav": "Stuhlmieter, eigene IČO",
+    "title": "Kassensoftware für Stuhlmieter mit eigener IČO",
+    "lead": "Der Tarif Stuhl hat nur Kasse, Belege, Einnahmen und Ausgaben und EET auf Ihren Namen. Der Salonbesitzer sieht Ihren Umsatz nicht.",
+    "price": "{priceDesk} CZK im Monat",
+    "note": "Ohne Termine und Lohnabrechnung. Wechsel zu Basic jederzeit möglich.",
+    "cta": "Zum Tarif Stuhl",
+    "alt": "Kasse im Tarif Stuhl auf dem Handy"
   },
   "faq": {
-    "title": "Hỏi nhanh",
+    "title": "Kurz gefragt",
     "items": [
-      { "q": "Tiệm nhỏ có dùng được SalonGo không?", "a": "Có. Gói Basic cho {staffBasic} thợ và 1 chi nhánh, đủ mọi tính năng. Tiệm đông thợ hơn thì đổi gói bất cứ lúc nào." },
-      { "q": "Gói nào cũng có đủ tính năng không?", "a": "Có. Basic, Pro và Premium có cùng tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh." },
-      { "q": "Khách đặt lịch bằng tiếng gì?", "a": "Trang đặt lịch có tiếng Séc, Slovakia, Đức, Anh và Pháp. Bạn và thợ dùng app bằng tiếng Việt." },
-      { "q": "Thợ thuê bàn trong tiệm cần gói nào?", "a": "Thợ có IČO riêng dùng gói Bàn, {priceDesk} Kč/tháng, với EET bằng chứng chỉ của mình. Thợ là nhân viên của tiệm thì không cần: chủ tiệm thêm thợ vào tài khoản của tiệm." }
+      {
+        "q": "Passt SalonGo auch für einen kleinen Salon?",
+        "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Funktionen. Wächst das Team, wechseln Sie jederzeit den Tarif."
+      },
+      {
+        "q": "Hat jeder Tarif alle Funktionen?",
+        "a": "Ja. Basic, Pro und Premium haben dieselben Funktionen und unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen."
+      },
+      {
+        "q": "In welchen Sprachen buchen Kunden?",
+        "a": "Die Buchungsseite gibt es auf Tschechisch, Slowakisch, Deutsch, Englisch und Französisch. Sie und Ihr Team nutzen die App auf Wunsch auf Vietnamesisch."
+      },
+      {
+        "q": "Welchen Tarif braucht ein Stuhlmieter?",
+        "a": "Mieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat, mit EET über das eigene Zertifikat. Angestellte des Salons brauchen ihn nicht: der Inhaber fügt sie dem Salonkonto hinzu."
+      }
     ]
   },
   "closing": {
-    "title": "Dùng thử {days} ngày, rồi chọn gói vừa tiệm",
-    "lead": "Không cần thẻ. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
-    "cta": "Dùng thử miễn phí",
-    "link": "Xem bảng giá"
+    "title": "{days} Tage testen, dann den passenden Tarif wählen",
+    "lead": "Ohne Kreditkarte. Support auf Vietnamesisch und Tschechisch.",
+    "cta": "Kostenlos testen",
+    "link": "Preise ansehen"
   }
 }

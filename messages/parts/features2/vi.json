@@ -1,6 +1,6 @@
 {
   "crumb": "Tính năng",
-  "h1": "Tính năng app quản lý tiệm nail và salon",
+  "h1": "Tính năng SalonGo: đặt lịch, tính tiền, EET 2.0, tính lương",
   "lead": "Đặt lịch, tính tiền có EET, thu chi, khách hàng và lương thợ trong một app. Dùng trên điện thoại, iPad và máy tính.",
   "cta": "Dùng thử {days} ngày miễn phí",
   "pricing": "Xem bảng giá",
@@ -40,7 +40,7 @@
         "EET 2.0 bắt buộc từ 1.1.2027, có trong mọi gói"
       ],
       "alt": "Màn tính tiền của SalonGo: dịch vụ, thợ và cách thanh toán",
-      "eetLink": "Hỏi về EET"
+      "eetLink": "Tìm hiểu EET 2.0"
     },
     "thuchi": {
       "nav": "Thu & Chi",

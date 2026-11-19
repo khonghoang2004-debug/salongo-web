@@ -12,7 +12,6 @@ const fmt = (n: number) => new Intl.NumberFormat("cs-CZ", { maximumFractionDigit
  */
 export async function PricingAudiencePicker() {
   const t = await getTranslations("pricingPage");
-  const tDesk = await getTranslations("desk");
   const { plans, desk } = await getPlans();
   const from = plans.length ? Math.min(...plans.map((p) => p.monthly)) : null;
 
@@ -30,7 +29,7 @@ export async function PricingAudiencePicker() {
     {
       href: "#goi-ban",
       icon: Armchair,
-      tag: tDesk("name"),
+      tag: t("pickDeskTag"),
       title: t("pickDesk"),
       desc: t("pickDeskDesc"),
       price: t("pickPrice", { price: fmt(desk.monthly) }),
@@ -78,9 +77,9 @@ export async function PricingAudiencePicker() {
                 </div>
                 <h3 className="mt-5 text-[1.2rem] font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[1.35rem]">{title}</h3>
                 <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted">{desc}</p>
-                <div className="mt-5 flex flex-wrap items-end justify-between gap-3 border-t border-line pt-4">
+                <div className="mt-5 flex items-center justify-between gap-3 border-t border-line pt-4">
                   {price && <span className="text-[15px] font-semibold tabular-nums text-ink">{price}</span>}
-                  <span className="inline-flex min-h-11 items-center gap-1.5 text-[15px] font-semibold text-brand-700">
+                  <span className="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-[15px] font-semibold text-brand-700">
                     {cta}
                     <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
                   </span>

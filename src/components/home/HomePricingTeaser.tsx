@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { renewLink } from "@/lib/app-links";
 import { DownloadCard } from "../DownloadSection";
 import { PLAN_KEYS } from "../Pricing";
@@ -42,6 +42,13 @@ export async function HomePricingTeaser() {
               </div>
             ))}
           </dl>
+          <Link
+            href="/goi-ban"
+            className="sg-arrow mt-4 inline-flex min-h-11 items-center gap-1.5 text-[14px] font-semibold text-white/90 underline-offset-4 hover:text-white hover:underline focus-visible:!outline-white"
+          >
+            {h("deskLine")}
+            <ArrowRight className="size-4 shrink-0" aria-hidden />
+          </Link>
 
           <ul className="mt-6 grid gap-2.5 sm:grid-cols-3 sm:gap-4">
             {(["price1", "price2", "price3"] as const).map((k) => (

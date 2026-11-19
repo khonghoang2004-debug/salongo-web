@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --brand:#800020; --brand-50:#F8EEF1; --ink:#22161A; --muted:#6B5F62; --nude:#F7F1EF; --line:#E6E1E0; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:100%; height:100%; overflow:hidden; background:var(--nude); font-family:"Inter", system-ui, sans-serif; color:var(--ink); }
+  .stage { position:relative; width:100vw; height:100vh; }
+  .top { position:absolute; left:5vw; top:4vh; display:flex; align-items:center; gap:1.2vmin; font-weight:700; font-size:2.6vmin; z-index:5; }
+  .top .dot { width:3.2vmin; height:3.2vmin; border-radius:1vmin; background:var(--brand); color:#fff; display:flex; align-items:center; justify-content:center; font-size:2vmin; }
+  .top small { font-weight:500; color:var(--muted); margin-left:1.5vmin; }
+  .scene { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; animation-fill-mode:both; animation-timing-function:ease; }
+  .inner { display:flex; gap:6vw; align-items:center; justify-content:center; width:90vw; }
+  .portrait .inner { flex-direction:column; gap:3vh; text-align:center; }
+  .text { max-width:46vw; }
+  .portrait .text { max-width:86vw; }
+  .kicker { display:inline-block; background:var(--brand); color:#fff; font-weight:700; letter-spacing:.04em; text-transform:uppercase; font-size:2vmin; padding:.8vmin 1.8vmin; border-radius:99px; }
+  h1 { font-size:7.2vmin; line-height:1.08; letter-spacing:-.02em; font-weight:800; margin-top:2.4vmin; }
+  h1 em { font-style:normal; color:var(--brand); }
+  p.lead { font-size:3.2vmin; line-height:1.4; color:var(--muted); margin-top:2vmin; }
+  .phone { width:auto; height:62vh; aspect-ratio:780/1688; border-radius:4.5vmin; border:1.2vmin solid #1d1416; background:#fff; overflow:hidden; box-shadow:0 4vmin 8vmin rgba(60,0,15,.22); }
+  .portrait .phone { height:44vh; }
+  .portrait .inner { margin-top:-6vh; }
+  .portrait .sub { font-size:3.2vmin; bottom:3vh; }
+  .portrait h1 { font-size:8vmin; }
+  .phone img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+  .sub { position:absolute; left:50%; bottom:5vh; transform:translateX(-50%); background:rgba(34,22,26,.86); color:#fff; font-size:2.7vmin; font-weight:500; padding:1.2vmin 2.4vmin; border-radius:1.4vmin; max-width:88vw; text-align:center; line-height:1.35; z-index:6; opacity:0; animation-fill-mode:both; }
+  .price { font-size:16vmin; font-weight:800; color:var(--brand); letter-spacing:-.04em; line-height:1; }
+  .price span { font-size:4vmin; color:var(--muted); font-weight:600; letter-spacing:0; margin-left:1vmin; }
+  ul.chips { list-style:none; display:flex; flex-wrap:wrap; gap:1.4vmin; margin-top:3vmin; }
+  .portrait ul.chips { justify-content:center; }
+  ul.chips li { background:#fff; border:.25vmin solid var(--line); border-radius:99px; padding:1.2vmin 2.2vmin; font-size:2.8vmin; font-weight:600; }
+  ul.chips li.no { color:var(--muted); text-decoration:line-through; background:transparent; }
+  .steps { display:grid; gap:2vmin; margin-top:3vmin; }
+  .step { display:flex; gap:2vmin; align-items:center; background:#fff; border-radius:2.4vmin; padding:2.2vmin 2.6vmin; text-align:left; font-size:3vmin; font-weight:600; }
+  .step b { width:5.4vmin; height:5.4vmin; flex:none; border-radius:50%; background:var(--brand-50); color:var(--brand); display:flex; align-items:center; justify-content:center; font-size:2.8vmin; }
+  .lock { margin-top:3vmin; display:inline-flex; gap:1.4vmin; align-items:center; background:var(--brand-50); color:var(--brand); font-weight:700; padding:1.6vmin 2.6vmin; border-radius:2vmin; font-size:3vmin; }
+  .end { z-index:7; background:var(--brand); color:#fff; flex-direction:column; text-align:center; }
+  .end h1 { color:#fff; font-size:8vmin; }
+  .end p { font-size:3.4vmin; opacity:.85; margin-top:2vmin; }
+  .end .url { margin-top:4vmin; background:#fff; color:var(--brand); font-weight:800; font-size:4vmin; padding:1.8vmin 4vmin; border-radius:99px; }
+  @keyframes show { 0% { opacity:0; transform:translateY(2.5vmin) scale(.985); } 6% { opacity:1; transform:none; } 94% { opacity:1; transform:none; } 100% { opacity:0; transform:translateY(-1.5vmin); } }
+  @keyframes showLast { 0% { opacity:0; transform:scale(.98); } 8% { opacity:1; transform:none; } 100% { opacity:1; } }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="top"><span class="dot">✦</span>SalonGo<small>Gói Bàn · Tarif Křeslo</small></div>
+  <!-- scenes inserted by script with timings -->
+</div>
+<script>
+const SCENES = [
+  { d: 4.2, html: `<div class="inner"><div class="text"><span class="kicker">Mới · Gói Bàn</span><h1>Thuê bàn trong salon<br><em>và có IČO riêng?</em></h1><p class="lead">Bạn không cần cả bộ quản lý salon.</p></div></div>`, sub: "Pronajímáte si místo v salonu a máte vlastní IČO?" },
+  { d: 5, html: `<div class="inner"><div class="text"><div class="price">149<span>Kč / tháng</span></div><ul class="chips"><li>Tính tiền</li><li>Hoá đơn</li><li>Doanh thu</li><li>EET 2.0</li><li class="no">Lịch hẹn</li></ul></div></div>`, sub: "Jen pokladna, účtenky, tržby a EET. Za 149 Kč měsíčně." },
+  { d: 5, img: "m-tinh-tien", k: "Bước 1", t: "Tính tiền <em>vài giây</em>", l: "Tiền mặt, thẻ, chuyển khoản QR, tip.", sub: "Markování za pár vteřin: hotově, kartou i přes QR." },
+  { d: 5, img: "m-hoa-don", k: "Bước 2", t: "Hoá đơn <em>của riêng bạn</em>", l: "Tên, IČO và số thứ tự của bạn. In hoặc gửi PDF.", sub: "Účtenky s vaším jménem, IČO a vlastní číselnou řadou." },
+  { d: 5, img: "m-doanh-thu", k: "Bước 3", t: "Doanh thu <em>là của bạn</em>", l: "Chủ salon không xem được. Xuất file cho kế toán.", lock: "🔒 Chỉ bạn xem được", sub: "Tržby vidíte jen vy. Export pro účetní." },
+  { d: 5.4, html: `<div class="inner"><div class="text"><span class="kicker">EET 2.0 · từ 1.1.2027</span><h1>EET bằng <em>chứng chỉ của bạn</em></h1><div class="steps"><div class="step"><b>1</b>Tải chứng chỉ từ DIS+</div><div class="step"><b>2</b>Nhập mật khẩu và mã chỗ bán</div><div class="step"><b>✓</b>Mỗi lần tính tiền, app tự gửi</div></div></div></div>`, sub: "EET 2.0 s vaším certifikátem. Nastavení ve 2 krocích." },
+  { d: 4.4, last: true, cls: "end", html: `<h1>Gói Bàn · 149 Kč</h1><p>Tính tiền, hoá đơn, doanh thu và EET. Không thừa gì.</p><div class="url">salongo.eu/goi-ban</div>`, sub: "" },
+];
+const stage = document.getElementById("stage");
+if (innerHeight > innerWidth) document.body.classList.add("portrait");
+let t = 0.3;
+for (const s of SCENES) {
+  const el = document.createElement("div");
+  el.className = "scene " + (s.cls || "");
+  el.innerHTML = s.html || `<div class="inner"><div class="phone"><img src="../../../home/user/salongo-web/public/images/app/${s.img}.webp"></div><div class="text"><span class="kicker">${s.k}</span><h1>${s.t}</h1><p class="lead">${s.l}</p>${s.lock ? `<div class="lock">${s.lock}</div>` : ""}</div></div>`;
+  el.style.animation = `${s.last ? "showLast" : "show"} ${s.d}s ${t}s both`;
+  el.style.animationDelay = t + "s";
+  stage.appendChild(el);
+  if (s.sub) {
+    const sub = document.createElement("div");
+    sub.className = "sub"; sub.textContent = s.sub;
+    sub.style.animation = `show ${s.d}s ${t}s both`;
+    stage.appendChild(sub);
+  }
+  t += s.d;
+}
+window.TOTAL = t + 0.6;
+</script>
+</body>
+</html>

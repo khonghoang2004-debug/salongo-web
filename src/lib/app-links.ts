@@ -18,7 +18,7 @@ export type BillingCycle = "month" | "year";
 export const RENEW_URL = `${APP_URL}/renew`;
 
 /** Link Gia hạn / Mua gói theo ngôn ngữ web; trên thẻ gói thêm plan + cycle (tháng/năm) đang chọn. */
-export function renewLink(locale: string, plan?: PlanCode, cycle?: BillingCycle): string {
+export function renewLink(locale: string, plan?: PlanCode | "DESK", cycle?: BillingCycle): string {
   const u = new URL(RENEW_URL);
   u.searchParams.set("lang", locale);
   if (plan) u.searchParams.set("plan", plan);
@@ -38,6 +38,17 @@ export const DOWNLOAD_LINKS = {
  */
 export function appLink(url: string, locale: string): string {
   const u = new URL(url);
+  u.searchParams.set("lang", locale);
+  return u.toString();
+}
+
+/**
+ * "Tạo tài khoản Bàn": đăng ký với ?plan=DESK để app mở thẳng luồng gói Bàn (người thuê bàn có IČO riêng).
+ * App chưa đọc plan thì vẫn ra màn đăng ký bình thường.
+ */
+export function deskSignupLink(locale: string): string {
+  const u = new URL(SIGNUP_URL);
+  u.searchParams.set("plan", "DESK");
   u.searchParams.set("lang", locale);
   return u.toString();
 }

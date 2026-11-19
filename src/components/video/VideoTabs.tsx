@@ -57,7 +57,7 @@ export function VideoTabs({ items, playLabel, note, moreLabel }: { items: VideoT
           const on = i === active;
           const v = VIDEOS.find((x) => x.id === it.id)!;
           return (
-            <li key={it.id}>
+            <li key={it.id} role="presentation">
               <button
                 type="button"
                 role="tab"

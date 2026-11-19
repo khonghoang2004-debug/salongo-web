@@ -19,6 +19,7 @@ const footerNavItems = [
   { href: "/tinh-nang", labelKey: "features" as const },
   { href: "/giai-phap", labelKey: "solutions" as const },
   { href: "/bang-gia", labelKey: "pricing" as const },
+  { href: "/goi-ban", labelKey: "desk" as const },
   { href: "/faq", labelKey: "faq" as const },
   { href: "/lien-he", labelKey: "contact" as const },
   { href: "/phan-mem-quan-ly-salon", labelKey: "guide" as const },

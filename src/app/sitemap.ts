@@ -10,6 +10,7 @@ export const SITEMAP_PATHS = [
   "/phan-mem-quan-ly-salon",
   "/giai-phap",
   "/bang-gia",
+  "/goi-ban",
   "/ve-salongo",
   "/faq",
   "/lien-he",

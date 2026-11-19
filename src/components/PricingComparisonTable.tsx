@@ -7,6 +7,7 @@ const ROW_KEYS = [
   "compareRow1",
   "compareRow2",
   "compareRow4",
+  "compareRowEet",
   "compareRow3",
   "compareRowMarketing",
   "compareRow5",

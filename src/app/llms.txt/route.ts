@@ -1,4 +1,4 @@
-import { getPlans, type SitePlan } from "@/lib/plans";
+import { getPlans, type DeskPlan, type SitePlan } from "@/lib/plans";
 
 // llms.txt (https://llmstxt.org): tóm tắt cho trợ lý AI. Giá và giới hạn gói lấy từ app như trang Bảng giá,
 // nên không còn lệch với giá đang bán (trước đây là file tĩnh trong public/).
@@ -14,6 +14,7 @@ Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://ap
 - Online booking page for each salon (client picks service, staff and a free time; the salon confirms in the app).
 - Appointment calendar per staff member and as a list, on computer and phone; auto-assign (on by default) gives unassigned bookings to the free staff member with the least work that day; email confirmations and a reminder to clients 1 h before.
 - Checkout (POS): cash, card, bank transfer with a payment QR code (QR Platba / EPC), tips recorded on the invoice; receipts for 80 mm printers; invoices exported to PDF.
+- Czech EET 2.0 (mandatory from 1 January 2027): set up in 2 steps (upload the DIS+ certificate, enter its password and the sales unit ID); every payment is then reported automatically. Included in every plan at no extra cost.
 - Clients: profiles, visit history, VIP / new / lapsed filters, VIP rules, membership/points program, birthdays.
 - Email marketing: 10 occasion templates (sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday), sent only to clients who agreed, with one-click unsubscribe; birthday reminders for the owner 2 days ahead, to send a birthday offer.
 - Reports: overview, revenue by staff/service/payment method, invoices.
@@ -26,6 +27,7 @@ Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://ap
 const PAGES = `- [Home (Vietnamese)](https://www.salongo.eu/vi)
 - [Features](https://www.salongo.eu/en/tinh-nang)
 - [Pricing](https://www.salongo.eu/en/bang-gia)
+- [Chair / desk renter plan](https://www.salongo.eu/en/goi-ban)
 - [FAQ](https://www.salongo.eu/en/faq)
 - [Contact](https://www.salongo.eu/en/lien-he)
 - [Facebook page](https://www.facebook.com/people/SalonGo/61583765805698/)
@@ -41,6 +43,10 @@ const limits = (p: SitePlan) => {
 
 const NAMES = { BASIC: "Basic", PRO: "Pro", PREMIUM: "Premium" } as const;
 
+// Gói Bàn (DESK): cho người thuê bàn / ghế có IČO riêng; "planned" khi app chưa bán
+const desk = (p: DeskPlan) =>
+  `- Chair / desk renter plan ("Bàn", code DESK) ${p.monthly}${p.yearly ? `; yearly ${p.yearly} CZK` : ""}${p.live ? "" : " (planned, not on sale yet)"}: for people who rent a chair or desk in a salon and work on their own IČO. Only checkout, receipts, revenue and Czech EET 2.0 with their own certificate; no appointments, staff or payroll. The salon owner cannot see the renter's revenue. Details: https://www.salongo.eu/en/goi-ban`;
+
 export async function GET() {
   const plans = await getPlans();
   const lines = plans.plans.map((p) => {
@@ -53,6 +59,7 @@ export async function GET() {
     "## Pricing (CZK per month, live from the app)",
     ...lines,
     `- ${discount ? `Paying yearly saves up to ${discount}%. ` : ""}New salons get a ${plans.trialDays}-day free trial, no card needed. Plans are renewed in the app (Plan screen).`,
+    desk(plans.desk),
   ].join("\n");
   const body = `${HEAD}${pricing}\n\n## Pages\n${PAGES}`;
   return new Response(body, {

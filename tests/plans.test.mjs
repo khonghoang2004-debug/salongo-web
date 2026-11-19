@@ -122,3 +122,28 @@ test("giới hạn Premium thành chữ theo số liệu app (không ghi 'không
   assert.equal(planTokens(limited, "de").premiumLimits, "unbegrenzt Mitarbeiter, bis zu 10 Filialen");
   assert.equal(fillPlanText("{premiumLimitsCap} cho salon lớn.", planTokens(limited, "vi")), "Không giới hạn thợ, tối đa 10 chi nhánh cho salon lớn.");
 });
+
+test("gói Bàn (DESK): tách khỏi các gói salon, live khi app trả về", () => {
+  const desk = { code: "DESK", name: "Bàn", isPopular: false, monthlyPriceCents: 14900, yearlyPriceCents: 160920, yearlyDiscountPct: 10, maxStaff: 1, maxLocations: 1 };
+  const r = mapPlansResponse({ ...ok, plans: [desk, ...ok.plans] });
+  assert.deepEqual(r.plans.map((p) => p.code), ["BASIC", "PRO", "PREMIUM"]);
+  assert.deepEqual(r.desk, { monthly: 149, listMonthly: null, monthlyDiscountPct: null, yearly: 1609.2, yearlyDiscountPct: 10, live: true });
+  // "giá từ …" của salon không đổi vì gói Bàn
+  assert.equal(priceRange(r).low, 199);
+  assert.equal(planTokens(r, "cs").priceDesk, "149");
+  assert.equal(fillPlanText("Bàn {priceDesk} Kč", planTokens(r, "vi")), "Bàn 149 Kč");
+});
+
+test("gói Bàn: app chưa có / dữ liệu sai → giá dự kiến, live=false, không làm hỏng bảng giá", () => {
+  const none = mapPlansResponse(ok);
+  assert.equal(none.desk.live, false);
+  assert.equal(none.desk.monthly, 149);
+  const bad = mapPlansResponse({ ...ok, plans: [...ok.plans, { code: "DESK", monthlyPriceCents: "149" }] });
+  assert.equal(bad.plans.length, 3);
+  assert.equal(bad.desk.live, false);
+  assert.equal(FALLBACK_PLANS.desk.live, false);
+  // Chỉ có gói Bàn mà không có gói salon nào → sai hợp đồng
+  assert.equal(mapPlansResponse({ ...ok, plans: [{ code: "DESK", monthlyPriceCents: 14900 }] }), null);
+  // Mã chữ thường vẫn nhận
+  assert.equal(mapPlansResponse({ ...ok, plans: [...ok.plans, { code: "desk", monthlyPriceCents: 19900 }] }).desk.monthly, 199);
+});

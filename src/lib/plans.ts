@@ -2,7 +2,7 @@ import { PHASE_PRODUCTION_BUILD } from "next/constants";
 import { APP_URL } from "./app-links";
 import { loadPlans, type PlansLoaderState, type SitePlans } from "./plans-core";
 
-export { FALLBACK_PLANS, priceRange, maxYearlyDiscount, type SitePlan, type SitePlans } from "./plans-core";
+export { FALLBACK_PLANS, FALLBACK_DESK, priceRange, maxYearlyDiscount, type DeskPlan, type SitePlan, type SitePlans } from "./plans-core";
 
 // PLANS_API_URL chỉ để thử với API giả ở máy local; mặc định là API thật của app
 const PLANS_API = process.env.PLANS_API_URL || `${APP_URL}/api/public/plans?currency=CZK`;

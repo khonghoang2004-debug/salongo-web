@@ -84,8 +84,8 @@ export function FeatureTabs({ items, moreLabel, listLabel }: { items: FeatureTab
         {items.map((it, i) => {
           const on = i === active;
           return (
-            <li key={it.id} className="relative border-b border-line">
-              <button type="button" role="tab" aria-selected={on} onClick={() => pick(i)} className="group grid w-full grid-cols-[7.75rem_1fr] items-baseline gap-4 py-4 text-left">
+            <li key={it.id} role="presentation" className="relative border-b border-line">
+              <button type="button" role="tab" aria-selected={on} onClick={() => pick(i)} className="group grid w-full grid-cols-[minmax(7.75rem,max-content)_1fr] items-baseline gap-4 py-4 text-left">
                 <span className={`whitespace-nowrap font-display text-[1.375rem] tabular-nums leading-tight transition-colors ${on ? "text-brand-700" : "text-ink/55 group-hover:text-ink"}`}>
                   {it.time}
                 </span>

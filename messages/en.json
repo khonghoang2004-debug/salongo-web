@@ -263,24 +263,26 @@
     "tagline": "Salon software made for Vietnamese-run salons in Europe."
   },
   "pages": {
-    "homeTitle": "Salon management app: booking, checkout, payroll",
-    "homeDesc": "Software for nail, hair, lash and beauty salons in Europe: online booking, checkout, payroll and revenue reports, in Vietnamese and Czech. {days}-day free trial.",
+    "homeTitle": "Salon software with booking, POS and Czech EET 2.0",
+    "homeDesc": "Online booking, checkout with Czech EET 2.0, income and expenses, and payroll for nail, hair, lash and beauty salons. From {from} CZK a month, {days}-day free trial.",
     "featuresTitle": "Salon booking app, appointments, checkout, payroll",
     "featuresDesc": "Online booking, staff calendar, checkout, clients, email marketing, revenue reports, payroll and multiple locations in one salon management app.",
     "solutionsTitle": "Solutions for nail and beauty salons",
     "solutionsDesc": "No double bookings, payroll mistakes or cash losses: how SalonGo helps Vietnamese-run nail and beauty salons in Europe run smoothly.",
     "pricingTitle": "Salon management app pricing",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Every plan has every feature. {days}-day trial, renew right in the app.",
-    "aboutTitle": "About SalonGo",
-    "aboutDesc": "SalonGo is salon management software built for Vietnamese-run nail, hair, lash and beauty salons in Europe: our mission and roadmap.",
-    "faqTitle": "Salon software FAQ",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Every plan has every feature. {days}-day trial, renew on the web.",
+    "aboutTitle": "About SalonGo: salon software made in Czechia",
+    "aboutDesc": "SalonGo builds software for nail, hair, lash and beauty studios in Europe. Data stored in the EU, support in Czech and Vietnamese.",
+    "faqTitle": "FAQ: SalonGo salon software, EET 2.0, pricing",
     "faqDesc": "Answers about SalonGo: {days}-day trial, plans, renewal, payment, phone use, languages, multiple locations, payroll and tips.",
     "contactTitle": "Contact – support in Vietnamese and Czech",
     "contactDesc": "Contact SalonGo by phone, email, Facebook or WhatsApp. Support in Vietnamese and Czech, with a reply within 24 hours.",
     "websiteTitle": "SalonGo Web Studio – salon website design for {price}",
     "websiteDesc": "SalonGo Web Studio designs websites for hair, nail, spa and barber salons: up to {pages} pages, mobile-friendly, {price} one-time for SalonGo customers. See 35+ demos.",
     "deskTitle": "Chair plan: checkout and EET for chair renters",
-    "deskDesc": "Renting a chair or desk in a salon with your own IČO? The Chair plan for {priceDesk} CZK a month: checkout, receipts, revenue and EET 2.0 with your own certificate, no appointments."
+    "deskDesc": "Renting a chair or desk in a salon with your own IČO? The Chair plan for {priceDesk} CZK a month: checkout, receipts, revenue and EET 2.0 with your own certificate, no appointments.",
+    "eetTitle": "Czech EET 2.0 for salons: what to do by 1 Jan 2027",
+    "eetDesc": "EET 2.0 is mandatory in Czechia from 1 January 2027: who it applies to, what to prepare, how to get the DIS+ certificate and how to switch EET on in SalonGo in 2 steps."
   },
   "hero": {
     "trialNote": "{days} days free · No card required",
@@ -1398,8 +1400,8 @@
           "desc": "Your salon's booking page on a client's phone."
         },
         "desk": {
-          "title": "Desk plan",
-          "desc": "A desk renter rings up a sale and checks their own income and expenses."
+          "title": "Chair plan",
+          "desc": "A chair renter rings up a sale and checks their own income and expenses."
         }
       }
     },
@@ -1411,20 +1413,20 @@
       "salonPrice": "from {from} Kč/month",
       "salonCta": "See salon plans",
       "deskTag": "Own IČO in a salon",
-      "deskTitle": "You rent a desk and work for yourself",
+      "deskTitle": "You rent a chair and work for yourself",
       "deskDesc": "Checkout, receipts and EET with your own certificate, your own income and expenses. The salon owner can't see your revenue.",
       "deskPrice": "{priceDesk} Kč/month",
-      "deskCta": "See the Desk plan"
+      "deskCta": "See the Chair plan"
     },
     "eet": {
       "title": "EET 2.0 is mandatory from 1 Jan 2027. No extra till needed.",
       "lead": "Switch EET on once in the app. From then on every receipt is reported to the tax office and printed with its FIK code.",
       "p1": "Upload the certificate from DIS+, enter its password and the outlet number. Done.",
-      "p2": "Included in every plan, Desk too. No extra fee.",
+      "p2": "Included in every plan, Chair too. No extra fee.",
       "p3": "Need help getting the certificate? Our support team does it with you.",
       "countdown": "{n} days to go",
       "live": "Now in force",
-      "cta": "Ask about EET",
+      "cta": "Read about EET 2.0",
       "receiptTitle": "Sample receipt with EET code"
     },
     "pricing": {
@@ -1435,7 +1437,7 @@
       "staffAll": "unlimited staff",
       "branches": "{n} locations",
       "branchesAll": "unlimited locations",
-      "desk": "Desk",
+      "desk": "Chair",
       "deskLine": "1 person, own IČO",
       "popular": "Most chosen",
       "trial": "New salons try it free for {days} days, no card needed.",
@@ -1462,7 +1464,7 @@
     "nav": {
       "features": "Features",
       "pricing": "Pricing",
-      "desk": "Desk plan",
+      "desk": "Chair plan",
       "website": "Salon website",
       "faq": "FAQ",
       "contact": "Contact",
@@ -1535,5 +1537,42 @@
       "home": "Home page",
       "pricing": "See pricing"
     }
+  },
+  "eet2": {
+    "crumb": "EET 2.0",
+    "title": "Czech EET 2.0 for nail and beauty salons: what to do by 1 Jan 2027",
+    "lead": "From 1 January 2027, businesses in Czechia must report every receipt to the tax office. With SalonGo you don't buy a till: switch EET on once and the app reports by itself.",
+    "countdown": "{n} days to go",
+    "live": "Now in force",
+    "summaryTitle": "In short",
+    "k1": "From",
+    "v1": "1 January 2027.",
+    "k2": "Who it applies to",
+    "v2": "Businesses taking cash or card payments, including nail, hair, lash and beauty studios and chair renters with their own IČO.",
+    "k3": "What you need",
+    "v3": "An EET certificate from the tax office's DIS+ portal, its password and your outlet number.",
+    "k4": "In SalonGo",
+    "v4": "Upload the certificate once. Every sale is then reported and the receipt prints with its FIK code.",
+    "k5": "Cost",
+    "v5": "Included in every SalonGo plan, the Chair plan too. No extra fee.",
+    "stepsTitle": "Switch EET on in SalonGo",
+    "s1t": "Get the certificate in DIS+",
+    "s1d": "Log in to the DIS+ tax portal, create an EET certificate for your outlet and download the file.",
+    "s2t": "Upload it to SalonGo",
+    "s2d": "In EET settings, choose the file and enter its password and the outlet number. The app reads your name and IČO from the certificate.",
+    "s3t": "Take payments as usual",
+    "s3d": "Each receipt is reported the moment you take payment. The printed receipt carries the FIK code.",
+    "faqTitle": "EET 2.0 questions",
+    "q1": "Does SalonGo charge extra for EET?",
+    "a1": "No. EET is included in every plan: Basic, Pro, Premium and Chair.",
+    "q2": "I rent a chair in a salon and have my own IČO. How do I report EET?",
+    "a2": "Use the Chair plan with your own EET certificate. Receipts are in your name and the salon owner can't see your revenue.",
+    "q3": "What if I can't get the certificate myself?",
+    "a3": "SalonGo support does it with you by phone or WhatsApp, in Czech or Vietnamese.",
+    "q4": "Do I need a till or a special printer?",
+    "a4": "No till. SalonGo runs on a computer, iPad or phone. For printed receipts, any 80 mm thermal printer works.",
+    "note": "General information, not tax advice. For your salon's specific case, ask your accountant or the tax office.",
+    "cta": "Try it and switch EET on",
+    "ask": "Ask about EET"
   }
 }

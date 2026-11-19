@@ -68,12 +68,30 @@
     "play": "Play",
     "pause": "Pause",
     "items": {
-      "booking": { "title": "New booking", "desc": "Pick the client, service and stylist on the calendar. The client gets a confirmation email." },
-      "checkout": { "title": "Checkout", "desc": "Choose services and the payment method, print a receipt with the EET code." },
-      "thuchi": { "title": "Income & expenses", "desc": "See today's income and add an expense with a note." },
-      "customers": { "title": "Clients", "desc": "Search for a client, open the profile, see history and spend." },
-      "online": { "title": "Online booking", "desc": "Your salon's booking page on a client's phone." },
-      "desk": { "title": "Desk plan", "desc": "A desk renter rings up a sale and checks their own income and expenses." }
+      "booking": {
+        "title": "New booking",
+        "desc": "Pick the client, service and stylist on the calendar. The client gets a confirmation email."
+      },
+      "checkout": {
+        "title": "Checkout",
+        "desc": "Choose services and the payment method, print a receipt with the EET code."
+      },
+      "thuchi": {
+        "title": "Income & expenses",
+        "desc": "See today's income and add an expense with a note."
+      },
+      "customers": {
+        "title": "Clients",
+        "desc": "Search for a client, open the profile, see history and spend."
+      },
+      "online": {
+        "title": "Online booking",
+        "desc": "Your salon's booking page on a client's phone."
+      },
+      "desk": {
+        "title": "Chair plan",
+        "desc": "A chair renter rings up a sale and checks their own income and expenses."
+      }
     }
   },
   "who": {
@@ -84,20 +102,20 @@
     "salonPrice": "from {from} Kč/month",
     "salonCta": "See salon plans",
     "deskTag": "Own IČO in a salon",
-    "deskTitle": "You rent a desk and work for yourself",
+    "deskTitle": "You rent a chair and work for yourself",
     "deskDesc": "Checkout, receipts and EET with your own certificate, your own income and expenses. The salon owner can't see your revenue.",
     "deskPrice": "{priceDesk} Kč/month",
-    "deskCta": "See the Desk plan"
+    "deskCta": "See the Chair plan"
   },
   "eet": {
     "title": "EET 2.0 is mandatory from 1 Jan 2027. No extra till needed.",
     "lead": "Switch EET on once in the app. From then on every receipt is reported to the tax office and printed with its FIK code.",
     "p1": "Upload the certificate from DIS+, enter its password and the outlet number. Done.",
-    "p2": "Included in every plan, Desk too. No extra fee.",
+    "p2": "Included in every plan, Chair too. No extra fee.",
     "p3": "Need help getting the certificate? Our support team does it with you.",
     "countdown": "{n} days to go",
     "live": "Now in force",
-    "cta": "Ask about EET",
+    "cta": "Read about EET 2.0",
     "receiptTitle": "Sample receipt with EET code"
   },
   "pricing": {
@@ -108,7 +126,7 @@
     "staffAll": "unlimited staff",
     "branches": "{n} locations",
     "branchesAll": "unlimited locations",
-    "desk": "Desk",
+    "desk": "Chair",
     "deskLine": "1 person, own IČO",
     "popular": "Most chosen",
     "trial": "New salons try it free for {days} days, no card needed.",

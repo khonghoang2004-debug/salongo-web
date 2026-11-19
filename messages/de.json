@@ -263,24 +263,26 @@
     "tagline": "Salon-Software für Salons vietnamesischer Inhaber in Europa."
   },
   "pages": {
-    "homeTitle": "Salon-App: Terminbuchung, Kasse und Lohn",
-    "homeDesc": "Software für Nagelstudios, Friseur- und Kosmetiksalons: Online-Terminbuchung, Kasse, Lohnabrechnung und Umsatzberichte, auch auf Vietnamesisch. {days} Tage gratis.",
+    "homeTitle": "Salonsoftware: Terminbuchung, Kasse und EET 2.0",
+    "homeDesc": "Online-Termine, Kasse mit tschechischer EET 2.0, Einnahmen und Ausgaben sowie Lohn für Nagel-, Friseur- und Kosmetiksalons. Ab {from} CZK im Monat, {days} Tage gratis.",
     "featuresTitle": "Termin-App, Online-Buchung, Kasse, Lohn",
     "featuresDesc": "Online-Terminbuchung, Kalender pro Mitarbeiter, Kasse, Kunden, E-Mail-Marketing, Umsatzberichte, Lohnabrechnung und mehrere Filialen in einer Salon-App.",
     "solutionsTitle": "Lösungen für Nagelstudios und Salons",
     "solutionsDesc": "Keine Doppelbuchungen, falschen Löhne oder Kassenverluste: wie SalonGo Nagelstudios und Salons in Europa den Alltag erleichtert.",
     "pricingTitle": "Preise der Salon-App und Salonsoftware",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Jeder Tarif mit allen Funktionen. {days} Tage testen, direkt in der App verlängern.",
-    "aboutTitle": "Über SalonGo",
-    "aboutDesc": "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons vietnamesischer Inhaber in Europa: Mission und Entwicklung.",
-    "faqTitle": "Häufige Fragen zur Salonsoftware",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Jeder Tarif mit allen Funktionen. {days} Tage testen, im Web verlängern.",
+    "aboutTitle": "Über SalonGo: Salonsoftware aus Tschechien",
+    "aboutDesc": "SalonGo entwickelt Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa. Daten in der EU, Support auf Tschechisch und Vietnamesisch.",
+    "faqTitle": "FAQ: Salonsoftware, EET 2.0, Preise",
     "faqDesc": "Antworten zu SalonGo: {days} Tage gratis, Tarife, Verlängerung, Zahlung, Handy, Sprachen, mehrere Filialen, Lohn und Trinkgeld.",
     "contactTitle": "Kontakt – Support auf Vietnamesisch",
     "contactDesc": "Kontaktieren Sie SalonGo per Telefon, E-Mail, Facebook oder WhatsApp. Support auf Vietnamesisch und Tschechisch, Antwort innerhalb von 24 Stunden.",
     "websiteTitle": "SalonGo Web Studio – Website für Ihren Salon für {price}",
     "websiteDesc": "SalonGo Web Studio erstellt Websites für Friseur, Nagelstudio, Spa und Barbershop: bis zu {pages} Seiten, mobil optimiert, {price} einmalig für SalonGo-Kunden. 35+ Demos.",
     "deskTitle": "Tarif Stuhl: Kasse und EET für Stuhlmieter",
-    "deskDesc": "Sie mieten einen Stuhl oder Tisch im Salon und haben eine eigene IČO? Tarif Stuhl für {priceDesk} CZK im Monat: Kasse, Belege, Umsatz und EET 2.0 mit Ihrem eigenen Zertifikat, ohne Termine."
+    "deskDesc": "Sie mieten einen Stuhl oder Tisch im Salon und haben eine eigene IČO? Tarif Stuhl für {priceDesk} CZK im Monat: Kasse, Belege, Umsatz und EET 2.0 mit Ihrem eigenen Zertifikat, ohne Termine.",
+    "eetTitle": "EET 2.0 in Tschechien für Salons ab 2027",
+    "eetDesc": "Die EET 2.0 ist in Tschechien ab 1.1.2027 Pflicht: wen sie betrifft, was vorzubereiten ist, wie Sie das DIS+-Zertifikat bekommen und EET in SalonGo in 2 Schritten einschalten."
   },
   "hero": {
     "trialNote": "{days} Tage kostenlos · Keine Kreditkarte",
@@ -1398,8 +1400,8 @@
           "desc": "Die Buchungsseite Ihres Salons auf dem Handy des Kunden."
         },
         "desk": {
-          "title": "Tarif Platz",
-          "desc": "Eine Platzmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben."
+          "title": "Tarif Stuhl",
+          "desc": "Eine Stuhlmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben."
         }
       }
     },
@@ -1411,20 +1413,20 @@
       "salonPrice": "ab {from} Kč/Monat",
       "salonCta": "Salon-Tarife",
       "deskTag": "Eigene IČO im Salon",
-      "deskTitle": "Sie mieten einen Platz und arbeiten auf eigene Rechnung",
+      "deskTitle": "Sie mieten einen Stuhl und arbeiten auf eigene Rechnung",
       "deskDesc": "Kasse, Belege und EET mit Ihrem eigenen Zertifikat, Ihre eigenen Einnahmen und Ausgaben. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
       "deskPrice": "{priceDesk} Kč/Monat",
-      "deskCta": "Tarif Platz"
+      "deskCta": "Tarif Stuhl"
     },
     "eet": {
       "title": "EET 2.0 ist ab 1.1.2027 Pflicht. Eine extra Kasse brauchen Sie nicht.",
       "lead": "EET einmal in der App einschalten. Danach wird jeder Beleg ans Finanzamt gemeldet und mit FIK-Code gedruckt.",
       "p1": "Zertifikat aus DIS+ hochladen, Passwort und Betriebsstättennummer eingeben. Fertig.",
-      "p2": "In jedem Tarif enthalten, auch im Tarif Platz. Ohne Aufpreis.",
+      "p2": "In jedem Tarif enthalten, auch im Tarif Stuhl. Ohne Aufpreis.",
       "p3": "Hilfe beim Zertifikat? Unser Support macht es mit Ihnen zusammen.",
       "countdown": "Noch {n} Tage",
       "live": "In Kraft",
-      "cta": "Fragen zur EET",
+      "cta": "Alles zur EET 2.0",
       "receiptTitle": "Beispielbeleg mit EET-Code"
     },
     "pricing": {
@@ -1435,7 +1437,7 @@
       "staffAll": "unbegrenzt Mitarbeiter",
       "branches": "{n} Filialen",
       "branchesAll": "unbegrenzt Filialen",
-      "desk": "Platz",
+      "desk": "Stuhl",
       "deskLine": "1 Person, eigene IČO",
       "popular": "Am häufigsten gewählt",
       "trial": "Neue Salons testen {days} Tage kostenlos, ohne Karte.",
@@ -1462,7 +1464,7 @@
     "nav": {
       "features": "Funktionen",
       "pricing": "Preise",
-      "desk": "Tarif Platz",
+      "desk": "Tarif Stuhl",
       "website": "Salon-Website",
       "faq": "Fragen",
       "contact": "Kontakt",
@@ -1535,5 +1537,42 @@
       "home": "Zur Startseite",
       "pricing": "Preise ansehen"
     }
+  },
+  "eet2": {
+    "crumb": "EET 2.0",
+    "title": "Tschechische EET 2.0 für Nagel- und Kosmetiksalons: was bis 1.1.2027 zu tun ist",
+    "lead": "Ab 1. Januar 2027 müssen Betriebe in Tschechien jeden Beleg ans Finanzamt melden. Mit SalonGo brauchen Sie keine Kasse: EET einmal einschalten, die App meldet selbst.",
+    "countdown": "Noch {n} Tage",
+    "live": "In Kraft",
+    "summaryTitle": "Kurz gesagt",
+    "k1": "Ab wann",
+    "v1": "Ab 1. Januar 2027.",
+    "k2": "Für wen",
+    "v2": "Betriebe mit Bar- oder Kartenzahlung, auch Nagel-, Friseur-, Wimpern- und Kosmetikstudios sowie Stuhlmieter mit eigener IČO.",
+    "k3": "Was Sie brauchen",
+    "v3": "Ein EET-Zertifikat aus dem DIS+-Portal des Finanzamts, sein Passwort und die Nummer der Betriebsstätte.",
+    "k4": "In SalonGo",
+    "v4": "Zertifikat einmal hochladen. Danach wird jeder Verkauf gemeldet und der Beleg mit FIK-Code gedruckt.",
+    "k5": "Kosten",
+    "v5": "In jedem SalonGo-Tarif enthalten, auch im Tarif Stuhl. Ohne Aufpreis.",
+    "stepsTitle": "EET in SalonGo einschalten",
+    "s1t": "Zertifikat in DIS+ holen",
+    "s1d": "Im Steuerportal DIS+ anmelden, ein EET-Zertifikat für Ihre Betriebsstätte erstellen und die Datei herunterladen.",
+    "s2t": "In SalonGo hochladen",
+    "s2d": "In den EET-Einstellungen Datei wählen, Passwort und Betriebsstättennummer eingeben. Name und IČO liest die App aus dem Zertifikat.",
+    "s3t": "Wie gewohnt kassieren",
+    "s3d": "Jeder Beleg wird beim Kassieren sofort gemeldet. Der gedruckte Beleg trägt den FIK-Code.",
+    "faqTitle": "Fragen zur EET 2.0",
+    "q1": "Kostet EET bei SalonGo extra?",
+    "a1": "Nein. EET ist in jedem Tarif enthalten: Basic, Pro, Premium und Stuhl.",
+    "q2": "Ich miete einen Stuhl im Salon und habe eine eigene IČO. Wie melde ich EET?",
+    "a2": "Mit dem Tarif Stuhl und Ihrem eigenen EET-Zertifikat. Die Belege laufen auf Ihren Namen, die Salonbesitzerin sieht Ihren Umsatz nicht.",
+    "q3": "Was, wenn ich das Zertifikat nicht selbst bekomme?",
+    "a3": "Der SalonGo-Support macht es mit Ihnen per Telefon oder WhatsApp, auf Tschechisch oder Vietnamesisch.",
+    "q4": "Brauche ich eine Kasse oder einen speziellen Drucker?",
+    "a4": "Keine Kasse. SalonGo läuft auf Computer, iPad und Handy. Für gedruckte Belege reicht ein 80-mm-Thermodrucker.",
+    "note": "Allgemeine Informationen, keine Steuerberatung. Klären Sie den konkreten Fall Ihres Salons mit Ihrer Buchhaltung oder dem Finanzamt.",
+    "cta": "Testen und EET einschalten",
+    "ask": "Fragen zur EET"
   }
 }

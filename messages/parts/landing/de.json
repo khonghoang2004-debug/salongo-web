@@ -68,12 +68,30 @@
     "play": "Abspielen",
     "pause": "Pause",
     "items": {
-      "booking": { "title": "Neuer Termin", "desc": "Kunde, Leistung und Mitarbeiterin im Kalender wählen. Der Kunde bekommt eine Bestätigung per E-Mail." },
-      "checkout": { "title": "Kasse", "desc": "Leistungen und Zahlungsart wählen, Beleg mit EET-Code drucken." },
-      "thuchi": { "title": "Einnahmen & Ausgaben", "desc": "Die heutigen Einnahmen sehen und eine Ausgabe mit Notiz erfassen." },
-      "customers": { "title": "Kunden", "desc": "Kunden suchen, Profil öffnen, Verlauf und Umsatz sehen." },
-      "online": { "title": "Online-Buchung", "desc": "Die Buchungsseite Ihres Salons auf dem Handy des Kunden." },
-      "desk": { "title": "Tarif Platz", "desc": "Eine Platzmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben." }
+      "booking": {
+        "title": "Neuer Termin",
+        "desc": "Kunde, Leistung und Mitarbeiterin im Kalender wählen. Der Kunde bekommt eine Bestätigung per E-Mail."
+      },
+      "checkout": {
+        "title": "Kasse",
+        "desc": "Leistungen und Zahlungsart wählen, Beleg mit EET-Code drucken."
+      },
+      "thuchi": {
+        "title": "Einnahmen & Ausgaben",
+        "desc": "Die heutigen Einnahmen sehen und eine Ausgabe mit Notiz erfassen."
+      },
+      "customers": {
+        "title": "Kunden",
+        "desc": "Kunden suchen, Profil öffnen, Verlauf und Umsatz sehen."
+      },
+      "online": {
+        "title": "Online-Buchung",
+        "desc": "Die Buchungsseite Ihres Salons auf dem Handy des Kunden."
+      },
+      "desk": {
+        "title": "Tarif Stuhl",
+        "desc": "Eine Stuhlmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben."
+      }
     }
   },
   "who": {
@@ -84,20 +102,20 @@
     "salonPrice": "ab {from} Kč/Monat",
     "salonCta": "Salon-Tarife",
     "deskTag": "Eigene IČO im Salon",
-    "deskTitle": "Sie mieten einen Platz und arbeiten auf eigene Rechnung",
+    "deskTitle": "Sie mieten einen Stuhl und arbeiten auf eigene Rechnung",
     "deskDesc": "Kasse, Belege und EET mit Ihrem eigenen Zertifikat, Ihre eigenen Einnahmen und Ausgaben. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
     "deskPrice": "{priceDesk} Kč/Monat",
-    "deskCta": "Tarif Platz"
+    "deskCta": "Tarif Stuhl"
   },
   "eet": {
     "title": "EET 2.0 ist ab 1.1.2027 Pflicht. Eine extra Kasse brauchen Sie nicht.",
     "lead": "EET einmal in der App einschalten. Danach wird jeder Beleg ans Finanzamt gemeldet und mit FIK-Code gedruckt.",
     "p1": "Zertifikat aus DIS+ hochladen, Passwort und Betriebsstättennummer eingeben. Fertig.",
-    "p2": "In jedem Tarif enthalten, auch im Tarif Platz. Ohne Aufpreis.",
+    "p2": "In jedem Tarif enthalten, auch im Tarif Stuhl. Ohne Aufpreis.",
     "p3": "Hilfe beim Zertifikat? Unser Support macht es mit Ihnen zusammen.",
     "countdown": "Noch {n} Tage",
     "live": "In Kraft",
-    "cta": "Fragen zur EET",
+    "cta": "Alles zur EET 2.0",
     "receiptTitle": "Beispielbeleg mit EET-Code"
   },
   "pricing": {
@@ -108,7 +126,7 @@
     "staffAll": "unbegrenzt Mitarbeiter",
     "branches": "{n} Filialen",
     "branchesAll": "unbegrenzt Filialen",
-    "desk": "Platz",
+    "desk": "Stuhl",
     "deskLine": "1 Person, eigene IČO",
     "popular": "Am häufigsten gewählt",
     "trial": "Neue Salons testen {days} Tage kostenlos, ohne Karte.",

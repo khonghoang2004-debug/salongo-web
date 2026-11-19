@@ -20,6 +20,7 @@ export async function SiteFooter() {
     ["/tinh-nang", t("nav.features")],
     ["/bang-gia", t("nav.pricing")],
     ["/goi-ban", t("nav.desk")],
+    ["/eet-2-0", "EET 2.0"],
     ["/website", t("nav.website")],
     ["/giai-phap", t("footer.solutions")],
   ] as const;

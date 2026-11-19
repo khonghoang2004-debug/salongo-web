@@ -11,7 +11,7 @@ export async function LandingHero() {
       <div className="x-wrap grid items-center gap-12 lg:grid-cols-12 lg:gap-8 [&>*]:min-w-0">
         <div className="lg:col-span-6 lg:pr-6 xl:col-span-5">
           <Link
-            href="/faq"
+            href="/eet-2-0"
             className="inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-white py-1.5 pl-1.5 pr-4 text-[13.5px] text-ink/80 transition-colors hover:border-ink/25"
           >
             <span className="shrink-0 whitespace-nowrap rounded-full bg-[#E8F1EC] px-2 py-0.5 text-[12px] font-semibold text-[#2F5E47]">EET 2.0</span>

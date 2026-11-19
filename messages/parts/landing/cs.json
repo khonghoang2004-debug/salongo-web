@@ -68,12 +68,30 @@
     "play": "Přehrát",
     "pause": "Pozastavit",
     "items": {
-      "booking": { "title": "Nová rezervace", "desc": "V kalendáři vyberete klienta, službu a kolegyni. Klient dostane potvrzení e-mailem." },
-      "checkout": { "title": "Pokladna", "desc": "Vyberete služby a způsob platby, vytisknete účtenku s kódem EET." },
-      "thuchi": { "title": "Příjmy a výdaje", "desc": "Dnešní příjmy a nový výdaj s poznámkou." },
-      "customers": { "title": "Klienti", "desc": "Najdete klienta, otevřete kartu a vidíte historii i útratu." },
-      "online": { "title": "Online rezervace", "desc": "Rezervační stránka salonu v telefonu klienta." },
-      "desk": { "title": "Tarif Křeslo", "desc": "Nájemkyně křesla rychle namarkuje a vidí své vlastní příjmy a výdaje." }
+      "booking": {
+        "title": "Nová rezervace",
+        "desc": "V kalendáři vyberete klienta, službu a kolegyni. Klient dostane potvrzení e-mailem."
+      },
+      "checkout": {
+        "title": "Pokladna",
+        "desc": "Vyberete služby a způsob platby, vytisknete účtenku s kódem EET."
+      },
+      "thuchi": {
+        "title": "Příjmy a výdaje",
+        "desc": "Dnešní příjmy a nový výdaj s poznámkou."
+      },
+      "customers": {
+        "title": "Klienti",
+        "desc": "Najdete klienta, otevřete kartu a vidíte historii i útratu."
+      },
+      "online": {
+        "title": "Online rezervace",
+        "desc": "Rezervační stránka salonu v telefonu klienta."
+      },
+      "desk": {
+        "title": "Tarif Křeslo",
+        "desc": "Nájemkyně křesla rychle namarkuje a vidí své vlastní příjmy a výdaje."
+      }
     }
   },
   "who": {
@@ -97,7 +115,7 @@
     "p3": "Potřebujete pomoct s certifikátem? Podpora to udělá s vámi.",
     "countdown": "Zbývá {n} dní",
     "live": "Platí",
-    "cta": "Zeptat se na EET",
+    "cta": "Vše o EET 2.0",
     "receiptTitle": "Ukázková účtenka s kódem EET"
   },
   "pricing": {

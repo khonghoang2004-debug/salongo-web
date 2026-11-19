@@ -4,7 +4,7 @@ const SITE = "https://www.salongo.eu";
 
 // llms.txt (https://llmstxt.org): tóm tắt cho trợ lý AI. Giá và giới hạn gói lấy từ app như trang Bảng giá,
 // nên không còn lệch với giá đang bán (trước đây là file tĩnh trong public/).
-export const revalidate = 3600;
+export const revalidate = 60;
 
 const HEAD = `# SalonGo
 
@@ -35,6 +35,7 @@ const SECTIONS = [
   ["/giai-phap", "Solutions by salon type"],
   ["/bang-gia", "Pricing"],
   ["/goi-ban", "Chair / desk renter plan"],
+  ["/eet-2-0", "Czech EET 2.0 for salons: what to do by 1 Jan 2027"],
   ["/faq", "FAQ"],
   ["/ve-salongo", "About SalonGo"],
   ["/lien-he", "Contact"],
@@ -97,6 +98,6 @@ export async function GET() {
   ].join("\n");
   const body = `${HEAD}${answers(priceRange(plans).low, plans.trialDays)}${pricing}\n\n## Pages\n${PAGES}\n\n## Other\n${OTHER}\n`;
   return new Response(body, {
-    headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=0, s-maxage=3600" },
+    headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=0, s-maxage=60, stale-while-revalidate=300" },
   });
 }

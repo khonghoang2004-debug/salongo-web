@@ -163,6 +163,7 @@ export default async function Home({ params }: Props) {
       <Navbar />
       <main>
         <HomeHero />
+        <HomeWebsiteOffer />
         <HomeEet />
         <HomeFeatures />
         <HomeVideos />
@@ -173,7 +174,6 @@ export default async function Home({ params }: Props) {
         <HowItWorks />
         <HomePricingTeaser />
         <HomeFaq />
-        <HomeWebsiteOffer />
         <CTA />
       </main>
       <Footer />

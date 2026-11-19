@@ -108,7 +108,9 @@ test("404: trả 404 và chỉ có noindex", async () => {
 });
 
 test("chuyển hướng: / và trang thiếu ngôn ngữ về /vi, dấu / cuối bị bỏ", async () => {
-  assert.equal((await get("/", PRIMARY)).headers.get("location"), "/vi");
+  const root = await get("/", PRIMARY);
+  assert.equal(root.status, 308, "/ phải chuyển hướng vĩnh viễn");
+  assert.equal(root.headers.get("location"), "/vi");
   assert.equal((await get("/tinh-nang", PRIMARY)).headers.get("location"), "/vi/tinh-nang");
   const slash = await get("/vi/", PRIMARY);
   assert.equal(slash.status, 308);

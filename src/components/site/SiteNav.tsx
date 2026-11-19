@@ -75,7 +75,7 @@ export function SiteNav() {
           scrolled ? "bg-white/85 shadow-[0_1px_0_rgba(42,15,23,0.08)] backdrop-blur-xl" : "bg-white"
         }`}
       >
-        <div className="x-wrap flex h-16 items-center gap-6 lg:h-[72px]">
+        <div className="x-wrap flex h-16 items-center gap-4 lg:h-[72px] xl:gap-6">
           <Link href="/" aria-label={siteConfig.name} className="shrink-0 rounded-lg">
             <Logo />
           </Link>
@@ -83,7 +83,7 @@ export function SiteNav() {
           <nav aria-label="Menu" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {ITEMS.map((it) => (
-                <li key={it.href}>
+                <li key={it.href} className={it.href === "/website" ? "hidden xl:block" : undefined}>
                   <Link
                     href={it.href}
                     aria-current={isActive(it.href) ? "page" : undefined}
@@ -110,8 +110,8 @@ export function SiteNav() {
               <LocaleSwitcher compact />
             </div>
             <a href={signup} className="x-btn-primary !min-h-10 !px-4 sm:!min-h-11 sm:!px-5">
-              <span className="sm:hidden">{t("ctaShort")}</span>
-              <span className="hidden sm:inline">{t("cta")}</span>
+              <span className="sm:hidden lg:inline xl:hidden">{t("ctaShort")}</span>
+              <span className="hidden sm:inline lg:hidden xl:inline">{t("cta")}</span>
             </a>
             <button
               type="button"

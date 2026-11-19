@@ -34,7 +34,7 @@ export function DayTourClient({ steps }: { steps: DayStep[] }) {
             ref={(el) => {
               refs.current[i] = el;
             }}
-            className="relative border-l border-line pb-12 pl-7 last:pb-0 lg:flex lg:min-h-[50vh] lg:flex-col lg:justify-center lg:pb-0"
+            className="relative border-l border-line pb-12 pl-7 last:pb-0 lg:flex lg:min-h-[40vh] lg:flex-col lg:justify-center lg:pb-0"
           >
 <p className={`relative text-[15px] font-semibold tabular-nums transition-colors ${active === i ? "text-brand-700" : "text-muted"}`}>
               <span className={`absolute -left-[33px] top-1/2 size-[9px] -translate-y-1/2 rounded-full transition-colors duration-300 ${active === i ? "bg-brand-700" : "bg-line"}`} aria-hidden />

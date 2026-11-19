@@ -39,7 +39,7 @@ export async function LandingHero() {
               id="checkout"
               alt={t("altPhone")}
               priority
-              className="x-hero-phone mx-auto w-[64%] max-w-[290px] sm:absolute sm:-bottom-[14%] sm:left-0 sm:mx-0 sm:w-[24%] sm:max-w-[220px] lg:-left-4"
+              className="x-hero-phone mx-auto w-[64%] max-w-[290px] sm:absolute sm:-bottom-[14%] sm:left-0 sm:mx-0 sm:w-[24%] sm:max-w-[220px] lg:-left-4 lg:w-[32%] xl:w-[24%]"
             />
           </div>
         </div>

@@ -14,7 +14,7 @@ import { PriceBoard } from "@/components/landing/PriceBoard";
 import { WebsiteBand, FaqShort, FinalCta, LANDING_FAQ } from "@/components/landing/Closing";
 import { siteConfig } from "@/lib/metadata";
 import { getPlans, priceRange } from "@/lib/plans";
-import { VIDEOS, videoSrc } from "@/lib/videos";
+import { CLIPS } from "@/lib/clips";
 import { CONTACT_EMAIL, CONTACT_FACEBOOK, CONTACT_PHONE } from "@/lib/contact";
 import { OPERATOR } from "@/lib/legal";
 
@@ -35,7 +35,7 @@ export default async function Home({ params }: Props) {
   const ogImageUrl = `${base}${siteConfig.ogImage}`;
   const pageUrl = `${base}/${locale}`;
   const tPage = await getTranslations({ locale, namespace: "pages" });
-  const tVid = await getTranslations({ locale, namespace: "videos" });
+  const tVid = await getTranslations({ locale, namespace: "landing.videos" });
   const tFaq = await getTranslations({ locale, namespace: "homeFaq" });
   const org = `${base}/#organization`;
   const prices = priceRange(await getPlans());
@@ -156,22 +156,17 @@ export default async function Home({ params }: Props) {
           acceptedAnswer: { "@type": "Answer", text: tFaq(`a${i}`) },
         })),
       },
-      // Video giới thiệu từng tính năng (để Google hiện kết quả video)
-      ...VIDEOS.map((v) => {
-        const s = videoSrc(v);
-        return {
-          "@type": "VideoObject",
-          "@id": `${base}/#video-${v.id}`,
-          name: `${siteConfig.name} – ${tVid(`items.${v.id}.title`)}`,
-          description: tVid(`items.${v.id}.desc`),
-          thumbnailUrl: `${base}${s.posterPc}`,
-          contentUrl: `${base}${s.pc}`,
-          uploadDate: "2026-10-31",
-          duration: v.iso,
-          inLanguage: "vi",
-          publisher: { "@id": org },
-        };
-      }),
+      // Đoạn phim ngắn đang hiện ở mục ClipSection (không tiếng → không ghi inLanguage; chú thích theo ngôn ngữ trang)
+      ...CLIPS.map((c) => ({
+        "@type": "VideoObject",
+        "@id": `${pageUrl}/#clip-${c.id}`,
+        name: `${siteConfig.name} – ${tVid(`items.${c.id}.title`)}`,
+        description: tVid(`items.${c.id}.desc`),
+        thumbnailUrl: `${base}${c.posterPc}`,
+        contentUrl: `${base}${c.pc}`,
+        uploadDate: "2026-11-20T00:00:00+01:00",
+        publisher: { "@id": org },
+      })),
     ],
   };
 

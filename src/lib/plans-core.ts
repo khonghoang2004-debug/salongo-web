@@ -24,13 +24,46 @@ export type SitePlan = {
   highlighted: boolean;
 };
 
+/**
+ * Gói "Bàn" (mã DESK trong app): cho người thuê bàn / ghế trong salon có IČO riêng. Chỉ tính tiền, hoá đơn,
+ * doanh thu và EET bằng chứng chỉ của chính họ, không có lịch hẹn. Không nằm trong `plans` (bảng so sánh,
+ * "giá từ …" và các gói salon giữ nguyên); web giới thiệu nó ở mục riêng.
+ */
+export type DeskPlan = {
+  monthly: number;
+  listMonthly: number | null;
+  monthlyDiscountPct: number | null;
+  yearly: number | null;
+  yearlyDiscountPct: number | null;
+  /**
+   * true = app đang bán gói (API trả về mã DESK): web hiện nút đăng ký / mua.
+   * false = app chưa bán (API không có DESK, hoặc đang dùng giá dự phòng): web hiện "Sắp ra mắt" và giá dự kiến,
+   * không có nút dẫn vào màn mua gói không tồn tại.
+   */
+  live: boolean;
+};
+
 export type SitePlans = {
   trialDays: number;
   plans: SitePlan[];
+  desk: DeskPlan;
   source: "api" | "fallback";
 };
 
 const CODES: readonly PlanCode[] = ["BASIC", "PRO", "PREMIUM"];
+
+/** Mã gói Bàn trong app (SubscriptionPlan.code). */
+export const DESK_CODE = "DESK";
+
+/** Giá dự kiến khi app chưa trả gói Bàn (đã chốt 19/11/2026: 149 Kč/tháng). */
+export const FALLBACK_DESK: DeskPlan = {
+  monthly: 149,
+  listMonthly: null,
+  monthlyDiscountPct: null,
+  yearly: null,
+  yearlyDiscountPct: null,
+  live: false,
+};
 
 // Khớp với các gói đang bán trong app (SubscriptionPlan, đối chiếu 29/10/2026). Trả theo năm giảm 10%.
 const FALLBACK_DISCOUNT = 10;
@@ -49,6 +82,7 @@ const fb = (code: PlanCode, monthly: number, staff: number | null, branches: num
 export const FALLBACK_PLANS: SitePlans = {
   trialDays: 150,
   plans: [fb("BASIC", 199, 3, 1, false), fb("PRO", 499, 8, 3, true), fb("PREMIUM", 799, null, null, false)],
+  desk: FALLBACK_DESK,
   source: "fallback",
 };
 
@@ -60,48 +94,62 @@ const limit = (v: unknown): number | null | undefined => (v === null ? null : po
  * Đọc JSON của /api/public/plans. Trả null khi sai hợp đồng (người gọi dùng FALLBACK_PLANS).
  * yearlyPriceCents dùng nguyên giá app gửi (không tự làm tròn).
  */
+type Price = Omit<DeskPlan, "live">;
+
+/** Giá của một gói trong JSON của app (cents → CZK). null = sai hợp đồng. */
+function mapPrice(raw: Record<string, unknown>): Price | null {
+  const monthlyCents = raw.monthlyPriceCents;
+  if (!posInt(monthlyCents)) return null;
+  const yearlyCents = raw.yearlyPriceCents;
+  if (yearlyCents !== null && yearlyCents !== undefined && !posInt(yearlyCents)) return null;
+  const pct = raw.yearlyDiscountPct;
+  // Giảm giá theo tháng (tuỳ chọn): app gửi giá gốc + % thì web hiện giá gốc gạch ngang
+  const list = raw.monthlyListPriceCents;
+  const hasList = posInt(list) && list > monthlyCents;
+  const mPct = raw.monthlyDiscountPct;
+  return {
+    monthly: monthlyCents / 100,
+    listMonthly: hasList ? list / 100 : null,
+    monthlyDiscountPct: !hasList
+      ? null
+      : typeof mPct === "number" && mPct > 0 && mPct < 100
+        ? mPct
+        : Math.round((1 - monthlyCents / list) * 100),
+    yearly: posInt(yearlyCents) ? yearlyCents / 100 : null,
+    yearlyDiscountPct: typeof pct === "number" && pct > 0 && pct < 100 ? pct : null,
+  };
+}
+
 export function mapPlansResponse(json: unknown): SitePlans | null {
   if (!isObj(json) || json.ok !== true || json.currency !== "CZK" || !Array.isArray(json.plans)) return null;
   const plans: SitePlan[] = [];
-  const seen = new Set<PlanCode>();
+  const seen = new Set<string>();
+  let desk: DeskPlan | null = null;
   for (const raw of json.plans) {
     if (!isObj(raw)) return null;
-    const code = raw.code as PlanCode;
-    if (!CODES.includes(code)) continue; // gói lạ: website chưa có nhãn cho nó
+    const code = typeof raw.code === "string" ? raw.code.toUpperCase() : "";
+    const isDesk = code === DESK_CODE;
+    if (!isDesk && !CODES.includes(code as PlanCode)) continue; // gói lạ: website chưa có nhãn cho nó
     if (seen.has(code)) continue; // mã trùng: giữ bản đầu tiên
     seen.add(code);
-    if (!posInt(raw.monthlyPriceCents)) return null;
-    const yearlyCents = raw.yearlyPriceCents;
-    if (yearlyCents !== null && yearlyCents !== undefined && !posInt(yearlyCents)) return null;
-    const pct = raw.yearlyDiscountPct;
-    // Giảm giá theo tháng (tuỳ chọn): app gửi giá gốc + % thì web hiện giá gốc gạch ngang
-    const list = raw.monthlyListPriceCents;
-    const hasList = posInt(list) && list > raw.monthlyPriceCents;
-    const mPct = raw.monthlyDiscountPct;
+    const price = mapPrice(raw);
+    if (isDesk) {
+      // Gói Bàn sai dữ liệu không được làm hỏng cả bảng giá: bỏ qua, web hiện "Sắp ra mắt"
+      if (price) desk = { ...price, live: true };
+      continue;
+    }
+    if (!price) return null;
     const staff = limit(raw.maxStaff);
     const branches = limit(raw.maxLocations);
     if (staff === undefined || branches === undefined) return null;
-    plans.push({
-      code,
-      monthly: raw.monthlyPriceCents / 100,
-      listMonthly: hasList ? list / 100 : null,
-      monthlyDiscountPct: !hasList
-        ? null
-        : typeof mPct === "number" && mPct > 0 && mPct < 100
-          ? mPct
-          : Math.round((1 - raw.monthlyPriceCents / list) * 100),
-      yearly: posInt(yearlyCents) ? yearlyCents / 100 : null,
-      yearlyDiscountPct: typeof pct === "number" && pct > 0 && pct < 100 ? pct : null,
-      staff,
-      branches,
-      highlighted: raw.isPopular === true,
-    });
+    plans.push({ code: code as PlanCode, ...price, staff, branches, highlighted: raw.isPopular === true });
   }
   if (plans.length === 0) return null;
   plans.sort((a, b) => CODES.indexOf(a.code) - CODES.indexOf(b.code));
   return {
     trialDays: posInt(json.trialDays) ? json.trialDays : FALLBACK_PLANS.trialDays,
     plans,
+    desk: desk ?? FALLBACK_DESK,
     source: "api",
   };
 }
@@ -157,7 +205,7 @@ export async function loadPlans(fetcher: PlansFetcher, state: PlansLoaderState, 
 
 // ---------------------------------------------------------------------------------------------
 // Số liệu trong văn bản (messages/*.json): {days}, {from}, {discount}, {priceBasic|Pro|Premium},
-// {staffBasic|Pro}, {branchesBasic|Pro}, {premiumLimits} / {premiumLimitsCap} (giới hạn gói Premium thành chữ). Đoạn "[[discount:…]]" chỉ hiện khi có giảm giá theo năm.
+// {staffBasic|Pro}, {branchesBasic|Pro}, {priceDesk} (gói Bàn), {premiumLimits} / {premiumLimitsCap} (giới hạn gói Premium thành chữ). Đoạn "[[discount:…]]" chỉ hiện khi có giảm giá theo năm.
 
 export function planTokens(p: SitePlans, locale: string): Record<string, string> {
   const tag = { vi: "vi-VN", cs: "cs-CZ", en: "en-GB", de: "de-DE" }[locale] ?? "cs-CZ";
@@ -178,6 +226,7 @@ export function planTokens(p: SitePlans, locale: string): Record<string, string>
     branchesPro: lim(by("PRO").branches),
     premiumLimits: limitsPhrase(by("PREMIUM"), locale, num),
     premiumLimitsCap: capitalize(limitsPhrase(by("PREMIUM"), locale, num)),
+    priceDesk: num(p.desk.monthly),
   };
 }
 
@@ -215,7 +264,7 @@ export function limitsPhrase(plan: SitePlan, locale: string, num: (n: number) =>
   }
 }
 
-const TOKEN = /\{(days|from|discount|priceBasic|pricePro|pricePremium|staffBasic|staffPro|branchesBasic|branchesPro|premiumLimits|premiumLimitsCap)\}/g;
+const TOKEN = /\{(days|from|discount|priceBasic|pricePro|pricePremium|staffBasic|staffPro|branchesBasic|branchesPro|premiumLimits|premiumLimitsCap|priceDesk)\}/g;
 const DISCOUNT_PART = /\[\[discount:([\s\S]*?)\]\]/g;
 
 export function fillPlanText(text: string, tokens: Record<string, string>): string {

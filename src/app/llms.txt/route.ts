@@ -1,4 +1,4 @@
-import { getPlans, type SitePlan } from "@/lib/plans";
+import { getPlans, type DeskPlan, type SitePlan } from "@/lib/plans";
 
 // llms.txt (https://llmstxt.org): tóm tắt cho trợ lý AI. Giá và giới hạn gói lấy từ app như trang Bảng giá,
 // nên không còn lệch với giá đang bán (trước đây là file tĩnh trong public/).
@@ -26,6 +26,7 @@ Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://ap
 const PAGES = `- [Home (Vietnamese)](https://www.salongo.eu/vi)
 - [Features](https://www.salongo.eu/en/tinh-nang)
 - [Pricing](https://www.salongo.eu/en/bang-gia)
+- [Chair / desk renter plan](https://www.salongo.eu/en/goi-ban)
 - [FAQ](https://www.salongo.eu/en/faq)
 - [Contact](https://www.salongo.eu/en/lien-he)
 - [Facebook page](https://www.facebook.com/people/SalonGo/61583765805698/)
@@ -41,6 +42,10 @@ const limits = (p: SitePlan) => {
 
 const NAMES = { BASIC: "Basic", PRO: "Pro", PREMIUM: "Premium" } as const;
 
+// Gói Bàn (DESK): cho người thuê bàn / ghế có IČO riêng; "planned" khi app chưa bán
+const desk = (p: DeskPlan) =>
+  `- Chair / desk renter plan ("Bàn", code DESK) ${p.monthly}${p.yearly ? `; yearly ${p.yearly} CZK` : ""}${p.live ? "" : " (planned, not on sale yet)"}: for people who rent a chair or desk in a salon and work on their own IČO. Only checkout, receipts, revenue and Czech EET 2.0 with their own certificate; no appointments, staff or payroll. The salon owner cannot see the renter's revenue. Details: https://www.salongo.eu/en/goi-ban`;
+
 export async function GET() {
   const plans = await getPlans();
   const lines = plans.plans.map((p) => {
@@ -53,6 +58,7 @@ export async function GET() {
     "## Pricing (CZK per month, live from the app)",
     ...lines,
     `- ${discount ? `Paying yearly saves up to ${discount}%. ` : ""}New salons get a ${plans.trialDays}-day free trial, no card needed. Plans are renewed in the app (Plan screen).`,
+    desk(plans.desk),
   ].join("\n");
   const body = `${HEAD}${pricing}\n\n## Pages\n${PAGES}`;
   return new Response(body, {

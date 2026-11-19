@@ -1,0 +1,119 @@
+{
+  "crumb": "Phần mềm quản lý salon",
+  "h1": "App, phần mềm quản lý salon và tiệm nail cho người Việt ở Séc, châu Âu",
+  "intro": "Lịch hẹn, tính tiền, EET, lương thợ, tip và khách quen: một phần mềm quản lý salon cần làm được gì, và SalonGo làm thế nào.",
+  "ctaTrial": "Dùng thử {days} ngày miễn phí",
+  "ctaFeatures": "Xem tính năng",
+  "toc": "Trong bài này",
+  "sections": [
+    {
+      "id": "la-gi",
+      "h": "Phần mềm quản lý salon là gì?",
+      "body": [
+        "Phần mềm quản lý salon gom việc hằng ngày của tiệm vào một chỗ: nhận lịch hẹn, xếp lịch cho thợ, tính tiền, lưu hồ sơ khách, xem doanh thu và tính lương. Thay cho sổ giấy, Excel và tin nhắn rời rạc, chủ tiệm mở app là biết hôm nay ai làm gì và thu được bao nhiêu.",
+        "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. App bằng tiếng Việt, dùng trên iPhone, Android, iPad, Mac, Windows và trình duyệt."
+      ]
+    },
+    {
+      "id": "tiem-nail",
+      "h": "Phần mềm quản lý tiệm nail cần có gì?",
+      "body": ["Tiệm nail có nhiều thợ, nhiều dịch vụ ngắn, nhiều khách quen và tiền tip. Một phần mềm quản lý tiệm nail tốt cần làm được những việc sau:"],
+      "points": [
+        "Trang đặt lịch online riêng để khách tự chọn dịch vụ, thợ và giờ còn trống",
+        "Lịch hẹn theo từng thợ, nhìn là biết ai đang rảnh",
+        "Tính tiền tại quầy bằng tiền mặt, thẻ hoặc chuyển khoản, ghi tip cho thợ",
+        "Tính lương tự động theo % doanh thu hoặc lương cố định, chia tip theo cách chủ salon chọn",
+        "Báo cáo doanh thu theo ngày, theo thợ, theo dịch vụ"
+      ],
+      "link": { "href": "/tinh-nang", "label": "Xem tất cả tính năng" }
+    },
+    {
+      "id": "dat-lich-online",
+      "h": "App đặt lịch online 24/7, tự nhận lịch hẹn",
+      "body": [
+        "Mỗi salon có một link đặt lịch riêng để gắn lên Facebook, Instagram hay Google Maps. Khách đặt bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp, còn chủ tiệm duyệt lịch và chia thợ bằng tiếng Việt trong cùng một hộp.",
+        "Trang đặt lịch chỉ hiện giờ thợ còn trống nên không trùng lịch. Khách có email nhận email xác nhận và email nhắc 1 giờ trước giờ hẹn."
+      ],
+      "figure": "Trang đặt lịch online của salon: khách chọn ngày và giờ còn trống",
+      "link": { "href": "/tinh-nang#dat-lich-online", "label": "Xem đặt lịch online" }
+    },
+    {
+      "id": "tinh-tien",
+      "h": "App tính tiền tại quầy, hoá đơn tự động",
+      "body": ["Chọn dịch vụ, thợ và cách khách trả là xong một hoá đơn. Mọi khoản thu tự vào báo cáo doanh thu, không phải ghi sổ hay nhập lại:"],
+      "points": [
+        "Tiền mặt, thẻ hoặc chuyển khoản bằng mã QR có sẵn số tiền: cuối ngày khớp sổ",
+        "Mỗi lần thu tiền tạo một hoá đơn, in khổ 80 mm, tra lại dễ dàng",
+        "Tip ghi riêng trên hoá đơn, chia cho thợ theo cách chủ salon chọn"
+      ],
+      "link": { "href": "/tinh-nang#tinh-tien", "label": "Xem tính tiền" }
+    },
+    {
+      "id": "eet",
+      "h": "EET 2.0 bắt buộc từ 1.1.2027: tiệm cần chuẩn bị gì?",
+      "body": [
+        "Từ 1.1.2027, ở Séc mỗi lần khách trả tiền mặt hoặc thẻ đều phải gửi lên sở thuế. Với SalonGo, bạn không cần mua máy tính tiền hay phần mềm riêng.",
+        "Tải chứng chỉ từ cổng DIS+, nhập mật khẩu và mã chỗ bán trong app. Từ đó mỗi hoá đơn tự gửi EET và in kèm mã FIK. EET có trong mọi gói, kể cả gói Bàn, không tính thêm tiền."
+      ],
+      "link": { "href": "/faq", "label": "Hỏi về EET" }
+    },
+    {
+      "id": "thu-chi",
+      "h": "Sổ thu chi của tiệm: biết lời bao nhiêu",
+      "body": ["Tab Thu tự cộng doanh thu từ hoá đơn. Tab Chi để ghi tiền hàng, tiền nhà: số tiền, ngày, cách trả và một dòng ghi chú. Thu trừ chi hiện ngay cho từng chi nhánh, xuất được ra CSV, Excel hoặc PDF cho kế toán."],
+      "figure": "Thu & Chi trong SalonGo: thu từ hoá đơn và các khoản chi",
+      "link": { "href": "/tinh-nang#thu-chi", "label": "Xem Thu & Chi" }
+    },
+    {
+      "id": "tinh-luong",
+      "h": "App tính lương thợ và chia tip rõ ràng",
+      "body": ["Mỗi thợ một cách tính: % trên doanh thu cá nhân (có thể đặt % riêng cho từng dịch vụ) hoặc lương cố định theo tháng. Chủ salon chọn khách tip thợ nào thì thợ đó nhận, hoặc gộp tip chia đều. Cuối tháng chỉ cần mở bảng lương và xuất file."],
+      "link": { "href": "/tinh-nang#tinh-luong", "label": "Xem tính lương tự động" }
+    },
+    {
+      "id": "marketing",
+      "h": "Giữ chân khách quen bằng email marketing",
+      "body": ["Trong mục Khách hàng có 10 mẫu email theo dịp như Giáng sinh, Năm mới, Valentine, 8/3, Ngày của Mẹ và Black Friday. Sửa vài dòng, thêm % giảm giá, xem trước rồi gửi cho khách đã đồng ý nhận ưu đãi. App báo trước sinh nhật khách 2 ngày để bạn gửi lời chúc kèm ưu đãi."],
+      "link": { "href": "/tinh-nang#marketing", "label": "Xem email marketing" }
+    },
+    {
+      "id": "chi-nhanh",
+      "h": "Nhiều chi nhánh, thợ xem lịch trên điện thoại",
+      "body": ["Một tài khoản chủ quản lý mọi chi nhánh, chuyển qua lại ngay trên menu và xem doanh thu của tất cả chi nhánh trên một trang. Thợ có tài khoản riêng trên điện thoại, thấy lịch hẹn của mình và, nếu chủ cho phép, doanh thu mình làm được."],
+      "link": { "href": "/tinh-nang#da-chi-nhanh", "label": "Xem đa chi nhánh" }
+    },
+    {
+      "id": "gia",
+      "h": "Giá phần mềm quản lý salon",
+      "body": [
+        "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
+        "Thợ thuê bàn có IČO riêng dùng gói Bàn, {priceDesk} Kč/tháng. Mua và gia hạn gói trên trình duyệt; app trên iPhone không bán gói."
+      ],
+      "link": { "href": "/bang-gia", "label": "Xem bảng giá" }
+    },
+    {
+      "id": "bat-dau",
+      "h": "Bắt đầu trong một buổi chiều",
+      "body": ["Không cần biết kỹ thuật, không cần cài đặt phức tạp:"],
+      "steps": [
+        "Tạo tài khoản miễn phí, nhập tên salon và giờ mở cửa",
+        "Thêm thợ, dịch vụ, giá và cách tính lương",
+        "Gửi link đặt lịch cho khách qua Facebook, Instagram, Google",
+        "Bí chỗ nào, đội hỗ trợ trả lời bằng tiếng Việt và tiếng Séc"
+      ]
+    }
+  ],
+  "endTitle": "Dùng thử {days} ngày, không cần thẻ",
+  "endText": "Gói nào cũng đủ tính năng, từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+  "ctaPricing": "Xem bảng giá",
+  "faqTitle": "Câu hỏi về phần mềm quản lý salon",
+  "faq": [
+    { "q": "Có app nào vừa nhận lịch hẹn, vừa tính tiền và tính lương thợ không?", "a": "Có. SalonGo gồm cả: khách tự đặt lịch online qua link riêng của salon, lịch hẹn xếp theo từng thợ, tính tiền tại quầy có hoá đơn và tip, cuối tháng tự tính lương thợ theo % hoặc lương cố định. Dùng trên điện thoại, máy tính bảng và máy tính, bằng tiếng Việt, dùng thử {days} ngày miễn phí." },
+    { "q": "Phần mềm quản lý salon nào phù hợp với tiệm nail người Việt ở Séc?", "a": "SalonGo được làm cho tiệm nail và salon của người Việt ở châu Âu: app bằng tiếng Việt, khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp, giá tính bằng CZK và hỗ trợ bằng tiếng Việt, tiếng Séc." },
+    { "q": "SalonGo có EET 2.0 không?", "a": "Có. Bật EET một lần bằng chứng chỉ từ DIS+, sau đó mỗi hoá đơn tự gửi lên sở thuế. EET có trong mọi gói, không tính thêm tiền." },
+    { "q": "Có cần cài đặt gì không?", "a": "Không. Bạn dùng ngay trên trình duyệt máy tính và điện thoại. Có thêm app cho iPhone, Android, iPad, Windows và Mac." },
+    { "q": "Dùng thử có mất phí không?", "a": "Không. Mỗi salon mới được dùng thử {days} ngày với đủ tính năng, không cần thẻ thanh toán." },
+    { "q": "Thợ có xem được lịch của mình trên điện thoại không?", "a": "Có. Mỗi thợ có tài khoản riêng, đăng nhập trên điện thoại và thấy lịch hẹn của mình, và nếu chủ cho phép, cả doanh thu mình làm được." },
+    { "q": "Phần mềm tính lương thợ nail như thế nào?", "a": "Mỗi thợ tính lương theo % doanh thu cá nhân hoặc lương cố định theo tháng. Tip do chủ salon chọn: khách tip thợ nào thợ đó nhận, hoặc chia đều cho các thợ." }
+  ]
+}

@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
-import { PageHero } from "@/components/ui/PageHero";
-import { HomeVideos } from "@/components/home/HomeVideos";
-import { PhoneShot } from "@/components/ui/AppShot";
+import { ArticleBody, Toc, type GuideSection } from "@/components/guide2/Article";
+import { FaqList, type Qa } from "@/components/guide2/FaqList";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { SIGNUP_URL, appLink } from "@/lib/app-links";
 import { siteConfig } from "@/lib/metadata";
 import { getPlans, priceRange } from "@/lib/plans";
+import { SHOTS } from "@/lib/media";
 
-// Trang nội dung cho từ khoá chính ("phần mềm quản lý salon / tiệm nail", "rezervační systém pro salon",
-// "Salonsoftware", "salon management software"): giải thích đầy đủ, liên kết sang trang tính năng, giá, FAQ.
+// Bài hướng dẫn cho từ khoá chính ("phần mềm quản lý salon / tiệm nail", "rezervační systém pro salon",
+// "Salonsoftware", "salon management software"): đọc như một bài viết, liên kết sang Tính năng, Bảng giá, Hỏi đáp.
 const PATH = "/phan-mem-quan-ly-salon";
 
+/** Ảnh trong bài theo id mục */
+const FIGURES = { "dat-lich-online": SHOTS.booking, "thu-chi": SHOTS.thuchi };
+
 type Props = { params: Promise<{ locale: string }> };
-type Section = { h: string; p: string; points?: string[]; link?: { href: string; label: string } };
-type Qa = { q: string; a: string };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -28,11 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SalonSoftwarePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("guide");
+  const t = await getTranslations("guide2");
+  const tMeta = await getTranslations("guide");
   const tNav = await getTranslations("nav");
-  const sections = t.raw("sections") as Section[];
+  const sections = t.raw("sections") as GuideSection[];
   const faq = t.raw("faq") as Qa[];
   const prices = priceRange(await getPlans());
+  const url = pageUrl(locale, PATH);
+  const org = { "@id": `${siteConfig.url}/#organization` };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -41,8 +45,20 @@ export default async function SalonSoftwarePage({ params }: Props) {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: tNav("home"), item: pageUrl(locale) },
-          { "@type": "ListItem", position: 2, name: t("crumb"), item: pageUrl(locale, PATH) },
+          { "@type": "ListItem", position: 2, name: t("crumb"), item: url },
         ],
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: t("h1"),
+        description: tMeta("metaDesc"),
+        inLanguage: locale,
+        mainEntityOfPage: url,
+        image: `${siteConfig.url}${siteConfig.ogImage}`,
+        author: org,
+        publisher: org,
+        about: { "@id": `${siteConfig.url}/#software` },
       },
       {
         "@type": "FAQPage",
@@ -53,7 +69,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
         "@id": `${siteConfig.url}/#software`,
         name: siteConfig.name,
         url: pageUrl(locale),
-        publisher: { "@id": `${siteConfig.url}/#organization` },
+        publisher: org,
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, Windows, macOS",
         offers: { "@type": "AggregateOffer", priceCurrency: "CZK", lowPrice: prices.low, highPrice: prices.high, offerCount: prices.count },
@@ -63,86 +79,67 @@ export default async function SalonSoftwarePage({ params }: Props) {
 
   return (
     <PageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <PageHero
-        crumb={t("crumb")}
-        title={t("h1")}
-        lead={t("intro")}
-        actions={
-          <>
-            <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary sg-arrow sg-arrow-up min-h-12 px-7 text-base">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+
+      <header className="bg-white pb-12 pt-8 sm:pt-12 lg:pb-16 lg:pt-16">
+        <div className="x-wrap">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex flex-wrap items-center gap-2 text-[14px] text-muted">
+              <li>
+                <Link href="/" className="inline-flex min-h-11 items-center hover:text-ink">
+                  {tNav("home")}
+                </Link>
+              </li>
+              <li aria-hidden>/</li>
+              <li aria-current="page" className="text-ink">
+                {t("crumb")}
+              </li>
+            </ol>
+          </nav>
+          <h1 className="mt-4 max-w-[56rem] text-[clamp(2.2rem,1.3rem+3.4vw,4rem)] font-semibold leading-[1.1] tracking-[-0.035em] text-ink [text-wrap:balance] [:lang(vi)_&]:leading-[1.2]">
+            {t("h1")}
+          </h1>
+          <p className="x-lead mt-6 max-w-[40rem]">{t("intro")}</p>
+          <div data-cta className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href={appLink(SIGNUP_URL, locale)} className="x-btn-primary !min-h-[52px] !px-7 text-base">
               {t("ctaTrial")}
-              <ArrowUpRight className="size-[18px]" aria-hidden />
             </a>
-            <Link href="/tinh-nang" className="btn-secondary min-h-12 px-7 text-base">
+            <Link href="/tinh-nang" className="x-btn-light !min-h-[52px] !px-7 text-base">
               {t("ctaFeatures")}
             </Link>
-          </>
-        }
-      />
-
-      <section className="sg-section">
-        <div className="sg-container grid gap-10 lg:grid-cols-12 lg:gap-14">
-          <article className="lg:col-span-8">
-            {sections.map((s, i) => (
-              <div key={i} className={i ? "mt-10 border-t border-line pt-10" : ""}>
-                <h2 className="sg-h2-sm">{s.h}</h2>
-                <p className="mt-4 text-[1.0625rem] leading-relaxed text-ink/80">{s.p}</p>
-                {s.points && (
-                  <ul className="mt-5 space-y-3">
-                    {s.points.map((pt) => (
-                      <li key={pt} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink/85">
-                        <Check className="mt-1 size-4 shrink-0 text-brand-700" strokeWidth={3} aria-hidden />
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {s.link && (
-                  <Link href={s.link.href} className="sg-arrow mt-5 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand-700 hover:text-brand-800">
-                    {s.link.label}
-                    <ArrowRight className="size-4" aria-hidden />
-                  </Link>
-                )}
-              </div>
-            ))}
-          </article>
-
-          <aside className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
-              <PhoneShot src="/images/app/m-tong-quan.webp" alt={t("shotAlt")} className="mx-auto max-w-[260px]" />
-              <div className="mt-6 rounded-xl border border-line bg-nude p-5">
-                <p className="font-semibold text-ink">{t("boxTitle")}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{t("boxText")}</p>
-                <a href={appLink(SIGNUP_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 w-full py-3 text-sm">
-                  {t("ctaTrial")}
-                </a>
-                <Link href="/bang-gia" className="mt-2 flex min-h-11 items-center justify-center text-sm font-semibold text-brand-700">
-                  {t("ctaPricing")}
-                </Link>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section className="sg-section bg-nude">
-        <div className="sg-container max-w-[860px]">
-          <h2 className="sg-h2">{t("faqTitle")}</h2>
-          <div className="mt-6 border-t border-line">
-            {faq.map(({ q, a }) => (
-              <details key={q} className="group border-b border-line py-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-ink sm:text-lg">
-                  {q}
-                  <span className="text-brand-700 transition-transform group-open:rotate-45" aria-hidden>+</span>
-                </summary>
-                <p className="mt-3 text-[15px] leading-relaxed text-muted">{a}</p>
-              </details>
-            ))}
           </div>
         </div>
-      </section>
-      <HomeVideos />
+      </header>
+
+      <div className="bg-white pb-16 lg:pb-24">
+        <div className="x-wrap">
+          <div className="grid gap-10 border-t border-line pt-10 lg:grid-cols-12 lg:gap-12 lg:pt-16 [&>*]:min-w-0">
+            <aside className="lg:col-span-3">
+              <Toc label={t("toc")} sections={sections} />
+            </aside>
+            <article className="lg:col-span-8 lg:col-start-5">
+              <ArticleBody sections={sections} shots={FIGURES} />
+
+              <div data-cta className="mt-16 max-w-[42rem] border-t border-ink/15 pt-8">
+                <p className="text-[1.35rem] font-semibold tracking-[-0.02em] text-ink">{t("endTitle")}</p>
+                <p className="x-body mt-2">{t("endText")}</p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+                  <a href={appLink(SIGNUP_URL, locale)} className="x-btn-primary !min-h-[52px] !px-7 text-base">
+                    {t("ctaTrial")}
+                  </a>
+                  <Link href="/bang-gia" className="x-link min-h-11">
+                    {t("ctaPricing")}
+                    <ArrowRight className="size-4" aria-hidden />
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <FaqList title={t("faqTitle")} items={faq} />
+      <div className="pb-12" />
     </PageShell>
   );
 }

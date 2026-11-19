@@ -34,8 +34,14 @@ export async function Pricing() {
   }));
 
   return (
-    <section id="pricing" className="sg-section">
+    <section id="pricing" className="sg-section scroll-mt-20">
       <div className="sg-container">
+        {/* Tách rõ: đây là 3 gói cho salon (gói Bàn ở khu riêng bên dưới) */}
+        <div className="mx-auto mb-8 max-w-[1080px] text-center sm:mb-10">
+          <p className="sg-kicker justify-center">{tPage("salonKicker")}</p>
+          <h2 className="sg-h2 mt-3">{tPage("salonTitle")}</h2>
+          <p className="sg-lead mx-auto mt-3 max-w-[720px]">{tPage("salonLead")}</p>
+        </div>
         <PricingCards
           plans={plans}
           labels={{

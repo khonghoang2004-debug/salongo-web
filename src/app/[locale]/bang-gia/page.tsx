@@ -13,6 +13,7 @@ import { SectionPricingFAQ } from "@/components/SectionPricingFAQ";
 import { PRICING_FAQ_KEYS } from "@/lib/pricing-faq";
 import { SectionRenew } from "@/components/SectionRenew";
 import { PricingDeskBand } from "@/components/desk/PricingDeskBand";
+import { PricingAudiencePicker } from "@/components/PricingAudiencePicker";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -41,6 +42,7 @@ export default async function PricingPage({ params }: Props) {
     <PageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <PricingPageHero />
+      <PricingAudiencePicker />
       <Pricing />
       <PricingDeskBand />
       <PricingComparisonTable />

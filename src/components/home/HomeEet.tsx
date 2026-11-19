@@ -1,5 +1,6 @@
+import type { CSSProperties } from "react";
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowUpRight, BadgeCheck, FileUp, Languages, Send } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, FileUp, Languages, Send } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SIGNUP_URL, appLink } from "@/lib/app-links";
 
@@ -66,6 +67,14 @@ export async function HomeEet() {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/goi-ban"
+              className="sg-arrow mt-4 flex min-h-11 items-center gap-2 rounded-2xl border border-dashed border-line px-4 py-3 text-[14px] font-semibold text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
+              style={{ "--d": "200ms" } as CSSProperties}
+            >
+              <span className="flex-1">{t("deskNote")}</span>
+              <ArrowRight className="size-4 shrink-0" aria-hidden />
+            </Link>
           </div>
         </div>
       </div>

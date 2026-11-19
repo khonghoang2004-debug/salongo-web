@@ -1261,7 +1261,8 @@
     "p4d": "Unser Support hilft beim Zertifikat und bei der Einrichtung, auf Vietnamesisch oder Tschechisch.",
     "cta": "Testen und EET einschalten",
     "more": "Fragen zu EET",
-    "compareRow": "EET 2.0 (in Tschechien Pflicht ab 2027)"
+    "compareRow": "EET 2.0 (in Tschechien Pflicht ab 2027)",
+    "deskNote": "Sie mieten einen Stuhl im Salon und haben eine eigene IČO? Tarif Stuhl für {priceDesk} CZK im Monat."
   },
   "homeFaq": {
     "title": "Häufige Fragen",

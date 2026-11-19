@@ -1261,7 +1261,8 @@
     "p4d": "S certifikátem i nastavením vám pomůže naše podpora, česky nebo vietnamsky.",
     "cta": "Vyzkoušet a zapnout EET",
     "more": "Zeptat se na EET",
-    "compareRow": "EET 2.0 (povinná od 2027)"
+    "compareRow": "EET 2.0 (povinná od 2027)",
+    "deskNote": "Pronajímáte si místo v salonu a máte vlastní IČO? Tarif Křeslo za {priceDesk} Kč měsíčně."
   },
   "homeFaq": {
     "title": "Časté otázky",

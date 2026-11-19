@@ -130,12 +130,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = Object.fromEntries(CLIENT_NAMESPACES.filter((k) => k in all).map((k) => [k, all[k]]));
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         {/* Bật chuyển động trước khi vẽ trang để nội dung không bị nháy */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('sg-js')" }} />
       </head>
-      <body>
+      {/* Font trên <body>: menu điện thoại và hộp thoại gắn thẳng vào body (portal), ngoài #sg-root */}
+      <body className="font-sans antialiased">
         <svg className="absolute size-0 overflow-hidden" aria-hidden>
           <defs>
             <linearGradient id="gradientPinkPurple" x1="0%" y1="0%" x2="100%" y2="100%">

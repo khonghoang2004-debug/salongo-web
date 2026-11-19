@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "var(--font-inter)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       boxShadow: {
         "sg-sm": "0 1px 2px rgba(34, 22, 26, 0.05)",
@@ -56,6 +57,10 @@ const config: Config = {
         muted: "#6B5F62",
         /* Nude: màu sơn móng nude rất nhạt, nền các dải phụ */
         sand: "#F7F1EF",
+        /* Bản mới: nền phụ sáng hơn nude, hồng phấn cho điểm nhấn nhỏ, mận đậm cho khối tối */
+        porcelain: "#FBF8F7",
+        blush: "#F4DDE2",
+        plum: "#2A0F17",
         nude: {
           DEFAULT: "#F7F1EF",
           deep: "#EDE2DF",

@@ -2,21 +2,16 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
-import { Navbar } from "@/components/Navbar";
-import { HomeHero } from "@/components/home/HomeHero";
-import { HomeWebsiteOffer } from "@/components/home/HomeWebsiteOffer";
-import { HomeFeatures } from "@/components/home/HomeFeatures";
-import { HomeVideos } from "@/components/home/HomeVideos";
-import { HomeHighlights } from "@/components/home/HomeHighlights";
-import { HomeMarketing } from "@/components/home/HomeMarketing";
-import { HomeLanguage } from "@/components/home/HomeLanguage";
-import { HomeSalonTypes } from "@/components/home/HomeSalonTypes";
-import { HomePricingTeaser } from "@/components/home/HomePricingTeaser";
-import { HomeEet } from "@/components/home/HomeEet";
-import { HomeFaq, HOME_FAQ_KEYS } from "@/components/home/HomeFaq";
-import { HowItWorks } from "@/components/HowItWorks";
-import { CTA } from "@/components/CTA";
-import { Footer } from "@/components/Footer";
+import { PageShell } from "@/components/PageShell";
+import { LandingHero } from "@/components/landing/LandingHero";
+import { Platforms } from "@/components/landing/Platforms";
+import { DayTour } from "@/components/landing/DayTour";
+import { MoreGrid } from "@/components/landing/MoreGrid";
+import { ClipSection } from "@/components/landing/ClipSection";
+import { WhoFor } from "@/components/landing/WhoFor";
+import { EetBand } from "@/components/landing/EetBand";
+import { PriceBoard } from "@/components/landing/PriceBoard";
+import { WebsiteBand, FaqShort, FinalCta, LANDING_FAQ } from "@/components/landing/Closing";
 import { siteConfig } from "@/lib/metadata";
 import { getPlans, priceRange } from "@/lib/plans";
 import { VIDEOS, videoSrc } from "@/lib/videos";
@@ -129,7 +124,7 @@ export default async function Home({ params }: Props) {
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}/#faq`,
-        mainEntity: HOME_FAQ_KEYS.map((i) => ({
+        mainEntity: LANDING_FAQ.map((i) => ({
           "@type": "Question",
           name: tFaq(`q${i}`),
           acceptedAnswer: { "@type": "Answer", text: tFaq(`a${i}`) },
@@ -160,23 +155,19 @@ export default async function Home({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <Navbar />
-      <main>
-        <HomeHero />
-        <HomeWebsiteOffer />
-        <HomeEet />
-        <HomeFeatures />
-        <HomeVideos />
-        <HomeHighlights />
-        <HomeMarketing />
-        <HomeLanguage />
-        <HomeSalonTypes />
-        <HowItWorks />
-        <HomePricingTeaser />
-        <HomeFaq />
-        <CTA />
-      </main>
-      <Footer />
+      <PageShell>
+        <LandingHero />
+        <Platforms />
+        <DayTour />
+        <MoreGrid />
+        <ClipSection />
+        <WhoFor />
+        <EetBand />
+        <PriceBoard />
+        <WebsiteBand />
+        <FaqShort />
+        <FinalCta />
+      </PageShell>
     </>
   );
 }

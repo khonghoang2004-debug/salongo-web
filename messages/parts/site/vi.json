@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "features": "Tính năng",
+    "pricing": "Bảng giá",
+    "desk": "Gói Bàn",
+    "website": "Làm website",
+    "faq": "Hỏi đáp",
+    "contact": "Liên hệ",
+    "about": "Về SalonGo",
+    "login": "Đăng nhập",
+    "renew": "Gia hạn",
+    "cta": "Dùng thử miễn phí",
+    "ctaShort": "Dùng thử",
+    "menu": "Menu",
+    "close": "Đóng menu",
+    "skip": "Bỏ qua, tới nội dung",
+    "download": "Tải app cho máy tính",
+    "windows": "Windows",
+    "mac": "macOS",
+    "trialLine": "{days} ngày miễn phí, không cần thẻ"
+  },
+  "footer": {
+    "tagline": "Phần mềm quản lý salon cho tiệm nail, tóc, mi và spa ở châu Âu.",
+    "product": "Sản phẩm",
+    "company": "SalonGo",
+    "help": "Hỗ trợ",
+    "legal": "Pháp lý",
+    "guide": "Cẩm nang phần mềm salon",
+    "solutions": "Giải pháp theo loại tiệm",
+    "support": "Trả lời trong 24 giờ, bằng tiếng Việt hoặc tiếng Séc.",
+    "operator": "Vận hành bởi",
+    "rights": "Bảo lưu mọi quyền."
+  }
+}

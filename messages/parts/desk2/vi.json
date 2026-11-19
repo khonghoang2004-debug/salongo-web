@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "kicker": "Gói Bàn, cho thợ thuê bàn có IČO riêng",
+    "soon": "Sắp ra mắt",
+    "title": "Tính tiền, hoá đơn và EET cho thợ thuê bàn trong salon",
+    "lead": "Hoá đơn đứng tên bạn, EET gửi bằng chứng chỉ của bạn. Doanh thu chỉ bạn xem được.",
+    "price": "{priceDesk} Kč/tháng",
+    "trial": "Dùng thử miễn phí 1 tháng",
+    "expected": "Giá dự kiến khi mở bán",
+    "cta": "Tạo tài khoản Bàn",
+    "notify": "Báo tôi khi mở bán",
+    "pricing": "Xem bảng giá",
+    "phoneAlt": "Màn tính tiền của SalonGo trên điện thoại: chọn dịch vụ, tổng tiền và nút thanh toán",
+    "receiptAlt": "Hoá đơn mẫu in tên và IČO của thợ thuê bàn, kèm mã EET (FIK và BKP)",
+    "receiptCaption": "Hoá đơn mẫu: tên và IČO của bạn, không phải của salon."
+  },
+  "what": {
+    "title": "Gói Bàn có gì?",
+    "yesTitle": "Có",
+    "y1": "Tính tiền: tiền mặt, thẻ, QR, tip",
+    "y2": "Hoá đơn mang tên và IČO của bạn",
+    "y3": "EET 2.0 bằng chứng chỉ của bạn",
+    "y4": "Thu & Chi riêng, chủ salon không xem được",
+    "y5": "Bảng giá dịch vụ riêng, trên điện thoại và máy tính",
+    "noTitle": "Không có",
+    "n1": "Lịch hẹn và đặt lịch online",
+    "n2": "Nhân viên và tính lương",
+    "n3": "Email marketing",
+    "noNote": "Cần lịch hẹn sau này? Đổi sang Basic, dữ liệu giữ nguyên."
+  },
+  "price": {
+    "title": "Gói Bàn giá bao nhiêu?",
+    "lead": "Một giá cho một người. EET có sẵn, không tính thêm.",
+    "perMonth": "Kč/tháng",
+    "orYearly": "hoặc {total} Kč/năm",
+    "trial": "Dùng thử miễn phí 1 tháng",
+    "expected": "Giá dự kiến khi mở bán",
+    "soonNote": "Gói Bàn sắp mở bán. Để lại liên hệ, chúng tôi báo bạn.",
+    "buy": "Mua / gia hạn gói Bàn",
+    "buyNote": "Mua và gia hạn trên web, app cập nhật ngay. App trên iPhone không bán gói.",
+    "stepsTitle": "Bắt đầu trong 3 bước",
+    "s1t": "Tạo tài khoản Bàn",
+    "s1d": "Đăng ký bằng email, nhập IČO.",
+    "s2t": "Gắn chứng chỉ EET",
+    "s2d": "Tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán.",
+    "s3t": "Tính tiền",
+    "s3d": "Mỗi lần tính tiền có hoá đơn và tự gửi EET."
+  },
+  "video": {
+    "title": "Xem gói Bàn trong 35 giây",
+    "note": "Phụ đề tiếng Séc"
+  },
+  "faq": {
+    "title": "Câu hỏi về gói Bàn",
+    "all": "Tất cả câu hỏi",
+    "q1": "Ai nên dùng gói Bàn?",
+    "a1": "Thợ nail, tóc, mi thuê bàn hoặc ghế trong salon và làm bằng IČO riêng. Nhân viên của salon thì không cần: salon thêm bạn vào tài khoản của salon.",
+    "q2": "Vì sao tôi cần EET riêng?",
+    "a2": "Từ 1.1.2027, EET 2.0 bắt buộc ở Séc. Có IČO riêng là người nộp thuế riêng, nên doanh thu gửi bằng chứng chỉ của bạn. Trường hợp được miễn, hãy hỏi kế toán.",
+    "q3": "Chủ salon có xem được doanh thu của tôi không?",
+    "a3": "Không. Hoá đơn, doanh thu và khách hàng trong tài khoản Bàn chỉ bạn xem được.",
+    "q4": "Trả tiền gói Bàn thế nào?",
+    "a4": "Bằng thẻ hoặc chuyển khoản, trên web ở trang Gia hạn gói. Không hợp đồng dài hạn. Tài khoản Bàn mới dùng thử miễn phí 1 tháng.",
+    "q5": "Sau này cần lịch hẹn thì sao?",
+    "a5": "Đổi sang gói Basic bất cứ lúc nào. Dữ liệu vẫn giữ nguyên.",
+    "q6": "EET có tính thêm tiền không?",
+    "a6": "Không. EET 2.0 có sẵn trong gói Bàn."
+  }
+}

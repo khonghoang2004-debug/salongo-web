@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "kicker": "Chair plan, for chair renters with their own IČO",
+    "soon": "Coming soon",
+    "title": "Checkout, receipts and EET for chair renters in a salon",
+    "lead": "Receipts carry your name, EET goes out with your certificate. Only you see your revenue.",
+    "price": "{priceDesk} CZK/month",
+    "trial": "1-month free trial",
+    "expected": "Expected price at launch",
+    "cta": "Create a Chair account",
+    "notify": "Tell me when it launches",
+    "pricing": "See pricing",
+    "phoneAlt": "SalonGo checkout on a phone: services, total and the pay button",
+    "receiptAlt": "Sample receipt printed with the chair renter's name and IČO, with EET codes (FIK and BKP)",
+    "receiptCaption": "Sample receipt: your name and IČO, not the salon's."
+  },
+  "what": {
+    "title": "What's in the Chair plan?",
+    "yesTitle": "Included",
+    "y1": "Checkout: cash, card, QR, tips",
+    "y2": "Receipts with your name and IČO",
+    "y3": "EET 2.0 with your certificate",
+    "y4": "Your own income & expenses, hidden from the salon owner",
+    "y5": "Your own price list, on phone and computer",
+    "noTitle": "Not included",
+    "n1": "Calendar and online booking",
+    "n2": "Staff and payroll",
+    "n3": "Email marketing",
+    "noNote": "Need appointments later? Switch to Basic, your data stays."
+  },
+  "price": {
+    "title": "How much is the Chair plan?",
+    "lead": "One price for one person. EET included at no extra cost.",
+    "perMonth": "CZK/month",
+    "orYearly": "or {total} CZK/year",
+    "trial": "1-month free trial",
+    "expected": "Expected price at launch",
+    "soonNote": "The Chair plan launches soon. Leave your contact and we'll tell you.",
+    "buy": "Buy / renew the Chair plan",
+    "buyNote": "Buy and renew on the web, the app updates right away. The iPhone app doesn't sell plans.",
+    "stepsTitle": "Start in 3 steps",
+    "s1t": "Create a Chair account",
+    "s1d": "Sign up by email, enter your IČO.",
+    "s2t": "Add your EET certificate",
+    "s2d": "Upload it from DIS+, enter the password and sales unit ID.",
+    "s3t": "Check out",
+    "s3d": "Every checkout makes a receipt and sends EET."
+  },
+  "video": {
+    "title": "The Chair plan in 35 seconds",
+    "note": "Czech subtitles"
+  },
+  "faq": {
+    "title": "Questions about the Chair plan",
+    "all": "All questions",
+    "q1": "Who is the Chair plan for?",
+    "a1": "Nail techs, hairdressers and lash artists who rent a chair or desk in a salon and work on their own IČO. Salon employees don't need it: the salon adds them to its account.",
+    "q2": "Why do I need my own EET?",
+    "a2": "From 1 January 2027 EET 2.0 applies in Czechia. With your own IČO you are a separate taxpayer, so your sales go out with your own certificate. Ask your accountant about exemptions.",
+    "q3": "Can the salon owner see my revenue?",
+    "a3": "No. Receipts, revenue and clients in a Chair account are visible only to you.",
+    "q4": "How do I pay for the Chair plan?",
+    "a4": "By card or bank transfer, on the web on the Renew page. No long-term contract. New Chair accounts get 1 month free.",
+    "q5": "What if I need appointments later?",
+    "a5": "Switch to Basic at any time. Your data stays.",
+    "q6": "Does EET cost extra?",
+    "a6": "No. EET 2.0 is included in the Chair plan."
+  }
+}

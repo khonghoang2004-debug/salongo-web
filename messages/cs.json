@@ -1491,5 +1491,49 @@
       "operator": "Provozovatel",
       "rights": "Všechna práva vyhrazena."
     }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Časté dotazy",
+      "lead": "Nenašli jste odpověď? Napište nám, odpovíme do 24 hodin.",
+      "contact": "Zeptat se"
+    },
+    "contact": {
+      "title": "Kontakt SalonGo",
+      "lead": "Zavolejte, napište nebo pošlete e-mail. Odpovíme do 24 hodin, česky nebo vietnamsky.",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "facebook": "Facebook",
+      "call": "Zavolat",
+      "write": "Napsat",
+      "send": "Poslat e-mail",
+      "open": "Otevřít",
+      "helpTitle": "S čím pomůžeme",
+      "help1": "Nastavení salonu, služeb a účtů pro personál",
+      "help2": "Certifikát EET z DIS+ a zapnutí EET",
+      "help3": "Dotazy k tarifům, fakturám a prodloužení",
+      "company": "Údaje o provozovateli"
+    },
+    "about": {
+      "title": "O SalonGo",
+      "lead": "SalonGo vyvíjí software pro nehtová, kadeřnická, řasová a kosmetická studia v Evropě. Začali jsme u vietnamských salonů v Česku.",
+      "whyTitle": "Proč SalonGo vzniklo",
+      "why1": "Mnoho salonů dosud píše rezervace do sešitu, mzdy počítá ručně a zisk zná až na konci měsíce.",
+      "why2": "Běžné programy nemají vietnamštinu a nepočítají s tím, jak vietnamské salony fungují.",
+      "why3": "Od roku 2027 musí každý salon v Česku posílat účtenky do EET 2.0.",
+      "promiseTitle": "Na čem trváme",
+      "promise1": "Data jsou uložena ve Frankfurtu (Německo), v EU, podle GDPR.",
+      "promise2": "Když tarif skončí, vaše data zůstanou.",
+      "promise3": "Podpora česky i vietnamsky, odpověď do 24 hodin.",
+      "promise4": "Každý tarif má všechny funkce a cena je jasně na webu.",
+      "who": "Provozovatel"
+    },
+    "notFound": {
+      "title": "Tuto stránku jsme nenašli",
+      "desc": "Odkaz se možná změnil. Zkuste úvodní stránku nebo ceník.",
+      "home": "Na úvod",
+      "pricing": "Ceník"
+    }
   }
 }

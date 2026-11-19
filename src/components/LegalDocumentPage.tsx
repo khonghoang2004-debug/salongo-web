@@ -1,6 +1,4 @@
 import { Link } from "@/i18n/navigation";
-import { ArrowLeft } from "lucide-react";
-import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
 import { getLegalPack } from "@/content/legal";
 import { LEGAL_DOCS, LEGAL_EFFECTIVE, OPERATOR, type LegalDocKey } from "@/lib/legal";
@@ -67,7 +65,7 @@ export function OperatorBox({ locale }: { locale: string }) {
   rows.push([ui.email, <a key="e" href={`mailto:${OPERATOR.email}`} className="font-medium text-brand-700 hover:underline [overflow-wrap:anywhere]">{OPERATOR.email}</a>]);
   rows.push([ui.phone, <a key="p" href={`tel:${OPERATOR.phone.replace(/\s/g, "")}`} className="font-medium text-brand-700 hover:underline">{OPERATOR.phone}</a>]);
   return (
-    <div className="rounded-[22px] border border-line bg-sand p-4 text-sm sm:p-5">
+    <div className="rounded-[18px] bg-porcelain p-5 text-sm ring-1 ring-black/[0.04] sm:p-6">
       <p className="font-semibold text-ink">{ui.operator}</p>
       <dl className="mt-2 grid gap-x-4 gap-y-1 sm:grid-cols-[auto,1fr]">
         {rows.map(([k, v]) => (
@@ -85,21 +83,14 @@ export function OperatorBox({ locale }: { locale: string }) {
 export async function LegalDocumentPage({ locale, docKey }: { locale: string; docKey: LegalDocKey }) {
   const { ui, docs } = getLegalPack(locale);
   const doc = docs[docKey];
-  const tNav = await getTranslations("nav");
   const others = LEGAL_DOCS.filter((d) => d.key !== docKey);
 
   return (
     <PageShell>
-      <header className="border-b border-line bg-white px-4 pt-8 pb-8 sm:px-6 sm:pt-10 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <Link
-            href="/"
-            className="mb-5 inline-flex min-h-11 items-center gap-1.5 rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-muted transition-colors hover:border-brand-300 hover:text-brand-700"
-          >
-            <ArrowLeft className="size-4" aria-hidden />
-            {tNav("backHome")}
-          </Link>
-          <h1 className="sg-h1">{doc.title}</h1>
+      <header className="bg-white pb-8 pt-12 sm:pt-16">
+        <div className="x-wrap">
+          <div className="max-w-3xl">
+          <h1 className="x-h2 text-ink">{doc.title}</h1>
           <p className="mt-3 text-sm text-muted">
             {ui.effective}: {formatDate(LEGAL_EFFECTIVE, locale)}
           </p>
@@ -111,15 +102,16 @@ export async function LegalDocumentPage({ locale, docKey }: { locale: string; do
               </Link>
             </p>
           ) : null}
+          </div>
         </div>
       </header>
 
-      <section className="bg-white px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 lg:px-8">
-        <div className="mx-auto max-w-3xl">
+      <section className="bg-white pb-20 pt-4 sm:pb-28">
+        <div className="x-wrap"><div className="max-w-3xl">
           <OperatorBox locale={locale} />
           {doc.sections.map((s) => (
-            <div key={s.heading} className="mt-8">
-              <h2 className="text-lg font-semibold text-ink sm:text-xl">{fillLegal(s.heading)}</h2>
+            <div key={s.heading} className="mt-10">
+              <h2 className="text-[1.2rem] font-semibold tracking-[-0.015em] text-ink sm:text-[1.3rem]">{fillLegal(s.heading)}</h2>
               <Body lines={s.body} />
             </div>
           ))}
@@ -136,7 +128,7 @@ export async function LegalDocumentPage({ locale, docKey }: { locale: string; do
               ))}
             </ul>
           </nav>
-        </div>
+        </div></div>
       </section>
     </PageShell>
   );

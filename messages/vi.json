@@ -1491,5 +1491,49 @@
       "operator": "Vận hành bởi",
       "rights": "Bảo lưu mọi quyền."
     }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "lead": "Không thấy câu bạn cần? Nhắn cho chúng tôi, trả lời trong 24 giờ.",
+      "contact": "Hỏi chúng tôi"
+    },
+    "contact": {
+      "title": "Liên hệ SalonGo",
+      "lead": "Gọi, nhắn hoặc gửi email. Chúng tôi trả lời trong 24 giờ, bằng tiếng Việt hoặc tiếng Séc.",
+      "phone": "Điện thoại",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "facebook": "Facebook",
+      "call": "Gọi",
+      "write": "Nhắn tin",
+      "send": "Gửi email",
+      "open": "Mở trang",
+      "helpTitle": "Chúng tôi giúp được gì",
+      "help1": "Cài đặt tiệm, dịch vụ và tài khoản thợ",
+      "help2": "Lấy chứng chỉ EET từ DIS+ và bật EET",
+      "help3": "Câu hỏi về gói, hoá đơn và gia hạn",
+      "company": "Thông tin doanh nghiệp"
+    },
+    "about": {
+      "title": "Về SalonGo",
+      "lead": "SalonGo làm phần mềm cho tiệm nail, tóc, mi và spa ở châu Âu, bắt đầu từ các tiệm của người Việt ở Séc.",
+      "whyTitle": "Vì sao có SalonGo",
+      "why1": "Nhiều tiệm vẫn ghi lịch vào sổ, tính lương bằng tay và cuối tháng mới biết lời lỗ.",
+      "why2": "Phần mềm có sẵn thường không có tiếng Việt và không làm theo cách tiệm người Việt vận hành.",
+      "why3": "Từ năm 2027, mọi tiệm ở Séc phải gửi hoá đơn lên EET 2.0.",
+      "promiseTitle": "Những điều chúng tôi giữ",
+      "promise1": "Dữ liệu lưu ở Frankfurt (Đức), trong Liên minh châu Âu, theo GDPR.",
+      "promise2": "Hết hạn gói, dữ liệu vẫn được giữ nguyên.",
+      "promise3": "Hỗ trợ bằng tiếng Việt và tiếng Séc, trả lời trong 24 giờ.",
+      "promise4": "Gói nào cũng đủ tính năng, giá ghi rõ trên web.",
+      "who": "Người vận hành"
+    },
+    "notFound": {
+      "title": "Không tìm thấy trang này",
+      "desc": "Có thể đường dẫn đã đổi. Thử trang chủ hoặc bảng giá.",
+      "home": "Về trang chủ",
+      "pricing": "Xem bảng giá"
+    }
   }
 }

@@ -20,7 +20,10 @@ export function MobileCta() {
     window.addEventListener("scroll", onScroll, { passive: true });
     const seen = new Set<Element>();
     const io = new IntersectionObserver((es) => {
-      for (const e of es) e.isIntersecting ? seen.add(e.target) : seen.delete(e.target);
+      for (const e of es) {
+        if (e.isIntersecting) seen.add(e.target);
+        else seen.delete(e.target);
+      }
       setCovered(seen.size > 0);
     });
     document.querySelectorAll("[data-cta], footer").forEach((el) => io.observe(el));

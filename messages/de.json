@@ -1491,5 +1491,49 @@
       "operator": "Betreiber",
       "rights": "Alle Rechte vorbehalten."
     }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Häufige Fragen",
+      "lead": "Antwort nicht gefunden? Schreiben Sie uns, wir antworten innerhalb von 24 Stunden.",
+      "contact": "Frage stellen"
+    },
+    "contact": {
+      "title": "Kontakt zu SalonGo",
+      "lead": "Anrufen, schreiben oder mailen. Wir antworten innerhalb von 24 Stunden, auf Tschechisch, Vietnamesisch oder Englisch.",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp",
+      "email": "E-Mail",
+      "facebook": "Facebook",
+      "call": "Anrufen",
+      "write": "Schreiben",
+      "send": "E-Mail senden",
+      "open": "Öffnen",
+      "helpTitle": "Wobei wir helfen",
+      "help1": "Salon, Leistungen und Konten fürs Team einrichten",
+      "help2": "EET-Zertifikat aus DIS+ holen und EET einschalten",
+      "help3": "Fragen zu Tarifen, Rechnungen und Verlängerung",
+      "company": "Angaben zum Betreiber"
+    },
+    "about": {
+      "title": "Über SalonGo",
+      "lead": "SalonGo entwickelt Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa, angefangen bei vietnamesischen Salons in Tschechien.",
+      "whyTitle": "Warum es SalonGo gibt",
+      "why1": "Viele Salons schreiben Termine noch ins Heft, rechnen Löhne von Hand und sehen den Gewinn erst am Monatsende.",
+      "why2": "Gängige Software hat kein Vietnamesisch und passt nicht dazu, wie diese Salons arbeiten.",
+      "why3": "Ab 2027 muss jeder Salon in Tschechien seine Belege an die EET 2.0 melden.",
+      "promiseTitle": "Worauf Sie sich verlassen können",
+      "promise1": "Die Daten liegen in Frankfurt (Deutschland), in der EU, nach DSGVO.",
+      "promise2": "Endet der Tarif, bleiben Ihre Daten erhalten.",
+      "promise3": "Support auf Tschechisch und Vietnamesisch, Antwort innerhalb von 24 Stunden.",
+      "promise4": "Jeder Tarif hat alle Funktionen, die Preise stehen auf der Website.",
+      "who": "Betreiber"
+    },
+    "notFound": {
+      "title": "Diese Seite gibt es nicht",
+      "desc": "Vielleicht hat sich der Link geändert. Versuchen Sie die Startseite oder die Preise.",
+      "home": "Zur Startseite",
+      "pricing": "Preise ansehen"
+    }
   }
 }

@@ -1261,7 +1261,8 @@
     "p4d": "Cần giúp lấy chứng chỉ hay cài đặt, đội hỗ trợ nói tiếng Việt và tiếng Séc làm cùng bạn.",
     "cta": "Dùng thử và bật EET",
     "more": "Hỏi về EET",
-    "compareRow": "EET 2.0 (bắt buộc ở Séc từ 2027)"
+    "compareRow": "EET 2.0 (bắt buộc ở Séc từ 2027)",
+    "deskNote": "Thuê bàn trong salon và có IČO riêng? Xem gói Bàn {priceDesk} Kč/tháng."
   },
   "homeFaq": {
     "title": "Câu hỏi hay gặp",

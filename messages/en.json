@@ -1261,7 +1261,8 @@
     "p4d": "Our support team helps you get the certificate and set it up, in Vietnamese or Czech.",
     "cta": "Try it and switch on EET",
     "more": "Ask about EET",
-    "compareRow": "EET 2.0 (mandatory in Czechia from 2027)"
+    "compareRow": "EET 2.0 (mandatory in Czechia from 2027)",
+    "deskNote": "Renting a chair in a salon with your own IČO? See the Chair plan, {priceDesk} CZK a month."
   },
   "homeFaq": {
     "title": "Frequently asked questions",

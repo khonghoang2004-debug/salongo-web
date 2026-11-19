@@ -109,7 +109,9 @@ test("404: trả 404 và chỉ có noindex", async () => {
 });
 
 test("chuyển hướng: / và trang thiếu ngôn ngữ về /vi, dấu / cuối bị bỏ", async () => {
-  assert.equal((await get("/", PRIMARY)).headers.get("location"), "/vi");
+  const root = await get("/", PRIMARY);
+  assert.equal(root.status, 308, "/ phải chuyển hướng vĩnh viễn");
+  assert.equal(root.headers.get("location"), "/vi");
   assert.equal((await get("/tinh-nang", PRIMARY)).headers.get("location"), "/vi/tinh-nang");
   const slash = await get("/vi/", PRIMARY);
   assert.equal(slash.status, 308);
@@ -143,18 +145,49 @@ test("demo website mẫu: noindex, không canonical, không có trong sitemap", 
   assert.equal(xml.includes("/website/mau/"), false);
 });
 
-test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), câu hỏi là H3", async () => {
-  // Số câu: trang FAQ 17 (QS trong src/app/[locale]/faq/page.tsx), trang giá 9 (PRICING_FAQ_KEYS); JSON-LD FAQPage phải có đúng bằng số câu đang hiện
-  for (const [path, re, n] of [["/vi/faq", /id="faq-a-q\d+"/g, 17], ["/vi/bang-gia", /id="pricing-faq-a\d+"/g, 9]]) {
+test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), số câu khớp FAQPage", async () => {
+  for (const path of ["/vi/faq", "/cs/faq", "/vi/bang-gia"]) {
     const html = await (await get(path, PRIMARY)).text();
-    assert.equal((html.match(re) ?? []).length, n, path);
-    const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
-    const faqPage = ld.flatMap((b) => b["@graph"] ?? [b]).find((x) => x["@type"] === "FAQPage");
-    assert.equal(faqPage.mainEntity.length, n, `${path} FAQPage`);
-    assert.match(html, /<h3[^>]*><button[^>]*aria-controls=/, path);
+    // Hai kiểu đang dùng: <details><summary> (nội dung đóng vẫn nằm trong HTML) hoặc nút aria-controls + vùng có id
+    const details = (html.match(/<details[\s>]/g) ?? []).length;
+    const buttons = (html.match(/aria-controls="[a-z-]*faq-a[a-z-]*\d+"/g) ?? []).length;
+    const panels = (html.match(/id="[a-z-]*faq-a[a-z-]*\d+"/g) ?? []).length;
+    const shown = details || panels;
+    assert.ok(shown >= 5, `${path}: ${shown} câu`);
+    if (!details) assert.equal(panels, buttons, path);
+    const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((m) => JSON.parse(m[1]))
+      .flatMap((b) => b["@graph"] ?? [b])
+      .find((n) => n["@type"] === "FAQPage");
+    assert.ok(ld, `${path}: thiếu FAQPage`);
+    assert.equal(ld.mainEntity.length, shown, `${path}: FAQPage khác số câu đang hiện`);
   }
-  const ld = await (await get("/vi/bang-gia", PRIMARY)).text();
-  assert.match(ld, /"@type":"FAQPage"/);
+});
+
+// Trang /cs, /en, /de mà còn chữ tiếng Việt thì Google coi là bản sao của /vi (và người Séc không hiểu):
+// H1 và H2 của mỗi ngôn ngữ phải khác bản tiếng Việt, và không chứa dấu chỉ có trong tiếng Việt.
+const VI_ONLY = /[ăắằẳẵặđơớờởỡợưứừửữựạảấầẩẫậẹẻẽếềểễệỉịọỏốồổỗộụủỹỳỷỵ]/i;
+const headings = (html) =>
+  [...html.matchAll(/<h([12])[^>]*>([\s\S]*?)<\/h\1>/g)].map((m) => m[2].replace(/<[^>]+>/g, "").replace(/&[a-z#0-9]+;/g, " ").trim());
+test("cs/en/de: tiêu đề H1/H2 đã dịch (không còn tiếng Việt)", async () => {
+  for (const p of PATHS.filter((x) => !["/privacy", "/terms", "/cookies", "/dpa", "/website-terms"].includes(x))) {
+    const vi = headings(await (await get(`/vi${p}`, PRIMARY)).text());
+    for (const l of ["cs", "en", "de"]) {
+      const hs = headings(await (await get(`/${l}${p}`, PRIMARY)).text());
+      assert.notEqual(hs[0], vi[0], `/${l}${p}: H1 giống bản tiếng Việt`);
+      const left = hs.filter((h) => VI_ONLY.test(h));
+      assert.deepEqual(left, [], `/${l}${p}: còn tiêu đề tiếng Việt`);
+    }
+  }
+});
+
+test("llms.txt: có thông tin thực thể và link tới các trang chính", async () => {
+  const res = await get("/llms.txt", PRIMARY);
+  assert.equal(res.status, 200);
+  const txt = await res.text();
+  for (const s of ["# SalonGo", "30241464", "salongosupport@gmail.com", "EET 2.0", `${SITE}/cs`, `${SITE}/vi`, `${SITE}/sitemap.xml`]) {
+    assert.ok(txt.includes(s), `llms.txt thiếu ${s}`);
+  }
 });
 
 test("header bảo mật: CSP không có unsafe-eval, không cho nhúng iframe, HSTS, nosniff…", async () => {

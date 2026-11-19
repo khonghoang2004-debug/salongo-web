@@ -102,6 +102,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: meta.description,
       images: [`${siteConfig.url}${siteConfig.ogImage}`],
     },
+    // Mã xác minh Search Console / Bing / Seznam: đặt biến môi trường trên Vercel (không cần sửa code).
+    // Google đã xác minh bằng file public/googlef4498c62abaef25e.html — đừng xoá file đó.
+    verification: {
+      ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : {}),
+      other: {
+        ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : {}),
+        ...(process.env.NEXT_PUBLIC_SEZNAM_SITE_VERIFICATION ? { "seznam-wmt": process.env.NEXT_PUBLIC_SEZNAM_SITE_VERIFICATION } : {}),
+      },
+    },
     // Không ghi "index, follow" (mặc định của Google): để trang 404 chỉ còn thẻ noindex của Next
     robots: {
       googleBot: {

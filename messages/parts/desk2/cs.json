@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "kicker": "Tarif Křeslo, pro nájemce s vlastním IČO",
+    "soon": "Již brzy",
+    "title": "Pokladna, účtenky a EET pro nájemce křesla v salonu",
+    "lead": "Účtenky na vaše jméno, EET s vaším certifikátem. Tržby vidíte jen vy.",
+    "price": "{priceDesk} Kč/měsíc",
+    "trial": "1 měsíc zdarma",
+    "expected": "Předpokládaná cena při spuštění",
+    "cta": "Založit účet Křeslo",
+    "notify": "Dejte mi vědět při spuštění",
+    "pricing": "Zobrazit ceník",
+    "phoneAlt": "Pokladna SalonGo v telefonu: služby, celková částka a tlačítko platby",
+    "receiptAlt": "Ukázková účtenka se jménem a IČO nájemce křesla a kódy EET (FIK a BKP)",
+    "receiptCaption": "Ukázková účtenka: vaše jméno a IČO, ne salonu."
+  },
+  "what": {
+    "title": "Co obsahuje tarif Křeslo?",
+    "yesTitle": "Obsahuje",
+    "y1": "Pokladna: hotovost, karta, QR, spropitné",
+    "y2": "Účtenky s vaším jménem a IČO",
+    "y3": "EET 2.0 s vaším certifikátem",
+    "y4": "Vlastní příjmy a výdaje, majitel salonu je nevidí",
+    "y5": "Vlastní ceník služeb, v telefonu i počítači",
+    "noTitle": "Neobsahuje",
+    "n1": "Kalendář a online rezervace",
+    "n2": "Zaměstnance a mzdy",
+    "n3": "E-mailový marketing",
+    "noNote": "Rezervace budete potřebovat později? Přejděte na Basic, data zůstanou."
+  },
+  "price": {
+    "title": "Kolik stojí tarif Křeslo?",
+    "lead": "Jedna cena pro jednoho člověka. EET v ceně, bez příplatku.",
+    "perMonth": "Kč/měsíc",
+    "orYearly": "nebo {total} Kč/rok",
+    "trial": "1 měsíc zdarma",
+    "expected": "Předpokládaná cena při spuštění",
+    "soonNote": "Tarif Křeslo spouštíme brzy. Nechte nám kontakt a dáme vám vědět.",
+    "buy": "Koupit / prodloužit tarif Křeslo",
+    "buyNote": "Tarif koupíte a prodloužíte na webu, aplikace se hned aktualizuje. Aplikace pro iPhone tarify neprodává.",
+    "stepsTitle": "Začněte ve 3 krocích",
+    "s1t": "Založte účet Křeslo",
+    "s1d": "Registrace e-mailem, zadáte IČO.",
+    "s2t": "Připojte certifikát EET",
+    "s2d": "Nahrajete certifikát z DIS+, zadáte heslo a označení evidenční jednotky.",
+    "s3t": "Markujte",
+    "s3d": "Každé markování vytvoří účtenku a odešle EET."
+  },
+  "video": {
+    "title": "Tarif Křeslo za 35 vteřin",
+    "note": "České titulky"
+  },
+  "faq": {
+    "title": "Otázky k tarifu Křeslo",
+    "all": "Všechny otázky",
+    "q1": "Pro koho je tarif Křeslo?",
+    "a1": "Pro nehtové designérky, kadeřníky a lash stylisty, kteří si v salonu pronajímají křeslo nebo stůl a podnikají na vlastní IČO. Zaměstnanec salonu ho nepotřebuje: salon ho přidá do svého účtu.",
+    "q2": "Proč potřebuji vlastní EET?",
+    "a2": "Od 1. 1. 2027 platí v Česku EET 2.0. S vlastním IČO jste samostatný poplatník, takže tržby evidujete svým certifikátem. Na výjimky se zeptejte účetní.",
+    "q3": "Vidí majitel salonu moje tržby?",
+    "a3": "Ne. Účtenky, tržby i klienty v účtu Křeslo vidíte jen vy.",
+    "q4": "Jak tarif Křeslo zaplatím?",
+    "a4": "Kartou nebo převodem, na webu na stránce Prodloužit tarif. Bez dlouhodobé smlouvy. Nový účet Křeslo má 1 měsíc zdarma.",
+    "q5": "Co když budu později potřebovat rezervace?",
+    "a5": "Kdykoli přejděte na Basic. Data zůstanou.",
+    "q6": "Stojí EET něco navíc?",
+    "a6": "Ne. EET 2.0 je v tarifu Křeslo v ceně."
+  }
+}

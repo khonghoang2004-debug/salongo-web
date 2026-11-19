@@ -45,7 +45,7 @@ const NAMES = { BASIC: "Basic", PRO: "Pro", PREMIUM: "Premium" } as const;
 
 // Gói Bàn (DESK): cho người thuê bàn / ghế có IČO riêng; "planned" khi app chưa bán
 const desk = (p: DeskPlan) =>
-  `- Chair / desk renter plan ("Bàn", code DESK) ${p.monthly}${p.yearly ? `; yearly ${p.yearly} CZK` : ""}${p.live ? "" : " (planned, not on sale yet)"}: for people who rent a chair or desk in a salon and work on their own IČO. Only checkout, receipts, revenue and Czech EET 2.0 with their own certificate; no appointments, staff or payroll. The salon owner cannot see the renter's revenue. Details: https://www.salongo.eu/en/goi-ban`;
+  `- Chair / desk renter plan ("Bàn", code DESK) ${p.monthly}${p.yearly ? `; yearly ${p.yearly} CZK` : ""}${p.live ? "" : " (planned, not on sale yet)"}: for people who rent a chair or desk in a salon and work on their own IČO. Only checkout, receipts, revenue and Czech EET 2.0 with their own certificate; no appointments, staff or payroll. 1-month free trial for a new desk account. The salon owner cannot see the renter's revenue. Details: https://www.salongo.eu/en/goi-ban`;
 
 export async function GET() {
   const plans = await getPlans();

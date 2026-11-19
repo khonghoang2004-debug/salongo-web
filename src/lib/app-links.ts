@@ -17,12 +17,26 @@ export type BillingCycle = "month" | "year";
  */
 export const RENEW_URL = `${APP_URL}/renew`;
 
+/**
+ * Giá trị hợp lệ trong hợp đồng link với app (không đổi): lang ∈ 4 ngôn ngữ của web (giống src/i18n/routing.ts),
+ * plan ∈ BASIC|PRO|PREMIUM|DESK, cycle ∈ month|year. Giá trị khác không bao giờ được đưa vào URL:
+ * lang lạ → ngôn ngữ mặc định "vi", plan / cycle lạ → bỏ tham số (app mở màn chọn gói bình thường).
+ */
+export const APP_LOCALES = ["vi", "en", "cs", "de"] as const;
+export const APP_PLANS = ["BASIC", "PRO", "PREMIUM", "DESK"] as const;
+export const BILLING_CYCLES = ["month", "year"] as const;
+
+const oneOf = <T extends string>(list: readonly T[], v: unknown): v is T => typeof v === "string" && (list as readonly string[]).includes(v);
+const appLang = (locale: string) => (oneOf(APP_LOCALES, locale) ? locale : APP_LOCALES[0]);
+
 /** Link Gia hạn / Mua gói theo ngôn ngữ web; trên thẻ gói thêm plan + cycle (tháng/năm) đang chọn. */
 export function renewLink(locale: string, plan?: PlanCode | "DESK", cycle?: BillingCycle): string {
   const u = new URL(RENEW_URL);
-  u.searchParams.set("lang", locale);
-  if (plan) u.searchParams.set("plan", plan);
-  if (plan && cycle) u.searchParams.set("cycle", cycle);
+  u.searchParams.set("lang", appLang(locale));
+  if (oneOf(APP_PLANS, plan)) {
+    u.searchParams.set("plan", plan);
+    if (oneOf(BILLING_CYCLES, cycle)) u.searchParams.set("cycle", cycle);
+  }
   return u.toString();
 }
 
@@ -38,7 +52,9 @@ export const DOWNLOAD_LINKS = {
  */
 export function appLink(url: string, locale: string): string {
   const u = new URL(url);
-  u.searchParams.set("lang", locale);
+  // Chỉ gắn ngôn ngữ cho link vào chính app (không biến hàm này thành chỗ dựng link ra domain lạ)
+  if (u.origin !== APP_URL) throw new Error(`appLink: not an app URL: ${url}`);
+  u.searchParams.set("lang", appLang(locale));
   return u.toString();
 }
 
@@ -49,6 +65,6 @@ export function appLink(url: string, locale: string): string {
 export function deskSignupLink(locale: string): string {
   const u = new URL(SIGNUP_URL);
   u.searchParams.set("plan", "DESK");
-  u.searchParams.set("lang", locale);
+  u.searchParams.set("lang", appLang(locale));
   return u.toString();
 }

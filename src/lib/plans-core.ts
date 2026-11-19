@@ -173,7 +173,7 @@ export type PlansFetcher = () => Promise<{ status: number; ok: boolean; json: ()
 export type PlansLoaderState = { lastGood: SitePlans | null };
 
 /**
- * - 404: endpoint chưa có trên app → giá dự phòng (bình thường cho tới khi app deploy endpoint).
+ * - 404: endpoint chưa có trên app → lần tải tốt gần nhất nếu có, không thì giá dự phòng.
  * - Lỗi mạng / timeout / 5xx / JSON sai: dùng lần tải tốt gần nhất trong bộ nhớ; nếu chưa có thì
  *   lúc build → giá dự phòng (build không được hỏng), lúc chạy (ISR) → ném lỗi để Next giữ trang tốt cũ
  *   thay vì lưu trang có giá dự phòng.
@@ -190,7 +190,8 @@ export async function loadPlans(fetcher: PlansFetcher, state: PlansLoaderState, 
   } catch (e) {
     return failed(e);
   }
-  if (res.status === 404) return FALLBACK_PLANS;
+  // 404 sau khi đã từng tải được (app deploy lỗi, route tạm mất) không được thay giá thật bằng giá dự phòng
+  if (res.status === 404) return state.lastGood ?? FALLBACK_PLANS;
   if (!res.ok) return failed(new Error(`plans API HTTP ${res.status}`));
   let mapped: SitePlans | null = null;
   try {
@@ -207,9 +208,18 @@ export async function loadPlans(fetcher: PlansFetcher, state: PlansLoaderState, 
 // Số liệu trong văn bản (messages/*.json): {days}, {from}, {discount}, {priceBasic|Pro|Premium},
 // {staffBasic|Pro}, {branchesBasic|Pro}, {priceDesk} (gói Bàn), {premiumLimits} / {premiumLimitsCap} (giới hạn gói Premium thành chữ). Đoạn "[[discount:…]]" chỉ hiện khi có giảm giá theo năm.
 
+const NUMBER_LOCALE: Record<string, string> = { vi: "vi-VN", cs: "cs-CZ", en: "en-GB", de: "de-DE" };
+
+/**
+ * Số (giá CZK, số ngày, giới hạn) theo ngôn ngữ của trang: 1.599 (vi), 1,599 (en), 1 599 (cs), 1.599 (de).
+ * Dùng chung cho văn bản (planTokens) và thẻ giá, để cùng một giá không hiện hai kiểu trên một trang.
+ */
+export function formatNumber(n: number, locale: string, maximumFractionDigits = 2): string {
+  return new Intl.NumberFormat(NUMBER_LOCALE[locale] ?? "cs-CZ", { maximumFractionDigits }).format(n);
+}
+
 export function planTokens(p: SitePlans, locale: string): Record<string, string> {
-  const tag = { vi: "vi-VN", cs: "cs-CZ", en: "en-GB", de: "de-DE" }[locale] ?? "cs-CZ";
-  const num = (n: number) => new Intl.NumberFormat(tag, { maximumFractionDigits: 2 }).format(n);
+  const num = (n: number) => formatNumber(n, locale);
   const by = (code: PlanCode) => p.plans.find((x) => x.code === code) ?? FALLBACK_PLANS.plans.find((x) => x.code === code)!;
   const lim = (n: number | null) => (n === null ? "∞" : num(n));
   const discount = maxYearlyDiscount(p);

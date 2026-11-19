@@ -8,7 +8,8 @@ import https from "node:https";
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
-const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
+// Giống SITEMAP_PATHS (src/app/sitemap.ts); test sitemap bên dưới so sánh chính xác hai danh sách
+const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/goi-ban", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
 // Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);
@@ -143,11 +144,80 @@ test("demo website mẫu: noindex, không canonical, không có trong sitemap", 
 });
 
 test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), câu hỏi là H3", async () => {
-  for (const [path, re, n] of [["/vi/faq", /id="faq-a-q\d+"/g, 15], ["/vi/bang-gia", /id="pricing-faq-a\d+"/g, 8]]) {
+  // Số câu: trang FAQ 17 (QS trong src/app/[locale]/faq/page.tsx), trang giá 9 (PRICING_FAQ_KEYS); JSON-LD FAQPage phải có đúng bằng số câu đang hiện
+  for (const [path, re, n] of [["/vi/faq", /id="faq-a-q\d+"/g, 17], ["/vi/bang-gia", /id="pricing-faq-a\d+"/g, 9]]) {
     const html = await (await get(path, PRIMARY)).text();
     assert.equal((html.match(re) ?? []).length, n, path);
+    const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
+    const faqPage = ld.flatMap((b) => b["@graph"] ?? [b]).find((x) => x["@type"] === "FAQPage");
+    assert.equal(faqPage.mainEntity.length, n, `${path} FAQPage`);
     assert.match(html, /<h3[^>]*><button[^>]*aria-controls=/, path);
   }
   const ld = await (await get("/vi/bang-gia", PRIMARY)).text();
   assert.match(ld, /"@type":"FAQPage"/);
+});
+
+test("header bảo mật: CSP không có unsafe-eval, không cho nhúng iframe, HSTS, nosniff…", async () => {
+  for (const p of ["/vi", "/en/bang-gia", "/cs/website/mau/ivelle-nail", "/robots.txt", "/api/download/linux"]) {
+    const res = await get(p, PRIMARY);
+    const csp = res.headers.get("content-security-policy") ?? "";
+    assert.match(csp, /default-src 'self'/, p);
+    assert.match(csp, /frame-ancestors 'none'/, p);
+    assert.match(csp, /object-src 'none'/, p);
+    assert.match(csp, /base-uri 'self'/, p);
+    assert.doesNotMatch(csp, /unsafe-eval/, p);
+    assert.match(res.headers.get("strict-transport-security") ?? "", /max-age=\d{8,}/, p);
+    assert.equal(res.headers.get("x-content-type-options"), "nosniff", p);
+    assert.equal(res.headers.get("x-frame-options"), "DENY", p);
+    assert.equal(res.headers.get("referrer-policy"), "strict-origin-when-cross-origin", p);
+    assert.match(res.headers.get("permissions-policy") ?? "", /camera=\(\)/, p);
+    assert.equal(res.headers.get("x-powered-by"), null, p);
+  }
+});
+
+test("JSON-LD trên mọi trang: parse được, không có '<' thô trong script", async () => {
+  for (const l of LOCALES) {
+    for (const p of PATHS) {
+      const html = await (await get(`/${l}${p}`, PRIMARY)).text();
+      for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+        assert.doesNotThrow(() => JSON.parse(m[1]), `/${l}${p}`);
+      }
+    }
+  }
+});
+
+test("chuyển hướng ngôn ngữ không bao giờ ra domain khác (//evil, \\evil, %2F%2F…)", async () => {
+  for (const p of ["//evil.example", "//evil", "/\\evil.example", "/%5Cevil.example", "/%2F%2Fevil.example", "/%2f%2fevil", "/vi//evil.example", "/foo%0d%0aSet-Cookie:%20x=1"]) {
+    const res = await get(p, PRIMARY);
+    const loc = res.headers.get("location");
+    if (loc === null) continue;
+    assert.ok(loc.startsWith("/") && !loc.startsWith("//") && !loc.startsWith("/\\"), `${p} -> ${loc}`);
+    assert.equal(res.headers.get("set-cookie")?.includes("x=1") ?? false, false, p);
+  }
+});
+
+test("API: download chỉ ra github.com của repo, os lạ 404; revalidate chỉ POST và cần secret", async () => {
+  for (const os of ["windows", "mac"]) {
+    const res = await get(`/api/download/${os}`, PRIMARY);
+    assert.equal(res.status, 302, os);
+    assert.match(res.headers.get("location"), /^https:\/\/github\.com\/khonghoang2004-debug\/salongo-desktop-releases\/releases\//, os);
+  }
+  for (const os of ["linux", "toString", "constructor", "__proto__", "..%2F..%2Frevalidate"]) {
+    assert.equal((await get(`/api/download/${os}`, PRIMARY)).status, 404, os);
+  }
+  assert.equal((await get("/api/revalidate", PRIMARY)).status, 405);
+  const post = (headers) =>
+    new Promise((resolve, reject) => {
+      const req = (BASE.startsWith("https:") ? https : http).request(BASE + "/api/revalidate", { method: "POST", headers }, (res) => {
+        res.resume();
+        res.on("end", () => resolve({ status: res.statusCode, cache: res.headers["cache-control"] }));
+      });
+      req.on("error", reject);
+      req.end();
+    });
+  for (const auth of [undefined, "Bearer ", "Bearer wrong", "wrong"]) {
+    const r = await post(auth ? { authorization: auth } : {});
+    assert.ok(r.status === 401 || r.status === 503, `${auth} -> ${r.status}`);
+    assert.equal(r.cache, "no-store");
+  }
 });

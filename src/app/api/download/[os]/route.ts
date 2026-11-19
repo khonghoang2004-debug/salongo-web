@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { RELEASE_REPO, fallbackDownloadUrl, installerFor, pickLatestInstaller } from "@/lib/release-download";
 
 /**
  * /api/download/windows | /api/download/mac → 302 to the installer of the NEWEST published SalonGo Desktop version.
@@ -7,45 +8,32 @@ import { NextResponse } from "next/server";
  * builds: download only, not pushed to the auto-update feed) were never offered. This picks the highest x.y.z among
  * all non-draft releases that carry the installer, full or pre-release; beta tags (x.y.z-beta.n) are skipped.
  * Cached for 5 minutes (GitHub API: 60 unauthenticated requests per hour per IP).
+ * The redirect target is always a github.com download of this repository (see src/lib/release-download.ts).
  */
 
-const REPO = "khonghoang2004-debug/salongo-desktop-releases";
-const ASSET = { windows: "SalonGo-Setup.exe", mac: "SalonGo-Setup.dmg" } as const;
-const FALLBACK = (name: string) => `https://github.com/${REPO}/releases/latest/download/${name}`;
-
-type Release = { tag_name: string; draft: boolean; assets: { name: string; browser_download_url: string }[] };
-
-const parse = (tag: string) => {
-  const m = /^v?(\d+)\.(\d+)\.(\d+)$/.exec(tag.trim());
-  return m ? [Number(m[1]), Number(m[2]), Number(m[3])] : null;
-};
-const newer = (a: number[], b: number[]) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2];
+const CACHE = { "Cache-Control": "public, max-age=300, s-maxage=300" };
 
 export async function GET(_req: Request, { params }: { params: Promise<{ os: string }> }) {
   const { os } = await params;
-  const name = ASSET[os as keyof typeof ASSET];
-  if (!name) return NextResponse.json({ error: "unknown os" }, { status: 404 });
+  const name = installerFor(os);
+  if (!name) return NextResponse.json({ error: "unknown os" }, { status: 404, headers: CACHE });
 
   try {
-    const res = await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=30`, {
+    const res = await fetch(`https://api.github.com/repos/${RELEASE_REPO}/releases?per_page=30`, {
       // GITHUB_TOKEN (tuỳ chọn, biến môi trường trên Vercel): nâng giới hạn từ 60 lên 5000 lượt/giờ
       headers: {
         Accept: "application/vnd.github+json",
         ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}),
       },
       next: { revalidate: 300 },
+      // GitHub treo không được giữ người bấm "Tải về" mãi: hết 5 s thì dùng link bản chính thức mới nhất
+      signal: AbortSignal.timeout(5000),
     });
     if (!res.ok) throw new Error(`GitHub ${res.status}`);
-    const releases = (await res.json()) as Release[];
-    let best: { v: number[]; url: string } | null = null;
-    for (const r of releases) {
-      const v = parse(r.tag_name);
-      const asset = r.assets.find((a) => a.name === name);
-      if (r.draft || !v || !asset) continue;
-      if (!best || newer(v, best.v) > 0) best = { v, url: asset.browser_download_url };
-    }
-    return NextResponse.redirect(best?.url ?? FALLBACK(name), { status: 302, headers: { "Cache-Control": "public, max-age=300" } });
+    const url = pickLatestInstaller(await res.json(), name);
+    return NextResponse.redirect(url ?? fallbackDownloadUrl(name), { status: 302, headers: CACHE });
   } catch {
-    return NextResponse.redirect(FALLBACK(name), 302);
+    // GitHub down / rate-limited: the "latest full release" link still works; cache briefly so it is retried soon
+    return NextResponse.redirect(fallbackDownloadUrl(name), { status: 302, headers: { "Cache-Control": "public, max-age=60, s-maxage=60" } });
   }
 }

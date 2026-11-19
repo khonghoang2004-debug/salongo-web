@@ -8,7 +8,7 @@ import https from "node:https";
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
-const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
+const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/goi-ban", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
 // Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);
@@ -143,11 +143,41 @@ test("demo website mẫu: noindex, không canonical, không có trong sitemap", 
 });
 
 test("FAQ: mọi câu trả lời có sẵn trong HTML (không chỉ khi bấm mở), câu hỏi là H3", async () => {
-  for (const [path, re, n] of [["/vi/faq", /id="faq-a-q\d+"/g, 15], ["/vi/bang-gia", /id="pricing-faq-a\d+"/g, 8]]) {
+  // Số câu hỏi đổi theo nội dung: chỉ cần mỗi nút mở (aria-controls) có câu trả lời tương ứng trong HTML
+  for (const [path, id] of [["/vi/faq", "faq-a-q"], ["/vi/bang-gia", "pricing-faq-a"]]) {
     const html = await (await get(path, PRIMARY)).text();
-    assert.equal((html.match(re) ?? []).length, n, path);
+    const answers = (html.match(new RegExp(`id="${id}\\d+"`, "g")) ?? []).length;
+    const buttons = (html.match(new RegExp(`aria-controls="${id}\\d+"`, "g")) ?? []).length;
+    assert.ok(answers >= 5, `${path}: ${answers} câu trả lời`);
+    assert.equal(answers, buttons, path);
     assert.match(html, /<h3[^>]*><button[^>]*aria-controls=/, path);
   }
   const ld = await (await get("/vi/bang-gia", PRIMARY)).text();
   assert.match(ld, /"@type":"FAQPage"/);
+});
+
+// Trang /cs, /en, /de mà còn chữ tiếng Việt thì Google coi là bản sao của /vi (và người Séc không hiểu):
+// H1 và H2 của mỗi ngôn ngữ phải khác bản tiếng Việt, và không chứa dấu chỉ có trong tiếng Việt.
+const VI_ONLY = /[ăắằẳẵặđơớờởỡợưứừửữựạảấầẩẫậẹẻẽếềểễệỉịọỏốồổỗộụủỹỳỷỵ]/i;
+const headings = (html) =>
+  [...html.matchAll(/<h([12])[^>]*>([\s\S]*?)<\/h\1>/g)].map((m) => m[2].replace(/<[^>]+>/g, "").replace(/&[a-z#0-9]+;/g, " ").trim());
+test("cs/en/de: tiêu đề H1/H2 đã dịch (không còn tiếng Việt)", async () => {
+  for (const p of PATHS.filter((x) => !["/privacy", "/terms", "/cookies", "/dpa", "/website-terms"].includes(x))) {
+    const vi = headings(await (await get(`/vi${p}`, PRIMARY)).text());
+    for (const l of ["cs", "en", "de"]) {
+      const hs = headings(await (await get(`/${l}${p}`, PRIMARY)).text());
+      assert.notEqual(hs[0], vi[0], `/${l}${p}: H1 giống bản tiếng Việt`);
+      const left = hs.filter((h) => VI_ONLY.test(h));
+      assert.deepEqual(left, [], `/${l}${p}: còn tiêu đề tiếng Việt`);
+    }
+  }
+});
+
+test("llms.txt: có thông tin thực thể và link tới các trang chính", async () => {
+  const res = await get("/llms.txt", PRIMARY);
+  assert.equal(res.status, 200);
+  const txt = await res.text();
+  for (const s of ["# SalonGo", "30241464", "salongosupport@gmail.com", "EET 2.0", `${SITE}/cs`, `${SITE}/vi`, `${SITE}/sitemap.xml`]) {
+    assert.ok(txt.includes(s), `llms.txt thiếu ${s}`);
+  }
 });

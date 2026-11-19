@@ -8,6 +8,8 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { PhoneShot } from "@/components/ui/AppShot";
 import { DeskPlanCard } from "@/components/desk/DeskPlanCard";
+import { FeatureVideo } from "@/components/video/FeatureVideo";
+import { DESK_VIDEO, videoSrc } from "@/lib/videos";
 import { deskSignupLink } from "@/lib/app-links";
 import { getPlans } from "@/lib/plans";
 import { pageMetadata, pageUrl } from "@/lib/seo";
@@ -68,6 +70,8 @@ export default async function DeskPlanPage({ params }: Props) {
   const tNav = await getTranslations("nav");
   const tPricing = await getTranslations("pricingPage");
   const tPages = await getTranslations("pages");
+  const tVid = await getTranslations("videos");
+  const vs = videoSrc(DESK_VIDEO);
   const plans = await getPlans();
   const { desk } = plans;
   const salonFrom = Math.min(...plans.plans.map((p) => p.monthly));
@@ -85,6 +89,17 @@ export default async function DeskPlanPage({ params }: Props) {
           name: t(`q${i}`),
           acceptedAnswer: { "@type": "Answer", text: t(`a${i}`) },
         })),
+      },
+      {
+        "@type": "VideoObject",
+        "@id": `${url}#video`,
+        name: `${siteConfig.name} – ${t("videoTitle")}`,
+        description: tPages("deskDesc"),
+        thumbnailUrl: `${siteConfig.url}${vs.posterPc}`,
+        contentUrl: `${siteConfig.url}${vs.pc}`,
+        uploadDate: "2026-11-19",
+        duration: DESK_VIDEO.iso,
+        inLanguage: "vi",
       },
       ...(desk.live
         ? [
@@ -158,6 +173,17 @@ export default async function DeskPlanPage({ params }: Props) {
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">{t(dk)}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="sg-section !pt-0" aria-labelledby="desk-video-title">
+        <div data-reveal className="sg-container">
+          <h2 id="desk-video-title" className="sg-h2-sm mb-5 text-ink sm:mb-6">
+            {t("videoTitle")}
+          </h2>
+          <div className="mx-auto max-w-[960px]">
+            <FeatureVideo video={DESK_VIDEO} title={t("videoTitle")} playLabel={tVid("play")} note={t("videoNote")} />
           </div>
         </div>
       </section>

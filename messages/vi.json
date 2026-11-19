@@ -87,7 +87,11 @@
     "q14": "App có những ngôn ngữ nào?",
     "a14": "App của salon có tiếng Việt, Séc, Slovakia, Anh, Đức và Pháp. Trang đặt lịch của khách có tiếng Séc, Slovakia, Anh, Đức và Pháp.",
     "q15": "Gửi email marketing cho khách như thế nào?",
-    "a15": "Vào Khách hàng → Marketing, chọn một trong 10 mẫu theo dịp, sửa nội dung, thêm ưu đãi nếu muốn, xem trước rồi gửi. Email chỉ tới khách có email và đã đồng ý nhận ưu đãi; mỗi salon gửi 1 chiến dịch mỗi ngày. Có trong mọi gói."
+    "a15": "Vào Khách hàng → Marketing, chọn một trong 10 mẫu theo dịp, sửa nội dung, thêm ưu đãi nếu muốn, xem trước rồi gửi. Email chỉ tới khách có email và đã đồng ý nhận ưu đãi; mỗi salon gửi 1 chiến dịch mỗi ngày. Có trong mọi gói.",
+    "q16": "SalonGo có hỗ trợ EET 2.0 không?",
+    "a16": "Có. EET 2.0 bắt buộc ở Séc từ 1.1.2027. Trong SalonGo bạn chỉ cần tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán; sau đó mỗi lần tính tiền app tự gửi lên sở thuế. EET có trong mọi gói, không tính thêm.",
+    "q17": "Tôi thuê bàn trong salon, có IČO riêng thì sao?",
+    "a17": "Dùng gói Bàn {priceDesk} Kč/tháng: chỉ có tính tiền, hoá đơn, doanh thu và EET bằng chứng chỉ của chính bạn. Chủ salon không xem được doanh thu của bạn."
   },
   "about": {
     "title": "Về SalonGo",
@@ -222,7 +226,8 @@
     "faqA10": "Không. Dữ liệu vẫn giữ nguyên. App nhắc trước 2 ngày; khi hết hạn, một số chức năng tạm khoá đến khi gia hạn, riêng tính tiền và hoá đơn vẫn dùng được.",
     "compareRowMarketing": "Email marketing & nhắc sinh nhật",
     "faqQ11": "Tôi thuê bàn trong salon và có IČO riêng, nên chọn gói nào?",
-    "faqA11": "Gói Bàn, {priceDesk} Kč/tháng. Gói này chỉ có tính tiền, hoá đơn, doanh thu và EET bằng chứng chỉ của chính bạn, không có lịch hẹn. Chủ salon không xem được doanh thu của bạn. Cần lịch hẹn và đặt lịch online thì đổi sang gói Basic bất cứ lúc nào."
+    "faqA11": "Gói Bàn, {priceDesk} Kč/tháng. Gói này chỉ có tính tiền, hoá đơn, doanh thu và EET bằng chứng chỉ của chính bạn, không có lịch hẹn. Chủ salon không xem được doanh thu của bạn. Cần lịch hẹn và đặt lịch online thì đổi sang gói Basic bất cứ lúc nào.",
+    "compareRowEet": "EET 2.0 (bắt buộc ở Séc từ 2027)"
   },
   "footer": {
     "quickLinks": "Điều hướng nhanh",
@@ -232,7 +237,7 @@
   },
   "pages": {
     "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính lương",
-    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: nhận lịch hẹn, đặt lịch online, tính tiền, tính lương thợ, báo cáo. Dùng thử {days} ngày.",
+    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc: đặt lịch online, tính tiền, EET 2.0, tính lương thợ, báo cáo. Dùng thử {days} ngày.",
     "featuresTitle": "App đặt lịch, nhận lịch hẹn, tính tiền, tính lương thợ",
     "featuresDesc": "Một app tiếng Việt cho salon: khách đặt lịch online, nhận lịch hẹn theo thợ, tính tiền tại quầy, khách hàng, email marketing, báo cáo, tính lương thợ, đa chi nhánh.",
     "solutionsTitle": "Giải pháp quản lý tiệm nail, salon tóc",
@@ -282,7 +287,9 @@
     "trial1": "{days} ngày miễn phí",
     "trial2": "Không cần thẻ thanh toán",
     "trial3": "Hỗ trợ tiếng Việt, tiếng Séc",
-    "imageAltPhone": "Lịch hẹn theo nhân viên trên điện thoại"
+    "imageAltPhone": "Lịch hẹn theo nhân viên trên điện thoại",
+    "loginLine": "Đã có tài khoản?",
+    "trial4": "Sẵn sàng EET 2.0"
   },
   "download": {
     "eyebrow": "Máy tính và điện thoại",
@@ -1258,6 +1265,46 @@
     "soonNote": "Gói Bàn đang được hoàn thiện trong app. Để lại liên hệ, chúng tôi báo bạn ngay khi mở bán.",
     "shotAlt": "Màn tính tiền của SalonGo trên điện thoại",
     "badgeNew": "Mới",
-    "audience": "Cho người thuê bàn"
+    "audience": "Cho người thuê bàn",
+    "videoTitle": "Xem gói Bàn trong 35 giây",
+    "videoNote": "Phụ đề tiếng Séc"
+  },
+  "eet": {
+    "eyebrow": "EET 2.0 ở Séc",
+    "titleBefore": "EET 2.0 bắt buộc từ 1.1.2027.",
+    "titleAccent": "SalonGo đã sẵn sàng.",
+    "lead": "Từ năm 2027, mỗi lần khách trả tiền mặt hoặc thẻ đều phải gửi lên sở thuế. Với SalonGo, bạn không cần mua máy tính tiền hay phần mềm riêng: bật EET một lần, sau đó app tự gửi mỗi khi tính tiền.",
+    "countdown": "Còn {n} ngày",
+    "countdownLabel": "đến khi EET 2.0 bắt buộc",
+    "live": "Đang áp dụng",
+    "liveLabel": "EET 2.0 bắt buộc từ 1.1.2027",
+    "p1t": "Cài đặt trong 2 bước",
+    "p1d": "Tải chứng chỉ lấy trên cổng DIS+, nhập mật khẩu và mã chỗ bán. Tên, IČO và môi trường, app tự đọc từ chứng chỉ.",
+    "p2t": "Tự gửi mỗi lần tính tiền",
+    "p2d": "Tính tiền như thường ngày. App gửi hoá đơn lên sở thuế ngay, bạn không phải làm thêm gì.",
+    "p3t": "Có sẵn trong mọi gói",
+    "p3d": "EET nằm trong Basic, Pro, Premium và gói Bàn. Không tính thêm tiền.",
+    "p4t": "Hướng dẫn bằng tiếng Việt",
+    "p4d": "Cần giúp lấy chứng chỉ hay cài đặt, đội hỗ trợ nói tiếng Việt và tiếng Séc làm cùng bạn.",
+    "cta": "Dùng thử và bật EET",
+    "more": "Hỏi về EET",
+    "deskNote": "Thuê bàn trong salon và có IČO riêng? Xem gói Bàn {priceDesk} Kč/tháng.",
+    "compareRow": "EET 2.0 (bắt buộc ở Séc từ 2027)"
+  },
+  "homeFaq": {
+    "title": "Câu hỏi hay gặp",
+    "more": "Xem tất cả câu hỏi",
+    "q1": "SalonGo là gì?",
+    "a1": "SalonGo là app quản lý salon cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu: lịch hẹn, đặt lịch online cho khách, tính tiền, hoá đơn, EET 2.0, tính lương thợ, email cho khách và báo cáo. Dùng trên trình duyệt, máy tính Windows, Mac và điện thoại.",
+    "q2": "SalonGo giá bao nhiêu?",
+    "a2": "Gói salon từ {from} CZK/tháng (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), gói nào cũng đủ tính năng.[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử {days} ngày, không cần thẻ.",
+    "q3": "SalonGo có hỗ trợ EET 2.0 không?",
+    "a3": "Có. EET 2.0 bắt buộc ở Séc từ 1.1.2027. Trong SalonGo bạn chỉ cần tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán; sau đó mỗi lần tính tiền app tự gửi lên sở thuế. EET có trong mọi gói, không tính thêm.",
+    "q4": "Khách đặt lịch bằng tiếng gì?",
+    "a4": "Trang đặt lịch của salon có tiếng Séc, Slovakia, Đức, Anh và Pháp. Chủ tiệm và thợ dùng app bằng tiếng Việt.",
+    "q5": "Tôi thuê bàn trong salon, có IČO riêng thì sao?",
+    "a5": "Dùng gói Bàn {priceDesk} Kč/tháng: chỉ có tính tiền, hoá đơn, doanh thu và EET bằng chứng chỉ của chính bạn. Chủ salon không xem được doanh thu của bạn.",
+    "q6": "Dữ liệu của salon lưu ở đâu?",
+    "a6": "Trên máy chủ ở Frankfurt (Đức), trong Liên minh châu Âu, theo GDPR. Hết hạn gói, dữ liệu vẫn được giữ nguyên."
   }
 }

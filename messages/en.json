@@ -87,7 +87,11 @@
     "q14": "Which languages does the app have?",
     "a14": "The salon app is in Vietnamese, Czech, Slovak, English, German and French. The client booking page is in Czech, Slovak, English, German and French.",
     "q15": "How do I send a marketing email to clients?",
-    "a15": "Go to Clients → Marketing, pick one of 10 occasion templates, edit the text, add an offer if you like, preview and send. It only reaches clients with an email who agreed to offers; one campaign per salon per day. Included in every plan."
+    "a15": "Go to Clients → Marketing, pick one of 10 occasion templates, edit the text, add an offer if you like, preview and send. It only reaches clients with an email who agreed to offers; one campaign per salon per day. Included in every plan.",
+    "q16": "Does SalonGo support EET 2.0?",
+    "a16": "Yes. EET 2.0 is mandatory in Czechia from 1 January 2027. In SalonGo you upload your certificate from DIS+, enter its password and the sales unit ID; after that every payment is reported automatically. EET is included in every plan.",
+    "q17": "I rent a chair in a salon and have my own IČO. What should I use?",
+    "a17": "The Chair plan, {priceDesk} CZK a month: only checkout, receipts, revenue and EET with your own certificate. The salon owner cannot see your revenue."
   },
   "about": {
     "title": "About SalonGo",
@@ -222,7 +226,8 @@
     "faqA10": "No. Your data stays. The app reminds you 2 days before; after expiry some features are locked until you renew, while checkout and invoices keep working.",
     "compareRowMarketing": "Email marketing & birthday reminders",
     "faqQ11": "I rent a chair in a salon and have my own IČO. Which plan should I pick?",
-    "faqA11": "The Chair plan, {priceDesk} CZK a month. It has only checkout, receipts, revenue and EET with your own certificate, no appointments. The salon owner cannot see your revenue. If you later want appointments and online booking, switch to Basic at any time."
+    "faqA11": "The Chair plan, {priceDesk} CZK a month. It has only checkout, receipts, revenue and EET with your own certificate, no appointments. The salon owner cannot see your revenue. If you later want appointments and online booking, switch to Basic at any time.",
+    "compareRowEet": "EET 2.0 (mandatory in Czechia from 2027)"
   },
   "footer": {
     "quickLinks": "Quick links",
@@ -282,7 +287,9 @@
     "trial1": "{days} days free",
     "trial2": "No card required",
     "trial3": "Setup help included",
-    "imageAltPhone": "Staff calendar on the phone"
+    "imageAltPhone": "Staff calendar on the phone",
+    "loginLine": "Already have an account?",
+    "trial4": "Ready for EET 2.0"
   },
   "download": {
     "eyebrow": "Computer and phone",
@@ -1258,6 +1265,46 @@
     "soonNote": "We are finishing the Chair plan in the app. Leave us your contact and we will tell you as soon as it launches.",
     "shotAlt": "SalonGo checkout on a phone",
     "badgeNew": "New",
-    "audience": "For chair renters"
+    "audience": "For chair renters",
+    "videoTitle": "The Chair plan in 35 seconds",
+    "videoNote": "Vietnamese, Czech subtitles"
+  },
+  "eet": {
+    "eyebrow": "EET 2.0 in Czechia",
+    "titleBefore": "EET 2.0 is mandatory from 1 Jan 2027.",
+    "titleAccent": "SalonGo is ready.",
+    "lead": "From 2027 every cash or card payment must be reported to the Czech tax office. With SalonGo you don't need a cash register or extra software: switch EET on once and the app reports every payment for you.",
+    "countdown": "{n} days left",
+    "countdownLabel": "until EET 2.0 is mandatory",
+    "live": "In force",
+    "liveLabel": "EET 2.0 mandatory since 1 Jan 2027",
+    "p1t": "Set up in 2 steps",
+    "p1d": "Upload your certificate from the DIS+ portal, enter its password and the sales unit ID. The app reads your name, IČO and environment from the certificate.",
+    "p2t": "Sent with every checkout",
+    "p2d": "Check out as usual. The app sends the receipt to the tax office right away, nothing extra to do.",
+    "p3t": "Included in every plan",
+    "p3d": "EET is part of Basic, Pro, Premium and the Chair plan. No surcharge.",
+    "p4t": "Help in Vietnamese and Czech",
+    "p4d": "Our support team helps you get the certificate and set it up, in Vietnamese or Czech.",
+    "cta": "Try it and switch on EET",
+    "more": "Ask about EET",
+    "deskNote": "Renting a chair in a salon with your own IČO? See the Chair plan, {priceDesk} CZK a month.",
+    "compareRow": "EET 2.0 (mandatory in Czechia from 2027)"
+  },
+  "homeFaq": {
+    "title": "Frequently asked questions",
+    "more": "All questions",
+    "q1": "What is SalonGo?",
+    "a1": "SalonGo is salon management software for nail, hair, lash and beauty salons in Europe: appointments, online booking for clients, checkout, receipts, Czech EET 2.0, payroll, client emails and reports. It runs in the browser, on Windows and Mac, and on the phone.",
+    "q2": "How much does SalonGo cost?",
+    "a2": "Salon plans start at {from} CZK a month (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), every plan with every feature.[[discount: Paying yearly saves {discount}%.]] New salons get a {days}-day free trial, no card needed.",
+    "q3": "Does SalonGo support EET 2.0?",
+    "a3": "Yes. EET 2.0 is mandatory in Czechia from 1 January 2027. In SalonGo you upload your certificate from DIS+, enter its password and the sales unit ID; after that every payment is reported automatically. EET is included in every plan.",
+    "q4": "Which languages can clients book in?",
+    "a4": "The salon's booking page is in Czech, Slovak, German, English and French. Owners and staff can use the app in Vietnamese too.",
+    "q5": "I rent a chair in a salon and have my own IČO. What should I use?",
+    "a5": "The Chair plan, {priceDesk} CZK a month: only checkout, receipts, revenue and EET with your own certificate. The salon owner cannot see your revenue.",
+    "q6": "Where is salon data stored?",
+    "a6": "On servers in Frankfurt, Germany, inside the EU, in line with GDPR. If a plan expires, the data is kept."
   }
 }

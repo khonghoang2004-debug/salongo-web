@@ -57,19 +57,22 @@ export async function HomeHero() {
               {t("cta")}
               <ArrowUpRight className="size-[18px]" aria-hidden />
             </a>
-            {/* Điện thoại: menu đăng nhập nằm trong nút ☰, nên đặt thêm nút Đăng nhập ngay dưới nút dùng thử */}
-            <a href={appLink(LOGIN_URL, locale)} target="_blank" rel="noopener noreferrer" className="btn-ghost-light px-6 text-base sm:hidden">
-              <LogIn className="size-[18px]" aria-hidden />
-              {nav("login")}
-            </a>
             <a href="#video" className="btn-ghost-light px-6 text-base">
               <Play className="size-4 fill-current" aria-hidden />
               {v("heroVideo")}
             </a>
           </div>
 
-          <ul className="sg-in mt-8 flex flex-col gap-2.5 text-[15px] text-white/85 sm:flex-row sm:flex-wrap sm:gap-x-7" style={d(760)}>
-            {(["trial1", "trial2", "trial3"] as const).map((k) => (
+          {/* Điện thoại: menu đăng nhập nằm trong nút ☰, nên có dòng "Đã có tài khoản? Đăng nhập" ngay dưới nút (gọn hơn một nút to thứ ba) */}
+          <p className="sg-in mt-4 text-[15px] text-white/80 sm:hidden" style={d(700)}>
+            {t("loginLine")}{" "}
+            <a href={appLink(LOGIN_URL, locale)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1 font-semibold text-white underline underline-offset-4">
+              <LogIn className="size-4" aria-hidden />
+              {nav("login")}
+            </a>
+          </p>
+          <ul className="sg-in mt-6 flex sm:mt-8 flex-col gap-2.5 text-[15px] text-white/85 sm:flex-row sm:flex-wrap sm:gap-x-7" style={d(760)}>
+            {(["trial1", "trial2", "trial4", "trial3"] as const).map((k) => (
               <li key={k} className="flex items-center gap-2.5">
                 <Check className="size-4 shrink-0 text-white" strokeWidth={2.5} aria-hidden />
                 {t(k)}

@@ -14,6 +14,7 @@ Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://ap
 - Online booking page for each salon (client picks service, staff and a free time; the salon confirms in the app).
 - Appointment calendar per staff member and as a list, on computer and phone; auto-assign (on by default) gives unassigned bookings to the free staff member with the least work that day; email confirmations and a reminder to clients 1 h before.
 - Checkout (POS): cash, card, bank transfer with a payment QR code (QR Platba / EPC), tips recorded on the invoice; receipts for 80 mm printers; invoices exported to PDF.
+- Czech EET 2.0 (mandatory from 1 January 2027): set up in 2 steps (upload the DIS+ certificate, enter its password and the sales unit ID); every payment is then reported automatically. Included in every plan at no extra cost.
 - Clients: profiles, visit history, VIP / new / lapsed filters, VIP rules, membership/points program, birthdays.
 - Email marketing: 10 occasion templates (sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday), sent only to clients who agreed, with one-click unsubscribe; birthday reminders for the owner 2 days ahead, to send a birthday offer.
 - Reports: overview, revenue by staff/service/payment method, invoices.

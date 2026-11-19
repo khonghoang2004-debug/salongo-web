@@ -87,7 +87,11 @@
     "q14": "In welchen Sprachen gibt es die App?",
     "a14": "Die Salon-App gibt es auf Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch und Französisch, die Buchungsseite für Kunden auf Tschechisch, Slowakisch, Englisch, Deutsch und Französisch.",
     "q15": "Wie sende ich Kunden eine Marketing-E-Mail?",
-    "a15": "Unter Kunden → Marketing eine von 10 Vorlagen wählen, Text anpassen, optional Rabatt hinzufügen, Vorschau ansehen und senden. Sie erreicht nur Kunden mit E-Mail und Einwilligung; eine Kampagne pro Salon und Tag. In jedem Tarif enthalten."
+    "a15": "Unter Kunden → Marketing eine von 10 Vorlagen wählen, Text anpassen, optional Rabatt hinzufügen, Vorschau ansehen und senden. Sie erreicht nur Kunden mit E-Mail und Einwilligung; eine Kampagne pro Salon und Tag. In jedem Tarif enthalten.",
+    "q16": "Unterstützt SalonGo die EET 2.0?",
+    "a16": "Ja. Die EET 2.0 ist in Tschechien ab 1. Januar 2027 Pflicht. In SalonGo laden Sie Ihr Zertifikat aus DIS+ hoch und geben Passwort und Kennung der Verkaufsstelle ein; danach meldet die App jede Zahlung automatisch. EET ist in jedem Tarif enthalten.",
+    "q17": "Ich miete einen Stuhl im Salon und habe eine eigene IČO. Was nutze ich?",
+    "a17": "Den Tarif Stuhl für {priceDesk} CZK im Monat: nur Kasse, Belege, Umsatz und EET mit Ihrem eigenen Zertifikat. Der Salonbesitzer sieht Ihren Umsatz nicht."
   },
   "about": {
     "title": "Über SalonGo",
@@ -222,7 +226,8 @@
     "faqA10": "Nein. Ihre Daten bleiben. Die App erinnert 2 Tage vorher; nach Ablauf sind einige Funktionen bis zur Verlängerung gesperrt, Kasse und Belege funktionieren weiter.",
     "compareRowMarketing": "E-Mail-Marketing & Geburtstage",
     "faqQ11": "Ich miete einen Platz im Salon und habe eine eigene IČO. Welcher Tarif passt?",
-    "faqA11": "Der Tarif Stuhl für {priceDesk} CZK im Monat. Er enthält nur Kasse, Belege, Umsatz und EET mit Ihrem eigenen Zertifikat, keine Termine. Der Salonbesitzer sieht Ihren Umsatz nicht. Wenn Sie später Termine und Online-Buchung möchten, wechseln Sie jederzeit zu Basic."
+    "faqA11": "Der Tarif Stuhl für {priceDesk} CZK im Monat. Er enthält nur Kasse, Belege, Umsatz und EET mit Ihrem eigenen Zertifikat, keine Termine. Der Salonbesitzer sieht Ihren Umsatz nicht. Wenn Sie später Termine und Online-Buchung möchten, wechseln Sie jederzeit zu Basic.",
+    "compareRowEet": "EET 2.0 (in Tschechien Pflicht ab 2027)"
   },
   "footer": {
     "quickLinks": "Quicklinks",
@@ -282,7 +287,9 @@
     "trial1": "{days} Tage kostenlos",
     "trial2": "Keine Kreditkarte",
     "trial3": "Hilfe bei der Einrichtung",
-    "imageAltPhone": "Kalender nach Mitarbeitern auf dem Handy"
+    "imageAltPhone": "Kalender nach Mitarbeitern auf dem Handy",
+    "loginLine": "Schon ein Konto?",
+    "trial4": "Bereit für EET 2.0"
   },
   "download": {
     "eyebrow": "Computer und Handy",
@@ -1258,6 +1265,46 @@
     "soonNote": "Wir stellen den Tarif Stuhl in der App gerade fertig. Hinterlassen Sie Ihren Kontakt, wir melden uns zum Start.",
     "shotAlt": "SalonGo-Kasse auf dem Handy",
     "badgeNew": "Neu",
-    "audience": "Für Stuhlmieter"
+    "audience": "Für Stuhlmieter",
+    "videoTitle": "Der Tarif Stuhl in 35 Sekunden",
+    "videoNote": "Vietnamesisch, tschechische Untertitel"
+  },
+  "eet": {
+    "eyebrow": "EET 2.0 in Tschechien",
+    "titleBefore": "EET 2.0 ist ab 1. 1. 2027 Pflicht.",
+    "titleAccent": "SalonGo ist bereit.",
+    "lead": "Ab 2027 muss in Tschechien jede Bar- oder Kartenzahlung an das Finanzamt gemeldet werden. Mit SalonGo brauchen Sie keine Registrierkasse und keine Zusatzsoftware: EET einmal einschalten, danach meldet die App jede Zahlung selbst.",
+    "countdown": "Noch {n} Tage",
+    "countdownLabel": "bis EET 2.0 Pflicht wird",
+    "live": "Gilt",
+    "liveLabel": "EET 2.0 ist seit 1. 1. 2027 Pflicht",
+    "p1t": "In 2 Schritten eingerichtet",
+    "p1d": "Zertifikat aus dem DIS+-Portal hochladen, Passwort und Kennung der Verkaufsstelle eingeben. Name, IČO und Umgebung liest die App aus dem Zertifikat.",
+    "p2t": "Bei jedem Kassieren gesendet",
+    "p2d": "Kassieren Sie wie gewohnt. Die App sendet den Beleg sofort an das Finanzamt, sonst nichts zu tun.",
+    "p3t": "In jedem Tarif",
+    "p3d": "EET ist in Basic, Pro, Premium und im Tarif Stuhl enthalten. Ohne Aufpreis.",
+    "p4t": "Hilfe auf Vietnamesisch und Tschechisch",
+    "p4d": "Unser Support hilft beim Zertifikat und bei der Einrichtung, auf Vietnamesisch oder Tschechisch.",
+    "cta": "Testen und EET einschalten",
+    "more": "Fragen zu EET",
+    "deskNote": "Sie mieten einen Stuhl im Salon und haben eine eigene IČO? Tarif Stuhl für {priceDesk} CZK im Monat.",
+    "compareRow": "EET 2.0 (in Tschechien Pflicht ab 2027)"
+  },
+  "homeFaq": {
+    "title": "Häufige Fragen",
+    "more": "Alle Fragen",
+    "q1": "Was ist SalonGo?",
+    "a1": "SalonGo ist eine Software für Nagel-, Friseur-, Lash- und Beauty-Salons: Termine, Online-Buchung für Kunden, Kasse, Belege, tschechische EET 2.0, Lohnabrechnung, E-Mails an Kunden und Berichte. Sie läuft im Browser, auf Windows und Mac und auf dem Handy.",
+    "q2": "Was kostet SalonGo?",
+    "a2": "Salontarife ab {from} CZK im Monat (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), jeder mit allen Funktionen.[[discount: Bei jährlicher Zahlung {discount} % günstiger.]] Neue Salons testen {days} Tage kostenlos, ohne Karte.",
+    "q3": "Unterstützt SalonGo die EET 2.0?",
+    "a3": "Ja. Die EET 2.0 ist in Tschechien ab 1. Januar 2027 Pflicht. In SalonGo laden Sie Ihr Zertifikat aus DIS+ hoch und geben Passwort und Kennung der Verkaufsstelle ein; danach meldet die App jede Zahlung automatisch. EET ist in jedem Tarif enthalten.",
+    "q4": "In welchen Sprachen buchen Kunden?",
+    "a4": "Die Buchungsseite des Salons gibt es auf Tschechisch, Slowakisch, Deutsch, Englisch und Französisch. Inhaber und Mitarbeiter nutzen die App auch auf Vietnamesisch.",
+    "q5": "Ich miete einen Stuhl im Salon und habe eine eigene IČO. Was nutze ich?",
+    "a5": "Den Tarif Stuhl für {priceDesk} CZK im Monat: nur Kasse, Belege, Umsatz und EET mit Ihrem eigenen Zertifikat. Der Salonbesitzer sieht Ihren Umsatz nicht.",
+    "q6": "Wo werden die Salondaten gespeichert?",
+    "a6": "Auf Servern in Frankfurt, in der EU, gemäß DSGVO. Läuft ein Tarif ab, bleiben die Daten erhalten."
   }
 }

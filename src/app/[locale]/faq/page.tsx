@@ -20,7 +20,7 @@ export default async function FAQPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "faq" });
   // Dữ liệu cấu trúc FAQPage: đúng các câu hỏi đang hiện trên trang
-  const QS = ["1", "2", "3", "4", "5", "10", "11", "12", "6", "7", "15", "13", "14", "8", "9"];
+  const QS = ["1", "2", "3", "4", "5", "10", "11", "12", "16", "17", "6", "7", "15", "13", "14", "8", "9"];
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

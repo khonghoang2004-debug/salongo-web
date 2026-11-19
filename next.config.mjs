@@ -59,6 +59,9 @@ const nextConfig = {
         permanent: true,
       })),
       { source: "/images/hero-image.png", destination: "/images/app/tong-quan.webp", permanent: true },
+      // Ảnh màn Nâng cấp gói cập nhật giá Pro (499 CZK, tối đa 8 thợ / 3 chi nhánh): đổi tên để khách quen thấy ngay bản mới
+      { source: "/images/app/m-nang-cap-goi.webp", destination: "/images/app/m-nang-cap-goi-v2.webp", permanent: true },
+      { source: "/images/app/nang-cap-goi-noi-dung.webp", destination: "/images/app/nang-cap-goi-noi-dung-v2.webp", permanent: true },
       { source: "/images/og-image.png", destination: "/images/og-image-v2.png", permanent: false },
     ];
   },

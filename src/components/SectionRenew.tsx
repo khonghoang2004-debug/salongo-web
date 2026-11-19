@@ -45,7 +45,7 @@ export async function SectionRenew() {
 
         <div data-reveal="scale" className="lg:col-span-7">
           <DeviceSwitch
-            phone={<PhoneShot src="/images/app/m-nang-cap-goi.webp" alt={t("shotLabel")} className="mx-auto max-w-[280px]" />}
+            phone={<PhoneShot src="/images/app/m-nang-cap-goi-v2.webp" alt={t("shotLabel")} className="mx-auto max-w-[280px]" />}
             pc={
               <div className="sg-browser">
                 <div className="sg-browser-bar">
@@ -54,7 +54,7 @@ export async function SectionRenew() {
                   <span className="sg-browser-dot" />
                   <span className="ml-2 truncate text-xs font-medium text-muted">app.salongo.eu · {t("shotLabel")}</span>
                 </div>
-                <img src="/images/app/nang-cap-goi-noi-dung.webp" alt={t("shotLabel")} width={1600} height={1165} loading="lazy" className="block h-auto w-full" />
+                <img src="/images/app/nang-cap-goi-noi-dung-v2.webp" alt={t("shotLabel")} width={1600} height={1165} loading="lazy" className="block h-auto w-full" />
               </div>
             }
           />

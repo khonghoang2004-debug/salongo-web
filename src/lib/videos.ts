@@ -20,10 +20,19 @@ export const VIDEOS: SalonVideo[] = [
   { id: "branches", file: "salongo-chi-nhanh", duration: "0:46", iso: "PT46S" },
 ];
 
+/**
+ * Video gói Bàn (trang /goi-ban): dựng từ ảnh app thật + chữ (không lời đọc), chữ tiếng Việt, phụ đề tiếng Séc.
+ * Nguồn: docs/video-goi-ban-scene.html (ghi từng khung bằng Playwright, ghép bằng ffmpeg). Không nằm trong VIDEOS (tab video trang chủ).
+ */
+export const DESK_VIDEO: VideoFile = { file: "salongo-goi-ban", duration: "0:35", iso: "PT35S" };
+
 export const videoById = (id: VideoId) => VIDEOS.find((v) => v.id === id)!;
 
 const V = "/videos/";
-export const videoSrc = (v: SalonVideo) => ({
+/** Đủ để phát một video (file + độ dài), kể cả video ngoài danh sách VIDEOS */
+export type VideoFile = Pick<SalonVideo, "file" | "duration" | "iso">;
+
+export const videoSrc = (v: VideoFile) => ({
   pc: `${V}${v.file}.mp4`,
   mobile: `${V}${v.file}-mobile.mp4`,
   posterPc: `${V}poster/${v.file}.jpg`,

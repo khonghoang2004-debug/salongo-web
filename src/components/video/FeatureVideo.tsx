@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Play } from "lucide-react";
-import { MOBILE_QUERY, videoSrc, type SalonVideo } from "@/lib/videos";
+import { MOBILE_QUERY, videoSrc, type VideoFile } from "@/lib/videos";
 
 // Video tính năng, nhẹ cho trang: trước khi bấm chỉ là ảnh bìa (tải lười), bấm mới tải video.
 // Màn hình hẹp lấy bản dọc 4:5, màn hình rộng lấy bản ngang 16:9 — chỉ tải đúng một bản.
@@ -15,7 +15,7 @@ export function FeatureVideo({
   priority = false,
   className = "",
 }: {
-  video: SalonVideo;
+  video: VideoFile;
   title: string;
   playLabel: string;
   note?: string;

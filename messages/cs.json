@@ -87,7 +87,11 @@
     "q14": "V jakých jazycích je aplikace?",
     "a14": "Aplikace salonu je vietnamsky, česky, slovensky, anglicky, německy a francouzsky. Rezervační stránka pro klienty je česky, slovensky, anglicky, německy a francouzsky.",
     "q15": "Jak pošlu klientům marketingový e-mail?",
-    "a15": "V části Klienti → Marketing vyberte jednu z 10 šablon, upravte text, případně přidejte slevu, zobrazte náhled a odešlete. Dostanou ho jen klienti s e-mailem a souhlasem; jedna kampaň na salon denně. Součást každého tarifu."
+    "a15": "V části Klienti → Marketing vyberte jednu z 10 šablon, upravte text, případně přidejte slevu, zobrazte náhled a odešlete. Dostanou ho jen klienti s e-mailem a souhlasem; jedna kampaň na salon denně. Součást každého tarifu.",
+    "q16": "Podporuje SalonGo EET 2.0?",
+    "a16": "Ano. EET 2.0 je v Česku povinná od 1. 1. 2027. V SalonGo nahrajete certifikát z DIS+, zadáte heslo a označení evidenční jednotky; každou platbu pak aplikace odešle sama. EET je v každém tarifu bez příplatku.",
+    "q17": "Pronajímám si místo v salonu a mám vlastní IČO. Co mám použít?",
+    "a17": "Tarif Křeslo za {priceDesk} Kč měsíčně: jen pokladna, účtenky, tržby a EET s vaším vlastním certifikátem. Majitel salonu vaše tržby nevidí."
   },
   "about": {
     "title": "O SalonGo",
@@ -222,7 +226,8 @@
     "faqA10": "Ne. Data zůstanou. Aplikace vás upozorní 2 dny předem; po vypršení jsou některé funkce zamčené do prodloužení, pokladna a doklady fungují dál.",
     "compareRowMarketing": "E-mailový marketing a narozeniny",
     "faqQ11": "Pronajímám si místo v salonu a mám vlastní IČO. Jaký tarif zvolit?",
-    "faqA11": "Tarif Křeslo za {priceDesk} Kč měsíčně. Obsahuje jen pokladnu, účtenky, tržby a EET s vaším vlastním certifikátem, bez rezervací. Majitel salonu vaše tržby nevidí. Pokud budete chtít rezervace a online objednávky, můžete kdykoli přejít na Basic."
+    "faqA11": "Tarif Křeslo za {priceDesk} Kč měsíčně. Obsahuje jen pokladnu, účtenky, tržby a EET s vaším vlastním certifikátem, bez rezervací. Majitel salonu vaše tržby nevidí. Pokud budete chtít rezervace a online objednávky, můžete kdykoli přejít na Basic.",
+    "compareRowEet": "EET 2.0 (povinná od 2027)"
   },
   "footer": {
     "quickLinks": "Rychlé odkazy",
@@ -232,7 +237,7 @@
   },
   "pages": {
     "homeTitle": "Rezervační systém pro salony: pokladna i mzdy",
-    "homeDesc": "Objednávkový systém a aplikace pro nehtová studia, kadeřnictví a kosmetiku: online rezervace, kalendář, pokladna, mzdy, přehledy tržeb. Česky i vietnamsky. {days} dní zdarma.",
+    "homeDesc": "Rezervační systém a pokladna pro nehtová studia, kadeřnictví a kosmetiku: online rezervace, EET 2.0, mzdy, přehledy tržeb. Česky i vietnamsky. {days} dní zdarma.",
     "featuresTitle": "Funkce: online rezervace, objednávky, pokladna, mzdy",
     "featuresDesc": "Online rezervace, kalendář podle personálu, pokladna, klienti, e-mailový marketing, přehledy tržeb, mzdy a více poboček v jedné aplikaci pro salony.",
     "solutionsTitle": "Řešení pro nehtová studia a salony",
@@ -282,7 +287,9 @@
     "trial1": "{days} dní zdarma",
     "trial2": "Bez platební karty",
     "trial3": "Pomoc s nastavením",
-    "imageAltPhone": "Kalendář podle pracovníků v mobilu"
+    "imageAltPhone": "Kalendář podle pracovníků v mobilu",
+    "loginLine": "Už máte účet?",
+    "trial4": "Připraveno na EET 2.0"
   },
   "download": {
     "eyebrow": "Počítač i mobil",
@@ -1258,6 +1265,46 @@
     "soonNote": "Tarif Křeslo v aplikaci dokončujeme. Nechte nám kontakt a dáme vám vědět hned při spuštění.",
     "shotAlt": "Pokladna SalonGo v telefonu",
     "badgeNew": "Novinka",
-    "audience": "Pro nájemce"
+    "audience": "Pro nájemce",
+    "videoTitle": "Tarif Křeslo za 35 vteřin",
+    "videoNote": "Vietnamsky, české titulky"
+  },
+  "eet": {
+    "eyebrow": "EET 2.0",
+    "titleBefore": "EET 2.0 je povinná od 1. 1. 2027.",
+    "titleAccent": "SalonGo je připravený.",
+    "lead": "Od roku 2027 se každá platba hotově nebo kartou musí evidovat u finanční správy. Se SalonGo nepotřebujete pokladnu ani další software: EET jednou zapnete a aplikace pak každou platbu odešle sama.",
+    "countdown": "Zbývá {n} dní",
+    "countdownLabel": "do povinné EET 2.0",
+    "live": "Platí",
+    "liveLabel": "EET 2.0 je povinná od 1. 1. 2027",
+    "p1t": "Nastavení ve 2 krocích",
+    "p1d": "Nahrajete certifikát z portálu DIS+, zadáte heslo a označení evidenční jednotky. Jméno, IČO i prostředí si aplikace přečte z certifikátu.",
+    "p2t": "Odesílá se při každém markování",
+    "p2d": "Markujete jako obvykle. Aplikace účtenku hned odešle finanční správě, nic dalšího neřešíte.",
+    "p3t": "V každém tarifu",
+    "p3d": "EET je součástí tarifů Basic, Pro, Premium i Křeslo. Bez příplatku.",
+    "p4t": "Pomoc česky i vietnamsky",
+    "p4d": "S certifikátem i nastavením vám pomůže naše podpora, česky nebo vietnamsky.",
+    "cta": "Vyzkoušet a zapnout EET",
+    "more": "Zeptat se na EET",
+    "deskNote": "Pronajímáte si místo v salonu a máte vlastní IČO? Tarif Křeslo za {priceDesk} Kč měsíčně.",
+    "compareRow": "EET 2.0 (povinná od 2027)"
+  },
+  "homeFaq": {
+    "title": "Časté otázky",
+    "more": "Všechny otázky",
+    "q1": "Co je SalonGo?",
+    "a1": "SalonGo je aplikace pro řízení nehtových, kadeřnických, lash a beauty salonů: rezervace, online objednávky pro klienty, pokladna, účtenky, EET 2.0, mzdy, e-maily klientům a přehledy. Funguje v prohlížeči, na počítači s Windows i Mac a v telefonu.",
+    "q2": "Kolik SalonGo stojí?",
+    "a2": "Tarify pro salon od {from} CZK měsíčně (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), každý se všemi funkcemi.[[discount: Při ročním placení sleva {discount} %.]] Nové salony mají {days} dní zdarma, bez karty.",
+    "q3": "Podporuje SalonGo EET 2.0?",
+    "a3": "Ano. EET 2.0 je v Česku povinná od 1. 1. 2027. V SalonGo nahrajete certifikát z DIS+, zadáte heslo a označení evidenční jednotky; každou platbu pak aplikace odešle sama. EET je v každém tarifu bez příplatku.",
+    "q4": "V jakém jazyce se klienti objednávají?",
+    "a4": "Rezervační stránka salonu je česky, slovensky, německy, anglicky a francouzsky. Aplikace pro majitele a personál je i ve vietnamštině.",
+    "q5": "Pronajímám si místo v salonu a mám vlastní IČO. Co mám použít?",
+    "a5": "Tarif Křeslo za {priceDesk} Kč měsíčně: jen pokladna, účtenky, tržby a EET s vaším vlastním certifikátem. Majitel salonu vaše tržby nevidí.",
+    "q6": "Kde jsou data salonu uložená?",
+    "a6": "Na serverech ve Frankfurtu (Německo), v Evropské unii, v souladu s GDPR. Když tarif vyprší, data zůstanou zachovaná."
   }
 }

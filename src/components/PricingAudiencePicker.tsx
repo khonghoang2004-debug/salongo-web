@@ -21,7 +21,6 @@ export async function PricingAudiencePicker() {
       icon: Store,
       tag: t("pickSalonTag"),
       title: t("pickSalon"),
-      desc: t("pickSalonDesc"),
       price: from !== null ? t("pickFrom", { price: fmt(from) }) : null,
       cta: t("pickSalonCta"),
       tone: "brand" as const,
@@ -31,7 +30,6 @@ export async function PricingAudiencePicker() {
       icon: Armchair,
       tag: t("pickDeskTag"),
       title: t("pickDesk"),
-      desc: t("pickDeskDesc"),
       price: t("pickPrice", { price: fmt(desk.monthly) }),
       cta: t("pickDeskCta"),
       tone: "nude" as const,
@@ -46,7 +44,7 @@ export async function PricingAudiencePicker() {
             {t("pickTitle")}
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2 md:gap-6">
-            {cards.map(({ href, icon: Icon, tag, title, desc, price, cta, tone }, i) => (
+            {cards.map(({ href, icon: Icon, tag, title, price, cta, tone }, i) => (
               <a
                 key={href}
                 href={href}
@@ -75,9 +73,8 @@ export async function PricingAudiencePicker() {
                     {tag}
                   </span>
                 </div>
-                <h3 className="mt-5 text-[1.2rem] font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[1.35rem]">{title}</h3>
-                <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted">{desc}</p>
-                <div className="mt-5 flex items-center justify-between gap-3 border-t border-line pt-4">
+                <h3 className="mb-5 mt-5 text-[1.2rem] font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[1.35rem]">{title}</h3>
+                <div className="mt-auto flex items-center justify-between gap-3 border-t border-line pt-4">
                   {price && <span className="text-[15px] font-semibold tabular-nums text-ink">{price}</span>}
                   <span className="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-[15px] font-semibold text-brand-700">
                     {cta}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
 import { PricingHero } from "@/components/pricing2/PricingHero";
 import { SalonPlans, PLAN_NAMES } from "@/components/pricing2/SalonPlans";
@@ -34,7 +34,7 @@ export default async function PricingPage({ params }: Props) {
   const faq = FAQ.map((i) => ({ q: t(`faq.q${i}`), a: t(`faq.a${i}`) }));
 
   // JSON-LD: FAQPage (đúng các câu đang hiện) + giá từng gói (đúng giá trên bảng, lấy từ app)
-  const url = pageUrl(await getLocale(), PATH);
+  const url = pageUrl(locale, PATH);
   const offer = (name: string, price: number) => ({
     "@type": "Offer",
     name,

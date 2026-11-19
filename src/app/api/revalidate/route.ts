@@ -1,5 +1,10 @@
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
+import { createHash, timingSafeEqual } from "node:crypto";
+
+// So sánh không lộ thời gian (băm trước để hai chuỗi luôn cùng độ dài)
+const digest = (s: string) => createHash("sha256").update(s).digest();
+const safeEqual = (a: string, b: string) => timingSafeEqual(digest(a), digest(b));
 
 /**
  * POST /api/revalidate — app.salongo.eu gọi sau khi admin lưu gói (giá, giảm giá, giới hạn), để mọi trang
@@ -9,7 +14,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   const secret = process.env.REVALIDATE_SECRET;
   if (!secret) return NextResponse.json({ ok: false, error: "not configured" }, { status: 503 });
-  if (req.headers.get("authorization") !== `Bearer ${secret}`) {
+  if (!safeEqual(req.headers.get("authorization") ?? "", `Bearer ${secret}`)) {
     return NextResponse.json({ ok: false }, { status: 401 });
   }
   revalidatePath("/", "layout");

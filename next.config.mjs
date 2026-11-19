@@ -20,10 +20,23 @@ const OLD_IMAGES = {
 // nhận X-Robots-Tag: noindex để Google không lập chỉ mục trùng; trên www.salongo.eu không có header này.
 const PRIMARY_HOST = "www.salongo.eu";
 
+// Header bảo mật cho mọi trang (HSTS: Vercel chỉ thêm trên domain *.vercel.app, nên tự đặt cho salongo.eu).
+// Không đặt CSP đầy đủ (cần nonce cho script nội tuyến); chỉ cấm nhúng trang vào iframe của site khác.
+const SECURITY_HEADERS = [
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Content-Security-Policy", value: "frame-ancestors 'none'; base-uri 'self'; object-src 'none'" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()" },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  poweredByHeader: false,
   async headers() {
     return [
+      { source: "/:path*", headers: SECURITY_HEADERS },
       {
         source: "/:path*",
         missing: [{ type: "host", value: PRIMARY_HOST.replace(/\./g, "\\.") }],

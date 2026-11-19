@@ -47,8 +47,22 @@ export default async function Home({ params }: Props) {
         "@id": `${pageUrl}/#website`,
         url: pageUrl,
         name: siteConfig.name,
+        alternateName: ["SalonGo app", "salongo.eu"],
         description: tPage("homeDesc"),
         inLanguage: locale,
+        publisher: { "@id": org },
+      },
+      // Trang chủ là một WebPage của WebSite, nói về phần mềm SalonGo (giúp Google/AI nối trang ↔ thực thể)
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}/#webpage`,
+        url: pageUrl,
+        name: `${tPage("homeTitle")} | ${siteConfig.name}`,
+        description: tPage("homeDesc"),
+        inLanguage: locale,
+        isPartOf: { "@id": `${pageUrl}/#website` },
+        about: { "@id": `${base}/#software` },
+        primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrl, width: 1200, height: 630 },
         publisher: { "@id": org },
       },
       {
@@ -56,7 +70,10 @@ export default async function Home({ params }: Props) {
         "@id": org,
         name: siteConfig.name,
         url: base,
-        logo: `${base}/icon-512.png`,
+        // Một câu cố định (tiếng Anh) ở mọi ngôn ngữ: thực thể giống nhau trên Google, Bing, trợ lý AI
+        description:
+          "SalonGo makes salon management software (booking, checkout, Czech EET 2.0, payroll) for nail, hair, lash and beauty salons in Europe, with Vietnamese and Czech support. Based in Jesenice, Czech Republic.",
+        logo: { "@type": "ImageObject", url: `${base}/icon-512.png`, width: 512, height: 512 },
         image: ogImageUrl,
         email: CONTACT_EMAIL,
         telephone: CONTACT_PHONE,
@@ -72,6 +89,11 @@ export default async function Home({ params }: Props) {
         },
         // Chỉ trang của doanh nghiệp; Instagram hiện là tài khoản cá nhân nên không đưa vào sameAs
         sameAs: [CONTACT_FACEBOOK],
+        areaServed: [
+          { "@type": "Country", name: "Czech Republic" },
+          { "@type": "Place", name: "Europe" },
+        ],
+        knowsLanguage: ["vi", "cs", "en", "de"],
         // Dịch vụ làm website cho khách SalonGo (chi tiết: JSON-LD Service trên trang /website)
         makesOffer: {
           "@type": "Offer",
@@ -100,6 +122,10 @@ export default async function Home({ params }: Props) {
         image: ogImageUrl,
         description: tPage("homeDesc"),
         publisher: { "@id": org },
+        audience: {
+          "@type": "BusinessAudience",
+          audienceType: "Nail studios, hair salons, lash and brow studios, beauty salons and spas (many Vietnamese-run, in Czechia and Europe)",
+        },
         featureList: [
           "Online booking page for clients",
           "Appointment calendar per staff member",

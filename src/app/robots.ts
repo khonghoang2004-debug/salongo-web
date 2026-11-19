@@ -15,6 +15,13 @@ const AI_AND_SEARCH_BOTS = [
   "ClaudeBot",
   "Claude-SearchBot",
   "Applebot",
+  "Applebot-Extended",
+  "Perplexity-User",
+  "Claude-User",
+  "DuckAssistBot",
+  "Amazonbot",
+  "meta-externalagent",
+  "MistralAI-User",
 ];
 
 export default function robots(): MetadataRoute.Robots {
@@ -24,6 +31,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: AI_AND_SEARCH_BOTS, allow: "/", disallow: ["/api/", "/admin/"] },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
-    host: siteConfig.url,
+    // Không ghi "Host:" (chỉ Yandex từng dùng, Google/Bing/Seznam báo là lệnh lạ); domain chính đã rõ qua canonical
   };
 }

@@ -234,10 +234,10 @@
     "pickSalonDesc": "Appointments, online booking, staff, payroll, checkout and EET. Three plans that differ only by staff and locations.",
     "pickFrom": "From {price} CZK / month",
     "pickPrice": "{price} CZK / month",
-    "pickSalonCta": "See the 3 salon plans",
+    "pickSalonCta": "See details",
     "pickDesk": "I rent a chair in a salon and have my own IČO",
     "pickDeskDesc": "Only checkout, receipts and EET in your name. No appointments, no staff, and the salon owner cannot see your revenue.",
-    "pickDeskCta": "See the Chair plan",
+    "pickDeskCta": "See details",
     "pickStaffHint": "Employed by a salon? You don't need a plan: the owner adds you as staff in the app.",
     "salonKicker": "Plans for salon owners",
     "salonTitle": "Basic, Pro, Premium",
@@ -255,7 +255,8 @@
     "vsMarketing": "Email marketing, birthdays",
     "vsNote": "Need appointments or staff later? Switch to Basic in the app, your data stays.",
     "whoDesk": "Chair renter with own IČO",
-    "whoDeskDesc": "One person who checks out and sends EET on their own IČO right in the salon where they rent a chair."
+    "whoDeskDesc": "One person who checks out and sends EET on their own IČO right in the salon where they rent a chair.",
+    "pickDeskTag": "Own IČO in a salon"
   },
   "footer": {
     "quickLinks": "Quick links",

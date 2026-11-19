@@ -234,10 +234,10 @@
     "pickSalonDesc": "Rezervace, online objednávky, zaměstnanci, mzdy, pokladna a EET. Tři tarify, liší se jen počtem zaměstnanců a poboček.",
     "pickFrom": "Od {price} Kč / měsíc",
     "pickPrice": "{price} Kč / měsíc",
-    "pickSalonCta": "Zobrazit 3 tarify pro salon",
+    "pickSalonCta": "Zobrazit podrobnosti",
     "pickDesk": "Pronajímám si místo v salonu a mám vlastní IČO",
     "pickDeskDesc": "Jen pokladna, doklady a EET na vaše jméno. Bez rezervací a zaměstnanců, majitel salonu vaše tržby nevidí.",
-    "pickDeskCta": "Zobrazit tarif Křeslo",
+    "pickDeskCta": "Zobrazit podrobnosti",
     "pickStaffHint": "Jste zaměstnanec salonu? Žádný tarif nepotřebujete: majitel vás přidá jako zaměstnance v aplikaci.",
     "salonKicker": "Tarify pro majitele salonu",
     "salonTitle": "Basic, Pro, Premium",
@@ -255,7 +255,8 @@
     "vsMarketing": "E-mailový marketing, narozeniny",
     "vsNote": "Budete později potřebovat rezervace nebo zaměstnance? Přejděte v aplikaci na Basic, data zůstanou.",
     "whoDesk": "Nájemce místa s vlastním IČO",
-    "whoDeskDesc": "Jeden člověk, který účtuje a posílá EET na své IČO přímo v salonu, kde si pronajímá místo."
+    "whoDeskDesc": "Jeden člověk, který účtuje a posílá EET na své IČO přímo v salonu, kde si pronajímá místo.",
+    "pickDeskTag": "Vlastní IČO v salonu"
   },
   "footer": {
     "quickLinks": "Rychlé odkazy",

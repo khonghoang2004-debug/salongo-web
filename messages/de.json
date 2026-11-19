@@ -234,10 +234,10 @@
     "pickSalonDesc": "Termine, Online-Buchung, Mitarbeiter, Lohn, Kasse und EET. Drei Tarife, die sich nur in Mitarbeitern und Standorten unterscheiden.",
     "pickFrom": "Ab {price} CZK / Monat",
     "pickPrice": "{price} CZK / Monat",
-    "pickSalonCta": "Die 3 Salon-Tarife ansehen",
+    "pickSalonCta": "Details ansehen",
     "pickDesk": "Ich miete einen Platz im Salon und habe eine eigene IČO",
     "pickDeskDesc": "Nur Kasse, Belege und EET auf Ihren Namen. Keine Termine, keine Mitarbeiter, der Salonbesitzer sieht Ihren Umsatz nicht.",
-    "pickDeskCta": "Tarif Stuhl ansehen",
+    "pickDeskCta": "Details ansehen",
     "pickStaffHint": "Im Salon angestellt? Sie brauchen keinen Tarif: der Inhaber fügt Sie in der App als Mitarbeiter hinzu.",
     "salonKicker": "Tarife für Salonbesitzer",
     "salonTitle": "Basic, Pro, Premium",
@@ -255,7 +255,8 @@
     "vsMarketing": "E-Mail-Marketing, Geburtstage",
     "vsNote": "Später Termine oder Mitarbeiter nötig? In der App zu Basic wechseln, die Daten bleiben.",
     "whoDesk": "Platzmieter mit eigener IČO",
-    "whoDeskDesc": "Eine Person, die direkt im Salon, in dem sie einen Platz mietet, mit eigener IČO kassiert und EET sendet."
+    "whoDeskDesc": "Eine Person, die direkt im Salon, in dem sie einen Platz mietet, mit eigener IČO kassiert und EET sendet.",
+    "pickDeskTag": "Eigene IČO im Salon"
   },
   "footer": {
     "quickLinks": "Quicklinks",

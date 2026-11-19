@@ -234,10 +234,10 @@
     "pickSalonDesc": "Lịch hẹn, đặt lịch online, nhân viên, tính lương, tính tiền và EET. Ba gói, chỉ khác số thợ và số chi nhánh.",
     "pickFrom": "Từ {price} Kč / tháng",
     "pickPrice": "{price} Kč / tháng",
-    "pickSalonCta": "Xem 3 gói salon",
+    "pickSalonCta": "Xem chi tiết",
     "pickDesk": "Tôi thuê bàn trong salon và có IČO riêng",
     "pickDeskDesc": "Chỉ tính tiền, hoá đơn và EET đứng tên bạn. Không lịch hẹn, không nhân viên, chủ salon không xem được doanh thu của bạn.",
-    "pickDeskCta": "Xem gói Bàn",
+    "pickDeskCta": "Xem chi tiết",
     "pickStaffHint": "Bạn làm công cho salon? Bạn không cần mua gói: chủ salon thêm bạn làm nhân viên trong app.",
     "salonKicker": "Gói cho chủ salon",
     "salonTitle": "Basic, Pro, Premium",
@@ -255,7 +255,8 @@
     "vsMarketing": "Email marketing, sinh nhật",
     "vsNote": "Sau này cần lịch hẹn hay nhân viên? Đổi sang gói Basic trong app, dữ liệu vẫn giữ nguyên.",
     "whoDesk": "Người thuê bàn, có IČO riêng",
-    "whoDeskDesc": "Một người, tính tiền và gửi EET bằng IČO của mình ngay trong salon đang thuê bàn."
+    "whoDeskDesc": "Một người, tính tiền và gửi EET bằng IČO của mình ngay trong salon đang thuê bàn.",
+    "pickDeskTag": "IČO riêng trong tiệm hoặc salon"
   },
   "footer": {
     "quickLinks": "Điều hướng nhanh",

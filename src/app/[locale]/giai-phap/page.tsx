@@ -7,6 +7,7 @@ import { TypeSection, type Pair } from "@/components/solutions2/TypeSection";
 import { DeskPanel } from "@/components/solutions2/DeskPanel";
 import { FaqList, type Qa } from "@/components/guide2/FaqList";
 import { pageMetadata, pageUrl } from "@/lib/seo";
+import { jsonLdString } from "@/lib/json-ld";
 import { SHOTS } from "@/lib/media";
 
 const PATH = "/giai-phap";
@@ -55,7 +56,7 @@ export default async function SolutionsPage({ params }: Props) {
 
   return (
     <PageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
       <FeaturesHero
         locale={locale}
         title={t("h1")}

@@ -10,6 +10,7 @@ import { Closing } from "@/components/features2/Closing";
 import { PairShot, Phone, ResponsiveShot, TwoPhones, Window } from "@/components/features2/Frames";
 import { Receipt } from "@/components/landing/Receipt";
 import { pageMetadata, pageUrl } from "@/lib/seo";
+import { jsonLdString } from "@/lib/json-ld";
 import { SHOTS } from "@/lib/media";
 import { FEATURE_SHOTS } from "@/lib/media-features";
 
@@ -116,7 +117,7 @@ export default async function FeaturesPage({ params }: Props) {
 
   return (
     <PageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
       <FeaturesHero
         locale={locale}
         title={t("h1")}

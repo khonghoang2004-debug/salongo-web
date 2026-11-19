@@ -6,6 +6,7 @@ import { PageShell } from "@/components/PageShell";
 import { ArticleBody, Toc, type GuideSection } from "@/components/guide2/Article";
 import { FaqList, type Qa } from "@/components/guide2/FaqList";
 import { pageMetadata, pageUrl } from "@/lib/seo";
+import { jsonLdString } from "@/lib/json-ld";
 import { SIGNUP_URL, appLink } from "@/lib/app-links";
 import { siteConfig } from "@/lib/metadata";
 import { getPlans, priceRange } from "@/lib/plans";
@@ -79,7 +80,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
 
   return (
     <PageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
 
       <header className="bg-white pb-12 pt-8 sm:pt-12 lg:pb-16 lg:pt-16">
         <div className="x-wrap">

@@ -173,7 +173,6 @@ export function SiteNav() {
               </div>
               <div className="mt-auto pt-8">
                 <a href={signup} className="x-btn-primary w-full !min-h-14 text-base">{t("cta")}</a>
-                <p className="mt-3 text-center text-sm text-muted">{t("trialLine")}</p>
               </div>
             </div>
           </div>,

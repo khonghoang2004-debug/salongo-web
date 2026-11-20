@@ -44,7 +44,6 @@ export function MobileCta() {
       <a href={appLink(SIGNUP_URL, locale)} tabIndex={show ? 0 : -1} className="x-btn-primary w-full !min-h-[52px]">
         {t("cta")}
       </a>
-      <p className="mt-1.5 text-center text-[12.5px] text-muted">{t("trialLine")}</p>
     </div>
   );
 }

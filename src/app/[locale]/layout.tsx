@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Be_Vietnam_Pro, IBM_Plex_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
@@ -15,12 +15,21 @@ import deMessages from "../../../messages/de.json";
 
 // Be Vietnam Pro: font thiết kế cho tiếng Việt, đủ dấu Séc / Đức, dùng cho cả tiêu đề và nội dung
 const sans = Be_Vietnam_Pro({
-  subsets: ["latin"],
+  // latin-ext: dấu tiếng Séc / Đức (ř, ů, ß…); vietnamese: dấu tiếng Việt. Thiếu hai bộ này thì chữ có dấu rơi về font hệ thống
+  subsets: ["latin", "latin-ext", "vietnamese"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter",
   display: "swap",
 });
 
+
+// Chỉ dùng cho hình hoá đơn (giấy in nhiệt) trên trang, không dùng cho chữ thường
+const mono = IBM_Plex_Mono({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -37,7 +46,7 @@ const metadataMap = {
   de: (deMessages as { metadata: { description: string } }).metadata,
 } as const;
 
-const CLIENT_NAMESPACES = ["nav", "device", "faq", "contact", "pricingPage", "webOffer"] as const;
+const CLIENT_NAMESPACES = ["site", "nav", "device", "faq", "contact", "pricingPage", "webOffer"] as const;
 
 type Props = {
   children: React.ReactNode;
@@ -93,6 +102,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: meta.description,
       images: [`${siteConfig.url}${siteConfig.ogImage}`],
     },
+    // Mã xác minh Search Console / Bing / Seznam: đặt biến môi trường trên Vercel (không cần sửa code).
+    // Google đã xác minh bằng file public/googlef4498c62abaef25e.html — đừng xoá file đó.
+    verification: {
+      ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : {}),
+      other: {
+        ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : {}),
+        ...(process.env.NEXT_PUBLIC_SEZNAM_SITE_VERIFICATION ? { "seznam-wmt": process.env.NEXT_PUBLIC_SEZNAM_SITE_VERIFICATION } : {}),
+      },
+    },
     // Không ghi "index, follow" (mặc định của Google): để trang 404 chỉ còn thẻ noindex của Next
     robots: {
       googleBot: {
@@ -121,12 +139,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = Object.fromEntries(CLIENT_NAMESPACES.filter((k) => k in all).map((k) => [k, all[k]]));
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         {/* Bật chuyển động trước khi vẽ trang để nội dung không bị nháy */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('sg-js')" }} />
       </head>
-      <body>
+      {/* Font trên <body>: menu điện thoại và hộp thoại gắn thẳng vào body (portal), ngoài #sg-root */}
+      <body className="font-sans antialiased">
         <svg className="absolute size-0 overflow-hidden" aria-hidden>
           <defs>
             <linearGradient id="gradientPinkPurple" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -137,7 +156,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </defs>
         </svg>
         <NextIntlClientProvider messages={messages}>
-          <div id="sg-root" className={`${sans.variable} font-sans antialiased`}>
+          <div id="sg-root" className={`${sans.variable} ${mono.variable} font-sans antialiased`}>
             {children}
             <MotionRoot />
           </div>

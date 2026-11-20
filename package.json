@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .ts,.tsx src",
-    "test": "node --experimental-strip-types --test tests/plans.test.mjs",
-    "test:seo": "node --test tests/seo.test.mjs"
+    "test": "node --experimental-strip-types --test tests/plans.test.mjs tests/links.test.mjs",
+    "test:seo": "node --test tests/seo.test.mjs",
+    "messages": "node scripts/merge-messages.mjs",
+    "messages:check": "node scripts/merge-messages.mjs --check"
   },
   "dependencies": {
     "lucide-react": "^0.576.0",

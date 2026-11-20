@@ -1,8 +1,10 @@
-import { getPlans, type DeskPlan, type SitePlan } from "@/lib/plans";
+import { getPlans, priceRange, type DeskPlan, type SitePlan } from "@/lib/plans";
+
+const SITE = "https://www.salongo.eu";
 
 // llms.txt (https://llmstxt.org): tóm tắt cho trợ lý AI. Giá và giới hạn gói lấy từ app như trang Bảng giá,
 // nên không còn lệch với giá đang bán (trước đây là file tĩnh trong public/).
-export const revalidate = 3600;
+export const revalidate = 60;
 
 const HEAD = `# SalonGo
 
@@ -24,15 +26,48 @@ Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://ap
 
 `;
 
-const PAGES = `- [Home (Vietnamese)](https://www.salongo.eu/vi)
-- [Features](https://www.salongo.eu/en/tinh-nang)
-- [Pricing](https://www.salongo.eu/en/bang-gia)
-- [Chair / desk renter plan](https://www.salongo.eu/en/goi-ban)
-- [FAQ](https://www.salongo.eu/en/faq)
-- [Contact](https://www.salongo.eu/en/lien-he)
-- [Facebook page](https://www.facebook.com/people/SalonGo/61583765805698/)
-- [Salon websites](https://www.salongo.eu/en/website): offer for SalonGo customers, a website with up to 5 pages for a one-time design fee of 999 Kč; hosting is quoted separately. 35+ sample templates (nail, hair, spa, barber, lash & brow, makeup); their demo pages are illustrations only.
-- [Czech site](https://www.salongo.eu/cs) · [German site](https://www.salongo.eu/de) · [English site](https://www.salongo.eu/en)
+// Trang chính theo từng ngôn ngữ (URL giống nhau, chỉ khác tiền tố). Trợ lý AI trả lời bằng ngôn ngữ người hỏi,
+// nên đưa link đúng ngôn ngữ: chủ tiệm người Việt → /vi, chủ salon người Séc → /cs.
+const SECTIONS = [
+  ["", "Home"],
+  ["/tinh-nang", "Features"],
+  ["/phan-mem-quan-ly-salon", "Salon software guide"],
+  ["/giai-phap", "Solutions by salon type"],
+  ["/bang-gia", "Pricing"],
+  ["/goi-ban", "Chair / desk renter plan"],
+  ["/eet-2-0", "Czech EET 2.0 for salons: what to do by 1 Jan 2027"],
+  ["/faq", "FAQ"],
+  ["/ve-salongo", "About SalonGo"],
+  ["/lien-he", "Contact"],
+  ["/website", "Salon websites"],
+] as const;
+const LANGS = [
+  ["vi", "Vietnamese (main language, for Vietnamese salon owners)"],
+  ["cs", "Czech"],
+  ["en", "English"],
+  ["de", "German"],
+] as const;
+const PAGES = LANGS.map(
+  ([l, name]) => `### ${name}\n${SECTIONS.map(([p, t]) => `- [${t}](${SITE}/${l}${p})`).join("\n")}`
+).join("\n\n");
+
+const OTHER = `- [Facebook page](https://www.facebook.com/people/SalonGo/61583765805698/)
+- [App sign-in / sign-up](https://app.salongo.eu)
+- [Sitemap](${SITE}/sitemap.xml)
+- Salon websites: offer for SalonGo customers, a website with up to 5 pages for a one-time design fee of 999 Kč; hosting is quoted separately. 35+ sample templates (nail, hair, spa, barber, lash & brow, makeup); their demo pages are illustrations only.`;
+
+// Câu trả lời ngắn cho các câu hỏi người dùng hay hỏi trợ lý AI (AEO). Chỉ ghi điều có thật trên website.
+const answers = (low: number, trialDays: number) => `## Quick answers
+- What is SalonGo? Salon management software (booking, calendar, checkout, Czech EET 2.0, payroll, reports) for nail, hair, lash and beauty salons in Europe, made for Vietnamese-run salons in Czechia.
+- Who makes it? SalonGo, operated by Nguyen Đuc Hoang Khong (sole trader, IČO 30241464), Svornosti 189, 252 42 Jesenice, Czech Republic.
+- How much does it cost? From ${low} CZK per month; ${trialDays}-day free trial, no card needed. All features are in every plan.
+- Does it support Czech EET 2.0 (mandatory from 1 January 2027)? Yes, included in every plan at no extra cost; set up in 2 steps with the DIS+ certificate. No extra cash register hardware is needed.
+- Is the app in Vietnamese? Yes. The salon app is in Vietnamese, Czech, Slovak, English, German and French; the client booking page is in Czech, Slovak, English, German and French. Support by phone/email in Vietnamese and Czech.
+- Does it work on a phone? Yes, in the phone browser; desktop apps for Windows and macOS; an iPhone sign-in app is coming to the App Store.
+- Does it do SMS reminders or online prepayment? No: confirmations and reminders are by email; payments are taken in the salon.
+- Vietnamese: SalonGo là app quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: đặt lịch online, tính tiền, EET 2.0, tính lương thợ, báo cáo doanh thu.
+- Czech: SalonGo je rezervační systém a pokladna pro nehtová studia, kadeřnictví a kosmetické salony, s EET 2.0, mzdami a přehledy tržeb, česky i vietnamsky.
+
 `;
 
 const limits = (p: SitePlan) => {
@@ -61,8 +96,8 @@ export async function GET() {
     `- ${discount ? `Paying yearly saves up to ${discount}%. ` : ""}New salons get a ${plans.trialDays}-day free trial, no card needed. Plans are renewed in the app (Plan screen).`,
     desk(plans.desk),
   ].join("\n");
-  const body = `${HEAD}${pricing}\n\n## Pages\n${PAGES}`;
+  const body = `${HEAD}${answers(priceRange(plans).low, plans.trialDays)}${pricing}\n\n## Pages\n${PAGES}\n\n## Other\n${OTHER}\n`;
   return new Response(body, {
-    headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=0, s-maxage=3600" },
+    headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=0, s-maxage=60, stale-while-revalidate=300" },
   });
 }

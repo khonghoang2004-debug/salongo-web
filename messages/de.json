@@ -263,24 +263,26 @@
     "tagline": "Salon-Software für Salons vietnamesischer Inhaber in Europa."
   },
   "pages": {
-    "homeTitle": "Salon-App: Terminbuchung, Kasse und Lohn",
-    "homeDesc": "Software für Nagelstudios, Friseur- und Kosmetiksalons: Online-Terminbuchung, Kasse, Lohnabrechnung und Umsatzberichte, auch auf Vietnamesisch. {days} Tage gratis.",
+    "homeTitle": "Salonsoftware: Terminbuchung, Kasse und EET 2.0",
+    "homeDesc": "Online-Termine, Kasse mit tschechischer EET 2.0, Einnahmen und Ausgaben sowie Lohn für Nagel-, Friseur- und Kosmetiksalons. Ab {from} CZK im Monat, {days} Tage gratis.",
     "featuresTitle": "Termin-App, Online-Buchung, Kasse, Lohn",
     "featuresDesc": "Online-Terminbuchung, Kalender pro Mitarbeiter, Kasse, Kunden, E-Mail-Marketing, Umsatzberichte, Lohnabrechnung und mehrere Filialen in einer Salon-App.",
     "solutionsTitle": "Lösungen für Nagelstudios und Salons",
     "solutionsDesc": "Keine Doppelbuchungen, falschen Löhne oder Kassenverluste: wie SalonGo Nagelstudios und Salons in Europa den Alltag erleichtert.",
     "pricingTitle": "Preise der Salon-App und Salonsoftware",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Jeder Tarif mit allen Funktionen. {days} Tage testen, direkt in der App verlängern.",
-    "aboutTitle": "Über SalonGo",
-    "aboutDesc": "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons vietnamesischer Inhaber in Europa: Mission und Entwicklung.",
-    "faqTitle": "Häufige Fragen zur Salonsoftware",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Jeder Tarif mit allen Funktionen. {days} Tage testen, im Web verlängern.",
+    "aboutTitle": "Über SalonGo: Salonsoftware aus Tschechien",
+    "aboutDesc": "SalonGo entwickelt Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa. Daten in der EU, Support auf Tschechisch und Vietnamesisch.",
+    "faqTitle": "FAQ: Salonsoftware, EET 2.0, Preise",
     "faqDesc": "Antworten zu SalonGo: {days} Tage gratis, Tarife, Verlängerung, Zahlung, Handy, Sprachen, mehrere Filialen, Lohn und Trinkgeld.",
     "contactTitle": "Kontakt – Support auf Vietnamesisch",
     "contactDesc": "Kontaktieren Sie SalonGo per Telefon, E-Mail, Facebook oder WhatsApp. Support auf Vietnamesisch und Tschechisch, Antwort innerhalb von 24 Stunden.",
     "websiteTitle": "SalonGo Web Studio – Website für Ihren Salon für {price}",
     "websiteDesc": "SalonGo Web Studio erstellt Websites für Friseur, Nagelstudio, Spa und Barbershop: bis zu {pages} Seiten, mobil optimiert, {price} einmalig für SalonGo-Kunden. 35+ Demos.",
     "deskTitle": "Tarif Stuhl: Kasse und EET für Stuhlmieter",
-    "deskDesc": "Sie mieten einen Stuhl oder Tisch im Salon und haben eine eigene IČO? Tarif Stuhl für {priceDesk} CZK im Monat: Kasse, Belege, Umsatz und EET 2.0 mit Ihrem eigenen Zertifikat, ohne Termine."
+    "deskDesc": "Sie mieten einen Stuhl oder Tisch im Salon und haben eine eigene IČO? Tarif Stuhl für {priceDesk} CZK im Monat: Kasse, Belege, Umsatz und EET 2.0 mit Ihrem eigenen Zertifikat, ohne Termine.",
+    "eetTitle": "EET 2.0 in Tschechien für Salons ab 2027",
+    "eetDesc": "Die EET 2.0 ist in Tschechien ab 1.1.2027 Pflicht: wen sie betrifft, was vorzubereiten ist, wie Sie das DIS+-Zertifikat bekommen und EET in SalonGo in 2 Schritten einschalten."
   },
   "hero": {
     "trialNote": "{days} Tage kostenlos · Keine Kreditkarte",
@@ -1306,5 +1308,905 @@
     "a5": "Den Tarif Stuhl für {priceDesk} CZK im Monat: nur Kasse, Belege, Umsatz und EET mit Ihrem eigenen Zertifikat. Der Salonbesitzer sieht Ihren Umsatz nicht.",
     "q6": "Wo werden die Salondaten gespeichert?",
     "a6": "Auf Servern in Frankfurt, in der EU, gemäß DSGVO. Läuft ein Tarif ab, bleiben die Daten erhalten."
+  },
+  "landing": {
+    "hero": {
+      "eet": "EET 2.0 ist ab 1.1.2027 Pflicht. SalonGo ist bereit",
+      "title": "Termine, Kasse, EET. Ihr ganzer Salon in einer App.",
+      "lead": "Salonsoftware für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Tschechien. Kunden buchen online, Sie kassieren an der Theke, jeder Beleg geht automatisch an die EET. Abends wissen Sie, was rein- und was rausging.",
+      "cta": "{days} Tage kostenlos testen",
+      "secondary": "Preise ansehen",
+      "note": "Ohne Kreditkarte. Support auf Tschechisch, Vietnamesisch und Englisch.",
+      "altDesktop": "SalonGo-Kalender mit einer Spalte pro Mitarbeiterin am Computer",
+      "altPhone": "SalonGo-Kasse auf dem Smartphone",
+      "chipToday": "Heute",
+      "chipBookings": "Termine",
+      "chipIncome": "Einnahmen heute"
+    },
+    "platforms": {
+      "label": "Ein Konto, läuft auf",
+      "web": "Browser",
+      "langs": "App in 6 Sprachen"
+    },
+    "day": {
+      "title": "Ein Tag im Salon, vom ersten Termin bis Feierabend",
+      "lead": "Jeder Teil von SalonGo nimmt Ihnen eine bekannte Aufgabe ab.",
+      "s1": {
+        "time": "07:40",
+        "title": "Kunden buchen selbst, auch vor der Öffnung",
+        "desc": "Ihr Salon bekommt eine eigene Buchungsseite. Kunden wählen Leistung und Uhrzeit in 4 Schritten, auf Tschechisch, Deutsch, Englisch, Slowakisch oder Französisch."
+      },
+      "s2": {
+        "time": "09:00",
+        "title": "Ein Kalender pro Mitarbeiterin, automatisch verteilt",
+        "desc": "Jede Person hat eine Spalte. Termine ohne Wunsch-Mitarbeiterin gehen an die, die frei ist. Das Team sieht seinen Tag auf dem Handy."
+      },
+      "s3": {
+        "time": "14:30",
+        "title": "Kassieren an der Theke, Beleg direkt an die EET",
+        "desc": "Leistungen wählen, bar, mit Karte oder per QR-Überweisung bezahlen. Der 80-mm-Beleg wird gedruckt und sofort ans Finanzamt gemeldet."
+      },
+      "s4": {
+        "time": "20:00",
+        "title": "Einnahmen & Ausgaben: sehen, was übrig bleibt",
+        "desc": "Einnahmen summieren sich aus den Belegen. Eine Ausgabe ist in Sekunden erfasst: Ware, Miete, Notiz. Die Differenz sehen Sie sofort."
+      },
+      "s5": {
+        "time": "Monatsende",
+        "title": "Löhne rechnen sich selbst",
+        "desc": "Provision oder Festlohn, Trinkgeld pro Kunde oder gleich verteilt. Export als Excel, CSV oder PDF."
+      }
+    },
+    "more": {
+      "title": "Und die kleinen Dinge, die den Salon rund laufen lassen",
+      "customers": "Kundenprofile",
+      "customersDesc": "Verlauf, Umsatz, Stammkunden und Kunden, die lange nicht da waren. Geburtstagserinnerung 2 Tage vorher.",
+      "marketing": "Angebots-E-Mails",
+      "marketingDesc": "Vorlagen für Frauentag, Weihnachten und Geburtstage. An die Kundengruppe, die Sie wählen.",
+      "branches": "Mehrere Filialen",
+      "branchesDesc": "Ein Konto für alle Salons. Mit einem Tipp wechseln, den Umsatz aller auf einer Seite sehen.",
+      "staff": "Konten fürs Team",
+      "staffDesc": "Mitarbeiterinnen sehen ihre Termine und bekommen Hinweise in ihrer Sprache. Was sie sonst sehen, entscheiden Sie.",
+      "invoices": "Belege",
+      "invoicesDesc": "Jeden Beleg finden und neu drucken, gefiltert nach Datum, Mitarbeiterin und Zahlungsart.",
+      "devices": "Computer, iPad, Handy",
+      "devicesDesc": "An der Theke iPad oder Computer, das Team am Handy. Die Daten sind überall gleich.",
+      "all": "Alle Funktionen"
+    },
+    "videos": {
+      "title": "So sieht die App im Einsatz aus",
+      "lead": "Aufgenommen in der aktuellen SalonGo-App mit Beispieldaten.",
+      "play": "Abspielen",
+      "pause": "Pause",
+      "items": {
+        "booking": {
+          "title": "Neuer Termin",
+          "desc": "Kunde, Leistung und Mitarbeiterin im Kalender wählen. Der Kunde bekommt eine Bestätigung per E-Mail."
+        },
+        "checkout": {
+          "title": "Kasse",
+          "desc": "Leistungen und Zahlungsart wählen, Beleg mit EET-Code drucken."
+        },
+        "thuchi": {
+          "title": "Einnahmen & Ausgaben",
+          "desc": "Die heutigen Einnahmen sehen und eine Ausgabe mit Notiz erfassen."
+        },
+        "customers": {
+          "title": "Kunden",
+          "desc": "Kunden suchen, Profil öffnen, Verlauf und Umsatz sehen."
+        },
+        "online": {
+          "title": "Online-Buchung",
+          "desc": "Die Buchungsseite Ihres Salons auf dem Handy des Kunden."
+        },
+        "desk": {
+          "title": "Tarif Stuhl",
+          "desc": "Eine Stuhlmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben."
+        }
+      }
+    },
+    "who": {
+      "title": "Der Tarif, der zu Ihrer Arbeitsweise passt",
+      "salonTag": "Salon mit Team",
+      "salonTitle": "Sie führen einen Salon",
+      "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße, jeder mit allen Funktionen.",
+      "salonPrice": "ab {from} Kč/Monat",
+      "salonCta": "Salon-Tarife",
+      "deskTag": "Eigene IČO im Salon",
+      "deskTitle": "Sie mieten einen Stuhl und arbeiten auf eigene Rechnung",
+      "deskDesc": "Kasse, Belege und EET mit Ihrem eigenen Zertifikat, Ihre eigenen Einnahmen und Ausgaben. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
+      "deskPrice": "{priceDesk} Kč/Monat",
+      "deskCta": "Tarif Stuhl"
+    },
+    "eet": {
+      "title": "EET 2.0 ist ab 1.1.2027 Pflicht. Eine extra Kasse brauchen Sie nicht.",
+      "lead": "EET einmal in der App einschalten. Danach wird jeder Beleg ans Finanzamt gemeldet und mit FIK-Code gedruckt.",
+      "p1": "Zertifikat aus DIS+ hochladen, Passwort und Betriebsstättennummer eingeben. Fertig.",
+      "p2": "In jedem Tarif enthalten, auch im Tarif Stuhl. Ohne Aufpreis.",
+      "p3": "Hilfe beim Zertifikat? Unser Support macht es mit Ihnen zusammen.",
+      "countdown": "Noch {n} Tage",
+      "live": "In Kraft",
+      "cta": "Alles zur EET 2.0",
+      "receiptTitle": "Beispielbeleg mit EET-Code"
+    },
+    "pricing": {
+      "title": "Klare Preise, monatlich bezahlt",
+      "lead": "Jeder Tarif hat alle Funktionen, nur die Zahl der Mitarbeiter und Filialen ist anders. Tarif jederzeit im Web wechseln oder verlängern, die App aktualisiert sich sofort.",
+      "month": "Kč/Monat",
+      "staff": "bis {n} Mitarbeiter pro Filiale",
+      "staffAll": "unbegrenzt Mitarbeiter",
+      "branches": "{n} Filialen",
+      "branchesAll": "unbegrenzt Filialen",
+      "desk": "Stuhl",
+      "deskLine": "1 Person, eigene IČO",
+      "popular": "Am häufigsten gewählt",
+      "trial": "Neue Salons testen {days} Tage kostenlos, ohne Karte.",
+      "yearly": "Bei jährlicher Zahlung bis zu {discount} % sparen.",
+      "all": "Alle Preise"
+    },
+    "website": {
+      "title": "Brauchen Sie eine Website für Ihren Salon?",
+      "desc": "Eine Salon-Website mit 5 Seiten für 999 Kč, nur für SalonGo-Kunden.",
+      "cta": "Website-Vorlagen ansehen"
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "all": "Alle Fragen"
+    },
+    "final": {
+      "title": "Konto in 2 Minuten eröffnen. {days} Tage testen.",
+      "lead": "Ohne Karte. Nach dem Test bleiben Ihre Daten erhalten.",
+      "cta": "Kostenlos testen",
+      "contact": "Sprechen Sie mit uns"
+    }
+  },
+  "site": {
+    "nav": {
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "desk": "Tarif Stuhl",
+      "website": "Salon-Website",
+      "faq": "Fragen",
+      "contact": "Kontakt",
+      "about": "Über SalonGo",
+      "login": "Anmelden",
+      "renew": "Verlängern",
+      "cta": "Kostenlos testen",
+      "ctaShort": "Testen",
+      "menu": "Menü",
+      "close": "Menü schließen",
+      "skip": "Zum Inhalt springen",
+      "download": "Desktop-App",
+      "windows": "Windows",
+      "mac": "macOS",
+      "trialLine": "{days} Tage kostenlos, ohne Karte"
+    },
+    "footer": {
+      "tagline": "Salon-Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa.",
+      "product": "Produkt",
+      "company": "SalonGo",
+      "help": "Hilfe",
+      "legal": "Rechtliches",
+      "guide": "Ratgeber Salon-Software",
+      "solutions": "Lösungen nach Salontyp",
+      "support": "Antwort innerhalb von 24 Stunden, auf Tschechisch, Vietnamesisch oder Englisch.",
+      "operator": "Betreiber",
+      "rights": "Alle Rechte vorbehalten."
+    }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Häufige Fragen",
+      "lead": "Antwort nicht gefunden? Schreiben Sie uns, wir antworten innerhalb von 24 Stunden.",
+      "contact": "Frage stellen"
+    },
+    "contact": {
+      "title": "Kontakt zu SalonGo",
+      "lead": "Anrufen, schreiben oder mailen. Wir antworten innerhalb von 24 Stunden, auf Tschechisch, Vietnamesisch oder Englisch.",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp",
+      "email": "E-Mail",
+      "facebook": "Facebook",
+      "call": "Anrufen",
+      "write": "Schreiben",
+      "send": "E-Mail senden",
+      "open": "Öffnen",
+      "helpTitle": "Wobei wir helfen",
+      "help1": "Salon, Leistungen und Konten fürs Team einrichten",
+      "help2": "EET-Zertifikat aus DIS+ holen und EET einschalten",
+      "help3": "Fragen zu Tarifen, Rechnungen und Verlängerung",
+      "company": "Angaben zum Betreiber"
+    },
+    "about": {
+      "title": "Über SalonGo",
+      "lead": "SalonGo entwickelt Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa, angefangen bei vietnamesischen Salons in Tschechien.",
+      "whyTitle": "Warum es SalonGo gibt",
+      "why1": "Viele Salons schreiben Termine noch ins Heft, rechnen Löhne von Hand und sehen den Gewinn erst am Monatsende.",
+      "why2": "Gängige Software hat kein Vietnamesisch und passt nicht dazu, wie diese Salons arbeiten.",
+      "why3": "Ab 2027 muss jeder Salon in Tschechien seine Belege an die EET 2.0 melden.",
+      "promiseTitle": "Worauf Sie sich verlassen können",
+      "promise1": "Die Daten liegen in Frankfurt (Deutschland), in der EU, nach DSGVO.",
+      "promise2": "Endet der Tarif, bleiben Ihre Daten erhalten.",
+      "promise3": "Support auf Tschechisch und Vietnamesisch, Antwort innerhalb von 24 Stunden.",
+      "promise4": "Jeder Tarif hat alle Funktionen, die Preise stehen auf der Website.",
+      "who": "Betreiber"
+    },
+    "notFound": {
+      "title": "Diese Seite gibt es nicht",
+      "desc": "Vielleicht hat sich der Link geändert. Versuchen Sie die Startseite oder die Preise.",
+      "home": "Zur Startseite",
+      "pricing": "Preise ansehen"
+    }
+  },
+  "eet2": {
+    "crumb": "EET 2.0",
+    "title": "Tschechische EET 2.0 für Nagel- und Kosmetiksalons: was bis 1.1.2027 zu tun ist",
+    "lead": "Ab 1. Januar 2027 müssen Betriebe in Tschechien jeden Beleg ans Finanzamt melden. Mit SalonGo brauchen Sie keine Kasse: EET einmal einschalten, die App meldet selbst.",
+    "countdown": "Noch {n} Tage",
+    "live": "In Kraft",
+    "summaryTitle": "Kurz gesagt",
+    "k1": "Ab wann",
+    "v1": "Ab 1. Januar 2027.",
+    "k2": "Für wen",
+    "v2": "Betriebe mit Bar- oder Kartenzahlung, auch Nagel-, Friseur-, Wimpern- und Kosmetikstudios sowie Stuhlmieter mit eigener IČO.",
+    "k3": "Was Sie brauchen",
+    "v3": "Ein EET-Zertifikat aus dem DIS+-Portal des Finanzamts, sein Passwort und die Nummer der Betriebsstätte.",
+    "k4": "In SalonGo",
+    "v4": "Zertifikat einmal hochladen. Danach wird jeder Verkauf gemeldet und der Beleg mit FIK-Code gedruckt.",
+    "k5": "Kosten",
+    "v5": "In jedem SalonGo-Tarif enthalten, auch im Tarif Stuhl. Ohne Aufpreis.",
+    "stepsTitle": "EET in SalonGo einschalten",
+    "s1t": "Zertifikat in DIS+ holen",
+    "s1d": "Im Steuerportal DIS+ anmelden, ein EET-Zertifikat für Ihre Betriebsstätte erstellen und die Datei herunterladen.",
+    "s2t": "In SalonGo hochladen",
+    "s2d": "In den EET-Einstellungen Datei wählen, Passwort und Betriebsstättennummer eingeben. Name und IČO liest die App aus dem Zertifikat.",
+    "s3t": "Wie gewohnt kassieren",
+    "s3d": "Jeder Beleg wird beim Kassieren sofort gemeldet. Der gedruckte Beleg trägt den FIK-Code.",
+    "faqTitle": "Fragen zur EET 2.0",
+    "q1": "Kostet EET bei SalonGo extra?",
+    "a1": "Nein. EET ist in jedem Tarif enthalten: Basic, Pro, Premium und Stuhl.",
+    "q2": "Ich miete einen Stuhl im Salon und habe eine eigene IČO. Wie melde ich EET?",
+    "a2": "Mit dem Tarif Stuhl und Ihrem eigenen EET-Zertifikat. Die Belege laufen auf Ihren Namen, die Salonbesitzerin sieht Ihren Umsatz nicht.",
+    "q3": "Was, wenn ich das Zertifikat nicht selbst bekomme?",
+    "a3": "Der SalonGo-Support macht es mit Ihnen per Telefon oder WhatsApp, auf Tschechisch oder Vietnamesisch.",
+    "q4": "Brauche ich eine Kasse oder einen speziellen Drucker?",
+    "a4": "Keine Kasse. SalonGo läuft auf Computer, iPad und Handy. Für gedruckte Belege reicht ein 80-mm-Thermodrucker.",
+    "note": "Allgemeine Informationen, keine Steuerberatung. Klären Sie den konkreten Fall Ihres Salons mit Ihrer Buchhaltung oder dem Finanzamt.",
+    "cta": "Testen und EET einschalten",
+    "ask": "Fragen zur EET"
+  },
+  "desk2": {
+    "hero": {
+      "kicker": "Tarif Stuhl, für Stuhlmieter mit eigener IČO",
+      "soon": "Bald verfügbar",
+      "title": "Kasse, Belege und EET für Stuhlmieter im Salon",
+      "lead": "Belege auf Ihren Namen, EET mit Ihrem Zertifikat. Ihren Umsatz sehen nur Sie.",
+      "price": "{priceDesk} CZK/Monat",
+      "trial": "1 Monat kostenlos testen",
+      "expected": "Voraussichtlicher Preis zum Start",
+      "cta": "Stuhl-Konto erstellen",
+      "notify": "Zum Start benachrichtigen",
+      "pricing": "Preise ansehen",
+      "phoneAlt": "SalonGo-Kasse auf dem Handy: Leistungen, Summe und Bezahlen-Button",
+      "receiptAlt": "Musterbeleg mit Name und IČO des Stuhlmieters und EET-Codes (FIK und BKP)",
+      "receiptCaption": "Musterbeleg: Ihr Name und Ihre IČO, nicht die des Salons."
+    },
+    "what": {
+      "title": "Was enthält der Tarif Stuhl?",
+      "yesTitle": "Enthalten",
+      "y1": "Kasse: bar, Karte, QR, Trinkgeld",
+      "y2": "Belege mit Ihrem Namen und Ihrer IČO",
+      "y3": "EET 2.0 mit Ihrem Zertifikat",
+      "y4": "Eigene Einnahmen und Ausgaben, für den Salonbesitzer unsichtbar",
+      "y5": "Eigene Preisliste, auf Handy und Computer",
+      "noTitle": "Nicht enthalten",
+      "n1": "Kalender und Online-Buchung",
+      "n2": "Mitarbeiter und Lohnabrechnung",
+      "n3": "E-Mail-Marketing",
+      "noNote": "Später Termine nötig? Wechseln Sie zu Basic, Ihre Daten bleiben."
+    },
+    "price": {
+      "title": "Was kostet der Tarif Stuhl?",
+      "lead": "Ein Preis für eine Person. EET inklusive, ohne Aufpreis.",
+      "perMonth": "CZK/Monat",
+      "orYearly": "oder {total} CZK/Jahr",
+      "trial": "1 Monat kostenlos testen",
+      "expected": "Voraussichtlicher Preis zum Start",
+      "soonNote": "Der Tarif Stuhl startet bald. Hinterlassen Sie Ihren Kontakt, wir melden uns.",
+      "buy": "Tarif Stuhl kaufen / verlängern",
+      "buyNote": "Kaufen und verlängern im Web, die App ist sofort aktuell. Die iPhone-App verkauft keine Tarife.",
+      "stepsTitle": "In 3 Schritten starten",
+      "s1t": "Stuhl-Konto erstellen",
+      "s1d": "Mit E-Mail registrieren, IČO eingeben.",
+      "s2t": "EET-Zertifikat hinzufügen",
+      "s2d": "Aus DIS+ hochladen, Passwort und Kennung der Verkaufsstelle eingeben.",
+      "s3t": "Kassieren",
+      "s3d": "Jeder Bezahlvorgang erstellt einen Beleg und sendet EET."
+    },
+    "video": {
+      "title": "Der Tarif Stuhl in 15 Sekunden"
+    },
+    "faq": {
+      "title": "Fragen zum Tarif Stuhl",
+      "all": "Alle Fragen",
+      "q1": "Für wen ist der Tarif Stuhl?",
+      "a1": "Für Nageldesigner, Friseure und Lash-Stylisten, die im Salon einen Stuhl oder Tisch mieten und mit eigener IČO arbeiten. Angestellte brauchen ihn nicht: Der Salon fügt sie seinem Konto hinzu.",
+      "q2": "Warum brauche ich eine eigene EET?",
+      "a2": "Ab 1. Januar 2027 gilt in Tschechien die EET 2.0. Mit eigener IČO sind Sie eigener Steuerpflichtiger, Ihre Umsätze gehen mit Ihrem Zertifikat raus. Zu Ausnahmen fragen Sie Ihre Buchhaltung.",
+      "q3": "Sieht der Salonbesitzer meinen Umsatz?",
+      "a3": "Nein. Belege, Umsatz und Kunden im Stuhl-Konto sehen nur Sie.",
+      "q4": "Wie bezahle ich den Tarif Stuhl?",
+      "a4": "Per Karte oder Überweisung, im Web auf der Seite Tarif verlängern. Kein langfristiger Vertrag. Neue Stuhl-Konten testen 1 Monat kostenlos.",
+      "q5": "Und wenn ich später Termine brauche?",
+      "a5": "Wechseln Sie jederzeit zu Basic. Ihre Daten bleiben.",
+      "q6": "Kostet EET extra?",
+      "a6": "Nein. EET 2.0 ist im Tarif Stuhl enthalten."
+    }
+  },
+  "pricing2": {
+    "hero": {
+      "title": "SalonGo Preise: ab {from} CZK im Monat, EET 2.0 inklusive",
+      "lead": "Jeder Tarif hat alle Funktionen. Sie wählen nach Mitarbeitern und Filialen.",
+      "jump": "Schnellwahl",
+      "salon": "Ich habe einen Salon",
+      "salonPrice": "ab {from} CZK/Monat",
+      "desk": "Ich miete einen Stuhl, mit eigener IČO",
+      "deskPrice": "{priceDesk} CZK/Monat",
+      "staffHint": "Im Salon angestellt? Sie brauchen keinen Tarif: Der Inhaber fügt Sie als Mitarbeiter hinzu.",
+      "renewTitle": "Sie nutzen SalonGo schon?",
+      "renewLead": "Verlängern Sie im Web. Nach der Zahlung ist die App sofort aktuell.",
+      "renewCta": "Tarif verlängern"
+    },
+    "plans": {
+      "title": "Was kostet eine Salonsoftware?",
+      "lead": "{days} Tage kostenlos testen, ohne Karte.",
+      "cycle": "Zahlungsweise",
+      "month": "Monatlich",
+      "year": "Jährlich",
+      "perMonth": "CZK/Monat",
+      "billedYearly": "{total} CZK jährlich",
+      "orYearly": "oder {total} CZK/Jahr",
+      "monthOnly": "Nur monatlich",
+      "popular": "Am beliebtesten",
+      "staff": "{n} Mitarbeiter pro Filiale",
+      "staffAll": "Unbegrenzt Mitarbeiter",
+      "branches": "{n, plural, =1 {1 Filiale} other {# Filialen}}",
+      "branchesAll": "Unbegrenzt Filialen",
+      "fitBASIC": "Kleiner Salon, am Anfang",
+      "fitPRO": "Wachsender Salon, mehr Filialen",
+      "fitPREMIUM": "Salonketten",
+      "trial": "Testen",
+      "trialAria": "Testen, Tarif {plan}, kostenlos",
+      "renew": "Verlängern",
+      "renewAria": "Tarif {plan} verlängern",
+      "includedTitle": "In jedem Tarif",
+      "included": [
+        "Kalender pro Mitarbeiter",
+        "Online-Buchung",
+        "Kasse und Belege",
+        "EET 2.0",
+        "Einnahmen und Ausgaben",
+        "Lohnabrechnung",
+        "Kunden und E-Mail-Marketing",
+        "Berichte und Exporte",
+        "Unbegrenzt Kunden und Termine"
+      ],
+      "note": "Keine versteckten Gebühren.[[discount: Jährlich {discount} % günstiger.]] Beim Bezahlen nutzt die App immer den aktuellen Preis.",
+      "terms": "Nutzungsbedingungen"
+    },
+    "desk": {
+      "title": "Was zahlen Stuhlmieter mit eigener IČO?",
+      "lead": "Der Tarif Stuhl: Kasse, Belege und EET auf Ihre IČO. Der Salonbesitzer sieht Ihren Umsatz nicht.",
+      "name": "Tarif Stuhl",
+      "perMonth": "CZK/Monat",
+      "orYearly": "oder {total} CZK/Jahr",
+      "trial": "1 Monat kostenlos",
+      "expected": "Voraussichtlicher Preis",
+      "soon": "Bald verfügbar",
+      "soonNote": "Der Tarif Stuhl startet bald. Hinterlassen Sie Ihren Kontakt, wir melden uns.",
+      "notify": "Zum Start benachrichtigen",
+      "signup": "Stuhl-Konto erstellen",
+      "buy": "Tarif Stuhl kaufen / verlängern",
+      "more": "Mehr zum Tarif Stuhl",
+      "caption": "Tarif Stuhl im Vergleich zu den Salon-Tarifen",
+      "colFeature": "Funktion",
+      "colSalon": "Salon-Tarife",
+      "colDesk": "Tarif Stuhl",
+      "yes": "Ja",
+      "no": "Nein",
+      "rowCheckout": "Kasse und Belege",
+      "rowEet": "EET 2.0",
+      "rowThuchi": "Einnahmen und Ausgaben",
+      "rowCalendar": "Kalender, Online-Buchung",
+      "rowTeam": "Mitarbeiter, Lohnabrechnung",
+      "rowMarketing": "E-Mail-Marketing"
+    },
+    "renew": {
+      "title": "Wie verlängere ich meinen Tarif?",
+      "lead": "Im Web. Nach der Zahlung ist die App sofort aktuell.",
+      "s1": "Auf Tarif verlängern klicken",
+      "s2": "Mit dem Inhaber- oder Stuhl-Konto anmelden",
+      "s3": "Filiale prüfen, Tarif und Zeitraum wählen",
+      "s4": "Per Karte oder Überweisung bezahlen",
+      "note": "Die iPhone-App verkauft keine Tarife. Verlängern Sie im Browser oder in der Desktop-App.",
+      "cta": "Tarif verlängern"
+    },
+    "faq": {
+      "title": "Fragen zu den Preisen",
+      "trialCta": "{days} Tage kostenlos testen",
+      "all": "Alle Fragen",
+      "q1": "Brauche ich für den Test eine Karte?",
+      "a1": "Nein. Neue Salons testen {days} Tage mit allen Funktionen. Nach dem Test bleiben Ihre Daten erhalten.",
+      "q2": "Gibt es einen langfristigen Vertrag?",
+      "a2": "Nein. Sie zahlen monatlich oder jährlich. Ein Kartentarif lässt sich jederzeit beenden und läuft bis zum Ende des bezahlten Zeitraums.",
+      "q3": "Wo verlängere ich?",
+      "a3": "Im Web: Tarif verlängern klicken, anmelden, Tarif wählen und bezahlen. Die App ist sofort aktuell. Die iPhone-App verkauft keine Tarife.",
+      "q4": "Verliere ich Daten, wenn der Tarif abläuft?",
+      "a4": "Nein. Die App erinnert 2 Tage vorher. Nach Ablauf sind einige Funktionen bis zur Verlängerung gesperrt, Kasse und Belege funktionieren weiter.",
+      "q5": "Kann ich den Tarif wechseln?",
+      "a5": "Ja, auf der Seite Tarif verlängern. Ein Upgrade gilt sofort, ein Downgrade ab dem nächsten Zeitraum.",
+      "q6": "Gibt es ein Limit für Kunden oder Termine?",
+      "a6": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt nur Mitarbeiter und Filialen.",
+      "q7": "Kann ein Inhaber mehrere Filialen führen?",
+      "a7": "Ja. Ein Inhaberkonto führt alle Filialen. Jede Filiale hat eigenen Tarif und eigenes Enddatum.",
+      "q8": "Kostet EET extra?",
+      "a8": "Nein. EET 2.0 ist in jedem Tarif enthalten, auch im Tarif Stuhl.",
+      "q9": "Ich miete einen Stuhl im Salon und habe eine eigene IČO. Welcher Tarif?",
+      "a9": "Der Tarif Stuhl, {priceDesk} CZK/Monat: Kasse, Belege und EET mit Ihrem Zertifikat, ohne Kalender. Termine nötig? Wechseln Sie jederzeit zu Basic.",
+      "q10": "Ich bin im Salon angestellt. Brauche ich einen Tarif?",
+      "a10": "Nein. Der Inhaber fügt Sie als Mitarbeiter im Konto des Salons hinzu."
+    }
+  },
+  "features2": {
+    "crumb": "Funktionen",
+    "h1": "SalonGo-Funktionen: Terminbuchung, Kasse, EET 2.0, Lohn",
+    "lead": "Termine, Kasse mit EET, Einnahmen und Ausgaben, Kunden und Löhne in einer App. Auf Handy, iPad und Computer.",
+    "cta": "{days} Tage kostenlos testen",
+    "pricing": "Preise ansehen",
+    "indexLabel": "Auf dieser Seite",
+    "items": {
+      "booking": {
+        "nav": "Online-Buchung",
+        "title": "Online-Terminbuchung für Ihren Salon",
+        "lead": "Ihr Salon bekommt einen eigenen Buchungslink für Facebook, Instagram und Google Maps. Kunden wählen Leistung, Mitarbeiterin und freie Zeit, ohne App.",
+        "points": [
+          "Kunden buchen auf Tschechisch, Slowakisch, Deutsch, Englisch oder Französisch",
+          "Neue Buchungen kommen aufs Handy; bestätigen und zuteilen in einem Fenster",
+          "Bestätigungs-E-Mail und Erinnerung 1 Stunde vorher"
+        ],
+        "alt": "Online-Buchungen bestätigen und Mitarbeiter zuteilen in SalonGo am Computer",
+        "altPhone": "Buchungsseite des Salons auf dem Handy eines Kunden, Auswahl der Uhrzeit"
+      },
+      "calendar": {
+        "nav": "Terminkalender",
+        "title": "Terminkalender pro Mitarbeiterin",
+        "lead": "Jede Mitarbeiterin hat eine Spalte, Sie sehen sofort, wer frei ist. Buchungen ohne Wunschperson gehen an die, die frei ist und am wenigsten zu tun hat.",
+        "points": [
+          "Ansicht nach Mitarbeitern oder als Liste",
+          "Jeder Termin hat die Dauer der Leistung",
+          "Die Buchungsseite zeigt nur freie Zeiten, keine Doppelbuchungen"
+        ],
+        "alt": "Ein Tag mit Terminen pro Mitarbeiterin in SalonGo"
+      },
+      "checkout": {
+        "nav": "Kasse und EET",
+        "title": "Salonkasse mit EET 2.0",
+        "lead": "Leistung, Mitarbeiterin und Zahlungsart wählen, und der Beleg ist fertig. EET einmal einschalten, dann geht jeder Beleg von selbst ans Finanzamt.",
+        "points": [
+          "Bar, Karte oder Überweisung per QR-Code mit fertigem Betrag",
+          "Trinkgeld getrennt für die Mitarbeiterin",
+          "Belege im 80-mm-Format mit FIK-Code",
+          "EET 2.0 ist in Tschechien ab 1. 1. 2027 Pflicht, in jedem Tarif enthalten"
+        ],
+        "alt": "Kasse in SalonGo: Leistungen, Mitarbeiterin und Zahlungsart",
+        "eetLink": "Alles zu EET 2.0"
+      },
+      "thuchi": {
+        "nav": "Einnahmen & Ausgaben",
+        "title": "Einnahmen und Ausgaben des Salons",
+        "lead": "Der Tab Einnahmen summiert Ihre Belege von selbst. Im Tab Ausgaben erfassen Sie Ware oder Miete: Betrag, Datum, Zahlungsart und eine kurze Notiz.",
+        "points": [
+          "Einnahmen minus Ausgaben auf einen Blick, je Filiale",
+          "Export als CSV, Excel oder PDF für die Buchhaltung"
+        ],
+        "alt": "Einnahmen und Ausgaben in SalonGo: Einnahmen aus Belegen und Ausgaben des Salons"
+      },
+      "customers": {
+        "nav": "Kunden",
+        "title": "Kundenkartei und Stammkunden",
+        "lead": "Zu jedem Kunden sehen Sie Leistungen, Besuche und Gesamtumsatz. Stammkunden erkennen Sie sofort.",
+        "points": [
+          "Filter für VIP, neue und lange nicht gesehene Kunden",
+          "VIP-Status automatisch nach Ihrer Regel",
+          "Geburtstagserinnerung 2 Tage vorher"
+        ],
+        "alt": "Kundenliste in SalonGo mit Besuchen und Umsatz"
+      },
+      "marketing": {
+        "nav": "E-Mail-Marketing",
+        "title": "Angebots-E-Mails für Stammkunden",
+        "lead": "Vorlage für Weltfrauentag, Weihnachten oder Geburtstag wählen, Rabatt hinzufügen, senden. Nur Kunden mit Einwilligung erhalten sie.",
+        "points": [
+          "10 Vorlagen in 6 Sprachen, alles anpassbar",
+          "Vorschau und Test-E-Mail an sich selbst",
+          "Versand im Namen des Salons, mit Abmeldelink"
+        ],
+        "alt": "Angebots-E-Mail zum Weltfrauentag in SalonGo auf dem Handy",
+        "alt2": "Geburtstagserinnerung für Kunden in SalonGo auf dem Handy"
+      },
+      "payroll": {
+        "nav": "Lohnabrechnung",
+        "title": "Automatische Lohnabrechnung im Salon",
+        "lead": "Jede Mitarbeiterin hat eine Lohnart: Prozent vom Umsatz oder Festgehalt. Trinkgeld bekommt, wem es gegeben wurde, oder es wird gleich geteilt, wie Sie wollen.",
+        "points": [
+          "Auf Wunsch eigener Prozentsatz je Leistung",
+          "Abrechnung je Zeitraum: Lohn, Umsatz, Trinkgeld, Anzahl Belege",
+          "Export als Excel, CSV oder PDF"
+        ],
+        "alt": "Lohnabrechnung der Mitarbeiter für einen Zeitraum in SalonGo"
+      },
+      "staff": {
+        "nav": "Mitarbeiterkonten",
+        "title": "App für Mitarbeiter: eigener Kalender und Umsatz",
+        "lead": "Jede Mitarbeiterin hat ein eigenes Login am Handy, mit Mitteilungen in ihrer Sprache. Was sie sieht, entscheiden Sie.",
+        "points": [
+          "Einladung per E-Mail, Passwort setzen, loslegen",
+          "Nur Kalender, oder Kalender und eigener Umsatz",
+          "Den Umsatz des ganzen Salons sehen Mitarbeiter nie"
+        ],
+        "cap1": "Heutige Termine einer Mitarbeiterin",
+        "cap2": "Der Inhaber bestimmt, was Mitarbeiter sehen"
+      },
+      "branches": {
+        "nav": "Mehrere Filialen",
+        "title": "Mehrere Filialen in einem Konto verwalten",
+        "lead": "Neue Filiale direkt in der App anlegen. Mit einem Tippen wechseln und Umsatz und Termine aller Filialen auf einer Seite sehen.",
+        "points": [
+          "Jede Filiale mit eigenem Kalender, Team, Leistungen und Belegen",
+          "Neue Filialen testen {days} Tage gratis",
+          "Jede Filiale mit eigenem Tarif und eigener Verlängerung"
+        ],
+        "alt": "Seite Alle Salons in SalonGo: Umsatz und Termine je Filiale"
+      }
+    },
+    "more": {
+      "title": "Und der Rest",
+      "services": {
+        "title": "Leistungen und Preisliste",
+        "text": "Kategorien mit Farbe, Dauer und Preis. Jede Leistung für die Online-Buchung ein- oder ausblenden."
+      },
+      "reports": {
+        "title": "Umsatzberichte und Belege",
+        "text": "Umsatz nach Tag, Mitarbeiterin, Leistung und Zahlungsart. Belege finden, neu drucken oder als PDF exportieren."
+      },
+      "devices": {
+        "title": "iPhone, Android, iPad, Mac, Windows und Browser",
+        "text": "Ein Konto auf allen Geräten, immer dieselben Daten. Die App spricht 6 Sprachen: Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch, Französisch."
+      },
+      "desk": {
+        "title": "Tarif Stuhl für Stuhlmieter",
+        "text": "Eigene IČO? Kasse, Belege und EET auf Ihren Namen für {priceDesk} CZK im Monat.",
+        "link": "Zum Tarif Stuhl"
+      }
+    },
+    "closing": {
+      "title": "{days} Tage alle Funktionen gratis testen",
+      "lead": "Ohne Kreditkarte. Jeder Tarif hat alle Funktionen, nur Mitarbeiterzahl und Filialen unterscheiden sich.",
+      "cta": "Kostenlos testen",
+      "link": "Preise ansehen"
+    }
+  },
+  "guide2": {
+    "crumb": "Salonsoftware",
+    "h1": "Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons",
+    "intro": "Termine, Kasse, EET, Löhne, Trinkgeld und Stammkunden: was eine Salonsoftware können sollte und wie SalonGo es macht.",
+    "ctaTrial": "{days} Tage kostenlos testen",
+    "ctaFeatures": "Funktionen ansehen",
+    "toc": "In diesem Artikel",
+    "sections": [
+      {
+        "id": "la-gi",
+        "h": "Was ist eine Salonsoftware?",
+        "body": [
+          "Eine Salonsoftware bündelt die tägliche Arbeit an einem Ort: Terminbuchung, Dienstplan, Kasse, Kundenkartei, Umsatz und Lohnabrechnung. Statt Papierkalender, Excel und verstreuten Nachrichten sieht der Inhaber in der App, wer heute was macht und wie viel eingenommen wurde.",
+          "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa. Sie läuft auf iPhone, Android, iPad, Mac, Windows und im Browser."
+        ]
+      },
+      {
+        "id": "tiem-nail",
+        "h": "Was sollte Software für ein Nagelstudio können?",
+        "body": [
+          "Nagelstudios haben mehrere Mitarbeiterinnen, viele kurze Leistungen, Stammkunden und Trinkgeld. Gute Software sollte:"
+        ],
+        "points": [
+          "Eine eigene Online-Buchungsseite bieten, auf der Kunden Leistung, Mitarbeiterin und freie Zeit wählen",
+          "Einen Kalender pro Mitarbeiterin zeigen, damit man sofort sieht, wer frei ist",
+          "Zahlungen bar, per Karte oder Überweisung annehmen und Trinkgeld erfassen",
+          "Löhne automatisch als Prozent vom Umsatz oder als Festgehalt berechnen und Trinkgeld nach Wahl des Inhabers teilen",
+          "Umsatz nach Tag, Mitarbeiterin und Leistung auswerten"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "Alle Funktionen ansehen"
+        }
+      },
+      {
+        "id": "dat-lich-online",
+        "h": "Online-Terminbuchung rund um die Uhr",
+        "body": [
+          "Jeder Salon bekommt einen eigenen Buchungslink für Facebook, Instagram oder Google Maps. Kunden buchen auf Tschechisch, Slowakisch, Deutsch, Englisch oder Französisch, und der Inhaber bestätigt und teilt Mitarbeiter in einem Fenster zu.",
+          "Die Buchungsseite zeigt nur freie Zeiten, damit es keine Doppelbuchungen gibt. Kunden mit E-Mail erhalten eine Bestätigung und eine Erinnerung 1 Stunde vorher."
+        ],
+        "figure": "Online-Buchungsseite des Salons: der Kunde wählt Tag und freie Uhrzeit",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "Zur Online-Buchung"
+        }
+      },
+      {
+        "id": "tinh-tien",
+        "h": "Kasse am Empfang mit automatischen Belegen",
+        "body": [
+          "Leistung, Mitarbeiterin und Zahlungsart wählen, und der Beleg ist fertig. Jede Zahlung fließt direkt in die Umsatzberichte:"
+        ],
+        "points": [
+          "Bar, Karte oder Überweisung per QR-Code mit fertigem Betrag, damit die Kasse am Abend stimmt",
+          "Jede Zahlung erzeugt einen Beleg, gedruckt im 80-mm-Format und später leicht zu finden",
+          "Trinkgeld steht auf dem Beleg und wird so geteilt, wie der Inhaber es wählt"
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "Zur Kasse"
+        }
+      },
+      {
+        "id": "eet",
+        "h": "EET 2.0 ab 1. 1. 2027: was Salons in Tschechien brauchen",
+        "body": [
+          "Ab 1. 1. 2027 muss in Tschechien jede Bar- oder Kartenzahlung an das Finanzamt gemeldet werden. Mit SalonGo brauchen Sie keine Registrierkasse und keine Zusatzsoftware.",
+          "Laden Sie das Zertifikat aus dem DIS+-Portal hoch und geben Sie Passwort und Kennung der Verkaufsstelle ein. Danach geht jeder Beleg an EET und wird mit FIK-Code gedruckt. EET ist in jedem Tarif enthalten, auch im Tarif Stuhl, ohne Aufpreis."
+        ],
+        "link": {
+          "href": "/eet-2-0",
+          "label": "Alles zu EET 2.0"
+        }
+      },
+      {
+        "id": "thu-chi",
+        "h": "Einnahmen und Ausgaben im Salon: was wirklich bleibt",
+        "body": [
+          "Der Tab Einnahmen summiert den Umsatz aus Belegen von selbst. Im Tab Ausgaben erfassen Sie Ware oder Miete: Betrag, Datum, Zahlungsart und eine kurze Notiz. Einnahmen minus Ausgaben sehen Sie sofort je Filiale, als CSV, Excel oder PDF für die Buchhaltung."
+        ],
+        "figure": "Einnahmen und Ausgaben in SalonGo: Einnahmen aus Belegen und Ausgaben des Salons",
+        "link": {
+          "href": "/tinh-nang#thu-chi",
+          "label": "Zu Einnahmen und Ausgaben"
+        }
+      },
+      {
+        "id": "tinh-luong",
+        "h": "Klare Löhne und Trinkgeld-Teilung",
+        "body": [
+          "Jede Mitarbeiterin hat eine Lohnart: Prozent vom eigenen Umsatz (auf Wunsch je Leistung) oder ein festes Monatsgehalt. Der Inhaber wählt, ob Trinkgeld die Person bekommt, der der Kunde es gab, oder ob alles gleichmäßig geteilt wird. Am Monatsende die Abrechnung öffnen und exportieren."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "Zur Lohnabrechnung"
+        }
+      },
+      {
+        "id": "marketing",
+        "h": "Stammkunden halten mit E-Mail-Marketing",
+        "body": [
+          "Unter Kunden gibt es 10 Vorlagen zu Anlässen wie Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Muttertag und Black Friday. Ein paar Zeilen anpassen, Rabatt hinzufügen, Vorschau ansehen und an Kunden mit Einwilligung senden. Die App meldet außerdem Geburtstage 2 Tage vorher."
+        ],
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "Zum E-Mail-Marketing"
+        }
+      },
+      {
+        "id": "chi-nhanh",
+        "h": "Mehrere Filialen, Team am Handy",
+        "body": [
+          "Ein Inhaberkonto führt alle Filialen, wechselt im Menü und zeigt den Umsatz aller Filialen auf einer Seite. Mitarbeiter haben ein eigenes Login am Handy und sehen ihre eigenen Termine und, wenn der Inhaber es erlaubt, ihren eigenen Umsatz."
+        ],
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "Zu mehreren Filialen"
+        }
+      },
+      {
+        "id": "gia",
+        "h": "Was kostet die Salonsoftware?",
+        "body": [
+          "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
+          "Stuhlmieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat. Tarife werden im Browser gekauft und verlängert; die iPhone-App verkauft keine Tarife."
+        ],
+        "link": {
+          "href": "/bang-gia",
+          "label": "Preise ansehen"
+        }
+      },
+      {
+        "id": "bat-dau",
+        "h": "Startklar an einem Nachmittag",
+        "body": [
+          "Ohne Technikkenntnisse und ohne komplizierte Einrichtung:"
+        ],
+        "steps": [
+          "Kostenloses Konto anlegen, Salonname und Öffnungszeiten eingeben",
+          "Team, Leistungen, Preise und Lohnart hinzufügen",
+          "Buchungslink auf Facebook, Instagram und Google teilen",
+          "Fragen? Der Support antwortet auf Vietnamesisch und Tschechisch"
+        ]
+      }
+    ],
+    "endTitle": "{days} Tage gratis testen, ohne Karte",
+    "endText": "Jeder Tarif hat alle Funktionen, ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
+    "ctaPricing": "Preise ansehen",
+    "faqTitle": "Fragen zur Salonsoftware",
+    "faq": [
+      {
+        "q": "Gibt es eine App für Termine, Kasse und Lohn zugleich?",
+        "a": "Ja. SalonGo erledigt alles in einer App: Kunden buchen online über den eigenen Link des Salons, der Kalender ist nach Mitarbeitern geteilt, an der Kasse werden Zahlung und Trinkgeld mit Beleg erfasst, und am Monatsende wird der Lohn berechnet (Prozent oder Fixgehalt). Läuft auf Handy, Tablet und Computer, {days} Tage gratis."
+      },
+      {
+        "q": "Welche Salonsoftware passt zu einem vietnamesischen Nagelstudio?",
+        "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in fünf Sprachen, und der Support spricht Vietnamesisch und Tschechisch."
+      },
+      {
+        "q": "Unterstützt SalonGo EET 2.0?",
+        "a": "Ja. EET einmal mit dem Zertifikat aus DIS+ einschalten, danach geht jeder Beleg von selbst an das Finanzamt. EET ist in jedem Tarif ohne Aufpreis enthalten."
+      },
+      {
+        "q": "Muss ich etwas installieren?",
+        "a": "Nein. Es läuft im Browser am Computer und Handy. Zusätzlich gibt es Apps für iPhone, Android, iPad, Windows und Mac."
+      },
+      {
+        "q": "Ist der Test kostenlos?",
+        "a": "Ja. Jeder neue Salon testet {days} Tage mit allen Funktionen, ohne Kreditkarte."
+      },
+      {
+        "q": "Sehen Mitarbeiter ihren Kalender am Handy?",
+        "a": "Ja. Jede Mitarbeiterin hat ein eigenes Login am Handy und sieht ihre eigenen Termine und, wenn der Inhaber es erlaubt, ihren eigenen Umsatz."
+      },
+      {
+        "q": "Wie berechnet die Software die Löhne im Nagelstudio?",
+        "a": "Jede Mitarbeiterin erhält Prozent vom eigenen Umsatz oder ein festes Monatsgehalt. Der Inhaber wählt, wie Trinkgeld geteilt wird: an die Person, der der Kunde es gab, oder gleichmäßig."
+      }
+    ]
+  },
+  "solutions2": {
+    "crumb": "Lösungen nach Salontyp",
+    "h1": "Lösungen für jeden Salontyp: Nägel, Friseur, Wimpern, Spa",
+    "lead": "Jeder Salon arbeitet anders. Das macht SalonGo für jeden Typ, auch wenn Sie nur einen Stuhl mieten.",
+    "cta": "{days} Tage kostenlos testen",
+    "features": "Funktionen ansehen",
+    "indexLabel": "Salontyp wählen",
+    "problem": "Das Alltagsproblem",
+    "answer": "Was SalonGo macht",
+    "types": {
+      "nail": {
+        "nav": "Nagelstudio",
+        "title": "Software für Nagelstudios",
+        "lead": "Viele Mitarbeiterinnen, kurze Leistungen, viel Trinkgeld. SalonGo führt den Kalender jeder Mitarbeiterin und rechnet am Monatsende die Löhne ab.",
+        "pairs": [
+          {
+            "problem": "Kunden schreiben den ganzen Tag wegen Terminen",
+            "answer": "Eigener Buchungslink, Kunden wählen freie Zeiten selbst"
+          },
+          {
+            "problem": "Provision und Trinkgeld von Hand gerechnet",
+            "answer": "Lohn als Prozent oder fest, Trinkgeld pro Kunde oder gleich geteilt"
+          },
+          {
+            "problem": "EET 2.0 ab 1. 1. 2027 Pflicht",
+            "answer": "Belege gehen beim Kassieren an EET, keine extra Registrierkasse"
+          }
+        ],
+        "link": "Zur Lohnabrechnung",
+        "alt": "Löhne im Nagelstudio als Prozent vom Umsatz und Trinkgeld in SalonGo"
+      },
+      "hair": {
+        "nav": "Friseursalon",
+        "title": "Terminbuchung für Friseursalons",
+        "lead": "Schnitt, Farbe, Dauerwelle: jede Leistung dauert anders. Der Kalender rechnet mit der echten Dauer, nichts überschneidet sich.",
+        "pairs": [
+          {
+            "problem": "Leistungen mit sehr unterschiedlicher Dauer",
+            "answer": "Jede Leistung hat eigene Dauer und Preis, der Kalender plant sie richtig ein"
+          },
+          {
+            "problem": "Stammkunden wollen ihre Friseurin",
+            "answer": "Kunden wählen beim Buchen, oder die App teilt der freien Person zu"
+          },
+          {
+            "problem": "Gebucht und vergessen",
+            "answer": "Bestätigungs-E-Mail und Erinnerung 1 Stunde vorher"
+          }
+        ],
+        "link": "Zum Terminkalender",
+        "alt": "Kalender eines Friseursalons pro Mitarbeiterin in SalonGo"
+      },
+      "beauty": {
+        "nav": "Wimpern, Spa, Kosmetik",
+        "title": "Software für Wimpern-, Kosmetik- und Spa-Salons",
+        "lead": "Kunden kommen in Abständen wieder. Kundenkartei und Angebots-E-Mails holen sie zur richtigen Zeit zurück.",
+        "pairs": [
+          {
+            "problem": "Nicht mehr wissen, was die Kundin zuletzt hatte",
+            "answer": "Kundenkartei: Leistungen, Besuche, Umsatz"
+          },
+          {
+            "problem": "Kunden, die nicht mehr kommen",
+            "answer": "Lange nicht gesehene Kunden filtern und ein Angebot mailen"
+          },
+          {
+            "problem": "Vergessene Geburtstage",
+            "answer": "Die App erinnert 2 Tage vorher, damit Sie Glückwünsche mit Angebot senden"
+          }
+        ],
+        "link": "Zu den Kunden",
+        "alt": "Kundenliste eines Wimpern- und Spa-Salons in SalonGo"
+      },
+      "chain": {
+        "nav": "Mehrere Filialen",
+        "title": "Software für Salonketten mit mehreren Filialen",
+        "lead": "Ein Konto für alle Salons. Der Inhaber sieht Umsatz und Termine aller Filialen auf einer Seite.",
+        "pairs": [
+          {
+            "problem": "Jede Filiale wegen Umsatz anrufen",
+            "answer": "Seite Alle Salons: Umsatz, Termine, offene Online-Buchungen"
+          },
+          {
+            "problem": "Nicht im Salon sein",
+            "answer": "Jederzeit am Handy nachsehen, Mitarbeiter mit eigenem Login"
+          },
+          {
+            "problem": "Jede Filiale ist anders groß",
+            "answer": "Jede Filiale wählt ihren Tarif nach Teamgröße und verlängert separat"
+          }
+        ],
+        "link": "Zu mehreren Filialen",
+        "alt": "Seite Alle Salons: Umsatz je Filiale in SalonGo"
+      }
+    },
+    "desk": {
+      "nav": "Stuhlmieter, eigene IČO",
+      "title": "Kassensoftware für Stuhlmieter mit eigener IČO",
+      "lead": "Der Tarif Stuhl hat nur Kasse, Belege, Einnahmen und Ausgaben und EET auf Ihren Namen. Der Salonbesitzer sieht Ihren Umsatz nicht.",
+      "price": "{priceDesk} CZK im Monat",
+      "note": "Ohne Termine und Lohnabrechnung. Wechsel zu Basic jederzeit möglich.",
+      "cta": "Zum Tarif Stuhl",
+      "alt": "Kasse im Tarif Stuhl auf dem Handy"
+    },
+    "faq": {
+      "title": "Kurz gefragt",
+      "items": [
+        {
+          "q": "Passt SalonGo auch für einen kleinen Salon?",
+          "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Funktionen. Wächst das Team, wechseln Sie jederzeit den Tarif."
+        },
+        {
+          "q": "Hat jeder Tarif alle Funktionen?",
+          "a": "Ja. Basic, Pro und Premium haben dieselben Funktionen und unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen."
+        },
+        {
+          "q": "In welchen Sprachen buchen Kunden?",
+          "a": "Die Buchungsseite gibt es auf Tschechisch, Slowakisch, Deutsch, Englisch und Französisch. Sie und Ihr Team nutzen die App auf Wunsch auf Vietnamesisch."
+        },
+        {
+          "q": "Welchen Tarif braucht ein Stuhlmieter?",
+          "a": "Mieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat, mit EET über das eigene Zertifikat. Angestellte des Salons brauchen ihn nicht: der Inhaber fügt sie dem Salonkonto hinzu."
+        }
+      ]
+    },
+    "closing": {
+      "title": "{days} Tage testen, dann den passenden Tarif wählen",
+      "lead": "Ohne Kreditkarte. Support auf Vietnamesisch und Tschechisch.",
+      "cta": "Kostenlos testen",
+      "link": "Preise ansehen"
+    }
   }
 }

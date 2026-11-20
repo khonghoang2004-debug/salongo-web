@@ -1,0 +1,44 @@
+{
+  "faq": {
+    "title": "Frequently asked questions",
+    "lead": "Can't find your answer? Message us, we reply within 24 hours.",
+    "contact": "Ask us"
+  },
+  "contact": {
+    "title": "Contact SalonGo",
+    "lead": "Call, message or email. We reply within 24 hours, in Czech, Vietnamese or English.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "facebook": "Facebook",
+    "call": "Call",
+    "write": "Message",
+    "send": "Send email",
+    "open": "Open",
+    "helpTitle": "What we help with",
+    "help1": "Setting up your salon, services and staff accounts",
+    "help2": "Getting the EET certificate from DIS+ and switching EET on",
+    "help3": "Questions about plans, invoices and renewal",
+    "company": "Company details"
+  },
+  "about": {
+    "title": "About SalonGo",
+    "lead": "SalonGo builds software for nail, hair, lash and beauty studios in Europe, starting with Vietnamese-run salons in Czechia.",
+    "whyTitle": "Why SalonGo exists",
+    "why1": "Many salons still write bookings in a notebook, work out wages by hand and only see their profit at the end of the month.",
+    "why2": "Most salon software has no Vietnamese and doesn't fit how these salons are run.",
+    "why3": "From 2027 every salon in Czechia has to report receipts to EET 2.0.",
+    "promiseTitle": "What we stand by",
+    "promise1": "Data is stored in Frankfurt (Germany), inside the EU, under GDPR.",
+    "promise2": "When a plan ends, your data stays.",
+    "promise3": "Support in Czech and Vietnamese, replies within 24 hours.",
+    "promise4": "Every plan has every feature, and prices are on the website.",
+    "who": "Operator"
+  },
+  "notFound": {
+    "title": "We couldn't find this page",
+    "desc": "The link may have changed. Try the home page or pricing.",
+    "home": "Home page",
+    "pricing": "See pricing"
+  }
+}

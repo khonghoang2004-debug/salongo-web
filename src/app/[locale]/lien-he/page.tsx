@@ -3,11 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
-import { ContactPageHero } from "@/components/ContactPageHero";
-import { SectionContact } from "@/components/SectionContact";
-import { SectionContactMiniFAQ } from "@/components/SectionContactMiniFAQ";
-import { SectionContactTrust } from "@/components/SectionContactTrust";
-import { SectionContactCTA } from "@/components/SectionContactCTA";
+import { ContactView } from "@/components/pages2/ContactView";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -23,11 +19,7 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <PageShell>
-      <ContactPageHero />
-      <SectionContact />
-      <SectionContactMiniFAQ />
-      <SectionContactTrust />
-      <SectionContactCTA />
+      <ContactView />
     </PageShell>
   );
 }

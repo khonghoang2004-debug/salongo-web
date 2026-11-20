@@ -1,12 +1,15 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { SiteNav } from "@/components/site/SiteNav";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { MobileCta } from "@/components/site/MobileCta";
 
-export function PageShell({ children }: { children: React.ReactNode }) {
+/** Khung chung của mọi trang: menu, nội dung (#main cho "bỏ qua menu"), chân trang, nút dùng thử dính dưới trên điện thoại. */
+export function PageShell({ children, cta = true }: { children: React.ReactNode; cta?: boolean }) {
   return (
     <>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
+      <SiteNav />
+      <main id="main">{children}</main>
+      <SiteFooter />
+      {cta && <MobileCta />}
     </>
   );
 }

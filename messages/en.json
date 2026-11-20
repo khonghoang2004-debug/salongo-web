@@ -263,24 +263,26 @@
     "tagline": "Salon software made for Vietnamese-run salons in Europe."
   },
   "pages": {
-    "homeTitle": "Salon management app: booking, checkout, payroll",
-    "homeDesc": "Software for nail, hair, lash and beauty salons in Europe: online booking, checkout, payroll and revenue reports, in Vietnamese and Czech. {days}-day free trial.",
+    "homeTitle": "Salon software with booking, POS and Czech EET 2.0",
+    "homeDesc": "Online booking, checkout with Czech EET 2.0, income and expenses, and payroll for nail, hair, lash and beauty salons. From {from} CZK a month, {days}-day free trial.",
     "featuresTitle": "Salon booking app, appointments, checkout, payroll",
     "featuresDesc": "Online booking, staff calendar, checkout, clients, email marketing, revenue reports, payroll and multiple locations in one salon management app.",
     "solutionsTitle": "Solutions for nail and beauty salons",
     "solutionsDesc": "No double bookings, payroll mistakes or cash losses: how SalonGo helps Vietnamese-run nail and beauty salons in Europe run smoothly.",
     "pricingTitle": "Salon management app pricing",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Every plan has every feature. {days}-day trial, renew right in the app.",
-    "aboutTitle": "About SalonGo",
-    "aboutDesc": "SalonGo is salon management software built for Vietnamese-run nail, hair, lash and beauty salons in Europe: our mission and roadmap.",
-    "faqTitle": "Salon software FAQ",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Every plan has every feature. {days}-day trial, renew on the web.",
+    "aboutTitle": "About SalonGo: salon software made in Czechia",
+    "aboutDesc": "SalonGo builds software for nail, hair, lash and beauty studios in Europe. Data stored in the EU, support in Czech and Vietnamese.",
+    "faqTitle": "FAQ: SalonGo salon software, EET 2.0, pricing",
     "faqDesc": "Answers about SalonGo: {days}-day trial, plans, renewal, payment, phone use, languages, multiple locations, payroll and tips.",
     "contactTitle": "Contact – support in Vietnamese and Czech",
     "contactDesc": "Contact SalonGo by phone, email, Facebook or WhatsApp. Support in Vietnamese and Czech, with a reply within 24 hours.",
     "websiteTitle": "SalonGo Web Studio – salon website design for {price}",
     "websiteDesc": "SalonGo Web Studio designs websites for hair, nail, spa and barber salons: up to {pages} pages, mobile-friendly, {price} one-time for SalonGo customers. See 35+ demos.",
     "deskTitle": "Chair plan: checkout and EET for chair renters",
-    "deskDesc": "Renting a chair or desk in a salon with your own IČO? The Chair plan for {priceDesk} CZK a month: checkout, receipts, revenue and EET 2.0 with your own certificate, no appointments."
+    "deskDesc": "Renting a chair or desk in a salon with your own IČO? The Chair plan for {priceDesk} CZK a month: checkout, receipts, revenue and EET 2.0 with your own certificate, no appointments.",
+    "eetTitle": "Czech EET 2.0 for salons: what to do by 1 Jan 2027",
+    "eetDesc": "EET 2.0 is mandatory in Czechia from 1 January 2027: who it applies to, what to prepare, how to get the DIS+ certificate and how to switch EET on in SalonGo in 2 steps."
   },
   "hero": {
     "trialNote": "{days} days free · No card required",
@@ -1306,5 +1308,905 @@
     "a5": "The Chair plan, {priceDesk} CZK a month: only checkout, receipts, revenue and EET with your own certificate. The salon owner cannot see your revenue.",
     "q6": "Where is salon data stored?",
     "a6": "On servers in Frankfurt, Germany, inside the EU, in line with GDPR. If a plan expires, the data is kept."
+  },
+  "landing": {
+    "hero": {
+      "eet": "EET 2.0 is mandatory from 1 Jan 2027. SalonGo is ready",
+      "title": "Bookings, checkout, EET. Your whole salon in one app.",
+      "lead": "Salon software for nail, hair, lash and beauty studios in Czechia. Clients book online, you take payment at the desk, and every receipt goes to EET by itself. By evening you know what came in and what went out.",
+      "cta": "Try free for {days} days",
+      "secondary": "See pricing",
+      "note": "No card needed. Support in Czech, Vietnamese and English.",
+      "altDesktop": "SalonGo calendar with a column for each staff member, on a computer",
+      "altPhone": "SalonGo checkout screen on a phone",
+      "chipToday": "Today",
+      "chipBookings": "bookings",
+      "chipIncome": "Income today"
+    },
+    "platforms": {
+      "label": "One account, works on",
+      "web": "Web browser",
+      "langs": "App in 6 languages"
+    },
+    "day": {
+      "title": "A day at the salon, from the first booking to closing time",
+      "lead": "Each part of SalonGo takes one familiar job off your hands.",
+      "s1": {
+        "time": "07:40",
+        "title": "Clients book themselves, even before you open",
+        "desc": "Your salon gets its own booking page. Clients pick a service and a time in 4 steps, in Czech, German, English, Slovak or French."
+      },
+      "s2": {
+        "time": "09:00",
+        "title": "A calendar per staff member, shared out automatically",
+        "desc": "One column per person. Bookings without a chosen stylist go to whoever is free. Staff see their own day on their phone."
+      },
+      "s3": {
+        "time": "14:30",
+        "title": "Checkout at the desk, receipts sent to EET",
+        "desc": "Pick the services, take cash, card or a QR transfer. The 80 mm receipt prints and is reported to the tax office straight away."
+      },
+      "s4": {
+        "time": "20:00",
+        "title": "Income & expenses: see what you actually made",
+        "desc": "Income adds up from your receipts. Log an expense in seconds: stock, rent, a note. Income minus expenses is right there."
+      },
+      "s5": {
+        "time": "End of month",
+        "title": "Payroll works itself out",
+        "desc": "Commission or a fixed wage, tips per client or split evenly. Export to Excel, CSV or PDF."
+      }
+    },
+    "more": {
+      "title": "And the small things that keep the salon running",
+      "customers": "Client profiles",
+      "customersDesc": "History, spend, regulars and clients you haven't seen in a while. A birthday reminder 2 days ahead.",
+      "marketing": "Offer emails",
+      "marketingDesc": "Templates for Women's Day, Christmas and birthdays. Send them to the clients you choose.",
+      "branches": "Several locations",
+      "branchesDesc": "One account for every salon. Switch with one tap and see the revenue of all of them on one page.",
+      "staff": "Staff accounts",
+      "staffDesc": "Staff see their own bookings and get notifications in their language. You decide what else they see.",
+      "invoices": "Receipts",
+      "invoicesDesc": "Find and reprint any receipt, filtered by date, staff member and payment method.",
+      "devices": "Computer, iPad, phone",
+      "devicesDesc": "The front desk uses an iPad or computer, staff use their phones. The data is always the same.",
+      "all": "See all features"
+    },
+    "videos": {
+      "title": "See the app in action",
+      "lead": "Recorded in the current SalonGo app with sample data.",
+      "play": "Play",
+      "pause": "Pause",
+      "items": {
+        "booking": {
+          "title": "New booking",
+          "desc": "Pick the client, service and stylist on the calendar. The client gets a confirmation email."
+        },
+        "checkout": {
+          "title": "Checkout",
+          "desc": "Choose services and the payment method, print a receipt with the EET code."
+        },
+        "thuchi": {
+          "title": "Income & expenses",
+          "desc": "See today's income and add an expense with a note."
+        },
+        "customers": {
+          "title": "Clients",
+          "desc": "Search for a client, open the profile, see history and spend."
+        },
+        "online": {
+          "title": "Online booking",
+          "desc": "Your salon's booking page on a client's phone."
+        },
+        "desk": {
+          "title": "Chair plan",
+          "desc": "A chair renter rings up a sale and checks their own income and expenses."
+        }
+      }
+    },
+    "who": {
+      "title": "Pick the plan that fits how you work",
+      "salonTag": "Salon with staff",
+      "salonTitle": "You run a salon",
+      "salonDesc": "Calendar, online booking, checkout, EET, payroll, clients and several locations. Three plans by team size, every feature in each.",
+      "salonPrice": "from {from} Kč/month",
+      "salonCta": "See salon plans",
+      "deskTag": "Own IČO in a salon",
+      "deskTitle": "You rent a chair and work for yourself",
+      "deskDesc": "Checkout, receipts and EET with your own certificate, your own income and expenses. The salon owner can't see your revenue.",
+      "deskPrice": "{priceDesk} Kč/month",
+      "deskCta": "See the Chair plan"
+    },
+    "eet": {
+      "title": "EET 2.0 is mandatory from 1 Jan 2027. No extra till needed.",
+      "lead": "Switch EET on once in the app. From then on every receipt is reported to the tax office and printed with its FIK code.",
+      "p1": "Upload the certificate from DIS+, enter its password and the outlet number. Done.",
+      "p2": "Included in every plan, Chair too. No extra fee.",
+      "p3": "Need help getting the certificate? Our support team does it with you.",
+      "countdown": "{n} days to go",
+      "live": "Now in force",
+      "cta": "Read about EET 2.0",
+      "receiptTitle": "Sample receipt with EET code"
+    },
+    "pricing": {
+      "title": "Clear prices, paid monthly",
+      "lead": "Every plan has every feature, only the number of staff and locations differs. Change or renew your plan on the web any time and the app updates straight away.",
+      "month": "Kč/month",
+      "staff": "up to {n} staff per location",
+      "staffAll": "unlimited staff",
+      "branches": "{n} locations",
+      "branchesAll": "unlimited locations",
+      "desk": "Chair",
+      "deskLine": "1 person, own IČO",
+      "popular": "Most chosen",
+      "trial": "New salons try it free for {days} days, no card needed.",
+      "yearly": "Pay yearly and save up to {discount}%.",
+      "all": "See full pricing"
+    },
+    "website": {
+      "title": "Need a website for your salon?",
+      "desc": "A 5-page salon website for 999 Kč, only for SalonGo customers.",
+      "cta": "See website templates"
+    },
+    "faq": {
+      "title": "Common questions",
+      "all": "See all questions"
+    },
+    "final": {
+      "title": "Open an account in 2 minutes. Try it for {days} days.",
+      "lead": "No card needed. When the trial ends, your data stays put.",
+      "cta": "Start free trial",
+      "contact": "Talk to us"
+    }
+  },
+  "site": {
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "desk": "Chair plan",
+      "website": "Salon website",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "about": "About",
+      "login": "Log in",
+      "renew": "Renew",
+      "cta": "Start free trial",
+      "ctaShort": "Try free",
+      "menu": "Menu",
+      "close": "Close menu",
+      "skip": "Skip to content",
+      "download": "Desktop app",
+      "windows": "Windows",
+      "mac": "macOS",
+      "trialLine": "{days} days free, no card needed"
+    },
+    "footer": {
+      "tagline": "Salon software for nail, hair, lash and beauty studios in Europe.",
+      "product": "Product",
+      "company": "SalonGo",
+      "help": "Support",
+      "legal": "Legal",
+      "guide": "Salon software guide",
+      "solutions": "Solutions by salon type",
+      "support": "We reply within 24 hours, in Czech, Vietnamese or English.",
+      "operator": "Operated by",
+      "rights": "All rights reserved."
+    }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "lead": "Can't find your answer? Message us, we reply within 24 hours.",
+      "contact": "Ask us"
+    },
+    "contact": {
+      "title": "Contact SalonGo",
+      "lead": "Call, message or email. We reply within 24 hours, in Czech, Vietnamese or English.",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "facebook": "Facebook",
+      "call": "Call",
+      "write": "Message",
+      "send": "Send email",
+      "open": "Open",
+      "helpTitle": "What we help with",
+      "help1": "Setting up your salon, services and staff accounts",
+      "help2": "Getting the EET certificate from DIS+ and switching EET on",
+      "help3": "Questions about plans, invoices and renewal",
+      "company": "Company details"
+    },
+    "about": {
+      "title": "About SalonGo",
+      "lead": "SalonGo builds software for nail, hair, lash and beauty studios in Europe, starting with Vietnamese-run salons in Czechia.",
+      "whyTitle": "Why SalonGo exists",
+      "why1": "Many salons still write bookings in a notebook, work out wages by hand and only see their profit at the end of the month.",
+      "why2": "Most salon software has no Vietnamese and doesn't fit how these salons are run.",
+      "why3": "From 2027 every salon in Czechia has to report receipts to EET 2.0.",
+      "promiseTitle": "What we stand by",
+      "promise1": "Data is stored in Frankfurt (Germany), inside the EU, under GDPR.",
+      "promise2": "When a plan ends, your data stays.",
+      "promise3": "Support in Czech and Vietnamese, replies within 24 hours.",
+      "promise4": "Every plan has every feature, and prices are on the website.",
+      "who": "Operator"
+    },
+    "notFound": {
+      "title": "We couldn't find this page",
+      "desc": "The link may have changed. Try the home page or pricing.",
+      "home": "Home page",
+      "pricing": "See pricing"
+    }
+  },
+  "eet2": {
+    "crumb": "EET 2.0",
+    "title": "Czech EET 2.0 for nail and beauty salons: what to do by 1 Jan 2027",
+    "lead": "From 1 January 2027, businesses in Czechia must report every receipt to the tax office. With SalonGo you don't buy a till: switch EET on once and the app reports by itself.",
+    "countdown": "{n} days to go",
+    "live": "Now in force",
+    "summaryTitle": "In short",
+    "k1": "From",
+    "v1": "1 January 2027.",
+    "k2": "Who it applies to",
+    "v2": "Businesses taking cash or card payments, including nail, hair, lash and beauty studios and chair renters with their own IČO.",
+    "k3": "What you need",
+    "v3": "An EET certificate from the tax office's DIS+ portal, its password and your outlet number.",
+    "k4": "In SalonGo",
+    "v4": "Upload the certificate once. Every sale is then reported and the receipt prints with its FIK code.",
+    "k5": "Cost",
+    "v5": "Included in every SalonGo plan, the Chair plan too. No extra fee.",
+    "stepsTitle": "Switch EET on in SalonGo",
+    "s1t": "Get the certificate in DIS+",
+    "s1d": "Log in to the DIS+ tax portal, create an EET certificate for your outlet and download the file.",
+    "s2t": "Upload it to SalonGo",
+    "s2d": "In EET settings, choose the file and enter its password and the outlet number. The app reads your name and IČO from the certificate.",
+    "s3t": "Take payments as usual",
+    "s3d": "Each receipt is reported the moment you take payment. The printed receipt carries the FIK code.",
+    "faqTitle": "EET 2.0 questions",
+    "q1": "Does SalonGo charge extra for EET?",
+    "a1": "No. EET is included in every plan: Basic, Pro, Premium and Chair.",
+    "q2": "I rent a chair in a salon and have my own IČO. How do I report EET?",
+    "a2": "Use the Chair plan with your own EET certificate. Receipts are in your name and the salon owner can't see your revenue.",
+    "q3": "What if I can't get the certificate myself?",
+    "a3": "SalonGo support does it with you by phone or WhatsApp, in Czech or Vietnamese.",
+    "q4": "Do I need a till or a special printer?",
+    "a4": "No till. SalonGo runs on a computer, iPad or phone. For printed receipts, any 80 mm thermal printer works.",
+    "note": "General information, not tax advice. For your salon's specific case, ask your accountant or the tax office.",
+    "cta": "Try it and switch EET on",
+    "ask": "Ask about EET"
+  },
+  "desk2": {
+    "hero": {
+      "kicker": "Chair plan, for chair renters with their own IČO",
+      "soon": "Coming soon",
+      "title": "Checkout, receipts and EET for chair renters in a salon",
+      "lead": "Receipts carry your name, EET goes out with your certificate. Only you see your revenue.",
+      "price": "{priceDesk} CZK/month",
+      "trial": "1-month free trial",
+      "expected": "Expected price at launch",
+      "cta": "Create a Chair account",
+      "notify": "Tell me when it launches",
+      "pricing": "See pricing",
+      "phoneAlt": "SalonGo checkout on a phone: services, total and the pay button",
+      "receiptAlt": "Sample receipt printed with the chair renter's name and IČO, with EET codes (FIK and BKP)",
+      "receiptCaption": "Sample receipt: your name and IČO, not the salon's."
+    },
+    "what": {
+      "title": "What's in the Chair plan?",
+      "yesTitle": "Included",
+      "y1": "Checkout: cash, card, QR, tips",
+      "y2": "Receipts with your name and IČO",
+      "y3": "EET 2.0 with your certificate",
+      "y4": "Your own income & expenses, hidden from the salon owner",
+      "y5": "Your own price list, on phone and computer",
+      "noTitle": "Not included",
+      "n1": "Calendar and online booking",
+      "n2": "Staff and payroll",
+      "n3": "Email marketing",
+      "noNote": "Need appointments later? Switch to Basic, your data stays."
+    },
+    "price": {
+      "title": "How much is the Chair plan?",
+      "lead": "One price for one person. EET included at no extra cost.",
+      "perMonth": "CZK/month",
+      "orYearly": "or {total} CZK/year",
+      "trial": "1-month free trial",
+      "expected": "Expected price at launch",
+      "soonNote": "The Chair plan launches soon. Leave your contact and we'll tell you.",
+      "buy": "Buy / renew the Chair plan",
+      "buyNote": "Buy and renew on the web, the app updates right away. The iPhone app doesn't sell plans.",
+      "stepsTitle": "Start in 3 steps",
+      "s1t": "Create a Chair account",
+      "s1d": "Sign up by email, enter your IČO.",
+      "s2t": "Add your EET certificate",
+      "s2d": "Upload it from DIS+, enter the password and sales unit ID.",
+      "s3t": "Check out",
+      "s3d": "Every checkout makes a receipt and sends EET."
+    },
+    "video": {
+      "title": "The Chair plan in 15 seconds"
+    },
+    "faq": {
+      "title": "Questions about the Chair plan",
+      "all": "All questions",
+      "q1": "Who is the Chair plan for?",
+      "a1": "Nail techs, hairdressers and lash artists who rent a chair or desk in a salon and work on their own IČO. Salon employees don't need it: the salon adds them to its account.",
+      "q2": "Why do I need my own EET?",
+      "a2": "From 1 January 2027 EET 2.0 applies in Czechia. With your own IČO you are a separate taxpayer, so your sales go out with your own certificate. Ask your accountant about exemptions.",
+      "q3": "Can the salon owner see my revenue?",
+      "a3": "No. Receipts, revenue and clients in a Chair account are visible only to you.",
+      "q4": "How do I pay for the Chair plan?",
+      "a4": "By card or bank transfer, on the web on the Renew page. No long-term contract. New Chair accounts get 1 month free.",
+      "q5": "What if I need appointments later?",
+      "a5": "Switch to Basic at any time. Your data stays.",
+      "q6": "Does EET cost extra?",
+      "a6": "No. EET 2.0 is included in the Chair plan."
+    }
+  },
+  "pricing2": {
+    "hero": {
+      "title": "SalonGo pricing: from {from} CZK a month, EET 2.0 included",
+      "lead": "Every plan has every feature. You choose by staff and locations.",
+      "jump": "Jump to",
+      "salon": "I own a salon",
+      "salonPrice": "from {from} CZK/month",
+      "desk": "I rent a chair, with my own IČO",
+      "deskPrice": "{priceDesk} CZK/month",
+      "staffHint": "Employed by a salon? You don't need a plan: the owner adds you as staff.",
+      "renewTitle": "Already on SalonGo?",
+      "renewLead": "Renew on the web. Once you pay, the app updates right away.",
+      "renewCta": "Renew plan"
+    },
+    "plans": {
+      "title": "How much does salon software cost?",
+      "lead": "{days}-day free trial, no card needed.",
+      "cycle": "Billing period",
+      "month": "Monthly",
+      "year": "Yearly",
+      "perMonth": "CZK/month",
+      "billedYearly": "{total} CZK billed yearly",
+      "orYearly": "or {total} CZK/year",
+      "monthOnly": "Monthly only",
+      "popular": "Most popular",
+      "staff": "{n} staff per location",
+      "staffAll": "Unlimited staff",
+      "branches": "{n, plural, =1 {1 location} other {# locations}}",
+      "branchesAll": "Unlimited locations",
+      "fitBASIC": "Small salon, just starting",
+      "fitPRO": "Growing salon, more locations",
+      "fitPREMIUM": "Salon chains",
+      "trial": "Try free",
+      "trialAria": "Try free, {plan} plan",
+      "renew": "Renew",
+      "renewAria": "Renew the {plan} plan",
+      "includedTitle": "Every plan includes",
+      "included": [
+        "Calendar per staff member",
+        "Online booking",
+        "Checkout and receipts",
+        "EET 2.0",
+        "Income & expenses",
+        "Payroll",
+        "Clients and email marketing",
+        "Reports and exports",
+        "Unlimited clients and appointments"
+      ],
+      "note": "No hidden fees.[[discount: Paying yearly saves {discount}%.]] At checkout the app always uses the current price.",
+      "terms": "Terms of use"
+    },
+    "desk": {
+      "title": "What does a chair renter with their own IČO pay?",
+      "lead": "The Chair plan: checkout, receipts and EET under your IČO. The salon owner can't see your revenue.",
+      "name": "Chair plan",
+      "perMonth": "CZK/month",
+      "orYearly": "or {total} CZK/year",
+      "trial": "1-month free trial",
+      "expected": "Expected price",
+      "soon": "Coming soon",
+      "soonNote": "The Chair plan launches soon. Leave your contact and we'll tell you.",
+      "notify": "Tell me when it launches",
+      "signup": "Create a Chair account",
+      "buy": "Buy / renew the Chair plan",
+      "more": "About the Chair plan",
+      "caption": "Chair plan compared with salon plans",
+      "colFeature": "Feature",
+      "colSalon": "Salon plans",
+      "colDesk": "Chair plan",
+      "yes": "Yes",
+      "no": "No",
+      "rowCheckout": "Checkout and receipts",
+      "rowEet": "EET 2.0",
+      "rowThuchi": "Income & expenses",
+      "rowCalendar": "Calendar, online booking",
+      "rowTeam": "Staff, payroll",
+      "rowMarketing": "Email marketing"
+    },
+    "renew": {
+      "title": "How do I renew my SalonGo plan?",
+      "lead": "On the web. Once you pay, the app updates right away.",
+      "s1": "Click Renew plan",
+      "s2": "Sign in with the salon owner or Chair account",
+      "s3": "Check the location, pick a plan and period",
+      "s4": "Pay by card or bank transfer",
+      "note": "The iPhone app doesn't sell plans. Renew in a browser or the desktop app.",
+      "cta": "Renew plan"
+    },
+    "faq": {
+      "title": "Questions about SalonGo pricing",
+      "trialCta": "Try free for {days} days",
+      "all": "All questions",
+      "q1": "Do I need a card for the trial?",
+      "a1": "No. New salons get {days} days with every feature. When the trial ends, your data stays.",
+      "q2": "Is there a long-term contract?",
+      "a2": "No. Pay monthly or yearly. A card plan can stop renewing at any time and stays active until the end of the paid period.",
+      "q3": "Where do I renew?",
+      "a3": "On the web: click Renew plan, sign in, pick a plan and pay. The app updates right away. The iPhone app doesn't sell plans.",
+      "q4": "Do I lose data when the plan expires?",
+      "a4": "No. The app reminds you 2 days before. After expiry some features are locked until you renew; checkout and invoices keep working.",
+      "q5": "Can I switch plans?",
+      "a5": "Yes, on the Renew page. An upgrade starts right away, a downgrade starts with the next period.",
+      "q6": "Is there a limit on clients or appointments?",
+      "a6": "No. Clients, appointments and invoices are unlimited. Plans only limit staff and locations.",
+      "q7": "Can one owner run several locations?",
+      "a7": "Yes. One owner account runs every location. Each location has its own plan and end date.",
+      "q8": "Does EET cost extra?",
+      "a8": "No. EET 2.0 is in every plan, including Chair.",
+      "q9": "I rent a chair in a salon and have my own IČO. Which plan?",
+      "a9": "The Chair plan, {priceDesk} CZK/month: checkout, receipts and EET with your own certificate, no calendar. Need appointments? Switch to Basic at any time.",
+      "q10": "I'm employed by a salon. Do I need a plan?",
+      "a10": "No. The owner adds you as staff in the salon's account."
+    }
+  },
+  "features2": {
+    "crumb": "Features",
+    "h1": "SalonGo features: online booking, checkout, EET 2.0, payroll",
+    "lead": "Bookings, checkout with EET, income and expenses, clients and staff pay in one app. On phone, iPad and computer.",
+    "cta": "Try free for {days} days",
+    "pricing": "See pricing",
+    "indexLabel": "On this page",
+    "items": {
+      "booking": {
+        "nav": "Online booking",
+        "title": "Online booking page for your salon",
+        "lead": "Your salon gets its own booking link for Facebook, Instagram and Google Maps. Clients pick a service, a staff member and a free time, with no app to install.",
+        "points": [
+          "Clients book in Czech, Slovak, German, English or French",
+          "New bookings arrive on your phone; confirm and assign staff in one box",
+          "Confirmation email and a reminder 1 hour before"
+        ],
+        "alt": "Confirming online bookings and assigning staff in SalonGo on a computer",
+        "altPhone": "The salon's online booking page on a client's phone, choosing a time"
+      },
+      "calendar": {
+        "nav": "Calendar",
+        "title": "Appointment calendar per staff member",
+        "lead": "One column per staff member, so you see at a glance who is free. Bookings without a chosen person go to whoever is free and least busy.",
+        "points": [
+          "View by staff member or as a list",
+          "Every booking takes the service's real duration",
+          "The booking page only shows free times, so no double bookings"
+        ],
+        "alt": "A day of appointments per staff member in SalonGo"
+      },
+      "checkout": {
+        "nav": "Checkout and EET",
+        "title": "Salon checkout with Czech EET 2.0",
+        "lead": "Pick the service, the staff member and how the client pays, and the receipt is done. Turn on EET once, then every receipt is sent to the tax office by itself.",
+        "points": [
+          "Cash, card or bank transfer by QR code with the amount filled in",
+          "Tips recorded separately for staff",
+          "80 mm receipts with the FIK code",
+          "EET 2.0 is mandatory from 1 Jan 2027 and included in every plan"
+        ],
+        "alt": "SalonGo checkout: services, staff member and payment method",
+        "eetLink": "All about EET 2.0"
+      },
+      "thuchi": {
+        "nav": "Income & expenses",
+        "title": "Salon income and expenses",
+        "lead": "The income tab adds up your receipts by itself. The expenses tab records stock, rent and the like: amount, date, payment method and a short note.",
+        "points": [
+          "Income minus expenses at a glance, per location",
+          "Export to CSV, Excel or PDF for your accountant"
+        ],
+        "alt": "Income and expenses in SalonGo: income from receipts and salon expenses"
+      },
+      "customers": {
+        "nav": "Clients",
+        "title": "Client records and regulars",
+        "lead": "Every client has their service history, number of visits and total spend. Regulars are recognised straight away.",
+        "points": [
+          "Filter VIP, new and lapsed clients",
+          "VIP status set automatically by your own rule",
+          "Birthday reminder 2 days ahead"
+        ],
+        "alt": "Client list in SalonGo with visits and spend"
+      },
+      "marketing": {
+        "nav": "Email marketing",
+        "title": "Offer emails for regular clients",
+        "lead": "Pick a template for Women's Day, Christmas or a birthday, add a discount and send. Only clients who agreed to offers receive it.",
+        "points": [
+          "10 templates, written in 6 languages, all editable",
+          "Preview and send a test to yourself",
+          "Sent in your salon's name, with a one-tap unsubscribe link"
+        ],
+        "alt": "Women's Day offer email in SalonGo on a phone",
+        "alt2": "Client birthday reminder in SalonGo on a phone"
+      },
+      "payroll": {
+        "nav": "Staff pay",
+        "title": "Automatic staff payroll",
+        "lead": "Each staff member has one pay type: a percentage of revenue or a fixed salary. Tips go to whoever was tipped or are split equally, your choice.",
+        "points": [
+          "A different percentage per service if you need it",
+          "Payroll per period: pay, revenue, tips, number of receipts",
+          "Export to Excel, CSV or PDF"
+        ],
+        "alt": "Staff payroll for a period in SalonGo"
+      },
+      "staff": {
+        "nav": "Staff accounts",
+        "title": "Staff app: their own schedule and revenue",
+        "lead": "Every staff member has their own login on the phone, with notifications in their own language. You decide what they see.",
+        "points": [
+          "Invite by email; they set a password and start",
+          "Schedule only, or schedule plus their own revenue",
+          "Staff never see the whole salon's revenue"
+        ],
+        "cap1": "A staff member's schedule for today",
+        "cap2": "The owner chooses what staff can see"
+      },
+      "branches": {
+        "nav": "Multiple locations",
+        "title": "Manage multiple salon locations in one account",
+        "lead": "Add a location right in the app. Switch with one tap and see revenue and bookings for all locations on one page.",
+        "points": [
+          "Each location has its own calendar, staff, services and receipts",
+          "New locations get a {days}-day trial",
+          "Each location has its own plan and renewal"
+        ],
+        "alt": "The All salons page in SalonGo: revenue and bookings per location"
+      }
+    },
+    "more": {
+      "title": "And the rest",
+      "services": {
+        "title": "Services and price list",
+        "text": "Colour-coded categories, durations and prices. Show or hide each service on the booking page."
+      },
+      "reports": {
+        "title": "Revenue reports and receipts",
+        "text": "Revenue by day, staff member, service and payment method. Find, reprint or export receipts to PDF."
+      },
+      "devices": {
+        "title": "iPhone, Android, iPad, Mac, Windows and browser",
+        "text": "One account on every device, always the same data. The app speaks 6 languages: Vietnamese, Czech, Slovak, English, German, French."
+      },
+      "desk": {
+        "title": "Chair plan for renters",
+        "text": "Your own IČO? Checkout, receipts and EET in your name for {priceDesk} CZK a month.",
+        "link": "See the Chair plan"
+      }
+    },
+    "closing": {
+      "title": "Try every feature free for {days} days",
+      "lead": "No card needed. Every plan has every feature; they differ only by staff and locations.",
+      "cta": "Start free trial",
+      "link": "See pricing"
+    }
+  },
+  "guide2": {
+    "crumb": "Salon management software",
+    "h1": "Salon and nail salon management software for Europe",
+    "intro": "Bookings, checkout, EET, staff pay, tips and regular clients: what salon management software should do, and how SalonGo does it.",
+    "ctaTrial": "Try free for {days} days",
+    "ctaFeatures": "See features",
+    "toc": "In this guide",
+    "sections": [
+      {
+        "id": "la-gi",
+        "h": "What is salon management software?",
+        "body": [
+          "Salon management software puts the salon's daily work in one place: taking bookings, scheduling staff, checkout, client records, revenue and payroll. Instead of a paper diary, spreadsheets and scattered messages, the owner opens the app and sees who is doing what today and how much came in.",
+          "SalonGo is salon management software made for Vietnamese-run nail, hair, lash and beauty salons in Europe. It runs on iPhone, Android, iPad, Mac, Windows and in the browser."
+        ]
+      },
+      {
+        "id": "tiem-nail",
+        "h": "What should nail salon software do?",
+        "body": [
+          "Nail salons have several technicians, many short services, lots of regulars and tips. Good nail salon software should:"
+        ],
+        "points": [
+          "Give the salon its own online booking page where clients pick a service, a technician and a free time",
+          "Show a calendar per technician, so you see at a glance who is free",
+          "Take payments at the desk by cash, card or bank transfer and record tips",
+          "Calculate pay automatically as a percentage of revenue or a fixed salary, with tips shared the way the owner chooses",
+          "Report revenue by day, by technician and by service"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "See all features"
+        }
+      },
+      {
+        "id": "dat-lich-online",
+        "h": "Online booking 24/7, no phone calls",
+        "body": [
+          "Each salon gets its own booking link for Facebook, Instagram or Google Maps. Clients book in Czech, Slovak, German, English or French, while the owner confirms and assigns staff in one box.",
+          "The booking page only shows times when staff are free, so there are no double bookings. Clients with an email get a confirmation and a reminder 1 hour before."
+        ],
+        "figure": "The salon's online booking page: the client picks a day and a free time",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "See online booking"
+        }
+      },
+      {
+        "id": "tinh-tien",
+        "h": "Front-desk checkout with automatic receipts",
+        "body": [
+          "Pick the service, the staff member and how the client pays, and the receipt is done. Every payment goes straight into your revenue reports:"
+        ],
+        "points": [
+          "Cash, card or bank transfer by QR code with the amount filled in, so the till matches at closing",
+          "Every payment creates a receipt, printed at 80 mm and easy to find later",
+          "Tips are recorded on the receipt and shared the way the owner chooses"
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "See checkout"
+        }
+      },
+      {
+        "id": "eet",
+        "h": "EET 2.0 from 1 January 2027: what salons need",
+        "body": [
+          "From 1 January 2027, every cash or card payment in Czechia must be reported to the tax office. With SalonGo you don't need a separate till or extra software.",
+          "Upload the certificate from the DIS+ portal and enter the password and the shop ID in the app. From then on every receipt is sent to EET and printed with its FIK code. EET is in every plan, including the Chair plan, at no extra cost."
+        ],
+        "link": {
+          "href": "/eet-2-0",
+          "label": "All about EET 2.0"
+        }
+      },
+      {
+        "id": "thu-chi",
+        "h": "Salon income and expenses: know your profit",
+        "body": [
+          "The income tab adds up revenue from receipts by itself. The expenses tab records stock, rent and the like: amount, date, payment method and a short note. Income minus expenses shows straight away for each location, and you can export it to CSV, Excel or PDF for your accountant."
+        ],
+        "figure": "Income and expenses in SalonGo: income from receipts and salon expenses",
+        "link": {
+          "href": "/tinh-nang#thu-chi",
+          "label": "See income and expenses"
+        }
+      },
+      {
+        "id": "tinh-luong",
+        "h": "Clear staff pay and tip sharing",
+        "body": [
+          "Each staff member has one pay type: a percentage of their own revenue (optionally per service) or a fixed monthly salary. The owner chooses whether each tip goes to the person the client tipped or all tips are split equally. At month end, open payroll and export."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "See automatic payroll"
+        }
+      },
+      {
+        "id": "marketing",
+        "h": "Keep regulars coming back with email marketing",
+        "body": [
+          "Clients has 10 occasion templates such as Christmas, New Year, Valentine's Day, Women's Day, Mother's Day and Black Friday. Edit a few lines, add a discount, preview and send to clients who agreed to offers. The app also flags client birthdays 2 days ahead so you can send wishes with an offer."
+        ],
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "See email marketing"
+        }
+      },
+      {
+        "id": "chi-nhanh",
+        "h": "Multiple locations, staff schedule on the phone",
+        "body": [
+          "One owner account runs every location, switches between them from the menu and sees all locations' revenue on one page. Staff have their own login on the phone and see their own appointments and, if the owner allows it, their own revenue."
+        ],
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "See multiple locations"
+        }
+      },
+      {
+        "id": "gia",
+        "h": "Salon software pricing",
+        "body": [
+          "Every plan has every feature; plans differ only by staff per location and number of locations: Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
+          "Chair renters with their own IČO use the Chair plan, {priceDesk} CZK/month. Plans are bought and renewed in the browser; the iPhone app does not sell plans."
+        ],
+        "link": {
+          "href": "/bang-gia",
+          "label": "See pricing"
+        }
+      },
+      {
+        "id": "bat-dau",
+        "h": "Up and running in an afternoon",
+        "body": [
+          "No technical skills or complicated setup needed:"
+        ],
+        "steps": [
+          "Create a free account, enter the salon name and opening hours",
+          "Add staff, services, prices and how you pay staff",
+          "Share your booking link on Facebook, Instagram and Google",
+          "Stuck? Support answers in Vietnamese and Czech"
+        ]
+      }
+    ],
+    "endTitle": "Try free for {days} days, no card needed",
+    "endText": "Every plan has every feature, from {from} CZK/month. Support in Vietnamese and Czech.",
+    "ctaPricing": "See pricing",
+    "faqTitle": "Questions about salon management software",
+    "faq": [
+      {
+        "q": "Is there one app for appointments, checkout and staff payroll?",
+        "a": "Yes. SalonGo does all of it: clients book online through your salon's own link, the calendar is split by staff member, checkout records payment and tips with a receipt, and payroll is calculated at month end (percentage or fixed salary). It works on phone, tablet and computer, with a {days}-day free trial."
+      },
+      {
+        "q": "Which salon software suits a Vietnamese-run nail salon in Czechia?",
+        "a": "SalonGo is made for Vietnamese-run nail and beauty salons in Europe: the app is in Vietnamese, clients book in Czech, Slovak, German, English or French, prices are in CZK and support speaks Vietnamese and Czech."
+      },
+      {
+        "q": "Does SalonGo support EET 2.0?",
+        "a": "Yes. Turn on EET once with your certificate from DIS+, then every receipt is sent to the tax office by itself. EET is in every plan at no extra cost."
+      },
+      {
+        "q": "Do I need to install anything?",
+        "a": "No. It runs in the browser on computers and phones. There are also apps for iPhone, Android, iPad, Windows and Mac."
+      },
+      {
+        "q": "Is the trial free?",
+        "a": "Yes. Every new salon gets {days} days with every feature, no card needed."
+      },
+      {
+        "q": "Can staff see their schedule on their phone?",
+        "a": "Yes. Each staff member has their own login on the phone and sees their own appointments and, if the owner allows it, their own revenue."
+      },
+      {
+        "q": "How does the software calculate nail technicians' pay?",
+        "a": "Each technician is paid a percentage of their own revenue or a fixed monthly salary. The owner chooses how tips are shared: to whoever the client tipped, or split equally."
+      }
+    ]
+  },
+  "solutions2": {
+    "crumb": "Solutions by salon type",
+    "h1": "Solutions for every salon type: nail, hair, lash, spa",
+    "lead": "Every kind of salon works differently. Here is what SalonGo does for each, even if you only rent a chair.",
+    "cta": "Try free for {days} days",
+    "features": "See features",
+    "indexLabel": "Choose your salon type",
+    "problem": "The everyday problem",
+    "answer": "What SalonGo does",
+    "types": {
+      "nail": {
+        "nav": "Nail salon",
+        "title": "Nail salon management software",
+        "lead": "Many technicians, many short services, lots of tips. SalonGo keeps each technician's calendar and works out pay at month end.",
+        "pairs": [
+          {
+            "problem": "Clients message all day asking for a time",
+            "answer": "Your own booking link, clients pick a free time themselves"
+          },
+          {
+            "problem": "Commission and tips worked out by hand",
+            "answer": "Pay by percentage or fixed salary, tips per client or split equally"
+          },
+          {
+            "problem": "EET 2.0 mandatory from 1 Jan 2027",
+            "answer": "Receipts are sent to EET at checkout, no extra till needed"
+          }
+        ],
+        "link": "See staff pay",
+        "alt": "Nail technicians' pay by percentage and tips in SalonGo"
+      },
+      "hair": {
+        "nav": "Hair salon",
+        "title": "Booking software for hair salons",
+        "lead": "Cut, colour, perm: each service takes its own time. The calendar uses the real duration, so nothing overlaps.",
+        "pairs": [
+          {
+            "problem": "Services of very different lengths",
+            "answer": "Each service has its own duration and price, the calendar fits it in"
+          },
+          {
+            "problem": "Regulars want their own stylist",
+            "answer": "Clients choose a stylist when booking, or let the app pick whoever is free"
+          },
+          {
+            "problem": "Clients book and forget",
+            "answer": "Confirmation email and a reminder 1 hour before"
+          }
+        ],
+        "link": "See the calendar",
+        "alt": "A hair salon's calendar per stylist in SalonGo"
+      },
+      "beauty": {
+        "nav": "Lash, spa, beauty",
+        "title": "Software for lash, spa and beauty salons",
+        "lead": "Clients come back in cycles. Client records and offer emails bring them back at the right time.",
+        "pairs": [
+          {
+            "problem": "Not remembering what the client had last time",
+            "answer": "Client record: service history, visits, spend"
+          },
+          {
+            "problem": "Clients who stopped coming",
+            "answer": "Filter lapsed clients and send them an offer email"
+          },
+          {
+            "problem": "Forgetting client birthdays",
+            "answer": "The app reminds you 2 days ahead so you can send wishes with an offer"
+          }
+        ],
+        "link": "See clients",
+        "alt": "Client list of a lash and spa salon in SalonGo"
+      },
+      "chain": {
+        "nav": "Multiple locations",
+        "title": "Software for salon chains with multiple locations",
+        "lead": "One account for every salon. The owner sees revenue and bookings for all locations on one page.",
+        "pairs": [
+          {
+            "problem": "Calling each salon to ask about revenue",
+            "answer": "All salons page: revenue, bookings, online bookings waiting"
+          },
+          {
+            "problem": "Not being at the salon",
+            "answer": "Check on your phone any time; staff have their own logins"
+          },
+          {
+            "problem": "Every salon is a different size",
+            "answer": "Each location picks a plan by staff count and renews on its own"
+          }
+        ],
+        "link": "See multiple locations",
+        "alt": "All salons page: revenue per location in SalonGo"
+      }
+    },
+    "desk": {
+      "nav": "Chair renter, own IČO",
+      "title": "Checkout software for chair renters with their own IČO",
+      "lead": "The Chair plan has only checkout, receipts, income and expenses, and EET in your name. The salon owner cannot see your revenue.",
+      "price": "{priceDesk} CZK a month",
+      "note": "No calendar or payroll. Switch to Basic any time you need them.",
+      "cta": "See the Chair plan",
+      "alt": "Chair plan checkout on a phone"
+    },
+    "faq": {
+      "title": "Quick answers",
+      "items": [
+        {
+          "q": "Is SalonGo right for a small salon?",
+          "a": "Yes. Basic covers {staffBasic} staff and 1 location with every feature. When the team grows, switch plans any time."
+        },
+        {
+          "q": "Does every plan have every feature?",
+          "a": "Yes. Basic, Pro and Premium have the same features and differ only by staff per location and number of locations."
+        },
+        {
+          "q": "Which languages can clients book in?",
+          "a": "The booking page is in Czech, Slovak, German, English and French. You and your staff can use the app in Vietnamese."
+        },
+        {
+          "q": "Which plan does a chair renter need?",
+          "a": "Renters with their own IČO use the Chair plan, {priceDesk} CZK a month, with EET on their own certificate. Salon employees don't need it: the owner adds them to the salon's account."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Try it for {days} days, then pick the plan that fits",
+      "lead": "No card needed. Support in Vietnamese and Czech.",
+      "cta": "Start free trial",
+      "link": "See pricing"
+    }
   }
 }

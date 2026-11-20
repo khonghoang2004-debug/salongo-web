@@ -1,0 +1,132 @@
+{
+  "crumb": "Lösungen nach Salontyp",
+  "h1": "Lösungen für jeden Salontyp: Nägel, Friseur, Wimpern, Spa",
+  "lead": "Jeder Salon arbeitet anders. Das macht SalonGo für jeden Typ, auch wenn Sie nur einen Stuhl mieten.",
+  "cta": "{days} Tage kostenlos testen",
+  "features": "Funktionen ansehen",
+  "indexLabel": "Salontyp wählen",
+  "problem": "Das Alltagsproblem",
+  "answer": "Was SalonGo macht",
+  "types": {
+    "nail": {
+      "nav": "Nagelstudio",
+      "title": "Software für Nagelstudios",
+      "lead": "Viele Mitarbeiterinnen, kurze Leistungen, viel Trinkgeld. SalonGo führt den Kalender jeder Mitarbeiterin und rechnet am Monatsende die Löhne ab.",
+      "pairs": [
+        {
+          "problem": "Kunden schreiben den ganzen Tag wegen Terminen",
+          "answer": "Eigener Buchungslink, Kunden wählen freie Zeiten selbst"
+        },
+        {
+          "problem": "Provision und Trinkgeld von Hand gerechnet",
+          "answer": "Lohn als Prozent oder fest, Trinkgeld pro Kunde oder gleich geteilt"
+        },
+        {
+          "problem": "EET 2.0 ab 1. 1. 2027 Pflicht",
+          "answer": "Belege gehen beim Kassieren an EET, keine extra Registrierkasse"
+        }
+      ],
+      "link": "Zur Lohnabrechnung",
+      "alt": "Löhne im Nagelstudio als Prozent vom Umsatz und Trinkgeld in SalonGo"
+    },
+    "hair": {
+      "nav": "Friseursalon",
+      "title": "Terminbuchung für Friseursalons",
+      "lead": "Schnitt, Farbe, Dauerwelle: jede Leistung dauert anders. Der Kalender rechnet mit der echten Dauer, nichts überschneidet sich.",
+      "pairs": [
+        {
+          "problem": "Leistungen mit sehr unterschiedlicher Dauer",
+          "answer": "Jede Leistung hat eigene Dauer und Preis, der Kalender plant sie richtig ein"
+        },
+        {
+          "problem": "Stammkunden wollen ihre Friseurin",
+          "answer": "Kunden wählen beim Buchen, oder die App teilt der freien Person zu"
+        },
+        {
+          "problem": "Gebucht und vergessen",
+          "answer": "Bestätigungs-E-Mail und Erinnerung 1 Stunde vorher"
+        }
+      ],
+      "link": "Zum Terminkalender",
+      "alt": "Kalender eines Friseursalons pro Mitarbeiterin in SalonGo"
+    },
+    "beauty": {
+      "nav": "Wimpern, Spa, Kosmetik",
+      "title": "Software für Wimpern-, Kosmetik- und Spa-Salons",
+      "lead": "Kunden kommen in Abständen wieder. Kundenkartei und Angebots-E-Mails holen sie zur richtigen Zeit zurück.",
+      "pairs": [
+        {
+          "problem": "Nicht mehr wissen, was die Kundin zuletzt hatte",
+          "answer": "Kundenkartei: Leistungen, Besuche, Umsatz"
+        },
+        {
+          "problem": "Kunden, die nicht mehr kommen",
+          "answer": "Lange nicht gesehene Kunden filtern und ein Angebot mailen"
+        },
+        {
+          "problem": "Vergessene Geburtstage",
+          "answer": "Die App erinnert 2 Tage vorher, damit Sie Glückwünsche mit Angebot senden"
+        }
+      ],
+      "link": "Zu den Kunden",
+      "alt": "Kundenliste eines Wimpern- und Spa-Salons in SalonGo"
+    },
+    "chain": {
+      "nav": "Mehrere Filialen",
+      "title": "Software für Salonketten mit mehreren Filialen",
+      "lead": "Ein Konto für alle Salons. Der Inhaber sieht Umsatz und Termine aller Filialen auf einer Seite.",
+      "pairs": [
+        {
+          "problem": "Jede Filiale wegen Umsatz anrufen",
+          "answer": "Seite Alle Salons: Umsatz, Termine, offene Online-Buchungen"
+        },
+        {
+          "problem": "Nicht im Salon sein",
+          "answer": "Jederzeit am Handy nachsehen, Mitarbeiter mit eigenem Login"
+        },
+        {
+          "problem": "Jede Filiale ist anders groß",
+          "answer": "Jede Filiale wählt ihren Tarif nach Teamgröße und verlängert separat"
+        }
+      ],
+      "link": "Zu mehreren Filialen",
+      "alt": "Seite Alle Salons: Umsatz je Filiale in SalonGo"
+    }
+  },
+  "desk": {
+    "nav": "Stuhlmieter, eigene IČO",
+    "title": "Kassensoftware für Stuhlmieter mit eigener IČO",
+    "lead": "Der Tarif Stuhl hat nur Kasse, Belege, Einnahmen und Ausgaben und EET auf Ihren Namen. Der Salonbesitzer sieht Ihren Umsatz nicht.",
+    "price": "{priceDesk} CZK im Monat",
+    "note": "Ohne Termine und Lohnabrechnung. Wechsel zu Basic jederzeit möglich.",
+    "cta": "Zum Tarif Stuhl",
+    "alt": "Kasse im Tarif Stuhl auf dem Handy"
+  },
+  "faq": {
+    "title": "Kurz gefragt",
+    "items": [
+      {
+        "q": "Passt SalonGo auch für einen kleinen Salon?",
+        "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Funktionen. Wächst das Team, wechseln Sie jederzeit den Tarif."
+      },
+      {
+        "q": "Hat jeder Tarif alle Funktionen?",
+        "a": "Ja. Basic, Pro und Premium haben dieselben Funktionen und unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen."
+      },
+      {
+        "q": "In welchen Sprachen buchen Kunden?",
+        "a": "Die Buchungsseite gibt es auf Tschechisch, Slowakisch, Deutsch, Englisch und Französisch. Sie und Ihr Team nutzen die App auf Wunsch auf Vietnamesisch."
+      },
+      {
+        "q": "Welchen Tarif braucht ein Stuhlmieter?",
+        "a": "Mieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat, mit EET über das eigene Zertifikat. Angestellte des Salons brauchen ihn nicht: der Inhaber fügt sie dem Salonkonto hinzu."
+      }
+    ]
+  },
+  "closing": {
+    "title": "{days} Tage testen, dann den passenden Tarif wählen",
+    "lead": "Ohne Kreditkarte. Support auf Vietnamesisch und Tschechisch.",
+    "cta": "Kostenlos testen",
+    "link": "Preise ansehen"
+  }
+}

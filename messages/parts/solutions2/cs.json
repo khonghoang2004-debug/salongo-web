@@ -1,0 +1,132 @@
+{
+  "crumb": "Řešení podle typu salonu",
+  "h1": "Software pro nehtová studia, kadeřnictví a řasy",
+  "lead": "Každý salon funguje jinak. Tady je, co SalonGo dělá pro každý typ, i když si jen pronajímáte křeslo.",
+  "cta": "{days} dní zdarma",
+  "features": "Funkce",
+  "indexLabel": "Vyberte typ salonu",
+  "problem": "Běžná starost",
+  "answer": "Co udělá SalonGo",
+  "types": {
+    "nail": {
+      "nav": "Nehtové studio",
+      "title": "Rezervační systém pro nehtové studio",
+      "lead": "Hodně techniček, krátké služby, spousta spropitného. SalonGo hlídá kalendář každé techničky a na konci měsíce spočítá mzdy.",
+      "pairs": [
+        {
+          "problem": "Klientky celý den píšou kvůli termínu",
+          "answer": "Vlastní rezervační odkaz, klientka si volný čas vybere sama"
+        },
+        {
+          "problem": "Provize a spropitné počítané ručně",
+          "answer": "Mzda procentem nebo pevná, spropitné podle klienta nebo rovným dílem"
+        },
+        {
+          "problem": "EET 2.0 povinná od 1. 1. 2027",
+          "answer": "Účtenka se odešle do EET při markování, žádná další pokladna"
+        }
+      ],
+      "link": "Mzdy",
+      "alt": "Mzdy techniček procentem z tržeb a spropitné v SalonGo"
+    },
+    "hair": {
+      "nav": "Kadeřnictví",
+      "title": "Rezervační systém pro kadeřnictví",
+      "lead": "Střih, barva, trvalá: každá služba trvá jinak dlouho. Kalendář počítá se skutečnou délkou, nic se nepřekrývá.",
+      "pairs": [
+        {
+          "problem": "Služby s velmi různou délkou",
+          "answer": "Každá služba má svou délku a cenu, kalendář ji správně zařadí"
+        },
+        {
+          "problem": "Stálí klienti chtějí svou kadeřnici",
+          "answer": "Klient si vybere při rezervaci, nebo ji aplikace dá tomu, kdo je volný"
+        },
+        {
+          "problem": "Klient se objedná a zapomene",
+          "answer": "Potvrzovací e-mail a připomínka hodinu předem"
+        }
+      ],
+      "link": "Kalendář",
+      "alt": "Kalendář kadeřnictví podle personálu v SalonGo"
+    },
+    "beauty": {
+      "nav": "Řasy, spa, kosmetika",
+      "title": "Software pro řasový, kosmetický salon a spa",
+      "lead": "Klienti se vracejí v cyklech. Karta klienta a e-maily s nabídkou je přivedou zpět ve správnou chvíli.",
+      "pairs": [
+        {
+          "problem": "Nevíte, co měla klientka minule",
+          "answer": "Karta klienta: historie služeb, návštěvy, útrata"
+        },
+        {
+          "problem": "Klienti, kteří přestali chodit",
+          "answer": "Filtr dlouho neviděných klientů a e-mail s nabídkou"
+        },
+        {
+          "problem": "Zapomenuté narozeniny",
+          "answer": "Aplikace upozorní 2 dny předem, abyste stihli poslat přání se slevou"
+        }
+      ],
+      "link": "Klienti",
+      "alt": "Seznam klientů řasového a kosmetického salonu v SalonGo"
+    },
+    "chain": {
+      "nav": "Více poboček",
+      "title": "Systém pro síť salonů s více pobočkami",
+      "lead": "Jeden účet pro všechny salony. Majitel vidí tržby a rezervace všech poboček na jedné stránce.",
+      "pairs": [
+        {
+          "problem": "Obvolávat pobočky kvůli tržbám",
+          "answer": "Stránka Všechny salony: tržby, rezervace, čekající online rezervace"
+        },
+        {
+          "problem": "Nejste v salonu",
+          "answer": "Přehled v telefonu kdykoli, personál má vlastní přihlášení"
+        },
+        {
+          "problem": "Každá pobočka je jinak velká",
+          "answer": "Každá pobočka má tarif podle počtu personálu a vlastní prodloužení"
+        }
+      ],
+      "link": "Více poboček",
+      "alt": "Stránka Všechny salony: tržby každé pobočky v SalonGo"
+    }
+  },
+  "desk": {
+    "nav": "Nájemce křesla, IČO",
+    "title": "Pokladna pro nájemce křesla s vlastním IČO",
+    "lead": "Tarif Křeslo má jen pokladnu, účtenky, příjmy a výdaje a EET na vaše jméno. Majitel salonu vaše tržby nevidí.",
+    "price": "{priceDesk} Kč měsíčně",
+    "note": "Bez rezervací a mezd. Kdykoli můžete přejít na Basic.",
+    "cta": "Tarif Křeslo",
+    "alt": "Pokladna tarifu Křeslo v telefonu"
+  },
+  "faq": {
+    "title": "Rychlé odpovědi",
+    "items": [
+      {
+        "q": "Hodí se SalonGo i pro malý salon?",
+        "a": "Ano. Basic je pro {staffBasic} zaměstnance a 1 pobočku, se všemi funkcemi. Když tým vyroste, tarif kdykoli změníte."
+      },
+      {
+        "q": "Má každý tarif všechny funkce?",
+        "a": "Ano. Basic, Pro a Premium mají stejné funkce, liší se jen počtem personálu na pobočku a počtem poboček."
+      },
+      {
+        "q": "V jakém jazyce se klienti objednávají?",
+        "a": "Rezervační stránka je česky, slovensky, německy, anglicky a francouzsky. Vy a personál můžete aplikaci používat vietnamsky."
+      },
+      {
+        "q": "Jaký tarif potřebuje nájemce křesla?",
+        "a": "Nájemce s vlastním IČO používá tarif Křeslo za {priceDesk} Kč měsíčně, s EET na vlastní certifikát. Zaměstnanec salonu ho nepotřebuje: majitel ho přidá do účtu salonu."
+      }
+    ]
+  },
+  "closing": {
+    "title": "{days} dní zdarma, pak tarif podle velikosti salonu",
+    "lead": "Bez platební karty. Podpora česky i vietnamsky.",
+    "cta": "Vyzkoušet zdarma",
+    "link": "Ceník"
+  }
+}

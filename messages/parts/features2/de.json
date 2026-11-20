@@ -1,0 +1,139 @@
+{
+  "crumb": "Funktionen",
+  "h1": "SalonGo-Funktionen: Terminbuchung, Kasse, EET 2.0, Lohn",
+  "lead": "Termine, Kasse mit EET, Einnahmen und Ausgaben, Kunden und Löhne in einer App. Auf Handy, iPad und Computer.",
+  "cta": "{days} Tage kostenlos testen",
+  "pricing": "Preise ansehen",
+  "indexLabel": "Auf dieser Seite",
+  "items": {
+    "booking": {
+      "nav": "Online-Buchung",
+      "title": "Online-Terminbuchung für Ihren Salon",
+      "lead": "Ihr Salon bekommt einen eigenen Buchungslink für Facebook, Instagram und Google Maps. Kunden wählen Leistung, Mitarbeiterin und freie Zeit, ohne App.",
+      "points": [
+        "Kunden buchen auf Tschechisch, Slowakisch, Deutsch, Englisch oder Französisch",
+        "Neue Buchungen kommen aufs Handy; bestätigen und zuteilen in einem Fenster",
+        "Bestätigungs-E-Mail und Erinnerung 1 Stunde vorher"
+      ],
+      "alt": "Online-Buchungen bestätigen und Mitarbeiter zuteilen in SalonGo am Computer",
+      "altPhone": "Buchungsseite des Salons auf dem Handy eines Kunden, Auswahl der Uhrzeit"
+    },
+    "calendar": {
+      "nav": "Terminkalender",
+      "title": "Terminkalender pro Mitarbeiterin",
+      "lead": "Jede Mitarbeiterin hat eine Spalte, Sie sehen sofort, wer frei ist. Buchungen ohne Wunschperson gehen an die, die frei ist und am wenigsten zu tun hat.",
+      "points": [
+        "Ansicht nach Mitarbeitern oder als Liste",
+        "Jeder Termin hat die Dauer der Leistung",
+        "Die Buchungsseite zeigt nur freie Zeiten, keine Doppelbuchungen"
+      ],
+      "alt": "Ein Tag mit Terminen pro Mitarbeiterin in SalonGo"
+    },
+    "checkout": {
+      "nav": "Kasse und EET",
+      "title": "Salonkasse mit EET 2.0",
+      "lead": "Leistung, Mitarbeiterin und Zahlungsart wählen, und der Beleg ist fertig. EET einmal einschalten, dann geht jeder Beleg von selbst ans Finanzamt.",
+      "points": [
+        "Bar, Karte oder Überweisung per QR-Code mit fertigem Betrag",
+        "Trinkgeld getrennt für die Mitarbeiterin",
+        "Belege im 80-mm-Format mit FIK-Code",
+        "EET 2.0 ist in Tschechien ab 1. 1. 2027 Pflicht, in jedem Tarif enthalten"
+      ],
+      "alt": "Kasse in SalonGo: Leistungen, Mitarbeiterin und Zahlungsart",
+      "eetLink": "Alles zu EET 2.0"
+    },
+    "thuchi": {
+      "nav": "Einnahmen & Ausgaben",
+      "title": "Einnahmen und Ausgaben des Salons",
+      "lead": "Der Tab Einnahmen summiert Ihre Belege von selbst. Im Tab Ausgaben erfassen Sie Ware oder Miete: Betrag, Datum, Zahlungsart und eine kurze Notiz.",
+      "points": [
+        "Einnahmen minus Ausgaben auf einen Blick, je Filiale",
+        "Export als CSV, Excel oder PDF für die Buchhaltung"
+      ],
+      "alt": "Einnahmen und Ausgaben in SalonGo: Einnahmen aus Belegen und Ausgaben des Salons"
+    },
+    "customers": {
+      "nav": "Kunden",
+      "title": "Kundenkartei und Stammkunden",
+      "lead": "Zu jedem Kunden sehen Sie Leistungen, Besuche und Gesamtumsatz. Stammkunden erkennen Sie sofort.",
+      "points": [
+        "Filter für VIP, neue und lange nicht gesehene Kunden",
+        "VIP-Status automatisch nach Ihrer Regel",
+        "Geburtstagserinnerung 2 Tage vorher"
+      ],
+      "alt": "Kundenliste in SalonGo mit Besuchen und Umsatz"
+    },
+    "marketing": {
+      "nav": "E-Mail-Marketing",
+      "title": "Angebots-E-Mails für Stammkunden",
+      "lead": "Vorlage für Weltfrauentag, Weihnachten oder Geburtstag wählen, Rabatt hinzufügen, senden. Nur Kunden mit Einwilligung erhalten sie.",
+      "points": [
+        "10 Vorlagen in 6 Sprachen, alles anpassbar",
+        "Vorschau und Test-E-Mail an sich selbst",
+        "Versand im Namen des Salons, mit Abmeldelink"
+      ],
+      "alt": "Angebots-E-Mail zum Weltfrauentag in SalonGo auf dem Handy",
+      "alt2": "Geburtstagserinnerung für Kunden in SalonGo auf dem Handy"
+    },
+    "payroll": {
+      "nav": "Lohnabrechnung",
+      "title": "Automatische Lohnabrechnung im Salon",
+      "lead": "Jede Mitarbeiterin hat eine Lohnart: Prozent vom Umsatz oder Festgehalt. Trinkgeld bekommt, wem es gegeben wurde, oder es wird gleich geteilt, wie Sie wollen.",
+      "points": [
+        "Auf Wunsch eigener Prozentsatz je Leistung",
+        "Abrechnung je Zeitraum: Lohn, Umsatz, Trinkgeld, Anzahl Belege",
+        "Export als Excel, CSV oder PDF"
+      ],
+      "alt": "Lohnabrechnung der Mitarbeiter für einen Zeitraum in SalonGo"
+    },
+    "staff": {
+      "nav": "Mitarbeiterkonten",
+      "title": "App für Mitarbeiter: eigener Kalender und Umsatz",
+      "lead": "Jede Mitarbeiterin hat ein eigenes Login am Handy, mit Mitteilungen in ihrer Sprache. Was sie sieht, entscheiden Sie.",
+      "points": [
+        "Einladung per E-Mail, Passwort setzen, loslegen",
+        "Nur Kalender, oder Kalender und eigener Umsatz",
+        "Den Umsatz des ganzen Salons sehen Mitarbeiter nie"
+      ],
+      "cap1": "Heutige Termine einer Mitarbeiterin",
+      "cap2": "Der Inhaber bestimmt, was Mitarbeiter sehen"
+    },
+    "branches": {
+      "nav": "Mehrere Filialen",
+      "title": "Mehrere Filialen in einem Konto verwalten",
+      "lead": "Neue Filiale direkt in der App anlegen. Mit einem Tippen wechseln und Umsatz und Termine aller Filialen auf einer Seite sehen.",
+      "points": [
+        "Jede Filiale mit eigenem Kalender, Team, Leistungen und Belegen",
+        "Neue Filialen testen {days} Tage gratis",
+        "Jede Filiale mit eigenem Tarif und eigener Verlängerung"
+      ],
+      "alt": "Seite Alle Salons in SalonGo: Umsatz und Termine je Filiale"
+    }
+  },
+  "more": {
+    "title": "Und der Rest",
+    "services": {
+      "title": "Leistungen und Preisliste",
+      "text": "Kategorien mit Farbe, Dauer und Preis. Jede Leistung für die Online-Buchung ein- oder ausblenden."
+    },
+    "reports": {
+      "title": "Umsatzberichte und Belege",
+      "text": "Umsatz nach Tag, Mitarbeiterin, Leistung und Zahlungsart. Belege finden, neu drucken oder als PDF exportieren."
+    },
+    "devices": {
+      "title": "iPhone, Android, iPad, Mac, Windows und Browser",
+      "text": "Ein Konto auf allen Geräten, immer dieselben Daten. Die App spricht 6 Sprachen: Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch, Französisch."
+    },
+    "desk": {
+      "title": "Tarif Stuhl für Stuhlmieter",
+      "text": "Eigene IČO? Kasse, Belege und EET auf Ihren Namen für {priceDesk} CZK im Monat.",
+      "link": "Zum Tarif Stuhl"
+    }
+  },
+  "closing": {
+    "title": "{days} Tage alle Funktionen gratis testen",
+    "lead": "Ohne Kreditkarte. Jeder Tarif hat alle Funktionen, nur Mitarbeiterzahl und Filialen unterscheiden sich.",
+    "cta": "Kostenlos testen",
+    "link": "Preise ansehen"
+  }
+}

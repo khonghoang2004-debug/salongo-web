@@ -1,0 +1,132 @@
+{
+  "crumb": "Solutions by salon type",
+  "h1": "Solutions for every salon type: nail, hair, lash, spa",
+  "lead": "Every kind of salon works differently. Here is what SalonGo does for each, even if you only rent a chair.",
+  "cta": "Try free for {days} days",
+  "features": "See features",
+  "indexLabel": "Choose your salon type",
+  "problem": "The everyday problem",
+  "answer": "What SalonGo does",
+  "types": {
+    "nail": {
+      "nav": "Nail salon",
+      "title": "Nail salon management software",
+      "lead": "Many technicians, many short services, lots of tips. SalonGo keeps each technician's calendar and works out pay at month end.",
+      "pairs": [
+        {
+          "problem": "Clients message all day asking for a time",
+          "answer": "Your own booking link, clients pick a free time themselves"
+        },
+        {
+          "problem": "Commission and tips worked out by hand",
+          "answer": "Pay by percentage or fixed salary, tips per client or split equally"
+        },
+        {
+          "problem": "EET 2.0 mandatory from 1 Jan 2027",
+          "answer": "Receipts are sent to EET at checkout, no extra till needed"
+        }
+      ],
+      "link": "See staff pay",
+      "alt": "Nail technicians' pay by percentage and tips in SalonGo"
+    },
+    "hair": {
+      "nav": "Hair salon",
+      "title": "Booking software for hair salons",
+      "lead": "Cut, colour, perm: each service takes its own time. The calendar uses the real duration, so nothing overlaps.",
+      "pairs": [
+        {
+          "problem": "Services of very different lengths",
+          "answer": "Each service has its own duration and price, the calendar fits it in"
+        },
+        {
+          "problem": "Regulars want their own stylist",
+          "answer": "Clients choose a stylist when booking, or let the app pick whoever is free"
+        },
+        {
+          "problem": "Clients book and forget",
+          "answer": "Confirmation email and a reminder 1 hour before"
+        }
+      ],
+      "link": "See the calendar",
+      "alt": "A hair salon's calendar per stylist in SalonGo"
+    },
+    "beauty": {
+      "nav": "Lash, spa, beauty",
+      "title": "Software for lash, spa and beauty salons",
+      "lead": "Clients come back in cycles. Client records and offer emails bring them back at the right time.",
+      "pairs": [
+        {
+          "problem": "Not remembering what the client had last time",
+          "answer": "Client record: service history, visits, spend"
+        },
+        {
+          "problem": "Clients who stopped coming",
+          "answer": "Filter lapsed clients and send them an offer email"
+        },
+        {
+          "problem": "Forgetting client birthdays",
+          "answer": "The app reminds you 2 days ahead so you can send wishes with an offer"
+        }
+      ],
+      "link": "See clients",
+      "alt": "Client list of a lash and spa salon in SalonGo"
+    },
+    "chain": {
+      "nav": "Multiple locations",
+      "title": "Software for salon chains with multiple locations",
+      "lead": "One account for every salon. The owner sees revenue and bookings for all locations on one page.",
+      "pairs": [
+        {
+          "problem": "Calling each salon to ask about revenue",
+          "answer": "All salons page: revenue, bookings, online bookings waiting"
+        },
+        {
+          "problem": "Not being at the salon",
+          "answer": "Check on your phone any time; staff have their own logins"
+        },
+        {
+          "problem": "Every salon is a different size",
+          "answer": "Each location picks a plan by staff count and renews on its own"
+        }
+      ],
+      "link": "See multiple locations",
+      "alt": "All salons page: revenue per location in SalonGo"
+    }
+  },
+  "desk": {
+    "nav": "Chair renter, own IČO",
+    "title": "Checkout software for chair renters with their own IČO",
+    "lead": "The Chair plan has only checkout, receipts, income and expenses, and EET in your name. The salon owner cannot see your revenue.",
+    "price": "{priceDesk} CZK a month",
+    "note": "No calendar or payroll. Switch to Basic any time you need them.",
+    "cta": "See the Chair plan",
+    "alt": "Chair plan checkout on a phone"
+  },
+  "faq": {
+    "title": "Quick answers",
+    "items": [
+      {
+        "q": "Is SalonGo right for a small salon?",
+        "a": "Yes. Basic covers {staffBasic} staff and 1 location with every feature. When the team grows, switch plans any time."
+      },
+      {
+        "q": "Does every plan have every feature?",
+        "a": "Yes. Basic, Pro and Premium have the same features and differ only by staff per location and number of locations."
+      },
+      {
+        "q": "Which languages can clients book in?",
+        "a": "The booking page is in Czech, Slovak, German, English and French. You and your staff can use the app in Vietnamese."
+      },
+      {
+        "q": "Which plan does a chair renter need?",
+        "a": "Renters with their own IČO use the Chair plan, {priceDesk} CZK a month, with EET on their own certificate. Salon employees don't need it: the owner adds them to the salon's account."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Try it for {days} days, then pick the plan that fits",
+    "lead": "No card needed. Support in Vietnamese and Czech.",
+    "cta": "Start free trial",
+    "link": "See pricing"
+  }
+}

@@ -263,24 +263,26 @@
     "tagline": "Software pro salony vietnamských majitelů v Evropě."
   },
   "pages": {
-    "homeTitle": "Rezervační systém pro salony: pokladna i mzdy",
-    "homeDesc": "Rezervační systém a pokladna pro nehtová studia, kadeřnictví a kosmetiku: online rezervace, EET 2.0, mzdy, přehledy tržeb. Česky i vietnamsky. {days} dní zdarma.",
+    "homeTitle": "Rezervační systém a pokladna s EET 2.0 pro salony",
+    "homeDesc": "Online rezervace, pokladna s EET 2.0, příjmy a výdaje a mzdy pro nehtová studia, kadeřnictví a kosmetiku. Česky i vietnamsky. Od {from} Kč, {days} dní zdarma.",
     "featuresTitle": "Funkce: online rezervace, objednávky, pokladna, mzdy",
     "featuresDesc": "Online rezervace, kalendář podle personálu, pokladna, klienti, e-mailový marketing, přehledy tržeb, mzdy a více poboček v jedné aplikaci pro salony.",
     "solutionsTitle": "Řešení pro nehtová studia a salony",
     "solutionsDesc": "Žádné dvojité rezervace, chyby ve mzdách ani ztráty na pokladně: jak SalonGo pomáhá nehtovým studiím a salonům v Česku a v Evropě.",
     "pricingTitle": "Ceník rezervačního systému a aplikace pro salony",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/měsíc[[discount:, ročně o {discount} % levněji]]. Každý tarif má všechny funkce. {days} dní zdarma, prodloužení přímo v aplikaci.",
-    "aboutTitle": "O SalonGo",
-    "aboutDesc": "SalonGo je software pro správu salonů, vytvořený pro nehtová studia, kadeřnictví a kosmetické salony vietnamských majitelů v Evropě.",
-    "faqTitle": "Časté dotazy k rezervačnímu systému",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/měsíc[[discount:, ročně o {discount} % levněji]]. Každý tarif má všechny funkce. {days} dní zdarma, prodloužení na webu.",
+    "aboutTitle": "O SalonGo: software pro salony z Česka",
+    "aboutDesc": "SalonGo vyvíjí software pro nehtová studia, kadeřnictví a kosmetiku v Evropě. Data v EU, podpora česky i vietnamsky.",
+    "faqTitle": "Časté dotazy: rezervační systém, EET 2.0, ceny",
     "faqDesc": "Odpovědi o SalonGo: {days} dní zdarma, tarify, prodloužení, platba, telefon, jazyky, více poboček, mzdy a spropitné.",
     "contactTitle": "Kontakt – podpora česky a vietnamsky",
     "contactDesc": "Kontaktujte SalonGo telefonem, e-mailem, přes Facebook nebo WhatsApp. Podpora česky a vietnamsky, odpověď do 24 hodin.",
     "websiteTitle": "SalonGo Web Studio – tvorba webu pro salon za {price}",
     "websiteDesc": "SalonGo Web Studio – tvorba webu pro kadeřnictví, nehtové studio, kosmetiku i barbershop: až {pages} stránek, skvělý v mobilu, {price} jednorázově. 35+ ukázek šablon.",
     "deskTitle": "Tarif Křeslo: pokladna a EET pro nájemce křesla",
-    "deskDesc": "Pronajímáte si křeslo nebo stůl v salonu a máte vlastní IČO? Tarif Křeslo za {priceDesk} Kč měsíčně: pokladna, účtenky, tržby a EET 2.0 s vaším vlastním certifikátem, bez rezervací."
+    "deskDesc": "Křeslo v salonu a vlastní IČO? Tarif Křeslo za {priceDesk} Kč měsíčně: pokladna, účtenky, tržby a EET 2.0 s vaším vlastním certifikátem.",
+    "eetTitle": "EET 2.0 pro nehtová studia a kadeřnictví od 2027",
+    "eetDesc": "EET 2.0 je povinná od 1. 1. 2027: koho se týká, co připravit, jak získat certifikát v DIS+ a jak EET zapnout v SalonGo ve 2 krocích."
   },
   "hero": {
     "trialNote": "{days} dní zdarma · Bez platební karty",
@@ -1306,5 +1308,905 @@
     "a5": "Tarif Křeslo za {priceDesk} Kč měsíčně: jen pokladna, účtenky, tržby a EET s vaším vlastním certifikátem. Majitel salonu vaše tržby nevidí.",
     "q6": "Kde jsou data salonu uložená?",
     "a6": "Na serverech ve Frankfurtu (Německo), v Evropské unii, v souladu s GDPR. Když tarif vyprší, data zůstanou zachovaná."
+  },
+  "landing": {
+    "hero": {
+      "eet": "EET 2.0 je povinná od 1. 1. 2027. SalonGo je připravené",
+      "title": "Rezervace, pokladna, EET. Celý salon v jedné aplikaci.",
+      "lead": "Rezervační systém a pokladna pro nehtová, kadeřnická, řasová a kosmetická studia. Klienti se objednají sami, vy markujete na recepci a každá účtenka se sama odešle do EET. Večer víte, kolik přišlo a kolik odešlo.",
+      "cta": "Vyzkoušet {days} dní zdarma",
+      "secondary": "Ceník",
+      "note": "Bez platební karty. Podpora česky i vietnamsky.",
+      "altDesktop": "Kalendář SalonGo se sloupcem pro každou kolegyni na počítači",
+      "altPhone": "Pokladna SalonGo na telefonu",
+      "chipToday": "Dnes",
+      "chipBookings": "rezervací",
+      "chipIncome": "Tržba dnes"
+    },
+    "platforms": {
+      "label": "Jeden účet, funguje na",
+      "web": "Prohlížeči",
+      "langs": "Aplikace v 6 jazycích"
+    },
+    "day": {
+      "title": "Den v salonu, od první rezervace po uzávěrku",
+      "lead": "Každá část SalonGo za vás udělá jednu běžnou práci.",
+      "s1": {
+        "time": "07:40",
+        "title": "Klienti se objednají sami, i když ještě máte zavřeno",
+        "desc": "Salon má vlastní rezervační stránku. Klient vybere službu a čas ve 4 krocích, česky, slovensky, německy, anglicky nebo francouzsky."
+      },
+      "s2": {
+        "time": "09:00",
+        "title": "Kalendář pro každou kolegyni, práce se rozdělí sama",
+        "desc": "Každý má svůj sloupec. Rezervace bez vybrané kolegyně dostane ta, kdo má volno. Personál vidí svůj den v telefonu."
+      },
+      "s3": {
+        "time": "14:30",
+        "title": "Platba na recepci, účtenka rovnou do EET",
+        "desc": "Vyberete služby, klient platí hotově, kartou nebo QR platbou. Účtenka se vytiskne na 80 mm a hned odejde finanční správě."
+      },
+      "s4": {
+        "time": "20:00",
+        "title": "Příjmy a výdaje: víte, kolik salon vydělal",
+        "desc": "Příjmy se sečtou z účtenek. Výdaj zapíšete za pár vteřin: zboží, nájem, poznámka. Rozdíl vidíte hned."
+      },
+      "s5": {
+        "time": "Konec měsíce",
+        "title": "Mzdy se spočítají samy",
+        "desc": "Procento z tržby nebo pevná mzda, spropitné podle klienta nebo rovným dílem. Export do Excelu, CSV nebo PDF."
+      }
+    },
+    "more": {
+      "title": "A drobnosti, díky kterým salon běží hladce",
+      "customers": "Karta klienta",
+      "customersDesc": "Historie, útrata, stálí klienti i ti, kdo dlouho nepřišli. Upozornění na narozeniny 2 dny předem.",
+      "marketing": "E-maily s nabídkou",
+      "marketingDesc": "Šablony na MDŽ, Vánoce a narozeniny. Pošlete je skupině klientů, kterou vyberete.",
+      "branches": "Více poboček",
+      "branchesDesc": "Jeden účet pro všechny salony. Pobočku přepnete jedním klepnutím, tržby všech vidíte na jedné stránce.",
+      "staff": "Účty pro personál",
+      "staffDesc": "Kolegyně vidí své rezervace a dostávají upozornění ve svém jazyce. Co dalšího uvidí, rozhodujete vy.",
+      "invoices": "Účtenky",
+      "invoicesDesc": "Kteroukoli účtenku najdete a znovu vytisknete, s filtrem podle data, kolegyně a způsobu platby.",
+      "devices": "Počítač, iPad, telefon",
+      "devicesDesc": "Na recepci iPad nebo počítač, personál v telefonu. Data jsou všude stejná.",
+      "all": "Všechny funkce"
+    },
+    "videos": {
+      "title": "Podívejte se, jak aplikace funguje",
+      "lead": "Natočeno v aktuální aplikaci SalonGo s ukázkovými daty.",
+      "play": "Přehrát",
+      "pause": "Pozastavit",
+      "items": {
+        "booking": {
+          "title": "Nová rezervace",
+          "desc": "V kalendáři vyberete klienta, službu a kolegyni. Klient dostane potvrzení e-mailem."
+        },
+        "checkout": {
+          "title": "Pokladna",
+          "desc": "Vyberete služby a způsob platby, vytisknete účtenku s kódem EET."
+        },
+        "thuchi": {
+          "title": "Příjmy a výdaje",
+          "desc": "Dnešní příjmy a nový výdaj s poznámkou."
+        },
+        "customers": {
+          "title": "Klienti",
+          "desc": "Najdete klienta, otevřete kartu a vidíte historii i útratu."
+        },
+        "online": {
+          "title": "Online rezervace",
+          "desc": "Rezervační stránka salonu v telefonu klienta."
+        },
+        "desk": {
+          "title": "Tarif Křeslo",
+          "desc": "Nájemkyně křesla rychle namarkuje a vidí své vlastní příjmy a výdaje."
+        }
+      }
+    },
+    "who": {
+      "title": "Vyberte tarif podle toho, jak pracujete",
+      "salonTag": "Salon s personálem",
+      "salonTitle": "Vedete salon",
+      "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu, v každém všechny funkce.",
+      "salonPrice": "od {from} Kč/měsíc",
+      "salonCta": "Tarify pro salon",
+      "deskTag": "Vlastní IČO v salonu",
+      "deskTitle": "Pronajímáte si křeslo a pracujete na sebe",
+      "deskDesc": "Pokladna, účtenky a EET s vaším vlastním certifikátem, vaše vlastní příjmy a výdaje. Majitel salonu vaše tržby nevidí.",
+      "deskPrice": "{priceDesk} Kč/měsíc",
+      "deskCta": "Tarif Křeslo"
+    },
+    "eet": {
+      "title": "EET 2.0 je povinná od 1. 1. 2027. Žádnou pokladnu navíc nekupujete.",
+      "lead": "EET zapnete v aplikaci jednou. Pak se každá účtenka sama odešle finanční správě a vytiskne se s kódem FIK.",
+      "p1": "Nahrajete certifikát z DIS+, zadáte heslo a číslo provozovny. Hotovo.",
+      "p2": "Je v každém tarifu včetně Křesla. Bez příplatku.",
+      "p3": "Potřebujete pomoct s certifikátem? Podpora to udělá s vámi.",
+      "countdown": "Zbývá {n} dní",
+      "live": "Platí",
+      "cta": "Vše o EET 2.0",
+      "receiptTitle": "Ukázková účtenka s kódem EET"
+    },
+    "pricing": {
+      "title": "Jasné ceny, platba měsíčně",
+      "lead": "Každý tarif má všechny funkce, liší se jen počtem personálu a poboček. Tarif změníte nebo prodloužíte na webu kdykoli a aplikace se hned aktualizuje.",
+      "month": "Kč/měsíc",
+      "staff": "až {n} osob na pobočku",
+      "staffAll": "neomezený personál",
+      "branches": "pobočky: {n}",
+      "branchesAll": "neomezené pobočky",
+      "desk": "Křeslo",
+      "deskLine": "1 osoba, vlastní IČO",
+      "popular": "Nejčastější volba",
+      "trial": "Nový salon zkouší zdarma {days} dní, bez karty.",
+      "yearly": "Při roční platbě ušetříte až {discount} %.",
+      "all": "Celý ceník"
+    },
+    "website": {
+      "title": "Potřebujete web pro salon?",
+      "desc": "Web salonu s 5 stránkami za 999 Kč, jen pro zákazníky SalonGo.",
+      "cta": "Ukázky webů"
+    },
+    "faq": {
+      "title": "Časté dotazy",
+      "all": "Všechny dotazy"
+    },
+    "final": {
+      "title": "Účet založíte za 2 minuty. Zkoušíte {days} dní.",
+      "lead": "Bez platební karty. Po zkušební době vaše data zůstanou.",
+      "cta": "Vyzkoušet zdarma",
+      "contact": "Napište nám"
+    }
+  },
+  "site": {
+    "nav": {
+      "features": "Funkce",
+      "pricing": "Ceník",
+      "desk": "Tarif Křeslo",
+      "website": "Web pro salon",
+      "faq": "Dotazy",
+      "contact": "Kontakt",
+      "about": "O SalonGo",
+      "login": "Přihlásit",
+      "renew": "Prodloužit",
+      "cta": "Vyzkoušet zdarma",
+      "ctaShort": "Vyzkoušet",
+      "menu": "Menu",
+      "close": "Zavřít menu",
+      "skip": "Přeskočit na obsah",
+      "download": "Aplikace pro počítač",
+      "windows": "Windows",
+      "mac": "macOS",
+      "trialLine": "{days} dní zdarma, bez platební karty"
+    },
+    "footer": {
+      "tagline": "Software pro nehtová, kadeřnická, řasová a kosmetická studia v Evropě.",
+      "product": "Produkt",
+      "company": "SalonGo",
+      "help": "Podpora",
+      "legal": "Právní informace",
+      "guide": "Průvodce softwarem pro salon",
+      "solutions": "Řešení podle typu salonu",
+      "support": "Odpovíme do 24 hodin, česky nebo vietnamsky.",
+      "operator": "Provozovatel",
+      "rights": "Všechna práva vyhrazena."
+    }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Časté dotazy",
+      "lead": "Nenašli jste odpověď? Napište nám, odpovíme do 24 hodin.",
+      "contact": "Zeptat se"
+    },
+    "contact": {
+      "title": "Kontakt SalonGo",
+      "lead": "Zavolejte, napište nebo pošlete e-mail. Odpovíme do 24 hodin, česky nebo vietnamsky.",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "facebook": "Facebook",
+      "call": "Zavolat",
+      "write": "Napsat",
+      "send": "Poslat e-mail",
+      "open": "Otevřít",
+      "helpTitle": "S čím pomůžeme",
+      "help1": "Nastavení salonu, služeb a účtů pro personál",
+      "help2": "Certifikát EET z DIS+ a zapnutí EET",
+      "help3": "Dotazy k tarifům, fakturám a prodloužení",
+      "company": "Údaje o provozovateli"
+    },
+    "about": {
+      "title": "O SalonGo",
+      "lead": "SalonGo vyvíjí software pro nehtová, kadeřnická, řasová a kosmetická studia v Evropě. Začali jsme u vietnamských salonů v Česku.",
+      "whyTitle": "Proč SalonGo vzniklo",
+      "why1": "Mnoho salonů dosud píše rezervace do sešitu, mzdy počítá ručně a zisk zná až na konci měsíce.",
+      "why2": "Běžné programy nemají vietnamštinu a nepočítají s tím, jak vietnamské salony fungují.",
+      "why3": "Od roku 2027 musí každý salon v Česku posílat účtenky do EET 2.0.",
+      "promiseTitle": "Na čem trváme",
+      "promise1": "Data jsou uložena ve Frankfurtu (Německo), v EU, podle GDPR.",
+      "promise2": "Když tarif skončí, vaše data zůstanou.",
+      "promise3": "Podpora česky i vietnamsky, odpověď do 24 hodin.",
+      "promise4": "Každý tarif má všechny funkce a cena je jasně na webu.",
+      "who": "Provozovatel"
+    },
+    "notFound": {
+      "title": "Tuto stránku jsme nenašli",
+      "desc": "Odkaz se možná změnil. Zkuste úvodní stránku nebo ceník.",
+      "home": "Na úvod",
+      "pricing": "Ceník"
+    }
+  },
+  "eet2": {
+    "crumb": "EET 2.0",
+    "title": "EET 2.0 pro nehtová studia a salony: co udělat do 1. 1. 2027",
+    "lead": "Od 1. 1. 2027 musí provozovny v Česku posílat každou účtenku finanční správě. Se SalonGo nekupujete pokladnu: EET zapnete jednou a aplikace posílá sama.",
+    "countdown": "Zbývá {n} dní",
+    "live": "Platí",
+    "summaryTitle": "Ve zkratce",
+    "k1": "Od kdy",
+    "v1": "Od 1. 1. 2027.",
+    "k2": "Koho se týká",
+    "v2": "Provozoven, které přijímají hotovost nebo karty, včetně nehtových studií, kadeřnictví, řas, kosmetiky a nájemců křesla s vlastním IČO.",
+    "k3": "Co připravit",
+    "v3": "Certifikát EET z portálu DIS+ finanční správy, jeho heslo a označení provozovny.",
+    "k4": "V SalonGo",
+    "v4": "Certifikát nahrajete jednou. Při každé platbě se účtenka sama odešle a vytiskne s kódem FIK.",
+    "k5": "Cena",
+    "v5": "Je v každém tarifu SalonGo včetně Křesla. Bez příplatku.",
+    "stepsTitle": "Jak zapnout EET v SalonGo",
+    "s1t": "Získejte certifikát v DIS+",
+    "s1d": "Přihlaste se do portálu DIS+, vytvořte certifikát EET pro svou provozovnu a stáhněte soubor.",
+    "s2t": "Nahrajte certifikát do SalonGo",
+    "s2d": "V nastavení EET vyberte soubor, zadejte heslo a označení provozovny. Jméno a IČO aplikace načte z certifikátu.",
+    "s3t": "Markujte jako obvykle",
+    "s3d": "Každá účtenka se odešle finanční správě hned při platbě. Vytištěná účtenka obsahuje kód FIK.",
+    "faqTitle": "Otázky k EET 2.0",
+    "q1": "Platí se v SalonGo za EET zvlášť?",
+    "a1": "Ne. EET je v každém tarifu: Basic, Pro, Premium i Křeslo.",
+    "q2": "Pronajímám si křeslo v salonu a mám vlastní IČO. Jak posílám EET?",
+    "a2": "S tarifem Křeslo a vaším vlastním certifikátem EET. Účtenky jsou na vaše jméno a majitel salonu vaše tržby nevidí.",
+    "q3": "Co když si certifikát nezvládnu získat sám?",
+    "a3": "Podpora SalonGo to udělá s vámi po telefonu nebo přes WhatsApp, česky nebo vietnamsky.",
+    "q4": "Musím kupovat pokladnu nebo zvláštní tiskárnu?",
+    "a4": "Pokladnu ne. SalonGo běží na počítači, iPadu i telefonu. Pro tištěné účtenky stačí termotiskárna 80 mm.",
+    "note": "Jde o obecné informace, ne o daňové poradenství. Konkrétní případ svého salonu proberte s účetní nebo finančním úřadem.",
+    "cta": "Vyzkoušet a zapnout EET",
+    "ask": "Zeptat se na EET"
+  },
+  "desk2": {
+    "hero": {
+      "kicker": "Tarif Křeslo, pro nájemce s vlastním IČO",
+      "soon": "Již brzy",
+      "title": "Pokladna, účtenky a EET pro nájemce křesla v salonu",
+      "lead": "Účtenky na vaše jméno, EET s vaším certifikátem. Tržby vidíte jen vy.",
+      "price": "{priceDesk} Kč/měsíc",
+      "trial": "1 měsíc zdarma",
+      "expected": "Předpokládaná cena při spuštění",
+      "cta": "Založit účet Křeslo",
+      "notify": "Dejte mi vědět při spuštění",
+      "pricing": "Zobrazit ceník",
+      "phoneAlt": "Pokladna SalonGo v telefonu: služby, celková částka a tlačítko platby",
+      "receiptAlt": "Ukázková účtenka se jménem a IČO nájemce křesla a kódy EET (FIK a BKP)",
+      "receiptCaption": "Ukázková účtenka: vaše jméno a IČO, ne salonu."
+    },
+    "what": {
+      "title": "Co obsahuje tarif Křeslo?",
+      "yesTitle": "Obsahuje",
+      "y1": "Pokladna: hotovost, karta, QR, spropitné",
+      "y2": "Účtenky s vaším jménem a IČO",
+      "y3": "EET 2.0 s vaším certifikátem",
+      "y4": "Vlastní příjmy a výdaje, majitel salonu je nevidí",
+      "y5": "Vlastní ceník služeb, v telefonu i počítači",
+      "noTitle": "Neobsahuje",
+      "n1": "Kalendář a online rezervace",
+      "n2": "Zaměstnance a mzdy",
+      "n3": "E-mailový marketing",
+      "noNote": "Rezervace budete potřebovat později? Přejděte na Basic, data zůstanou."
+    },
+    "price": {
+      "title": "Kolik stojí tarif Křeslo?",
+      "lead": "Jedna cena pro jednoho člověka. EET v ceně, bez příplatku.",
+      "perMonth": "Kč/měsíc",
+      "orYearly": "nebo {total} Kč/rok",
+      "trial": "1 měsíc zdarma",
+      "expected": "Předpokládaná cena při spuštění",
+      "soonNote": "Tarif Křeslo spouštíme brzy. Nechte nám kontakt a dáme vám vědět.",
+      "buy": "Koupit / prodloužit tarif Křeslo",
+      "buyNote": "Tarif koupíte a prodloužíte na webu, aplikace se hned aktualizuje. Aplikace pro iPhone tarify neprodává.",
+      "stepsTitle": "Začněte ve 3 krocích",
+      "s1t": "Založte účet Křeslo",
+      "s1d": "Registrace e-mailem, zadáte IČO.",
+      "s2t": "Připojte certifikát EET",
+      "s2d": "Nahrajete certifikát z DIS+, zadáte heslo a označení evidenční jednotky.",
+      "s3t": "Markujte",
+      "s3d": "Každé markování vytvoří účtenku a odešle EET."
+    },
+    "video": {
+      "title": "Tarif Křeslo za 15 vteřin"
+    },
+    "faq": {
+      "title": "Otázky k tarifu Křeslo",
+      "all": "Všechny otázky",
+      "q1": "Pro koho je tarif Křeslo?",
+      "a1": "Pro nehtové designérky, kadeřníky a lash stylisty, kteří si v salonu pronajímají křeslo nebo stůl a podnikají na vlastní IČO. Zaměstnanec salonu ho nepotřebuje: salon ho přidá do svého účtu.",
+      "q2": "Proč potřebuji vlastní EET?",
+      "a2": "Od 1. 1. 2027 platí v Česku EET 2.0. S vlastním IČO jste samostatný poplatník, takže tržby evidujete svým certifikátem. Na výjimky se zeptejte účetní.",
+      "q3": "Vidí majitel salonu moje tržby?",
+      "a3": "Ne. Účtenky, tržby i klienty v účtu Křeslo vidíte jen vy.",
+      "q4": "Jak tarif Křeslo zaplatím?",
+      "a4": "Kartou nebo převodem, na webu na stránce Prodloužit tarif. Bez dlouhodobé smlouvy. Nový účet Křeslo má 1 měsíc zdarma.",
+      "q5": "Co když budu později potřebovat rezervace?",
+      "a5": "Kdykoli přejděte na Basic. Data zůstanou.",
+      "q6": "Stojí EET něco navíc?",
+      "a6": "Ne. EET 2.0 je v tarifu Křeslo v ceně."
+    }
+  },
+  "pricing2": {
+    "hero": {
+      "title": "Ceník SalonGo: od {from} Kč měsíčně, EET 2.0 v ceně",
+      "lead": "Každý tarif má všechny funkce. Vybíráte podle počtu zaměstnanců a poboček.",
+      "jump": "Rychlá volba",
+      "salon": "Mám salon",
+      "salonPrice": "od {from} Kč/měsíc",
+      "desk": "Pronajímám si křeslo, mám vlastní IČO",
+      "deskPrice": "{priceDesk} Kč/měsíc",
+      "staffHint": "Jste zaměstnanec salonu? Tarif nepotřebujete: majitel vás přidá jako zaměstnance.",
+      "renewTitle": "Už SalonGo používáte?",
+      "renewLead": "Tarif prodloužíte na webu. Po zaplacení se aplikace hned aktualizuje.",
+      "renewCta": "Prodloužit tarif"
+    },
+    "plans": {
+      "title": "Kolik stojí rezervační systém pro salon?",
+      "lead": "{days} dní zdarma, bez platební karty.",
+      "cycle": "Období platby",
+      "month": "Měsíčně",
+      "year": "Ročně",
+      "perMonth": "Kč/měsíc",
+      "billedYearly": "{total} Kč placeno ročně",
+      "orYearly": "nebo {total} Kč/rok",
+      "monthOnly": "Jen měsíčně",
+      "popular": "Nejoblíbenější",
+      "staff": "{n, plural, one {# zaměstnanec} few {# zaměstnanci} other {# zaměstnanců}} na pobočku",
+      "staffAll": "Neomezeně zaměstnanců",
+      "branches": "{n, plural, one {# pobočka} few {# pobočky} other {# poboček}}",
+      "branchesAll": "Neomezeně poboček",
+      "fitBASIC": "Menší salon, začátky",
+      "fitPRO": "Rostoucí salon, více poboček",
+      "fitPREMIUM": "Síť salonů",
+      "trial": "Vyzkoušet",
+      "trialAria": "Vyzkoušet zdarma, tarif {plan}",
+      "renew": "Prodloužit",
+      "renewAria": "Prodloužit tarif {plan}",
+      "includedTitle": "Každý tarif obsahuje",
+      "included": [
+        "Kalendář podle zaměstnanců",
+        "Online rezervace",
+        "Pokladna a účtenky",
+        "EET 2.0",
+        "Příjmy a výdaje",
+        "Mzdy",
+        "Klienti a e-mailový marketing",
+        "Přehledy a exporty",
+        "Neomezeně klientů a rezervací"
+      ],
+      "note": "Žádné skryté poplatky.[[discount: Při ročním placení sleva {discount} %.]] Při platbě aplikace vždy použije aktuální cenu.",
+      "terms": "Obchodní podmínky"
+    },
+    "desk": {
+      "title": "Kolik platí nájemce křesla s vlastním IČO?",
+      "lead": "Tarif Křeslo: pokladna, účtenky a EET na vaše IČO. Majitel salonu vaše tržby nevidí.",
+      "name": "Tarif Křeslo",
+      "perMonth": "Kč/měsíc",
+      "orYearly": "nebo {total} Kč/rok",
+      "trial": "1 měsíc zdarma",
+      "expected": "Předpokládaná cena",
+      "soon": "Již brzy",
+      "soonNote": "Tarif Křeslo spouštíme brzy. Nechte nám kontakt a dáme vám vědět.",
+      "notify": "Dejte mi vědět při spuštění",
+      "signup": "Založit účet Křeslo",
+      "buy": "Koupit / prodloužit tarif Křeslo",
+      "more": "Více o tarifu Křeslo",
+      "caption": "Tarif Křeslo ve srovnání s tarify pro salon",
+      "colFeature": "Funkce",
+      "colSalon": "Tarify pro salon",
+      "colDesk": "Tarif Křeslo",
+      "yes": "Ano",
+      "no": "Ne",
+      "rowCheckout": "Pokladna a účtenky",
+      "rowEet": "EET 2.0",
+      "rowThuchi": "Příjmy a výdaje",
+      "rowCalendar": "Kalendář, online rezervace",
+      "rowTeam": "Zaměstnanci, mzdy",
+      "rowMarketing": "E-mailový marketing"
+    },
+    "renew": {
+      "title": "Jak prodloužit tarif SalonGo?",
+      "lead": "Na webu. Po zaplacení se aplikace hned aktualizuje.",
+      "s1": "Klikněte na Prodloužit tarif",
+      "s2": "Přihlaste se účtem majitele salonu nebo účtem Křeslo",
+      "s3": "Zkontrolujte pobočku, vyberte tarif a období",
+      "s4": "Zaplaťte kartou nebo převodem",
+      "note": "Aplikace pro iPhone tarify neprodává. Prodlužte v prohlížeči nebo v aplikaci pro počítač.",
+      "cta": "Prodloužit tarif"
+    },
+    "faq": {
+      "title": "Otázky k ceně SalonGo",
+      "trialCta": "Vyzkoušet {days} dní zdarma",
+      "all": "Všechny otázky",
+      "q1": "Potřebuji na zkušební dobu kartu?",
+      "a1": "Ne. Nový salon má {days} dní zdarma se všemi funkcemi. Po skončení zkušební doby data zůstanou.",
+      "q2": "Je potřeba dlouhodobá smlouva?",
+      "a2": "Ne. Platíte měsíčně nebo ročně. Tarif placený kartou můžete kdykoli přestat prodlužovat, platí do konce zaplaceného období.",
+      "q3": "Kde tarif prodloužím?",
+      "a3": "Na webu: klikněte na Prodloužit tarif, přihlaste se, vyberte tarif a zaplaťte. Aplikace se hned aktualizuje. Aplikace pro iPhone tarify neprodává.",
+      "q4": "Přijdu po vypršení tarifu o data?",
+      "a4": "Ne. Aplikace vás upozorní 2 dny předem. Po vypršení jsou některé funkce zamčené do prodloužení, pokladna a doklady fungují dál.",
+      "q5": "Můžu přejít na jiný tarif?",
+      "a5": "Ano, na stránce Prodloužit tarif. Vyšší tarif platí hned, nižší od dalšího období.",
+      "q6": "Je omezený počet klientů nebo rezervací?",
+      "a6": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje jen zaměstnance a pobočky.",
+      "q7": "Může jeden majitel vést více poboček?",
+      "a7": "Ano. Jeden účet majitele spravuje všechny pobočky. Každá pobočka má vlastní tarif a datum konce.",
+      "q8": "Stojí EET něco navíc?",
+      "a8": "Ne. EET 2.0 je v každém tarifu, i v tarifu Křeslo.",
+      "q9": "Pronajímám si křeslo v salonu a mám vlastní IČO. Jaký tarif?",
+      "a9": "Tarif Křeslo, {priceDesk} Kč/měsíc: pokladna, účtenky a EET s vaším certifikátem, bez kalendáře. Potřebujete rezervace? Kdykoli přejděte na Basic.",
+      "q10": "Jsem zaměstnanec salonu. Potřebuji tarif?",
+      "a10": "Ne. Majitel vás přidá jako zaměstnance do účtu salonu."
+    }
+  },
+  "features2": {
+    "crumb": "Funkce",
+    "h1": "Funkce rezervačního systému a pokladny pro salon",
+    "lead": "Rezervace, pokladna s EET, příjmy a výdaje, klienti a mzdy v jedné aplikaci. V telefonu, na iPadu i v počítači.",
+    "cta": "{days} dní zdarma",
+    "pricing": "Ceník",
+    "indexLabel": "Na této stránce",
+    "items": {
+      "booking": {
+        "nav": "Online rezervace",
+        "title": "Online rezervace pro salon",
+        "lead": "Salon má vlastní rezervační odkaz pro Facebook, Instagram a Google Mapy. Klient si sám vybere službu, pracovníka a volný čas, bez instalace aplikace.",
+        "points": [
+          "Klienti se objednávají česky, slovensky, německy, anglicky nebo francouzsky",
+          "Nová rezervace přijde do mobilu, potvrdíte a přidělíte v jednom okně",
+          "Potvrzovací e-mail a připomínka hodinu předem"
+        ],
+        "alt": "Potvrzení online rezervací a přidělení pracovníka v SalonGo na počítači",
+        "altPhone": "Rezervační stránka salonu v telefonu klienta, výběr času"
+      },
+      "calendar": {
+        "nav": "Kalendář",
+        "title": "Kalendář rezervací podle personálu",
+        "lead": "Každý pracovník má svůj sloupec, hned vidíte, kdo má volno. Rezervace bez zvoleného pracovníka dostane ten, kdo je volný a má nejméně práce.",
+        "points": [
+          "Zobrazení podle personálu nebo jako seznam",
+          "Každá rezervace má délku podle služby",
+          "Rezervační stránka nabízí jen volné časy, žádné dvojité rezervace"
+        ],
+        "alt": "Den rezervací podle personálu v SalonGo"
+      },
+      "checkout": {
+        "nav": "Pokladna a EET",
+        "title": "Pokladna pro salon s EET 2.0",
+        "lead": "Vyberete službu, pracovníka a způsob platby a účtenka je hotová. EET zapnete jednou, pak se každá účtenka odešle finanční správě sama.",
+        "points": [
+          "Hotovost, karta nebo převod přes QR kód s vyplněnou částkou",
+          "Spropitné zvlášť pro pracovníka",
+          "Tisk účtenek 80 mm s kódem FIK",
+          "EET 2.0 je povinná od 1. 1. 2027, v každém tarifu"
+        ],
+        "alt": "Pokladna SalonGo: služby, pracovník a způsob platby",
+        "eetLink": "Vše o EET 2.0"
+      },
+      "thuchi": {
+        "nav": "Příjmy a výdaje",
+        "title": "Příjmy a výdaje salonu",
+        "lead": "Záložka Příjmy se sečte sama z účtenek. Do záložky Výdaje zapíšete zboží nebo nájem: částku, datum, způsob platby a krátkou poznámku.",
+        "points": [
+          "Příjmy minus výdaje hned, pro každou pobočku",
+          "Export do CSV, Excelu nebo PDF pro účetní"
+        ],
+        "alt": "Příjmy a výdaje v SalonGo: příjmy z účtenek a výdaje salonu"
+      },
+      "customers": {
+        "nav": "Klienti",
+        "title": "Karta klienta a stálí klienti",
+        "lead": "U každého klienta vidíte historii služeb, počet návštěv a celkovou útratu. Stálé klienty poznáte hned.",
+        "points": [
+          "Filtr VIP, nových a dlouho neviděných klientů",
+          "VIP podle pravidla, které nastavíte jednou",
+          "Upozornění na narozeniny 2 dny předem"
+        ],
+        "alt": "Seznam klientů v SalonGo s počtem návštěv a útratou"
+      },
+      "marketing": {
+        "nav": "E-mailový marketing",
+        "title": "E-maily s nabídkou pro stálé klienty",
+        "lead": "Vyberete šablonu na MDŽ, Vánoce nebo narozeniny, přidáte slevu a odešlete. Dostanou ji jen klienti, kteří souhlasili.",
+        "points": [
+          "10 šablon v 6 jazycích, vše jde upravit",
+          "Náhled a zkušební e-mail sobě",
+          "Odesílá se jménem salonu, s odkazem na odhlášení"
+        ],
+        "alt": "E-mail s nabídkou k MDŽ v SalonGo v telefonu",
+        "alt2": "Upozornění na narozeniny klienta v SalonGo v telefonu"
+      },
+      "payroll": {
+        "nav": "Mzdy",
+        "title": "Automatický výpočet mezd v salonu",
+        "lead": "Každý pracovník má jeden způsob odměny: procento z tržeb nebo pevnou mzdu. Spropitné dostane ten, komu ho klient dal, nebo se dělí rovným dílem.",
+        "points": [
+          "Jiné procento pro každou službu, pokud chcete",
+          "Mzdy za období: mzda, tržby, spropitné, počet účtenek",
+          "Export do Excelu, CSV nebo PDF"
+        ],
+        "alt": "Mzdy personálu za období v SalonGo"
+      },
+      "staff": {
+        "nav": "Účty personálu",
+        "title": "Aplikace pro personál: vlastní rozvrh a tržby",
+        "lead": "Každý pracovník má vlastní přihlášení v telefonu a upozornění ve svém jazyce. O tom, co vidí, rozhodujete vy.",
+        "points": [
+          "Pozvánka e-mailem, pracovník nastaví heslo a začne",
+          "Jen rozvrh, nebo rozvrh i vlastní tržby",
+          "Tržby celého salonu personál nikdy nevidí"
+        ],
+        "cap1": "Dnešní rozvrh pracovníka",
+        "cap2": "Majitel volí, co pracovník vidí"
+      },
+      "branches": {
+        "nav": "Více poboček",
+        "title": "Správa více poboček v jednom účtu",
+        "lead": "Pobočku přidáte přímo v aplikaci. Přepnete jedním klepnutím a tržby i rezervace všech poboček vidíte na jedné stránce.",
+        "points": [
+          "Každá pobočka má vlastní kalendář, personál, služby a účtenky",
+          "Nová pobočka má {days} dní zdarma",
+          "Každá pobočka má vlastní tarif a prodloužení"
+        ],
+        "alt": "Stránka Všechny salony v SalonGo: tržby a rezervace každé pobočky"
+      }
+    },
+    "more": {
+      "title": "A k tomu",
+      "services": {
+        "title": "Služby a ceník",
+        "text": "Kategorie s barvou, délka a cena. Každou službu zapnete nebo vypnete pro online rezervace."
+      },
+      "reports": {
+        "title": "Přehled tržeb a účtenky",
+        "text": "Tržby po dnech, podle pracovníků, služeb a způsobu platby. Účtenky najdete, vytisknete znovu nebo uložíte do PDF."
+      },
+      "devices": {
+        "title": "iPhone, Android, iPad, Mac, Windows a prohlížeč",
+        "text": "Jeden účet na všech zařízeních, vždy stejná data. Aplikace umí 6 jazyků: vietnamsky, česky, slovensky, anglicky, německy, francouzsky."
+      },
+      "desk": {
+        "title": "Tarif Křeslo pro nájemce",
+        "text": "Máte vlastní IČO? Pokladna, účtenky a EET na vaše jméno za {priceDesk} Kč měsíčně.",
+        "link": "Tarif Křeslo"
+      }
+    },
+    "closing": {
+      "title": "{days} dní zdarma se všemi funkcemi",
+      "lead": "Bez platební karty. Každý tarif má všechny funkce, liší se jen počtem personálu a poboček.",
+      "cta": "Vyzkoušet zdarma",
+      "link": "Ceník"
+    }
+  },
+  "guide2": {
+    "crumb": "Software pro salon",
+    "h1": "Rezervační systém a software pro salony a nehtová studia",
+    "intro": "Rezervace, pokladna, EET, mzdy, spropitné a stálí klienti: co má software pro salon umět a jak to dělá SalonGo.",
+    "ctaTrial": "{days} dní zdarma",
+    "ctaFeatures": "Funkce",
+    "toc": "V tomto článku",
+    "sections": [
+      {
+        "id": "la-gi",
+        "h": "Co je software pro správu salonu?",
+        "body": [
+          "Software pro salon spojí každodenní práci na jedno místo: rezervace, rozvrh personálu, pokladnu, karty klientů, tržby i mzdy. Místo papírového diáře, Excelu a zpráv vidí majitel v aplikaci, kdo dnes co dělá a kolik salon vydělal.",
+          "SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje na iPhonu, Androidu, iPadu, Macu, Windows i v prohlížeči."
+        ]
+      },
+      {
+        "id": "tiem-nail",
+        "h": "Co má umět software pro salon a nehtové studio",
+        "body": [
+          "Nehtové studio má více techniček, hodně krátkých služeb, stálé klientky a spropitné. Dobrý rezervační systém by měl:"
+        ],
+        "points": [
+          "Mít vlastní online rezervační stránku, kde si klient vybere službu, techničku a volný čas",
+          "Ukazovat kalendář pro každou techničku, abyste hned viděli, kdo má volno",
+          "Přijímat platby hotově, kartou i převodem a zapsat spropitné",
+          "Počítat mzdy automaticky procentem z tržeb nebo pevnou mzdou a dělit spropitné podle volby majitele",
+          "Ukazovat tržby po dnech, podle personálu a služeb"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "Všechny funkce"
+        }
+      },
+      {
+        "id": "dat-lich-online",
+        "h": "Online rezervace nonstop, bez telefonování",
+        "body": [
+          "Každý salon má vlastní rezervační odkaz pro Facebook, Instagram nebo Google Mapy. Klienti se objednávají česky, slovensky, německy, anglicky nebo francouzsky a majitel rezervaci potvrdí a přidělí pracovníkovi v jednom okně.",
+          "Rezervační stránka nabízí jen volné časy, takže nevznikají dvojité rezervace. Klienti s e-mailem dostanou potvrzení a připomínku hodinu předem."
+        ],
+        "figure": "Rezervační stránka salonu: klient vybírá den a volný čas",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "Online rezervace"
+        }
+      },
+      {
+        "id": "tinh-tien",
+        "h": "Pokladna na recepci a automatické účtenky",
+        "body": [
+          "Vyberte službu, pracovníka a způsob platby a účtenka je hotová. Každá platba se hned propíše do přehledu tržeb, nic nezadáváte dvakrát:"
+        ],
+        "points": [
+          "Hotovost, karta nebo převod přes QR kód s vyplněnou částkou, na konci dne vše sedí",
+          "Každá platba vytvoří účtenku, vytištěnou na 80 mm a snadno dohledatelnou",
+          "Spropitné se zapíše na účtenku a rozdělí podle volby majitele"
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "Pokladna"
+        }
+      },
+      {
+        "id": "eet",
+        "h": "EET 2.0 v salonu: co je potřeba od 1. 1. 2027",
+        "body": [
+          "Od 1. 1. 2027 se každá platba hotově nebo kartou musí evidovat u finanční správy. Se SalonGo nepotřebujete pokladnu ani další software.",
+          "V aplikaci nahrajete certifikát z portálu DIS+, zadáte heslo a označení evidenční jednotky. Pak se každá účtenka odešle do EET a vytiskne s kódem FIK. EET je v každém tarifu včetně tarifu Křeslo, bez příplatku."
+        ],
+        "link": {
+          "href": "/eet-2-0",
+          "label": "Vše o EET 2.0"
+        }
+      },
+      {
+        "id": "thu-chi",
+        "h": "Příjmy a výdaje salonu: kolik opravdu vyděláte",
+        "body": [
+          "Záložka Příjmy se sečte sama z účtenek. Do záložky Výdaje zapíšete zboží nebo nájem: částku, datum, způsob platby a krátkou poznámku. Příjmy minus výdaje vidíte hned pro každou pobočku a exportujete je do CSV, Excelu nebo PDF pro účetní."
+        ],
+        "figure": "Příjmy a výdaje v SalonGo: příjmy z účtenek a výdaje salonu",
+        "link": {
+          "href": "/tinh-nang#thu-chi",
+          "label": "Příjmy a výdaje"
+        }
+      },
+      {
+        "id": "tinh-luong",
+        "h": "Jasné mzdy a dělení spropitného",
+        "body": [
+          "Každý zaměstnanec má jeden způsob odměny: procento z vlastních tržeb (případně pro každou službu jiné) nebo pevnou měsíční mzdu. Majitel zvolí, zda spropitné dostane ten, komu ho klient dal, nebo se rozdělí rovným dílem. Na konci měsíce stačí otevřít mzdy a exportovat."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "Automatické mzdy"
+        }
+      },
+      {
+        "id": "marketing",
+        "h": "Stálí klienti a e-mailový marketing",
+        "body": [
+          "V části Klienti je 10 šablon k příležitostem, například Vánoce, Nový rok, Valentýn, MDŽ, Den matek a Black Friday. Upravte pár řádků, přidejte slevu, zobrazte náhled a pošlete klientům se souhlasem. Aplikace také 2 dny předem upozorní na narozeniny klienta."
+        ],
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "E-mailový marketing"
+        }
+      },
+      {
+        "id": "chi-nhanh",
+        "h": "Více poboček, personál v telefonu",
+        "body": [
+          "Jeden účet majitele spravuje všechny pobočky, přepíná mezi nimi v menu a tržby všech poboček vidí na jedné stránce. Zaměstnanci mají vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby."
+        ],
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "Více poboček"
+        }
+      },
+      {
+        "id": "gia",
+        "h": "Kolik stojí rezervační systém pro salon",
+        "body": [
+          "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
+          "Nájemci křesla s vlastním IČO mají tarif Křeslo za {priceDesk} Kč měsíčně. Tarify se kupují a prodlužují v prohlížeči; aplikace pro iPhone tarify neprodává."
+        ],
+        "link": {
+          "href": "/bang-gia",
+          "label": "Ceník"
+        }
+      },
+      {
+        "id": "bat-dau",
+        "h": "Jak začít: spuštění za jedno odpoledne",
+        "body": [
+          "Bez technických znalostí a složitého nastavení:"
+        ],
+        "steps": [
+          "Založte účet zdarma, zadejte název salonu a otevírací dobu",
+          "Přidejte personál, služby, ceny a způsob odměňování",
+          "Sdílejte rezervační odkaz na Facebooku, Instagramu a Googlu",
+          "Podpora odpovídá česky a vietnamsky"
+        ]
+      }
+    ],
+    "endTitle": "{days} dní zdarma, bez karty",
+    "endText": "Každý tarif má všechny funkce, od {from} Kč měsíčně. Podpora česky i vietnamsky.",
+    "ctaPricing": "Ceník",
+    "faqTitle": "Otázky o softwaru pro salon",
+    "faq": [
+      {
+        "q": "Existuje aplikace, která zvládne objednávky, pokladnu i mzdy?",
+        "a": "Ano. SalonGo je jedna aplikace na všechno: klienti se objednávají online přes vlastní odkaz salonu, kalendář je rozdělený podle personálu, na recepci zaúčtujete platbu se spropitným a na konci měsíce se mzdy spočítají samy (procentem nebo pevnou mzdou). Funguje v telefonu, tabletu i počítači, {days} dní zdarma."
+      },
+      {
+        "q": "Jaký rezervační systém se hodí pro nehtové studio?",
+        "a": "SalonGo je určen pro nehtová studia a salony v Evropě, hlavně s vietnamskými majiteli: aplikace je česky i vietnamsky, klienti se objednávají v pěti jazycích, ceny jsou v Kč a podpora mluví česky a vietnamsky."
+      },
+      {
+        "q": "Umí SalonGo EET 2.0?",
+        "a": "Ano. EET zapnete jednou certifikátem z DIS+, pak se každá účtenka odešle finanční správě sama. EET je v každém tarifu bez příplatku."
+      },
+      {
+        "q": "Musím něco instalovat?",
+        "a": "Ne. Funguje v prohlížeči na počítači i telefonu. K dispozici jsou také aplikace pro iPhone, Android, iPad, Windows a Mac."
+      },
+      {
+        "q": "Je zkušební doba zdarma?",
+        "a": "Ano. Každý nový salon má {days} dní se všemi funkcemi, bez platební karty."
+      },
+      {
+        "q": "Vidí zaměstnanci svůj rozvrh v telefonu?",
+        "a": "Ano. Každý zaměstnanec má vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby."
+      },
+      {
+        "q": "Jak systém počítá mzdy techniček?",
+        "a": "Každá technička má mzdu jako procento z vlastních tržeb, nebo pevnou měsíční mzdu. Majitel volí, zda spropitné dostane ta, které ho klient dal, nebo se dělí rovným dílem."
+      }
+    ]
+  },
+  "solutions2": {
+    "crumb": "Řešení podle typu salonu",
+    "h1": "Software pro nehtová studia, kadeřnictví a řasy",
+    "lead": "Každý salon funguje jinak. Tady je, co SalonGo dělá pro každý typ, i když si jen pronajímáte křeslo.",
+    "cta": "{days} dní zdarma",
+    "features": "Funkce",
+    "indexLabel": "Vyberte typ salonu",
+    "problem": "Běžná starost",
+    "answer": "Co udělá SalonGo",
+    "types": {
+      "nail": {
+        "nav": "Nehtové studio",
+        "title": "Rezervační systém pro nehtové studio",
+        "lead": "Hodně techniček, krátké služby, spousta spropitného. SalonGo hlídá kalendář každé techničky a na konci měsíce spočítá mzdy.",
+        "pairs": [
+          {
+            "problem": "Klientky celý den píšou kvůli termínu",
+            "answer": "Vlastní rezervační odkaz, klientka si volný čas vybere sama"
+          },
+          {
+            "problem": "Provize a spropitné počítané ručně",
+            "answer": "Mzda procentem nebo pevná, spropitné podle klienta nebo rovným dílem"
+          },
+          {
+            "problem": "EET 2.0 povinná od 1. 1. 2027",
+            "answer": "Účtenka se odešle do EET při markování, žádná další pokladna"
+          }
+        ],
+        "link": "Mzdy",
+        "alt": "Mzdy techniček procentem z tržeb a spropitné v SalonGo"
+      },
+      "hair": {
+        "nav": "Kadeřnictví",
+        "title": "Rezervační systém pro kadeřnictví",
+        "lead": "Střih, barva, trvalá: každá služba trvá jinak dlouho. Kalendář počítá se skutečnou délkou, nic se nepřekrývá.",
+        "pairs": [
+          {
+            "problem": "Služby s velmi různou délkou",
+            "answer": "Každá služba má svou délku a cenu, kalendář ji správně zařadí"
+          },
+          {
+            "problem": "Stálí klienti chtějí svou kadeřnici",
+            "answer": "Klient si vybere při rezervaci, nebo ji aplikace dá tomu, kdo je volný"
+          },
+          {
+            "problem": "Klient se objedná a zapomene",
+            "answer": "Potvrzovací e-mail a připomínka hodinu předem"
+          }
+        ],
+        "link": "Kalendář",
+        "alt": "Kalendář kadeřnictví podle personálu v SalonGo"
+      },
+      "beauty": {
+        "nav": "Řasy, spa, kosmetika",
+        "title": "Software pro řasový, kosmetický salon a spa",
+        "lead": "Klienti se vracejí v cyklech. Karta klienta a e-maily s nabídkou je přivedou zpět ve správnou chvíli.",
+        "pairs": [
+          {
+            "problem": "Nevíte, co měla klientka minule",
+            "answer": "Karta klienta: historie služeb, návštěvy, útrata"
+          },
+          {
+            "problem": "Klienti, kteří přestali chodit",
+            "answer": "Filtr dlouho neviděných klientů a e-mail s nabídkou"
+          },
+          {
+            "problem": "Zapomenuté narozeniny",
+            "answer": "Aplikace upozorní 2 dny předem, abyste stihli poslat přání se slevou"
+          }
+        ],
+        "link": "Klienti",
+        "alt": "Seznam klientů řasového a kosmetického salonu v SalonGo"
+      },
+      "chain": {
+        "nav": "Více poboček",
+        "title": "Systém pro síť salonů s více pobočkami",
+        "lead": "Jeden účet pro všechny salony. Majitel vidí tržby a rezervace všech poboček na jedné stránce.",
+        "pairs": [
+          {
+            "problem": "Obvolávat pobočky kvůli tržbám",
+            "answer": "Stránka Všechny salony: tržby, rezervace, čekající online rezervace"
+          },
+          {
+            "problem": "Nejste v salonu",
+            "answer": "Přehled v telefonu kdykoli, personál má vlastní přihlášení"
+          },
+          {
+            "problem": "Každá pobočka je jinak velká",
+            "answer": "Každá pobočka má tarif podle počtu personálu a vlastní prodloužení"
+          }
+        ],
+        "link": "Více poboček",
+        "alt": "Stránka Všechny salony: tržby každé pobočky v SalonGo"
+      }
+    },
+    "desk": {
+      "nav": "Nájemce křesla, IČO",
+      "title": "Pokladna pro nájemce křesla s vlastním IČO",
+      "lead": "Tarif Křeslo má jen pokladnu, účtenky, příjmy a výdaje a EET na vaše jméno. Majitel salonu vaše tržby nevidí.",
+      "price": "{priceDesk} Kč měsíčně",
+      "note": "Bez rezervací a mezd. Kdykoli můžete přejít na Basic.",
+      "cta": "Tarif Křeslo",
+      "alt": "Pokladna tarifu Křeslo v telefonu"
+    },
+    "faq": {
+      "title": "Rychlé odpovědi",
+      "items": [
+        {
+          "q": "Hodí se SalonGo i pro malý salon?",
+          "a": "Ano. Basic je pro {staffBasic} zaměstnance a 1 pobočku, se všemi funkcemi. Když tým vyroste, tarif kdykoli změníte."
+        },
+        {
+          "q": "Má každý tarif všechny funkce?",
+          "a": "Ano. Basic, Pro a Premium mají stejné funkce, liší se jen počtem personálu na pobočku a počtem poboček."
+        },
+        {
+          "q": "V jakém jazyce se klienti objednávají?",
+          "a": "Rezervační stránka je česky, slovensky, německy, anglicky a francouzsky. Vy a personál můžete aplikaci používat vietnamsky."
+        },
+        {
+          "q": "Jaký tarif potřebuje nájemce křesla?",
+          "a": "Nájemce s vlastním IČO používá tarif Křeslo za {priceDesk} Kč měsíčně, s EET na vlastní certifikát. Zaměstnanec salonu ho nepotřebuje: majitel ho přidá do účtu salonu."
+        }
+      ]
+    },
+    "closing": {
+      "title": "{days} dní zdarma, pak tarif podle velikosti salonu",
+      "lead": "Bez platební karty. Podpora česky i vietnamsky.",
+      "cta": "Vyzkoušet zdarma",
+      "link": "Ceník"
+    }
   }
 }

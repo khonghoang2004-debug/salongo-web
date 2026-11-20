@@ -3,8 +3,8 @@ import { pageMetadata } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
-import { SectionAbout } from "@/components/SectionAbout";
-import { CTA } from "@/components/CTA";
+import { AboutView } from "@/components/pages2/AboutView";
+import { FinalCta } from "@/components/landing/Closing";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -20,8 +20,8 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <PageShell>
-      <SectionAbout />
-      <CTA />
+      <AboutView />
+      <FinalCta />
     </PageShell>
   );
 }

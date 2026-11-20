@@ -1,7 +1,7 @@
 // Ánh xạ giá gói từ app (src/lib/plans-core.ts): `npm test` (Node 22.6+, chạy thẳng file .ts nhờ --experimental-strip-types)
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { FALLBACK_PLANS, fillPlanMessages, fillPlanText, loadPlans, mapPlansResponse, maxYearlyDiscount, planTokens, priceRange } from "../src/lib/plans-core.ts";
+import { FALLBACK_PLANS, fillPlanMessages, formatNumber, fillPlanText, loadPlans, mapPlansResponse, maxYearlyDiscount, planTokens, priceRange } from "../src/lib/plans-core.ts";
 
 const ok = {
   ok: true,
@@ -146,4 +146,44 @@ test("gói Bàn: app chưa có / dữ liệu sai → giá dự kiến, live=fals
   assert.equal(mapPlansResponse({ ...ok, plans: [{ code: "DESK", monthlyPriceCents: 14900 }] }), null);
   // Mã chữ thường vẫn nhận
   assert.equal(mapPlansResponse({ ...ok, plans: [...ok.plans, { code: "desk", monthlyPriceCents: 19900 }] }).desk.monthly, 199);
+});
+
+test("loadPlans: 404 sau khi đã tải được → giữ lần tốt gần nhất (không quay về giá dự phòng)", async () => {
+  const st = { lastGood: null };
+  const good = await loadPlans(reply(200, ok), st, false);
+  assert.equal(await loadPlans(reply(404, null), st, false), good);
+  // chưa từng tải được: 404 = endpoint chưa có → giá dự phòng (cả lúc build lẫn ISR)
+  assert.equal(await loadPlans(reply(404, null), { lastGood: null }, false), FALLBACK_PLANS);
+});
+
+test("loadPlans: JSON hỏng / json() ném lỗi không làm sập, dùng lần tốt gần nhất", async () => {
+  const st = { lastGood: null };
+  const good = await loadPlans(reply(200, ok), st, false);
+  const badJson = async () => ({ status: 200, ok: true, json: async () => { throw new SyntaxError("Unexpected token <"); } });
+  assert.equal(await loadPlans(badJson, st, false), good);
+  for (const body of [[], { ok: true, currency: "CZK", plans: [null] }, { ok: true, currency: "CZK", plans: [{ code: 5 }] }]) {
+    assert.equal(await loadPlans(reply(200, body), st, false), good, JSON.stringify(body));
+  }
+});
+
+test("formatNumber: theo ngôn ngữ trang, giống số trong văn bản", () => {
+  const n = (s) => s.replace(/\u00a0|\u202f/g, " ");
+  assert.equal(formatNumber(1599, "en"), "1,599");
+  assert.equal(n(formatNumber(1599, "cs")), "1 599");
+  assert.equal(formatNumber(1599, "de"), "1.599");
+  assert.equal(formatNumber(1599, "vi"), "1.599");
+  assert.equal(formatNumber(2149.5, "en"), "2,149.5");
+  assert.equal(formatNumber(179.08, "en", 0), "179");
+  assert.equal(n(formatNumber(1599, "xx")), "1 599");
+  const lim = mapPlansResponse({ ...ok, plans: ok.plans.map((p) => (p.code === "PREMIUM" ? { ...p, monthlyPriceCents: 159900 } : p)) });
+  assert.equal(planTokens(lim, "en").pricePremium, formatNumber(1599, "en"));
+});
+
+test("giảm giá theo năm: % ngoài (0, 100) bị bỏ, tổng năm lấy nguyên từ app", () => {
+  for (const pct of [0, 100, -5, "10", null]) {
+    const r = mapPlansResponse({ ...ok, plans: [{ ...ok.plans[1], yearlyDiscountPct: pct }] });
+    assert.equal(r.plans[0].yearlyDiscountPct, null, String(pct));
+    assert.equal(r.plans[0].yearly, 2149.5);
+  }
+  assert.equal(maxYearlyDiscount(mapPlansResponse({ ...ok, plans: ok.plans.map((p) => ({ ...p, yearlyDiscountPct: null })) })), null);
 });

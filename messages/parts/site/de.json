@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "desk": "Tarif Stuhl",
+    "website": "Salon-Website",
+    "faq": "Fragen",
+    "contact": "Kontakt",
+    "about": "Über SalonGo",
+    "login": "Anmelden",
+    "renew": "Verlängern",
+    "cta": "Kostenlos testen",
+    "ctaShort": "Testen",
+    "menu": "Menü",
+    "close": "Menü schließen",
+    "skip": "Zum Inhalt springen",
+    "download": "Desktop-App",
+    "windows": "Windows",
+    "mac": "macOS",
+    "trialLine": "{days} Tage kostenlos, ohne Karte"
+  },
+  "footer": {
+    "tagline": "Salon-Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa.",
+    "product": "Produkt",
+    "company": "SalonGo",
+    "help": "Hilfe",
+    "legal": "Rechtliches",
+    "guide": "Ratgeber Salon-Software",
+    "solutions": "Lösungen nach Salontyp",
+    "support": "Antwort innerhalb von 24 Stunden, auf Tschechisch, Vietnamesisch oder Englisch.",
+    "operator": "Betreiber",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

@@ -263,24 +263,26 @@
     "tagline": "Phần mềm quản lý salon làm cho tiệm của người Việt ở châu Âu."
   },
   "pages": {
-    "homeTitle": "App quản lý salon, tiệm nail: đặt lịch, tính lương",
-    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc: đặt lịch online, tính tiền, EET 2.0, tính lương thợ, báo cáo. Dùng thử {days} ngày.",
+    "homeTitle": "Phần mềm quản lý tiệm nail ở Séc, có EET 2.0",
+    "homeDesc": "App quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc: đặt lịch online, tính tiền, EET 2.0, thu chi, tính lương thợ. Từ {from} Kč/tháng, dùng thử {days} ngày.",
     "featuresTitle": "App đặt lịch, nhận lịch hẹn, tính tiền, tính lương thợ",
     "featuresDesc": "Một app tiếng Việt cho salon: khách đặt lịch online, nhận lịch hẹn theo thợ, tính tiền tại quầy, khách hàng, email marketing, báo cáo, tính lương thợ, đa chi nhánh.",
     "solutionsTitle": "Giải pháp quản lý tiệm nail, salon tóc",
     "solutionsDesc": "Hết trùng lịch, tính sai lương, thất thoát ở quầy: cách SalonGo giúp tiệm nail và salon của người Việt ở châu Âu quản lý gọn từng việc.",
     "pricingTitle": "Bảng giá app quản lý salon, tiệm nail",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/tháng[[discount:, trả theo năm giảm {discount}%]]. Gói nào cũng đủ tính năng. Dùng thử {days} ngày, gia hạn ngay trong app.",
-    "aboutTitle": "Về SalonGo",
-    "aboutDesc": "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. Sứ mệnh và định hướng phát triển.",
-    "faqTitle": "Câu hỏi thường gặp về app quản lý salon",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/tháng[[discount:, trả theo năm giảm {discount}%]]. Gói nào cũng đủ tính năng. Dùng thử {days} ngày, gia hạn trên web.",
+    "aboutTitle": "Về SalonGo: phần mềm salon của người Việt ở Séc",
+    "aboutDesc": "SalonGo làm phần mềm cho tiệm nail, tóc, mi và spa ở châu Âu, bắt đầu từ các tiệm của người Việt ở Séc. Dữ liệu ở EU, hỗ trợ tiếng Việt và tiếng Séc.",
+    "faqTitle": "Hỏi đáp app quản lý tiệm nail, EET 2.0, giá",
     "faqDesc": "Giải đáp về SalonGo: dùng thử {days} ngày, giá gói, gia hạn, thanh toán, dùng trên điện thoại, ngôn ngữ, nhiều chi nhánh, tính lương và tip.",
     "contactTitle": "Liên hệ hỗ trợ tiếng Việt, tiếng Séc",
     "contactDesc": "Liên hệ SalonGo qua điện thoại, email, Facebook hoặc WhatsApp. Hỗ trợ bằng tiếng Việt và tiếng Séc, phản hồi trong 24 giờ.",
     "websiteTitle": "SalonGo Web Studio – làm website salon, tiệm nail {price}",
     "websiteDesc": "SalonGo Web Studio làm website cho salon, tiệm nail, spa, barbershop: tối đa {pages} trang, đẹp trên điện thoại, {price} một lần cho khách SalonGo. Xem 35+ mẫu demo.",
     "deskTitle": "Gói Bàn: tính tiền và EET cho người thuê bàn",
-    "deskDesc": "Thuê bàn, thuê ghế trong salon và có IČO riêng? Gói Bàn {priceDesk} Kč/tháng: tính tiền, hoá đơn, doanh thu và EET 2.0 bằng chứng chỉ của chính bạn, không có lịch hẹn."
+    "deskDesc": "Thuê bàn, thuê ghế trong salon và có IČO riêng? Gói Bàn {priceDesk} Kč/tháng: tính tiền, hoá đơn, doanh thu và EET 2.0 bằng chứng chỉ của chính bạn, không có lịch hẹn.",
+    "eetTitle": "EET 2.0 cho tiệm nail: cần làm gì trước 1/1/2027",
+    "eetDesc": "EET 2.0 bắt buộc ở Séc từ 1.1.2027: ai phải dùng, cần chuẩn bị gì, lấy chứng chỉ DIS+ ra sao và bật EET trong SalonGo chỉ với 2 bước."
   },
   "hero": {
     "trialNote": "{days} ngày miễn phí · Không cần thẻ thanh toán",
@@ -1306,5 +1308,905 @@
     "a5": "Dùng gói Bàn {priceDesk} Kč/tháng: chỉ có tính tiền, hoá đơn, doanh thu và EET bằng chứng chỉ của chính bạn. Chủ salon không xem được doanh thu của bạn.",
     "q6": "Dữ liệu của salon lưu ở đâu?",
     "a6": "Trên máy chủ ở Frankfurt (Đức), trong Liên minh châu Âu, theo GDPR. Hết hạn gói, dữ liệu vẫn được giữ nguyên."
+  },
+  "landing": {
+    "hero": {
+      "eet": "EET 2.0 bắt buộc từ 1.1.2027. SalonGo đã sẵn sàng",
+      "title": "Lịch hẹn, tính tiền, EET. Cả tiệm trong một app.",
+      "lead": "Phần mềm quản lý cho tiệm nail, tóc, mi và spa ở Séc. Khách tự đặt lịch, bạn tính tiền tại quầy, hoá đơn tự gửi EET. Tối đến là biết hôm nay thu bao nhiêu, chi bao nhiêu.",
+      "cta": "Dùng thử {days} ngày miễn phí",
+      "secondary": "Xem bảng giá",
+      "note": "Không cần thẻ thanh toán. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+      "altDesktop": "Lịch hẹn theo từng thợ trong SalonGo trên máy tính",
+      "altPhone": "Màn tính tiền của SalonGo trên điện thoại",
+      "chipToday": "Hôm nay",
+      "chipBookings": "lịch hẹn",
+      "chipIncome": "Thu hôm nay"
+    },
+    "platforms": {
+      "label": "Một tài khoản, dùng trên",
+      "web": "Trình duyệt",
+      "langs": "App có 6 ngôn ngữ"
+    },
+    "day": {
+      "title": "Một ngày ở tiệm, từ lịch đầu tiên đến lúc chốt sổ",
+      "lead": "Mỗi phần của SalonGo làm thay bạn một việc quen thuộc trong ngày.",
+      "s1": {
+        "time": "07:40",
+        "title": "Khách tự đặt lịch, kể cả khi tiệm chưa mở",
+        "desc": "Tiệm có trang đặt lịch riêng. Khách chọn dịch vụ và giờ trong 4 bước, bằng tiếng Séc, Đức, Anh, Slovakia hoặc Pháp."
+      },
+      "s2": {
+        "time": "09:00",
+        "title": "Lịch theo từng thợ, chia việc tự động",
+        "desc": "Mỗi thợ một cột. Lịch chưa chọn thợ được giao cho người đang rảnh. Thợ xem lịch của mình trên điện thoại."
+      },
+      "s3": {
+        "time": "14:30",
+        "title": "Tính tiền tại quầy, hoá đơn tự gửi EET",
+        "desc": "Chọn dịch vụ, khách trả tiền mặt, thẻ hoặc quét QR. Hoá đơn in khổ 80 mm và được gửi lên sở thuế ngay."
+      },
+      "s4": {
+        "time": "20:00",
+        "title": "Thu & Chi: biết tiệm lời bao nhiêu",
+        "desc": "Doanh thu tự cộng từ hoá đơn. Bạn ghi khoản chi trong vài giây: tiền hàng, tiền nhà, ghi chú. Thu trừ chi hiện ngay."
+      },
+      "s5": {
+        "time": "Cuối tháng",
+        "title": "Lương thợ tự tính",
+        "desc": "Theo % doanh thu hoặc lương cố định, tip theo khách hoặc chia đều. Xuất Excel, CSV, PDF."
+      }
+    },
+    "more": {
+      "title": "Và những việc nhỏ làm tiệm chạy êm",
+      "customers": "Hồ sơ khách",
+      "customersDesc": "Lịch sử, chi tiêu, khách quen, khách lâu chưa quay lại. App nhắc sinh nhật trước 2 ngày.",
+      "marketing": "Email ưu đãi",
+      "marketingDesc": "Mẫu thư dịp 8/3, Giáng sinh, sinh nhật. Gửi cho nhóm khách bạn chọn.",
+      "branches": "Nhiều chi nhánh",
+      "branchesDesc": "Một tài khoản cho mọi tiệm. Đổi chi nhánh bằng một chạm, xem doanh thu tất cả trên một trang.",
+      "staff": "Tài khoản cho thợ",
+      "staffDesc": "Thợ thấy lịch của mình, nhận thông báo bằng tiếng mình chọn. Chủ quyết định thợ xem được gì.",
+      "invoices": "Hoá đơn",
+      "invoicesDesc": "Tìm và in lại hoá đơn bất cứ lúc nào, lọc theo ngày, thợ và cách thanh toán.",
+      "devices": "Máy tính, iPad, điện thoại",
+      "devicesDesc": "Quầy dùng iPad hay máy tính, thợ dùng điện thoại. Dữ liệu luôn giống nhau.",
+      "all": "Xem tất cả tính năng"
+    },
+    "videos": {
+      "title": "Xem app chạy thật",
+      "lead": "Quay từ app SalonGo hiện tại, dữ liệu mẫu.",
+      "play": "Phát",
+      "pause": "Tạm dừng",
+      "items": {
+        "booking": {
+          "title": "Tạo lịch hẹn",
+          "desc": "Chọn khách, dịch vụ và thợ trên lịch. Khách nhận email xác nhận."
+        },
+        "checkout": {
+          "title": "Tính tiền",
+          "desc": "Chọn dịch vụ, chọn cách trả tiền, in hoá đơn có mã EET."
+        },
+        "thuchi": {
+          "title": "Thu & Chi",
+          "desc": "Xem thu trong ngày, thêm một khoản chi với ghi chú."
+        },
+        "customers": {
+          "title": "Khách hàng",
+          "desc": "Tìm khách, mở hồ sơ, xem lịch sử và chi tiêu."
+        },
+        "online": {
+          "title": "Khách tự đặt lịch",
+          "desc": "Trang đặt lịch của tiệm trên điện thoại của khách."
+        },
+        "desk": {
+          "title": "Gói Bàn",
+          "desc": "Người thuê bàn tính tiền nhanh và xem thu chi của riêng mình."
+        }
+      }
+    },
+    "who": {
+      "title": "Chọn đúng gói cho cách bạn làm việc",
+      "salonTag": "Tiệm có thợ",
+      "salonTitle": "Bạn là chủ tiệm",
+      "salonDesc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ, khách hàng và nhiều chi nhánh. Ba gói theo số thợ, gói nào cũng đủ tính năng.",
+      "salonPrice": "từ {from} Kč/tháng",
+      "salonCta": "Xem gói salon",
+      "deskTag": "IČO riêng trong tiệm hoặc salon",
+      "deskTitle": "Bạn thuê bàn, tự làm tự thu",
+      "deskDesc": "Tính tiền, hoá đơn và EET bằng chứng chỉ của chính bạn, thu chi của riêng bạn. Chủ tiệm không xem được doanh thu của bạn.",
+      "deskPrice": "{priceDesk} Kč/tháng",
+      "deskCta": "Xem gói Bàn"
+    },
+    "eet": {
+      "title": "EET 2.0 bắt buộc từ 1.1.2027. Bạn không cần mua thêm máy.",
+      "lead": "Bật EET một lần trong app. Sau đó mỗi lần tính tiền, hoá đơn tự gửi lên sở thuế và in kèm mã FIK.",
+      "p1": "Tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán: xong.",
+      "p2": "Có trong mọi gói, kể cả gói Bàn. Không tính thêm tiền.",
+      "p3": "Cần giúp lấy chứng chỉ, đội hỗ trợ làm cùng bạn bằng tiếng Việt.",
+      "countdown": "Còn {n} ngày",
+      "live": "Đang áp dụng",
+      "cta": "Đọc về EET 2.0",
+      "receiptTitle": "Hoá đơn mẫu có mã EET"
+    },
+    "pricing": {
+      "title": "Giá rõ ràng, trả theo tháng",
+      "lead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh. Đổi gói hoặc gia hạn trên web bất cứ lúc nào, app cập nhật ngay.",
+      "month": "Kč/tháng",
+      "staff": "đến {n} thợ mỗi chi nhánh",
+      "staffAll": "không giới hạn thợ",
+      "branches": "{n} chi nhánh",
+      "branchesAll": "không giới hạn chi nhánh",
+      "desk": "Bàn",
+      "deskLine": "1 người, IČO riêng",
+      "popular": "Chọn nhiều nhất",
+      "trial": "Tiệm mới dùng thử {days} ngày, không cần thẻ.",
+      "yearly": "Trả theo năm rẻ hơn đến {discount}%.",
+      "all": "Xem bảng giá đầy đủ"
+    },
+    "website": {
+      "title": "Cần website cho tiệm?",
+      "desc": "Website 5 trang cho tiệm với giá 999 Kč, chỉ dành cho khách SalonGo.",
+      "cta": "Xem mẫu website"
+    },
+    "faq": {
+      "title": "Câu hỏi hay gặp",
+      "all": "Xem tất cả câu hỏi"
+    },
+    "final": {
+      "title": "Mở tài khoản trong 2 phút. Dùng thử {days} ngày.",
+      "lead": "Không cần thẻ. Hết hạn dùng thử, dữ liệu vẫn được giữ nguyên.",
+      "cta": "Dùng thử miễn phí",
+      "contact": "Nói chuyện với chúng tôi"
+    }
+  },
+  "site": {
+    "nav": {
+      "features": "Tính năng",
+      "pricing": "Bảng giá",
+      "desk": "Gói Bàn",
+      "website": "Làm website",
+      "faq": "Hỏi đáp",
+      "contact": "Liên hệ",
+      "about": "Về SalonGo",
+      "login": "Đăng nhập",
+      "renew": "Gia hạn",
+      "cta": "Dùng thử miễn phí",
+      "ctaShort": "Dùng thử",
+      "menu": "Menu",
+      "close": "Đóng menu",
+      "skip": "Bỏ qua, tới nội dung",
+      "download": "Tải app cho máy tính",
+      "windows": "Windows",
+      "mac": "macOS",
+      "trialLine": "{days} ngày miễn phí, không cần thẻ"
+    },
+    "footer": {
+      "tagline": "Phần mềm quản lý salon cho tiệm nail, tóc, mi và spa ở châu Âu.",
+      "product": "Sản phẩm",
+      "company": "SalonGo",
+      "help": "Hỗ trợ",
+      "legal": "Pháp lý",
+      "guide": "Cẩm nang phần mềm salon",
+      "solutions": "Giải pháp theo loại tiệm",
+      "support": "Trả lời trong 24 giờ, bằng tiếng Việt hoặc tiếng Séc.",
+      "operator": "Vận hành bởi",
+      "rights": "Bảo lưu mọi quyền."
+    }
+  },
+  "pages2": {
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "lead": "Không thấy câu bạn cần? Nhắn cho chúng tôi, trả lời trong 24 giờ.",
+      "contact": "Hỏi chúng tôi"
+    },
+    "contact": {
+      "title": "Liên hệ SalonGo",
+      "lead": "Gọi, nhắn hoặc gửi email. Chúng tôi trả lời trong 24 giờ, bằng tiếng Việt hoặc tiếng Séc.",
+      "phone": "Điện thoại",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "facebook": "Facebook",
+      "call": "Gọi",
+      "write": "Nhắn tin",
+      "send": "Gửi email",
+      "open": "Mở trang",
+      "helpTitle": "Chúng tôi giúp được gì",
+      "help1": "Cài đặt tiệm, dịch vụ và tài khoản thợ",
+      "help2": "Lấy chứng chỉ EET từ DIS+ và bật EET",
+      "help3": "Câu hỏi về gói, hoá đơn và gia hạn",
+      "company": "Thông tin doanh nghiệp"
+    },
+    "about": {
+      "title": "Về SalonGo",
+      "lead": "SalonGo làm phần mềm cho tiệm nail, tóc, mi và spa ở châu Âu, bắt đầu từ các tiệm của người Việt ở Séc.",
+      "whyTitle": "Vì sao có SalonGo",
+      "why1": "Nhiều tiệm vẫn ghi lịch vào sổ, tính lương bằng tay và cuối tháng mới biết lời lỗ.",
+      "why2": "Phần mềm có sẵn thường không có tiếng Việt và không làm theo cách tiệm người Việt vận hành.",
+      "why3": "Từ năm 2027, mọi tiệm ở Séc phải gửi hoá đơn lên EET 2.0.",
+      "promiseTitle": "Những điều chúng tôi giữ",
+      "promise1": "Dữ liệu lưu ở Frankfurt (Đức), trong Liên minh châu Âu, theo GDPR.",
+      "promise2": "Hết hạn gói, dữ liệu vẫn được giữ nguyên.",
+      "promise3": "Hỗ trợ bằng tiếng Việt và tiếng Séc, trả lời trong 24 giờ.",
+      "promise4": "Gói nào cũng đủ tính năng, giá ghi rõ trên web.",
+      "who": "Người vận hành"
+    },
+    "notFound": {
+      "title": "Không tìm thấy trang này",
+      "desc": "Có thể đường dẫn đã đổi. Thử trang chủ hoặc bảng giá.",
+      "home": "Về trang chủ",
+      "pricing": "Xem bảng giá"
+    }
+  },
+  "eet2": {
+    "crumb": "EET 2.0",
+    "title": "EET 2.0 cho tiệm nail và salon: cần làm gì trước 1/1/2027",
+    "lead": "Từ 1.1.2027, tiệm ở Séc phải gửi từng hoá đơn lên sở thuế. Với SalonGo, bạn không cần mua máy tính tiền: bật EET một lần, sau đó app tự gửi.",
+    "countdown": "Còn {n} ngày",
+    "live": "Đang áp dụng",
+    "summaryTitle": "Tóm tắt",
+    "k1": "Từ khi nào",
+    "v1": "Ngày 1.1.2027.",
+    "k2": "Áp dụng cho",
+    "v2": "Tiệm nhận tiền mặt hoặc thẻ của khách, gồm tiệm nail, tóc, mi, spa và người thuê bàn có IČO riêng.",
+    "k3": "Cần chuẩn bị",
+    "v3": "Chứng chỉ EET lấy trên cổng DIS+ của sở thuế, mật khẩu chứng chỉ và mã cơ sở kinh doanh (provozovna).",
+    "k4": "Trong SalonGo",
+    "v4": "Tải chứng chỉ lên một lần. Mỗi lần tính tiền, hoá đơn tự gửi và in kèm mã FIK.",
+    "k5": "Chi phí",
+    "v5": "Có trong mọi gói SalonGo, kể cả gói Bàn. Không tính thêm.",
+    "stepsTitle": "Bật EET trong SalonGo",
+    "s1t": "Lấy chứng chỉ trên DIS+",
+    "s1d": "Đăng nhập cổng thuế DIS+, tạo chứng chỉ EET cho cơ sở của bạn và tải file về.",
+    "s2t": "Tải chứng chỉ lên SalonGo",
+    "s2d": "Vào Cài đặt EET, chọn file, nhập mật khẩu và mã cơ sở. Tên và IČO app tự đọc từ chứng chỉ.",
+    "s3t": "Tính tiền như thường ngày",
+    "s3d": "Mỗi hoá đơn được gửi lên sở thuế ngay khi tính tiền. Hoá đơn in ra có mã FIK.",
+    "faqTitle": "Câu hỏi về EET 2.0",
+    "q1": "SalonGo có tính thêm tiền cho EET không?",
+    "a1": "Không. EET có trong mọi gói: Basic, Pro, Premium và gói Bàn.",
+    "q2": "Tôi thuê bàn trong salon và có IČO riêng thì gửi EET thế nào?",
+    "a2": "Dùng gói Bàn với chứng chỉ EET của chính bạn. Hoá đơn của bạn đứng tên bạn, chủ tiệm không xem được doanh thu của bạn.",
+    "q3": "Tôi không tự lấy được chứng chỉ thì sao?",
+    "a3": "Đội hỗ trợ SalonGo làm cùng bạn qua điện thoại hoặc WhatsApp, bằng tiếng Việt hoặc tiếng Séc.",
+    "q4": "Có cần mua máy tính tiền hay máy in riêng không?",
+    "a4": "Không cần máy tính tiền. SalonGo chạy trên máy tính, iPad hoặc điện thoại. Muốn in hoá đơn thì dùng máy in nhiệt khổ 80 mm.",
+    "note": "Đây là thông tin chung, không phải tư vấn thuế. Trường hợp riêng của tiệm, hãy hỏi kế toán hoặc sở thuế.",
+    "cta": "Dùng thử và bật EET",
+    "ask": "Hỏi về EET"
+  },
+  "desk2": {
+    "hero": {
+      "kicker": "Gói Bàn, cho thợ thuê bàn có IČO riêng",
+      "soon": "Sắp ra mắt",
+      "title": "Tính tiền, hoá đơn và EET cho thợ thuê bàn trong salon",
+      "lead": "Hoá đơn đứng tên bạn, EET gửi bằng chứng chỉ của bạn. Doanh thu chỉ bạn xem được.",
+      "price": "{priceDesk} Kč/tháng",
+      "trial": "Dùng thử miễn phí 1 tháng",
+      "expected": "Giá dự kiến khi mở bán",
+      "cta": "Tạo tài khoản Bàn",
+      "notify": "Báo tôi khi mở bán",
+      "pricing": "Xem bảng giá",
+      "phoneAlt": "Màn tính tiền của SalonGo trên điện thoại: chọn dịch vụ, tổng tiền và nút thanh toán",
+      "receiptAlt": "Hoá đơn mẫu in tên và IČO của thợ thuê bàn, kèm mã EET (FIK và BKP)",
+      "receiptCaption": "Hoá đơn mẫu: tên và IČO của bạn, không phải của salon."
+    },
+    "what": {
+      "title": "Gói Bàn có gì?",
+      "yesTitle": "Có",
+      "y1": "Tính tiền: tiền mặt, thẻ, QR, tip",
+      "y2": "Hoá đơn mang tên và IČO của bạn",
+      "y3": "EET 2.0 bằng chứng chỉ của bạn",
+      "y4": "Thu & Chi riêng, chủ salon không xem được",
+      "y5": "Bảng giá dịch vụ riêng, trên điện thoại và máy tính",
+      "noTitle": "Không có",
+      "n1": "Lịch hẹn và đặt lịch online",
+      "n2": "Nhân viên và tính lương",
+      "n3": "Email marketing",
+      "noNote": "Cần lịch hẹn sau này? Đổi sang Basic, dữ liệu giữ nguyên."
+    },
+    "price": {
+      "title": "Gói Bàn giá bao nhiêu?",
+      "lead": "Một giá cho một người. EET có sẵn, không tính thêm.",
+      "perMonth": "Kč/tháng",
+      "orYearly": "hoặc {total} Kč/năm",
+      "trial": "Dùng thử miễn phí 1 tháng",
+      "expected": "Giá dự kiến khi mở bán",
+      "soonNote": "Gói Bàn sắp mở bán. Để lại liên hệ, chúng tôi báo bạn.",
+      "buy": "Mua / gia hạn gói Bàn",
+      "buyNote": "Mua và gia hạn trên web, app cập nhật ngay. App trên iPhone không bán gói.",
+      "stepsTitle": "Bắt đầu trong 3 bước",
+      "s1t": "Tạo tài khoản Bàn",
+      "s1d": "Đăng ký bằng email, nhập IČO.",
+      "s2t": "Gắn chứng chỉ EET",
+      "s2d": "Tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán.",
+      "s3t": "Tính tiền",
+      "s3d": "Mỗi lần tính tiền có hoá đơn và tự gửi EET."
+    },
+    "video": {
+      "title": "Xem gói Bàn trong 15 giây"
+    },
+    "faq": {
+      "title": "Câu hỏi về gói Bàn",
+      "all": "Tất cả câu hỏi",
+      "q1": "Ai nên dùng gói Bàn?",
+      "a1": "Thợ nail, tóc, mi thuê bàn hoặc ghế trong salon và làm bằng IČO riêng. Nhân viên của salon thì không cần: salon thêm bạn vào tài khoản của salon.",
+      "q2": "Vì sao tôi cần EET riêng?",
+      "a2": "Từ 1.1.2027, EET 2.0 bắt buộc ở Séc. Có IČO riêng là người nộp thuế riêng, nên doanh thu gửi bằng chứng chỉ của bạn. Trường hợp được miễn, hãy hỏi kế toán.",
+      "q3": "Chủ salon có xem được doanh thu của tôi không?",
+      "a3": "Không. Hoá đơn, doanh thu và khách hàng trong tài khoản Bàn chỉ bạn xem được.",
+      "q4": "Trả tiền gói Bàn thế nào?",
+      "a4": "Bằng thẻ hoặc chuyển khoản, trên web ở trang Gia hạn gói. Không hợp đồng dài hạn. Tài khoản Bàn mới dùng thử miễn phí 1 tháng.",
+      "q5": "Sau này cần lịch hẹn thì sao?",
+      "a5": "Đổi sang gói Basic bất cứ lúc nào. Dữ liệu vẫn giữ nguyên.",
+      "q6": "EET có tính thêm tiền không?",
+      "a6": "Không. EET 2.0 có sẵn trong gói Bàn."
+    }
+  },
+  "pricing2": {
+    "hero": {
+      "title": "Bảng giá SalonGo: từ {from} Kč/tháng, có EET 2.0",
+      "lead": "Gói nào cũng đủ tính năng. Bạn chọn theo số thợ và số chi nhánh.",
+      "jump": "Chọn nhanh",
+      "salon": "Tôi là chủ salon",
+      "salonPrice": "từ {from} Kč/tháng",
+      "desk": "Tôi thuê bàn, có IČO riêng",
+      "deskPrice": "{priceDesk} Kč/tháng",
+      "staffHint": "Bạn làm công cho salon? Bạn không cần mua gói: chủ salon thêm bạn làm nhân viên.",
+      "renewTitle": "Đã dùng SalonGo?",
+      "renewLead": "Gia hạn trên web. Thanh toán xong, app cập nhật ngay.",
+      "renewCta": "Gia hạn gói"
+    },
+    "plans": {
+      "title": "Phần mềm quản lý salon giá bao nhiêu?",
+      "lead": "Dùng thử {days} ngày, không cần thẻ.",
+      "cycle": "Kỳ thanh toán",
+      "month": "Theo tháng",
+      "year": "Theo năm",
+      "perMonth": "Kč/tháng",
+      "billedYearly": "{total} Kč trả mỗi năm",
+      "orYearly": "hoặc {total} Kč/năm",
+      "monthOnly": "Chỉ trả theo tháng",
+      "popular": "Chọn nhiều nhất",
+      "staff": "{n} thợ mỗi chi nhánh",
+      "staffAll": "Không giới hạn thợ",
+      "branches": "{n, plural, =1 {1 chi nhánh} other {# chi nhánh}}",
+      "branchesAll": "Không giới hạn chi nhánh",
+      "fitBASIC": "Tiệm nhỏ, mới bắt đầu",
+      "fitPRO": "Tiệm đang lớn, có thêm chi nhánh",
+      "fitPREMIUM": "Chuỗi salon",
+      "trial": "Dùng thử",
+      "trialAria": "Dùng thử miễn phí, gói {plan}",
+      "renew": "Gia hạn",
+      "renewAria": "Gia hạn gói {plan}",
+      "includedTitle": "Gói nào cũng có",
+      "included": [
+        "Lịch hẹn theo thợ",
+        "Đặt lịch online",
+        "Tính tiền, hoá đơn",
+        "EET 2.0",
+        "Thu & Chi",
+        "Tính lương",
+        "Khách hàng, email marketing",
+        "Báo cáo, xuất file",
+        "Không giới hạn khách và lịch hẹn"
+      ],
+      "note": "Không phí ẩn.[[discount: Trả theo năm giảm {discount}%.]] Khi thanh toán, app tính theo giá hiện hành.",
+      "terms": "Điều khoản sử dụng"
+    },
+    "desk": {
+      "title": "Thợ thuê bàn có IČO riêng trả bao nhiêu?",
+      "lead": "Gói Bàn: tính tiền, hoá đơn và EET bằng IČO của bạn. Chủ salon không xem được doanh thu của bạn.",
+      "name": "Gói Bàn",
+      "perMonth": "Kč/tháng",
+      "orYearly": "hoặc {total} Kč/năm",
+      "trial": "Dùng thử 1 tháng",
+      "expected": "Giá dự kiến",
+      "soon": "Sắp ra mắt",
+      "soonNote": "Gói Bàn sắp mở bán. Để lại liên hệ, chúng tôi báo bạn.",
+      "notify": "Báo tôi khi mở bán",
+      "signup": "Tạo tài khoản Bàn",
+      "buy": "Mua / gia hạn gói Bàn",
+      "more": "Chi tiết gói Bàn",
+      "caption": "Gói Bàn so với gói salon",
+      "colFeature": "Tính năng",
+      "colSalon": "Gói salon",
+      "colDesk": "Gói Bàn",
+      "yes": "Có",
+      "no": "Không có",
+      "rowCheckout": "Tính tiền và hoá đơn",
+      "rowEet": "EET 2.0",
+      "rowThuchi": "Thu & Chi",
+      "rowCalendar": "Lịch hẹn, đặt lịch online",
+      "rowTeam": "Nhân viên, tính lương",
+      "rowMarketing": "Email marketing"
+    },
+    "renew": {
+      "title": "Gia hạn gói SalonGo thế nào?",
+      "lead": "Trên web. Thanh toán xong, app cập nhật ngay.",
+      "s1": "Bấm Gia hạn gói",
+      "s2": "Đăng nhập bằng tài khoản chủ salon hoặc tài khoản Bàn",
+      "s3": "Kiểm tra đúng chi nhánh, chọn gói và kỳ hạn",
+      "s4": "Trả bằng thẻ hoặc chuyển khoản",
+      "note": "App trên iPhone không bán gói. Hãy gia hạn trên trình duyệt hoặc app máy tính.",
+      "cta": "Gia hạn gói"
+    },
+    "faq": {
+      "title": "Câu hỏi về giá SalonGo",
+      "trialCta": "Dùng thử {days} ngày miễn phí",
+      "all": "Tất cả câu hỏi",
+      "q1": "Dùng thử có cần thẻ không?",
+      "a1": "Không. Salon mới dùng thử {days} ngày với đủ tính năng. Hết hạn dùng thử, dữ liệu vẫn giữ nguyên.",
+      "q2": "Có phải ký hợp đồng dài hạn không?",
+      "a2": "Không. Bạn trả theo tháng hoặc theo năm. Gói trả bằng thẻ huỷ gia hạn được bất cứ lúc nào và vẫn dùng đến hết kỳ đã trả.",
+      "q3": "Gia hạn gói ở đâu?",
+      "a3": "Trên web: bấm Gia hạn gói, đăng nhập, chọn gói và thanh toán. App cập nhật ngay. App trên iPhone không bán gói.",
+      "q4": "Hết hạn gói thì dữ liệu có mất không?",
+      "a4": "Không. App nhắc trước 2 ngày. Khi hết hạn, một số chức năng tạm khoá đến khi gia hạn, riêng tính tiền và hoá đơn vẫn dùng được.",
+      "q5": "Đổi sang gói khác được không?",
+      "a5": "Được, ở trang Gia hạn gói. Nâng lên gói cao hơn có hiệu lực ngay, hạ xuống gói thấp hơn áp dụng từ kỳ sau.",
+      "q6": "Có giới hạn số khách hay lịch hẹn không?",
+      "a6": "Không. Khách, lịch hẹn và hoá đơn không giới hạn. Gói chỉ giới hạn số thợ và số chi nhánh.",
+      "q7": "Một chủ quản lý được nhiều chi nhánh không?",
+      "a7": "Được. Một tài khoản chủ quản lý mọi chi nhánh. Mỗi chi nhánh có gói và thời hạn riêng.",
+      "q8": "EET có tính thêm tiền không?",
+      "a8": "Không. EET 2.0 có trong mọi gói, kể cả gói Bàn.",
+      "q9": "Tôi thuê bàn trong salon và có IČO riêng. Chọn gói nào?",
+      "a9": "Gói Bàn, {priceDesk} Kč/tháng: tính tiền, hoá đơn và EET bằng chứng chỉ của bạn, không có lịch hẹn. Cần lịch hẹn thì đổi sang Basic bất cứ lúc nào.",
+      "q10": "Tôi làm công cho salon. Tôi có cần mua gói không?",
+      "a10": "Không. Chủ salon thêm bạn làm nhân viên trong app của salon."
+    }
+  },
+  "features2": {
+    "crumb": "Tính năng",
+    "h1": "Tính năng SalonGo: đặt lịch, tính tiền, EET 2.0, tính lương",
+    "lead": "Đặt lịch, tính tiền có EET, thu chi, khách hàng và lương thợ trong một app. Dùng trên điện thoại, iPad và máy tính.",
+    "cta": "Dùng thử {days} ngày miễn phí",
+    "pricing": "Xem bảng giá",
+    "indexLabel": "Trên trang này",
+    "items": {
+      "booking": {
+        "nav": "Đặt lịch online",
+        "title": "Trang đặt lịch online cho salon",
+        "lead": "Tiệm có link đặt lịch riêng để gắn lên Facebook, Instagram, Google Maps. Khách tự chọn dịch vụ, thợ và giờ còn trống, không cần tải app.",
+        "points": [
+          "Khách đặt bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp",
+          "Lịch mới báo về điện thoại, duyệt và chia thợ trong một hộp",
+          "Email xác nhận và email nhắc 1 giờ trước giờ hẹn"
+        ],
+        "alt": "Duyệt lịch đặt online và chọn thợ trong SalonGo trên máy tính",
+        "altPhone": "Trang đặt lịch online của salon trên điện thoại của khách, bước chọn giờ"
+      },
+      "calendar": {
+        "nav": "Lịch hẹn",
+        "title": "Lịch hẹn theo từng thợ",
+        "lead": "Mỗi thợ một cột, nhìn là biết ai đang rảnh. Lịch chưa chọn thợ được tự giao cho người rảnh và ít việc nhất.",
+        "points": [
+          "Xem theo thợ hoặc dạng danh sách",
+          "Mỗi lịch tự lấy đúng thời lượng của dịch vụ",
+          "Trang đặt lịch chỉ hiện giờ còn trống, không trùng lịch"
+        ],
+        "alt": "Lịch hẹn theo từng thợ trong một ngày trên SalonGo"
+      },
+      "checkout": {
+        "nav": "Tính tiền và EET",
+        "title": "Tính tiền tại quầy, có EET 2.0",
+        "lead": "Chọn dịch vụ, thợ và cách khách trả là xong hoá đơn. Bật EET một lần, sau đó mỗi hoá đơn tự gửi lên sở thuế.",
+        "points": [
+          "Tiền mặt, thẻ hoặc chuyển khoản bằng mã QR có sẵn số tiền",
+          "Tip ghi riêng cho thợ",
+          "In hoá đơn khổ 80 mm, kèm mã FIK",
+          "EET 2.0 bắt buộc từ 1.1.2027, có trong mọi gói"
+        ],
+        "alt": "Màn tính tiền của SalonGo: dịch vụ, thợ và cách thanh toán",
+        "eetLink": "Tìm hiểu EET 2.0"
+      },
+      "thuchi": {
+        "nav": "Thu & Chi",
+        "title": "Sổ thu chi của tiệm",
+        "lead": "Tab Thu tự cộng từ hoá đơn. Tab Chi để ghi tiền hàng, tiền nhà: số tiền, ngày, cách trả và một dòng ghi chú.",
+        "points": [
+          "Thu trừ chi hiện ngay, theo từng chi nhánh",
+          "Xuất CSV, Excel hoặc PDF cho kế toán"
+        ],
+        "alt": "Thu & Chi trong SalonGo: khoản thu từ hoá đơn và khoản chi của tiệm"
+      },
+      "customers": {
+        "nav": "Khách hàng",
+        "title": "Hồ sơ khách hàng và khách quen",
+        "lead": "Mỗi khách có lịch sử dịch vụ, số lần ghé và tổng chi tiêu. Khách quen được nhận ra ngay.",
+        "points": [
+          "Lọc khách VIP, khách mới, khách lâu chưa quay lại",
+          "Khách VIP tự nhận theo quy tắc bạn đặt",
+          "App báo trước sinh nhật khách 2 ngày"
+        ],
+        "alt": "Danh sách khách hàng trong SalonGo với số lần ghé và chi tiêu"
+      },
+      "marketing": {
+        "nav": "Email marketing",
+        "title": "Email ưu đãi cho khách quen",
+        "lead": "Chọn mẫu theo dịp như 8/3, Giáng sinh hay sinh nhật, thêm % giảm giá rồi gửi. Chỉ gửi cho khách đã đồng ý nhận ưu đãi.",
+        "points": [
+          "10 mẫu viết sẵn 6 ngôn ngữ, sửa được",
+          "Xem trước và gửi thử cho mình",
+          "Email mang tên salon, có link huỷ nhận"
+        ],
+        "alt": "Mẫu email ưu đãi Ngày Phụ nữ 8/3 trong SalonGo trên điện thoại",
+        "alt2": "Nhắc sinh nhật khách trong SalonGo trên điện thoại"
+      },
+      "payroll": {
+        "nav": "Tính lương",
+        "title": "Tính lương thợ tự động",
+        "lead": "Mỗi thợ một cách tính: % doanh thu hoặc lương cố định. Tip theo khách hoặc chia đều, tuỳ bạn chọn.",
+        "points": [
+          "Đặt % riêng cho từng dịch vụ nếu cần",
+          "Bảng lương theo kỳ: lương, doanh thu, tip, số hoá đơn",
+          "Xuất Excel, CSV hoặc PDF"
+        ],
+        "alt": "Bảng lương thợ theo kỳ trong SalonGo"
+      },
+      "staff": {
+        "nav": "Tài khoản thợ",
+        "title": "App cho thợ: lịch và doanh thu của mình",
+        "lead": "Mỗi thợ có tài khoản riêng trên điện thoại, nhận thông báo bằng ngôn ngữ mình chọn. Chủ quyết định thợ xem gì.",
+        "points": [
+          "Mời bằng email, thợ đặt mật khẩu là dùng được",
+          "Chỉ lịch, hoặc lịch và doanh thu của mình",
+          "Thợ không bao giờ thấy doanh thu cả salon"
+        ],
+        "cap1": "Lịch hôm nay của thợ",
+        "cap2": "Chủ chọn thợ được xem gì"
+      },
+      "branches": {
+        "nav": "Nhiều chi nhánh",
+        "title": "Quản lý nhiều chi nhánh trong một tài khoản",
+        "lead": "Mở thêm chi nhánh ngay trong app. Đổi chi nhánh bằng một chạm, xem doanh thu và lịch hẹn của tất cả trên một trang.",
+        "points": [
+          "Mỗi chi nhánh có lịch, thợ, dịch vụ và hoá đơn riêng",
+          "Chi nhánh mới được dùng thử {days} ngày",
+          "Mỗi chi nhánh chọn gói và gia hạn riêng"
+        ],
+        "alt": "Trang Tất cả salon trong SalonGo: doanh thu và lịch hẹn của từng chi nhánh"
+      }
+    },
+    "more": {
+      "title": "Và những phần còn lại",
+      "services": {
+        "title": "Dịch vụ và bảng giá",
+        "text": "Danh mục có màu, thời gian và giá. Bật hoặc tắt từng dịch vụ trên trang đặt lịch."
+      },
+      "reports": {
+        "title": "Báo cáo doanh thu và hoá đơn",
+        "text": "Doanh thu theo ngày, thợ, dịch vụ và cách thanh toán. Tìm, in lại hoặc xuất hoá đơn ra PDF."
+      },
+      "devices": {
+        "title": "iPhone, Android, iPad, Mac, Windows và trình duyệt",
+        "text": "Một tài khoản trên mọi máy, dữ liệu luôn giống nhau. App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp."
+      },
+      "desk": {
+        "title": "Gói Bàn cho thợ thuê bàn",
+        "text": "Có IČO riêng? Tính tiền, hoá đơn và EET đứng tên bạn, {priceDesk} Kč/tháng.",
+        "link": "Xem gói Bàn"
+      }
+    },
+    "closing": {
+      "title": "Dùng thử {days} ngày, đủ mọi tính năng",
+      "lead": "Không cần thẻ. Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh.",
+      "cta": "Dùng thử miễn phí",
+      "link": "Xem bảng giá"
+    }
+  },
+  "guide2": {
+    "crumb": "Phần mềm quản lý salon",
+    "h1": "App, phần mềm quản lý salon và tiệm nail cho người Việt ở Séc, châu Âu",
+    "intro": "Lịch hẹn, tính tiền, EET, lương thợ, tip và khách quen: một phần mềm quản lý salon cần làm được gì, và SalonGo làm thế nào.",
+    "ctaTrial": "Dùng thử {days} ngày miễn phí",
+    "ctaFeatures": "Xem tính năng",
+    "toc": "Trong bài này",
+    "sections": [
+      {
+        "id": "la-gi",
+        "h": "Phần mềm quản lý salon là gì?",
+        "body": [
+          "Phần mềm quản lý salon gom việc hằng ngày của tiệm vào một chỗ: nhận lịch hẹn, xếp lịch cho thợ, tính tiền, lưu hồ sơ khách, xem doanh thu và tính lương. Thay cho sổ giấy, Excel và tin nhắn rời rạc, chủ tiệm mở app là biết hôm nay ai làm gì và thu được bao nhiêu.",
+          "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. App bằng tiếng Việt, dùng trên iPhone, Android, iPad, Mac, Windows và trình duyệt."
+        ]
+      },
+      {
+        "id": "tiem-nail",
+        "h": "Phần mềm quản lý tiệm nail cần có gì?",
+        "body": [
+          "Tiệm nail có nhiều thợ, nhiều dịch vụ ngắn, nhiều khách quen và tiền tip. Một phần mềm quản lý tiệm nail tốt cần làm được những việc sau:"
+        ],
+        "points": [
+          "Trang đặt lịch online riêng để khách tự chọn dịch vụ, thợ và giờ còn trống",
+          "Lịch hẹn theo từng thợ, nhìn là biết ai đang rảnh",
+          "Tính tiền tại quầy bằng tiền mặt, thẻ hoặc chuyển khoản, ghi tip cho thợ",
+          "Tính lương tự động theo % doanh thu hoặc lương cố định, chia tip theo cách chủ salon chọn",
+          "Báo cáo doanh thu theo ngày, theo thợ, theo dịch vụ"
+        ],
+        "link": {
+          "href": "/tinh-nang",
+          "label": "Xem tất cả tính năng"
+        }
+      },
+      {
+        "id": "dat-lich-online",
+        "h": "App đặt lịch online 24/7, tự nhận lịch hẹn",
+        "body": [
+          "Mỗi salon có một link đặt lịch riêng để gắn lên Facebook, Instagram hay Google Maps. Khách đặt bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp, còn chủ tiệm duyệt lịch và chia thợ bằng tiếng Việt trong cùng một hộp.",
+          "Trang đặt lịch chỉ hiện giờ thợ còn trống nên không trùng lịch. Khách có email nhận email xác nhận và email nhắc 1 giờ trước giờ hẹn."
+        ],
+        "figure": "Trang đặt lịch online của salon: khách chọn ngày và giờ còn trống",
+        "link": {
+          "href": "/tinh-nang#dat-lich-online",
+          "label": "Xem đặt lịch online"
+        }
+      },
+      {
+        "id": "tinh-tien",
+        "h": "App tính tiền tại quầy, hoá đơn tự động",
+        "body": [
+          "Chọn dịch vụ, thợ và cách khách trả là xong một hoá đơn. Mọi khoản thu tự vào báo cáo doanh thu, không phải ghi sổ hay nhập lại:"
+        ],
+        "points": [
+          "Tiền mặt, thẻ hoặc chuyển khoản bằng mã QR có sẵn số tiền: cuối ngày khớp sổ",
+          "Mỗi lần thu tiền tạo một hoá đơn, in khổ 80 mm, tra lại dễ dàng",
+          "Tip ghi riêng trên hoá đơn, chia cho thợ theo cách chủ salon chọn"
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-tien",
+          "label": "Xem tính tiền"
+        }
+      },
+      {
+        "id": "eet",
+        "h": "EET 2.0 bắt buộc từ 1.1.2027: tiệm cần chuẩn bị gì?",
+        "body": [
+          "Từ 1.1.2027, ở Séc mỗi lần khách trả tiền mặt hoặc thẻ đều phải gửi lên sở thuế. Với SalonGo, bạn không cần mua máy tính tiền hay phần mềm riêng.",
+          "Tải chứng chỉ từ cổng DIS+, nhập mật khẩu và mã chỗ bán trong app. Từ đó mỗi hoá đơn tự gửi EET và in kèm mã FIK. EET có trong mọi gói, kể cả gói Bàn, không tính thêm tiền."
+        ],
+        "link": {
+          "href": "/eet-2-0",
+          "label": "Tìm hiểu EET 2.0"
+        }
+      },
+      {
+        "id": "thu-chi",
+        "h": "Sổ thu chi của tiệm: biết lời bao nhiêu",
+        "body": [
+          "Tab Thu tự cộng doanh thu từ hoá đơn. Tab Chi để ghi tiền hàng, tiền nhà: số tiền, ngày, cách trả và một dòng ghi chú. Thu trừ chi hiện ngay cho từng chi nhánh, xuất được ra CSV, Excel hoặc PDF cho kế toán."
+        ],
+        "figure": "Thu & Chi trong SalonGo: thu từ hoá đơn và các khoản chi",
+        "link": {
+          "href": "/tinh-nang#thu-chi",
+          "label": "Xem Thu & Chi"
+        }
+      },
+      {
+        "id": "tinh-luong",
+        "h": "App tính lương thợ và chia tip rõ ràng",
+        "body": [
+          "Mỗi thợ một cách tính: % trên doanh thu cá nhân (có thể đặt % riêng cho từng dịch vụ) hoặc lương cố định theo tháng. Chủ salon chọn khách tip thợ nào thì thợ đó nhận, hoặc gộp tip chia đều. Cuối tháng chỉ cần mở bảng lương và xuất file."
+        ],
+        "link": {
+          "href": "/tinh-nang#tinh-luong",
+          "label": "Xem tính lương tự động"
+        }
+      },
+      {
+        "id": "marketing",
+        "h": "Giữ chân khách quen bằng email marketing",
+        "body": [
+          "Trong mục Khách hàng có 10 mẫu email theo dịp như Giáng sinh, Năm mới, Valentine, 8/3, Ngày của Mẹ và Black Friday. Sửa vài dòng, thêm % giảm giá, xem trước rồi gửi cho khách đã đồng ý nhận ưu đãi. App báo trước sinh nhật khách 2 ngày để bạn gửi lời chúc kèm ưu đãi."
+        ],
+        "link": {
+          "href": "/tinh-nang#marketing",
+          "label": "Xem email marketing"
+        }
+      },
+      {
+        "id": "chi-nhanh",
+        "h": "Nhiều chi nhánh, thợ xem lịch trên điện thoại",
+        "body": [
+          "Một tài khoản chủ quản lý mọi chi nhánh, chuyển qua lại ngay trên menu và xem doanh thu của tất cả chi nhánh trên một trang. Thợ có tài khoản riêng trên điện thoại, thấy lịch hẹn của mình và, nếu chủ cho phép, doanh thu mình làm được."
+        ],
+        "link": {
+          "href": "/tinh-nang#da-chi-nhanh",
+          "label": "Xem đa chi nhánh"
+        }
+      },
+      {
+        "id": "gia",
+        "h": "Giá phần mềm quản lý salon",
+        "body": [
+          "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
+          "Thợ thuê bàn có IČO riêng dùng gói Bàn, {priceDesk} Kč/tháng. Mua và gia hạn gói trên trình duyệt; app trên iPhone không bán gói."
+        ],
+        "link": {
+          "href": "/bang-gia",
+          "label": "Xem bảng giá"
+        }
+      },
+      {
+        "id": "bat-dau",
+        "h": "Bắt đầu trong một buổi chiều",
+        "body": [
+          "Không cần biết kỹ thuật, không cần cài đặt phức tạp:"
+        ],
+        "steps": [
+          "Tạo tài khoản miễn phí, nhập tên salon và giờ mở cửa",
+          "Thêm thợ, dịch vụ, giá và cách tính lương",
+          "Gửi link đặt lịch cho khách qua Facebook, Instagram, Google",
+          "Bí chỗ nào, đội hỗ trợ trả lời bằng tiếng Việt và tiếng Séc"
+        ]
+      }
+    ],
+    "endTitle": "Dùng thử {days} ngày, không cần thẻ",
+    "endText": "Gói nào cũng đủ tính năng, từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+    "ctaPricing": "Xem bảng giá",
+    "faqTitle": "Câu hỏi về phần mềm quản lý salon",
+    "faq": [
+      {
+        "q": "Có app nào vừa nhận lịch hẹn, vừa tính tiền và tính lương thợ không?",
+        "a": "Có. SalonGo gồm cả: khách tự đặt lịch online qua link riêng của salon, lịch hẹn xếp theo từng thợ, tính tiền tại quầy có hoá đơn và tip, cuối tháng tự tính lương thợ theo % hoặc lương cố định. Dùng trên điện thoại, máy tính bảng và máy tính, bằng tiếng Việt, dùng thử {days} ngày miễn phí."
+      },
+      {
+        "q": "Phần mềm quản lý salon nào phù hợp với tiệm nail người Việt ở Séc?",
+        "a": "SalonGo được làm cho tiệm nail và salon của người Việt ở châu Âu: app bằng tiếng Việt, khách đặt lịch bằng tiếng Séc, Slovakia, Đức, Anh hoặc Pháp, giá tính bằng CZK và hỗ trợ bằng tiếng Việt, tiếng Séc."
+      },
+      {
+        "q": "SalonGo có EET 2.0 không?",
+        "a": "Có. Bật EET một lần bằng chứng chỉ từ DIS+, sau đó mỗi hoá đơn tự gửi lên sở thuế. EET có trong mọi gói, không tính thêm tiền."
+      },
+      {
+        "q": "Có cần cài đặt gì không?",
+        "a": "Không. Bạn dùng ngay trên trình duyệt máy tính và điện thoại. Có thêm app cho iPhone, Android, iPad, Windows và Mac."
+      },
+      {
+        "q": "Dùng thử có mất phí không?",
+        "a": "Không. Mỗi salon mới được dùng thử {days} ngày với đủ tính năng, không cần thẻ thanh toán."
+      },
+      {
+        "q": "Thợ có xem được lịch của mình trên điện thoại không?",
+        "a": "Có. Mỗi thợ có tài khoản riêng, đăng nhập trên điện thoại và thấy lịch hẹn của mình, và nếu chủ cho phép, cả doanh thu mình làm được."
+      },
+      {
+        "q": "Phần mềm tính lương thợ nail như thế nào?",
+        "a": "Mỗi thợ tính lương theo % doanh thu cá nhân hoặc lương cố định theo tháng. Tip do chủ salon chọn: khách tip thợ nào thợ đó nhận, hoặc chia đều cho các thợ."
+      }
+    ]
+  },
+  "solutions2": {
+    "crumb": "Giải pháp theo loại tiệm",
+    "h1": "Giải pháp cho từng loại tiệm: nail, tóc, mi, spa",
+    "lead": "Mỗi kiểu tiệm có cách làm riêng. Đây là phần SalonGo làm cho từng kiểu, kể cả khi bạn chỉ thuê một bàn.",
+    "cta": "Dùng thử {days} ngày miễn phí",
+    "features": "Xem tính năng",
+    "indexLabel": "Chọn kiểu tiệm",
+    "problem": "Chuyện quen thuộc",
+    "answer": "SalonGo làm gì",
+    "types": {
+      "nail": {
+        "nav": "Tiệm nail",
+        "title": "Phần mềm quản lý tiệm nail",
+        "lead": "Nhiều thợ, nhiều dịch vụ ngắn, nhiều tip. SalonGo giữ lịch từng thợ và tự tính lương cuối tháng.",
+        "pairs": [
+          {
+            "problem": "Khách nhắn tin hỏi giờ cả ngày",
+            "answer": "Link đặt lịch riêng, khách tự chọn giờ còn trống"
+          },
+          {
+            "problem": "Lương % và tip tính tay cuối tháng",
+            "answer": "Lương theo % hoặc cố định, tip theo khách hoặc chia đều"
+          },
+          {
+            "problem": "EET 2.0 bắt buộc từ 1.1.2027",
+            "answer": "Hoá đơn tự gửi EET khi tính tiền, không cần mua thêm máy"
+          }
+        ],
+        "link": "Xem tính lương",
+        "alt": "Bảng lương thợ nail theo % doanh thu và tip trong SalonGo"
+      },
+      "hair": {
+        "nav": "Salon tóc",
+        "title": "Phần mềm đặt lịch cho salon tóc",
+        "lead": "Cắt, nhuộm, uốn: mỗi dịch vụ một thời lượng. Lịch tự lấy đúng thời gian nên không chồng giờ.",
+        "pairs": [
+          {
+            "problem": "Dịch vụ dài ngắn khác nhau",
+            "answer": "Mỗi dịch vụ có thời lượng và giá riêng, lịch tự xếp đúng"
+          },
+          {
+            "problem": "Khách quen muốn đúng thợ",
+            "answer": "Khách chọn thợ khi đặt, hoặc để app giao cho người rảnh"
+          },
+          {
+            "problem": "Khách đặt rồi quên",
+            "answer": "Email xác nhận và email nhắc 1 giờ trước giờ hẹn"
+          }
+        ],
+        "link": "Xem lịch hẹn",
+        "alt": "Lịch hẹn theo từng thợ của salon tóc trong SalonGo"
+      },
+      "beauty": {
+        "nav": "Mi, spa, thẩm mỹ",
+        "title": "Phần mềm cho tiệm mi, spa và thẩm mỹ",
+        "lead": "Khách quay lại theo chu kỳ. Hồ sơ khách và email ưu đãi giúp họ quay lại đúng lúc.",
+        "pairs": [
+          {
+            "problem": "Không nhớ lần trước khách làm gì",
+            "answer": "Hồ sơ khách: lịch sử dịch vụ, số lần ghé, chi tiêu"
+          },
+          {
+            "problem": "Khách lâu không quay lại",
+            "answer": "Lọc khách lâu chưa quay lại, gửi email ưu đãi"
+          },
+          {
+            "problem": "Quên sinh nhật khách",
+            "answer": "App báo trước 2 ngày để bạn gửi lời chúc kèm ưu đãi"
+          }
+        ],
+        "link": "Xem khách hàng",
+        "alt": "Danh sách khách hàng của tiệm mi và spa trong SalonGo"
+      },
+      "chain": {
+        "nav": "Nhiều chi nhánh",
+        "title": "Quản lý chuỗi salon nhiều chi nhánh",
+        "lead": "Một tài khoản cho mọi tiệm. Chủ xem doanh thu và lịch hẹn của tất cả chi nhánh trên một trang.",
+        "pairs": [
+          {
+            "problem": "Phải gọi từng tiệm hỏi doanh thu",
+            "answer": "Trang Tất cả salon: doanh thu, lịch hẹn, lịch chờ duyệt"
+          },
+          {
+            "problem": "Không có mặt ở tiệm",
+            "answer": "Xem trên điện thoại mọi lúc, thợ có tài khoản riêng"
+          },
+          {
+            "problem": "Mỗi tiệm một quy mô",
+            "answer": "Mỗi chi nhánh chọn gói theo số thợ và gia hạn riêng"
+          }
+        ],
+        "link": "Xem đa chi nhánh",
+        "alt": "Trang Tất cả salon: doanh thu của từng chi nhánh trong SalonGo"
+      }
+    },
+    "desk": {
+      "nav": "Thuê bàn, IČO riêng",
+      "title": "Phần mềm tính tiền cho thợ thuê bàn có IČO",
+      "lead": "Gói Bàn chỉ có tính tiền, hoá đơn, thu chi và EET đứng tên bạn. Chủ tiệm không xem được doanh thu của bạn.",
+      "price": "{priceDesk} Kč/tháng",
+      "note": "Không có lịch hẹn và tính lương. Cần thì đổi sang Basic bất cứ lúc nào.",
+      "cta": "Xem gói Bàn",
+      "alt": "Màn tính tiền của gói Bàn trên điện thoại"
+    },
+    "faq": {
+      "title": "Hỏi nhanh",
+      "items": [
+        {
+          "q": "Tiệm nhỏ có dùng được SalonGo không?",
+          "a": "Có. Gói Basic cho {staffBasic} thợ và 1 chi nhánh, đủ mọi tính năng. Tiệm đông thợ hơn thì đổi gói bất cứ lúc nào."
+        },
+        {
+          "q": "Gói nào cũng có đủ tính năng không?",
+          "a": "Có. Basic, Pro và Premium có cùng tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh."
+        },
+        {
+          "q": "Khách đặt lịch bằng tiếng gì?",
+          "a": "Trang đặt lịch có tiếng Séc, Slovakia, Đức, Anh và Pháp. Bạn và thợ dùng app bằng tiếng Việt."
+        },
+        {
+          "q": "Thợ thuê bàn trong tiệm cần gói nào?",
+          "a": "Thợ có IČO riêng dùng gói Bàn, {priceDesk} Kč/tháng, với EET bằng chứng chỉ của mình. Thợ là nhân viên của tiệm thì không cần: chủ tiệm thêm thợ vào tài khoản của tiệm."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Dùng thử {days} ngày, rồi chọn gói vừa tiệm",
+      "lead": "Không cần thẻ. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+      "cta": "Dùng thử miễn phí",
+      "link": "Xem bảng giá"
+    }
   }
 }

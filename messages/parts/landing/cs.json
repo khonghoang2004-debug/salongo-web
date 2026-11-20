@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "eet": "EET 2.0 je povinná od 1. 1. 2027. SalonGo je připravené",
+    "title": "Rezervace, pokladna, EET. Celý salon v jedné aplikaci.",
+    "lead": "Rezervační systém a pokladna pro nehtová, kadeřnická, řasová a kosmetická studia. Klienti se objednají sami, vy markujete na recepci a každá účtenka se sama odešle do EET. Večer víte, kolik přišlo a kolik odešlo.",
+    "cta": "Vyzkoušet {days} dní zdarma",
+    "secondary": "Ceník",
+    "note": "Bez platební karty. Podpora česky i vietnamsky.",
+    "altDesktop": "Kalendář SalonGo se sloupcem pro každou kolegyni na počítači",
+    "altPhone": "Pokladna SalonGo na telefonu",
+    "chipToday": "Dnes",
+    "chipBookings": "rezervací",
+    "chipIncome": "Tržba dnes"
+  },
+  "platforms": {
+    "label": "Jeden účet, funguje na",
+    "web": "Prohlížeči",
+    "langs": "Aplikace v 6 jazycích"
+  },
+  "day": {
+    "title": "Den v salonu, od první rezervace po uzávěrku",
+    "lead": "Každá část SalonGo za vás udělá jednu běžnou práci.",
+    "s1": {
+      "time": "07:40",
+      "title": "Klienti se objednají sami, i když ještě máte zavřeno",
+      "desc": "Salon má vlastní rezervační stránku. Klient vybere službu a čas ve 4 krocích, česky, slovensky, německy, anglicky nebo francouzsky."
+    },
+    "s2": {
+      "time": "09:00",
+      "title": "Kalendář pro každou kolegyni, práce se rozdělí sama",
+      "desc": "Každý má svůj sloupec. Rezervace bez vybrané kolegyně dostane ta, kdo má volno. Personál vidí svůj den v telefonu."
+    },
+    "s3": {
+      "time": "14:30",
+      "title": "Platba na recepci, účtenka rovnou do EET",
+      "desc": "Vyberete služby, klient platí hotově, kartou nebo QR platbou. Účtenka se vytiskne na 80 mm a hned odejde finanční správě."
+    },
+    "s4": {
+      "time": "20:00",
+      "title": "Příjmy a výdaje: víte, kolik salon vydělal",
+      "desc": "Příjmy se sečtou z účtenek. Výdaj zapíšete za pár vteřin: zboží, nájem, poznámka. Rozdíl vidíte hned."
+    },
+    "s5": {
+      "time": "Konec měsíce",
+      "title": "Mzdy se spočítají samy",
+      "desc": "Procento z tržby nebo pevná mzda, spropitné podle klienta nebo rovným dílem. Export do Excelu, CSV nebo PDF."
+    }
+  },
+  "more": {
+    "title": "A drobnosti, díky kterým salon běží hladce",
+    "customers": "Karta klienta",
+    "customersDesc": "Historie, útrata, stálí klienti i ti, kdo dlouho nepřišli. Upozornění na narozeniny 2 dny předem.",
+    "marketing": "E-maily s nabídkou",
+    "marketingDesc": "Šablony na MDŽ, Vánoce a narozeniny. Pošlete je skupině klientů, kterou vyberete.",
+    "branches": "Více poboček",
+    "branchesDesc": "Jeden účet pro všechny salony. Pobočku přepnete jedním klepnutím, tržby všech vidíte na jedné stránce.",
+    "staff": "Účty pro personál",
+    "staffDesc": "Kolegyně vidí své rezervace a dostávají upozornění ve svém jazyce. Co dalšího uvidí, rozhodujete vy.",
+    "invoices": "Účtenky",
+    "invoicesDesc": "Kteroukoli účtenku najdete a znovu vytisknete, s filtrem podle data, kolegyně a způsobu platby.",
+    "devices": "Počítač, iPad, telefon",
+    "devicesDesc": "Na recepci iPad nebo počítač, personál v telefonu. Data jsou všude stejná.",
+    "all": "Všechny funkce"
+  },
+  "videos": {
+    "title": "Podívejte se, jak aplikace funguje",
+    "lead": "Natočeno v aktuální aplikaci SalonGo s ukázkovými daty.",
+    "play": "Přehrát",
+    "pause": "Pozastavit",
+    "items": {
+      "booking": {
+        "title": "Nová rezervace",
+        "desc": "V kalendáři vyberete klienta, službu a kolegyni. Klient dostane potvrzení e-mailem."
+      },
+      "checkout": {
+        "title": "Pokladna",
+        "desc": "Vyberete služby a způsob platby, vytisknete účtenku s kódem EET."
+      },
+      "thuchi": {
+        "title": "Příjmy a výdaje",
+        "desc": "Dnešní příjmy a nový výdaj s poznámkou."
+      },
+      "customers": {
+        "title": "Klienti",
+        "desc": "Najdete klienta, otevřete kartu a vidíte historii i útratu."
+      },
+      "online": {
+        "title": "Online rezervace",
+        "desc": "Rezervační stránka salonu v telefonu klienta."
+      },
+      "desk": {
+        "title": "Tarif Křeslo",
+        "desc": "Nájemkyně křesla rychle namarkuje a vidí své vlastní příjmy a výdaje."
+      }
+    }
+  },
+  "who": {
+    "title": "Vyberte tarif podle toho, jak pracujete",
+    "salonTag": "Salon s personálem",
+    "salonTitle": "Vedete salon",
+    "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu, v každém všechny funkce.",
+    "salonPrice": "od {from} Kč/měsíc",
+    "salonCta": "Tarify pro salon",
+    "deskTag": "Vlastní IČO v salonu",
+    "deskTitle": "Pronajímáte si křeslo a pracujete na sebe",
+    "deskDesc": "Pokladna, účtenky a EET s vaším vlastním certifikátem, vaše vlastní příjmy a výdaje. Majitel salonu vaše tržby nevidí.",
+    "deskPrice": "{priceDesk} Kč/měsíc",
+    "deskCta": "Tarif Křeslo"
+  },
+  "eet": {
+    "title": "EET 2.0 je povinná od 1. 1. 2027. Žádnou pokladnu navíc nekupujete.",
+    "lead": "EET zapnete v aplikaci jednou. Pak se každá účtenka sama odešle finanční správě a vytiskne se s kódem FIK.",
+    "p1": "Nahrajete certifikát z DIS+, zadáte heslo a číslo provozovny. Hotovo.",
+    "p2": "Je v každém tarifu včetně Křesla. Bez příplatku.",
+    "p3": "Potřebujete pomoct s certifikátem? Podpora to udělá s vámi.",
+    "countdown": "Zbývá {n} dní",
+    "live": "Platí",
+    "cta": "Vše o EET 2.0",
+    "receiptTitle": "Ukázková účtenka s kódem EET"
+  },
+  "pricing": {
+    "title": "Jasné ceny, platba měsíčně",
+    "lead": "Každý tarif má všechny funkce, liší se jen počtem personálu a poboček. Tarif změníte nebo prodloužíte na webu kdykoli a aplikace se hned aktualizuje.",
+    "month": "Kč/měsíc",
+    "staff": "až {n} osob na pobočku",
+    "staffAll": "neomezený personál",
+    "branches": "pobočky: {n}",
+    "branchesAll": "neomezené pobočky",
+    "desk": "Křeslo",
+    "deskLine": "1 osoba, vlastní IČO",
+    "popular": "Nejčastější volba",
+    "trial": "Nový salon zkouší zdarma {days} dní, bez karty.",
+    "yearly": "Při roční platbě ušetříte až {discount} %.",
+    "all": "Celý ceník"
+  },
+  "website": {
+    "title": "Potřebujete web pro salon?",
+    "desc": "Web salonu s 5 stránkami za 999 Kč, jen pro zákazníky SalonGo.",
+    "cta": "Ukázky webů"
+  },
+  "faq": {
+    "title": "Časté dotazy",
+    "all": "Všechny dotazy"
+  },
+  "final": {
+    "title": "Účet založíte za 2 minuty. Zkoušíte {days} dní.",
+    "lead": "Bez platební karty. Po zkušební době vaše data zůstanou.",
+    "cta": "Vyzkoušet zdarma",
+    "contact": "Napište nám"
+  }
+}

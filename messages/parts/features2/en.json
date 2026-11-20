@@ -1,0 +1,139 @@
+{
+  "crumb": "Features",
+  "h1": "SalonGo features: online booking, checkout, EET 2.0, payroll",
+  "lead": "Bookings, checkout with EET, income and expenses, clients and staff pay in one app. On phone, iPad and computer.",
+  "cta": "Try free for {days} days",
+  "pricing": "See pricing",
+  "indexLabel": "On this page",
+  "items": {
+    "booking": {
+      "nav": "Online booking",
+      "title": "Online booking page for your salon",
+      "lead": "Your salon gets its own booking link for Facebook, Instagram and Google Maps. Clients pick a service, a staff member and a free time, with no app to install.",
+      "points": [
+        "Clients book in Czech, Slovak, German, English or French",
+        "New bookings arrive on your phone; confirm and assign staff in one box",
+        "Confirmation email and a reminder 1 hour before"
+      ],
+      "alt": "Confirming online bookings and assigning staff in SalonGo on a computer",
+      "altPhone": "The salon's online booking page on a client's phone, choosing a time"
+    },
+    "calendar": {
+      "nav": "Calendar",
+      "title": "Appointment calendar per staff member",
+      "lead": "One column per staff member, so you see at a glance who is free. Bookings without a chosen person go to whoever is free and least busy.",
+      "points": [
+        "View by staff member or as a list",
+        "Every booking takes the service's real duration",
+        "The booking page only shows free times, so no double bookings"
+      ],
+      "alt": "A day of appointments per staff member in SalonGo"
+    },
+    "checkout": {
+      "nav": "Checkout and EET",
+      "title": "Salon checkout with Czech EET 2.0",
+      "lead": "Pick the service, the staff member and how the client pays, and the receipt is done. Turn on EET once, then every receipt is sent to the tax office by itself.",
+      "points": [
+        "Cash, card or bank transfer by QR code with the amount filled in",
+        "Tips recorded separately for staff",
+        "80 mm receipts with the FIK code",
+        "EET 2.0 is mandatory from 1 Jan 2027 and included in every plan"
+      ],
+      "alt": "SalonGo checkout: services, staff member and payment method",
+      "eetLink": "All about EET 2.0"
+    },
+    "thuchi": {
+      "nav": "Income & expenses",
+      "title": "Salon income and expenses",
+      "lead": "The income tab adds up your receipts by itself. The expenses tab records stock, rent and the like: amount, date, payment method and a short note.",
+      "points": [
+        "Income minus expenses at a glance, per location",
+        "Export to CSV, Excel or PDF for your accountant"
+      ],
+      "alt": "Income and expenses in SalonGo: income from receipts and salon expenses"
+    },
+    "customers": {
+      "nav": "Clients",
+      "title": "Client records and regulars",
+      "lead": "Every client has their service history, number of visits and total spend. Regulars are recognised straight away.",
+      "points": [
+        "Filter VIP, new and lapsed clients",
+        "VIP status set automatically by your own rule",
+        "Birthday reminder 2 days ahead"
+      ],
+      "alt": "Client list in SalonGo with visits and spend"
+    },
+    "marketing": {
+      "nav": "Email marketing",
+      "title": "Offer emails for regular clients",
+      "lead": "Pick a template for Women's Day, Christmas or a birthday, add a discount and send. Only clients who agreed to offers receive it.",
+      "points": [
+        "10 templates, written in 6 languages, all editable",
+        "Preview and send a test to yourself",
+        "Sent in your salon's name, with a one-tap unsubscribe link"
+      ],
+      "alt": "Women's Day offer email in SalonGo on a phone",
+      "alt2": "Client birthday reminder in SalonGo on a phone"
+    },
+    "payroll": {
+      "nav": "Staff pay",
+      "title": "Automatic staff payroll",
+      "lead": "Each staff member has one pay type: a percentage of revenue or a fixed salary. Tips go to whoever was tipped or are split equally, your choice.",
+      "points": [
+        "A different percentage per service if you need it",
+        "Payroll per period: pay, revenue, tips, number of receipts",
+        "Export to Excel, CSV or PDF"
+      ],
+      "alt": "Staff payroll for a period in SalonGo"
+    },
+    "staff": {
+      "nav": "Staff accounts",
+      "title": "Staff app: their own schedule and revenue",
+      "lead": "Every staff member has their own login on the phone, with notifications in their own language. You decide what they see.",
+      "points": [
+        "Invite by email; they set a password and start",
+        "Schedule only, or schedule plus their own revenue",
+        "Staff never see the whole salon's revenue"
+      ],
+      "cap1": "A staff member's schedule for today",
+      "cap2": "The owner chooses what staff can see"
+    },
+    "branches": {
+      "nav": "Multiple locations",
+      "title": "Manage multiple salon locations in one account",
+      "lead": "Add a location right in the app. Switch with one tap and see revenue and bookings for all locations on one page.",
+      "points": [
+        "Each location has its own calendar, staff, services and receipts",
+        "New locations get a {days}-day trial",
+        "Each location has its own plan and renewal"
+      ],
+      "alt": "The All salons page in SalonGo: revenue and bookings per location"
+    }
+  },
+  "more": {
+    "title": "And the rest",
+    "services": {
+      "title": "Services and price list",
+      "text": "Colour-coded categories, durations and prices. Show or hide each service on the booking page."
+    },
+    "reports": {
+      "title": "Revenue reports and receipts",
+      "text": "Revenue by day, staff member, service and payment method. Find, reprint or export receipts to PDF."
+    },
+    "devices": {
+      "title": "iPhone, Android, iPad, Mac, Windows and browser",
+      "text": "One account on every device, always the same data. The app speaks 6 languages: Vietnamese, Czech, Slovak, English, German, French."
+    },
+    "desk": {
+      "title": "Chair plan for renters",
+      "text": "Your own IČO? Checkout, receipts and EET in your name for {priceDesk} CZK a month.",
+      "link": "See the Chair plan"
+    }
+  },
+  "closing": {
+    "title": "Try every feature free for {days} days",
+    "lead": "No card needed. Every plan has every feature; they differ only by staff and locations.",
+    "cta": "Start free trial",
+    "link": "See pricing"
+  }
+}

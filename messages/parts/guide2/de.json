@@ -1,0 +1,119 @@
+{
+  "crumb": "Salonsoftware",
+  "h1": "Salonsoftware für Nagelstudios, Friseur- und Kosmetiksalons",
+  "intro": "Termine, Kasse, EET, Löhne, Trinkgeld und Stammkunden: was eine Salonsoftware können sollte und wie SalonGo es macht.",
+  "ctaTrial": "{days} Tage kostenlos testen",
+  "ctaFeatures": "Funktionen ansehen",
+  "toc": "In diesem Artikel",
+  "sections": [
+    {
+      "id": "la-gi",
+      "h": "Was ist eine Salonsoftware?",
+      "body": [
+        "Eine Salonsoftware bündelt die tägliche Arbeit an einem Ort: Terminbuchung, Dienstplan, Kasse, Kundenkartei, Umsatz und Lohnabrechnung. Statt Papierkalender, Excel und verstreuten Nachrichten sieht der Inhaber in der App, wer heute was macht und wie viel eingenommen wurde.",
+        "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa. Sie läuft auf iPhone, Android, iPad, Mac, Windows und im Browser."
+      ]
+    },
+    {
+      "id": "tiem-nail",
+      "h": "Was sollte Software für ein Nagelstudio können?",
+      "body": ["Nagelstudios haben mehrere Mitarbeiterinnen, viele kurze Leistungen, Stammkunden und Trinkgeld. Gute Software sollte:"],
+      "points": [
+        "Eine eigene Online-Buchungsseite bieten, auf der Kunden Leistung, Mitarbeiterin und freie Zeit wählen",
+        "Einen Kalender pro Mitarbeiterin zeigen, damit man sofort sieht, wer frei ist",
+        "Zahlungen bar, per Karte oder Überweisung annehmen und Trinkgeld erfassen",
+        "Löhne automatisch als Prozent vom Umsatz oder als Festgehalt berechnen und Trinkgeld nach Wahl des Inhabers teilen",
+        "Umsatz nach Tag, Mitarbeiterin und Leistung auswerten"
+      ],
+      "link": { "href": "/tinh-nang", "label": "Alle Funktionen ansehen" }
+    },
+    {
+      "id": "dat-lich-online",
+      "h": "Online-Terminbuchung rund um die Uhr",
+      "body": [
+        "Jeder Salon bekommt einen eigenen Buchungslink für Facebook, Instagram oder Google Maps. Kunden buchen auf Tschechisch, Slowakisch, Deutsch, Englisch oder Französisch, und der Inhaber bestätigt und teilt Mitarbeiter in einem Fenster zu.",
+        "Die Buchungsseite zeigt nur freie Zeiten, damit es keine Doppelbuchungen gibt. Kunden mit E-Mail erhalten eine Bestätigung und eine Erinnerung 1 Stunde vorher."
+      ],
+      "figure": "Online-Buchungsseite des Salons: der Kunde wählt Tag und freie Uhrzeit",
+      "link": { "href": "/tinh-nang#dat-lich-online", "label": "Zur Online-Buchung" }
+    },
+    {
+      "id": "tinh-tien",
+      "h": "Kasse am Empfang mit automatischen Belegen",
+      "body": ["Leistung, Mitarbeiterin und Zahlungsart wählen, und der Beleg ist fertig. Jede Zahlung fließt direkt in die Umsatzberichte:"],
+      "points": [
+        "Bar, Karte oder Überweisung per QR-Code mit fertigem Betrag, damit die Kasse am Abend stimmt",
+        "Jede Zahlung erzeugt einen Beleg, gedruckt im 80-mm-Format und später leicht zu finden",
+        "Trinkgeld steht auf dem Beleg und wird so geteilt, wie der Inhaber es wählt"
+      ],
+      "link": { "href": "/tinh-nang#tinh-tien", "label": "Zur Kasse" }
+    },
+    {
+      "id": "eet",
+      "h": "EET 2.0 ab 1. 1. 2027: was Salons in Tschechien brauchen",
+      "body": [
+        "Ab 1. 1. 2027 muss in Tschechien jede Bar- oder Kartenzahlung an das Finanzamt gemeldet werden. Mit SalonGo brauchen Sie keine Registrierkasse und keine Zusatzsoftware.",
+        "Laden Sie das Zertifikat aus dem DIS+-Portal hoch und geben Sie Passwort und Kennung der Verkaufsstelle ein. Danach geht jeder Beleg an EET und wird mit FIK-Code gedruckt. EET ist in jedem Tarif enthalten, auch im Tarif Stuhl, ohne Aufpreis."
+      ],
+      "link": { "href": "/eet-2-0", "label": "Alles zu EET 2.0" }
+    },
+    {
+      "id": "thu-chi",
+      "h": "Einnahmen und Ausgaben im Salon: was wirklich bleibt",
+      "body": ["Der Tab Einnahmen summiert den Umsatz aus Belegen von selbst. Im Tab Ausgaben erfassen Sie Ware oder Miete: Betrag, Datum, Zahlungsart und eine kurze Notiz. Einnahmen minus Ausgaben sehen Sie sofort je Filiale, als CSV, Excel oder PDF für die Buchhaltung."],
+      "figure": "Einnahmen und Ausgaben in SalonGo: Einnahmen aus Belegen und Ausgaben des Salons",
+      "link": { "href": "/tinh-nang#thu-chi", "label": "Zu Einnahmen und Ausgaben" }
+    },
+    {
+      "id": "tinh-luong",
+      "h": "Klare Löhne und Trinkgeld-Teilung",
+      "body": ["Jede Mitarbeiterin hat eine Lohnart: Prozent vom eigenen Umsatz (auf Wunsch je Leistung) oder ein festes Monatsgehalt. Der Inhaber wählt, ob Trinkgeld die Person bekommt, der der Kunde es gab, oder ob alles gleichmäßig geteilt wird. Am Monatsende die Abrechnung öffnen und exportieren."],
+      "link": { "href": "/tinh-nang#tinh-luong", "label": "Zur Lohnabrechnung" }
+    },
+    {
+      "id": "marketing",
+      "h": "Stammkunden halten mit E-Mail-Marketing",
+      "body": ["Unter Kunden gibt es 10 Vorlagen zu Anlässen wie Weihnachten, Neujahr, Valentinstag, Weltfrauentag, Muttertag und Black Friday. Ein paar Zeilen anpassen, Rabatt hinzufügen, Vorschau ansehen und an Kunden mit Einwilligung senden. Die App meldet außerdem Geburtstage 2 Tage vorher."],
+      "link": { "href": "/tinh-nang#marketing", "label": "Zum E-Mail-Marketing" }
+    },
+    {
+      "id": "chi-nhanh",
+      "h": "Mehrere Filialen, Team am Handy",
+      "body": ["Ein Inhaberkonto führt alle Filialen, wechselt im Menü und zeigt den Umsatz aller Filialen auf einer Seite. Mitarbeiter haben ein eigenes Login am Handy und sehen ihre eigenen Termine und, wenn der Inhaber es erlaubt, ihren eigenen Umsatz."],
+      "link": { "href": "/tinh-nang#da-chi-nhanh", "label": "Zu mehreren Filialen" }
+    },
+    {
+      "id": "gia",
+      "h": "Was kostet die Salonsoftware?",
+      "body": [
+        "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
+        "Stuhlmieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat. Tarife werden im Browser gekauft und verlängert; die iPhone-App verkauft keine Tarife."
+      ],
+      "link": { "href": "/bang-gia", "label": "Preise ansehen" }
+    },
+    {
+      "id": "bat-dau",
+      "h": "Startklar an einem Nachmittag",
+      "body": ["Ohne Technikkenntnisse und ohne komplizierte Einrichtung:"],
+      "steps": [
+        "Kostenloses Konto anlegen, Salonname und Öffnungszeiten eingeben",
+        "Team, Leistungen, Preise und Lohnart hinzufügen",
+        "Buchungslink auf Facebook, Instagram und Google teilen",
+        "Fragen? Der Support antwortet auf Vietnamesisch und Tschechisch"
+      ]
+    }
+  ],
+  "endTitle": "{days} Tage gratis testen, ohne Karte",
+  "endText": "Jeder Tarif hat alle Funktionen, ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
+  "ctaPricing": "Preise ansehen",
+  "faqTitle": "Fragen zur Salonsoftware",
+  "faq": [
+    { "q": "Gibt es eine App für Termine, Kasse und Lohn zugleich?", "a": "Ja. SalonGo erledigt alles in einer App: Kunden buchen online über den eigenen Link des Salons, der Kalender ist nach Mitarbeitern geteilt, an der Kasse werden Zahlung und Trinkgeld mit Beleg erfasst, und am Monatsende wird der Lohn berechnet (Prozent oder Fixgehalt). Läuft auf Handy, Tablet und Computer, {days} Tage gratis." },
+    { "q": "Welche Salonsoftware passt zu einem vietnamesischen Nagelstudio?", "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in fünf Sprachen, und der Support spricht Vietnamesisch und Tschechisch." },
+    { "q": "Unterstützt SalonGo EET 2.0?", "a": "Ja. EET einmal mit dem Zertifikat aus DIS+ einschalten, danach geht jeder Beleg von selbst an das Finanzamt. EET ist in jedem Tarif ohne Aufpreis enthalten." },
+    { "q": "Muss ich etwas installieren?", "a": "Nein. Es läuft im Browser am Computer und Handy. Zusätzlich gibt es Apps für iPhone, Android, iPad, Windows und Mac." },
+    { "q": "Ist der Test kostenlos?", "a": "Ja. Jeder neue Salon testet {days} Tage mit allen Funktionen, ohne Kreditkarte." },
+    { "q": "Sehen Mitarbeiter ihren Kalender am Handy?", "a": "Ja. Jede Mitarbeiterin hat ein eigenes Login am Handy und sieht ihre eigenen Termine und, wenn der Inhaber es erlaubt, ihren eigenen Umsatz." },
+    { "q": "Wie berechnet die Software die Löhne im Nagelstudio?", "a": "Jede Mitarbeiterin erhält Prozent vom eigenen Umsatz oder ein festes Monatsgehalt. Der Inhaber wählt, wie Trinkgeld geteilt wird: an die Person, der der Kunde es gab, oder gleichmäßig." }
+  ]
+}

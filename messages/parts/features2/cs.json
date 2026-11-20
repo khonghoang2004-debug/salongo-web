@@ -1,0 +1,139 @@
+{
+  "crumb": "Funkce",
+  "h1": "Funkce rezervačního systému a pokladny pro salon",
+  "lead": "Rezervace, pokladna s EET, příjmy a výdaje, klienti a mzdy v jedné aplikaci. V telefonu, na iPadu i v počítači.",
+  "cta": "{days} dní zdarma",
+  "pricing": "Ceník",
+  "indexLabel": "Na této stránce",
+  "items": {
+    "booking": {
+      "nav": "Online rezervace",
+      "title": "Online rezervace pro salon",
+      "lead": "Salon má vlastní rezervační odkaz pro Facebook, Instagram a Google Mapy. Klient si sám vybere službu, pracovníka a volný čas, bez instalace aplikace.",
+      "points": [
+        "Klienti se objednávají česky, slovensky, německy, anglicky nebo francouzsky",
+        "Nová rezervace přijde do mobilu, potvrdíte a přidělíte v jednom okně",
+        "Potvrzovací e-mail a připomínka hodinu předem"
+      ],
+      "alt": "Potvrzení online rezervací a přidělení pracovníka v SalonGo na počítači",
+      "altPhone": "Rezervační stránka salonu v telefonu klienta, výběr času"
+    },
+    "calendar": {
+      "nav": "Kalendář",
+      "title": "Kalendář rezervací podle personálu",
+      "lead": "Každý pracovník má svůj sloupec, hned vidíte, kdo má volno. Rezervace bez zvoleného pracovníka dostane ten, kdo je volný a má nejméně práce.",
+      "points": [
+        "Zobrazení podle personálu nebo jako seznam",
+        "Každá rezervace má délku podle služby",
+        "Rezervační stránka nabízí jen volné časy, žádné dvojité rezervace"
+      ],
+      "alt": "Den rezervací podle personálu v SalonGo"
+    },
+    "checkout": {
+      "nav": "Pokladna a EET",
+      "title": "Pokladna pro salon s EET 2.0",
+      "lead": "Vyberete službu, pracovníka a způsob platby a účtenka je hotová. EET zapnete jednou, pak se každá účtenka odešle finanční správě sama.",
+      "points": [
+        "Hotovost, karta nebo převod přes QR kód s vyplněnou částkou",
+        "Spropitné zvlášť pro pracovníka",
+        "Tisk účtenek 80 mm s kódem FIK",
+        "EET 2.0 je povinná od 1. 1. 2027, v každém tarifu"
+      ],
+      "alt": "Pokladna SalonGo: služby, pracovník a způsob platby",
+      "eetLink": "Vše o EET 2.0"
+    },
+    "thuchi": {
+      "nav": "Příjmy a výdaje",
+      "title": "Příjmy a výdaje salonu",
+      "lead": "Záložka Příjmy se sečte sama z účtenek. Do záložky Výdaje zapíšete zboží nebo nájem: částku, datum, způsob platby a krátkou poznámku.",
+      "points": [
+        "Příjmy minus výdaje hned, pro každou pobočku",
+        "Export do CSV, Excelu nebo PDF pro účetní"
+      ],
+      "alt": "Příjmy a výdaje v SalonGo: příjmy z účtenek a výdaje salonu"
+    },
+    "customers": {
+      "nav": "Klienti",
+      "title": "Karta klienta a stálí klienti",
+      "lead": "U každého klienta vidíte historii služeb, počet návštěv a celkovou útratu. Stálé klienty poznáte hned.",
+      "points": [
+        "Filtr VIP, nových a dlouho neviděných klientů",
+        "VIP podle pravidla, které nastavíte jednou",
+        "Upozornění na narozeniny 2 dny předem"
+      ],
+      "alt": "Seznam klientů v SalonGo s počtem návštěv a útratou"
+    },
+    "marketing": {
+      "nav": "E-mailový marketing",
+      "title": "E-maily s nabídkou pro stálé klienty",
+      "lead": "Vyberete šablonu na MDŽ, Vánoce nebo narozeniny, přidáte slevu a odešlete. Dostanou ji jen klienti, kteří souhlasili.",
+      "points": [
+        "10 šablon v 6 jazycích, vše jde upravit",
+        "Náhled a zkušební e-mail sobě",
+        "Odesílá se jménem salonu, s odkazem na odhlášení"
+      ],
+      "alt": "E-mail s nabídkou k MDŽ v SalonGo v telefonu",
+      "alt2": "Upozornění na narozeniny klienta v SalonGo v telefonu"
+    },
+    "payroll": {
+      "nav": "Mzdy",
+      "title": "Automatický výpočet mezd v salonu",
+      "lead": "Každý pracovník má jeden způsob odměny: procento z tržeb nebo pevnou mzdu. Spropitné dostane ten, komu ho klient dal, nebo se dělí rovným dílem.",
+      "points": [
+        "Jiné procento pro každou službu, pokud chcete",
+        "Mzdy za období: mzda, tržby, spropitné, počet účtenek",
+        "Export do Excelu, CSV nebo PDF"
+      ],
+      "alt": "Mzdy personálu za období v SalonGo"
+    },
+    "staff": {
+      "nav": "Účty personálu",
+      "title": "Aplikace pro personál: vlastní rozvrh a tržby",
+      "lead": "Každý pracovník má vlastní přihlášení v telefonu a upozornění ve svém jazyce. O tom, co vidí, rozhodujete vy.",
+      "points": [
+        "Pozvánka e-mailem, pracovník nastaví heslo a začne",
+        "Jen rozvrh, nebo rozvrh i vlastní tržby",
+        "Tržby celého salonu personál nikdy nevidí"
+      ],
+      "cap1": "Dnešní rozvrh pracovníka",
+      "cap2": "Majitel volí, co pracovník vidí"
+    },
+    "branches": {
+      "nav": "Více poboček",
+      "title": "Správa více poboček v jednom účtu",
+      "lead": "Pobočku přidáte přímo v aplikaci. Přepnete jedním klepnutím a tržby i rezervace všech poboček vidíte na jedné stránce.",
+      "points": [
+        "Každá pobočka má vlastní kalendář, personál, služby a účtenky",
+        "Nová pobočka má {days} dní zdarma",
+        "Každá pobočka má vlastní tarif a prodloužení"
+      ],
+      "alt": "Stránka Všechny salony v SalonGo: tržby a rezervace každé pobočky"
+    }
+  },
+  "more": {
+    "title": "A k tomu",
+    "services": {
+      "title": "Služby a ceník",
+      "text": "Kategorie s barvou, délka a cena. Každou službu zapnete nebo vypnete pro online rezervace."
+    },
+    "reports": {
+      "title": "Přehled tržeb a účtenky",
+      "text": "Tržby po dnech, podle pracovníků, služeb a způsobu platby. Účtenky najdete, vytisknete znovu nebo uložíte do PDF."
+    },
+    "devices": {
+      "title": "iPhone, Android, iPad, Mac, Windows a prohlížeč",
+      "text": "Jeden účet na všech zařízeních, vždy stejná data. Aplikace umí 6 jazyků: vietnamsky, česky, slovensky, anglicky, německy, francouzsky."
+    },
+    "desk": {
+      "title": "Tarif Křeslo pro nájemce",
+      "text": "Máte vlastní IČO? Pokladna, účtenky a EET na vaše jméno za {priceDesk} Kč měsíčně.",
+      "link": "Tarif Křeslo"
+    }
+  },
+  "closing": {
+    "title": "{days} dní zdarma se všemi funkcemi",
+    "lead": "Bez platební karty. Každý tarif má všechny funkce, liší se jen počtem personálu a poboček.",
+    "cta": "Vyzkoušet zdarma",
+    "link": "Ceník"
+  }
+}

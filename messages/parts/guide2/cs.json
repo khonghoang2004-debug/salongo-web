@@ -1,0 +1,119 @@
+{
+  "crumb": "Software pro salon",
+  "h1": "Rezervační systém a software pro salony a nehtová studia",
+  "intro": "Rezervace, pokladna, EET, mzdy, spropitné a stálí klienti: co má software pro salon umět a jak to dělá SalonGo.",
+  "ctaTrial": "{days} dní zdarma",
+  "ctaFeatures": "Funkce",
+  "toc": "V tomto článku",
+  "sections": [
+    {
+      "id": "la-gi",
+      "h": "Co je software pro správu salonu?",
+      "body": [
+        "Software pro salon spojí každodenní práci na jedno místo: rezervace, rozvrh personálu, pokladnu, karty klientů, tržby i mzdy. Místo papírového diáře, Excelu a zpráv vidí majitel v aplikaci, kdo dnes co dělá a kolik salon vydělal.",
+        "SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje na iPhonu, Androidu, iPadu, Macu, Windows i v prohlížeči."
+      ]
+    },
+    {
+      "id": "tiem-nail",
+      "h": "Co má umět software pro salon a nehtové studio",
+      "body": ["Nehtové studio má více techniček, hodně krátkých služeb, stálé klientky a spropitné. Dobrý rezervační systém by měl:"],
+      "points": [
+        "Mít vlastní online rezervační stránku, kde si klient vybere službu, techničku a volný čas",
+        "Ukazovat kalendář pro každou techničku, abyste hned viděli, kdo má volno",
+        "Přijímat platby hotově, kartou i převodem a zapsat spropitné",
+        "Počítat mzdy automaticky procentem z tržeb nebo pevnou mzdou a dělit spropitné podle volby majitele",
+        "Ukazovat tržby po dnech, podle personálu a služeb"
+      ],
+      "link": { "href": "/tinh-nang", "label": "Všechny funkce" }
+    },
+    {
+      "id": "dat-lich-online",
+      "h": "Online rezervace nonstop, bez telefonování",
+      "body": [
+        "Každý salon má vlastní rezervační odkaz pro Facebook, Instagram nebo Google Mapy. Klienti se objednávají česky, slovensky, německy, anglicky nebo francouzsky a majitel rezervaci potvrdí a přidělí pracovníkovi v jednom okně.",
+        "Rezervační stránka nabízí jen volné časy, takže nevznikají dvojité rezervace. Klienti s e-mailem dostanou potvrzení a připomínku hodinu předem."
+      ],
+      "figure": "Rezervační stránka salonu: klient vybírá den a volný čas",
+      "link": { "href": "/tinh-nang#dat-lich-online", "label": "Online rezervace" }
+    },
+    {
+      "id": "tinh-tien",
+      "h": "Pokladna na recepci a automatické účtenky",
+      "body": ["Vyberte službu, pracovníka a způsob platby a účtenka je hotová. Každá platba se hned propíše do přehledu tržeb, nic nezadáváte dvakrát:"],
+      "points": [
+        "Hotovost, karta nebo převod přes QR kód s vyplněnou částkou, na konci dne vše sedí",
+        "Každá platba vytvoří účtenku, vytištěnou na 80 mm a snadno dohledatelnou",
+        "Spropitné se zapíše na účtenku a rozdělí podle volby majitele"
+      ],
+      "link": { "href": "/tinh-nang#tinh-tien", "label": "Pokladna" }
+    },
+    {
+      "id": "eet",
+      "h": "EET 2.0 v salonu: co je potřeba od 1. 1. 2027",
+      "body": [
+        "Od 1. 1. 2027 se každá platba hotově nebo kartou musí evidovat u finanční správy. Se SalonGo nepotřebujete pokladnu ani další software.",
+        "V aplikaci nahrajete certifikát z portálu DIS+, zadáte heslo a označení evidenční jednotky. Pak se každá účtenka odešle do EET a vytiskne s kódem FIK. EET je v každém tarifu včetně tarifu Křeslo, bez příplatku."
+      ],
+      "link": { "href": "/eet-2-0", "label": "Vše o EET 2.0" }
+    },
+    {
+      "id": "thu-chi",
+      "h": "Příjmy a výdaje salonu: kolik opravdu vyděláte",
+      "body": ["Záložka Příjmy se sečte sama z účtenek. Do záložky Výdaje zapíšete zboží nebo nájem: částku, datum, způsob platby a krátkou poznámku. Příjmy minus výdaje vidíte hned pro každou pobočku a exportujete je do CSV, Excelu nebo PDF pro účetní."],
+      "figure": "Příjmy a výdaje v SalonGo: příjmy z účtenek a výdaje salonu",
+      "link": { "href": "/tinh-nang#thu-chi", "label": "Příjmy a výdaje" }
+    },
+    {
+      "id": "tinh-luong",
+      "h": "Jasné mzdy a dělení spropitného",
+      "body": ["Každý zaměstnanec má jeden způsob odměny: procento z vlastních tržeb (případně pro každou službu jiné) nebo pevnou měsíční mzdu. Majitel zvolí, zda spropitné dostane ten, komu ho klient dal, nebo se rozdělí rovným dílem. Na konci měsíce stačí otevřít mzdy a exportovat."],
+      "link": { "href": "/tinh-nang#tinh-luong", "label": "Automatické mzdy" }
+    },
+    {
+      "id": "marketing",
+      "h": "Stálí klienti a e-mailový marketing",
+      "body": ["V části Klienti je 10 šablon k příležitostem, například Vánoce, Nový rok, Valentýn, MDŽ, Den matek a Black Friday. Upravte pár řádků, přidejte slevu, zobrazte náhled a pošlete klientům se souhlasem. Aplikace také 2 dny předem upozorní na narozeniny klienta."],
+      "link": { "href": "/tinh-nang#marketing", "label": "E-mailový marketing" }
+    },
+    {
+      "id": "chi-nhanh",
+      "h": "Více poboček, personál v telefonu",
+      "body": ["Jeden účet majitele spravuje všechny pobočky, přepíná mezi nimi v menu a tržby všech poboček vidí na jedné stránce. Zaměstnanci mají vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby."],
+      "link": { "href": "/tinh-nang#da-chi-nhanh", "label": "Více poboček" }
+    },
+    {
+      "id": "gia",
+      "h": "Kolik stojí rezervační systém pro salon",
+      "body": [
+        "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
+        "Nájemci křesla s vlastním IČO mají tarif Křeslo za {priceDesk} Kč měsíčně. Tarify se kupují a prodlužují v prohlížeči; aplikace pro iPhone tarify neprodává."
+      ],
+      "link": { "href": "/bang-gia", "label": "Ceník" }
+    },
+    {
+      "id": "bat-dau",
+      "h": "Jak začít: spuštění za jedno odpoledne",
+      "body": ["Bez technických znalostí a složitého nastavení:"],
+      "steps": [
+        "Založte účet zdarma, zadejte název salonu a otevírací dobu",
+        "Přidejte personál, služby, ceny a způsob odměňování",
+        "Sdílejte rezervační odkaz na Facebooku, Instagramu a Googlu",
+        "Podpora odpovídá česky a vietnamsky"
+      ]
+    }
+  ],
+  "endTitle": "{days} dní zdarma, bez karty",
+  "endText": "Každý tarif má všechny funkce, od {from} Kč měsíčně. Podpora česky i vietnamsky.",
+  "ctaPricing": "Ceník",
+  "faqTitle": "Otázky o softwaru pro salon",
+  "faq": [
+    { "q": "Existuje aplikace, která zvládne objednávky, pokladnu i mzdy?", "a": "Ano. SalonGo je jedna aplikace na všechno: klienti se objednávají online přes vlastní odkaz salonu, kalendář je rozdělený podle personálu, na recepci zaúčtujete platbu se spropitným a na konci měsíce se mzdy spočítají samy (procentem nebo pevnou mzdou). Funguje v telefonu, tabletu i počítači, {days} dní zdarma." },
+    { "q": "Jaký rezervační systém se hodí pro nehtové studio?", "a": "SalonGo je určen pro nehtová studia a salony v Evropě, hlavně s vietnamskými majiteli: aplikace je česky i vietnamsky, klienti se objednávají v pěti jazycích, ceny jsou v Kč a podpora mluví česky a vietnamsky." },
+    { "q": "Umí SalonGo EET 2.0?", "a": "Ano. EET zapnete jednou certifikátem z DIS+, pak se každá účtenka odešle finanční správě sama. EET je v každém tarifu bez příplatku." },
+    { "q": "Musím něco instalovat?", "a": "Ne. Funguje v prohlížeči na počítači i telefonu. K dispozici jsou také aplikace pro iPhone, Android, iPad, Windows a Mac." },
+    { "q": "Je zkušební doba zdarma?", "a": "Ano. Každý nový salon má {days} dní se všemi funkcemi, bez platební karty." },
+    { "q": "Vidí zaměstnanci svůj rozvrh v telefonu?", "a": "Ano. Každý zaměstnanec má vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby." },
+    { "q": "Jak systém počítá mzdy techniček?", "a": "Každá technička má mzdu jako procento z vlastních tržeb, nebo pevnou měsíční mzdu. Majitel volí, zda spropitné dostane ta, které ho klient dal, nebo se dělí rovným dílem." }
+  ]
+}

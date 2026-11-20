@@ -38,7 +38,7 @@ export async function DeskIncluded() {
         </div>
         <div className="lg:col-span-6 lg:col-start-7 lg:pt-2">
           <h3 id="desk-video-title" className="mb-4 text-[15px] font-semibold text-ink">{tv("title")}</h3>
-          <FeatureVideo video={DESK_VIDEO} title={tv("title")} playLabel={tVid("play")} note={tv("note")} className="!rounded-[14px] !shadow-none" />
+          <FeatureVideo video={DESK_VIDEO} title={tv("title")} playLabel={tVid("play")} className="!rounded-[14px] !shadow-none" />
         </div>
       </div>
     </section>

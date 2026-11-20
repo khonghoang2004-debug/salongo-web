@@ -31,7 +31,7 @@ export function FeatureVideo({
 
   return (
     <div
-      className={`relative aspect-[4/5] w-full overflow-hidden rounded-[22px] bg-nude-deep shadow-sg-lg ring-1 ring-line md:aspect-video ${className}`}
+      className={`relative aspect-[4/5] w-full overflow-hidden rounded-[22px] bg-nude-deep shadow-sg-lg ring-1 ring-line md:aspect-[16/10] ${className}`}
     >
       {src ? (
         <video
@@ -52,8 +52,8 @@ export function FeatureVideo({
             <img
               src={s.posterPc}
               alt=""
-              width={1280}
-              height={720}
+              width={1440}
+              height={900}
               loading={priority ? "eager" : "lazy"}
               decoding="async"
               className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.015] motion-reduce:transition-none"

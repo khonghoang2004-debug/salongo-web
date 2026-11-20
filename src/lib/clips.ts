@@ -14,7 +14,7 @@ const c = (id: ClipId, base: string): Clip => ({
 export const CLIPS: Clip[] = [
   c("booking", "booking"),
   c("checkout", "checkout"),
-  c("thuchi", "thuchi"),
+  c("thuchi", "thu-chi"),
   c("customers", "customers"),
   c("online", "online-booking"),
   c("desk", "desk"),

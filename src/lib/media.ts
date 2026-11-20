@@ -18,6 +18,7 @@ export const SHOTS = {
   staff: s("staff"),
   invoices: s("invoices"),
   desk: s("desk-pos"),
+  overview: s("overview"),
 } as const;
 
 export type ShotId = keyof typeof SHOTS;

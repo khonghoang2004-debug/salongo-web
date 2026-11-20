@@ -5,7 +5,8 @@ import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, X, RefreshCw, Monitor, Apple } from "lucide-react";
+import { Menu, X, RefreshCw } from "lucide-react";
+import { AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
 import { siteConfig } from "@/lib/metadata";
 import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, appLink, renewLink } from "@/lib/app-links";
 
@@ -164,8 +165,8 @@ export function SiteNav() {
               </div>
               <p className="mt-6 text-sm text-muted">{t("download")}</p>
               <div className="mt-2 grid grid-cols-2 gap-2">
-                <a href={DOWNLOAD_LINKS.windows} className="x-btn-light"><Monitor className="size-4" aria-hidden />{t("windows")}</a>
-                <a href={DOWNLOAD_LINKS.mac} className="x-btn-light"><Apple className="size-4" aria-hidden />{t("mac")}</a>
+                <a href={DOWNLOAD_LINKS.windows} className="x-btn-light"><WindowsIcon className="size-3.5" />{t("windows")}</a>
+                <a href={DOWNLOAD_LINKS.mac} className="x-btn-light"><AppleIcon className="size-4" />{t("mac")}</a>
               </div>
               <div className="mt-6">
                 <LocaleSwitcher up />

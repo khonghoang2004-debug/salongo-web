@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SHOTS } from "@/lib/media";
+import { DevicePhone } from "@/components/landing/Shots";
 
 /** Thợ thuê bàn có IČO riêng: khối mận đậm duy nhất của trang Giải pháp, điện thoại tính tiền nhô lên từ đáy khối. */
 export function DeskPanel({
@@ -38,9 +39,7 @@ export function DeskPanel({
             </Link>
           </div>
           <div className="flex items-end justify-center px-7 pt-2 lg:col-span-5 lg:pt-14">
-            <div className="h-[320px] w-[240px] overflow-hidden rounded-t-[2.2rem] border-[7px] border-b-0 border-[#1a0d11] bg-white sm:h-[380px] sm:w-[270px]">
-              <img src={s.phone} alt={alt} width={s.pw} height={s.ph} loading="lazy" decoding="async" className="block h-auto w-full" />
-            </div>
+            <DevicePhone shot={s} alt={alt} crop className="h-[320px] w-[240px] sm:h-[380px] sm:w-[270px]" />
           </div>
         </div>
       </div>

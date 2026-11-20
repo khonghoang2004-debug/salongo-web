@@ -36,7 +36,7 @@ export async function LandingHero() {
           <div className="relative pb-6 sm:pb-[12%] sm:pl-[14%]">
             <DesktopShot id="calendar" alt={t("altDesktop")} priority className="x-hero-desktop hidden sm:block lg:w-[118%] lg:max-w-none" />
             <PhoneShot
-              id="checkout"
+              id="overview"
               alt={t("altPhone")}
               priority
               className="x-hero-phone mx-auto w-[64%] max-w-[290px] sm:absolute sm:-bottom-[14%] sm:left-0 sm:mx-0 sm:w-[24%] sm:max-w-[220px] lg:-left-4 lg:w-[32%] xl:w-[24%]"

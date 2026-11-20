@@ -1,4 +1,5 @@
 import type { Shot } from "@/lib/media";
+import { DevicePhone } from "@/components/landing/Shots";
 
 /**
  * Ảnh app theo màn hình: điện thoại dưới md (ảnh app trên điện thoại), từ md trở lên ảnh máy tính trong cửa sổ mảnh.
@@ -8,7 +9,7 @@ export function ResponsiveShot({ shot, alt, phoneAlt, className = "" }: { shot: 
   return (
     <div className={className}>
       <div className="w-[64%] max-w-[270px] md:hidden">
-        <img src={shot.phone} alt={phoneAlt ?? alt} width={shot.pw} height={shot.ph} loading="lazy" decoding="async" className="x-phone block h-auto w-full" />
+        <DevicePhone shot={shot} alt={phoneAlt ?? alt} />
       </div>
       <Window shot={shot} alt={alt} className="hidden md:block" />
     </div>
@@ -34,9 +35,7 @@ export function Window({ shot, alt, className = "" }: { shot: Shot; alt: string;
 /** Điện thoại đứng một mình (ảnh app điện thoại) — dùng ở mọi cỡ màn hình. */
 export function Phone({ shot, alt, className = "" }: { shot: Shot; alt: string; className?: string }) {
   return (
-    <figure className={`x-phone ${className}`}>
-      <img src={shot.phone} alt={alt} width={shot.pw} height={shot.ph} loading="lazy" decoding="async" className="block h-auto w-full" />
-    </figure>
+    <DevicePhone shot={shot} alt={alt} className={className} />
   );
 }
 
@@ -62,9 +61,7 @@ export function TwoPhones({ items }: { items: { shot: Shot; alt: string; caption
     <div className="flex items-start gap-5 sm:gap-8 lg:justify-center">
       {items.map((it, i) => (
         <figure key={it.shot.phone} className={`w-[46%] max-w-[260px] ${i % 2 ? "mt-14 lg:mt-20" : ""}`}>
-          <div className="x-phone">
-            <img src={it.shot.phone} alt={it.alt} width={it.shot.pw} height={it.shot.ph} loading="lazy" decoding="async" className="block h-auto w-full" />
-          </div>
+          <DevicePhone shot={it.shot} alt={it.alt} />
           {it.caption && <figcaption className="mt-5 text-[14px] leading-snug text-muted">{it.caption}</figcaption>}
         </figure>
       ))}

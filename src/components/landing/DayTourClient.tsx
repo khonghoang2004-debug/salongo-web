@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { PhoneShot } from "./Shots";
 import { SHOTS, type ShotId } from "@/lib/media";
 
 export type DayStep = { time: string; title: string; desc: string; shot: ShotId; alt: string };
@@ -44,7 +45,7 @@ export function DayTourClient({ steps }: { steps: DayStep[] }) {
             <p className="x-body mt-3 max-w-[30rem]">{s.desc}</p>
             <div className="mt-7 lg:hidden">
               <div className="mx-auto w-[64%] max-w-[280px] md:hidden">
-                <img src={SHOTS[s.shot].phone} alt={s.alt} width={SHOTS[s.shot].pw} height={SHOTS[s.shot].ph} loading="lazy" decoding="async" className="x-phone block h-auto w-full" />
+                <PhoneShot id={s.shot} alt={s.alt} />
               </div>
               <img
                 src={SHOTS[s.shot].desktop}

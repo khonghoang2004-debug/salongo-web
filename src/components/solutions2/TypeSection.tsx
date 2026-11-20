@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Shot } from "@/lib/media";
+import { DevicePhone } from "@/components/landing/Shots";
 
 export type Pair = { problem: string; answer: string };
 
@@ -60,9 +61,7 @@ export function TypeSection({
 
           {/* Lát cắt ảnh app: điện thoại nhô lên từ đường kẻ trên điện thoại, cửa sổ máy tính cắt ngang từ md */}
           <div className="mt-12 border-b border-line lg:mt-16">
-            <div className="h-[300px] w-[230px] overflow-hidden rounded-t-[2.2rem] border-[7px] border-b-0 border-[#1a0d11] bg-white md:hidden">
-              <img src={shot.phone} alt={alt} width={shot.pw} height={shot.ph} loading="lazy" decoding="async" className="block h-auto w-full" />
-            </div>
+            <DevicePhone shot={shot} alt={alt} crop className="h-[300px] w-[230px] md:hidden" />
             <div className="hidden aspect-[16/6] overflow-hidden rounded-t-[14px] ring-1 ring-black/[0.07] md:block">
               <img src={shot.desktop} alt={alt} width={shot.dw} height={shot.dh} loading="lazy" decoding="async" className="block h-full w-full object-cover object-left-top" />
             </div>

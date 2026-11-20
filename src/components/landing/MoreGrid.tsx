@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
+import { PhoneShot } from "./Shots";
 import { SHOTS } from "@/lib/media";
 
 export async function MoreGrid() {
@@ -33,9 +34,7 @@ export async function MoreGrid() {
               <p className="mt-2 max-w-[24rem] leading-relaxed text-white/75">{t("marketingDesc")}</p>
             </div>
             <div className="mt-auto flex justify-center px-7 pt-2">
-              <div className="h-[300px] w-[230px] overflow-hidden rounded-t-[2.2rem] border-[7px] border-b-0 border-[#1a0d11] bg-white sm:h-[340px] sm:w-[250px]">
-                <img src={SHOTS.marketing.phone} alt={t("marketing")} width={SHOTS.marketing.pw} height={SHOTS.marketing.ph} loading="lazy" decoding="async" className="block h-auto w-full" />
-              </div>
+              <PhoneShot id="marketing" alt={t("marketing")} crop className="h-[300px] w-[230px] sm:h-[340px] sm:w-[250px]" />
             </div>
           </article>
         </div>

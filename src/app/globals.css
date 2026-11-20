@@ -773,11 +773,80 @@ button {
     @apply overflow-hidden rounded-[14px] bg-white ring-1 ring-black/[0.07];
     box-shadow: 0 1px 1px rgba(42, 15, 23, 0.04), 0 24px 48px -28px rgba(42, 15, 23, 0.32);
   }
+  /* Khung điện thoại kiểu iPhone 15/16. Mọi số đo theo bề rộng khung (cqw): viền ≈ 3.6%, bo ngoài ≈ 15%,
+     bo màn hình = bo ngoài − viền (đồng tâm, không hở góc). */
   .x-phone {
-    @apply relative overflow-hidden bg-white;
-    border-radius: 2.6rem;
-    box-shadow: 0 0 0 1px rgba(42, 15, 23, 0.1), 0 0 0 7px #1a0d11, 0 0 0 8px rgba(255, 255, 255, 0.08), 0 40px 70px -30px rgba(42, 15, 23, 0.5);
+    container-type: inline-size;
+    position: relative;
   }
+  .x-phone-body {
+    --bezel: 3.6cqw;
+    --r: 15cqw;
+    position: relative;
+    padding: var(--bezel);
+    border-radius: var(--r);
+    background: linear-gradient(145deg, #2a2a2c, #0e0e10 40%, #1c1c1e);
+    box-shadow:
+      inset 0 0 0 0.45cqw #3a3a3d,
+      0 0 0 0.35cqw #0b0b0c,
+      0 1px 2px rgba(42, 15, 23, 0.12),
+      0 40px 70px -30px rgba(42, 15, 23, 0.5);
+  }
+  /* Nút cạnh: âm lượng bên trái, nguồn bên phải */
+  .x-phone-body::before,
+  .x-phone-body::after {
+    content: "";
+    position: absolute;
+    width: 0.9cqw;
+    background: #1c1c1e;
+  }
+  .x-phone-body::before { left: -0.9cqw; top: 22%; height: 11%; border-radius: 1cqw 0 0 1cqw; box-shadow: 0 -9cqw 0 #1c1c1e; }
+  .x-phone-body::after { right: -0.9cqw; top: 27%; height: 16%; border-radius: 0 1cqw 1cqw 0; }
+  .x-phone-screen {
+    position: relative;
+    overflow: hidden;
+    border-radius: calc(var(--r) - var(--bezel));
+    background: #fff;
+    /* Góc bo trên Safari khi có ảnh con */
+    isolation: isolate;
+  }
+  .x-phone-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 11cqw;
+    padding: 0 7.5cqw 0 10cqw;
+    font-size: 3.9cqw;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #111;
+    background: #fff;
+  }
+  .x-phone-battery {
+    position: relative;
+    width: 6.2cqw;
+    height: 3cqw;
+    border-radius: 0.9cqw;
+    border: 0.3cqw solid rgba(17, 17, 17, 0.45);
+    background: linear-gradient(90deg, #111 78%, transparent 78%) padding-box;
+    background-clip: content-box;
+    padding: 0.3cqw;
+  }
+  .x-phone-island {
+    position: absolute;
+    left: 50%;
+    top: 2.6cqw;
+    width: 30cqw;
+    height: 8.6cqw;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: #000;
+  }
+  /* Nửa trên của máy (thẻ có chiều cao cố định): bỏ bo và viền đáy */
+  .x-phone-crop { height: 100%; }
+  .x-phone-crop .x-phone-body { height: 100%; padding-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-shadow: inset 0 0 0 0.45cqw #3a3a3d; }
+  .x-phone-crop .x-phone-body::after, .x-phone-crop .x-phone-body::before { display: none; }
+  .x-phone-crop .x-phone-screen { height: 100%; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
   .x-panel {
     @apply rounded-[28px];
   }

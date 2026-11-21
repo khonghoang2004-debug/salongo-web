@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowDown, Check, LayoutTemplate, MessageCircle, Plus, Send } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
-import { TEMPLATE_COUNT_LABEL, WEBSITE_PRICE_KC } from "@/lib/website-offer";
+import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
 import { TEMPLATES } from "@/components/website/templates/registry";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
@@ -28,7 +28,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"] as const;
 const STEPS = [1, 2, 3] as const;
 const FAQ = [6, 2, 3, 4, 5] as const;
-const STATS = [1, 2, 3] as const;
 // Mẫu trong khung xem trước đầu trang (đổi bằng nút tên mẫu) và trong khối giá
 const HERO_PICKS = ["aurel-beauty", "atelier-noir", "maison-claire", "thermae-wellness"];
 const PRICE_PICK = "maison-claire";
@@ -142,18 +141,6 @@ export default async function WebsitePage({ params }: Props) {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Ba con số ngắn */}
-      <section className="border-y border-line bg-white" aria-label={t("studio")}>
-        <dl className="x-wrap grid divide-y divide-line sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-          {STATS.map((n) => (
-            <div key={n} className="py-5 sm:px-6 sm:py-7 sm:first:pl-0">
-              <dt className="text-[1.25rem] font-semibold tracking-[-0.02em] text-ink">{t(`stat${n}`, { count: TEMPLATE_COUNT_LABEL, pages: v.pages })}</dt>
-              <dd className="mt-1 text-[15px] text-muted">{t(`stat${n}Text`)}</dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       {/* 2. Cách làm: ba bước */}

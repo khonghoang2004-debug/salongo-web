@@ -205,8 +205,12 @@ export function SiteNav() {
                 </div>
               </div>
               <div className="mt-3 flex items-center justify-between gap-3">
-                <LocaleSwitcher up />
-                <a href={renewLink(locale)} className="inline-flex h-11 items-center gap-1.5 rounded-full px-2 text-[14px] font-medium text-ink/75">
+                <LocaleSwitcher compact up />
+                {/* Gia hạn: a clear pill in the brand tint (owner 2026-11-21: "làm lại đẹp hơn"). */}
+                <a
+                  href={renewLink(locale)}
+                  className="inline-flex h-11 items-center gap-2 rounded-full border border-[#E8C9D1] bg-[#F8EEF1] px-4 text-[14px] font-semibold text-brand-700 transition-colors hover:border-brand-700"
+                >
                   <RefreshCw className="size-4" aria-hidden />
                   {t("renew")}
                 </a>

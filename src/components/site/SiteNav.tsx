@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, X, RefreshCw, ChevronRight, Sparkles, Tag, Armchair, Globe, ReceiptText, CircleHelp, Mail, Info } from "lucide-react";
+import { Menu, X, CalendarSync, ChevronRight, Sparkles, Tag, Armchair, Globe, ReceiptText, CircleHelp, Mail, Info } from "lucide-react";
 import { AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
 import { siteConfig } from "@/lib/metadata";
 import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, appLink, renewLink } from "@/lib/app-links";
@@ -134,7 +134,7 @@ export function SiteNav() {
 
           <div className="ml-auto flex items-center gap-2">
             <a href={renewLink(locale)} className="hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[15px] text-ink/70 transition-colors hover:text-ink 2xl:inline-flex">
-              <RefreshCw className="size-4" aria-hidden />
+              <CalendarSync className="size-4" aria-hidden />
               {t("renew")}
             </a>
             <a href={appLink(LOGIN_URL, locale)} className="hidden h-10 items-center whitespace-nowrap rounded-full px-3 text-[15px] text-ink/70 transition-colors hover:text-ink sm:inline-flex">
@@ -211,7 +211,7 @@ export function SiteNav() {
                   href={renewLink(locale)}
                   className="inline-flex h-11 items-center gap-2 rounded-full border border-[#E8C9D1] bg-[#F8EEF1] px-4 text-[14px] font-semibold text-brand-700 transition-colors hover:border-brand-700"
                 >
-                  <RefreshCw className="size-4" aria-hidden />
+                  <CalendarSync className="size-4" aria-hidden />
                   {t("renew")}
                 </a>
               </div>

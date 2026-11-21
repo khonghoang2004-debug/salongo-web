@@ -18,7 +18,7 @@ const MENUS = {
   hair: [
     ["Střih a styling", [["Dámský střih a foukaná", 60, 990, "Mytí, střih, styling"], ["Pánský střih", 40, 590], ["Foukaná", 45, 590, "Dle délky vlasů", true], ["Společenský účes", 60, 1290, undefined, true]]],
     ["Barva", [["Barvení odrostu", 90, 1490], ["Celoplošná barva", 120, 1890, undefined, true], ["Balayage", 180, 3290, "Včetně tónování", true], ["Gloss / tónování", 45, 790]]],
-    ["Péče", [["Olaplex kúra", 30, 450], ["Keratinové narovnání", 150, 3490, undefined, true], ["Regenerační kúra", 30, 390]]],
+    ["Péče", [["Kúra pro posílení vlasů", 30, 450], ["Keratinové narovnání", 150, 3490, undefined, true], ["Regenerační kúra", 30, 390]]],
   ],
   curly: [
     ["Kudrnaté vlasy", [["Curly střih na sucho", 75, 1290, "Střih kudrlinu po kudrlině"], ["Curly konzultace", 30, 300], ["Definice a styling", 45, 790], ["Curly střih pro děti", 45, 690]]],
@@ -52,7 +52,7 @@ const MENUS = {
   ],
   skin: [
     ["Ošetření pleti", [["Konzultace a diagnostika pleti", 30, 300], ["Hloubkové čištění pleti", 75, 1290], ["Hydratační ošetření", 60, 1490], ["Chemický peeling", 45, 1690, undefined, true]]],
-    ["Přístrojová péče", [["Dermapen", 60, 2990], ["Hydrafacial", 60, 2490], ["LED terapie", 30, 690]]],
+    ["Přístrojová péče", [["Mikrojehličkování", 60, 2990], ["Hloubková hydratace přístrojem", 60, 2490], ["LED terapie", 30, 690]]],
     ["Doplňky", [["Masáž obličeje", 30, 790], ["Laminace obočí", 45, 890]]],
   ],
   makeup: [
@@ -215,7 +215,7 @@ const SPECS: Spec[] = [
     hl: [["Gel lak do 3 týdnů", "Bez odlupování."], ["Kávu uvaříme", "Nebo čaj, jak chcete."], ["Online rezervace", "Za minutu je hotovo."]],
     closing: ["Přijďte si odpočinout", "Vyberte si službu a čas."],
     story: "Rosewater vzniklo z lásky k jemným nehtům. Pracujeme ve třech, v malém studiu na Vinohradech, kde je slyšet jen tichá hudba.",
-    team: [["Klára Malá", "Majitelka", "French a nude manikúra."], ["Tereza Kubíčková", "Nail designérka", "Drobné zdobení a chrom."]],
+    team: [["Klára", "Majitelka", "French a nude manikúra."], ["Ngọc", "Nail designérka", "Drobné zdobení a chrom."]],
     address: "Ukázková 28, 120 00 Praha 2",
     photos: {
       hero: ["n8", "Růžová French manikúra"],
@@ -251,7 +251,7 @@ const SPECS: Spec[] = [
     hl: [["Teplé oleje", "Nahřáté na teplotu těla."], ["Párová suita", "Masáž pro dva najednou."], ["Dárkové poukazy", "Na jakoukoli proceduru."]],
     closing: ["Dopřejte si klid", "Termín vyberete online."],
     story: "Siena je malé masážní studio v centru Brna. Teplé barvy, lněné ručníky a terapeutky, které masáži rozumí.",
-    team: [["Lucie Šťastná", "Terapeutka", "Klasická a aromaterapeutická masáž."], ["Petra Dvořáková", "Terapeutka", "Lávové kameny a masáž obličeje."]],
+    team: [["Lucie", "Terapeutka", "Klasická a aromaterapeutická masáž."], ["Petra", "Terapeutka", "Lávové kameny a masáž obličeje."]],
     address: "Ukázková 7, 602 00 Brno",
     photos: {
       hero: ["r2", "Masáž hlavy v teplém prostředí"],
@@ -287,7 +287,7 @@ const SPECS: Spec[] = [
     hl: [["Rezervace", "Termín online za minutu."], ["Konzultace", "Řekněte nám, co chcete."], ["Horký ručník", "Na závěr každého holení."]],
     closing: ["Křeslo je volné", "Vyberte si barbera a čas."],
     story: "North jsme otevřeli v Karlíně pro chlapy, kteří chtějí dobrý střih bez zbytečných řečí. Tři křesla, gramofon a dobrá káva.",
-    team: [["Tomáš Král", "Barber", "Fade a krátké střihy."], ["Ondřej Beneš", "Barber", "Vousy a holení břitvou."]],
+    team: [["Tomáš", "Barber", "Fade a krátké střihy."], ["Ondřej", "Barber", "Vousy a holení břitvou."]],
     address: "Ukázková 41, 186 00 Praha 8",
     hours: [["Po – Pá", "10:00 – 20:00"], ["So", "9:00 – 15:00"]],
     photos: {
@@ -325,7 +325,7 @@ const SPECS: Spec[] = [
     hl: [["Hypoalergenní lepidlo", "Vhodné i pro citlivé oči."], ["Doplnění do 3 týdnů", "Za zvýhodněnou cenu."], ["Klidné lehátko", "Většina klientek usne."]],
     closing: ["Rezervujte si chvíli pro sebe", "Termín vyberete online."],
     story: "Lune je malé studio na Smíchově. Specializujeme se na přirozené řasy a obočí, které zvýrazní, ale nepřebijí.",
-    team: [["Nikola Horáková", "Lash artist", "Klasika 1:1 a jemný objem."], ["Eliška Pokorná", "Brow artist", "Laminace a henna brows."]],
+    team: [["Nikola", "Lash artist", "Klasika 1:1 a jemný objem."], ["Eliška", "Brow artist", "Laminace a henna brows."]],
     address: "Ukázková 9, 150 00 Praha 5",
     photos: {
       hero: ["e19", "Jemné oční linky a řasy"],
@@ -361,7 +361,7 @@ const SPECS: Spec[] = [
     hl: [["Barevná konzultace", "Zkusíme odstín na pramenu."], ["Šetrné odbarvení", "Vždy s ochranou vlasu."], ["Péče domů", "Doporučíme šampon na barvu."]],
     closing: ["Jakou barvu zkusíte?", "Rezervujte si konzultaci."],
     story: "Bloom je barevný salon v Holešovicích. Hrajeme si s odstíny, ale vlasy hlídáme jako své vlastní.",
-    team: [["Bára Svobodová", "Koloristka", "Pastelové a neonové odstíny."], ["Kristýna Fialová", "Koloristka", "Balayage a měděné tóny."]],
+    team: [["Bára", "Koloristka", "Pastelové a neonové odstíny."], ["Kristýna", "Koloristka", "Balayage a měděné tóny."]],
     address: "Ukázková 55, 170 00 Praha 7",
     photos: {
       hero: ["c0", "Růžové vlasy v pohybu"],
@@ -479,7 +479,7 @@ const SPECS: Spec[] = [
     hl: [["90 minut na klientku", "Čas na konzultaci i styling."], ["Bez fénu na závěr", "Pokud chcete přirozený tvar."], ["Soukromý salonek", "Pro klid a diskrétnost."]],
     closing: ["Rezervujte si první konzultaci", "Těšíme se na vás."],
     story: "Studio Grey je malé studio v klidné vilové čtvrti. Nebudeme vám prodávat trendy. Najdeme střih, který je váš.",
-    team: [["Veronika Šimková", "Senior stylistka", "Dlouhé vrstvené střihy."], ["Jakub Moravec", "Stylista", "Krátké střihy a bob."]],
+    team: [["Veronika", "Senior stylistka", "Dlouhé vrstvené střihy."], ["Jakub", "Stylista", "Krátké střihy a bob."]],
     address: "Ukázková 4, 160 00 Praha 6",
     photos: {
       hero: ["c3", "Rovné blond vlasy zezadu"],
@@ -516,7 +516,7 @@ const SPECS: Spec[] = [
     hl: [["Dětský koutek", "Pastelky a pohádky."], ["Parkování", "Přímo před salonem."], ["Rezervace", "Online i telefonicky."]],
     closing: ["Domluvte si termín", "Rádi vás uvidíme."],
     story: "Kadeř & Co jsme otevřely v roce 2016 s jednou myšlenkou: kadeřnictví, kam se těší celá rodina.",
-    team: [["Michaela Černá", "Kadeřnice", "Barvy a dámské střihy."], ["Hana Procházková", "Kadeřnice", "Pánské a dětské střihy."]],
+    team: [["Michaela", "Kadeřnice", "Barvy a dámské střihy."], ["Hana", "Kadeřnice", "Pánské a dětské střihy."]],
     address: "Ukázková 22, 301 00 Plzeň",
     photos: {
       hero: ["i6", "Světlý salon plný rostlin"],
@@ -549,10 +549,10 @@ const SPECS: Spec[] = [
     title: "Zdravá pleť bez filtru",
     lead: "Diagnostika, čištění a přístrojová péče. Plán ošetření na míru vaší pleti.",
     intro: ["Nejdřív poznat pleť", "Každé první ošetření začíná diagnostikou. Pak víme, co pleť potřebuje a co ne."],
-    hl: [["Diagnostika pleti", "Před prvním ošetřením."], ["Domácí péče", "Poradíme, co používat."], ["Certifikované přístroje", "Dermapen a Hydrafacial."]],
+    hl: [["Diagnostika pleti", "Před prvním ošetřením."], ["Domácí péče", "Poradíme, co používat."], ["Certifikované přístroje", "Mikrojehličkování a hydratace."]],
     closing: ["Začněte konzultací", "Termín vyberete online."],
     story: "Olive je kosmetický salon zaměřený na zdravou pleť. Nevěříme na zázraky v kelímku, věříme na pravidelnou péči.",
-    team: [["Barbora Kučerová", "Kosmetička", "Problematická pleť a akné."], ["Monika Zemanová", "Kosmetička", "Přístrojová péče a anti-age."]],
+    team: [["Barbora", "Kosmetička", "Problematická pleť a akné."], ["Monika", "Kosmetička", "Přístrojová péče a anti-age."]],
     address: "Ukázková 14, 779 00 Olomouc",
     photos: {
       hero: ["f0", "Zdravá zářivá pleť"],
@@ -588,7 +588,7 @@ const SPECS: Spec[] = [
     hl: [["Prémiová kosmetika", "Profesionální značky."], ["Kurzy líčení", "Pro jednu i pro dvě."], ["Výjezd za vámi", "Na svatby a focení."]],
     closing: ["Jaký look si dnes vyberete?", "Rezervujte si termín."],
     story: "Glow Room je studio s velkým zrcadlem a ještě větší sbírkou štětců. Líčíme na plesy, svatby i do kanceláře.",
-    team: [["Natálie Kopecká", "Vizážistka", "Svatební a večerní líčení."], ["Simona Holubová", "Vizážistka", "Kurzy a líčení na focení."]],
+    team: [["Natálie", "Vizážistka", "Svatební a večerní líčení."], ["Simona", "Vizážistka", "Kurzy a líčení na focení."]],
     address: "Ukázková 30, 130 00 Praha 3",
     photos: {
       hero: ["m8", "Výrazné růžové líčení"],
@@ -624,7 +624,7 @@ const SPECS: Spec[] = [
     hl: [["Rychle", "Většina služeb do 45 minut."], ["Bez objednání", "Volná místa ve všední dny."], ["Henna i barva", "Podle typu pleti."]],
     closing: ["Nové obočí do oběda", "Rezervujte si termín."],
     story: "Brow Lab je malý bar zaměřený jen na obočí a řasy. Děláme jednu věc, ale pořádně.",
-    team: [["Denisa Navrátilová", "Brow artist", "Laminace a henna."], ["Lenka Matoušková", "Brow & lash artist", "Lash lifting a barvení."]],
+    team: [["Denisa", "Brow artist", "Laminace a henna."], ["Lenka", "Brow & lash artist", "Lash lifting a barvení."]],
     address: "Ukázková 6, 702 00 Ostrava",
     photos: {
       hero: ["e26", "Černobílý detail obočí"],
@@ -661,7 +661,7 @@ const SPECS: Spec[] = [
     hl: [["Ruční malba", "Žádné samolepky."], ["Chrom a 3D", "Moderní techniky."], ["Návrh předem", "Pošlete nám inspiraci."]],
     closing: ["Jaký design chcete?", "Rezervujte si termín."],
     story: "Velour vzniklo z lásky k nail artu. Naše manikérky se školily v Londýně a v Soulu.",
-    team: [["Viktorie Pešková", "Nail artistka", "Chrom a 3D zdobení."], ["Adriana Kolářová", "Nail artistka", "Ruční malba a French."]],
+    team: [["Viktorie", "Nail artistka", "Chrom a 3D zdobení."], ["Trang", "Nail artistka", "Ruční malba a French."]],
     address: "Ukázková 63, 120 00 Praha 2",
     photos: {
       hero: ["n0", "Červené nehty se zdobením"],
@@ -698,7 +698,7 @@ const SPECS: Spec[] = [
     hl: [["Holení břitvou", "S horkým ručníkem."], ["Pivo nebo káva", "Podle nálady."], ["Vlastní kosmetika", "Pomády a oleje."]],
     closing: ["Přijďte do křesla", "Rezervace online."],
     story: "Copper & Blade je barbershop v podloubí na náměstí. Starý nábytek, nové nástroje a barbeři s praxí.",
-    team: [["Lukáš Kratochvíl", "Head barber", "Klasické střihy a břitva."], ["Filip Sedláček", "Barber", "Fade a úprava vousů."]],
+    team: [["Lukáš", "Head barber", "Klasické střihy a břitva."], ["Filip", "Barber", "Fade a úprava vousů."]],
     address: "Ukázková 2, 370 01 České Budějovice",
     hours: [["Po – Pá", "9:00 – 19:00"], ["So", "9:00 – 13:00"]],
     photos: {
@@ -735,7 +735,7 @@ const SPECS: Spec[] = [
     hl: [["Koupel nohou", "Na začátku každé masáže."], ["Bylinné měšce", "Plněné thajskými bylinami."], ["Čaj na závěr", "Zázvorový nebo jasmínový."]],
     closing: ["Uvolněte se", "Rezervujte si termín."],
     story: "Lotus vede tým terapeutek s certifikátem z chrámu Wat Pho v Bangkoku. Tradice, klid a vůně citronové trávy.",
-    team: [["Mali Suwan", "Terapeutka", "Tradiční thajská masáž."], ["Lina Chai", "Terapeutka", "Olejová masáž a bylinné měšce."]],
+    team: [["Mali", "Terapeutka", "Tradiční thajská masáž."], ["Lina", "Terapeutka", "Olejová masáž a bylinné měšce."]],
     address: "Ukázková 11, 460 01 Liberec",
     hours: [["Po – Ne", "10:00 – 21:00"]],
     photos: {
@@ -772,7 +772,7 @@ const SPECS: Spec[] = [
     hl: [["Střih na sucho", "Kudrlinu po kudrlině."], ["Curly metoda", "Bez sulfátů a silikonů."], ["Lekce stylingu", "Součást každé návštěvy."]],
     closing: ["Přijďte se svými kudrlinami", "Rezervujte si konzultaci."],
     story: "Curl Club jsme založily, protože jsme samy roky hledaly kadeřnici, která kudrlinám rozumí.",
-    team: [["Zuzana Bartošová", "Curly specialistka", "Střih na sucho a typ 3–4."], ["Gabriela Urbanová", "Kadeřnice", "Hydratace a barvy."]],
+    team: [["Zuzana", "Curly specialistka", "Střih na sucho a typ 3–4."], ["Gabriela", "Kadeřnice", "Hydratace a barvy."]],
     address: "Ukázková 19, 602 00 Brno",
     photos: {
       hero: ["c20", "Šťastné tmavé kudrliny"],
@@ -808,7 +808,7 @@ const SPECS: Spec[] = [
     hl: [["Zkouška předem", "Bez stresu ve svatební den."], ["Výjezd na místo", "Na zámek i do hotelu."], ["Celý tým", "I pro družičky a maminky."]],
     closing: ["Kdy máte svatbu?", "Rezervujte si zkoušku."],
     story: "Bridal Suite připravuje nevěsty už osm let. Víme, jak udržet účes v dešti a líčení při slzách.",
-    team: [["Kateřina Benešová", "Svatební stylistka", "Účesy a vlasové ozdoby."], ["Lea Doležalová", "Vizážistka", "Svatební a dlouhotrvající líčení."]],
+    team: [["Kateřina", "Svatební stylistka", "Účesy a vlasové ozdoby."], ["Lea", "Vizážistka", "Svatební a dlouhotrvající líčení."]],
     address: "Ukázková 8, 110 00 Praha 1",
     photos: {
       hero: ["w9", "Nevěsta se závojem"],
@@ -845,7 +845,7 @@ const SPECS: Spec[] = [
     hl: [["Přesná práce", "Kůžička bez zarudnutí."], ["Krátké čekání", "Vždy na čas."], ["Nude paleta", "40 odstínů tělové."]],
     closing: ["Rezervujte si termín", "Online za minutu."],
     story: "Mono je studio pro ty, kdo milují jednoduchost. Bílé stěny, jedno světlo, dokonalé nehty.",
-    team: [["Alžběta Krejčí", "Manikérka", "Kombinovaná manikúra."], ["Iveta Vlčková", "Manikérka", "Gel lak a French."]],
+    team: [["Alžběta", "Manikérka", "Kombinovaná manikúra."], ["Hà", "Manikérka", "Gel lak a French."]],
     address: "Ukázková 1, 500 02 Hradec Králové",
     photos: {
       hero: ["n10", "Minimalistická manikúra"],
@@ -881,7 +881,7 @@ const SPECS: Spec[] = [
     hl: [["Klubová atmosféra", "Kůže, dřevo, jazz."], ["Rituál 90 minut", "Střih, vousy, maska."], ["Dárkové poukazy", "Pro otce i přátele."]],
     closing: ["Rezervujte si křeslo", "Online nebo telefonicky."],
     story: "Gentlemen's Club navazuje na tradici britských barberů. Precizní řemeslo, klid a čas jen pro vás.",
-    team: [["Richard Holub", "Master barber", "Holení břitvou a klasické střihy."], ["Daniel Hájek", "Barber", "Moderní střihy a vousy."]],
+    team: [["Richard", "Master barber", "Holení břitvou a klasické střihy."], ["Daniel", "Barber", "Moderní střihy a vousy."]],
     address: "Ukázková 25, 110 00 Praha 1",
     hours: [["Po – Pá", "10:00 – 20:00"], ["So", "10:00 – 16:00"]],
     photos: {
@@ -920,7 +920,7 @@ const SPECS: Spec[] = [
     hl: [["Výhled na řeku", "Z bazénu i odpočívárny."], ["Celodenní vstup", "Odcházíte, až chcete."], ["Lehký oběd", "V ceně balíčku."]],
     closing: ["Naplánujte si volný den", "Rezervace online."],
     story: "Riverside je denní spa na břehu řeky. Světlé dřevo, velká okna a tým, který se postará o vše ostatní.",
-    team: [["Tereza Marková", "Spa manažerka", "Balíčky na míru."], ["Jan Pospíšil", "Terapeut", "Relaxační a hloubková masáž."]],
+    team: [["Tereza", "Spa manažerka", "Balíčky na míru."], ["Jan", "Terapeut", "Relaxační a hloubková masáž."]],
     address: "Ukázková 15, 360 01 Karlovy Vary",
     hours: [["Po – Ne", "9:00 – 21:00"]],
     photos: {
@@ -957,7 +957,7 @@ const SPECS: Spec[] = [
     hl: [["Sterilní nástroje", "Vždy nové balení."], ["Přístrojová pedikúra", "Šetrná k pokožce."], ["Masáž nohou", "Na závěr každé péče."]],
     closing: ["Dopřejte nohám odpočinek", "Rezervujte si termín."],
     story: "Aqua je studio zaměřené na péči o nohy. Pedikérky s praxí a čisté, světlé prostředí.",
-    team: [["Renata Machová", "Pedikérka", "Přístrojová a zdravotní pedikúra."], ["Ilona Sýkorová", "Manikérka", "Gel lak a SPA manikúra."]],
+    team: [["Renata", "Pedikérka", "Přístrojová a zdravotní pedikúra."], ["Mai", "Manikérka", "Gel lak a SPA manikúra."]],
     address: "Ukázková 33, 530 02 Pardubice",
     photos: {
       hero: ["p0", "Koupel nohou s květy"],
@@ -991,10 +991,10 @@ const SPECS: Spec[] = [
     title: "Blond, stříbrná i levandulová",
     lead: "Specializujeme se na světlé a studené tóny. Šetrně, krok za krokem.",
     intro: ["Barva bez kompromisů", "Odbarvujeme postupně a s ochranou vlasu. Raději dvě návštěvy než zničené vlasy."],
-    hl: [["Test na pramenu", "Před každým odbarvením."], ["Ochrana vlasu", "Olaplex v ceně."], ["Plán barvy", "Na několik návštěv."]],
+    hl: [["Test na pramenu", "Před každým odbarvením."], ["Ochrana vlasu", "Posilující kúra v ceně."], ["Plán barvy", "Na několik návštěv."]],
     closing: ["Jaký odstín chcete?", "Rezervujte si konzultaci."],
     story: "Halo je salon dvou koloristek, které milují světlé tóny. Odbarvujeme pomalu a zodpovědně.",
-    team: [["Jitka Pavlíková", "Koloristka", "Platinová blond a stříbrná."], ["Markéta Šindelářová", "Koloristka", "Pastelové a levandulové tóny."]],
+    team: [["Jitka", "Koloristka", "Platinová blond a stříbrná."], ["Markéta", "Koloristka", "Pastelové a levandulové tóny."]],
     address: "Ukázková 47, 140 00 Praha 4",
     photos: {
       hero: ["c1", "Levandulové vlny"],
@@ -1031,7 +1031,7 @@ const SPECS: Spec[] = [
     hl: [["Kombinované balíčky", "Pleť + řasy + nehty."], ["Světlý salon", "Velká okna a rostliny."], ["Ranní termíny", "Od 7:30."]],
     closing: ["Udělejte si odpoledne pro sebe", "Rezervace online."],
     story: "Mila je salon pro ženy, které chtějí vše vyřešit najednou. Kosmetička, manikérka i lash artist v jednom týmu.",
-    team: [["Andrea Bílková", "Kosmetička", "Čištění a hydratace pleti."], ["Šárka Kolínová", "Manikérka", "Gel lak a nude odstíny."]],
+    team: [["Andrea", "Kosmetička", "Čištění a hydratace pleti."], ["Šárka", "Manikérka", "Gel lak a nude odstíny."]],
     address: "Ukázková 10, 760 01 Zlín",
     hours: [["Po – Pá", "7:30 – 19:00"], ["So", "9:00 – 14:00"]],
     photos: {

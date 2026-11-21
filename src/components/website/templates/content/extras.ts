@@ -136,4 +136,115 @@ export const EXTRAS: Record<string, Extras> = {
       { text: "Malé skupiny, nikde tlačenice. Župan a čaj v ceně jsou milý detail.", name: "Roman", service: "Termální okruh" },
     ],
   },
+  // Đợt 2 (kit)
+  "rosewater-nails": {
+    rating: "4,9",
+    count: 228,
+    transit: "Tramvaj 2 minuty pěšky, náměstí za rohem",
+    area: "Vinohrady",
+    reviews: [
+      { text: "Jemná French přesně podle mé fotky. Ngọc je trpělivá a pečlivá.", name: "Lucie", service: "Manikúra s gel lakem" },
+      { text: "Krásné růžové studio, voní tu a hraje příjemná hudba. Nehty drží tři týdny.", name: "Eliška", service: "Gelová modeláž" },
+      { text: "Objednávám se online vždy na další termín rovnou při placení. Pohodlné.", name: "Hana", service: "Doplnění gelu" },
+    ],
+  },
+  "siena-spa": {
+    rating: "4,9",
+    count: 174,
+    transit: "Tramvaj 3 minuty pěšky, centrum na dosah",
+    area: "Brno-střed",
+    reviews: [
+      { text: "Aromaterapeutická masáž po dlouhém týdnu. Odcházela jsem úplně jinak, než jsem přišla.", name: "Kamila", service: "Aromaterapeutická masáž" },
+      { text: "Párová masáž jako dárek k výročí. Klid, čaj a teplé ručníky.", name: "Michal", service: "Párová masáž" },
+      { text: "Lucie najde každé zatuhlé místo. Záda bez bolesti poprvé po měsících.", name: "Jitka", service: "Masáž zad a šíje" },
+    ],
+  },
+  "north-barber": {
+    rating: "4,9",
+    count: 311,
+    transit: "Metro 2 minuty pěšky, parkování v ulici",
+    area: "Karlín",
+    reviews: [
+      { text: "Skin fade bez chyby a za 50 minut. Lepší barbershop jsem v okolí nenašel.", name: "Jakub", service: "Skin fade" },
+      { text: "Holení břitvou s horkým ručníkem. Hodina klidu a kafe zdarma.", name: "Martin", service: "Holení břitvou" },
+      { text: "Chodím se synem, oba odcházíme spokojení. Online rezervace funguje skvěle.", name: "Petr", service: "Pánský a dětský střih" },
+    ],
+  },
+  "lune-lash": {
+    rating: "4,9",
+    count: 196,
+    transit: "Tramvaj 2 minuty pěšky, obchodní centrum vedle",
+    area: "Smíchov",
+    reviews: [
+      { text: "Řasy 1:1 vypadají úplně přirozeně. Doplnění jen jednou za tři týdny.", name: "Veronika", service: "Prodlužování řas 1:1" },
+      { text: "Lash lifting a laminace obočí najednou. Ráno mám hotovo za dvě minuty.", name: "Linh", service: "Lash & brow balíček" },
+      { text: "Klidné studio, pohodlné lehátko, skoro jsem usnula.", name: "Adéla", service: "Objem 2–3D" },
+    ],
+  },
+  "bloom-bar": {
+    rating: "4,8",
+    count: 152,
+    transit: "Tramvaj 1 minuta pěšky, kolo zaparkujete u vchodu",
+    area: "Holešovice",
+    reviews: [
+      { text: "Pastelová růžová přesně jak jsem chtěla a vlasy nejsou zničené.", name: "Sára", service: "Pastelové barvy" },
+      { text: "Airtouch bez ostrých přechodů. Bára si dala na konzultaci opravdu záležet.", name: "Tereza", service: "Airtouch" },
+      { text: "Barevný a veselý salon, skvělá parta. Gloss mezi barvením je super tip.", name: "Nela", service: "Gloss / tónování" },
+    ],
+  },
+  "studio-grey": {
+    rating: "4,9",
+    count: 143,
+    transit: "Tramvaj 3 minuty pěšky, park za rohem",
+    area: "Bubeneč",
+    reviews: [
+      { text: "Střih drží tvar i po dvou měsících. Veronika přesně ví, co vlasům sedí.", name: "Kateřina", service: "Dámský střih a foukaná" },
+      { text: "Balayage vypadá jako po dovolené u moře. Žádné pruhy.", name: "Simona", service: "Balayage" },
+      { text: "Minimalistický salon, žádný hluk. Pánský střih za 40 minut.", name: "Vojtěch", service: "Pánský střih" },
+    ],
+  },
+  "kader-co": {
+    rating: "4,8",
+    count: 219,
+    transit: "Tramvaj 2 minuty pěšky, parkování ve dvoře",
+    area: "Plzeň-střed",
+    reviews: [
+      { text: "Rodinný salon, kde se cítím jako doma. Barva vždy přesně podle domluvy.", name: "Jana", service: "Barvení odrostu" },
+      { text: "Michaela mi poradila střih, který zvládnu upravit sama. Paráda.", name: "Lenka", service: "Dámský střih" },
+      { text: "Společenský účes na svatbu sestry vydržel až do rána.", name: "Klára", service: "Společenský účes" },
+    ],
+  },
+  "olive-skin": {
+    rating: "4,9",
+    count: 137,
+    transit: "Tramvaj 2 minuty pěšky, parkování před domem",
+    area: "Olomouc-centrum",
+    reviews: [
+      { text: "Barbora mi po diagnostice sestavila domácí péči. Pleť je klidnější než kdy dřív.", name: "Martina", service: "Konzultace a diagnostika pleti" },
+      { text: "Hloubkové čištění bez bolesti a bez zarudnutí. Vrátím se.", name: "Petra", service: "Hloubkové čištění pleti" },
+      { text: "Čisté, světlé studio a žádné vnucování kosmetiky.", name: "Thảo", service: "Hydratační ošetření" },
+    ],
+  },
+  "glow-room": {
+    rating: "4,9",
+    count: 165,
+    transit: "Tramvaj 2 minuty pěšky, kavárna hned vedle",
+    area: "Žižkov",
+    reviews: [
+      { text: "Líčení na focení vypadalo skvěle naživo i na fotkách. Natálie je profík.", name: "Barbora", service: "Líčení na focení" },
+      { text: "Kurz líčení mi změnil ranní rutinu. Konečně vím, co dělám.", name: "Anh", service: "Individuální kurz líčení" },
+      { text: "Večerní líčení na ples, drželo do čtyř do rána.", name: "Klára", service: "Večerní líčení" },
+    ],
+  },
+  "brow-lab": {
+    rating: "4,9",
+    count: 204,
+    transit: "Tramvaj 3 minuty pěšky, obchodní centrum vedle",
+    area: "Moravská Ostrava",
+    reviews: [
+      { text: "Henna brows vypadají přirozeně a vydržely skoro měsíc.", name: "Denisa", service: "Henna brows" },
+      { text: "Laminace obočí a konečně nemusím každé ráno nic upravovat.", name: "Ivana", service: "Laminace obočí" },
+      { text: "Rychlé, čisté a přesné. Objednání online za minutu.", name: "My", service: "Úprava a barvení" },
+    ],
+  },
 };

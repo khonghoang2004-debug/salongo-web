@@ -48,26 +48,26 @@ export function WebsiteContactPanel({ template, stacked = false, tone = "brand" 
   };
 
   const btn =
-    "inline-flex min-h-14 w-full items-center justify-center gap-2.5 rounded-full px-5 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2";
+    "inline-flex min-h-14 w-full items-center justify-center gap-2.5 rounded-full px-5 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-700 focus-visible:ring-offset-2";
 
   return (
     <div>
       {template && (
-        <p className={`mb-4 inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm ring-1 ${tone === "atelier" ? "bg-[#EFEAE2] text-[#1C1A17] ring-[#DCD5CA]" : "bg-brand-50 text-brand-800 ring-brand-100"}`}>
+        <p className={`mb-4 inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[15px] ring-1 ${tone === "atelier" ? "bg-[#EFEAE2] text-[#1C1A17] ring-[#DCD5CA]" : "bg-blush text-brand-800 ring-brand-100"}`}>
           {t("chosenShort")}: <strong className="font-semibold">{template}</strong>
         </p>
       )}
       <div className={`grid gap-2.5 ${stacked ? "" : "sm:grid-cols-3"}`}>
-        <a href={WEBSITE_CONTACT.tel} className={`${btn} ${tone === "atelier" ? "bg-[#1F1C19] text-[#F4F1EB] hover:bg-black" : "btn-primary"}`}>
+        <a href={WEBSITE_CONTACT.tel} className={`${btn} ${tone === "atelier" ? "bg-[#1F1C19] text-[#F4F1EB] hover:bg-black" : "bg-brand-700 text-white hover:bg-brand-800"}`}>
           <Phone className="size-5" aria-hidden />
           {t("call", { phone: WEBSITE_CONTACT.phone })}
         </a>
-        <a href={WEBSITE_CONTACT.facebook} target="_blank" rel="noopener noreferrer" className={`${btn} ${tone === "atelier" ? "border border-[#1C1A17]/20 bg-[#FBFAF7] text-[#1C1A17] hover:border-[#1C1A17]" : "bg-[#1877F2] text-white hover:bg-[#0f64d2]"}`}>
-          <FacebookIcon className="size-5" />
+        <a href={WEBSITE_CONTACT.facebook} target="_blank" rel="noopener noreferrer" className={`${btn} ${tone === "atelier" ? "border border-[#1C1A17]/20 bg-[#FBFAF7] text-[#1C1A17] hover:border-[#1C1A17]" : "border border-line bg-white text-ink hover:border-ink/30"}`}>
+          <FacebookIcon className={`size-5 ${tone === "atelier" ? "" : "text-[#1877F2]"}`} />
           {t("facebook")}
         </a>
-        <a href={WEBSITE_CONTACT.instagram} target="_blank" rel="noopener noreferrer" className={`${btn} border ${tone === "atelier" ? "border-[#1C1A17]/20 bg-[#FBFAF7] text-[#1C1A17] hover:border-[#1C1A17]" : "border-ink/15 bg-white text-ink hover:border-ink"}`}>
-          <InstagramIcon className="size-5" />
+        <a href={WEBSITE_CONTACT.instagram} target="_blank" rel="noopener noreferrer" className={`${btn} border ${tone === "atelier" ? "border-[#1C1A17]/20 bg-[#FBFAF7] text-[#1C1A17] hover:border-[#1C1A17]" : "border-line bg-white text-ink hover:border-ink/30"}`}>
+          <InstagramIcon className={`size-5 ${tone === "atelier" ? "" : "text-[#C13584]"}`} />
           {t("instagram")}
         </a>
       </div>
@@ -77,12 +77,12 @@ export function WebsiteContactPanel({ template, stacked = false, tone = "brand" 
         <button
           type="button"
           onClick={onCopy}
-          className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-[15px] font-semibold text-ink/80 transition-colors hover:bg-sand hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-[15px] font-semibold text-ink/80 transition-colors hover:bg-sand hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-700"
         >
           {state === "ok" ? <Check className="size-[18px] text-emerald-700" aria-hidden /> : <Copy className="size-[18px]" aria-hidden />}
           {t("copy")}
         </button>
-        <span role="status" aria-live="polite" className={`text-sm ${state === "fail" ? "text-red-700" : "text-emerald-800"}`}>
+        <span role="status" aria-live="polite" className={`text-[15px] ${state === "fail" ? "text-red-700" : "text-emerald-800"}`}>
           {state === "ok" ? t("copied") : state === "fail" ? t("copyFailed") : ""}
         </span>
       </div>

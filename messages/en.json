@@ -1163,7 +1163,9 @@
     "stat3": "Desktop & mobile",
     "stat3Text": "Looks great on every screen",
     "studio": "SalonGo Web Studio",
-    "priceLabel": "From"
+    "priceLabel": "From",
+    "previewGroup": "Preview a template",
+    "showMore": "Show {count} more templates"
   },
   "day": {
     "kicker": "A day at the salon",

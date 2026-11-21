@@ -1163,7 +1163,9 @@
     "stat3": "PC & điện thoại",
     "stat3Text": "Đẹp trên mọi màn hình",
     "studio": "SalonGo Web Studio",
-    "priceLabel": "Từ"
+    "priceLabel": "Từ",
+    "previewGroup": "Xem trước mẫu",
+    "showMore": "Xem thêm {count} mẫu"
   },
   "day": {
     "kicker": "Một ngày ở tiệm",

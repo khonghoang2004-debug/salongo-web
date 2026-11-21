@@ -1163,7 +1163,9 @@
     "stat3": "PC i mobil",
     "stat3Text": "Skvěle vypadá na každé obrazovce",
     "studio": "SalonGo Web Studio",
-    "priceLabel": "Od"
+    "priceLabel": "Od",
+    "previewGroup": "Náhled šablony",
+    "showMore": "Zobrazit další šablony ({count})"
   },
   "day": {
     "kicker": "Den v salonu",

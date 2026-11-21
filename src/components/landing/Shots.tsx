@@ -1,8 +1,27 @@
 import { SHOTS, type Shot, type ShotId } from "@/lib/media";
 
 /** Ảnh app máy tính trong khung cửa sổ mảnh (3 chấm), không dùng khung laptop. */
-export function DesktopShot({ id, alt, priority = false, className = "" }: { id: ShotId; alt: string; priority?: boolean; className?: string }) {
+export function DesktopShot({ id, ...rest }: { id: ShotId; alt: string; priority?: boolean; className?: string }) {
   const s = SHOTS[id];
+  return <DeviceDesktop src={s.desktop} width={s.dw} height={s.dh} {...rest} />;
+}
+
+/** Cùng khung cửa sổ, nhận thẳng một ảnh (dùng cho ảnh xem trước mẫu website). */
+export function DeviceDesktop({
+  src,
+  width,
+  height,
+  alt,
+  priority = false,
+  className = "",
+}: {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  priority?: boolean;
+  className?: string;
+}) {
   return (
     <figure className={`x-shot ${className}`}>
       <div className="flex h-7 items-center gap-1.5 border-b border-black/[0.06] bg-[#FCFAFA] px-3" aria-hidden>
@@ -11,10 +30,10 @@ export function DesktopShot({ id, alt, priority = false, className = "" }: { id:
         <span className="size-2.5 rounded-full bg-[#E9E1E3]" />
       </div>
       <img
-        src={s.desktop}
+        src={src}
         alt={alt}
-        width={s.dw}
-        height={s.dh}
+        width={width}
+        height={height}
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : undefined}
         decoding="async"

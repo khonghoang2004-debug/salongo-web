@@ -1163,7 +1163,9 @@
     "stat3": "Desktop & Handy",
     "stat3Text": "Sieht auf jedem Bildschirm gut aus",
     "studio": "SalonGo Web Studio",
-    "priceLabel": "Ab"
+    "priceLabel": "Ab",
+    "previewGroup": "Vorlage ansehen",
+    "showMore": "{count} weitere Vorlagen anzeigen"
   },
   "day": {
     "kicker": "Ein Tag im Salon",

@@ -1,11 +1,25 @@
-import { Lock } from "lucide-react";
+import type { Shot } from "@/lib/media";
+import { DeviceDesktop, DevicePhone } from "@/components/landing/Shots";
 import { KIT_SPECS } from "./kit/specs";
 
 /** Ảnh chụp từ chính demo (nội dung demo luôn tiếng Séc, cách chụp lại: docs/website-templates/README.md): 1200×750 (PC), 780×1520 (điện thoại) */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const previewSrc = (slug: string, kind: "pc" | "m", _locale?: string) => `/images/website/${slug}-${kind}.webp`;
 
-// Ảnh xem trước một mẫu: khung trình duyệt (PC) + khung điện thoại đè góc phải
+/** Ảnh xem trước của một mẫu dưới dạng Shot (để dùng chung khung máy với trang chủ: DeviceDesktop / DevicePhone) */
+export const templateShot = (slug: string, locale?: string): Shot => ({
+  desktop: previewSrc(slug, "pc", locale),
+  phone: previewSrc(slug, "m", locale),
+  dw: 1200,
+  dh: 750,
+  pw: 390,
+  ph: 760,
+});
+
+/**
+ * Ảnh xem trước một mẫu: cửa sổ máy tính + iPhone đặt cạnh nhau (không đè nhau), đáy thẳng hàng.
+ * Điện thoại ≈ 24% bề rộng thì hai khung cao bằng nhau ở mọi cỡ màn hình.
+ */
 export function TemplatePreview({
   slug,
   name,
@@ -23,42 +37,13 @@ export function TemplatePreview({
   phone?: boolean;
   className?: string;
 }) {
+  const s = templateShot(slug, locale);
   return (
-    <div className={`relative overflow-hidden rounded-[20px] px-4 pb-0 pt-5 sm:px-7 sm:pt-7 ${className}`} style={{ backgroundColor: tint }}>
-      <div className={`${phone ? "mr-[22%] sm:mr-[18%]" : ""} overflow-hidden rounded-t-xl border border-black/10 bg-white shadow-[0_8px_24px_rgba(30,20,15,0.12)]`}>
-        <div className="flex items-center gap-1.5 border-b border-black/5 bg-[#FAF8F6] px-3 py-2">
-          <span className="size-2 rounded-full bg-[#E2D9D6]" />
-          <span className="size-2 rounded-full bg-[#E2D9D6]" />
-          <span className="size-2 rounded-full bg-[#E2D9D6]" />
-          {/* Không ghi tên miền: tên miền bịa có thể trùng website có thật */}
-          <span className="ml-2 hidden min-w-0 items-center gap-1 truncate text-[10px] text-[#8A8082] sm:flex">
-            <Lock className="size-2.5 shrink-0" aria-hidden />
-            {name}
-          </span>
-        </div>
-        <img
-          src={previewSrc(slug, "pc", locale)}
-          alt={`${name} — ${label.desktop}`}
-          width={1200}
-          height={750}
-          loading="lazy"
-          decoding="async"
-          className="block aspect-[16/10] w-full object-cover object-top"
-        />
+    <div className={`overflow-hidden rounded-[20px] p-4 sm:p-6 ${className}`} style={{ backgroundColor: tint }}>
+      <div className={phone ? "grid grid-cols-[minmax(0,1fr)_24%] items-end gap-3 sm:gap-4" : ""}>
+        <DeviceDesktop src={s.desktop} width={s.dw} height={s.dh} alt={`${name} — ${label.desktop}`} className="!rounded-[10px]" />
+        {phone && <DevicePhone shot={s} alt={`${name} — ${label.mobile}`} />}
       </div>
-      {phone && (
-        <div className="absolute bottom-0 right-3 w-[27%] translate-y-[8%] rounded-[18px] bg-[#1F1A1A] p-[5px] shadow-[0_8px_24px_rgba(30,20,15,0.22)] sm:right-6 sm:w-[22%] sm:rounded-[22px] sm:p-1.5">
-          <img
-            src={previewSrc(slug, "m", locale)}
-            alt={`${name} — ${label.mobile}`}
-            width={390}
-            height={760}
-            loading="lazy"
-            decoding="async"
-            className="block aspect-[390/760] w-full rounded-[13px] object-cover object-top sm:rounded-[16px]"
-          />
-        </div>
-      )}
     </div>
   );
 }

@@ -1,16 +1,18 @@
 import { getLegalPack } from "@/content/legal";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Check, LayoutTemplate, MessageCircle, Plus, Send } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
-import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
+import { TEMPLATE_COUNT_LABEL, WEBSITE_PRICE_KC } from "@/lib/website-offer";
 import { TEMPLATES } from "@/components/website/templates/registry";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
-import { AtelierTemplateCards, offerVars } from "@/components/website/WebsiteOfferParts";
-import { previewSrc } from "@/components/website/TemplatePreview";
-import { fontAtelier } from "@/components/website/atelier";
+import { TemplateGallery, offerVars } from "@/components/website/WebsiteOfferParts";
+import { templateShot } from "@/components/website/TemplatePreview";
+import { tr } from "@/components/website/templates/types";
+import { LivePreview, type LiveItem } from "@/components/website/LivePreview";
+import { DevicePhone } from "@/components/landing/Shots";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -26,6 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"] as const;
 const STEPS = [1, 2, 3] as const;
 const FAQ = [1, 6, 2, 3, 4, 5] as const;
+const STATS = [1, 2, 3] as const;
+// Mẫu trong khung xem trước đầu trang (đổi bằng nút tên mẫu) và trong khối giá
+const HERO_PICKS = ["aurel-beauty", "atelier-noir", "maison-claire", "thermae-wellness"];
+const PRICE_PICK = "maison-claire";
 
 export default async function WebsitePage({ params }: Props) {
   const { locale } = await params;
@@ -88,178 +94,200 @@ export default async function WebsitePage({ params }: Props) {
     ],
   };
 
-  const serif = fontAtelier.className;
-  const wrap = "mx-auto w-full max-w-[1200px] px-5 sm:px-8";
-  const Kicker = ({ n, children, light = false }: { n: string; children: React.ReactNode; light?: boolean }) => (
-    <p className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.2em] ${light ? "text-[#C9BBA6]" : "text-[#7A6347]"}`}>
-      <span className="whitespace-nowrap tabular-nums">{n}</span>
-      <span className={`h-px w-8 ${light ? "bg-[#C9BBA6]/60" : "bg-[#7A6347]/50"}`} aria-hidden />
-      {children}
-    </p>
-  );
   const [h1a, h1b] = t("heroTitle").split("|");
-  const btnDark =
-    "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#1F1C19] px-7 text-[15px] font-semibold text-[#F4F1EB] transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
-  const btnLine =
-    "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#1C1A17]/25 px-7 text-[15px] font-semibold text-[#1C1A17] transition-colors hover:border-[#1C1A17] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1A17] focus-visible:ring-offset-2";
+  const [pl1, pl2] = t("priceLine", v).split("|");
+  const live: LiveItem[] = HERO_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug))
+    .filter((x) => x !== undefined)
+    .map((x) => ({ slug: x.slug, name: x.name, type: tr(x.card.type, locale), shot: templateShot(x.slug, locale) }));
+  const STEP_ICON = [LayoutTemplate, MessageCircle, Send];
 
   return (
     <PageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="bg-[#FBFAF7] text-[#1C1A17]">
-        {/* Đầu trang: chữ có chân kiểu tạp chí + bố cục ảnh mẫu thật */}
-        <section className="px-1.5 pt-1.5 sm:px-3 sm:pt-3 lg:px-4">
-          <div className="overflow-hidden rounded-[20px] bg-[#F4F1EB] sm:rounded-[32px]">
-            <div className={`${wrap} grid gap-8 pb-8 pt-8 sm:pt-10 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-10 lg:pt-10`}>
-              <div className="lg:col-span-7">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("studio")}</p>
-                <h1 className={`${serif} mt-5 text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] text-balance sm:text-[3.5rem] lg:text-[3.75rem]`}>
-                  <span className="block">{h1a}</span> {h1b && <span className="block italic text-brand-700">{h1b}</span>}
-                </h1>
-                <div className="mt-6 flex flex-wrap items-end gap-x-4 gap-y-2 border-y border-[#DCD5CA] py-4 sm:gap-x-5">
-                  <p className="w-full text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B645B]">{t("priceLabel")}</p>
-                  <p className={`${serif} whitespace-nowrap text-[3rem] font-medium leading-[0.9] tracking-[-0.02em] text-brand-700 sm:text-[3.5rem]`}>{v.price}</p>
-                  <p className="pb-1 text-[15px] font-medium leading-snug text-[#3A3631] sm:text-[16px]">
-                    {t("priceLine", v)
-                      .split("|")
-                      .map((x) => (
-                        <span key={x} className="block">
-                          {x}
-                        </span>
-                      ))}
-                  </p>
-                </div>
-                <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
-                  <a href="#mau" className={btnDark}>
-                    {t("ctaTemplates")}
-                    <ArrowDown className="size-[18px]" aria-hidden />
-                  </a>
-                  <a href="#lien-he" className={btnLine}>
-                    {t("ctaContact")}
-                  </a>
-                </div>
-                <p className="mt-6 max-w-xl border-l border-[#7A6347]/50 pl-5 text-[15px] leading-relaxed text-[#3A3631]">
-                  <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("customIdeaLabel")}</span>
-                  {t("customIdea", v)}
-                </p>
-              </div>
-              <div className="relative mx-auto w-full max-w-[620px] pb-8 pl-6 pt-6 sm:pl-10 lg:col-span-5 lg:max-w-none" aria-hidden>
-                <div className="overflow-hidden rounded-[8px] bg-white shadow-[0_30px_60px_-20px_rgba(40,32,24,0.35)] ring-1 ring-black/5">
-                  <div className="flex gap-1.5 border-b border-black/5 bg-[#F7F5F1] px-3 py-2">
-                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
-                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
-                    <span className="size-2 rounded-full bg-[#DCD5CA]" />
-                  </div>
-                  <img src={previewSrc("aurel-beauty", "pc")} alt="" width={1200} height={750} className="block aspect-[16/10] w-full object-cover object-top" />
-                </div>
-                <div className="absolute bottom-0 left-0 w-[30%] rounded-[20px] bg-[#1F1C19] p-1.5 shadow-[0_24px_50px_-16px_rgba(40,32,24,0.45)]">
-                  <img src={previewSrc("atelier-noir", "m")} alt="" width={390} height={760} className="block aspect-[390/760] w-full rounded-[15px] object-cover object-top" />
-                </div>
-                <div className="absolute -right-1 top-0 hidden w-[24%] rounded-[18px] bg-[#1F1C19] p-1.5 shadow-[0_24px_50px_-16px_rgba(40,32,24,0.45)] sm:block">
-                  <img src={previewSrc("thermae-wellness", "m")} alt="" width={390} height={760} className="block aspect-[390/760] w-full rounded-[13px] object-cover object-top" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
-        {/* Thư viện mẫu */}
-        <section id="mau" className="scroll-mt-20 py-10 sm:py-12 lg:py-12">
-          <div className={wrap}>
-            <div>
-              <Kicker n="01">{t("galleryKicker")}</Kicker>
-              <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem] lg:text-[2.75rem] xl:text-[3rem]`}>{t("galleryTitle")}</h2>
-            </div>
-            <div className="mt-8 lg:mt-10">
-              <AtelierTemplateCards />
-            </div>
-          </div>
-        </section>
-
-        {/* Gói gồm những gì: khối espresso */}
-        <section className="px-1.5 sm:px-3 lg:px-4">
-          <div className="rounded-[20px] bg-[#1F1C19] text-[#EFEAE2] sm:rounded-[32px]">
-            <div className={`${wrap} grid gap-8 py-10 sm:py-12 lg:grid-cols-12 lg:gap-10 lg:py-12`}>
-              <div className="lg:col-span-5">
-                <Kicker n="02" light>
-                  {t("incKicker")}
-                </Kicker>
-                <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("incTitle", v)}</h2>
-              </div>
-              <ol className="lg:col-span-7">
-                {INCLUDED.map((k, i) => (
-                  <li key={k} className="grid grid-cols-[44px_1fr] gap-x-3 border-t border-white/12 py-4 text-[16px] leading-relaxed last:border-b">
-                    <span className={`${serif} text-[1.375rem] italic leading-snug text-[#C9BBA6]`}>{String(i + 1).padStart(2, "0")}</span>
-                    <span>{t(k, v)}</span>
-                  </li>
-                ))}
-              </ol>
-              <p className="mt-5 text-sm text-white/70">
-                <Link href="/website-terms" className="underline underline-offset-4 hover:text-white">
-                  {getLegalPack(locale).docs.websiteTerms.title}
-                </Link>
+      {/* 1. Đầu trang: chữ + giá bên trái, mẫu thật trong khung máy tính + iPhone bên phải */}
+      <section className="relative overflow-hidden bg-white pb-14 pt-8 sm:pt-12 lg:pb-20 lg:pt-16">
+        <div className="x-wrap grid items-center gap-10 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
+          <div className="lg:col-span-5">
+            <p className="inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-white py-1.5 pl-1.5 pr-4 text-[14px] text-ink/80">
+              <span className="shrink-0 whitespace-nowrap rounded-full bg-blush px-2.5 py-0.5 text-[13px] font-semibold text-brand-800">{t("studio")}</span>
+              <span className="truncate">{t("heroLead")}</span>
+            </p>
+            <h1 className="x-display mt-6 text-ink lg:!text-[clamp(2.8rem,1rem+3.2vw,4.4rem)]">
+              {h1a} {h1b && <span className="text-brand-700">{h1b}</span>}
+            </h1>
+            <p className="x-lead mt-5 max-w-[32rem]">{t("lead")}</p>
+            <div className="mt-7 flex flex-wrap items-end gap-x-4 gap-y-1">
+              <p className="text-[15px] font-medium text-muted">{t("priceLabel")}</p>
+              <p className="whitespace-nowrap text-[2.6rem] font-semibold leading-none tracking-[-0.04em] text-brand-700 sm:text-[3rem]">{v.price}</p>
+              <p className="basis-full text-[15px] leading-snug text-muted sm:basis-auto sm:pb-1">
+                {pl1}
+                {pl2 && <span className="block text-ink/80">{pl2}</span>}
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Ba bước */}
-        <section className="py-10 sm:py-12 lg:py-12">
-          <div className={wrap}>
-            <Kicker n="03">{t("stepsKicker")}</Kicker>
-            <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("stepsTitle")}</h2>
-            <ol className="mt-8 grid gap-8 md:grid-cols-3 md:gap-8">
-              {STEPS.map((n) => (
-                <li key={n} className="border-t border-[#1C1A17] pt-6">
-                  <span className={`${serif} block text-[3rem] font-medium italic leading-none text-[#7A6347]`}>{n}.</span>
-                  <h3 className={`${serif} mt-4 text-[1.5rem] font-medium leading-tight`}>{t(`step${n}Title`)}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-[#6B645B]">{t(`step${n}Text`)}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Hỏi đáp */}
-        <section className="pb-10 sm:pb-12 lg:pb-12">
-          <div className={`${wrap} grid gap-10 lg:grid-cols-12 lg:gap-12`}>
-            <div className="lg:col-span-4">
-              <Kicker n="04">{t("faqKicker")}</Kicker>
-              <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.5rem]`}>{t("faqTitle")}</h2>
+            <div data-cta className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="#mau" className="x-btn-primary !min-h-[52px] !px-7 text-base">
+                {t("ctaTemplates")}
+                <ArrowDown className="size-[18px]" aria-hidden />
+              </a>
+              <a href="#lien-he" className="x-btn-light !min-h-[52px] !px-7 text-base">
+                {t("ctaContact")}
+              </a>
             </div>
-            <div className="border-t border-[#DCD5CA] lg:col-span-8">
-              {FAQ.map((n) => (
-                <details key={n} className="group border-b border-[#DCD5CA]" open={n === 1}>
-                  <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-4 [&::-webkit-details-marker]:hidden">
-                    <span className={`${serif} text-[1.25rem] font-medium leading-snug`}>{t(`faq${n}Q`, v)}</span>
-                    <span
-                      className="flex size-10 shrink-0 items-center justify-center rounded-full border border-[#DCD5CA] text-xl text-[#1C1A17] transition-transform group-open:rotate-45 motion-reduce:transition-none"
-                      aria-hidden
-                    >
-                      +
+          </div>
+          <div className="relative lg:col-span-7">
+            <div className="absolute -inset-x-5 -bottom-14 -top-6 rounded-[28px] bg-porcelain sm:-inset-x-8 lg:-right-[50vw] lg:left-0 lg:rounded-r-none" aria-hidden />
+            <div className="relative px-0 pt-2 sm:px-2 lg:pl-8">
+              <LivePreview items={live} label={t("previewGroup")} demoLabel={t("viewDemo")} desktopLabel={t("desktop")} mobileLabel={t("mobile")} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ba con số ngắn */}
+      <section className="border-y border-line bg-white" aria-label={t("studio")}>
+        <dl className="x-wrap grid divide-y divide-line sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          {STATS.map((n) => (
+            <div key={n} className="py-5 sm:px-6 sm:py-7 sm:first:pl-0">
+              <dt className="text-[1.25rem] font-semibold tracking-[-0.02em] text-ink">{t(`stat${n}`, { count: TEMPLATE_COUNT_LABEL, pages: v.pages })}</dt>
+              <dd className="mt-1 text-[15px] text-muted">{t(`stat${n}Text`)}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      {/* 2. Cách làm: ba bước */}
+      <section className="x-section-tight bg-white" aria-labelledby="steps-title">
+        <div className="x-wrap">
+          <p className="x-kicker">{t("stepsKicker")}</p>
+          <h2 id="steps-title" className="x-h2 mt-3 text-ink">{t("stepsTitle")}</h2>
+          <ol className="mt-10 grid gap-4 md:grid-cols-3 md:gap-5">
+            {STEPS.map((n, i) => {
+              const Icon = STEP_ICON[i];
+              return (
+                <li key={n} className="x-panel relative bg-porcelain p-6 ring-1 ring-black/[0.04] sm:p-7">
+                  <div className="flex items-center justify-between">
+                    <span className="flex size-12 items-center justify-center rounded-full bg-white text-brand-700 ring-1 ring-black/[0.06]">
+                      <Icon className="size-5" aria-hidden />
                     </span>
-                  </summary>
-                  <p className="max-w-2xl pb-5 text-[16px] leading-relaxed text-[#6B645B]">{t(`faq${n}A`, v)}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                    <span className="text-[2.5rem] font-semibold leading-none tracking-[-0.04em] text-brand-700/15" aria-hidden>
+                      {n}
+                    </span>
+                  </div>
+                  <h3 className="x-h3 mt-6 text-ink">{t(`step${n}Title`)}</h3>
+                  <p className="x-body mt-2">{t(`step${n}Text`)}</p>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
 
-        {/* Liên hệ */}
-        <section id="lien-he" className="scroll-mt-20 px-1.5 pb-10 sm:px-3 sm:pb-14 lg:px-4">
-          <div className="rounded-[20px] bg-[#E9E4DB] sm:rounded-[32px]">
-            <div className="mx-auto max-w-[880px] px-5 py-9 text-center sm:px-8 sm:py-12">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#7A6347]">{t("contactKicker")}</p>
-              <h2 className={`${serif} mt-4 text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.75rem]`}>{t("contactNow")}</h2>
-              <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-[#3A3631]">{t("customIdea", v)}</p>
-              <div className="mt-7 text-left">
-                <WebsiteContactPanel tone="atelier" />
+      {/* 3. Gói gồm những gì */}
+      <section className="x-section-tight bg-porcelain" aria-labelledby="inc-title">
+        <div className="x-wrap grid gap-10 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
+          <div className="lg:col-span-5">
+            <p className="x-kicker">{t("incKicker")}</p>
+            <h2 id="inc-title" className="x-h2 mt-3 text-ink">{t("incTitle", v)}</h2>
+          </div>
+          <ul className="grid gap-3 sm:grid-cols-2 lg:col-span-7">
+            {INCLUDED.map((k) => (
+              <li key={k} className="flex gap-3.5 rounded-[20px] bg-white p-5 ring-1 ring-black/[0.05]">
+                <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-blush text-brand-800">
+                  <Check className="size-4" aria-hidden />
+                </span>
+                <span className="text-[15.5px] leading-relaxed text-ink/85">{t(k, v)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 4. Thư viện mẫu */}
+      <section id="mau" className="x-section scroll-mt-20 bg-white" aria-labelledby="gallery-title">
+        <div className="x-wrap">
+          <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
+            <div className="max-w-[46rem]">
+              <p className="x-kicker">{t("galleryKicker")}</p>
+              <h2 id="gallery-title" className="x-h2 mt-3 text-ink">{t("galleryTitle")}</h2>
+            </div>
+            <p className="x-body max-w-[22rem]">{t("galleryLead")}</p>
+          </div>
+          <div className="mt-8">
+            <TemplateGallery />
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Giá: khối mận đậm, cùng kiểu khối EET ở trang chủ */}
+      <section className="bg-white pb-[clamp(3rem,2rem+4vw,5.5rem)]" aria-labelledby="price-title">
+        <div className="x-wrap">
+          <div className="x-panel grid overflow-hidden bg-brand-800 text-white lg:grid-cols-12">
+            <div className="p-7 sm:p-10 lg:col-span-7 lg:p-14">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[14px] text-white/85">{t("eyebrow")}</p>
+              <h2 id="price-title" className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="text-[1.25rem] font-medium text-white/75">{t("priceLabel")}</span>
+                <span className="whitespace-nowrap text-[clamp(3rem,2rem+4vw,5rem)] font-semibold leading-none tracking-[-0.045em]">{v.price}</span>
+              </h2>
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-white/80">
+                {pl1}
+                {pl2 && <span className="block">{pl2}</span>}
+              </p>
+              <p className="mt-6 max-w-[34rem] text-[15px] leading-relaxed text-white/70">{t("hosting")}</p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href="#lien-he" className="x-btn-onDark !min-h-[52px] !px-7 text-base">
+                  {t("ctaContact")}
+                </a>
+                <Link href="/website-terms" className="x-btn-ghostDark !min-h-[52px] !px-7 text-base">
+                  {getLegalPack(locale).docs.websiteTerms.title}
+                </Link>
+              </div>
+            </div>
+            <div className="relative hidden items-end justify-center overflow-hidden bg-brand-900/40 px-10 pt-12 lg:col-span-5 lg:flex" aria-hidden>
+              <div className="w-[min(240px,70%)] translate-y-[18%]">
+                <DevicePhone shot={templateShot(PRICE_PICK, locale)} alt="" />
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* 6. Hỏi đáp */}
+      <section className="x-section-tight bg-porcelain" aria-labelledby="faq-title">
+        <div className="x-wrap grid gap-10 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
+          <div className="lg:col-span-4">
+            <p className="x-kicker">{t("faqKicker")}</p>
+            <h2 id="faq-title" className="x-h2 mt-3 text-ink">{t("faqTitle")}</h2>
+          </div>
+          <div className="x-panel bg-white px-5 ring-1 ring-black/[0.05] sm:px-8 lg:col-span-8">
+            {FAQ.map((n) => (
+              <details key={n} className="group border-b border-line last:border-0" open={n === 1}>
+                <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden">
+                  <span className="text-[1.0625rem] font-semibold leading-snug tracking-[-0.01em] text-ink">{t(`faq${n}Q`, v)}</span>
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-sand text-ink transition-transform group-open:rotate-45 motion-reduce:transition-none" aria-hidden>
+                    <Plus className="size-4" />
+                  </span>
+                </summary>
+                <p className="x-body max-w-2xl pb-6">{t(`faq${n}A`, v)}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Liên hệ: gọi, Facebook, Instagram + tin nhắn mẫu (không có form gửi dữ liệu) */}
+      <section id="lien-he" className="x-section scroll-mt-20 bg-white" aria-labelledby="contact-title">
+        <div className="x-wrap grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-12 [&>*]:min-w-0">
+          <div className="lg:col-span-5">
+            <p className="x-kicker">{t("contactKicker")}</p>
+            <h2 id="contact-title" className="x-h2 mt-3 text-ink">{t("contactNow")}</h2>
+            <p className="x-lead mt-5 max-w-[30rem]">{t("customIdea", v)}</p>
+          </div>
+          <div data-cta className="x-panel bg-porcelain p-5 ring-1 ring-black/[0.05] sm:p-8 lg:col-span-7">
+            <WebsiteContactPanel stacked />
+          </div>
+        </div>
+      </section>
     </PageShell>
   );
 }

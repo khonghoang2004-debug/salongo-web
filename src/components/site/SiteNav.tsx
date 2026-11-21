@@ -84,7 +84,7 @@ export function SiteNav() {
           <nav aria-label="Menu" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {ITEMS.map((it) => (
-                <li key={it.href} className={it.href === "/website" ? "hidden xl:block" : undefined}>
+                <li key={it.href}>
                   <Link
                     href={it.href}
                     aria-current={isActive(it.href) ? "page" : undefined}

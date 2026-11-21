@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
 import { LandingHero } from "@/components/landing/LandingHero";
+import { WebStudioSection } from "@/components/landing/WebStudioSection";
 import { Platforms } from "@/components/landing/Platforms";
 import { DayTour } from "@/components/landing/DayTour";
 import { MoreGrid } from "@/components/landing/MoreGrid";
@@ -11,7 +12,7 @@ import { ClipSection } from "@/components/landing/ClipSection";
 import { WhoFor } from "@/components/landing/WhoFor";
 import { EetBand } from "@/components/landing/EetBand";
 import { PriceBoard } from "@/components/landing/PriceBoard";
-import { WebsiteBand, FaqShort, FinalCta, LANDING_FAQ } from "@/components/landing/Closing";
+import { FaqShort, FinalCta, LANDING_FAQ } from "@/components/landing/Closing";
 import { siteConfig } from "@/lib/metadata";
 import { getPlans, priceRange } from "@/lib/plans";
 import { CLIPS } from "@/lib/clips";
@@ -184,8 +185,8 @@ export default async function Home({ params }: Props) {
         <ClipSection />
         <WhoFor />
         <EetBand />
+        <WebStudioSection />
         <PriceBoard />
-        <WebsiteBand />
         <FaqShort />
         <FinalCta />
       </PageShell>

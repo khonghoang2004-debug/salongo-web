@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"] as const;
 const STEPS = [1, 2, 3] as const;
-const FAQ = [1, 6, 2, 3, 4, 5] as const;
+const FAQ = [6, 2, 3, 4, 5] as const;
 const STATS = [1, 2, 3] as const;
 // Mẫu trong khung xem trước đầu trang (đổi bằng nút tên mẫu) và trong khối giá
 const HERO_PICKS = ["aurel-beauty", "atelier-noir", "maison-claire", "thermae-wellness"];
@@ -67,7 +67,7 @@ export default async function WebsitePage({ params }: Props) {
           priceCurrency: "CZK",
           url,
           availability: "https://schema.org/InStock",
-          description: `${v.price} ${t("priceLine", v).replace("|", " ")}`,
+          description: `${v.price} ${t("priceLine", v)}`,
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -261,7 +261,7 @@ export default async function WebsitePage({ params }: Props) {
           </div>
           <div className="x-panel bg-white px-5 ring-1 ring-black/[0.05] sm:px-8 lg:col-span-8">
             {FAQ.map((n) => (
-              <details key={n} className="group border-b border-line last:border-0" open={n === 1}>
+              <details key={n} className="group border-b border-line last:border-0" open={n === FAQ[0]}>
                 <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden">
                   <span className="text-[1.0625rem] font-semibold leading-snug tracking-[-0.01em] text-ink">{t(`faq${n}Q`, v)}</span>
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-sand text-ink transition-transform group-open:rotate-45 motion-reduce:transition-none" aria-hidden>

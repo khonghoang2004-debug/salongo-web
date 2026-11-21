@@ -95,7 +95,7 @@ export default async function Home({ params }: Props) {
           { "@type": "Place", name: "Europe" },
         ],
         knowsLanguage: ["vi", "cs", "en", "de"],
-        // Dịch vụ làm website cho khách SalonGo (chi tiết: JSON-LD Service trên trang /website)
+        // Dịch vụ làm website cho salon (chi tiết: JSON-LD Service trên trang /website)
         makesOffer: {
           "@type": "Offer",
           price: 4999,

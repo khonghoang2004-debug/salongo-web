@@ -1076,7 +1076,7 @@
     }
   },
   "webOffer": {
-    "eyebrow": "Nabídka pro zákazníky SalonGo",
+    "eyebrow": "SalonGo Web Studio",
     "lead": "Navrženo pro salony, skvěle vypadá v mobilu i na počítači.",
     "hosting": "Návrh webu platíte jednorázově. Hosting vám poradíme a naceníme zvlášť.",
     "ctaTemplates": "Prohlédnout šablony",
@@ -1084,7 +1084,7 @@
     "previewLabel": "Náhled šablony {name}",
     "allTemplates": "Všechny šablony ({count})",
     "heroTitle": "Vyberte si krásný web|pro váš salon",
-    "heroLead": "Pro zákazníky SalonGo.",
+    "heroLead": "Weby navržené pro salony.",
     "galleryKicker": "Šablony",
     "galleryTitle": "Šablony webů pro nehty, vlasy, spa, řasy a barbershopy",
     "galleryLead": "Každá šablona je funkční web. Klikněte na ukázku.",
@@ -1100,7 +1100,7 @@
     "inc3": "Doplníme údaje o salonu, služby, fotografie a barvy v dohodnutém rozsahu.",
     "inc4": "Web se přizpůsobí počítači i mobilu.",
     "inc5": "Na web lze přidat tlačítko na rezervační stránku SalonGo, pokud má salon platný odkaz na rezervace.",
-    "inc6": "Cena návrhu od {price}, platba jednorázově, pro zákazníky SalonGo.",
+    "inc6": "Cena návrhu od {price}, platba jednorázově.",
     "stepsKicker": "Postup",
     "stepsTitle": "Tři kroky k webu",
     "step1Title": "Vyberte šablonu",
@@ -1111,8 +1111,6 @@
     "step3Text": "Pošlete název salonu, služby, ceny a fotky.",
     "faqKicker": "Časté dotazy",
     "faqTitle": "Otázky k webu",
-    "faq1Q": "Kdo může využít cenu od {price}?",
-    "faq1A": "Nabídka platí pro zákazníky, kteří používají služby SalonGo.",
     "faq2Q": "Kolik stránek web má?",
     "faq2A": "Až {pages}. Každá šablona v nabídce má {pages} stránek, abyste si web dokázali představit.",
     "faq3Q": "Jak je to s hostingem a doménou?",
@@ -1139,7 +1137,7 @@
     "navLabel": "Web",
     "demoTitle": "{name} — ukázkový web: {type}",
     "demoDesc": "Interaktivní ukázka šablony webu od SalonGo ({type}). Značka, kontakty a ceny jsou pouze ilustrativní.",
-    "homeTitle": "Nabídka jen|pro zákazníky SalonGo",
+    "homeTitle": "Krásný web|pro váš salon",
     "contactNow": "Ozvěte se nám pro konzultaci zdarma",
     "chosenShort": "Šablona",
     "customIdea": "Máte vlastní nápad, jak by měl váš web vypadat? Klidně se s námi podělte. Cena začíná na stejné částce.",
@@ -1153,7 +1151,7 @@
     "catMakeup": "Make-up",
     "catBarber": "Barber",
     "filterLabel": "Filtrovat podle typu salonu",
-    "priceLine": "za web o {pages} stránkách|jen pro zákazníky SalonGo",
+    "priceLine": "za web o {pages} stránkách",
     "customIdeaLabel": "Vlastní nápad",
     "breadcrumb": "Tvorba webu pro salon",
     "stat1": "{count} šablon",
@@ -1448,7 +1446,7 @@
     },
     "website": {
       "title": "Potřebujete web pro salon?",
-      "desc": "Web salonu s 5 stránkami od 4 999 Kč, jen pro zákazníky SalonGo.",
+      "desc": "Web salonu s 5 stránkami od 4 999 Kč.",
       "cta": "Ukázky webů"
     },
     "faq": {

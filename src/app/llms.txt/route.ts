@@ -54,7 +54,7 @@ const PAGES = LANGS.map(
 const OTHER = `- [Facebook page](https://www.facebook.com/people/SalonGo/61583765805698/)
 - [App sign-in / sign-up](https://app.salongo.eu)
 - [Sitemap](${SITE}/sitemap.xml)
-- Salon websites: offer for SalonGo customers, a website with up to 5 pages for a one-time design fee from 4 999 Kč; hosting is quoted separately. 35+ sample templates (nail, hair, spa, barber, lash & brow, makeup); their demo pages are illustrations only.`;
+- Salon websites: a website with up to 5 pages for a one-time design fee from 4 999 Kč; hosting is quoted separately. 35+ sample templates (nail, hair, spa, barber, lash & brow, makeup); their demo pages are illustrations only.`;
 
 // Câu trả lời ngắn cho các câu hỏi người dùng hay hỏi trợ lý AI (AEO). Chỉ ghi điều có thật trên website.
 const answers = (low: number, trialDays: number) => `## Quick answers

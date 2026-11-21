@@ -1,7 +1,7 @@
 import { getLegalPack } from "@/content/legal";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowDown, Check, LayoutTemplate, MessageCircle, Plus, Send } from "lucide-react";
+import { ArrowDown, Check, Plus } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
 import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
@@ -98,7 +98,6 @@ export default async function WebsitePage({ params }: Props) {
   const live: LiveItem[] = HERO_PICKS.map((slug) => TEMPLATES.find((x) => x.slug === slug))
     .filter((x) => x !== undefined)
     .map((x) => ({ slug: x.slug, name: x.name, type: tr(x.card.type, locale), shot: templateShot(x.slug, locale) }));
-  const STEP_ICON = [LayoutTemplate, MessageCircle, Send];
 
   return (
     <PageShell>
@@ -144,46 +143,35 @@ export default async function WebsitePage({ params }: Props) {
       </section>
 
       {/* 2. Cách làm: ba bước */}
-      <section className="x-section-tight bg-white" aria-labelledby="steps-title">
+      <section className="bg-white py-10 sm:py-14" aria-labelledby="steps-title">
         <div className="x-wrap">
           <p className="x-kicker">{t("stepsKicker")}</p>
-          <h2 id="steps-title" className="x-h2 mt-3 text-ink">{t("stepsTitle")}</h2>
-          <ol className="mt-10 grid gap-4 md:grid-cols-3 md:gap-5">
-            {STEPS.map((n, i) => {
-              const Icon = STEP_ICON[i];
-              return (
-                <li key={n} className="x-panel relative bg-porcelain p-6 ring-1 ring-black/[0.04] sm:p-7">
-                  <div className="flex items-center justify-between">
-                    <span className="flex size-12 items-center justify-center rounded-full bg-white text-brand-700 ring-1 ring-black/[0.06]">
-                      <Icon className="size-5" aria-hidden />
-                    </span>
-                    <span className="text-[2.5rem] font-semibold leading-none tracking-[-0.04em] text-brand-700/15" aria-hidden>
-                      {n}
-                    </span>
-                  </div>
-                  <h3 className="x-h3 mt-6 text-ink">{t(`step${n}Title`)}</h3>
-                  <p className="x-body mt-2">{t(`step${n}Text`)}</p>
-                </li>
-              );
-            })}
+          <h2 id="steps-title" className="mt-2 text-[1.5rem] font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-[1.75rem]">{t("stepsTitle")}</h2>
+          <ol className="relative mt-6 md:mt-8 md:grid md:grid-cols-3 md:gap-5">
+            {STEPS.map((n, i) => (
+              <li key={n} className="relative flex gap-4 pb-5 last:pb-0 md:rounded-2xl md:bg-porcelain md:p-5 md:ring-1 md:ring-black/[0.04]">
+                {i < STEPS.length - 1 && <span className="absolute left-[17px] top-10 bottom-1 w-px bg-line md:hidden" aria-hidden />}
+                <span className="relative flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-700 text-[15px] font-semibold text-white">{n}</span>
+                <div className="min-w-0 pt-0.5">
+                  <h3 className="text-[1.0625rem] font-semibold leading-snug text-ink">{t(`step${n}Title`)}</h3>
+                  <p className="mt-0.5 text-[15px] leading-snug text-muted">{t(`step${n}Text`)}</p>
+                </div>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
 
-      {/* 3. Gói gồm những gì */}
-      <section className="x-section-tight bg-porcelain" aria-labelledby="inc-title">
-        <div className="x-wrap grid gap-10 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
-          <div className="lg:col-span-5">
-            <p className="x-kicker">{t("incKicker")}</p>
-            <h2 id="inc-title" className="x-h2 mt-3 text-ink">{t("incTitle", v)}</h2>
-          </div>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:col-span-7">
+      {/* 3. Gói gồm những gì: một thẻ, danh sách gọn */}
+      <section className="bg-porcelain py-10 sm:py-14" aria-labelledby="inc-title">
+        <div className="x-wrap">
+          <p className="x-kicker">{t("incKicker")}</p>
+          <h2 id="inc-title" className="mt-2 text-[1.5rem] font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-[1.75rem]">{t("incTitle", v)}</h2>
+          <ul className="mt-6 grid rounded-2xl bg-white px-5 py-1 ring-1 ring-black/[0.05] sm:grid-cols-2 sm:gap-x-10 sm:px-7 sm:py-2">
             {INCLUDED.map((k) => (
-              <li key={k} className="flex gap-3.5 rounded-[20px] bg-white p-5 ring-1 ring-black/[0.05]">
-                <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-blush text-brand-800">
-                  <Check className="size-4" aria-hidden />
-                </span>
-                <span className="text-[15.5px] leading-relaxed text-ink/85">{t(k, v)}</span>
+              <li key={k} className="flex items-center gap-3 border-b border-line py-3 text-[15.5px] text-ink last:border-0 sm:[&:nth-last-child(2)]:border-0">
+                <Check className="size-4 shrink-0 text-brand-700" strokeWidth={2.5} aria-hidden />
+                <span>{t(k, v)}</span>
               </li>
             ))}
           </ul>

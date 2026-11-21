@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
 import { getLegalPack } from "@/content/legal";
-import { LEGAL_DOCS, LEGAL_EFFECTIVE, OPERATOR, type LegalDocKey } from "@/lib/legal";
+import { LEGAL_DOCS, LEGAL_EFFECTIVE, LEGAL_EFFECTIVE_BY_DOC, OPERATOR, type LegalDocKey } from "@/lib/legal";
 import { APP_URL } from "@/lib/app-links";
 import { siteConfig } from "@/lib/metadata";
 import { WEBSITE_MAX_PAGES, WEBSITE_PRICE_KC, formatKc } from "@/lib/website-offer";
@@ -92,7 +92,7 @@ export async function LegalDocumentPage({ locale, docKey }: { locale: string; do
           <div className="max-w-3xl">
           <h1 className="x-h2 text-ink">{doc.title}</h1>
           <p className="mt-3 text-sm text-muted">
-            {ui.effective}: {formatDate(LEGAL_EFFECTIVE, locale)}
+            {ui.effective}: {formatDate(LEGAL_EFFECTIVE_BY_DOC[docKey] ?? LEGAL_EFFECTIVE, locale)}
           </p>
           {locale !== "cs" ? (
             <p className="mt-2 text-sm text-muted">

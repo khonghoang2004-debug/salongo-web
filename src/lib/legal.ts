@@ -22,7 +22,12 @@ export const OPERATOR = {
 } as const;
 
 /** Ngày hiệu lực của bộ văn bản hiện tại (YYYY-MM-DD). Đổi khi sửa nội dung. */
-export const LEGAL_EFFECTIVE = "2026-11-21";
+export const LEGAL_EFFECTIVE = "2026-11-12";
+
+/** Ngày hiệu lực riêng của từng văn bản khi chỉ văn bản đó đổi (không có thì dùng LEGAL_EFFECTIVE). */
+export const LEGAL_EFFECTIVE_BY_DOC: Partial<Record<"terms" | "privacy" | "cookies" | "dpa" | "websiteTerms", string>> = {
+  websiteTerms: "2026-11-21",
+};
 
 /** Các văn bản pháp lý: đường dẫn trên web (giống nhau ở 4 ngôn ngữ). */
 export const LEGAL_DOCS = [

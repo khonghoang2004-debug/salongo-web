@@ -407,13 +407,12 @@ export const en: LegalPack = {
     websiteTerms: {
       title: "Website Service Terms",
       description:
-        "Terms of the website offer for SalonGo customers (from {price}, up to {pages} pages): scope, payment, timeline, revisions, acceptance, rights and hosting.",
+        "Terms of the website offer (from {price}, up to {pages} pages): scope, payment, timeline, revisions, acceptance, rights and hosting.",
       sections: [
         {
           heading: "1. Scope",
           body: [
             "These terms govern the contract for work between the SalonGo Operator (contractor) and a salon (client) for building the salon's website. The SalonGo Terms of Service apply additionally.",
-            "The offer is for businesses with an active SalonGo account (paid plan or trial) at the time of the order.",
           ],
         },
         {

@@ -412,13 +412,12 @@ export const cs: LegalPack = {
     websiteTerms: {
       title: "Podmínky tvorby webových stránek",
       description:
-        "Podmínky nabídky webových stránek pro zákazníky SalonGo (od {price}, až {pages} stránek): rozsah, platba, termíny, úpravy, převzetí, práva k webu a hosting.",
+        "Podmínky nabídky webových stránek (od {price}, až {pages} stránek): rozsah, platba, termíny, úpravy, převzetí, práva k webu a hosting.",
       sections: [
         {
           heading: "1. O co jde",
           body: [
             "Tyto podmínky upravují smlouvu o dílo, kterou uzavírá Provozovatel SalonGo (zhotovitel) se salonem (objednatel) na vytvoření webových stránek salonu. Doplňkově platí Obchodní podmínky SalonGo.",
-            "Nabídka je určena podnikatelům, kteří mají v okamžiku objednávky aktivní účet SalonGo (placený tarif nebo zkušební dobu).",
           ],
         },
         {

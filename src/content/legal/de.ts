@@ -407,13 +407,12 @@ export const de: LegalPack = {
     websiteTerms: {
       title: "Bedingungen für die Website-Erstellung",
       description:
-        "Bedingungen des Website-Angebots für SalonGo-Kunden (ab {price}, bis zu {pages} Seiten): Umfang, Zahlung, Fristen, Korrekturen, Abnahme, Rechte und Hosting.",
+        "Bedingungen des Website-Angebots (ab {price}, bis zu {pages} Seiten): Umfang, Zahlung, Fristen, Korrekturen, Abnahme, Rechte und Hosting.",
       sections: [
         {
           heading: "1. Geltungsbereich",
           body: [
             "Diese Bedingungen regeln den Werkvertrag zwischen dem Betreiber von SalonGo (Auftragnehmer) und einem Salon (Auftraggeber) über die Erstellung der Salon-Website. Ergänzend gelten die AGB von SalonGo.",
-            "Das Angebot richtet sich an Unternehmer, die bei Bestellung ein aktives SalonGo-Konto (bezahlter Tarif oder Testzeitraum) haben.",
           ],
         },
         {

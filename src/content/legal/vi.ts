@@ -409,13 +409,12 @@ export const vi: LegalPack = {
     websiteTerms: {
       title: "Điều khoản làm website",
       description:
-        "Điều khoản gói làm website cho khách hàng SalonGo (từ {price}, tối đa {pages} trang): phạm vi, thanh toán, thời gian, chỉnh sửa, nghiệm thu, quyền sử dụng và hosting.",
+        "Điều khoản gói làm website (từ {price}, tối đa {pages} trang): phạm vi, thanh toán, thời gian, chỉnh sửa, nghiệm thu, quyền sử dụng và hosting.",
       sections: [
         {
           heading: "1. Phạm vi áp dụng",
           body: [
             "Điều khoản này áp dụng cho hợp đồng làm sản phẩm (smlouva o dílo) giữa Người vận hành SalonGo (bên làm) và salon (bên đặt) để làm website cho salon. Điều khoản dịch vụ SalonGo áp dụng bổ sung.",
-            "Ưu đãi dành cho người kinh doanh đang có tài khoản SalonGo hoạt động (gói trả phí hoặc đang dùng thử) tại thời điểm đặt.",
           ],
         },
         {

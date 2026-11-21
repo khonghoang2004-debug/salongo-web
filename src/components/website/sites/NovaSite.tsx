@@ -4,6 +4,7 @@ import { DemoBookingForm, DemoLightbox, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { PillNav } from "../templates/PillNav";
 import { fontLumenSans, fontNova, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu Studio Nova (salon nhiều dịch vụ) — học từ Studio Itta: menu viên thuốc màu mận + nút vàng, tiêu đề sans mảnh
 // xen chữ nghiêng serif, thẻ từng mảng có nhãn + "od X Kč" + số điện thoại riêng, hàng số liệu, dải chữ (tĩnh, không chạy).
@@ -20,6 +21,7 @@ export function NovaSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   // Tiêu đề: 2 từ cuối in nghiêng serif
   const Title = ({ text, size = "text-[2.75rem] sm:text-7xl" }: { text: string; size?: string }) => {
@@ -99,6 +101,7 @@ export function NovaSite(props: SiteProps) {
                 {l(UI.allServices)}
               </Link>
             </div>
+            <RatingBadge x={x} locale={props.locale} className={`mt-6 justify-center text-[15px] ${soft}`} starClass="text-[#D2AE62]" />
           </div>
           <figure className="relative mx-auto mt-12 max-w-[1040px]">
             <div className="aspect-[16/9] overflow-hidden rounded-[22px] bg-[#E6DDD3]">{s.art(t.home.hero, "", true)}</div>
@@ -149,6 +152,58 @@ export function NovaSite(props: SiteProps) {
               <div className="min-h-[220px] bg-[#4A3654]">{s.art(t.gallery.items[2])}</div>
             </div>
           </div>
+        </section>
+        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-4xl font-light leading-tight sm:text-5xl">
+              {l(t.gallery.title).split(" ")[0]} <span className={it}>{l(t.gallery.title).split(" ").slice(1).join(" ")}</span>
+            </h2>
+            <Link href={s.href("bo-suu-tap")} className={btnLine}>
+              {l(UI.viewGallery)}
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {[0, 1, 3, 4, 5].map((gi, i) => (
+              <div key={gi} className={`overflow-hidden rounded-[22px] bg-[#E6DDD3] ${i === 0 ? "col-span-2 aspect-[16/10] lg:row-span-2 lg:aspect-auto" : "aspect-square"} ${i > 2 ? "hidden lg:block" : ""}`}>
+                {s.art(t.gallery.items[gi])}
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="bg-[#33243A] text-white">
+          <div className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `text-4xl font-light sm:text-5xl ${it}`,
+                score: "text-6xl font-light text-[#D2AE62]",
+                stars: "text-[#D2AE62]",
+                card: "rounded-[22px] bg-white/[0.06] p-6 ring-1 ring-white/10",
+                quote: "text-[16px] leading-relaxed text-white/90",
+                name: "font-semibold",
+                meta: "text-[14px] text-white/65",
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#E9E2D8", block: "#DDD3C6", road: "#FFFFFF", water: "#B7BCD0", park: "#D4D6BE", pin: "#33243A", pinInk: "#D2AE62", text: "#7B4A7C" }}
+            c={{
+              map: "rounded-[22px]",
+              title: `text-4xl font-light sm:text-5xl ${it}`,
+              label,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#33243A]/10",
+              btn: btnDark,
+              icon: "text-[#7B4A7C]",
+            }}
+          />
         </section>
       </>
     );
@@ -279,27 +334,19 @@ export function NovaSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#33243A] text-white">
-        <div className="mx-auto grid max-w-[1160px] gap-6 px-5 py-12 sm:px-8 md:grid-cols-3">
-          <p className="text-2xl">
-            {t.name.toLowerCase()} <span className={`${it} text-[#D2AE62]`}>Praha 2</span>
-          </p>
-          <div className="text-[15px] text-white/80">
-            <p>{t.contact.address}</p>
-            {t.contact.hours.map((h, i) => (
-              <p key={i}>
-                {l(h.days)} · {h.time}
-              </p>
-            ))}
+        <div className="mx-auto grid max-w-[1160px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className="text-3xl">
+              {t.name.toLowerCase()} <span className={`${it} text-[#D2AE62]`}>Praha 2</span>
+            </p>
+            <p className="mt-2 text-[15px] text-white/75">{l(t.tagline)}</p>
           </div>
-          <nav aria-label="Footer" className="flex flex-wrap gap-x-4">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-11 items-center text-sm hover:underline">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: "text-[11px] font-semibold uppercase tracking-[0.22em] text-[#D2AE62]", text: "text-[15px] text-white/80", link: "text-[15px] hover:underline" }} />
         </div>
         <p className="border-t border-white/15 px-5 py-5 text-center text-[13px] text-white/70">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#33243A]/10 bg-[#F2EFEA]/95 backdrop-blur text-[#33243A]", btn: `${btnDark} !min-h-11`, text: "", star: "text-[#D2AE62]" }} />
+        )}
       </footer>
     </div>
   );

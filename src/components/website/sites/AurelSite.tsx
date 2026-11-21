@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontAurel, fontAurelSans, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 8 — Aurel: makeup & beauty boutique. Xanh lục bảo xen nền kem, viền vàng mảnh, monogram,
 // bố cục đối xứng căn giữa, Fraunces mảnh + Montserrat in hoa giãn chữ.
@@ -20,6 +21,7 @@ export function AurelSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Monogram = ({ size = "size-16" }: { size?: string }) => (
     <span aria-hidden className={`${serif} mx-auto flex ${size} items-center justify-center rounded-full border border-[#B8955A] text-2xl italic ${goldLight}`}>
@@ -81,6 +83,7 @@ export function AurelSite(props: SiteProps) {
               {l(t.nav["dich-vu"])}
             </Link>
           </div>
+          <RatingBadge x={x} locale={props.locale} className={`${sans} mt-7 justify-center text-[13px] tracking-[0.04em] text-[#DCE3DE]`} starClass="text-[#D9BC85]" />
           <div className="relative mx-auto mt-14 max-w-[520px] translate-y-16 p-3 sm:mt-16">
             <div className="absolute inset-0 rounded-t-full border border-[#B8955A]" aria-hidden />
             <div className="aspect-[4/5] overflow-hidden rounded-t-full bg-[#2A4A40]">{s.art(t.home.hero, "", true)}</div>
@@ -104,7 +107,7 @@ export function AurelSite(props: SiteProps) {
           <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
             <h2 className={`${serif} text-center text-4xl font-light italic sm:text-5xl`}>{l(t.nav["dich-vu"])}</h2>
             <div className="mt-10">
-              <Services groups={[{ name: t.services.groups[0].name, items: s.featured }]} />
+              <Services groups={t.services.groups.slice(0, 2).map((g) => ({ ...g, items: g.items.slice(0, 4) }))} />
             </div>
             <div className="mt-10 text-center">
               <Link href={s.href("dich-vu")} className={btnDark}>
@@ -113,17 +116,58 @@ export function AurelSite(props: SiteProps) {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
-            {t.gallery.items.slice(0, 3).map((g, i) => (
-              <figure key={i} className={`text-center ${i === 2 ? "hidden sm:block" : ""}`}>
-                <div className="border border-[#B8955A] p-2">
-                  <div className="aspect-[3/4] overflow-hidden bg-[#E7DCC8]">{s.art(g)}</div>
+        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+          <Divider />
+          <h2 className={`${serif} mt-6 text-center text-4xl font-light italic sm:text-5xl`}>{l(t.gallery.title)}</h2>
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {t.gallery.items.slice(0, 6).map((g, i) => (
+              <figure key={i} className={`text-center ${i === 0 ? "col-span-2 row-span-2" : ""} ${i > 4 ? "hidden" : i > 2 ? "hidden lg:block" : ""}`}>
+                <div className="h-full border border-[#B8955A] p-2">
+                  <div className={`overflow-hidden bg-[#E7DCC8] ${i === 0 ? "aspect-[4/5] rounded-t-full lg:aspect-auto lg:h-full" : "aspect-[3/4]"}`}>{s.art(g)}</div>
                 </div>
-                <figcaption className={`${label} mt-3 ${goldDark}`}>{l(g.alt)}</figcaption>
               </figure>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link href={s.href("bo-suu-tap")} className={btnDark}>
+              {l(UI.viewGallery)}
+            </Link>
+          </div>
+        </section>
+        <section className="bg-[#1E3A32] text-[#F5EFE4]">
+          <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${serif} text-4xl font-light italic sm:text-5xl`,
+                score: `${serif} text-6xl font-light ${goldLight}`,
+                stars: "text-[#D9BC85]",
+                card: "border border-[#B8955A]/60 p-6 sm:p-8",
+                quote: `${serif} text-[1.25rem] font-light leading-relaxed`,
+                name: `${label} text-[#F5EFE4]`,
+                meta: "text-[13px] text-[#BFCBC5]",
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#EFE6D6", block: "#E3D6BF", road: "#FBF7F0", water: "#B9C9C0", park: "#CFD8C4", pin: "#1E3A32", pinInk: "#F5EFE4", text: "#7A5E2E" }}
+            c={{
+              map: "border border-[#B8955A] p-2 [&>svg]:p-2",
+              title: `${serif} text-4xl font-light italic sm:text-5xl`,
+              label: `${label} ${goldDark}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#D9CBB2]",
+              btn: btnDark,
+              icon: "text-[#B8955A]",
+            }}
+          />
         </section>
         <Closing {...props} />
       </>
@@ -262,21 +306,26 @@ export function AurelSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#1E3A32] text-[#DCE3DE]">
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 px-5 py-14 text-center sm:px-8">
-          <Monogram />
-          <p className={`${sans} text-xl font-medium uppercase tracking-[0.5em] text-[#F5EFE4]`}>Aurel</p>
-          <p className="text-sm">
-            {l(t.tagline)} · {t.contact.address}
-          </p>
-          <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-5">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${label} inline-flex min-h-11 items-center hover:text-white`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 text-[15px] sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <span aria-hidden className={`${serif} flex size-14 items-center justify-center rounded-full border border-[#B8955A] text-2xl italic ${goldLight}`}>
+              A
+            </span>
+            <p className={`${sans} mt-5 text-xl font-medium uppercase tracking-[0.5em] text-[#F5EFE4]`}>Aurel</p>
+            <p className="mt-2 text-sm">{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${label} ${goldLight}`, text: "text-[15px]", link: "text-[15px] hover:text-white" }} />
         </div>
         <p className="border-t border-white/15 px-5 py-5 text-center text-[13px] text-[#BFCBC5]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar
+            href={s.href("dat-lich")}
+            label={l(t.bookLabel)}
+            x={x}
+            locale={props.locale}
+            c={{ bar: "border-t border-[#2F5247] bg-[#1E3A32]/95 backdrop-blur", btn: `${btnGold} !min-h-11 !bg-[#D9BC85] !px-6 !text-[#1E3A32]`, text: "text-[#DCE3DE]", star: "text-[#D9BC85]" }}
+          />
+        )}
       </footer>
     </div>
   );

@@ -10,6 +10,8 @@ import { KIT_FONTS } from "./fonts";
 import { KitTabs } from "./KitTabs";
 import { KIT_SPECS } from "./specs";
 import type { KitLayout, KitTheme } from "./types";
+import { EXTRAS } from "../templates/content/extras";
+import { FooterCols, MobileBookBar, RatingBadge, Reviews, Visit as VisitMap } from "../sites/premium";
 
 // Bộ dựng website mẫu từ khối. Mỗi mẫu (specs.ts) chọn theme + kiểu từng khối, nên bố cục giữa các mẫu khác nhau thật.
 // Màu đi qua biến CSS (--bg, --ink, --accent…); chữ trên nền màu dùng cặp onAccent / onDark đã chọn đủ tương phản.
@@ -60,6 +62,9 @@ export function KitSite(props: SiteProps) {
   const k = cls(th);
   const s = site(props);
   const { l } = s;
+  // Bản nâng cấp "như website thật" (đợt 2026-11-21): bật cho mẫu đã có dữ liệu trong templates/content/extras.ts
+  const x = EXTRAS[t.slug];
+  const premium = !!x;
   const vars = { ...Object.fromEntries(Object.entries(th.c).map(([n, v]) => [`--${n}`, v])), "--accent-ink": spec.accentInk ?? th.c.accent } as CSSProperties;
   const pillPad = L.nav === "pill" ? "pt-24 sm:pt-28" : "";
   const imgs = t.gallery.items;
@@ -77,6 +82,14 @@ export function KitSite(props: SiteProps) {
       <Link href={s.href("dich-vu")} className={light ? k.btnOL : k.btnO}>
         {l(t.nav["dich-vu"])}
       </Link>
+      {premium && (
+        <RatingBadge
+          x={x}
+          locale={props.locale}
+          className={`w-full pt-1 text-[15px] ${center ? "justify-center" : ""} ${light ? "text-white/90" : k.muted}`}
+          starClass={light ? "text-white" : "text-[var(--accent-ink)]"}
+        />
+      )}
     </div>
   );
   const H1 = ({ dark = false, center = false, size }: { dark?: boolean; center?: boolean; size?: string }) => (
@@ -508,6 +521,47 @@ export function KitSite(props: SiteProps) {
             <Visit />
           </section>
         );
+      case "reviews":
+        return (
+          <section key={i} className="bg-[var(--tint)] py-16 lg:py-24">
+            <div className={wrap}>
+              <Reviews
+                x={x}
+                locale={props.locale}
+                c={{
+                  title: `${k.D} ${k.h2}`,
+                  score: `${k.D} text-6xl text-[var(--accent-ink)]`,
+                  stars: "text-[var(--accent-ink)]",
+                  card: `bg-[var(--surface)] p-6 sm:p-8 ${k.rc}`,
+                  quote: "text-[17px] leading-relaxed",
+                  name: "font-semibold",
+                  meta: `text-[14px] ${k.muted}`,
+                }}
+              />
+            </div>
+          </section>
+        );
+      case "map":
+        return (
+          <section key={i} className={`${wrap} py-16 lg:py-24`}>
+            <VisitMap
+              tpl={t}
+              locale={props.locale}
+              bookHref={s.href("dat-lich")}
+              palette={{ land: th.c.tint, block: th.c.line, road: th.c.surface, water: `${th.c.accent}55`, park: `${th.c.muted}33`, pin: th.c.accent, pinInk: th.c.onAccent, text: th.c.muted }}
+              c={{
+                map: `bg-[var(--tint)] ${k.rc}`,
+                title: `${k.D} ${k.h2}`,
+                label: `${k.label} text-[var(--accent-ink)]`,
+                text: "text-[16px]",
+                muted: k.muted,
+                row: "border-b border-[var(--line)]",
+                btn: k.btnA,
+                icon: "text-[var(--accent-ink)]",
+              }}
+            />
+          </section>
+        );
       case "cta":
       default:
         return (
@@ -565,7 +619,7 @@ export function KitSite(props: SiteProps) {
     body = (
       <>
         <Hero />
-        {L.home.map(block)}
+        {(premium ? premiumHome(L.home) : L.home).map(block)}
       </>
     );
   } else if (page === "dich-vu") {
@@ -685,7 +739,35 @@ export function KitSite(props: SiteProps) {
         />
       )}
       <main>{body}</main>
-      {L.footer === "big" ? (
+      {premium ? (
+        <footer className={L.footer === "light" ? "border-t border-[var(--line)] bg-[var(--tint)]" : "overflow-hidden bg-[var(--dark)] text-[var(--onDark)]"}>
+          <div className={`${wrap} grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4`}>
+            <div>
+              <p className={`${k.D} text-4xl`}>{t.name}</p>
+              <p className="mt-2 text-[15px] opacity-80">{l(t.tagline)}</p>
+              <Link href={s.href("dat-lich")} className={`${L.footer === "light" ? k.btnA : th.c.accent === th.c.dark ? k.btnL : k.btnA} mt-6 !min-h-11`}>
+                {l(t.bookLabel)}
+              </Link>
+            </div>
+            <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${k.label} opacity-70`, text: "text-[15px] opacity-90", link: "text-[15px] font-medium hover:underline" }} />
+          </div>
+          {L.footer === "big" && (
+            <p className={`${k.D} select-none whitespace-nowrap px-4 text-center leading-[0.9] opacity-90`} style={giant(11)} aria-hidden>
+              {t.name}
+            </p>
+          )}
+          <p className={`border-t px-5 py-5 text-center text-[13px] opacity-75 ${L.footer === "light" ? "border-[var(--line)]" : "border-white/10"}`}>{l(UI.disclaimer)}</p>
+          {page !== "dat-lich" && (
+            <MobileBookBar
+              href={s.href("dat-lich")}
+              label={l(t.bookLabel)}
+              x={x}
+              locale={props.locale}
+              c={{ bar: "border-t border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] shadow-[0_-6px_20px_rgba(0,0,0,0.08)]", btn: `${k.btnA} !min-h-11 !px-5`, text: "", star: "text-[var(--accent-ink)]" }}
+            />
+          )}
+        </footer>
+      ) : L.footer === "big" ? (
         <footer className="overflow-hidden bg-[var(--dark)] text-[var(--onDark)]">
           <div className={`${wrap} grid gap-6 pt-14 text-[15px] opacity-90 sm:grid-cols-3`}>
             <p>{t.contact.address}</p>
@@ -731,4 +813,12 @@ export function KitSite(props: SiteProps) {
       )}
     </div>
   );
+}
+
+/** Trang chủ bản nâng cấp: luôn có bảng giá + bộ sưu tập, thêm recenze và bản đồ/giờ mở cửa trước lời mời đặt lịch */
+function premiumHome(home: KitLayout["home"]): KitLayout["home"] {
+  const core = home.filter((b) => b !== "visit" && b !== "cta");
+  if (!core.includes("services")) core.push("services");
+  if (!core.includes("gallery")) core.push("gallery");
+  return [...core, "reviews", "map", "cta"];
 }

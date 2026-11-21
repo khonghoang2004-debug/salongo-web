@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontLumenSans, fontNova, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu Iris (mi & mày) — làm lại 02/11/2026 theo kiểu "quiet luxury" đang thịnh: ảnh tràn màn đầu, chữ serif nghiêng
 // lớn trắng trên ảnh, nền trắng ấm / greige, đường kẻ mảnh, chữ nhỏ in hoa giãn rộng, một màu nhấn taupe hồng.
@@ -19,6 +20,7 @@ export function IrisSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
     <section className="mx-auto max-w-[1200px] px-5 pb-10 pt-14 sm:px-8 sm:pt-20">
@@ -89,6 +91,7 @@ export function IrisSite(props: SiteProps) {
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
+            <RatingBadge x={x} locale={props.locale} className={`${sans} mt-7 text-[14px] text-white/90`} starClass="text-[#E7CDBF]" />
           </div>
         </section>
 
@@ -117,7 +120,7 @@ export function IrisSite(props: SiteProps) {
               </Link>
             </div>
             <div className="mt-10">
-              <PriceTable groups={[{ name: t.services.groups[0].name, items: s.featured.slice(0, 2) }, { name: t.services.groups[1].name, items: s.featured.slice(2) }]} />
+              <PriceTable groups={t.services.groups.slice(0, 2).map((g) => ({ ...g, items: g.items.slice(0, 3) }))} />
             </div>
           </div>
         </section>
@@ -131,6 +134,43 @@ export function IrisSite(props: SiteProps) {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="bg-[#F3EFEB]">
+          <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${serif} text-5xl font-light italic sm:text-6xl`,
+                score: `${serif} text-6xl font-light`,
+                stars: "text-[#9A7563]",
+                card: "rounded-[20px] bg-white p-6 sm:p-8",
+                quote: `${serif} text-[1.3rem] font-light leading-snug`,
+                name: `${cap} text-[#1C1A19]`,
+                meta: `text-[14px] ${soft}`,
+              }}
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#F3EFEB", block: "#E9E4DF", road: "#FFFFFF", water: "#C9D3D3", park: "#DCE0D4", pin: "#1C1A19", pinInk: "#FFFFFF", text: "#9A7563" }}
+            c={{
+              map: "rounded-[20px] bg-[#F3EFEB]",
+              title: `${serif} text-5xl font-light italic`,
+              label: `${cap} text-[#9A7563]`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#E9E4DF]",
+              btn: btnDark,
+              icon: "text-[#9A7563]",
+            }}
+          />
         </section>
 
         <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
@@ -256,23 +296,17 @@ export function IrisSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#1C1A19] text-[#D9D2CB]">
-        <div className="mx-auto grid max-w-[1200px] gap-8 px-5 py-14 sm:px-8 md:grid-cols-4">
-          <p className={`${serif} text-4xl italic text-white`}>Iris</p>
-          {t.about.values.slice(0, 2).map((v, i) => (
-            <div key={i} className="text-[15px]">
-              <p className={`${cap} text-[#C4A99A]`}>{l(v.title)}</p>
-              <p className="mt-1">{l(v.text)}</p>
-            </div>
-          ))}
-          <nav aria-label="Footer" className="flex flex-col items-start">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${cap} inline-flex min-h-10 items-center hover:text-white`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className={`${serif} text-5xl italic text-white`}>Iris</p>
+            <p className="mt-2 text-[15px]">{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${cap} text-[#C4A99A]`, text: "text-[15px]", link: `${cap} hover:text-white` }} />
         </div>
         <p className="border-t border-white/10 px-5 py-5 text-center text-[13px] text-[#A8A09A]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#E9E4DF] bg-white/95 backdrop-blur text-[#1C1A19]", btn: `${btnDark} !min-h-11`, text: "", star: "text-[#9A7563]" }} />
+        )}
       </footer>
     </div>
   );

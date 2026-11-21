@@ -32,7 +32,7 @@ export type HeroKind = "full" | "split" | "center" | "giant" | "collage" | "card
 export type ServicesKind = "list" | "cards" | "accordion" | "tabs" | "numbered";
 export type GalleryKind = "masonry" | "grid" | "strip" | "mosaic";
 export type TeamKind = "portraits" | "circles" | "rows";
-export type HomeBlock = "intro" | "services" | "gallery" | "team" | "steps" | "quote" | "cta" | "visit";
+export type HomeBlock = "intro" | "services" | "gallery" | "team" | "steps" | "quote" | "cta" | "visit" | "reviews" | "map";
 
 export type KitLayout = {
   nav: "light" | "dark" | "pill";

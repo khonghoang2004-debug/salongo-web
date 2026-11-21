@@ -176,10 +176,10 @@ const SPECS: Spec[] = [
     title: "Střih, který drží tvar i bez žehličky",
     lead: "Precizní střihy a přirozená barva. Pracujeme s vašimi vlasy, ne proti nim.",
     intro: ["Méně stylingu, víc tvaru", "Střih navrhujeme podle toho, jak vlasy rostou a jak je nosíte doma. Ráno vám pak stačí pět minut."],
-    hl: [["Konzultace zdarma", "Před každým prvním střihem."], ["Ateliér pro 4", "Žádný hluk, žádné čekání."], ["Wella a Olaplex", "Profesionální péče o barvu."]],
+    hl: [["Konzultace zdarma", "Před každým prvním střihem."], ["Ateliér pro 4", "Žádný hluk, žádné čekání."], ["Šetrná barva", "Profesionální péče o barvu."]],
     closing: ["Nový tvar začíná konzultací", "Vyberte si termín online."],
     story: "Ateliér jsme otevřeli v roce 2019 ve dvoře na Starém Městě. Čtyři křesla, velká okna a důraz na střih, který vydrží do další návštěvy.",
-    team: [["Adéla Novotná", "Art director", "Střihy bob a přirozená blond."], ["Marek Vávra", "Stylista", "Pánské i dámské střihy, textura."]],
+    team: [["Adéla", "Art director", "Střihy bob a přirozená blond."], ["Marek", "Stylista", "Pánské i dámské střihy, textura."]],
     address: "Ukázková 12, 110 00 Praha 1",
     photos: {
       hero: ["c21", "Černobílý portrét s vlnitými vlasy"],
@@ -398,7 +398,7 @@ const SPECS: Spec[] = [
     hl: [["Max. 12 hostů", "Na jeden časový blok."], ["Privátní okruh", "Jen pro vás dva."], ["Župan a čaj", "V ceně každého vstupu."]],
     closing: ["Vyberte si čas", "Bloky začínají každou hodinu."],
     story: "Thermae vznikly v historických sklepích. Kamenné klenby, teplá voda a svíčky. Místo, kde se zastaví čas.",
-    team: [["Jana Marešová", "Vedoucí lázní", "Rituály a péče o hosty."], ["David Říha", "Terapeut", "Hloubková a sportovní masáž."]],
+    team: [["Jana", "Vedoucí lázní", "Rituály a péče o hosty."], ["David", "Terapeut", "Hloubková a sportovní masáž."]],
     address: "Ukázková 3, 118 00 Praha 1",
     hours: [["Po – Ne", "10:00 – 22:00"]],
     photos: {
@@ -442,7 +442,7 @@ const SPECS: Spec[] = [
     hl: [["Místa vedle sebe", "Přijďte s přáteli."], ["Prémiové laky", "Veganské a bez toxinů."], ["Expresní manikúra", "Za 30 minut hotovo."]],
     closing: ["Rezervujte si místo", "I pro skupinu."],
     story: "Maison Claire spojuje pohodlí obývacího pokoje a precizní práci. Nehty u nás děláte spolu s přáteli, ne o samotě.",
-    team: [["Sofie Jelínková", "Hlavní manikérka", "Chrom a jemná French."], ["Anna Veselá", "Manikérka", "Gelová modeláž a tvar mandle."]],
+    team: [["Sofie", "Hlavní manikérka", "Chrom a jemná French."], ["Anna", "Manikérka", "Gelová modeláž a tvar mandle."]],
     address: "Ukázková 18, 110 00 Praha 1",
     photos: {
       hero: ["i3", "Stěna s laky a zelenými rostlinami"],

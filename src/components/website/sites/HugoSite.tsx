@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontHugo, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu hugo hair — học từ James Hair (wordmark chữ thường ở giữa, giá in hoa hai cột trên dải xám, giờ mở cửa dạng bảng,
 // form ngắn) + Petra Měchurová (tiêu đề in hoa cạnh một ảnh chân dung, đội ngũ ảnh tròn). Đen trắng, một điểm nhấn vàng.
@@ -15,6 +16,7 @@ export function HugoSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const PriceTable = ({ groups }: { groups: typeof t.services.groups }) => (
     <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
@@ -56,15 +58,25 @@ export function HugoSite(props: SiteProps) {
     body = (
       <>
         <section className="mx-auto grid max-w-[1160px] items-center gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:py-20">
-          <div className="md:order-2">
+          <div className="order-2">
             <div className="mx-auto aspect-[4/5] max-w-[440px] overflow-hidden bg-[#DDE4EC] shadow-[0_20px_40px_rgba(0,0,0,0.12)]">{s.art(t.home.hero, "", true)}</div>
           </div>
           <div>
+            <p className={`${cap} mb-5 flex items-center gap-3 ${soft}`}>
+              <span className="h-0.5 w-8 bg-[#C9B400]" aria-hidden />
+              {l(t.home.kicker)}
+            </p>
             <Title>{l(t.home.title)}</Title>
             <p className={`mt-5 max-w-sm text-[17px] ${soft}`}>{l(t.home.lead)}</p>
-            <Link href={s.href("dat-lich")} className={`${btn} mt-8`}>
-              {l(t.bookLabel)}
-            </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link href={s.href("dat-lich")} className={btn}>
+                {l(t.bookLabel)}
+              </Link>
+              <Link href={s.href("dich-vu")} className={link}>
+                {l(UI.priceList)}
+              </Link>
+            </div>
+            <RatingBadge x={x} locale={props.locale} className={`mt-8 border-t border-black/10 pt-5 text-[15px] ${soft}`} starClass="text-[#C9B400]" />
           </div>
         </section>
         <section className="mx-auto grid max-w-[1160px] gap-10 px-5 pb-16 sm:px-8 md:grid-cols-12">
@@ -91,19 +103,55 @@ export function HugoSite(props: SiteProps) {
             </div>
           </div>
         </section>
-        <section className="mx-auto grid max-w-[1160px] gap-10 px-5 py-14 sm:px-8 md:grid-cols-2">
-          <div>
-            <h2 className={`${cap} mb-3 font-semibold`}>{l(UI.hours)}</h2>
-            <Hours />
-          </div>
-          <div>
-            <h2 className={`${cap} mb-3 font-semibold`}>{l(t.bookLabel)}</h2>
-            <DemoPhone phone={t.contact.phone} note={l(UI.form.callDemo)} className="text-2xl font-light" />
-            <p className={`mt-3 ${soft}`}>{l(t.contact.lead)}</p>
-            <Link href={s.href("dat-lich")} className={`${link} mt-4`}>
-              {l(t.nav["dat-lich"])}
+        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-3xl font-light uppercase sm:text-5xl">{l(t.gallery.title)}</h2>
+            <Link href={s.href("bo-suu-tap")} className={link}>
+              {l(UI.viewGallery)}
             </Link>
           </div>
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
+            {t.gallery.items.slice(0, 6).map((g, i) => (
+              <div key={i} className={`overflow-hidden bg-[#222] grayscale transition-[filter] duration-500 hover:grayscale-0 ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:row-span-2 md:aspect-auto" : "aspect-square"} ${i > 4 ? "hidden md:block" : ""}`}>
+                {s.art(g)}
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="bg-black text-white">
+          <div className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: "text-3xl font-light uppercase sm:text-5xl",
+                score: "text-6xl font-light",
+                stars: "text-[#C9B400]",
+                card: "border-t-2 border-[#C9B400] pt-6",
+                quote: "text-[17px] leading-relaxed text-white/90",
+                name: `${cap} font-semibold`,
+                meta: "text-[14px] text-white/60",
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#EBEBEB", block: "#DCDCDC", road: "#FFFFFF", water: "#B9C6D3", park: "#D2D6CC", pin: "#000000", pinInk: "#FFFFFF", text: "#4A4A4A" }}
+            c={{
+              map: "bg-[#EBEBEB]",
+              title: "text-3xl font-light uppercase sm:text-5xl",
+              label: `${cap} font-semibold`,
+              text: "text-[16px] uppercase tracking-[0.04em]",
+              muted: soft,
+              row: "border-b border-black/10",
+              btn,
+              icon: "text-[#9E8E00]",
+            }}
+          />
         </section>
       </>
     );
@@ -221,18 +269,21 @@ export function HugoSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="border-t border-black/10 bg-white">
-        <div className="mx-auto flex max-w-[1160px] flex-col gap-4 px-5 py-10 text-[15px] sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p className="text-2xl font-light">{t.name}</p>
-          <p className={soft}>{t.contact.address}</p>
-          <nav aria-label="Footer" className="flex flex-wrap gap-x-4">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${cap} inline-flex min-h-11 items-center hover:underline`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1160px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className="flex flex-col text-[2.5rem] font-light leading-[0.9]">
+              {t.name.split(" ").map((w) => (
+                <span key={w}>{w}</span>
+              ))}
+            </p>
+            <p className={`mt-3 text-[15px] ${soft}`}>{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${cap} font-semibold`, text: `text-[15px] ${soft}`, link: `${cap} hover:underline` }} />
         </div>
         <p className="bg-[#EBEBEB] px-5 py-4 text-center text-[13px] text-[#4A4A4A]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-black/10 bg-white/95 backdrop-blur", btn: `${btn} !min-h-11`, text: "", star: "text-[#C9B400]" }} />
+        )}
       </footer>
     </div>
   );

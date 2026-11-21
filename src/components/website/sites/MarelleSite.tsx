@@ -4,6 +4,7 @@ import { DemoBookingForm, DemoLightbox, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { PillNav } from "../templates/PillNav";
 import { fontMarelle, fontMarelleSans, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu Marelle (nail) — học từ Dephaus: ảnh phủ màn đầu với tên thương hiệu khổng lồ tràn đáy, menu dạng viên thuốc
 // nổi giữa trên cùng (nút đặt lịch cam đất nổi bật), nền kem, liên hệ thành 4 ô.
@@ -18,6 +19,7 @@ export function MarelleSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
     <section className="relative overflow-hidden bg-[#8FB0AD]">
@@ -75,6 +77,7 @@ export function MarelleSite(props: SiteProps) {
                 {l(t.bookLabel)}
               </Link>
             </div>
+            <RatingBadge x={x} locale={props.locale} className="mt-4 justify-center text-[14px] font-medium drop-shadow-[0_1px_6px_rgba(43,33,28,0.6)]" starClass="text-[#F3D3BF]" />
           </div>
           <h1 className={`${serif} select-none whitespace-nowrap text-center text-[25vw] leading-[0.78] text-[#FFF9E8] lg:text-[17rem]`} aria-label={t.name}>
             {t.name.toLowerCase()}
@@ -101,26 +104,71 @@ export function MarelleSite(props: SiteProps) {
               {l(UI.allServices)}
             </Link>
           </div>
-          <ul className="rounded-3xl bg-white px-6 py-2 shadow-[0_1px_3px_rgba(43,33,28,0.08)] lg:col-span-7">
-            {s.featured.map((it, i) => (
-              <Row key={i} it={it} />
+          <div className="grid gap-4 lg:col-span-7">
+            {t.services.groups.slice(0, 2).map((g, gi) => (
+              <div key={gi} className="rounded-3xl bg-white px-6 py-3 shadow-[0_1px_3px_rgba(43,33,28,0.08)]">
+                <h3 className={`${serif} pt-2 text-2xl`}>{l(g.name)}</h3>
+                <ul>
+                  {g.items.slice(0, 3).map((it, i) => (
+                    <Row key={i} it={it} />
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
-          <div className="grid grid-cols-3 gap-2 sm:gap-4">
-            {t.gallery.items.slice(0, 3).map((g, i) => (
-              <div key={i} className="aspect-square overflow-hidden rounded-2xl bg-[#E9DFC6]">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <h2 className={`${serif} text-4xl sm:text-5xl`}>{l(t.gallery.title)}</h2>
+            <Link href={s.href("bo-suu-tap")} className={`${pill} border border-[#2B211C]/25 hover:border-[#2B211C]`}>
+              {l(UI.viewGallery)}
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {t.gallery.items.slice(0, 6).map((g, i) => (
+              <div key={i} className={`overflow-hidden rounded-2xl bg-[#E9DFC6] ${i === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"} ${i > 4 ? "hidden" : ""}`}>
                 {s.art(g)}
               </div>
             ))}
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1100px] px-5 pb-20 sm:px-8">
-          <h2 className={`${serif} mb-6 text-center text-3xl sm:text-4xl`}>Spojte se s námi</h2>
-          <Info />
+        <section className="bg-[#DCE8E6]">
+          <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${serif} text-4xl sm:text-5xl`,
+                score: `${serif} text-6xl text-[#B8470B]`,
+                stars: "text-[#B8470B]",
+                card: "rounded-3xl bg-white p-6 shadow-[0_1px_3px_rgba(43,33,28,0.08)]",
+                quote: "text-[16px] leading-relaxed",
+                name: `${serif} text-xl`,
+                meta: `text-[14px] ${soft}`,
+              }}
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#F3EBD6", block: "#E9DFC6", road: "#FFFDF6", water: "#8FB0AD", park: "#C8DAD7", pin: "#B8470B", pinInk: "#FFF9E8", text: "#963805" }}
+            c={{
+              map: "rounded-3xl bg-white",
+              title: `${serif} text-4xl sm:text-5xl`,
+              label: "text-[13px] font-bold uppercase tracking-[0.06em] text-[#963805]",
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#E9DFC6]",
+              btn,
+              icon: "text-[#B8470B]",
+            }}
+          />
         </section>
       </>
     );
@@ -231,17 +279,20 @@ export function MarelleSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#2B211C] text-[#FFF9E8]">
-        <div className="mx-auto flex max-w-[1100px] flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row sm:px-8">
-          <p className={`${serif} text-3xl`}>{t.name.toLowerCase()}</p>
-          <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-4">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-11 items-center text-sm font-semibold hover:underline">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1100px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className={`${serif} text-5xl`}>{t.name.toLowerCase()}</p>
+            <p className="mt-2 text-[15px] text-[#E9DFC6]">{l(t.tagline)}</p>
+            <Link href={s.href("dat-lich")} className={`${btn} mt-6`}>
+              {l(t.bookLabel)}
+            </Link>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: "text-[13px] font-bold uppercase tracking-[0.08em] text-[#F3D3BF]", text: "text-[15px] text-[#E9DFC6]", link: "text-[15px] font-semibold hover:underline" }} />
         </div>
         <p className="border-t border-white/15 px-5 py-5 text-center text-[13px] text-[#E9DFC6]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#E9DFC6] bg-[#FFF9E8]/95 backdrop-blur text-[#2B211C]", btn, text: "", star: "text-[#B8470B]" }} />
+        )}
       </footer>
     </div>
   );

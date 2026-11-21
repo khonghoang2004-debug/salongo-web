@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontOnyx, fontOnyxSerif, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu Onyx (spa cao cấp) — học từ AVA Spa Four Seasons (dải than chì với tiêu đề in hoa giãn rộng, chữ thân serif lớn,
 // ảnh rộng, thanh "đặt lịch" dính đáy màn hình trên mobile) + SPA SPA (lưới khu/phòng có ảnh và tên).
@@ -16,6 +17,7 @@ export function OnyxSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Band = ({ title, sub }: { title: string; sub?: string }) => (
     <section className="bg-[#141312] px-5 py-14 text-center text-[#F4EEE6] sm:py-20">
@@ -71,6 +73,15 @@ export function OnyxSite(props: SiteProps) {
                 </Link>
               ))}
             </nav>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <Link href={s.href("dat-lich")} className={`${btnLight} !bg-[#E8DCC8] !text-[#141312] hover:!bg-white`}>
+                {l(t.bookLabel)}
+              </Link>
+              <Link href={s.href("dich-vu")} className={btnLight}>
+                {l(UI.priceList)}
+              </Link>
+            </div>
+            <RatingBadge x={x} locale={props.locale} className={`${serif} mt-6 justify-center text-[16px] italic text-[#E8DCC8]`} starClass="text-[#C9B99E] not-italic" />
           </div>
           <div className="mx-auto aspect-[4/3] max-w-[1280px] overflow-hidden bg-[#2A2622] sm:aspect-[21/9]">{s.art(t.home.hero, "", true)}</div>
         </section>
@@ -92,7 +103,12 @@ export function OnyxSite(props: SiteProps) {
               </Link>
             </div>
             <div className="lg:col-span-7">
-              <Menu items={s.featured} />
+              {t.services.groups.slice(0, 2).map((g, gi) => (
+                <div key={gi} className={gi ? "mt-10" : ""}>
+                  <h3 className={`${caps} text-[12px] text-[#8C7A5E]`}>{l(g.name)}</h3>
+                  <Menu items={g.items.slice(0, 3)} />
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -100,6 +116,59 @@ export function OnyxSite(props: SiteProps) {
         <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
           <h2 className={`${caps} mb-8 text-center text-xl`}>{l(t.about.title)}</h2>
           <Spaces />
+        </section>
+
+        <section className="mx-auto max-w-[1160px] px-5 pb-16 sm:px-8">
+          <h2 className={`${caps} mb-8 text-center text-xl`}>{l(t.gallery.title)}</h2>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {t.gallery.items.slice(0, 5).map((g, i) => (
+              <div key={i} className={`overflow-hidden bg-[#2A2622] ${i === 0 ? "col-span-2 aspect-[4/3] lg:row-span-2 lg:aspect-auto" : "aspect-square"} ${i > 2 ? "hidden lg:block" : ""}`}>
+                {s.art(g)}
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href={s.href("bo-suu-tap")} className={btnDark}>
+              {l(UI.viewGallery)}
+            </Link>
+          </div>
+        </section>
+
+        <section className="bg-[#2A2622] text-[#F4EEE6]">
+          <div className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8 sm:py-20">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${caps} text-xl`,
+                score: `${serif} text-6xl text-[#E8DCC8]`,
+                stars: "text-[#C9B99E]",
+                card: "border border-white/12 bg-[#141312]/40 p-6 sm:p-8",
+                quote: `${serif} text-[1.25rem] leading-relaxed`,
+                name: `${caps} text-[12px] text-[#E8DCC8]`,
+                meta: `${serif} text-[15px] italic text-[#C9B99E]`,
+              }}
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8 sm:py-20">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#2A2622", block: "#3A342E", road: "#4A433B", water: "#5E6B6A", park: "#3F4436", pin: "#E8DCC8", pinInk: "#141312", text: "#C9B99E" }}
+            c={{
+              map: "bg-[#2A2622]",
+              title: `${caps} text-xl`,
+              label: `${caps} text-[11px] text-[#8C7A5E]`,
+              text: "text-[18px]",
+              muted: soft,
+              row: "border-b border-[#D8CEC0]",
+              btn: btnDark,
+              icon: "text-[#8C7A5E]",
+            }}
+          />
         </section>
 
         <section className="bg-[#141312] px-5 py-16 text-center text-[#F4EEE6]">
@@ -229,16 +298,12 @@ export function OnyxSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#141312] text-[#E8DCC8]">
-        <div className="mx-auto flex max-w-[1160px] flex-col items-center gap-4 px-5 py-12 text-center sm:px-8">
-          <p className={`${caps} text-xl !tracking-[0.5em] text-[#F4EEE6]`}>Onyx</p>
-          <p className={`${serif} text-lg italic`}>{t.contact.address}</p>
-          <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-5">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${caps} inline-flex min-h-11 items-center text-[11px] hover:text-white`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1160px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className={`${caps} text-2xl !tracking-[0.5em] text-[#F4EEE6]`}>Onyx</p>
+            <p className={`${serif} mt-2 text-lg italic text-[#C9B99E]`}>{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${caps} text-[11px] text-[#C9B99E]`, text: `${serif} text-[17px]`, link: `${serif} text-[17px] hover:text-white` }} />
         </div>
         <p className="border-t border-white/10 px-5 py-5 text-center text-[13px] text-[#C9B99E]">{l(UI.disclaimer)}</p>
       </footer>

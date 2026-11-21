@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontKora, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu Kora (da & mày) — học từ SkinArth: xanh rừng + xám xanh, ô danh mục dạng tile, 4 bước "lần đầu đến salon" có số,
 // bảng giá theo nhóm có cột thời gian + giá trong khung viền, câu hỏi thường gặp dạng lưới, nút có icon tim.
@@ -16,6 +17,7 @@ export function KoraSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Steps = () => (
     <ol className="grid gap-4 md:grid-cols-4">
@@ -88,6 +90,7 @@ export function KoraSite(props: SiteProps) {
               <Heart className="size-4" aria-hidden />
               {l(t.bookLabel)}
             </Link>
+            <RatingBadge x={x} locale={props.locale} className="mt-5 text-[15px] text-white/90" starClass="text-[#E4E8E5]" />
           </div>
           <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="absolute bottom-0 block h-10 w-full" aria-hidden>
             <path d="M0 60 C 360 0 1080 0 1440 60 Z" fill="#fff" />
@@ -99,8 +102,8 @@ export function KoraSite(props: SiteProps) {
             {t.services.groups.map((g, i) => (
               <li key={i}>
                 <Link href={s.href("dich-vu")} className="group block text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1E352B]">
-                  <span className="mx-auto flex aspect-square max-w-[150px] items-center justify-center rounded-2xl text-2xl font-bold leading-[0.9] text-white transition-transform group-hover:-translate-y-1 motion-reduce:transition-none" style={{ backgroundColor: tiles[i % tiles.length] }}>
-                    {t.name}
+                  <span className="relative mx-auto block aspect-square max-w-[150px] overflow-hidden rounded-2xl transition-transform group-hover:-translate-y-1 motion-reduce:transition-none" style={{ backgroundColor: tiles[i % tiles.length] }}>
+                    {s.art(t.gallery.items[[1, 0, 2][i % 3]])}
                   </span>
                   <span className="mt-2 block text-[15px] font-medium">{l(g.name)}</span>
                 </Link>
@@ -132,8 +135,10 @@ export function KoraSite(props: SiteProps) {
         <section className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8">
           <h2 className="text-center text-2xl font-semibold sm:text-3xl">Kolik stojí krása, která vydrží</h2>
           <p className={`mt-2 text-center ${soft}`}>{l(t.services.lead)}</p>
-          <div className="mt-8">
-            <PriceBox g={{ name: t.services.title, items: s.featured }} />
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {t.services.groups.slice(0, 2).map((g, gi) => (
+              <PriceBox key={gi} g={{ ...g, items: g.items.slice(0, 4) }} />
+            ))}
           </div>
           <div className="mt-6 text-center">
             <Link href={s.href("dich-vu")} className={btn}>
@@ -141,6 +146,60 @@ export function KoraSite(props: SiteProps) {
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
+        </section>
+
+        <section className="bg-[#E4E8E5]">
+          <div className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+              <h2 className="text-2xl font-semibold sm:text-3xl">{l(t.gallery.title)}</h2>
+              <Link href={s.href("bo-suu-tap")} className="inline-flex min-h-11 items-center gap-2 font-medium underline underline-offset-4">
+                {l(UI.viewGallery)}
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+              {t.gallery.items.slice(0, 4).map((g, i) => (
+                <div key={i} className="aspect-[4/5] overflow-hidden rounded-2xl bg-[#C7CDC9]">
+                  {s.art(g)}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
+          <Reviews
+            x={x}
+            locale={props.locale}
+            c={{
+              title: "text-2xl font-semibold sm:text-3xl",
+              score: "text-6xl font-bold tracking-[-0.04em] text-[#1E352B]",
+              stars: "text-[#566A60]",
+              card: "rounded-2xl border border-[#C7CDC9] p-6",
+              quote: "text-[16px] leading-relaxed",
+              name: "font-semibold",
+              meta: `text-[14px] ${soft}`,
+            }}
+          />
+        </section>
+
+        <section className="mx-auto max-w-[1100px] px-5 pb-14 sm:px-8">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#E4E8E5", block: "#D3D9D5", road: "#FFFFFF", water: "#A9BDC2", park: "#C2D1C4", pin: "#1E352B", pinInk: "#FFFFFF", text: "#566A60" }}
+            c={{
+              map: "rounded-2xl",
+              title: "text-2xl font-semibold sm:text-3xl",
+              label: "text-[14px] font-semibold",
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#E4E8E5]",
+              btn,
+              icon: "text-[#566A60]",
+            }}
+          />
         </section>
 
         <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
@@ -274,20 +333,17 @@ export function KoraSite(props: SiteProps) {
       <main>{body}</main>
       <Wave />
       <footer className="bg-[#1E352B] text-white">
-        <div className="mx-auto flex max-w-[1160px] flex-col items-center gap-4 px-5 pb-8 pt-4 text-center sm:px-8">
-          <p className="text-3xl font-bold leading-none">{t.name}</p>
-          <p className="text-sm text-white/80">
-            {l(t.tagline)} · {t.contact.address}
-          </p>
-          <nav aria-label="Footer" className="flex flex-wrap justify-center gap-2">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-11 items-center rounded-lg px-3 text-sm hover:bg-white/10">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1160px] gap-10 px-5 pb-12 pt-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className="text-4xl font-bold leading-none">{t.name}</p>
+            <p className="mt-2 text-[15px] text-white/80">{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: "text-[14px] font-semibold text-[#C7CDC9]", text: "text-[15px] text-white/85", link: "text-[15px] hover:underline" }} />
         </div>
         <p className="border-t border-white/15 px-5 py-5 text-center text-[13px] text-white/75">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#C7CDC9] bg-white/95 backdrop-blur text-[#1E352B]", btn: `${btn} !min-h-11`, text: "", star: "text-[#566A60]" }} />
+        )}
       </footer>
     </div>
   );

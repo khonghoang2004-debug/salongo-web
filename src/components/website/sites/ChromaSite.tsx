@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontChromaNew, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu Chroma (nail bar) — làm lại 02/11/2026 theo xu hướng hiện nay: lưới "bento" ảnh lớn bo tròn, nền kem ấm,
 // màu mocha + vàng bơ, grotesk hiện đại chữ thường, nút viên thuốc. Bỏ kiểu neo-brutalist viền đen cũ.
@@ -17,6 +18,7 @@ export function ChromaSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
     <section className="mx-auto max-w-[1240px] px-4 pt-6 sm:px-6">
@@ -65,6 +67,7 @@ export function ChromaSite(props: SiteProps) {
                   <ArrowUpRight className="size-4" aria-hidden />
                 </Link>
               </div>
+              <RatingBadge x={x} locale={props.locale} className="mt-5 text-[14px] font-medium text-white/90" starClass="text-[#F3E3A1]" />
             </div>
           </div>
           <div className={`${tile} flex flex-col justify-between gap-6 bg-[#F3E3A1] p-7 lg:col-span-5`}>
@@ -98,8 +101,8 @@ export function ChromaSite(props: SiteProps) {
             </Link>
           </div>
           <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            {t.gallery.items.slice(1, 5).map((g, i) => (
-              <li key={i}>
+            {t.gallery.items.slice(1, 6).map((g, i) => (
+              <li key={i} className={i === 0 ? "col-span-2 row-span-2 [&>div]:aspect-auto [&>div]:h-[calc(100%-28px)] lg:col-span-2" : ""}>
                 <div className={`${tile} aspect-[3/4] bg-[#D8C3B3]`}>{s.art(g)}</div>
                 <p className="mt-2 px-1 text-sm font-medium">{l(g.alt)}</p>
               </li>
@@ -118,6 +121,45 @@ export function ChromaSite(props: SiteProps) {
           {t.services.groups.slice(0, 2).map((g, gi) => (
             <PriceCard key={gi} g={g} />
           ))}
+        </section>
+
+        <section className="mx-auto max-w-[1240px] px-4 pb-16 sm:px-6">
+          <div className={`${tile} bg-[#F3E3A1] p-6 sm:p-10`}>
+            <Reviews
+              x={x}
+              locale={props.locale}
+              title={l(UI.reviews).toLowerCase()}
+              c={{
+                title: "text-4xl font-semibold tracking-[-0.04em] sm:text-5xl",
+                score: "text-6xl font-semibold tracking-[-0.04em]",
+                stars: "text-[#8E6A56]",
+                card: "rounded-[22px] bg-white p-6",
+                quote: "text-[17px] font-medium leading-snug",
+                name: "font-semibold",
+                meta: `text-[14px] ${soft}`,
+              }}
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1240px] px-4 pb-16 sm:px-6">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            title={l(UI.findUs).toLowerCase()}
+            palette={{ land: "#EFE7DE", block: "#E2D6CC", road: "#FFFFFF", water: "#B7C7D9", park: "#D9DDB8", pin: "#2A211C", pinInk: "#F3E3A1", text: "#8E6A56" }}
+            c={{
+              map: tile,
+              title: "text-4xl font-semibold tracking-[-0.04em] sm:text-5xl",
+              label: "text-sm font-semibold text-[#8E6A56]",
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#E2D6CC]",
+              btn: btnDark,
+              icon: "text-[#8E6A56]",
+            }}
+          />
         </section>
         <Closing {...props} />
       </>
@@ -243,25 +285,17 @@ export function ChromaSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="mx-auto max-w-[1240px] px-4 pb-4 sm:px-6">
-        <div className={`${tile} grid gap-8 bg-[#2A211C] p-8 text-[#E2D6CC] md:grid-cols-3`}>
-          <p className="text-5xl font-bold tracking-[-0.05em] text-[#F5F0EA]">chroma.</p>
-          <div className="space-y-1 text-[15px]">
-            <p>{t.contact.address}</p>
-            {t.contact.hours.map((h, i) => (
-              <p key={i}>
-                {l(h.days)} · {h.time}
-              </p>
-            ))}
+        <div className={`${tile} grid gap-10 bg-[#2A211C] p-8 text-[#E2D6CC] sm:grid-cols-2 sm:p-10 lg:grid-cols-4`}>
+          <div>
+            <p className="text-5xl font-bold tracking-[-0.05em] text-[#F5F0EA]">chroma.</p>
+            <p className="mt-2 text-[15px]">{l(t.tagline)}</p>
           </div>
-          <nav aria-label="Footer" className="flex flex-wrap gap-2">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-11 items-center rounded-full bg-white/10 px-4 text-sm font-medium hover:bg-white/20">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: "text-sm font-semibold text-[#F3E3A1]", text: "text-[15px]", link: "text-[15px] font-medium hover:text-white" }} />
         </div>
         <p className={`px-2 py-5 text-center text-[13px] ${soft}`}>{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && (
+          <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#EFE7DE] bg-[#F5F0EA]/95 backdrop-blur text-[#2A211C]", btn: `${btnDark} !min-h-11`, text: "", star: "text-[#8E6A56]" }} />
+        )}
       </footer>
     </div>
   );

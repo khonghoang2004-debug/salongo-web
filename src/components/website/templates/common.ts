@@ -24,6 +24,13 @@ export const UI = {
   prev: { vi: "Ảnh trước", cs: "Předchozí", en: "Previous", de: "Zurück" },
   next: { vi: "Ảnh sau", cs: "Další", en: "Next", de: "Weiter" },
   call: { vi: "Gọi điện", cs: "Zavolat", en: "Call", de: "Anrufen" },
+  // Khối "như website thật" (sites/premium.tsx)
+  reviews: { vi: "Khách hàng nói gì", cs: "Co o nás říkají", en: "What clients say", de: "Das sagen unsere Kunden" },
+  ratings: { vi: "đánh giá", cs: "hodnocení", en: "reviews", de: "Bewertungen" },
+  findUs: { vi: "Đường đến salon", cs: "Kde nás najdete", en: "Find us", de: "So finden Sie uns" },
+  mapNote: { vi: "Bản đồ minh họa", cs: "Ilustrační mapa", en: "Illustrative map", de: "Illustrative Karte" },
+  online: { vi: "Đặt lịch online 24/7", cs: "Online rezervace 24/7", en: "Book online 24/7", de: "Online buchen 24/7" },
+  priceList: { vi: "Bảng giá", cs: "Ceník", en: "Price list", de: "Preisliste" },
   // Form đặt lịch minh hoạ
   form: {
     service: { vi: "Dịch vụ", cs: "Služba", en: "Service", de: "Leistung" },

@@ -247,4 +247,126 @@ export const EXTRAS: Record<string, Extras> = {
       { text: "Rychlé, čisté a přesné. Objednání online za minutu.", name: "My", service: "Úprava a barvení" },
     ],
   },
+  // Đợt 3 (kit)
+  "velour-nails": {
+    rating: "4,9",
+    count: 187,
+    transit: "Metro 4 minuty pěšky, tramvaj před domem",
+    area: "Nové Město",
+    reviews: [
+      { text: "Trang nakreslila na nehty malé kytičky přesně podle mé předlohy. Umělkyně.", name: "Nikola", service: "Zdobení" },
+      { text: "Gelová modeláž drží skvěle, tvar mandle přesně jak jsem chtěla.", name: "Kristýna", service: "Gelová modeláž" },
+      { text: "Sametové studio, příjemná hudba a čaj. Termín vždycky do týdne.", name: "Linh", service: "Manikúra s gel lakem" },
+    ],
+  },
+  "copper-barber": {
+    rating: "4,9",
+    count: 248,
+    transit: "Náměstí 3 minuty pěšky, parkování v ulici",
+    area: "Budějovice-střed",
+    reviews: [
+      { text: "Nejlepší fade ve městě. Lukáš si dá záležet na každém detailu.", name: "Adam", service: "Skin fade" },
+      { text: "Střih a vousy za hodinu, k tomu dobré kafe. Chodím každé tři týdny.", name: "Radek", service: "Střih a vousy" },
+      { text: "Syn se konečně nebojí stříhání. Trpěliví a vtipní barbeři.", name: "Pavel", service: "Dětský střih" },
+    ],
+  },
+  "lotus-thai": {
+    rating: "4,9",
+    count: 233,
+    transit: "Tramvaj 2 minuty pěšky, parkování ve dvoře",
+    area: "Liberec-centrum",
+    reviews: [
+      { text: "Tradiční thajská masáž jako v Bangkoku. Mali má neuvěřitelnou sílu i cit.", name: "Jiří", service: "Tradiční thajská masáž" },
+      { text: "Masáž bylinnými měšci voní ještě večer. Úžasný relax.", name: "Lenka", service: "Masáž bylinnými měšci" },
+      { text: "Krátká masáž nohou po práci, přesně to, co jsem potřebovala.", name: "Hương", service: "Masáž nohou" },
+    ],
+  },
+  "curl-club": {
+    rating: "4,9",
+    count: 179,
+    transit: "Tramvaj 3 minuty pěšky, centrum na dosah",
+    area: "Brno-střed",
+    reviews: [
+      { text: "Poprvé jsem odcházela s kudrlinami, které mají tvar. Střih na sucho je zázrak.", name: "Zuzana", service: "Curly střih na sucho" },
+      { text: "Konzultace mi vysvětlila, co dělám doma špatně. Vlasy jsou úplně jiné.", name: "Gábina", service: "Curly konzultace" },
+      { text: "Dcera má konečně ráda své kudrlinky. Děkujeme!", name: "Ivana", service: "Curly střih pro děti" },
+    ],
+  },
+  "bridal-suite": {
+    rating: "5,0",
+    count: 112,
+    transit: "Výjezd na místo po celé Praze, studio v centru",
+    area: "Staré Město",
+    reviews: [
+      { text: "Účes i líčení vydržely od obřadu až do půlnoci. Na fotkách jsem se poznala.", name: "Kateřina", service: "Balíček Nevěsta" },
+      { text: "Zkouška předem mi vzala všechny nervy. Ráno svatby proběhlo v klidu.", name: "Lea", service: "Zkouška účesu a líčení" },
+      { text: "Přijely až k nám na zámek a nalíčily i všechny družičky. Perfektní tým.", name: "Thu", service: "Líčení pro hosty" },
+    ],
+  },
+  "mono-nails": {
+    rating: "4,8",
+    count: 164,
+    transit: "Náměstí 2 minuty pěšky, parkování za domem",
+    area: "Hradec-centrum",
+    reviews: [
+      { text: "Čistý minimalistický styl a nehty bez chybičky. Hà je perfekcionistka.", name: "Alžběta", service: "Manikúra s gel lakem" },
+      { text: "Rychlá a přesná manikúra v pauze na oběd. Super.", name: "Monika", service: "Klasická manikúra" },
+      { text: "Pedikúra s gel lakem na celé léto. Moc příjemné studio.", name: "Šárka", service: "Pedikúra s gel lakem" },
+    ],
+  },
+  "gentlemans-club": {
+    rating: "4,9",
+    count: 286,
+    transit: "Metro 3 minuty pěšky, garáž za rohem",
+    area: "Staré Město",
+    reviews: [
+      { text: "Gentleman rituál je hodina a půl čistého luxusu. Ideální dárek.", name: "Richard", service: "Gentleman rituál" },
+      { text: "Otec a syn: oba ostříhaní, oba spokojení, a ještě limonáda pro malého.", name: "Daniel", service: "Otec a syn" },
+      { text: "Holení břitvou s horkým ručníkem. Pocit jako ve starém filmu.", name: "Vít", service: "Holení břitvou" },
+    ],
+  },
+  "riverside-spa": {
+    rating: "4,9",
+    count: 301,
+    transit: "Kolonáda 5 minut pěšky, parkování u hotelu",
+    area: "Karlovy Vary",
+    reviews: [
+      { text: "Wellness a masáž s výhledem na řeku. Víkend, na který nezapomeneme.", name: "Tereza", service: "Wellness a masáž" },
+      { text: "Privátní wellness pro dva bylo naprosto klidné, jen my a pára.", name: "Jan", service: "Privátní wellness pro dva" },
+      { text: "Masáž lávovými kameny bolavým zádům moc pomohla. Profesionální přístup.", name: "Věra", service: "Masáž lávovými kameny" },
+    ],
+  },
+  "aqua-pedi": {
+    rating: "4,9",
+    count: 258,
+    transit: "Autobus 2 minuty pěšky, parkování před domem",
+    area: "Pardubice",
+    reviews: [
+      { text: "Přístrojová pedikúra bez bolesti. Mai je velmi šetrná a pečlivá.", name: "Renata", service: "Přístrojová pedikúra" },
+      { text: "SPA pedikúra s koupelí a masáží, nohy jako nové.", name: "Dagmar", service: "SPA pedikúra" },
+      { text: "Chodím pravidelně každý měsíc. Vždy čisto a na čas.", name: "Olga", service: "Mokrá pedikúra" },
+    ],
+  },
+  "halo-color": {
+    rating: "4,8",
+    count: 171,
+    transit: "Metro 4 minuty pěšky, tramvaj před domem",
+    area: "Nusle",
+    reviews: [
+      { text: "Korekce barvy po domácím experimentu. Jitka mi zachránila vlasy.", name: "Petra", service: "Korekce barvy" },
+      { text: "Balayage s plánem na tři návštěvy. Výsledek přirozený a vlasy zdravé.", name: "Markéta", service: "Balayage" },
+      { text: "Test na pramenu předem a odbarvení bez lámání. Profesionálové.", name: "Nguyệt", service: "Odbarvení" },
+    ],
+  },
+  "mila-beauty": {
+    rating: "4,9",
+    count: 149,
+    transit: "Náměstí 3 minuty pěšky, parkování ve dvoře",
+    area: "Zlín",
+    reviews: [
+      { text: "Andrea mi doporučila péči na míru. Pleť je po měsíci klidná a zářivá.", name: "Hana", service: "Hydratační ošetření" },
+      { text: "Laminace obočí a masáž obličeje v jednom termínu. Skvělá hodinka pro sebe.", name: "Simona", service: "Laminace obočí" },
+      { text: "Útulný salon, kde se nikdo nespěchá. Doporučuji všem kamarádkám.", name: "Lan", service: "Masáž obličeje" },
+    ],
+  },
 };

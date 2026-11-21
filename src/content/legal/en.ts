@@ -407,7 +407,7 @@ export const en: LegalPack = {
     websiteTerms: {
       title: "Website Service Terms",
       description:
-        "Terms of the website offer for SalonGo customers ({price}, up to {pages} pages): scope, payment, timeline, revisions, acceptance, rights and hosting.",
+        "Terms of the website offer for SalonGo customers (from {price}, up to {pages} pages): scope, payment, timeline, revisions, acceptance, rights and hosting.",
       sections: [
         {
           heading: "1. Scope",
@@ -438,7 +438,7 @@ export const en: LegalPack = {
         {
           heading: "4. Price and payment",
           body: [
-            "The price is {price}, one-off, for building the website. The price is final.",
+            "The price starts at {price}, one-off, for building the website. The final price is quoted and agreed before work starts.",
             "The price is paid in advance after the order is confirmed, as stated in the confirmation. Work starts once payment and all materials are received.",
             "Domain and hosting are offered separately at the price in an individual quote.",
           ],

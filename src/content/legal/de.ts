@@ -407,7 +407,7 @@ export const de: LegalPack = {
     websiteTerms: {
       title: "Bedingungen für die Website-Erstellung",
       description:
-        "Bedingungen des Website-Angebots für SalonGo-Kunden ({price}, bis zu {pages} Seiten): Umfang, Zahlung, Fristen, Korrekturen, Abnahme, Rechte und Hosting.",
+        "Bedingungen des Website-Angebots für SalonGo-Kunden (ab {price}, bis zu {pages} Seiten): Umfang, Zahlung, Fristen, Korrekturen, Abnahme, Rechte und Hosting.",
       sections: [
         {
           heading: "1. Geltungsbereich",
@@ -438,7 +438,7 @@ export const de: LegalPack = {
         {
           heading: "4. Preis und Zahlung",
           body: [
-            "Der Preis beträgt einmalig {price} für die Erstellung der Website. Es handelt sich um einen Endpreis.",
+            "Der Preis beträgt einmalig ab {price} für die Erstellung der Website. Der Endpreis wird vor Beginn der Arbeit genannt und vereinbart.",
             "Der Preis ist nach Bestätigung der Bestellung im Voraus zu zahlen, wie in der Bestätigung angegeben. Die Arbeit beginnt nach Zahlungseingang und Erhalt aller Unterlagen.",
             "Domain und Hosting bietet SalonGo gesondert zum Preis eines individuellen Angebots an.",
           ],

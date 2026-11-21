@@ -409,7 +409,7 @@ export const vi: LegalPack = {
     websiteTerms: {
       title: "Điều khoản làm website",
       description:
-        "Điều khoản gói làm website cho khách hàng SalonGo ({price}, tối đa {pages} trang): phạm vi, thanh toán, thời gian, chỉnh sửa, nghiệm thu, quyền sử dụng và hosting.",
+        "Điều khoản gói làm website cho khách hàng SalonGo (từ {price}, tối đa {pages} trang): phạm vi, thanh toán, thời gian, chỉnh sửa, nghiệm thu, quyền sử dụng và hosting.",
       sections: [
         {
           heading: "1. Phạm vi áp dụng",
@@ -440,7 +440,7 @@ export const vi: LegalPack = {
         {
           heading: "4. Giá và thanh toán",
           body: [
-            "Giá làm website là {price}, trả một lần. Đây là giá cuối cùng.",
+            "Giá làm website từ {price}, trả một lần. Giá cuối cùng được báo và thống nhất trước khi bắt đầu làm.",
             "Thanh toán trước, sau khi đơn được xác nhận, theo cách ghi trong xác nhận. SalonGo bắt đầu làm khi đã nhận tiền và đủ tài liệu.",
             "Tên miền và hosting SalonGo báo giá riêng.",
           ],

@@ -5,7 +5,8 @@ import { CONTACT_FACEBOOK, CONTACT_INSTAGRAM, CONTACT_PHONE } from "./contact";
  * Sửa giá / số trang ở đây: mọi chữ trên trang lấy số từ hai hằng này (messages dùng {price}, {pages}).
  * Chưa có dữ liệu VAT → không ghi "đã gồm" hay "chưa gồm" VAT ở bất kỳ đâu.
  */
-export const WEBSITE_PRICE_KC = 999;
+/** Starting price ("từ / from / od / ab"): owner 2026-11-21, was 999 Kč. */
+export const WEBSITE_PRICE_KC = 4999;
 export const WEBSITE_MAX_PAGES = 5;
 
 /** "999 Kč", "1 290 Kč": khoảng trắng không ngắt giữa số và Kč (cách viết tiếng Séc) */

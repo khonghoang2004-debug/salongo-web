@@ -412,7 +412,7 @@ export const cs: LegalPack = {
     websiteTerms: {
       title: "Podmínky tvorby webových stránek",
       description:
-        "Podmínky nabídky webových stránek pro zákazníky SalonGo ({price}, až {pages} stránek): rozsah, platba, termíny, úpravy, převzetí, práva k webu a hosting.",
+        "Podmínky nabídky webových stránek pro zákazníky SalonGo (od {price}, až {pages} stránek): rozsah, platba, termíny, úpravy, převzetí, práva k webu a hosting.",
       sections: [
         {
           heading: "1. O co jde",
@@ -443,7 +443,7 @@ export const cs: LegalPack = {
         {
           heading: "4. Cena a platba",
           body: [
-            "Cena je {price} jednorázově za tvorbu webu. Cena je konečná.",
+            "Cena je od {price} jednorázově za tvorbu webu. Konečnou cenu sdělíme a odsouhlasíme před zahájením práce.",
             "Cena se platí předem, po potvrzení objednávky, způsobem uvedeným v potvrzení. Práce začnou po připsání platby a doručení podkladů.",
             "Doménu a hosting nabízí SalonGo samostatně za cenu uvedenou v individuální nabídce.",
           ],

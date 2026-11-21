@@ -98,7 +98,7 @@ export default async function Home({ params }: Props) {
         // Dịch vụ làm website cho khách SalonGo (chi tiết: JSON-LD Service trên trang /website)
         makesOffer: {
           "@type": "Offer",
-          price: 999,
+          price: 4999,
           priceCurrency: "CZK",
           url: `${pageUrl}/website`,
           itemOffered: { "@id": `${pageUrl}/website#service` },

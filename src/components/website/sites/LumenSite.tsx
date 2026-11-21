@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontLumen, fontLumenSans, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 5 — Maison Lumen: hair couture kiểu tạp chí thời trang. Ngà / đen mực / đỏ rượu vang,
 // serif tương phản cao cỡ lớn, đường kẻ mảnh, chú thích "Look 01", bảng giá 3 cấp thợ.
@@ -18,6 +19,7 @@ export function LumenSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
   const tiers = (t.services.tiers ?? []).map(l);
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
@@ -76,6 +78,12 @@ export function LumenSite(props: SiteProps) {
             <p className={`${label} hidden sm:block`}>{l(t.tagline)}</p>
           </div>
           <h1 className={`${serif} mt-6 max-w-[14ch] text-[3.25rem] font-light leading-[0.98] tracking-[-0.035em] sm:text-[6rem] lg:text-[8.5rem]`}>{l(t.home.title)}</h1>
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <Link href={s.href("dat-lich")} className={`${btn} lg:hidden`}>
+              {l(t.bookLabel)}
+            </Link>
+            <RatingBadge x={x} locale={props.locale} className={`${sans} text-[15px] ${soft}`} starClass={wine} />
+          </div>
         </section>
         <section className="mx-auto grid max-w-[1280px] gap-10 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:py-16">
           <figure className="lg:col-span-7">
@@ -116,8 +124,8 @@ export function LumenSite(props: SiteProps) {
               </Link>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
-              {t.gallery.items.slice(0, 3).map((g, i) => (
-                <figure key={i} className={i === 2 ? "hidden lg:block" : ""}>
+              {t.gallery.items.slice(0, 6).map((g, i) => (
+                <figure key={i} className={i > 3 ? "hidden lg:block" : ""}>
                   <div className="aspect-[3/4] overflow-hidden bg-[#2A2422]">{s.art(g)}</div>
                   <figcaption className={`mt-3 ${label} text-[#CFC6B6]`}>{l(g.alt)}</figcaption>
                 </figure>
@@ -129,13 +137,48 @@ export function LumenSite(props: SiteProps) {
           <div className="grid gap-8 lg:grid-cols-12">
             <h2 className={`${serif} text-4xl font-light sm:text-6xl lg:col-span-4`}>{l(t.services.title)}</h2>
             <div className="lg:col-span-8">
-              <TierTable groups={[{ name: t.services.groups[0].name, items: s.featured }]} />
+              <TierTable groups={t.services.groups.slice(0, 2).map((g) => ({ ...g, items: g.items.slice(0, 3) }))} />
               <Link href={s.href("dich-vu")} className={`${link} mt-6`}>
                 {l(UI.allServices)}
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
           </div>
+        </section>
+        <section className="border-y border-[#141414] bg-[#EFE8DC]">
+          <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:py-20">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${serif} text-4xl font-light italic sm:text-6xl`,
+                score: `${serif} text-6xl font-light ${wine}`,
+                stars: wine,
+                card: "border-t border-[#141414] pt-6",
+                quote: `${serif} text-[1.35rem] font-light leading-snug`,
+                name: label,
+                meta: `text-[14px] ${soft}`,
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:py-20">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#EFE8DC", block: "#E2D8C8", road: "#F6F2EA", water: "#C4C9CC", park: "#D6D3BE", pin: "#6E1F2A", pinInk: "#F6F2EA", text: "#6E1F2A" }}
+            c={{
+              map: "",
+              title: `${serif} text-4xl font-light sm:text-6xl`,
+              label: `${label} ${wine}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#CFC6B6]",
+              btn,
+              icon: wine,
+            }}
+          />
         </section>
         <Closing {...props} />
       </>
@@ -264,24 +307,19 @@ export function LumenSite(props: SiteProps) {
       <main>{body}</main>
       <footer className="bg-[#141414] text-[#E6DED0]">
         <div className="mx-auto max-w-[1280px] px-5 pt-14 sm:px-8">
-          <div className="grid gap-8 text-[15px] sm:grid-cols-3">
-            <p>{t.contact.address}</p>
-            <p>
-              {t.contact.hours.map((h) => `${l(h.days)} · ${h.time}`).join(" / ")}
-            </p>
-            <nav aria-label="Footer" className="flex flex-wrap gap-x-5">
-              {s.nav.map((n) => (
-                <Link key={n.href} href={n.href} className={`${label} inline-flex min-h-11 items-center hover:text-white`}>
-                  {n.label}
-                </Link>
-              ))}
-            </nav>
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p className={`${serif} text-4xl font-light italic text-[#F6F2EA]`}>{t.name}</p>
+              <p className="mt-2 text-[15px]">{l(t.tagline)}</p>
+            </div>
+            <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${label} text-[#E7B8BF]`, text: "text-[15px]", link: `${label} hover:text-white` }} />
           </div>
           <p className={`${serif} mt-10 overflow-hidden whitespace-nowrap text-[17vw] font-light italic leading-[0.9] tracking-[-0.04em] text-[#F6F2EA] lg:text-[12rem]`} aria-hidden>
             Lumen
           </p>
         </div>
         <p className="border-t border-white/15 px-5 py-5 text-center text-[13px] text-[#BDB4A6]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#141414] bg-[#F6F2EA]/95 backdrop-blur text-[#141414]", btn: `${btn} !min-h-11 !px-5`, text: "", star: wine }} />}
       </footer>
     </div>
   );

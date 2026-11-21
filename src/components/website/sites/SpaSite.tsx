@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontSpa, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 3 — Saluna: beauty & spa. Trắng ấm / sage / olive / màu đá, chữ serif mềm, khung vòm, bo tròn lớn, nhiều khoảng thở.
 const serif = fontSpa.className;
@@ -17,6 +18,7 @@ export function SpaSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const PageHead = ({ title, lead }: { title: string; lead: string }) => (
     <section className="mx-auto max-w-2xl px-5 pb-12 pt-14 text-center sm:pt-20">
@@ -53,6 +55,7 @@ export function SpaSite(props: SiteProps) {
               {l(t.nav["dich-vu"])}
             </Link>
           </div>
+          <RatingBadge x={x} locale={props.locale} className={`mt-6 justify-center text-[15px] ${soft}`} starClass="text-[#7C8A62]" />
         </section>
         <section className="mx-auto mt-14 grid max-w-[1160px] grid-cols-12 items-end gap-3 px-5 sm:gap-5 sm:px-8">
           <div className="col-span-3 hidden aspect-[3/4] overflow-hidden rounded-t-full bg-[#ECE5D8] sm:block">{s.art(t.gallery.items[1])}</div>
@@ -82,7 +85,7 @@ export function SpaSite(props: SiteProps) {
           <div className="mx-auto max-w-[1160px] px-5 sm:px-8">
             <h2 className={`${serif} text-center text-[2rem] sm:text-[2.5rem]`}>{l(t.nav["dich-vu"])}</h2>
             <ul className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-3">
-              {s.featured.map((it, i) => (
+              {t.services.groups.flatMap((g) => g.items.slice(0, 2)).slice(0, 6).map((it, i) => (
                 <Treatment key={i} it={it} />
               ))}
             </ul>
@@ -92,6 +95,56 @@ export function SpaSite(props: SiteProps) {
               </Link>
             </div>
           </div>
+        </section>
+        <section className="mx-auto max-w-[1160px] px-5 py-20 sm:px-8">
+          <h2 className={`${serif} text-center text-[2rem] sm:text-[2.5rem]`}>{l(t.gallery.title)}</h2>
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            {t.gallery.items.slice(0, 4).map((g, i) => (
+              <div key={i} className={`aspect-[3/4] overflow-hidden bg-[#ECE5D8] ${i % 2 ? "rounded-[28px]" : "rounded-t-full"}`}>
+                {s.art(g)}
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href={s.href("bo-suu-tap")} className={btnGhost}>
+              {l(UI.viewGallery)}
+            </Link>
+          </div>
+        </section>
+        <section className="bg-[#F4F0E7] py-20">
+          <div className="mx-auto max-w-[1160px] px-5 sm:px-8">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${serif} text-[2rem] sm:text-[2.5rem]`,
+                score: `${serif} text-6xl ${olive}`,
+                stars: "text-[#7C8A62]",
+                card: "rounded-[28px] bg-[#FAF7F1] p-6 sm:p-7",
+                quote: `${serif} text-[1.2rem] leading-relaxed`,
+                name: "font-medium",
+                meta: `text-[14px] ${soft}`,
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1160px] px-5 py-20 sm:px-8">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#F1ECE1", block: "#E3DCCB", road: "#FAF7F1", water: "#B9C7BF", park: "#CBD2B8", pin: "#566043", pinInk: "#FAF7F1", text: "#566043" }}
+            c={{
+              map: "rounded-[28px]",
+              title: `${serif} text-[2rem] sm:text-[2.5rem]`,
+              label: `text-sm tracking-[0.18em] ${olive}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#E3DCCB]",
+              btn,
+              icon: olive,
+            }}
+          />
         </section>
         <Closing {...props} />
       </>
@@ -253,20 +306,15 @@ export function SpaSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#EEE9DE]">
-        <div className="mx-auto flex max-w-[1160px] flex-col items-center gap-6 px-5 py-14 text-center sm:px-8">
-          <p className={`${serif} text-4xl italic`}>saluna</p>
-          <p className={`text-sm ${soft}`}>
-            {l(t.tagline)} · {t.contact.address}
-          </p>
-          <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-5">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-11 items-center text-[15px] hover:underline">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1160px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className={`${serif} text-4xl italic`}>saluna</p>
+            <p className={`mt-2 text-[15px] ${soft}`}>{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `text-sm tracking-[0.18em] ${olive}`, text: `text-[15px] ${soft}`, link: "text-[15px] hover:underline" }} />
         </div>
         <p className={`border-t border-[#DDD6C8] px-5 py-5 text-center text-[13px] ${soft}`}>{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#ECE6DA] bg-[#FAF7F1]/95 backdrop-blur text-[#39392F]", btn: `${btn} !min-h-11`, text: "", star: "text-[#7C8A62]" }} />}
       </footer>
     </div>
   );

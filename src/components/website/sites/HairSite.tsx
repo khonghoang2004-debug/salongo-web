@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontHair, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 2 — Verra: hair studio hiện đại. Cream / espresso / than chì, điểm nhấn đồng, bố cục lệch, số thứ tự lớn.
 const g = fontHair.className;
@@ -17,6 +18,7 @@ export function HairSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Num = ({ n, label, light }: { n: string; label: string; light?: boolean }) => (
     <p className={`${g} flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.16em] ${light ? "text-[#CDB58A]" : brassText}`}>
@@ -54,6 +56,7 @@ export function HairSite(props: SiteProps) {
                 {l(t.nav["dich-vu"])}
               </Link>
             </div>
+            <RatingBadge x={x} locale={props.locale} className="mt-7 text-[15px] text-[#E4D9CB]" starClass="text-[#CDB58A]" />
           </div>
         </section>
 
@@ -64,15 +67,20 @@ export function HairSite(props: SiteProps) {
             <p className={`mt-5 text-[17px] leading-relaxed ${soft}`}>{l(t.home.intro.text)}</p>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
-            <ul className="border-t-2 border-[#2B2B2B]">
-              {s.featured.map((it, i) => (
-                <li key={i} className="grid grid-cols-[1fr_auto] gap-x-4 border-b border-[#D6CABB] py-5">
-                  <span className={`${g} text-xl font-medium`}>{l(it.name)}</span>
-                  <span className={`${g} text-xl font-medium`}>{s.price(it.price, it.from)}</span>
-                  <span className={`text-sm ${soft}`}>{s.dur(it.min)}</span>
-                </li>
-              ))}
-            </ul>
+            {t.services.groups.slice(0, 2).map((grp, gi) => (
+              <div key={gi} className={gi ? "mt-10" : ""}>
+                <p className={`${g} mb-3 text-sm font-medium uppercase tracking-[0.12em] ${brassText}`}>{l(grp.name)}</p>
+                <ul className="border-t-2 border-[#2B2B2B]">
+                  {grp.items.slice(0, 3).map((it, i) => (
+                    <li key={i} className="grid grid-cols-[1fr_auto] gap-x-4 border-b border-[#D6CABB] py-5">
+                      <span className={`${g} text-xl font-medium`}>{l(it.name)}</span>
+                      <span className={`${g} text-xl font-medium`}>{s.price(it.price, it.from)}</span>
+                      <span className={`text-sm ${soft}`}>{s.dur(it.min)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
             <Link href={s.href("dich-vu")} className={`${g} mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-medium uppercase tracking-[0.12em] underline-offset-4 hover:underline`}>
               {l(UI.allServices)}
               <ArrowUpRight className="size-4" aria-hidden />
@@ -106,10 +114,47 @@ export function HairSite(props: SiteProps) {
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
             <div className="col-span-2 aspect-[16/10] overflow-hidden bg-[#D9CCBA] lg:col-span-7 lg:aspect-auto lg:h-[460px]">{s.art(t.gallery.items[1])}</div>
             <div className="aspect-[3/4] overflow-hidden bg-[#D9CCBA] lg:col-span-5 lg:aspect-auto lg:h-[460px]">{s.art(t.gallery.items[2])}</div>
-            <div className="aspect-[3/4] overflow-hidden bg-[#D9CCBA] lg:hidden">{s.art(t.gallery.items[3])}</div>
+            <div className="aspect-[3/4] overflow-hidden bg-[#D9CCBA] lg:col-span-4 lg:aspect-[4/3]">{s.art(t.gallery.items[3])}</div>
+            <div className="aspect-[3/4] overflow-hidden bg-[#D9CCBA] lg:col-span-4 lg:aspect-[4/3]">{s.art(t.gallery.items[4])}</div>
+            <div className="col-span-2 aspect-[16/10] overflow-hidden bg-[#D9CCBA] lg:col-span-4 lg:aspect-[4/3]">{s.art(t.gallery.items[0])}</div>
           </div>
         </section>
 
+        <section className="bg-[#2B2B2B] text-[#F3EDE4]">
+          <div className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 lg:py-20">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${g} text-[2.25rem] font-bold uppercase leading-none sm:text-5xl`,
+                score: `${g} text-6xl font-bold text-[#CDB58A]`,
+                stars: "text-[#CDB58A]",
+                card: "border border-[#4A4440] p-6 sm:p-8",
+                quote: "text-[17px] leading-relaxed text-[#E4D9CB]",
+                name: `${g} font-medium uppercase tracking-[0.08em]`,
+                meta: "text-[14px] text-[#BDB2A5]",
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 lg:py-24">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#E7DED1", block: "#D9CCBA", road: "#F3EDE4", water: "#B4BFC2", park: "#CFCDB4", pin: "#3B2A22", pinInk: "#CDB58A", text: "#7A5C34" }}
+            c={{
+              map: "",
+              title: `${g} text-[2.25rem] font-bold uppercase leading-none sm:text-5xl`,
+              label: `${g} text-sm font-medium uppercase tracking-[0.12em] ${brassText}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#D6CABB]",
+              btn,
+              icon: brassText,
+            }}
+          />
+        </section>
         <Closing {...props} />
       </>
     );
@@ -253,28 +298,15 @@ export function HairSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#2B2B2B] text-[#E4D9CB]">
-        <div className="mx-auto grid max-w-[1240px] gap-10 px-5 py-14 sm:px-8 md:grid-cols-12">
-          <div className="md:col-span-5">
+        <div className="mx-auto grid max-w-[1240px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
             <p className={`${g} text-5xl font-bold uppercase tracking-[0.04em] text-[#F3EDE4]`}>Verra</p>
             <p className="mt-2 text-sm text-[#CDB58A]">{l(t.tagline)}</p>
           </div>
-          <div className="space-y-2 text-[15px] md:col-span-4">
-            <p>{t.contact.address}</p>
-            {t.contact.hours.map((h, i) => (
-              <p key={i}>
-                {l(h.days)} · {h.time}
-              </p>
-            ))}
-          </div>
-          <nav aria-label="Footer" className="flex flex-col items-start md:col-span-3">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${g} inline-flex min-h-10 items-center text-sm uppercase tracking-[0.1em] hover:text-white`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${g} text-sm font-medium uppercase tracking-[0.12em] text-[#CDB58A]`, text: "text-[15px]", link: `${g} text-sm uppercase tracking-[0.1em] hover:text-white` }} />
         </div>
         <p className="border-t border-[#4A4440] px-5 py-5 text-center text-[13px] text-[#BDB2A5]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#4A4440] bg-[#2B2B2B]/95 backdrop-blur text-[#F3EDE4]", btn: `${btnLight} !min-h-11 !bg-[#CDB58A] !text-[#2B2B2B]`, text: "", star: "text-[#CDB58A]" }} />}
       </footer>
     </div>
   );

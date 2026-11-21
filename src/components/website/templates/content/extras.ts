@@ -369,4 +369,71 @@ export const EXTRAS: Record<string, Extras> = {
       { text: "Útulný salon, kde se nikdo nespěchá. Doporučuji všem kamarádkám.", name: "Lan", service: "Masáž obličeje" },
     ],
   },
+  // Đợt 4 (6 mẫu riêng)
+  "ivelle-nail": {
+    rating: "4,9",
+    count: 297,
+    transit: "Tramvaj 2 minuty pěšky, parkování v ulici",
+    area: "Vinohrady",
+    reviews: [
+      { text: "Linh vytvarovala mandle, které vypadají jako moje vlastní nehty, jen hezčí.", name: "Klára", service: "Gelová modeláž" },
+      { text: "Nude odstín vybraný se mnou a vydržel tři týdny bez jediného odštípnutí.", name: "Tereza", service: "Manikúra s gel lakem" },
+      { text: "Mai maluje drobné detaily úplně ručně. Nikde jinde jsem to neviděla.", name: "Huyền", service: "Zdobení nehtů" },
+    ],
+  },
+  "verra-hair": {
+    rating: "4,8",
+    count: 214,
+    transit: "Tramvaj 3 minuty pěšky, parkování v ulici",
+    area: "Holešovice",
+    reviews: [
+      { text: "Klára mi ustřihla bob, který drží tvar i bez žehličky.", name: "Barbora", service: "Dámský střih" },
+      { text: "Balayage od Adama vypadá přirozeně a odrůstá bez ostré linky.", name: "Martina", service: "Balayage" },
+      { text: "Vy mi udělala svatební drdol, který vydržel celý den i tanec.", name: "Lenka", service: "Svatební účes" },
+    ],
+  },
+  "saluna-spa": {
+    rating: "4,9",
+    count: 188,
+    transit: "Tramvaj 2 minuty pěšky, park hned vedle",
+    area: "Smíchov",
+    reviews: [
+      { text: "Thu masíruje pomalu a s teplým olejem. Hodina, kdy svět neexistuje.", name: "Ivana", service: "Relaxační masáž" },
+      { text: "Ošetření pleti od Hany a pleť září ještě týden potom.", name: "Kateřina", service: "Ošetření pleti" },
+      { text: "Klidné prostředí, čaj a žádný spěch. Dárkový poukaz pro mámu byl trefa.", name: "Ondřej", service: "Dárkový poukaz" },
+    ],
+  },
+  "brass-barber": {
+    rating: "4,9",
+    count: 342,
+    transit: "Metro 3 minuty pěšky, parkování v ulici",
+    area: "Staré Město",
+    reviews: [
+      { text: "Tomáš dělá nejčistší fade, jaký jsem kdy měl. Chodím už druhý rok.", name: "Jakub", service: "Fade" },
+      { text: "Holení břitvou u Duca s horkým ručníkem je zážitek. Doporučuji.", name: "Lukáš", service: "Holení břitvou" },
+      { text: "Klasický střih nůžkami do práce, přesně podle domluvy.", name: "Ondřej", service: "Střih nůžkami" },
+    ],
+  },
+  "lumen-hair": {
+    rating: "4,9",
+    count: 233,
+    transit: "Metro 2 minuty pěšky, garáž za rohem",
+    area: "Staré Město",
+    reviews: [
+      { text: "Eliška mi navrhla strukturovaný bob a dostávám na něj komplimenty každý den.", name: "Nikola", service: "Střih · art director" },
+      { text: "Hoa trefila studenou blond bez jediného žlutého tónu.", name: "Andrea", service: "Balayage" },
+      { text: "Styling na firemní večírek od Jana byl přesně to, co jsem chtěl.", name: "Filip", service: "Styling na akce" },
+    ],
+  },
+  "velvet-lash": {
+    rating: "4,9",
+    count: 205,
+    transit: "Tramvaj 2 minuty pěšky, obchody v okolí",
+    area: "Žižkov",
+    reviews: [
+      { text: "Anh udělala lehký objem do kočičích očí. Vypadá to úžasně a přirozeně.", name: "Simona", service: "Objem řas" },
+      { text: "Laminace obočí od Kláry: tvar drží a nemusím nic dokreslovat.", name: "Petra", service: "Laminace obočí" },
+      { text: "Krásné sametové studio a lehátko, na kterém se dá usnout.", name: "Diệp", service: "Prodlužování řas" },
+    ],
+  },
 };

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontNail, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 1 — Ivelle: nail atelier. Ivory / nude / taupe / champagne, serif mảnh, nhiều khoảng trắng, khung vòm.
 const ink = "text-[#3A302A]";
@@ -17,6 +18,7 @@ export function NailSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const Title = ({ children }: { children: React.ReactNode }) => (
     <h1 className={`${serif} text-[2.75rem] leading-[1.02] sm:text-6xl lg:text-[4.5rem]`}>{children}</h1>
@@ -40,7 +42,7 @@ export function NailSite(props: SiteProps) {
         <span className="mb-1 flex-1 border-b border-dotted border-[#BFA98F]" aria-hidden />
         <span className="whitespace-nowrap text-[15px] font-medium">{value}</span>
       </div>
-      <p className={`mt-1 text-sm ${soft}`}>
+      <p className={`mt-1 text-[15px] ${soft}`}>
         {desc ? `${desc} · ` : ""}
         {s.dur(min)}
       </p>
@@ -67,6 +69,7 @@ export function NailSite(props: SiteProps) {
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
+            <RatingBadge x={x} locale={props.locale} className={`mt-8 text-[15px] ${soft}`} starClass="text-[#C9AE82]" />
           </div>
           <div className="lg:col-span-6">
             <div className="relative mx-auto max-w-[460px]">
@@ -104,17 +107,25 @@ export function NailSite(props: SiteProps) {
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
-          <ul className="divide-y divide-[#EADFD2] lg:col-span-7">
-            {s.featured.map((it, i) => (
-              <PriceRow key={i} name={l(it.name)} desc={it.desc && l(it.desc)} min={it.min} value={s.price(it.price, it.from)} />
+          <div className="space-y-10 lg:col-span-7">
+            {t.services.groups.slice(0, 2).map((g, gi) => (
+              <div key={gi}>
+                <h3 className={`text-xs uppercase tracking-[0.3em] ${soft}`}>{l(g.name)}</h3>
+                <ul className="mt-2 divide-y divide-[#EADFD2]">
+                  {g.items.slice(0, 3).map((it, i) => (
+                    <PriceRow key={i} name={l(it.name)} desc={it.desc && l(it.desc)} min={it.min} value={s.price(it.price, it.from)} />
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8 lg:pb-24">
+          <h2 className={`${serif} mb-8 text-center text-[2rem] leading-tight sm:text-[2.75rem]`}>{l(t.gallery.title)}</h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
-            {t.gallery.items.slice(0, 3).map((g, i) => (
-              <div key={i} className={`overflow-hidden bg-[#EFE5D9] ${i === 1 ? "rounded-t-full" : "rounded-2xl"} ${i === 2 ? "hidden sm:block" : ""} aspect-[3/4]`}>
+            {t.gallery.items.slice(0, 6).map((g, i) => (
+              <div key={i} className={`overflow-hidden bg-[#EFE5D9] ${i % 3 === 1 ? "rounded-t-full" : "rounded-2xl"} ${i > 3 ? "hidden sm:block" : ""} aspect-[3/4]`}>
                 {s.art(g)}
               </div>
             ))}
@@ -127,6 +138,41 @@ export function NailSite(props: SiteProps) {
           </div>
         </section>
 
+        <section className="border-y border-[#EADFD2] bg-[#F3ECE2]">
+          <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-20">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${serif} text-[2rem] leading-tight sm:text-[2.75rem]`,
+                score: `${serif} text-6xl`,
+                stars: "text-[#C9AE82]",
+                card: "rounded-2xl border border-[#E7DCCE] bg-[#FBF8F3] p-6 sm:p-8",
+                quote: `${serif} text-[1.3rem] leading-snug`,
+                name: "text-[15px] font-medium",
+                meta: `text-[14px] ${soft}`,
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#F3ECE2", block: "#EADFD2", road: "#FBF8F3", water: "#D5DCD6", park: "#E2E2CF", pin: "#4A3D34", pinInk: "#FBF7F1", text: "#8C7357" }}
+            c={{
+              map: "rounded-t-[200px] rounded-b-2xl",
+              title: `${serif} text-[2rem] leading-tight sm:text-[2.75rem]`,
+              label: `text-xs uppercase tracking-[0.3em] ${soft}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#EADFD2]",
+              btn,
+              icon: "text-[#C9AE82]",
+            }}
+          />
+        </section>
         <Closing {...props} />
       </>
     );
@@ -258,21 +304,15 @@ export function NailSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="border-t border-[#EADFD2] bg-[#F1E8DD]">
-        <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 sm:px-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
           <div>
             <p className={`${serif} text-3xl tracking-[0.18em]`}>IVELLE</p>
             <p className={`mt-2 text-sm ${soft}`}>{l(t.tagline)}</p>
           </div>
-          <Info {...props} compact />
-          <nav aria-label="Footer" className="flex flex-col items-start gap-1">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className="inline-flex min-h-10 items-center text-[15px] hover:underline">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `text-xs uppercase tracking-[0.3em] ${soft}`, text: "text-[15px]", link: "text-[15px] hover:underline" }} />
         </div>
         <p className={`border-t border-[#E3D7C8] px-5 py-5 text-center text-[13px] ${soft}`}>{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#EADFD2] bg-[#FBF8F3]/95 backdrop-blur text-[#3A302A]", btn: `${btn} !min-h-11`, text: "", star: "text-[#C9AE82]" }} />}
       </footer>
     </div>
   );

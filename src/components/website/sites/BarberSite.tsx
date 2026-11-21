@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontBarber, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 4 — Brass & Walnut: barbershop cao cấp. Than chì (không đen đặc) xen nền kem, gỗ óc chó, đồng trầm, chữ hẹp đậm.
 const o = `${fontBarber.className} uppercase`;
@@ -20,6 +21,7 @@ export function BarberSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   const PageHead = ({ title, lead }: { title: string; lead: string }) => (
     <section className="bg-[#2A2826] text-[#F1E9DC]">
@@ -66,6 +68,7 @@ export function BarberSite(props: SiteProps) {
                   {l(t.nav["dich-vu"])}
                 </Link>
               </div>
+              <RatingBadge x={x} locale={props.locale} className="mt-7 text-[15px] text-[#D8CCBD]" starClass={bronzeLight} />
             </div>
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-[420px] pr-4 pt-4">
@@ -98,7 +101,7 @@ export function BarberSite(props: SiteProps) {
           <div className="rounded-[6px] border-2 border-[#2A2826] p-5 sm:p-8 lg:col-span-7">
             <p className={`${o} text-center text-sm tracking-[0.3em] ${bronze}`}>{l(t.nav["dich-vu"])}</p>
             <ul className="mt-2 divide-y divide-[#DDD0BE]">
-              {s.featured.map((it, i) => (
+              {t.services.groups.flatMap((g) => g.items.slice(0, 3)).slice(0, 6).map((it, i) => (
                 <MenuRow key={i} it={it} />
               ))}
             </ul>
@@ -121,6 +124,56 @@ export function BarberSite(props: SiteProps) {
               ))}
             </ul>
           </div>
+        </section>
+        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className={`${o} text-4xl font-semibold sm:text-5xl`}>{l(t.gallery.title)}</h2>
+            <Link href={s.href("bo-suu-tap")} className={`${o} inline-flex min-h-11 items-center text-sm tracking-[0.12em] underline underline-offset-4`}>
+              {l(UI.viewGallery)}
+            </Link>
+          </div>
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {t.gallery.items.slice(0, 5).map((g, i) => (
+              <div key={i} className={`overflow-hidden rounded-[4px] bg-[#3A3330] ${i === 0 ? "col-span-2 aspect-[16/10] lg:row-span-2 lg:aspect-auto" : "aspect-square"} ${i > 2 ? "hidden lg:block" : ""}`}>
+                {s.art(g)}
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="bg-[#5C3F2C] text-[#F1E9DC]">
+          <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-20">
+            <Reviews
+              x={x}
+              locale={props.locale}
+              c={{
+                title: `${o} text-4xl font-semibold sm:text-5xl`,
+                score: `${o} text-6xl font-semibold text-[#F3D4AE]`,
+                stars: "text-[#F3D4AE]",
+                card: "rounded-[4px] border border-[#7A5A44] bg-[#2A2826]/40 p-6 sm:p-8",
+                quote: "text-[17px] leading-relaxed text-[#F1E9DC]",
+                name: `${o} tracking-[0.08em]`,
+                meta: "text-[14px] text-[#EADCCB]",
+              }}
+            />
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#3A3330", block: "#4A423D", road: "#5C534D", water: "#4F5B5E", park: "#4A4A38", pin: "#A7743F", pinInk: "#1F1B19", text: "#D9A86F" }}
+            c={{
+              map: "rounded-[6px] border-2 border-[#2A2826]",
+              title: `${o} text-4xl font-semibold sm:text-5xl`,
+              label: `${o} text-sm tracking-[0.2em] ${bronze}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#DDD0BE]",
+              btn: btnDark,
+              icon: bronze,
+            }}
+          />
         </section>
         <Closing {...props} />
       </>
@@ -267,28 +320,15 @@ export function BarberSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#2A2826] text-[#D8CCBD]">
-        <div className="mx-auto grid max-w-[1200px] gap-8 px-5 py-14 sm:px-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
           <div>
             <p className={`${o} text-3xl font-semibold tracking-[0.08em] text-[#F1E9DC]`}>Brass &amp; Walnut</p>
             <p className={`mt-1 text-sm ${bronzeLight}`}>{l(t.tagline)}</p>
           </div>
-          <div className="space-y-1 text-[15px]">
-            <p>{t.contact.address}</p>
-            {t.contact.hours.map((h, i) => (
-              <p key={i}>
-                {l(h.days)} · {h.time}
-              </p>
-            ))}
-          </div>
-          <nav aria-label="Footer" className="flex flex-col items-start">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${o} inline-flex min-h-10 items-center text-[15px] tracking-[0.1em] hover:text-white`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${o} text-sm tracking-[0.2em] ${bronzeLight}`, text: "text-[15px]", link: `${o} text-[15px] tracking-[0.1em] hover:text-white` }} />
         </div>
         <p className="border-t border-[#4A423D] px-5 py-5 text-center text-[13px] text-[#BFB3A5]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#4A423D] bg-[#2A2826]/95 backdrop-blur text-[#F1E9DC]", btn: `${btn} !min-h-11`, text: "", star: "text-[#D9A86F]" }} />}
       </footer>
     </div>
   );

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { DemoBookingForm, DemoLightbox, DemoNav, DemoPhone } from "../templates/DemoUI";
 import { UI } from "../templates/common";
 import { fontVelvet, fontVelvetSans, site, type SiteProps } from "./shared";
+import { extrasOf, FooterCols, MobileBookBar, RatingBadge, Reviews, Visit } from "./premium";
 
 // Mẫu 6 — Velvet: lash & brow. Blush / ngà / mận, Playfair nghiêng cỡ lớn + Josefin Sans in hoa,
 // khung oval, nút viên thuốc, nền blush xen ngà.
@@ -19,6 +20,7 @@ export function VelvetSite(props: SiteProps) {
   const { t, page } = props;
   const s = site(props);
   const { l } = s;
+  const x = extrasOf(t.slug);
 
   // Tiêu đề: nửa sau in nghiêng (dấu phẩy hoặc nửa số từ)
   const Title = ({ text, size = "lg" }: { text: string; size?: "lg" | "md" }) => {
@@ -77,6 +79,7 @@ export function VelvetSite(props: SiteProps) {
                 {l(t.nav["dich-vu"])}
               </Link>
             </div>
+            <RatingBadge x={x} locale={props.locale} className={`${sans} mt-7 text-[15px] ${soft}`} starClass={rose} />
           </div>
           <div className="relative mx-auto w-full max-w-[460px]">
             <div className="aspect-[3/4] overflow-hidden rounded-[999px] bg-[#EBCFC7]">{s.art(t.home.hero, "", true)}</div>
@@ -114,11 +117,66 @@ export function VelvetSite(props: SiteProps) {
             </div>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
-            <Menu items={s.featured} />
+            {t.services.groups.slice(0, 2).map((g, gi) => (
+              <div key={gi} className={gi ? "mt-10" : ""}>
+                <p className={`${label} ${rose}`}>{l(g.name)}</p>
+                <Menu items={g.items.slice(0, 3)} />
+              </div>
+            ))}
             <Link href={s.href("dich-vu")} className={`${btnGhost} mt-8`}>
               {l(UI.allServices)}
             </Link>
           </div>
+        </section>
+        <section className="bg-[#FFF8F5]">
+          <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-20">
+            <h2 className={`${serif} text-center text-[2.25rem] italic sm:text-5xl`}>{l(t.gallery.title)}</h2>
+            <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+              {[0, 4, 5, 1].map((gi, i) => (
+                <div key={gi} className={`aspect-[3/4] overflow-hidden rounded-[999px] bg-[#EBCFC7] ${i % 2 ? "lg:mt-10" : ""}`}>
+                  {s.art(t.gallery.items[gi])}
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link href={s.href("bo-suu-tap")} className={btnGhost}>
+                {l(UI.viewGallery)}
+              </Link>
+            </div>
+          </div>
+        </section>
+        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+          <Reviews
+            x={x}
+            locale={props.locale}
+            c={{
+              title: `${serif} text-[2.25rem] italic sm:text-5xl`,
+              score: `${serif} text-6xl italic ${rose}`,
+              stars: rose,
+              card: "rounded-[32px] bg-[#FFF8F5] p-6 sm:p-8",
+              quote: `${serif} text-[1.25rem] leading-snug`,
+              name: label,
+              meta: `text-[14px] ${soft}`,
+            }}
+          />
+        </section>
+        <section className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8 lg:pb-24">
+          <Visit
+            tpl={t}
+            locale={props.locale}
+            bookHref={s.href("dat-lich")}
+            palette={{ land: "#FAEFEB", block: "#EED8D1", road: "#FFF8F5", water: "#C9C6D6", park: "#E2DCC8", pin: "#3F1D2E", pinInk: "#FFF8F5", text: "#8E4459" }}
+            c={{
+              map: "rounded-[32px]",
+              title: `${serif} text-[2.25rem] italic sm:text-5xl`,
+              label: `${label} ${rose}`,
+              text: "text-[16px]",
+              muted: soft,
+              row: "border-b border-[#EBCFC7]",
+              btn,
+              icon: rose,
+            }}
+          />
         </section>
         <Closing {...props} />
       </>
@@ -250,20 +308,15 @@ export function VelvetSite(props: SiteProps) {
       />
       <main>{body}</main>
       <footer className="bg-[#3F1D2E] text-[#F3DCD6]">
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 px-5 py-14 text-center sm:px-8">
-          <p className={`${serif} text-5xl italic text-[#FFF8F5]`}>Velvet.</p>
-          <p className="text-sm">
-            {l(t.tagline)} · {t.contact.address}
-          </p>
-          <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-5">
-            {s.nav.map((n) => (
-              <Link key={n.href} href={n.href} className={`${label} inline-flex min-h-11 items-center hover:text-white`}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+          <div>
+            <p className={`${serif} text-5xl italic text-[#FFF8F5]`}>Velvet.</p>
+            <p className="mt-2 text-[15px]">{l(t.tagline)}</p>
+          </div>
+          <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${label} text-[#E2C2BA]`, text: "text-[15px]", link: `${label} hover:text-white` }} />
         </div>
         <p className="border-t border-white/15 px-5 py-5 text-center text-[13px] text-[#E2C2BA]">{l(UI.disclaimer)}</p>
+        {page !== "dat-lich" && <MobileBookBar href={s.href("dat-lich")} label={l(t.bookLabel)} x={x} locale={props.locale} c={{ bar: "border-t border-[#EBCFC7] bg-[#FFF8F5]/95 backdrop-blur text-[#3F1D2E]", btn: `${btn} !min-h-11 !px-6`, text: "", star: rose }} />}
       </footer>
     </div>
   );

@@ -2258,6 +2258,9 @@
     "thanksLead": "We have received your payment. The invoice is on its way by e-mail.",
     "thanksBack": "Back to Web Studio",
     "noteMonthly": "Renews monthly, cancel any time",
-    "noteYearly": "Pay once a year, save 2 months"
+    "noteYearly": "Pay once a year, save 2 months",
+    "payTitle": "Hosting payment",
+    "payBack": "Back to plans",
+    "payFallback": "The payment form could not load. Click here to pay on Stripe."
   }
 }

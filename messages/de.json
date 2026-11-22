@@ -2258,6 +2258,9 @@
     "thanksLead": "Wir haben Ihre Zahlung erhalten. Die Rechnung kommt per E-Mail.",
     "thanksBack": "Zurück zum Web Studio",
     "noteMonthly": "Verlängert sich monatlich, jederzeit kündbar",
-    "noteYearly": "Einmal im Jahr zahlen, 2 Monate sparen"
+    "noteYearly": "Einmal im Jahr zahlen, 2 Monate sparen",
+    "payTitle": "Hosting bezahlen",
+    "payBack": "Zurück zu den Tarifen",
+    "payFallback": "Das Zahlungsformular konnte nicht laden. Hier klicken, um bei Stripe zu zahlen."
   }
 }

@@ -13,11 +13,14 @@
     "messages:check": "node scripts/merge-messages.mjs --check"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^7.1.0",
+    "@stripe/stripe-js": "^10.3.0",
     "lucide-react": "^0.576.0",
     "next": "^16.4.5",
     "next-intl": "^4.14.10",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "stripe": "^23.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",

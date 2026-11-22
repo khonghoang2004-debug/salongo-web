@@ -2258,6 +2258,9 @@
     "thanksLead": "Chúng tôi đã nhận thanh toán. Hoá đơn được gửi qua email.",
     "thanksBack": "Về trang Web Studio",
     "noteMonthly": "Tự gia hạn mỗi tháng, huỷ bất cứ lúc nào",
-    "noteYearly": "Trả một lần mỗi năm, rẻ hơn 2 tháng"
+    "noteYearly": "Trả một lần mỗi năm, rẻ hơn 2 tháng",
+    "payTitle": "Thanh toán hosting",
+    "payBack": "Quay lại các gói",
+    "payFallback": "Không mở được khung thanh toán. Bấm vào đây để thanh toán trên Stripe."
   }
 }

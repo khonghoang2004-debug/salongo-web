@@ -2258,6 +2258,9 @@
     "thanksLead": "Platbu jsme přijali. Faktura vám přijde e-mailem.",
     "thanksBack": "Zpět na Web Studio",
     "noteMonthly": "Obnovuje se každý měsíc, zrušíte kdykoli",
-    "noteYearly": "Platíte jednou ročně, 2 měsíce ušetříte"
+    "noteYearly": "Platíte jednou ročně, 2 měsíce ušetříte",
+    "payTitle": "Platba za hosting",
+    "payBack": "Zpět na tarify",
+    "payFallback": "Platbu se nepodařilo načíst. Klikněte sem a zaplaťte na Stripe."
   }
 }

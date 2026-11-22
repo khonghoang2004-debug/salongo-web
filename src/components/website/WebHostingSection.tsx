@@ -2,16 +2,12 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Lock } from "lucide-react";
 import { WEBSITE_PRICE_KC, formatKc } from "@/lib/website-offer";
 import { HostingPlans, type HostingPlan } from "./HostingPlans";
+import { HOSTING_LINKS as LINKS, HOSTING_PRICES as PRICES, embeddedCheckoutReady, type HostingCycle, type HostingPlanKey } from "@/lib/hosting-plans";
 
 /**
  * "Hosting & bảo trì" on /website (PREVIEW, owner prices 2026-11-22): monthly / yearly hosting paid by card through
- * Stripe Payment Links (auto-renew, cancel any time, paused after 14 unpaid days; success page /website/cam-on).
+ * Stripe (in-page Embedded Checkout when keys are set, else Payment Links; auto-renew, cancel any time, paused after 14 unpaid days; success page /website/cam-on).
  */
-const PRICES = { basic: { m: 299, y: 2999 }, pro: { m: 999, y: 9999 } };
-const LINKS = {
-  basic: { m: "https://buy.stripe.com/5kQ28j23m6594qKbRw8k803", y: "https://buy.stripe.com/00wcMX4bu8dh1eyg7M8k805" },
-  pro: { m: "https://buy.stripe.com/bJefZ9eQ8eBFf5oaNs8k801", y: "https://buy.stripe.com/3cIdR123mdxB4qKg7M8k802" },
-};
 /** Stripe Customer Portal (billing.stripe.com/p/login/…); empty until the owner sends it. */
 const PORTAL_URL = "";
 const BANDS = {
@@ -24,18 +20,20 @@ export async function WebHostingSection() {
   const locale = await getLocale();
   const money = (n: number) => (locale === "en" || locale === "de" ? `${n.toLocaleString("cs-CZ").replace(/\s/g, "\u00a0")} CZK` : formatKc(n));
   const faq = t.raw("faq") as { q: string; a: string }[];
-  const link = (u: string) => `${u}?locale=${locale}`;
+  // In-page checkout once the Stripe keys are on Vercel; until then the Payment Links (new tab not needed).
+  const inPage = embeddedCheckoutReady();
+  const href = (plan: HostingPlanKey, cycle: HostingCycle) => (inPage ? `/${locale}/website/thanh-toan?plan=${plan}&cycle=${cycle}` : `${LINKS[plan][cycle]}?locale=${locale}`);
   const base = [t("inc.domain"), t("inc.hosting"), t("inc.ssl")];
   const plans: HostingPlan[] = [
-    { key: "basic", name: t("planBasic"), forWhom: t("forBasic"), monthly: money(PRICES.basic.m), yearly: money(PRICES.basic.y), monthlyUrl: link(LINKS.basic.m), yearlyUrl: link(LINKS.basic.y), band: BANDS.basic, inc: base },
+    { key: "basic", name: t("planBasic"), forWhom: t("forBasic"), monthly: money(PRICES.basic.m), yearly: money(PRICES.basic.y), monthlyUrl: href("basic", "m"), yearlyUrl: href("basic", "y"), band: BANDS.basic, inc: base },
     {
       key: "pro",
       name: t("planPro"),
       forWhom: t("forPro"),
       monthly: money(PRICES.pro.m),
       yearly: money(PRICES.pro.y),
-      monthlyUrl: link(LINKS.pro.m),
-      yearlyUrl: link(LINKS.pro.y),
+      monthlyUrl: href("pro", "m"),
+      yearlyUrl: href("pro", "y"),
       band: BANDS.pro,
       featured: true,
       intro: t("everythingIn"),

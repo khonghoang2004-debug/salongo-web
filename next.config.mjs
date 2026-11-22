@@ -30,15 +30,17 @@ const isDev = process.env.NODE_ENV === "development";
 const isPreview = process.env.VERCEL_ENV === "preview";
 const onVercel = Boolean(process.env.VERCEL);
 const preview = (...src) => (isPreview ? src : []);
+// Stripe Embedded Checkout (hosting payment on /website/thanh-toan): js.stripe.com script + iframes, api.stripe.com calls.
+const STRIPE = { script: ["https://js.stripe.com"], frame: ["https://js.stripe.com", "https://checkout.stripe.com", "https://hooks.stripe.com"], connect: ["https://api.stripe.com", "https://checkout.stripe.com"] };
 const CSP = [
   ["default-src", "'self'"],
-  ["script-src", "'self'", "'unsafe-inline'", ...(isDev ? ["'unsafe-eval'"] : []), ...preview("https://vercel.live")],
+  ["script-src", "'self'", "'unsafe-inline'", ...(isDev ? ["'unsafe-eval'"] : []), ...STRIPE.script, ...preview("https://vercel.live")],
   ["style-src", "'self'", "'unsafe-inline'", ...preview("https://vercel.live")],
-  ["img-src", "'self'", "data:", "blob:", ...preview("https://vercel.live", "https://vercel.com")],
+  ["img-src", "'self'", "data:", "blob:", "https://*.stripe.com", ...preview("https://vercel.live", "https://vercel.com")],
   ["font-src", "'self'", "data:", ...preview("https://vercel.live", "https://assets.vercel.com")],
   ["media-src", "'self'"],
-  ["connect-src", "'self'", ...(isDev ? ["ws:"] : []), ...preview("https://vercel.live", "wss://ws-us3.pusher.com")],
-  ["frame-src", ...(isPreview ? ["https://vercel.live"] : ["'none'"])],
+  ["connect-src", "'self'", ...(isDev ? ["ws:"] : []), ...STRIPE.connect, ...preview("https://vercel.live", "wss://ws-us3.pusher.com")],
+  ["frame-src", ...STRIPE.frame, ...preview("https://vercel.live")],
   ["worker-src", "'self'", "blob:"],
   ["manifest-src", "'self'"],
   ["form-action", "'self'"],

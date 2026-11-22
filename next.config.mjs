@@ -32,6 +32,7 @@ const onVercel = Boolean(process.env.VERCEL);
 const preview = (...src) => (isPreview ? src : []);
 // Stripe Embedded Checkout (hosting payment on /website/thanh-toan): js.stripe.com script + iframes, api.stripe.com calls.
 const STRIPE = { script: ["https://js.stripe.com"], frame: ["https://js.stripe.com", "https://checkout.stripe.com", "https://hooks.stripe.com"], connect: ["https://api.stripe.com", "https://checkout.stripe.com"] };
+const HOSTING_SHORT = { 299: "plan=basic&cycle=m", 2999: "plan=basic&cycle=y", 999: "plan=pro&cycle=m", 9999: "plan=pro&cycle=y" };
 const CSP = [
   ["default-src", "'self'"],
   ["script-src", "'self'", "'unsafe-inline'", ...(isDev ? ["'unsafe-eval'"] : []), ...STRIPE.script, ...preview("https://vercel.live")],
@@ -92,6 +93,12 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Short hosting links the owner sends to customers: salongo.eu/hosting-999 (or /cs/hosting-999) opens the
+      // in-page checkout of that exact plan (299 / 2999 = Hosting month / year, 999 / 9999 = + content edits).
+      ...Object.entries(HOSTING_SHORT).flatMap(([price, q]) => [
+        { source: `/hosting-${price}`, destination: `/vi/website/thanh-toan?${q}`, permanent: false },
+        { source: `/:locale(vi|cs|en|de)/hosting-${price}`, destination: `/:locale/website/thanh-toan?${q}`, permanent: false },
+      ]),
       ...Object.entries(OLD_IMAGES).map(([from, to]) => ({
         source: `/images/${from}.webp`,
         destination: `/images/app/${to}.webp`,

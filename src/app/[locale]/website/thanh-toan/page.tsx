@@ -38,12 +38,26 @@ export default async function HostingPayPage({ params, searchParams }: Props) {
           <p className="mt-1 text-[15px] text-muted">
             {price} {cycle === "y" ? t("perYear") : t("perMonth")} · {cycle === "y" ? t("noteYearly") : t("noteMonthly")}
           </p>
-          <p className="mt-2 flex items-center gap-1.5 text-[13.5px] text-muted">
+          <div className="mt-4 inline-flex rounded-full bg-porcelain p-1 ring-1 ring-black/[0.06]">
+            {(["m", "y"] as const).map((c) => (
+              <Link
+                key={c}
+                href={`/website/thanh-toan?plan=${plan}&cycle=${c}`}
+                replace
+                aria-current={c === cycle ? "page" : undefined}
+                className={`inline-flex min-h-9 items-center rounded-full px-4 text-[14px] font-semibold ${c === cycle ? "bg-white text-ink shadow-[0_2px_8px_-3px_rgba(0,0,0,0.25)]" : "text-muted"}`}
+              >
+                {c === "y" ? t("yearly") : t("monthly")}
+                {c === "y" ? <span className="ml-1.5 rounded-full bg-emerald-600/10 px-2 py-0.5 text-[12px] text-emerald-700">{t("yearGift")}</span> : null}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-3 flex items-center gap-1.5 text-[13.5px] text-muted">
             <Lock className="size-3.5" aria-hidden />
             {t("secure")}
           </p>
           <div className="mt-6 rounded-[22px] bg-white py-2 ring-1 ring-line">
-            <HostingCheckout plan={plan} cycle={cycle} locale={locale} fallbackUrl={fallbackUrl} errorText={t("payFallback")} />
+            <HostingCheckout key={`${plan}-${cycle}`} plan={plan} cycle={cycle} locale={locale} fallbackUrl={fallbackUrl} errorText={t("payFallback")} />
           </div>
         </div>
       </section>

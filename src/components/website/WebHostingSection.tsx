@@ -25,7 +25,7 @@ export async function WebHostingSection() {
   const money = (n: number) => (locale === "en" || locale === "de" ? `${n.toLocaleString("cs-CZ").replace(/\s/g, "\u00a0")} CZK` : formatKc(n));
   const faq = t.raw("faq") as { q: string; a: string }[];
   const link = (u: string) => `${u}?locale=${locale}`;
-  const base = [t("inc.domain"), t("inc.hosting"), t("inc.ssl"), t("inc.backup")];
+  const base = [t("inc.domain"), t("inc.hosting"), t("inc.ssl")];
   const plans: HostingPlan[] = [
     { key: "basic", name: t("planBasic"), forWhom: t("forBasic"), monthly: money(PRICES.basic.m), yearly: money(PRICES.basic.y), monthlyUrl: link(LINKS.basic.m), yearlyUrl: link(LINKS.basic.y), band: BANDS.basic, inc: base },
     {

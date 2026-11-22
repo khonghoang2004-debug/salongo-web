@@ -2226,5 +2226,53 @@
       "cta": "Kostenlos testen",
       "link": "Preise ansehen"
     }
+  },
+  "webHosting": {
+    "eyebrow": "Hosting & Pflege",
+    "title": "Ihre Website läuft – sorgenfrei",
+    "lead": "Monatlich oder jährlich, automatisch per Karte. Jederzeit kündbar.",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "perMonth": "/ Monat",
+    "perYear": "/ Jahr",
+    "yearGift": "2 Monate gratis",
+    "planBasic": "Hosting",
+    "planPro": "Hosting + Inhaltsänderungen",
+    "forBasic": "Für eine fertige Website mit wenigen Änderungen",
+    "forPro": "Für Salons, die Preise, Fotos und Leistungen oft ändern",
+    "recommended": "Empfohlen",
+    "everythingIn": "Alles aus Hosting, dazu:",
+    "inc": {
+      "domain": ".cz-Domain",
+      "hosting": "Schnelles, stabiles Hosting",
+      "ssl": "SSL-Sicherheit (https)",
+      "backup": "Automatische Backups",
+      "edits": "Inhaltsänderungen auf Wunsch: Texte, Fotos, Preise, Leistungen",
+      "sameDay": "Am selben Tag erledigt"
+    },
+    "cta": "Hosting abonnieren",
+    "ctaSoon": "Zahlung bald verfügbar",
+    "manage": "Zahlung verwalten",
+    "manageNote": "Karte ändern, Rechnungen laden oder kündigen.",
+    "secure": "Sichere Zahlung über Stripe.",
+    "buildFee": "Die Erstellung der Website wird einmalig separat bezahlt (Überweisung), ab {price}.",
+    "faqTitle": "Fragen zum Hosting",
+    "faq": [
+      {
+        "q": "Wann wird abgebucht?",
+        "a": "Das Abo verlängert sich automatisch monatlich oder jährlich und wird am Tag der Bestellung von der Karte abgebucht."
+      },
+      {
+        "q": "Wie kündige ich?",
+        "a": "Jederzeit unter Zahlung verwalten. Die Website läuft bis zum Ende des bezahlten Zeitraums."
+      },
+      {
+        "q": "Was, wenn die Karte abgelehnt wird?",
+        "a": "Stripe versucht es erneut und schickt eine E-Mail. Nach 14 Tagen ohne Zahlung wird die Website pausiert und läuft nach der Zahlung sofort wieder."
+      }
+    ],
+    "thanksTitle": "Danke für Ihr Hosting-Abo",
+    "thanksLead": "Wir haben Ihre Zahlung erhalten. Die Rechnung kommt per E-Mail.",
+    "thanksBack": "Zurück zum Web Studio"
   }
 }

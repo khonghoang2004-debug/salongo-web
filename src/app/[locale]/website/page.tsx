@@ -14,6 +14,7 @@ import { tr } from "@/components/website/templates/types";
 import { LivePreview, type LiveItem } from "@/components/website/LivePreview";
 import { DevicePhone } from "@/components/landing/Shots";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
+import { WebHostingSection } from "@/components/website/WebHostingSection";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -226,6 +227,9 @@ export default async function WebsitePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* 5b. Hosting & bảo trì: trả hàng tháng qua Stripe (bản xem trước, giá chờ chốt) */}
+      <WebHostingSection />
 
       {/* 6. Hỏi đáp */}
       <section className="x-section-tight bg-porcelain" aria-labelledby="faq-title">

@@ -2226,5 +2226,53 @@
       "cta": "Dùng thử miễn phí",
       "link": "Xem bảng giá"
     }
+  },
+  "webHosting": {
+    "eyebrow": "Hosting & bảo trì",
+    "title": "Web luôn chạy, bạn không phải lo",
+    "lead": "Trả theo tháng hoặc năm, tự trừ qua thẻ. Huỷ khi nào cũng được.",
+    "monthly": "Tháng",
+    "yearly": "Năm",
+    "perMonth": "/ tháng",
+    "perYear": "/ năm",
+    "yearGift": "tặng 2 tháng",
+    "planBasic": "Hosting",
+    "planPro": "Hosting + sửa nội dung",
+    "forBasic": "Cho web đã xong, ít thay đổi",
+    "forPro": "Cho salon hay đổi giá, ảnh, dịch vụ",
+    "recommended": "Nên chọn",
+    "everythingIn": "Mọi thứ trong gói Hosting, thêm:",
+    "inc": {
+      "domain": "Tên miền .cz",
+      "hosting": "Hosting nhanh, ổn định",
+      "ssl": "Bảo mật SSL (https)",
+      "backup": "Sao lưu tự động",
+      "edits": "Sửa nội dung khi bạn cần: chữ, ảnh, giá, dịch vụ",
+      "sameDay": "Xử lý trong ngày"
+    },
+    "cta": "Đăng ký hosting",
+    "ctaSoon": "Sắp mở thanh toán",
+    "manage": "Quản lý thanh toán",
+    "manageNote": "Đổi thẻ, tải hoá đơn hoặc huỷ.",
+    "secure": "Thanh toán an toàn qua Stripe.",
+    "buildFee": "Phí làm web trả riêng một lần (chuyển khoản), từ {price}.",
+    "faqTitle": "Hỏi nhanh về hosting",
+    "faq": [
+      {
+        "q": "Tiền được trừ khi nào?",
+        "a": "Gói tự gia hạn mỗi tháng hoặc mỗi năm, tiền tự trừ qua thẻ vào đúng ngày bạn đăng ký."
+      },
+      {
+        "q": "Huỷ thế nào?",
+        "a": "Huỷ bất cứ lúc nào trong trang Quản lý thanh toán. Web vẫn chạy đến hết kỳ đã trả."
+      },
+      {
+        "q": "Nếu thẻ bị từ chối thì sao?",
+        "a": "Stripe tự thử lại và gửi email nhắc. Quá 14 ngày chưa trả, web tạm dừng và chạy lại ngay khi thanh toán xong."
+      }
+    ],
+    "thanksTitle": "Cảm ơn bạn đã đăng ký hosting",
+    "thanksLead": "Chúng tôi đã nhận thanh toán. Hoá đơn được gửi qua email.",
+    "thanksBack": "Về trang Web Studio"
   }
 }

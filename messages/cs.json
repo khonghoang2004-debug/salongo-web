@@ -2226,5 +2226,53 @@
       "cta": "Vyzkoušet zdarma",
       "link": "Ceník"
     }
+  },
+  "webHosting": {
+    "eyebrow": "Hosting a správa",
+    "title": "Web běží, vy se nestaráte",
+    "lead": "Platba měsíčně nebo ročně, automaticky z karty. Zrušit můžete kdykoli.",
+    "monthly": "Měsíčně",
+    "yearly": "Ročně",
+    "perMonth": "/ měsíc",
+    "perYear": "/ rok",
+    "yearGift": "2 měsíce zdarma",
+    "planBasic": "Hosting",
+    "planPro": "Hosting + úpravy obsahu",
+    "forBasic": "Pro hotový web, který se málo mění",
+    "forPro": "Pro salony, které často mění ceny, fotky a služby",
+    "recommended": "Doporučujeme",
+    "everythingIn": "Vše z tarifu Hosting, navíc:",
+    "inc": {
+      "domain": "Doména .cz",
+      "hosting": "Rychlý a stabilní hosting",
+      "ssl": "Zabezpečení SSL (https)",
+      "backup": "Automatické zálohy",
+      "edits": "Úpravy obsahu na požádání: texty, fotky, ceny, služby",
+      "sameDay": "Vyřízeno ještě ten den"
+    },
+    "cta": "Objednat hosting",
+    "ctaSoon": "Platba brzy spuštěna",
+    "manage": "Správa platby",
+    "manageNote": "Změna karty, faktury nebo zrušení.",
+    "secure": "Bezpečná platba přes Stripe.",
+    "buildFee": "Tvorba webu se platí zvlášť jednorázově (převodem), od {price}.",
+    "faqTitle": "Otázky k hostingu",
+    "faq": [
+      {
+        "q": "Kdy se platba strhává?",
+        "a": "Tarif se automaticky obnovuje každý měsíc nebo rok a platba se strhne z karty v den objednávky."
+      },
+      {
+        "q": "Jak zrušit?",
+        "a": "Kdykoli ve Správě platby. Web běží až do konce zaplaceného období."
+      },
+      {
+        "q": "Co když karta neprojde?",
+        "a": "Stripe platbu zopakuje a pošle upozornění. Po 14 dnech bez platby se web pozastaví a po zaplacení hned znovu běží."
+      }
+    ],
+    "thanksTitle": "Děkujeme za objednávku hostingu",
+    "thanksLead": "Platbu jsme přijali. Faktura vám přijde e-mailem.",
+    "thanksBack": "Zpět na Web Studio"
   }
 }

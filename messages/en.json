@@ -2226,5 +2226,53 @@
       "cta": "Start free trial",
       "link": "See pricing"
     }
+  },
+  "webHosting": {
+    "eyebrow": "Hosting & care",
+    "title": "Your site stays online, worry-free",
+    "lead": "Pay monthly or yearly, charged to your card automatically. Cancel any time.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": "/ month",
+    "perYear": "/ year",
+    "yearGift": "2 months free",
+    "planBasic": "Hosting",
+    "planPro": "Hosting + content edits",
+    "forBasic": "For a finished site that rarely changes",
+    "forPro": "For salons that often update prices, photos and services",
+    "recommended": "Recommended",
+    "everythingIn": "Everything in Hosting, plus:",
+    "inc": {
+      "domain": ".cz domain",
+      "hosting": "Fast, reliable hosting",
+      "ssl": "SSL security (https)",
+      "backup": "Automatic backups",
+      "edits": "Content edits on request: text, photos, prices, services",
+      "sameDay": "Done the same day"
+    },
+    "cta": "Subscribe to hosting",
+    "ctaSoon": "Payment opens soon",
+    "manage": "Manage payment",
+    "manageNote": "Change card, download invoices or cancel.",
+    "secure": "Secure payment by Stripe.",
+    "buildFee": "Building the website is a separate one-time fee (bank transfer), from {price}.",
+    "faqTitle": "Hosting questions",
+    "faq": [
+      {
+        "q": "When am I charged?",
+        "a": "Your plan renews automatically every month or year and is charged to your card on the day you subscribed."
+      },
+      {
+        "q": "How do I cancel?",
+        "a": "Any time in Manage payment. Your site stays online until the end of the paid period."
+      },
+      {
+        "q": "What if my card is declined?",
+        "a": "Stripe retries and e-mails you. After 14 days unpaid the site is paused, and it comes back as soon as you pay."
+      }
+    ],
+    "thanksTitle": "Thank you for subscribing",
+    "thanksLead": "We have received your payment. The invoice is on its way by e-mail.",
+    "thanksBack": "Back to Web Studio"
   }
 }

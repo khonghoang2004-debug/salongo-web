@@ -49,8 +49,7 @@ export async function WebHostingSection() {
   return (
     <section id="hosting" className="x-section scroll-mt-20 bg-white" aria-labelledby="hosting-title">
       <div className="x-wrap">
-        <p className="x-kicker">{t("eyebrow")}</p>
-        <h2 id="hosting-title" className="x-h2 mt-3 text-ink">{t("title")}</h2>
+        <h2 id="hosting-title" className="x-h2 text-ink">{t("eyebrow")}</h2>
         <p className="mt-3 max-w-[38rem] text-[16px] leading-relaxed text-muted">{t("lead")}</p>
 
         <HostingPlans plans={plans} labels={labels} />

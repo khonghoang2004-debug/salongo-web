@@ -6,8 +6,7 @@ import { PageShell } from "@/components/PageShell";
 import { LandingHero } from "@/components/landing/LandingHero";
 import { WebStudioSection } from "@/components/landing/WebStudioSection";
 import { Platforms } from "@/components/landing/Platforms";
-import { DayTour } from "@/components/landing/DayTour";
-import { MoreGrid } from "@/components/landing/MoreGrid";
+import { FeatureGrid } from "@/components/landing/FeatureGrid";
 import { ClipSection } from "@/components/landing/ClipSection";
 import { WhoFor } from "@/components/landing/WhoFor";
 import { EetBand } from "@/components/landing/EetBand";
@@ -180,8 +179,7 @@ export default async function Home({ params }: Props) {
       <PageShell>
         <LandingHero />
         <Platforms />
-        <DayTour />
-        <MoreGrid />
+        <FeatureGrid />
         <ClipSection />
         <WhoFor />
         <EetBand />

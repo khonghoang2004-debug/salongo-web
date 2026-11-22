@@ -1306,50 +1306,41 @@
       "web": "Trình duyệt",
       "langs": "App có 6 ngôn ngữ"
     },
-    "day": {
-      "title": "Một ngày ở tiệm, từ lịch đầu tiên đến lúc chốt sổ",
-      "lead": "Mỗi phần của SalonGo làm thay bạn một việc quen thuộc trong ngày.",
-      "s1": {
-        "time": "07:40",
-        "title": "Khách tự đặt lịch, kể cả khi tiệm chưa mở",
-        "desc": "Tiệm có trang đặt lịch riêng. Khách chọn dịch vụ và giờ trong 4 bước, bằng tiếng Séc, Đức, Anh, Slovakia hoặc Pháp."
+    "features": {
+      "title": "Mọi việc của tiệm, trong một app",
+      "all": "Xem tất cả tính năng",
+      "online": {
+        "title": "Khách tự đặt lịch",
+        "desc": "Trang đặt lịch riêng, mở 24/7"
       },
-      "s2": {
-        "time": "09:00",
-        "title": "Lịch theo từng thợ, chia việc tự động",
-        "desc": "Mỗi thợ một cột. Lịch chưa chọn thợ được giao cho người đang rảnh. Thợ xem lịch của mình trên điện thoại."
+      "calendar": {
+        "title": "Lịch theo từng thợ",
+        "desc": "Tự chia lịch cho thợ đang rảnh"
       },
-      "s3": {
-        "time": "14:30",
-        "title": "Tính tiền tại quầy, hoá đơn tự gửi EET",
-        "desc": "Chọn dịch vụ, khách trả tiền mặt, thẻ hoặc quét QR. Hoá đơn in khổ 80 mm và được gửi lên sở thuế ngay."
+      "checkout": {
+        "title": "Tính tiền + EET",
+        "desc": "Tiền mặt, thẻ, QR. Hoá đơn tự gửi EET"
       },
-      "s4": {
-        "time": "20:00",
-        "title": "Thu & Chi: biết tiệm lời bao nhiêu",
-        "desc": "Doanh thu tự cộng từ hoá đơn. Bạn ghi khoản chi trong vài giây: tiền hàng, tiền nhà, ghi chú. Thu trừ chi hiện ngay."
+      "thuchi": {
+        "title": "Thu & Chi",
+        "desc": "Biết ngay hôm nay lời bao nhiêu"
       },
-      "s5": {
-        "time": "Cuối tháng",
+      "payroll": {
         "title": "Lương thợ tự tính",
-        "desc": "Theo % doanh thu hoặc lương cố định, tip theo khách hoặc chia đều. Xuất Excel, CSV, PDF."
+        "desc": "Theo % hoặc lương cứng, kèm tip"
+      },
+      "customers": {
+        "title": "Khách quen",
+        "desc": "Hồ sơ, sinh nhật, email ưu đãi"
+      },
+      "branches": {
+        "title": "Nhiều chi nhánh",
+        "desc": "Một tài khoản cho mọi tiệm"
+      },
+      "devices": {
+        "title": "Mọi thiết bị",
+        "desc": "Máy tính, iPad, điện thoại"
       }
-    },
-    "more": {
-      "title": "Và những việc nhỏ làm tiệm chạy êm",
-      "customers": "Hồ sơ khách",
-      "customersDesc": "Lịch sử, chi tiêu, khách quen, khách lâu chưa quay lại. App nhắc sinh nhật trước 2 ngày.",
-      "marketing": "Email ưu đãi",
-      "marketingDesc": "Mẫu thư dịp 8/3, Giáng sinh, sinh nhật. Gửi cho nhóm khách bạn chọn.",
-      "branches": "Nhiều chi nhánh",
-      "branchesDesc": "Một tài khoản cho mọi tiệm. Đổi chi nhánh bằng một chạm, xem doanh thu tất cả trên một trang.",
-      "staff": "Tài khoản cho thợ",
-      "staffDesc": "Thợ thấy lịch của mình, nhận thông báo bằng tiếng mình chọn. Chủ quyết định thợ xem được gì.",
-      "invoices": "Hoá đơn",
-      "invoicesDesc": "Tìm và in lại hoá đơn bất cứ lúc nào, lọc theo ngày, thợ và cách thanh toán.",
-      "devices": "Máy tính, iPad, điện thoại",
-      "devicesDesc": "Quầy dùng iPad hay máy tính, thợ dùng điện thoại. Dữ liệu luôn giống nhau.",
-      "all": "Xem tất cả tính năng"
     },
     "videos": {
       "title": "Xem app chạy thật",

@@ -17,50 +17,41 @@
     "web": "Browser",
     "langs": "App in 6 Sprachen"
   },
-  "day": {
-    "title": "Ein Tag im Salon, vom ersten Termin bis Feierabend",
-    "lead": "Jeder Teil von SalonGo nimmt Ihnen eine bekannte Aufgabe ab.",
-    "s1": {
-      "time": "07:40",
-      "title": "Kunden buchen selbst, auch vor der Öffnung",
-      "desc": "Ihr Salon bekommt eine eigene Buchungsseite. Kunden wählen Leistung und Uhrzeit in 4 Schritten, auf Tschechisch, Deutsch, Englisch, Slowakisch oder Französisch."
+  "features": {
+    "title": "Ihr ganzer Salon in einer App",
+    "all": "Alle Funktionen",
+    "online": {
+      "title": "Online-Buchung",
+      "desc": "Eigene Buchungsseite, rund um die Uhr"
     },
-    "s2": {
-      "time": "09:00",
-      "title": "Ein Kalender pro Mitarbeiterin, automatisch verteilt",
-      "desc": "Jede Person hat eine Spalte. Termine ohne Wunsch-Mitarbeiterin gehen an die, die frei ist. Das Team sieht seinen Tag auf dem Handy."
+    "calendar": {
+      "title": "Kalender pro Mitarbeiter",
+      "desc": "Termine gehen an freie Mitarbeiter"
     },
-    "s3": {
-      "time": "14:30",
-      "title": "Kassieren an der Theke, Beleg direkt an die EET",
-      "desc": "Leistungen wählen, bar, mit Karte oder per QR-Überweisung bezahlen. Der 80-mm-Beleg wird gedruckt und sofort ans Finanzamt gemeldet."
+    "checkout": {
+      "title": "Kasse + EET",
+      "desc": "Bar, Karte, QR. Belege direkt an EET"
     },
-    "s4": {
-      "time": "20:00",
-      "title": "Einnahmen & Ausgaben: sehen, was übrig bleibt",
-      "desc": "Einnahmen summieren sich aus den Belegen. Eine Ausgabe ist in Sekunden erfasst: Ware, Miete, Notiz. Die Differenz sehen Sie sofort."
+    "thuchi": {
+      "title": "Einnahmen & Ausgaben",
+      "desc": "Den Tagesgewinn sofort sehen"
     },
-    "s5": {
-      "time": "Monatsende",
-      "title": "Löhne rechnen sich selbst",
-      "desc": "Provision oder Festlohn, Trinkgeld pro Kunde oder gleich verteilt. Export als Excel, CSV oder PDF."
+    "payroll": {
+      "title": "Löhne automatisch",
+      "desc": "Provision oder Fixlohn, mit Trinkgeld"
+    },
+    "customers": {
+      "title": "Stammkunden",
+      "desc": "Profile, Geburtstage, E-Mail-Angebote"
+    },
+    "branches": {
+      "title": "Mehrere Filialen",
+      "desc": "Ein Konto für alle Salons"
+    },
+    "devices": {
+      "title": "Jedes Gerät",
+      "desc": "Computer, iPad, Handy"
     }
-  },
-  "more": {
-    "title": "Und die kleinen Dinge, die den Salon rund laufen lassen",
-    "customers": "Kundenprofile",
-    "customersDesc": "Verlauf, Umsatz, Stammkunden und Kunden, die lange nicht da waren. Geburtstagserinnerung 2 Tage vorher.",
-    "marketing": "Angebots-E-Mails",
-    "marketingDesc": "Vorlagen für Frauentag, Weihnachten und Geburtstage. An die Kundengruppe, die Sie wählen.",
-    "branches": "Mehrere Filialen",
-    "branchesDesc": "Ein Konto für alle Salons. Mit einem Tipp wechseln, den Umsatz aller auf einer Seite sehen.",
-    "staff": "Konten fürs Team",
-    "staffDesc": "Mitarbeiterinnen sehen ihre Termine und bekommen Hinweise in ihrer Sprache. Was sie sonst sehen, entscheiden Sie.",
-    "invoices": "Belege",
-    "invoicesDesc": "Jeden Beleg finden und neu drucken, gefiltert nach Datum, Mitarbeiterin und Zahlungsart.",
-    "devices": "Computer, iPad, Handy",
-    "devicesDesc": "An der Theke iPad oder Computer, das Team am Handy. Die Daten sind überall gleich.",
-    "all": "Alle Funktionen"
   },
   "videos": {
     "title": "So sieht die App im Einsatz aus",

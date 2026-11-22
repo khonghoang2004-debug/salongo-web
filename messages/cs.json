@@ -1306,50 +1306,41 @@
       "web": "Prohlížeči",
       "langs": "Aplikace v 6 jazycích"
     },
-    "day": {
-      "title": "Den v salonu, od první rezervace po uzávěrku",
-      "lead": "Každá část SalonGo za vás udělá jednu běžnou práci.",
-      "s1": {
-        "time": "07:40",
-        "title": "Klienti se objednají sami, i když ještě máte zavřeno",
-        "desc": "Salon má vlastní rezervační stránku. Klient vybere službu a čas ve 4 krocích, česky, slovensky, německy, anglicky nebo francouzsky."
+    "features": {
+      "title": "Celý salon v jedné aplikaci",
+      "all": "Všechny funkce",
+      "online": {
+        "title": "Online rezervace",
+        "desc": "Vlastní rezervační stránka, nonstop"
       },
-      "s2": {
-        "time": "09:00",
-        "title": "Kalendář pro každou kolegyni, práce se rozdělí sama",
-        "desc": "Každý má svůj sloupec. Rezervace bez vybrané kolegyně dostane ta, kdo má volno. Personál vidí svůj den v telefonu."
+      "calendar": {
+        "title": "Kalendář po pracovnících",
+        "desc": "Volné termíny se rozdělí samy"
       },
-      "s3": {
-        "time": "14:30",
-        "title": "Platba na recepci, účtenka rovnou do EET",
-        "desc": "Vyberete služby, klient platí hotově, kartou nebo QR platbou. Účtenka se vytiskne na 80 mm a hned odejde finanční správě."
+      "checkout": {
+        "title": "Pokladna + EET",
+        "desc": "Hotově, kartou, QR. Účtenka rovnou do EET"
       },
-      "s4": {
-        "time": "20:00",
-        "title": "Příjmy a výdaje: víte, kolik salon vydělal",
-        "desc": "Příjmy se sečtou z účtenek. Výdaj zapíšete za pár vteřin: zboží, nájem, poznámka. Rozdíl vidíte hned."
+      "thuchi": {
+        "title": "Příjmy a výdaje",
+        "desc": "Hned víte, kolik jste dnes vydělali"
       },
-      "s5": {
-        "time": "Konec měsíce",
+      "payroll": {
         "title": "Mzdy se spočítají samy",
-        "desc": "Procento z tržby nebo pevná mzda, spropitné podle klienta nebo rovným dílem. Export do Excelu, CSV nebo PDF."
+        "desc": "Procenta nebo fixní mzda, i spropitné"
+      },
+      "customers": {
+        "title": "Stálí klienti",
+        "desc": "Karta klienta, narozeniny, e-mailové akce"
+      },
+      "branches": {
+        "title": "Více poboček",
+        "desc": "Jeden účet pro všechny salony"
+      },
+      "devices": {
+        "title": "Všechna zařízení",
+        "desc": "Počítač, iPad, telefon"
       }
-    },
-    "more": {
-      "title": "A drobnosti, díky kterým salon běží hladce",
-      "customers": "Karta klienta",
-      "customersDesc": "Historie, útrata, stálí klienti i ti, kdo dlouho nepřišli. Upozornění na narozeniny 2 dny předem.",
-      "marketing": "E-maily s nabídkou",
-      "marketingDesc": "Šablony na MDŽ, Vánoce a narozeniny. Pošlete je skupině klientů, kterou vyberete.",
-      "branches": "Více poboček",
-      "branchesDesc": "Jeden účet pro všechny salony. Pobočku přepnete jedním klepnutím, tržby všech vidíte na jedné stránce.",
-      "staff": "Účty pro personál",
-      "staffDesc": "Kolegyně vidí své rezervace a dostávají upozornění ve svém jazyce. Co dalšího uvidí, rozhodujete vy.",
-      "invoices": "Účtenky",
-      "invoicesDesc": "Kteroukoli účtenku najdete a znovu vytisknete, s filtrem podle data, kolegyně a způsobu platby.",
-      "devices": "Počítač, iPad, telefon",
-      "devicesDesc": "Na recepci iPad nebo počítač, personál v telefonu. Data jsou všude stejná.",
-      "all": "Všechny funkce"
     },
     "videos": {
       "title": "Podívejte se, jak aplikace funguje",

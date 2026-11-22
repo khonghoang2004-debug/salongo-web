@@ -22,7 +22,7 @@ export async function WebHostingSection() {
   const faq = t.raw("faq") as { q: string; a: string }[];
   // In-page checkout once the Stripe keys are on Vercel; until then the Payment Links (new tab not needed).
   const inPage = embeddedCheckoutReady();
-  const href = (plan: HostingPlanKey, cycle: HostingCycle) => (inPage ? `/${locale}/hosting-${PRICES[plan][cycle]}` : `${LINKS[plan][cycle]}?locale=${locale}`);
+  const href = (plan: HostingPlanKey, cycle: HostingCycle) => (inPage ? `/${locale}/website/thanh-toan?plan=${plan}&cycle=${cycle}` : `${LINKS[plan][cycle]}?locale=${locale}`);
   const base = [t("inc.domain"), t("inc.hosting"), t("inc.ssl")];
   const plans: HostingPlan[] = [
     { key: "basic", name: t("planBasic"), forWhom: t("forBasic"), monthly: money(PRICES.basic.m), yearly: money(PRICES.basic.y), monthlyUrl: href("basic", "m"), yearlyUrl: href("basic", "y"), band: BANDS.basic, inc: base },

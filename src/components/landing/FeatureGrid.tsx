@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 
 /**
  * Home: one short feature grid (owner 2026-11-22: "Một ngày ở tiệm" + long texts were too long to read).
- * Eight tiles, each a title + one short line; details live on /tinh-nang.
+ * Eight tiles, title only (owner 2026-11-22: no small descriptions); details live on /tinh-nang.
  */
 const ITEMS = [
   { key: "online", icon: Globe, tone: "bg-sky-50 text-sky-700" },
@@ -36,7 +36,6 @@ export async function FeatureGrid() {
                 <Icon className="size-5" aria-hidden />
               </span>
               <h3 className="mt-3 text-[15.5px] font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[1.0625rem]">{t(`${key}.title`)}</h3>
-              <p className="mt-1 text-[13.5px] leading-snug text-muted sm:text-[14.5px]">{t(`${key}.desc`)}</p>
             </li>
           ))}
         </ul>

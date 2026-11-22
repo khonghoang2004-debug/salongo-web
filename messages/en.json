@@ -1310,36 +1310,28 @@
       "title": "Your whole salon in one app",
       "all": "See all features",
       "online": {
-        "title": "Online booking",
-        "desc": "Your own booking page, open 24/7"
+        "title": "Online booking"
       },
       "calendar": {
-        "title": "Calendar per staff",
-        "desc": "Bookings go to whoever is free"
+        "title": "Calendar per staff"
       },
       "checkout": {
-        "title": "Checkout + EET",
-        "desc": "Cash, card, QR. Receipts sent to EET"
+        "title": "Checkout + EET"
       },
       "thuchi": {
-        "title": "Income & expenses",
-        "desc": "See today's profit at a glance"
+        "title": "Income & expenses"
       },
       "payroll": {
-        "title": "Automatic payroll",
-        "desc": "Commission or fixed pay, with tips"
+        "title": "Automatic payroll"
       },
       "customers": {
-        "title": "Regular clients",
-        "desc": "Profiles, birthdays, email offers"
+        "title": "Regular clients"
       },
       "branches": {
-        "title": "Multiple locations",
-        "desc": "One account for every salon"
+        "title": "Multiple locations"
       },
       "devices": {
-        "title": "Every device",
-        "desc": "Computer, iPad, phone"
+        "title": "Every device"
       }
     },
     "videos": {

@@ -21,36 +21,28 @@
     "title": "Ihr ganzer Salon in einer App",
     "all": "Alle Funktionen",
     "online": {
-      "title": "Online-Buchung",
-      "desc": "Eigene Buchungsseite, rund um die Uhr"
+      "title": "Online-Buchung"
     },
     "calendar": {
-      "title": "Kalender pro Mitarbeiter",
-      "desc": "Termine gehen an freie Mitarbeiter"
+      "title": "Kalender pro Mitarbeiter"
     },
     "checkout": {
-      "title": "Kasse + EET",
-      "desc": "Bar, Karte, QR. Belege direkt an EET"
+      "title": "Kasse + EET"
     },
     "thuchi": {
-      "title": "Einnahmen & Ausgaben",
-      "desc": "Den Tagesgewinn sofort sehen"
+      "title": "Einnahmen & Ausgaben"
     },
     "payroll": {
-      "title": "Löhne automatisch",
-      "desc": "Provision oder Fixlohn, mit Trinkgeld"
+      "title": "Löhne automatisch"
     },
     "customers": {
-      "title": "Stammkunden",
-      "desc": "Profile, Geburtstage, E-Mail-Angebote"
+      "title": "Stammkunden"
     },
     "branches": {
-      "title": "Mehrere Filialen",
-      "desc": "Ein Konto für alle Salons"
+      "title": "Mehrere Filialen"
     },
     "devices": {
-      "title": "Jedes Gerät",
-      "desc": "Computer, iPad, Handy"
+      "title": "Jedes Gerät"
     }
   },
   "videos": {

@@ -21,36 +21,28 @@
     "title": "Mọi việc của tiệm, trong một app",
     "all": "Xem tất cả tính năng",
     "online": {
-      "title": "Khách tự đặt lịch",
-      "desc": "Trang đặt lịch riêng, mở 24/7"
+      "title": "Khách tự đặt lịch"
     },
     "calendar": {
-      "title": "Lịch theo từng thợ",
-      "desc": "Tự chia lịch cho thợ đang rảnh"
+      "title": "Lịch theo từng thợ"
     },
     "checkout": {
-      "title": "Tính tiền + EET",
-      "desc": "Tiền mặt, thẻ, QR. Hoá đơn tự gửi EET"
+      "title": "Tính tiền + EET"
     },
     "thuchi": {
-      "title": "Thu & Chi",
-      "desc": "Biết ngay hôm nay lời bao nhiêu"
+      "title": "Thu & Chi"
     },
     "payroll": {
-      "title": "Lương thợ tự tính",
-      "desc": "Theo % hoặc lương cứng, kèm tip"
+      "title": "Lương thợ tự tính"
     },
     "customers": {
-      "title": "Khách quen",
-      "desc": "Hồ sơ, sinh nhật, email ưu đãi"
+      "title": "Khách quen"
     },
     "branches": {
-      "title": "Nhiều chi nhánh",
-      "desc": "Một tài khoản cho mọi tiệm"
+      "title": "Nhiều chi nhánh"
     },
     "devices": {
-      "title": "Mọi thiết bị",
-      "desc": "Máy tính, iPad, điện thoại"
+      "title": "Mọi thiết bị"
     }
   },
   "videos": {

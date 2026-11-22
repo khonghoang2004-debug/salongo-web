@@ -21,36 +21,28 @@
     "title": "Celý salon v jedné aplikaci",
     "all": "Všechny funkce",
     "online": {
-      "title": "Online rezervace",
-      "desc": "Vlastní rezervační stránka, nonstop"
+      "title": "Online rezervace"
     },
     "calendar": {
-      "title": "Kalendář po pracovnících",
-      "desc": "Volné termíny se rozdělí samy"
+      "title": "Kalendář po pracovnících"
     },
     "checkout": {
-      "title": "Pokladna + EET",
-      "desc": "Hotově, kartou, QR. Účtenka rovnou do EET"
+      "title": "Pokladna + EET"
     },
     "thuchi": {
-      "title": "Příjmy a výdaje",
-      "desc": "Hned víte, kolik jste dnes vydělali"
+      "title": "Příjmy a výdaje"
     },
     "payroll": {
-      "title": "Mzdy se spočítají samy",
-      "desc": "Procenta nebo fixní mzda, i spropitné"
+      "title": "Mzdy se spočítají samy"
     },
     "customers": {
-      "title": "Stálí klienti",
-      "desc": "Karta klienta, narozeniny, e-mailové akce"
+      "title": "Stálí klienti"
     },
     "branches": {
-      "title": "Více poboček",
-      "desc": "Jeden účet pro všechny salony"
+      "title": "Více poboček"
     },
     "devices": {
-      "title": "Všechna zařízení",
-      "desc": "Počítač, iPad, telefon"
+      "title": "Všechna zařízení"
     }
   },
   "videos": {

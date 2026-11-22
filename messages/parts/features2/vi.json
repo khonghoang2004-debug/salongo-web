@@ -125,9 +125,9 @@
       "text": "Một tài khoản trên mọi máy, dữ liệu luôn giống nhau. App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp."
     },
     "desk": {
-      "title": "Gói Bàn cho thợ thuê bàn",
+      "title": "Gói IČO riêng cho thợ thuê bàn",
       "text": "Có IČO riêng? Tính tiền, hoá đơn và EET đứng tên bạn, {priceDesk} Kč/tháng.",
-      "link": "Xem gói Bàn"
+      "link": "Xem gói IČO riêng"
     }
   },
   "closing": {

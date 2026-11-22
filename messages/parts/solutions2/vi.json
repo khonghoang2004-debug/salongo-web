@@ -96,11 +96,11 @@
   "desk": {
     "nav": "Thuê bàn, IČO riêng",
     "title": "Phần mềm tính tiền cho thợ thuê bàn có IČO",
-    "lead": "Gói Bàn chỉ có tính tiền, hoá đơn, thu chi và EET đứng tên bạn. Chủ tiệm không xem được doanh thu của bạn.",
+    "lead": "Gói IČO riêng chỉ có tính tiền, hoá đơn, thu chi và EET đứng tên bạn. Chủ tiệm không xem được doanh thu của bạn.",
     "price": "{priceDesk} Kč/tháng",
     "note": "Không có lịch hẹn và tính lương. Cần thì đổi sang Basic bất cứ lúc nào.",
-    "cta": "Xem gói Bàn",
-    "alt": "Màn tính tiền của gói Bàn trên điện thoại"
+    "cta": "Xem gói IČO riêng",
+    "alt": "Màn tính tiền của gói IČO riêng trên điện thoại"
   },
   "faq": {
     "title": "Hỏi nhanh",
@@ -119,7 +119,7 @@
       },
       {
         "q": "Thợ thuê bàn trong tiệm cần gói nào?",
-        "a": "Thợ có IČO riêng dùng gói Bàn, {priceDesk} Kč/tháng, với EET bằng chứng chỉ của mình. Thợ là nhân viên của tiệm thì không cần: chủ tiệm thêm thợ vào tài khoản của tiệm."
+        "a": "Thợ tự kinh doanh dùng gói IČO riêng, {priceDesk} Kč/tháng, với EET bằng chứng chỉ của mình. Thợ là nhân viên của tiệm thì không cần: chủ tiệm thêm thợ vào tài khoản của tiệm."
       }
     ]
   },

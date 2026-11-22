@@ -66,7 +66,7 @@
       "h": "EET 2.0 bắt buộc từ 1.1.2027: tiệm cần chuẩn bị gì?",
       "body": [
         "Từ 1.1.2027, ở Séc mỗi lần khách trả tiền mặt hoặc thẻ đều phải gửi lên sở thuế. Với SalonGo, bạn không cần mua máy tính tiền hay phần mềm riêng.",
-        "Tải chứng chỉ từ cổng DIS+, nhập mật khẩu và mã chỗ bán trong app. Từ đó mỗi hoá đơn tự gửi EET và in kèm mã FIK. EET có trong mọi gói, kể cả gói Bàn, không tính thêm tiền."
+        "Tải chứng chỉ từ cổng DIS+, nhập mật khẩu và mã chỗ bán trong app. Từ đó mỗi hoá đơn tự gửi EET và in kèm mã FIK. EET có trong mọi gói, kể cả gói IČO riêng, không tính thêm tiền."
       ],
       "link": {
         "href": "/eet-2-0",
@@ -123,7 +123,7 @@
       "h": "Giá phần mềm quản lý salon",
       "body": [
         "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
-        "Thợ thuê bàn có IČO riêng dùng gói Bàn, {priceDesk} Kč/tháng. Mua và gia hạn gói trên trình duyệt; app trên iPhone không bán gói."
+        "Thợ thuê bàn dùng gói IČO riêng, {priceDesk} Kč/tháng. Mua và gia hạn gói trên trình duyệt; app trên iPhone không bán gói."
       ],
       "link": {
         "href": "/bang-gia",

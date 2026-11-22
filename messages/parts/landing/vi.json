@@ -72,7 +72,7 @@
         "desc": "Trang đặt lịch của tiệm trên điện thoại của khách."
       },
       "desk": {
-        "title": "Gói Bàn",
+        "title": "Gói IČO riêng",
         "desc": "Người thuê bàn tính tiền nhanh và xem thu chi của riêng mình."
       }
     }
@@ -88,13 +88,13 @@
     "deskTitle": "Bạn thuê bàn, tự làm tự thu",
     "deskDesc": "Tính tiền, hoá đơn và EET bằng chứng chỉ của chính bạn, thu chi của riêng bạn. Chủ tiệm không xem được doanh thu của bạn.",
     "deskPrice": "{priceDesk} Kč/tháng",
-    "deskCta": "Xem gói Bàn"
+    "deskCta": "Xem gói IČO riêng"
   },
   "eet": {
     "title": "EET 2.0 bắt buộc từ 1.1.2027. Bạn không cần mua thêm máy.",
     "lead": "Bật EET một lần trong app. Sau đó mỗi lần tính tiền, hoá đơn tự gửi lên sở thuế và in kèm mã FIK.",
     "p1": "Tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán: xong.",
-    "p2": "Có trong mọi gói, kể cả gói Bàn. Không tính thêm tiền.",
+    "p2": "Có trong mọi gói, kể cả gói IČO riêng. Không tính thêm tiền.",
     "p3": "Cần giúp lấy chứng chỉ, đội hỗ trợ làm cùng bạn bằng tiếng Việt.",
     "countdown": "Còn {n} ngày",
     "live": "Đang áp dụng",
@@ -109,7 +109,7 @@
     "staffAll": "không giới hạn thợ",
     "branches": "{n} chi nhánh",
     "branchesAll": "không giới hạn chi nhánh",
-    "desk": "Bàn",
+    "desk": "IČO riêng",
     "deskLine": "1 người, IČO riêng",
     "popular": "Chọn nhiều nhất",
     "trial": "Tiệm mới dùng thử {days} ngày, không cần thẻ.",

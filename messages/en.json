@@ -2214,7 +2214,7 @@
   "webHosting": {
     "eyebrow": "Hosting & care",
     "title": "Your site stays online, worry-free",
-    "lead": "Pay monthly or yearly, charged to your card automatically. Cancel any time.",
+    "lead": "Pick a plan and pay by card in a minute. Renews automatically, cancel any time.",
     "monthly": "Monthly",
     "yearly": "Yearly",
     "perMonth": "/ month",
@@ -2222,20 +2222,19 @@
     "yearGift": "2 months free",
     "planBasic": "Hosting",
     "planPro": "Hosting + content edits",
-    "forBasic": "For a finished site that rarely changes",
-    "forPro": "For salons that often update prices, photos and services",
+    "forBasic": "Your site stays online, no tech to worry about",
+    "forPro": "Need new prices, photos or services? Just send a message",
     "recommended": "Recommended",
     "everythingIn": "Everything in Hosting, plus:",
     "inc": {
-      "domain": ".cz domain",
+      "domain": "Your own .cz domain",
       "hosting": "Fast, reliable hosting",
-      "ssl": "SSL security (https)",
+      "ssl": "https padlock (SSL) your clients trust",
       "backup": "Automatic backups",
-      "edits": "Content edits on request: text, photos, prices, services",
+      "edits": "Edits to text, photos, prices and services whenever you need",
       "sameDay": "Done the same day"
     },
-    "cta": "Subscribe to hosting",
-    "ctaSoon": "Payment opens soon",
+    "cta": "Subscribe",
     "manage": "Manage payment",
     "manageNote": "Change card, download invoices or cancel.",
     "secure": "Secure payment by Stripe.",
@@ -2257,6 +2256,8 @@
     ],
     "thanksTitle": "Thank you for subscribing",
     "thanksLead": "We have received your payment. The invoice is on its way by e-mail.",
-    "thanksBack": "Back to Web Studio"
+    "thanksBack": "Back to Web Studio",
+    "noteMonthly": "Renews monthly, cancel any time",
+    "noteYearly": "Pay once a year, save 2 months"
   }
 }

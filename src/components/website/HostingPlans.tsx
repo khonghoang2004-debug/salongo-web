@@ -9,15 +9,17 @@ export type HostingPlan = {
   forWhom: string;
   monthly: string;
   yearly: string;
+  monthlyUrl: string;
+  yearlyUrl: string;
   band: string;
   featured?: boolean;
   intro?: string;
   inc: string[];
 };
 
-type Labels = { monthly: string; yearly: string; perMonth: string; perYear: string; yearGift: string; recommended: string; cta: string; ctaSoon: string };
+type Labels = { monthly: string; yearly: string; perMonth: string; perYear: string; yearGift: string; recommended: string; cta: string; noteMonthly: string; noteYearly: string };
 
-/** Hosting plan cards with a Month / Year switch (prices come from the page; not wired to Stripe yet). */
+/** Hosting plan cards with a Month / Year switch (each button opens the matching Stripe Payment Link). */
 export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: Labels }) {
   const [year, setYear] = useState(false);
   return (
@@ -71,19 +73,15 @@ export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: 
                   </li>
                 ))}
               </ul>
-              {/* Not wired to Stripe yet: the owner creates the products + payment links first. */}
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                title={labels.ctaSoon}
-                className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold text-white"
+              <a
+                href={year ? p.yearlyUrl : p.monthlyUrl}
+                className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold text-white transition hover:brightness-110"
                 style={{ background: p.band }}
               >
                 <CreditCard className="size-4" aria-hidden />
                 {labels.cta}
-              </button>
-              <p className="mt-2 text-center text-[12.5px] text-muted">{labels.ctaSoon}</p>
+              </a>
+              <p className="mt-2 text-center text-[12.5px] text-muted">{year ? labels.noteYearly : labels.noteMonthly}</p>
             </div>
           </article>
         ))}

@@ -2214,7 +2214,7 @@
   "webHosting": {
     "eyebrow": "Hosting & bảo trì",
     "title": "Web luôn chạy, bạn không phải lo",
-    "lead": "Trả theo tháng hoặc năm, tự trừ qua thẻ. Huỷ khi nào cũng được.",
+    "lead": "Chọn gói, trả bằng thẻ trong một phút. Tự gia hạn, huỷ khi nào cũng được.",
     "monthly": "Tháng",
     "yearly": "Năm",
     "perMonth": "/ tháng",
@@ -2222,20 +2222,19 @@
     "yearGift": "tặng 2 tháng",
     "planBasic": "Hosting",
     "planPro": "Hosting + sửa nội dung",
-    "forBasic": "Cho web đã xong, ít thay đổi",
-    "forPro": "Cho salon hay đổi giá, ảnh, dịch vụ",
+    "forBasic": "Web của bạn luôn online, không phải lo kỹ thuật",
+    "forPro": "Muốn đổi giá, ảnh hay dịch vụ? Nhắn một tin là xong",
     "recommended": "Nên chọn",
     "everythingIn": "Mọi thứ trong gói Hosting, thêm:",
     "inc": {
-      "domain": "Tên miền .cz",
+      "domain": "Tên miền .cz riêng cho salon",
       "hosting": "Hosting nhanh, ổn định",
-      "ssl": "Bảo mật SSL (https)",
+      "ssl": "Ổ khoá https (SSL), khách yên tâm",
       "backup": "Sao lưu tự động",
-      "edits": "Sửa nội dung khi bạn cần: chữ, ảnh, giá, dịch vụ",
-      "sameDay": "Xử lý trong ngày"
+      "edits": "Sửa chữ, ảnh, giá, dịch vụ bất cứ khi nào bạn cần",
+      "sameDay": "Xử lý xong ngay trong ngày"
     },
-    "cta": "Đăng ký hosting",
-    "ctaSoon": "Sắp mở thanh toán",
+    "cta": "Đăng ký ngay",
     "manage": "Quản lý thanh toán",
     "manageNote": "Đổi thẻ, tải hoá đơn hoặc huỷ.",
     "secure": "Thanh toán an toàn qua Stripe.",
@@ -2257,6 +2256,8 @@
     ],
     "thanksTitle": "Cảm ơn bạn đã đăng ký hosting",
     "thanksLead": "Chúng tôi đã nhận thanh toán. Hoá đơn được gửi qua email.",
-    "thanksBack": "Về trang Web Studio"
+    "thanksBack": "Về trang Web Studio",
+    "noteMonthly": "Tự gia hạn mỗi tháng, huỷ bất cứ lúc nào",
+    "noteYearly": "Trả một lần mỗi năm, rẻ hơn 2 tháng"
   }
 }

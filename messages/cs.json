@@ -2214,7 +2214,7 @@
   "webHosting": {
     "eyebrow": "Hosting a správa",
     "title": "Web běží, vy se nestaráte",
-    "lead": "Platba měsíčně nebo ročně, automaticky z karty. Zrušit můžete kdykoli.",
+    "lead": "Vyberte tarif a zaplaťte kartou za minutu. Obnovuje se sám, zrušit můžete kdykoli.",
     "monthly": "Měsíčně",
     "yearly": "Ročně",
     "perMonth": "/ měsíc",
@@ -2222,20 +2222,19 @@
     "yearGift": "2 měsíce zdarma",
     "planBasic": "Hosting",
     "planPro": "Hosting + úpravy obsahu",
-    "forBasic": "Pro hotový web, který se málo mění",
-    "forPro": "Pro salony, které často mění ceny, fotky a služby",
+    "forBasic": "Váš web je stále online, o techniku se nestaráte",
+    "forPro": "Chcete změnit ceny, fotky nebo služby? Stačí napsat",
     "recommended": "Doporučujeme",
     "everythingIn": "Vše z tarifu Hosting, navíc:",
     "inc": {
-      "domain": "Doména .cz",
+      "domain": "Vlastní doména .cz pro salon",
       "hosting": "Rychlý a stabilní hosting",
-      "ssl": "Zabezpečení SSL (https)",
+      "ssl": "Zámek https (SSL) pro jistotu zákazníků",
       "backup": "Automatické zálohy",
-      "edits": "Úpravy obsahu na požádání: texty, fotky, ceny, služby",
+      "edits": "Úpravy textů, fotek, cen a služeb, kdykoli potřebujete",
       "sameDay": "Vyřízeno ještě ten den"
     },
-    "cta": "Objednat hosting",
-    "ctaSoon": "Platba brzy spuštěna",
+    "cta": "Objednat",
     "manage": "Správa platby",
     "manageNote": "Změna karty, faktury nebo zrušení.",
     "secure": "Bezpečná platba přes Stripe.",
@@ -2257,6 +2256,8 @@
     ],
     "thanksTitle": "Děkujeme za objednávku hostingu",
     "thanksLead": "Platbu jsme přijali. Faktura vám přijde e-mailem.",
-    "thanksBack": "Zpět na Web Studio"
+    "thanksBack": "Zpět na Web Studio",
+    "noteMonthly": "Obnovuje se každý měsíc, zrušíte kdykoli",
+    "noteYearly": "Platíte jednou ročně, 2 měsíce ušetříte"
   }
 }

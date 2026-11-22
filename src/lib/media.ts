@@ -1,5 +1,5 @@
 // Ảnh chụp app dùng trên site mới. Một nơi duy nhất để đổi ảnh: mỗi màn hình có bản máy tính (16:10) và bản điện thoại (390 × 844 pt).
-// Ảnh nằm trong /public/media (chụp từ app hiện tại, dữ liệu mẫu "Lotus Nails & Beauty").
+// Ảnh nằm trong /public/media (chụp lại 22/11/2026 từ app hiện tại, dữ liệu mẫu "Lotus Nails & Beauty").
 export type Shot = { desktop: string; phone: string; dw: number; dh: number; pw: number; ph: number };
 
 const D = { dw: 2880, dh: 1800, pw: 780, ph: 1688 };

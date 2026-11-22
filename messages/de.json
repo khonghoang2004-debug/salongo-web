@@ -1511,7 +1511,7 @@
       "for6": "Stuhlmieter (Tarif Stuhl)",
       "factsTitle": "Darauf können Sie sich verlassen",
       "fact5": "Die App spricht 6 Sprachen: Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch, Französisch.",
-      "fact6": "Läuft im Browser und auf iPhone, iPad, Mac und Windows.",
+      "fact6": "Läuft im Browser (Handy, iPad) sowie auf Mac und Windows.",
       "contactTitle": "Lieber direkt sprechen?",
       "contactLead": "Anrufen, schreiben oder mailen. Antwort innerhalb von 24 Stunden.",
       "contactCta": "Kontakt"
@@ -1865,7 +1865,7 @@
         "text": "Umsatz nach Tag, Mitarbeiterin, Leistung und Zahlungsart. Belege finden, neu drucken oder als PDF exportieren."
       },
       "devices": {
-        "title": "iPhone, Android, iPad, Mac, Windows und Browser",
+        "title": "Handy, iPad, Mac, Windows und Browser",
         "text": "Ein Konto auf allen Geräten, immer dieselben Daten. Die App spricht 6 Sprachen: Vietnamesisch, Tschechisch, Slowakisch, Englisch, Deutsch, Französisch."
       },
       "desk": {
@@ -1894,7 +1894,7 @@
         "h": "Was ist eine Salonsoftware?",
         "body": [
           "Eine Salonsoftware bündelt die tägliche Arbeit an einem Ort: Terminbuchung, Dienstplan, Kasse, Kundenkartei, Umsatz und Lohnabrechnung. Statt Papierkalender, Excel und verstreuten Nachrichten sieht der Inhaber in der App, wer heute was macht und wie viel eingenommen wurde.",
-          "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa. Sie läuft auf iPhone, Android, iPad, Mac, Windows und im Browser."
+          "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa. Sie läuft im Browser auf Handy, iPad und Computer, mit Apps für Mac und Windows."
         ]
       },
       {
@@ -2046,7 +2046,7 @@
       },
       {
         "q": "Muss ich etwas installieren?",
-        "a": "Nein. Es läuft im Browser am Computer und Handy. Zusätzlich gibt es Apps für iPhone, Android, iPad, Windows und Mac."
+        "a": "Nein. Es läuft im Browser am Computer und Handy. Zusätzlich gibt es Apps für Windows und Mac."
       },
       {
         "q": "Ist der Test kostenlos?",

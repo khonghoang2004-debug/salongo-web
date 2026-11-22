@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Tablet, Globe, Languages } from "lucide-react";
 import { AndroidIcon, AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
+import { PHONE_APPS_LIVE } from "@/lib/app-links";
 
 /** Dải "dùng trên thiết bị nào": chữ thường, không huy hiệu. */
 export async function Platforms() {
@@ -8,9 +9,13 @@ export async function Platforms() {
   const ico = "size-[18px] shrink-0 text-brand-700";
   const line = (Icon: typeof Globe) => <Icon key="l" className={ico} strokeWidth={1.75} aria-hidden />;
   const items = [
-    { icons: [<AppleIcon key="a" className={ico} />], label: "iPhone" },
-    { icons: [<AndroidIcon key="g" className={ico} />], label: "Android" },
-    { icons: [line(Tablet)], label: "iPad" },
+    ...(PHONE_APPS_LIVE
+      ? [
+          { icons: [<AppleIcon key="a" className={ico} />], label: "iPhone" },
+          { icons: [<AndroidIcon key="g" className={ico} />], label: "Android" },
+          { icons: [line(Tablet)], label: "iPad" },
+        ]
+      : []),
     { icons: [<AppleIcon key="a" className={ico} />, <WindowsIcon key="w" className="size-[15px] shrink-0 text-brand-700" />], label: "Mac, Windows" },
     { icons: [line(Globe)], label: t("web") },
     { icons: [line(Languages)], label: t("langs") },

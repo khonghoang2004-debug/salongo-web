@@ -1511,7 +1511,7 @@
       "for6": "Chair renters (Chair plan)",
       "factsTitle": "What you can count on",
       "fact5": "The app speaks 6 languages: Vietnamese, Czech, Slovak, English, German, French.",
-      "fact6": "Works in the browser and on iPhone, iPad, Mac and Windows.",
+      "fact6": "Works in the browser (phone, iPad) and on Mac and Windows.",
       "contactTitle": "Want to talk to us?",
       "contactLead": "Call, message or e-mail us. We reply within 24 hours.",
       "contactCta": "Contact"
@@ -1865,7 +1865,7 @@
         "text": "Revenue by day, staff member, service and payment method. Find, reprint or export receipts to PDF."
       },
       "devices": {
-        "title": "iPhone, Android, iPad, Mac, Windows and browser",
+        "title": "Phone, iPad, Mac, Windows and browser",
         "text": "One account on every device, always the same data. The app speaks 6 languages: Vietnamese, Czech, Slovak, English, German, French."
       },
       "desk": {
@@ -1894,7 +1894,7 @@
         "h": "What is salon management software?",
         "body": [
           "Salon management software puts the salon's daily work in one place: taking bookings, scheduling staff, checkout, client records, revenue and payroll. Instead of a paper diary, spreadsheets and scattered messages, the owner opens the app and sees who is doing what today and how much came in.",
-          "SalonGo is salon management software made for Vietnamese-run nail, hair, lash and beauty salons in Europe. It runs on iPhone, Android, iPad, Mac, Windows and in the browser."
+          "SalonGo is salon management software made for Vietnamese-run nail, hair, lash and beauty salons in Europe. It runs in the browser on phones, iPads and computers, with apps for Mac and Windows."
         ]
       },
       {
@@ -2046,7 +2046,7 @@
       },
       {
         "q": "Do I need to install anything?",
-        "a": "No. It runs in the browser on computers and phones. There are also apps for iPhone, Android, iPad, Windows and Mac."
+        "a": "No. It runs in the browser on computers and phones. There are also apps for Windows and Mac."
       },
       {
         "q": "Is the trial free?",

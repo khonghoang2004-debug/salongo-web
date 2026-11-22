@@ -1511,7 +1511,7 @@
       "for6": "Thợ thuê bàn (Gói Bàn)",
       "factsTitle": "Điều bạn có thể tin",
       "fact5": "App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp.",
-      "fact6": "Dùng trên trình duyệt, iPhone, iPad, Mac và Windows.",
+      "fact6": "Dùng trên trình duyệt (điện thoại, iPad), Mac và Windows.",
       "contactTitle": "Cần nói chuyện trực tiếp?",
       "contactLead": "Gọi, nhắn hoặc gửi email, trả lời trong 24 giờ.",
       "contactCta": "Liên hệ"
@@ -1865,7 +1865,7 @@
         "text": "Doanh thu theo ngày, thợ, dịch vụ và cách thanh toán. Tìm, in lại hoặc xuất hoá đơn ra PDF."
       },
       "devices": {
-        "title": "iPhone, Android, iPad, Mac, Windows và trình duyệt",
+        "title": "Điện thoại, iPad, Mac, Windows và trình duyệt",
         "text": "Một tài khoản trên mọi máy, dữ liệu luôn giống nhau. App có 6 ngôn ngữ: Việt, Séc, Slovakia, Anh, Đức, Pháp."
       },
       "desk": {
@@ -1894,7 +1894,7 @@
         "h": "Phần mềm quản lý salon là gì?",
         "body": [
           "Phần mềm quản lý salon gom việc hằng ngày của tiệm vào một chỗ: nhận lịch hẹn, xếp lịch cho thợ, tính tiền, lưu hồ sơ khách, xem doanh thu và tính lương. Thay cho sổ giấy, Excel và tin nhắn rời rạc, chủ tiệm mở app là biết hôm nay ai làm gì và thu được bao nhiêu.",
-          "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. App bằng tiếng Việt, dùng trên iPhone, Android, iPad, Mac, Windows và trình duyệt."
+          "SalonGo là phần mềm quản lý salon làm cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu. App bằng tiếng Việt, dùng trên Điện thoại, iPad, Mac, Windows và trình duyệt."
         ]
       },
       {
@@ -2046,7 +2046,7 @@
       },
       {
         "q": "Có cần cài đặt gì không?",
-        "a": "Không. Bạn dùng ngay trên trình duyệt máy tính và điện thoại. Có thêm app cho iPhone, Android, iPad, Windows và Mac."
+        "a": "Không. Bạn dùng ngay trên trình duyệt máy tính và điện thoại. Có thêm app cho Windows và Mac."
       },
       {
         "q": "Dùng thử có mất phí không?",

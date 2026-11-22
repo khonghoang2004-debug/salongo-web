@@ -68,3 +68,6 @@ export function deskSignupLink(locale: string): string {
   u.searchParams.set("lang", appLang(locale));
   return u.toString();
 }
+
+/** Phone apps in the App Store / Google Play: hidden on the site until they are publicly listed (owner 2026-11-22). */
+export const PHONE_APPS_LIVE = false;

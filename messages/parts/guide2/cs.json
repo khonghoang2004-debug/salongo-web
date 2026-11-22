@@ -11,7 +11,7 @@
       "h": "Co je software pro správu salonu?",
       "body": [
         "Software pro salon spojí každodenní práci na jedno místo: rezervace, rozvrh personálu, pokladnu, karty klientů, tržby i mzdy. Místo papírového diáře, Excelu a zpráv vidí majitel v aplikaci, kdo dnes co dělá a kolik salon vydělal.",
-        "SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje na iPhonu, Androidu, iPadu, Macu, Windows i v prohlížeči."
+        "SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje v prohlížeči na telefonu, iPadu i počítači a jako aplikace pro Mac a Windows."
       ]
     },
     {
@@ -111,7 +111,7 @@
     { "q": "Existuje aplikace, která zvládne objednávky, pokladnu i mzdy?", "a": "Ano. SalonGo je jedna aplikace na všechno: klienti se objednávají online přes vlastní odkaz salonu, kalendář je rozdělený podle personálu, na recepci zaúčtujete platbu se spropitným a na konci měsíce se mzdy spočítají samy (procentem nebo pevnou mzdou). Funguje v telefonu, tabletu i počítači, {days} dní zdarma." },
     { "q": "Jaký rezervační systém se hodí pro nehtové studio?", "a": "SalonGo je určen pro nehtová studia a salony v Evropě, hlavně s vietnamskými majiteli: aplikace je česky i vietnamsky, klienti se objednávají v pěti jazycích, ceny jsou v Kč a podpora mluví česky a vietnamsky." },
     { "q": "Umí SalonGo EET 2.0?", "a": "Ano. EET zapnete jednou certifikátem z DIS+, pak se každá účtenka odešle finanční správě sama. EET je v každém tarifu bez příplatku." },
-    { "q": "Musím něco instalovat?", "a": "Ne. Funguje v prohlížeči na počítači i telefonu. K dispozici jsou také aplikace pro iPhone, Android, iPad, Windows a Mac." },
+    { "q": "Musím něco instalovat?", "a": "Ne. Funguje v prohlížeči na počítači i telefonu. K dispozici jsou také aplikace pro Windows a Mac." },
     { "q": "Je zkušební doba zdarma?", "a": "Ano. Každý nový salon má {days} dní se všemi funkcemi, bez platební karty." },
     { "q": "Vidí zaměstnanci svůj rozvrh v telefonu?", "a": "Ano. Každý zaměstnanec má vlastní přihlášení v telefonu a vidí své rezervace a pokud to majitel povolí, i své tržby." },
     { "q": "Jak systém počítá mzdy techniček?", "a": "Každá technička má mzdu jako procento z vlastních tržeb, nebo pevnou měsíční mzdu. Majitel volí, zda spropitné dostane ta, které ho klient dal, nebo se dělí rovným dílem." }

@@ -11,7 +11,7 @@
       "h": "Was ist eine Salonsoftware?",
       "body": [
         "Eine Salonsoftware bündelt die tägliche Arbeit an einem Ort: Terminbuchung, Dienstplan, Kasse, Kundenkartei, Umsatz und Lohnabrechnung. Statt Papierkalender, Excel und verstreuten Nachrichten sieht der Inhaber in der App, wer heute was macht und wie viel eingenommen wurde.",
-        "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa. Sie läuft auf iPhone, Android, iPad, Mac, Windows und im Browser."
+        "SalonGo ist eine Salonsoftware für Nagelstudios, Friseur-, Wimpern- und Kosmetiksalons in Europa. Sie läuft im Browser auf Handy, iPad und Computer, mit Apps für Mac und Windows."
       ]
     },
     {
@@ -111,7 +111,7 @@
     { "q": "Gibt es eine App für Termine, Kasse und Lohn zugleich?", "a": "Ja. SalonGo erledigt alles in einer App: Kunden buchen online über den eigenen Link des Salons, der Kalender ist nach Mitarbeitern geteilt, an der Kasse werden Zahlung und Trinkgeld mit Beleg erfasst, und am Monatsende wird der Lohn berechnet (Prozent oder Fixgehalt). Läuft auf Handy, Tablet und Computer, {days} Tage gratis." },
     { "q": "Welche Salonsoftware passt zu einem vietnamesischen Nagelstudio?", "a": "SalonGo ist für Nagelstudios und Salons vietnamesischer Inhaber in Europa gemacht: die App gibt es auf Vietnamesisch, Kunden buchen in fünf Sprachen, und der Support spricht Vietnamesisch und Tschechisch." },
     { "q": "Unterstützt SalonGo EET 2.0?", "a": "Ja. EET einmal mit dem Zertifikat aus DIS+ einschalten, danach geht jeder Beleg von selbst an das Finanzamt. EET ist in jedem Tarif ohne Aufpreis enthalten." },
-    { "q": "Muss ich etwas installieren?", "a": "Nein. Es läuft im Browser am Computer und Handy. Zusätzlich gibt es Apps für iPhone, Android, iPad, Windows und Mac." },
+    { "q": "Muss ich etwas installieren?", "a": "Nein. Es läuft im Browser am Computer und Handy. Zusätzlich gibt es Apps für Windows und Mac." },
     { "q": "Ist der Test kostenlos?", "a": "Ja. Jeder neue Salon testet {days} Tage mit allen Funktionen, ohne Kreditkarte." },
     { "q": "Sehen Mitarbeiter ihren Kalender am Handy?", "a": "Ja. Jede Mitarbeiterin hat ein eigenes Login am Handy und sieht ihre eigenen Termine und, wenn der Inhaber es erlaubt, ihren eigenen Umsatz." },
     { "q": "Wie berechnet die Software die Löhne im Nagelstudio?", "a": "Jede Mitarbeiterin erhält Prozent vom eigenen Umsatz oder ein festes Monatsgehalt. Der Inhaber wählt, wie Trinkgeld geteilt wird: an die Person, der der Kunde es gab, oder gleichmäßig." }

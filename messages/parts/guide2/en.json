@@ -11,7 +11,7 @@
       "h": "What is salon management software?",
       "body": [
         "Salon management software puts the salon's daily work in one place: taking bookings, scheduling staff, checkout, client records, revenue and payroll. Instead of a paper diary, spreadsheets and scattered messages, the owner opens the app and sees who is doing what today and how much came in.",
-        "SalonGo is salon management software made for Vietnamese-run nail, hair, lash and beauty salons in Europe. It runs on iPhone, Android, iPad, Mac, Windows and in the browser."
+        "SalonGo is salon management software made for Vietnamese-run nail, hair, lash and beauty salons in Europe. It runs in the browser on phones, iPads and computers, with apps for Mac and Windows."
       ]
     },
     {
@@ -111,7 +111,7 @@
     { "q": "Is there one app for appointments, checkout and staff payroll?", "a": "Yes. SalonGo does all of it: clients book online through your salon's own link, the calendar is split by staff member, checkout records payment and tips with a receipt, and payroll is calculated at month end (percentage or fixed salary). It works on phone, tablet and computer, with a {days}-day free trial." },
     { "q": "Which salon software suits a Vietnamese-run nail salon in Czechia?", "a": "SalonGo is made for Vietnamese-run nail and beauty salons in Europe: the app is in Vietnamese, clients book in Czech, Slovak, German, English or French, prices are in CZK and support speaks Vietnamese and Czech." },
     { "q": "Does SalonGo support EET 2.0?", "a": "Yes. Turn on EET once with your certificate from DIS+, then every receipt is sent to the tax office by itself. EET is in every plan at no extra cost." },
-    { "q": "Do I need to install anything?", "a": "No. It runs in the browser on computers and phones. There are also apps for iPhone, Android, iPad, Windows and Mac." },
+    { "q": "Do I need to install anything?", "a": "No. It runs in the browser on computers and phones. There are also apps for Windows and Mac." },
     { "q": "Is the trial free?", "a": "Yes. Every new salon gets {days} days with every feature, no card needed." },
     { "q": "Can staff see their schedule on their phone?", "a": "Yes. Each staff member has their own login on the phone and sees their own appointments and, if the owner allows it, their own revenue." },
     { "q": "How does the software calculate nail technicians' pay?", "a": "Each technician is paid a percentage of their own revenue or a fixed monthly salary. The owner chooses how tips are shared: to whoever the client tipped, or split equally." }

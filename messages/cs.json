@@ -1511,7 +1511,7 @@
       "for6": "Nájemci křesla (tarif Křeslo)",
       "factsTitle": "Na co se můžete spolehnout",
       "fact5": "Aplikace má 6 jazyků: vietnamštinu, češtinu, slovenštinu, angličtinu, němčinu a francouzštinu.",
-      "fact6": "Funguje v prohlížeči i na iPhonu, iPadu, Macu a Windows.",
+      "fact6": "Funguje v prohlížeči (telefon, iPad), na Macu a Windows.",
       "contactTitle": "Chcete s námi mluvit?",
       "contactLead": "Zavolejte, napište nebo pošlete e-mail. Odpovíme do 24 hodin.",
       "contactCta": "Kontakt"
@@ -1865,7 +1865,7 @@
         "text": "Tržby po dnech, podle pracovníků, služeb a způsobu platby. Účtenky najdete, vytisknete znovu nebo uložíte do PDF."
       },
       "devices": {
-        "title": "iPhone, Android, iPad, Mac, Windows a prohlížeč",
+        "title": "Telefon, iPad, Mac, Windows a prohlížeč",
         "text": "Jeden účet na všech zařízeních, vždy stejná data. Aplikace umí 6 jazyků: vietnamsky, česky, slovensky, anglicky, německy, francouzsky."
       },
       "desk": {
@@ -1894,7 +1894,7 @@
         "h": "Co je software pro správu salonu?",
         "body": [
           "Software pro salon spojí každodenní práci na jedno místo: rezervace, rozvrh personálu, pokladnu, karty klientů, tržby i mzdy. Místo papírového diáře, Excelu a zpráv vidí majitel v aplikaci, kdo dnes co dělá a kolik salon vydělal.",
-          "SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje na iPhonu, Androidu, iPadu, Macu, Windows i v prohlížeči."
+          "SalonGo je software pro nehtová studia, kadeřnictví, řasové a kosmetické salony v Evropě. Funguje v prohlížeči na telefonu, iPadu i počítači a jako aplikace pro Mac a Windows."
         ]
       },
       {
@@ -2046,7 +2046,7 @@
       },
       {
         "q": "Musím něco instalovat?",
-        "a": "Ne. Funguje v prohlížeči na počítači i telefonu. K dispozici jsou také aplikace pro iPhone, Android, iPad, Windows a Mac."
+        "a": "Ne. Funguje v prohlížeči na počítači i telefonu. K dispozici jsou také aplikace pro Windows a Mac."
       },
       {
         "q": "Je zkušební doba zdarma?",

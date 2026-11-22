@@ -43,7 +43,7 @@ export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: 
         {plans.map((p) => (
           <article
             key={p.key}
-            className={`relative overflow-hidden rounded-[22px] bg-white ring-1 shadow-[0_18px_40px_-28px_rgba(17,12,14,0.45)] ${p.featured ? "ring-[#b0284f]/40" : "ring-black/[0.07]"}`}
+            className={`relative flex flex-col overflow-hidden rounded-[22px] bg-white ring-1 shadow-[0_18px_40px_-28px_rgba(17,12,14,0.45)] ${p.featured ? "ring-[#b0284f]/40" : "ring-black/[0.07]"}`}
           >
             <div className="relative px-6 pb-6 pt-6 text-white" style={{ background: p.band }}>
               <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0)_38%)]" aria-hidden />
@@ -61,9 +61,9 @@ export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: 
               </p>
               <p className="relative mt-1.5 h-5 text-[13px] font-semibold text-white/90">{year ? labels.yearGift : ""}</p>
             </div>
-            <div className="px-6 pb-6 pt-5">
+            <div className="flex flex-1 flex-col px-6 pb-6 pt-5">
               {p.intro ? <p className="mb-2.5 text-[13.5px] font-semibold text-muted">{p.intro}</p> : null}
-              <ul className="space-y-2.5">
+              <ul className="mb-6 space-y-2.5">
                 {p.inc.map((k) => (
                   <li key={k} className="flex items-start gap-2.5 text-[15px] leading-snug text-ink/85">
                     <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-600/10 text-emerald-700">
@@ -75,7 +75,7 @@ export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: 
               </ul>
               <a
                 href={year ? p.yearlyUrl : p.monthlyUrl}
-                className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold text-white transition hover:brightness-110"
+                className="mt-auto inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold text-white transition hover:brightness-110"
                 style={{ background: p.band }}
               >
                 <CreditCard className="size-4" aria-hidden />

@@ -2217,7 +2217,7 @@
       "edits": "Edits to text, photos, prices and services whenever you need",
       "sameDay": "Done the same day"
     },
-    "cta": "Subscribe",
+    "cta": "Pay now",
     "manage": "Manage payment",
     "manageNote": "Change card, download invoices or cancel.",
     "secure": "Secure payment by Stripe.",

@@ -36,7 +36,7 @@ export default async function HostingPayPage({ params, searchParams }: Props) {
           </Link>
           <h1 className="mt-4 text-[1.6rem] font-semibold tracking-[-0.02em] text-ink sm:text-[2rem]">{name}</h1>
           <p className="mt-1 text-[15px] text-muted">
-            {price} {cycle === "y" ? t("perYear") : t("perMonth")} · {cycle === "y" ? t("noteYearly") : t("noteMonthly")}
+            {price} {cycle === "y" ? t("perYear") : t("perMonth")}
           </p>
           <div className="mt-4 inline-flex rounded-full bg-porcelain p-1 ring-1 ring-black/[0.06]">
             {(["m", "y"] as const).map((c) => (

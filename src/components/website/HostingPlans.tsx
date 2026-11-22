@@ -17,7 +17,7 @@ export type HostingPlan = {
   inc: string[];
 };
 
-type Labels = { monthly: string; yearly: string; perMonth: string; perYear: string; yearGift: string; recommended: string; cta: string; noteMonthly: string; noteYearly: string };
+type Labels = { monthly: string; yearly: string; perMonth: string; perYear: string; yearGift: string; recommended: string; cta: string };
 
 /** Hosting plan cards with a Month / Year switch (each button opens the matching Stripe Payment Link). */
 export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: Labels }) {
@@ -81,7 +81,6 @@ export function HostingPlans({ plans, labels }: { plans: HostingPlan[]; labels: 
                 <CreditCard className="size-4" aria-hidden />
                 {labels.cta}
               </a>
-              <p className="mt-2 text-center text-[12.5px] text-muted">{year ? labels.noteYearly : labels.noteMonthly}</p>
             </div>
           </article>
         ))}

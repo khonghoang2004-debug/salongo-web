@@ -42,7 +42,7 @@ export async function WebHostingSection() {
   ];
   const labels = {
     monthly: t("monthly"), yearly: t("yearly"), perMonth: t("perMonth"), perYear: t("perYear"), yearGift: t("yearGift"),
-    recommended: t("recommended"), cta: t("cta"), noteMonthly: t("noteMonthly"), noteYearly: t("noteYearly"),
+    recommended: t("recommended"), cta: t("cta"),
   };
   return (
     <section id="hosting" className="x-section scroll-mt-20 bg-white" aria-labelledby="hosting-title">

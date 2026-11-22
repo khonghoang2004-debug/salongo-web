@@ -17,7 +17,7 @@ export async function LandingHero() {
             <span className="shrink-0 whitespace-nowrap rounded-full bg-[#E8F1EC] px-2 py-0.5 text-[12px] font-semibold text-[#2F5E47]">EET 2.0</span>
             <span className="truncate">{t("eet")}</span>
           </Link>
-          <h1 className="x-display mt-6 text-ink lg:!text-[clamp(3rem,1rem+3.6vw,4.6rem)]">{t("title")}</h1>
+          <h1 className="x-display mt-6 text-ink max-sm:!text-[2.2rem] lg:!text-[clamp(3rem,1rem+3.6vw,4.6rem)]">{t("title")}</h1>
           <p className="x-lead mt-6 max-w-[34rem]">{t("lead")}</p>
           <div data-cta className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href={appLink(SIGNUP_URL, locale)} className="x-btn-primary !min-h-[52px] !px-7 text-base">

@@ -1,7 +1,7 @@
 import { getLegalPack } from "@/content/legal";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowDown, Check, Plus } from "lucide-react";
+import { ArrowDown, Plus } from "lucide-react";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
 import { WEBSITE_PRICE_KC } from "@/lib/website-offer";
@@ -26,8 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ locale, path: "/website", title: t("websiteTitle", offerVars()), description: t("websiteDesc", offerVars()), absolute: true });
 }
 
-const INCLUDED = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"] as const;
-const STEPS = [1, 2, 3] as const;
 const FAQ = [6, 2, 3, 4, 5] as const;
 // Mẫu trong khung xem trước đầu trang (đổi bằng nút tên mẫu) và trong khối giá
 const HERO_PICKS = ["aurel-beauty", "atelier-noir", "maison-claire", "thermae-wellness"];
@@ -140,42 +138,6 @@ export default async function WebsitePage({ params }: Props) {
               <LivePreview items={live} label={t("previewGroup")} demoLabel={t("viewDemo")} desktopLabel={t("desktop")} mobileLabel={t("mobile")} />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 2. Cách làm: ba bước */}
-      <section className="bg-white py-10 sm:py-14" aria-labelledby="steps-title">
-        <div className="x-wrap">
-          <p className="x-kicker">{t("stepsKicker")}</p>
-          <h2 id="steps-title" className="mt-2 text-[1.5rem] font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-[1.75rem]">{t("stepsTitle")}</h2>
-          <ol className="relative mt-6 md:mt-8 md:grid md:grid-cols-3 md:gap-5">
-            {STEPS.map((n, i) => (
-              <li key={n} className="relative flex gap-4 pb-5 last:pb-0 md:rounded-2xl md:bg-porcelain md:p-5 md:ring-1 md:ring-black/[0.04]">
-                {i < STEPS.length - 1 && <span className="absolute left-[17px] top-10 bottom-1 w-px bg-line md:hidden" aria-hidden />}
-                <span className="relative flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-700 text-[15px] font-semibold text-white">{n}</span>
-                <div className="min-w-0 pt-0.5">
-                  <h3 className="text-[1.0625rem] font-semibold leading-snug text-ink">{t(`step${n}Title`)}</h3>
-                  <p className="mt-0.5 text-[15px] leading-snug text-muted">{t(`step${n}Text`)}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* 3. Gói gồm những gì: một thẻ, danh sách gọn */}
-      <section className="bg-porcelain py-10 sm:py-14" aria-labelledby="inc-title">
-        <div className="x-wrap">
-          <p className="x-kicker">{t("incKicker")}</p>
-          <h2 id="inc-title" className="mt-2 text-[1.5rem] font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-[1.75rem]">{t("incTitle", v)}</h2>
-          <ul className="mt-6 grid rounded-2xl bg-white px-5 py-1 ring-1 ring-black/[0.05] sm:grid-cols-2 sm:gap-x-10 sm:px-7 sm:py-2">
-            {INCLUDED.map((k) => (
-              <li key={k} className="flex items-center gap-3 border-b border-line py-3 text-[15.5px] text-ink last:border-0 sm:[&:nth-last-child(2)]:border-0">
-                <Check className="size-4 shrink-0 text-brand-700" strokeWidth={2.5} aria-hidden />
-                <span>{t(k, v)}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 

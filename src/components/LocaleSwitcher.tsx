@@ -55,7 +55,8 @@ function FlagImg({ code, className }: { code: string; className?: string }) {
   }
 }
 
-export function LocaleSwitcher({ compact = false, up = false }: { compact?: boolean; up?: boolean }) {
+/** `tight`: phone header row (flag + code, no chevron) so it fits beside the logo and the trial button. */
+export function LocaleSwitcher({ compact = false, up = false, tight = false }: { compact?: boolean; up?: boolean; tight?: boolean }) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -96,7 +97,7 @@ export function LocaleSwitcher({ compact = false, up = false }: { compact?: bool
 
   if (!mounted) {
     return (
-      <div className={`h-11 shrink-0 animate-pulse rounded-full border border-line bg-nude ${compact ? "w-[76px]" : "w-[150px]"}`} />
+      <div className={`shrink-0 animate-pulse rounded-full border border-line bg-nude ${tight ? "h-10 w-[60px]" : compact ? "h-11 w-[76px]" : "h-11 w-[150px]"}`} />
     );
   }
 
@@ -105,13 +106,14 @@ export function LocaleSwitcher({ compact = false, up = false }: { compact?: bool
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-11 items-center gap-2 rounded-full border border-line bg-white px-3.5 text-sm font-medium text-ink/80 transition-colors hover:border-ink"
+        className={`flex items-center rounded-full border border-line bg-white text-sm font-medium text-ink/80 transition-colors hover:border-ink ${tight ? "h-10 gap-1.5 px-2.5" : "h-11 gap-2 px-3.5"}`}
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label="Select language"
       >
         <FlagImg code={current.flagCode} className="shrink-0 rounded-sm object-cover" />
-        <span>{compact ? current.code.toUpperCase() : current.label}</span>
+        <span>{compact || tight ? current.code.toUpperCase() : current.label}</span>
+        {tight ? null : (
         <svg
           className={`size-4 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
           fill="none"
@@ -120,6 +122,7 @@ export function LocaleSwitcher({ compact = false, up = false }: { compact?: bool
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
+        )}
       </button>
 
       {open && (

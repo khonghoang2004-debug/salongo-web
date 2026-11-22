@@ -109,7 +109,7 @@ export function SiteNav() {
           scrolled ? "bg-white/85 shadow-[0_1px_0_rgba(42,15,23,0.08)] backdrop-blur-xl" : "bg-white"
         }`}
       >
-        <div className="x-wrap flex h-16 items-center gap-4 lg:h-[72px] xl:gap-6">
+        <div className="x-wrap flex h-16 items-center gap-2 sm:gap-4 lg:h-[72px] xl:gap-6">
           <Link href="/" aria-label={siteConfig.name} className="shrink-0 rounded-lg">
             <Logo />
           </Link>
@@ -132,7 +132,7 @@ export function SiteNav() {
             </ul>
           </nav>
 
-          <div className="ml-auto flex items-center gap-2">
+          <div className="ml-auto flex items-center gap-1 sm:gap-2">
             <a href={renewLink(locale)} className="hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[15px] text-ink/70 transition-colors hover:text-ink 2xl:inline-flex">
               <CalendarSync className="size-4" aria-hidden />
               {t("renew")}
@@ -143,16 +143,20 @@ export function SiteNav() {
             <div className="hidden lg:block">
               <LocaleSwitcher compact />
             </div>
-            <a href={signup} className="x-btn-primary !min-h-10 !px-4 sm:!min-h-11 sm:!px-5">
+            <a href={signup} className="x-btn-primary !min-h-10 !px-3.5 sm:!min-h-11 sm:!px-5">
               <span className="sm:hidden lg:inline xl:hidden">{t("ctaShort")}</span>
               <span className="hidden sm:inline lg:hidden xl:inline">{t("cta")}</span>
             </a>
+            {/* Phone / tablet: language right after the trial button on the logo row (owner 2026-11-22). */}
+            <div className="lg:hidden">
+              <LocaleSwitcher tight />
+            </div>
             <button
               type="button"
               onClick={() => setOpen(true)}
               aria-expanded={open}
               aria-controls="site-menu"
-              className="-mr-2 inline-flex size-11 items-center justify-center rounded-full text-ink lg:hidden"
+              className="-mr-2 inline-flex size-10 items-center justify-center rounded-full text-ink sm:size-11 lg:hidden"
             >
               <Menu className="size-6" aria-hidden />
               <span className="sr-only">{t("menu")}</span>
@@ -204,8 +208,7 @@ export function SiteNav() {
                   </a>
                 </div>
               </div>
-              <div className="mt-3 flex items-center justify-between gap-3">
-                <LocaleSwitcher compact up />
+              <div className="mt-3 flex items-center justify-end gap-3">
                 {/* Gia hạn: a clear pill in the brand tint (owner 2026-11-21: "làm lại đẹp hơn"). */}
                 <a
                   href={renewLink(locale)}

@@ -23,7 +23,7 @@ export function DeskPanel({
 }) {
   const s = SHOTS.desk;
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-20 pt-14 sm:pt-16 lg:scroll-mt-24 lg:pt-24">
+    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-20 pt-10 sm:pt-10 lg:scroll-mt-24 lg:pt-16">
       <div className="x-wrap">
         <div className="x-panel grid overflow-hidden bg-plum text-white lg:grid-cols-12">
           <div className="p-7 sm:p-10 lg:col-span-7 lg:p-14">

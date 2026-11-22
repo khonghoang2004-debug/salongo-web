@@ -97,7 +97,7 @@ export function KoraSite(props: SiteProps) {
           </svg>
         </section>
 
-        <section className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1000px] px-5 py-10 sm:px-8">
           <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {t.services.groups.map((g, i) => (
               <li key={i}>
@@ -125,14 +125,14 @@ export function KoraSite(props: SiteProps) {
           <div className="mx-auto max-w-[1100px] px-5 py-12 sm:px-8">
             <h2 className="text-center text-2xl font-semibold sm:text-3xl">{l(t.home.intro.title)}</h2>
             <p className="mt-2 text-center text-white/80">{l(t.home.intro.text)}</p>
-            <div className="mt-10 [&_li>div]:!bg-white/10 [&_li>span]:!bg-white [&_li>span]:!text-[#1E352B] [&_p]:!text-white/80">
+            <div className="mt-7 [&_li>div]:!bg-white/10 [&_li>span]:!bg-white [&_li>span]:!text-[#1E352B] [&_p]:!text-white/80">
               <Steps />
             </div>
           </div>
         </section>
         <Wave flip />
 
-        <section className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1000px] px-5 py-10 sm:px-8">
           <h2 className="text-center text-2xl font-semibold sm:text-3xl">Kolik stojí krása, která vydrží</h2>
           <p className={`mt-2 text-center ${soft}`}>{l(t.services.lead)}</p>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -167,7 +167,7 @@ export function KoraSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8">
           <Reviews
             x={x}
             locale={props.locale}
@@ -183,7 +183,7 @@ export function KoraSite(props: SiteProps) {
           />
         </section>
 
-        <section className="mx-auto max-w-[1100px] px-5 pb-14 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-10 sm:px-8">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -202,7 +202,7 @@ export function KoraSite(props: SiteProps) {
           />
         </section>
 
-        <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-10 sm:px-8">
           <h2 className="mb-6 text-center text-2xl font-semibold">Vy se ptáte, my odpovídáme</h2>
           <Faq />
         </section>
@@ -210,10 +210,10 @@ export function KoraSite(props: SiteProps) {
     );
   } else if (page === "dich-vu") {
     body = (
-      <section className="mx-auto max-w-[900px] px-5 py-14 sm:px-8">
+      <section className="mx-auto max-w-[900px] px-5 py-10 sm:px-8">
         <h1 className="text-center text-3xl font-semibold sm:text-4xl">Transparentní ceny, férový přístup</h1>
         <p className={`mt-2 text-center ${soft}`}>{l(t.services.lead)}</p>
-        <div className="mt-10 space-y-8">
+        <div className="mt-7 space-y-8">
           {t.services.groups.map((g, gi) => (
             <PriceBox key={gi} g={g} />
           ))}
@@ -230,14 +230,14 @@ export function KoraSite(props: SiteProps) {
   } else if (page === "gioi-thieu") {
     body = (
       <>
-        <section className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8">
           <h1 className="text-center text-3xl font-semibold sm:text-4xl">{l(t.home.intro.title)}</h1>
           <p className={`mt-2 text-center ${soft}`}>{l(t.home.intro.text)}</p>
-          <div className="mt-10">
+          <div className="mt-7">
             <Steps />
           </div>
         </section>
-        <section className="mx-auto grid max-w-[1000px] gap-6 px-5 pb-14 sm:grid-cols-2 sm:px-8">
+        <section className="mx-auto grid max-w-[1000px] gap-6 px-5 pb-10 sm:grid-cols-2 sm:px-8">
           {t.about.team.map((m) => (
             <article key={m.name} className="flex items-center gap-5 rounded-2xl border border-[#C7CDC9] p-5">
               <div className="size-28 shrink-0 overflow-hidden rounded-2xl bg-[#C7CDC9]">{s.art(m.visual)}</div>
@@ -249,7 +249,7 @@ export function KoraSite(props: SiteProps) {
             </article>
           ))}
         </section>
-        <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-10 sm:px-8">
           <h2 className="mb-6 text-center text-2xl font-semibold">Vy se ptáte, my odpovídáme</h2>
           <Faq />
         </section>
@@ -257,10 +257,10 @@ export function KoraSite(props: SiteProps) {
     );
   } else if (page === "bo-suu-tap") {
     body = (
-      <section className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
+      <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8">
         <h1 className="text-center text-3xl font-semibold sm:text-4xl">{l(t.gallery.title)}</h1>
         <p className={`mt-2 text-center ${soft}`}>{l(t.gallery.lead)}</p>
-        <div className="mt-10">
+        <div className="mt-7">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -273,7 +273,7 @@ export function KoraSite(props: SiteProps) {
     );
   } else {
     body = (
-      <section className="mx-auto grid max-w-[1100px] gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12">
+      <section className="mx-auto grid max-w-[1100px] gap-8 px-5 py-10 sm:px-8 lg:grid-cols-12">
         <div className="rounded-2xl border border-[#C7CDC9] p-6 sm:p-8 lg:col-span-8">
           <h1 className="text-2xl font-semibold">{l(t.contact.title)}</h1>
           <p className={`mb-6 mt-1 ${soft}`}>{l(t.contact.lead)}</p>

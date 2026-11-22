@@ -19,7 +19,7 @@ export default async function HostingThanksPage({ params }: Props) {
   const t = await getTranslations("webHosting");
   return (
     <PageShell>
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-white py-10 sm:py-16">
         <div className="x-wrap max-w-[36rem] text-center">
           <CheckCircle2 className="mx-auto size-14 text-emerald-600" aria-hidden />
           <h1 className="mt-5 text-[1.75rem] font-semibold tracking-[-0.02em] text-ink sm:text-[2.25rem]">{t("thanksTitle")}</h1>

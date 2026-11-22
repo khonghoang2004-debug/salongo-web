@@ -17,7 +17,7 @@ export function Closing({
   link: { href: string; label: string };
 }) {
   return (
-    <section className="bg-white pb-20 lg:pb-28" aria-labelledby="closing-title">
+    <section className="bg-white pb-12 lg:pb-28" aria-labelledby="closing-title">
       <div className="x-wrap">
         <div data-cta className="x-panel bg-porcelain px-7 py-14 sm:px-12 lg:flex lg:items-end lg:justify-between lg:gap-12 lg:px-16 lg:py-20">
           <div>

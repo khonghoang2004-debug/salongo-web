@@ -103,7 +103,7 @@ export default async function WebsitePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* 1. Đầu trang: chữ + giá bên trái, mẫu thật trong khung máy tính + iPhone bên phải */}
-      <section className="relative overflow-hidden bg-white pb-14 pt-8 sm:pt-12 lg:pb-20 lg:pt-16">
+      <section className="relative overflow-hidden bg-white pb-10 pt-8 sm:pt-12 lg:pb-12 lg:pt-10">
         <div className="x-wrap grid items-center gap-10 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
           <div className="lg:col-span-5">
             <p className="inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-white py-1.5 pl-1.5 pr-4 text-[14px] text-ink/80">

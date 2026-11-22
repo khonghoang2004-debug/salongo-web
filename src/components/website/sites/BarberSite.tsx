@@ -90,7 +90,7 @@ export function BarberSite(props: SiteProps) {
           </ul>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12 lg:py-24">
+        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-12 lg:py-16">
           <div className="lg:col-span-5">
             <h2 className={`${o} text-4xl font-semibold leading-none sm:text-5xl`}>{l(t.home.intro.title)}</h2>
             <p className={`mt-5 text-[17px] leading-relaxed ${soft}`}>{l(t.home.intro.text)}</p>
@@ -114,7 +114,7 @@ export function BarberSite(props: SiteProps) {
         <section className="bg-[#2A2826] text-[#F1E9DC]">
           <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-20">
             <h2 className={`${o} text-4xl font-semibold sm:text-5xl`}>{l(t.about.title)}</h2>
-            <ul className="mt-10 grid gap-6 sm:grid-cols-3">
+            <ul className="mt-7 grid gap-6 sm:grid-cols-3">
               {t.about.team.map((m) => (
                 <li key={m.name}>
                   <div className="aspect-[4/5] overflow-hidden bg-[#3A3330]">{s.art(m.visual)}</div>
@@ -125,14 +125,14 @@ export function BarberSite(props: SiteProps) {
             </ul>
           </div>
         </section>
-        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8 lg:py-16">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className={`${o} text-4xl font-semibold sm:text-5xl`}>{l(t.gallery.title)}</h2>
             <Link href={s.href("bo-suu-tap")} className={`${o} inline-flex min-h-11 items-center text-sm tracking-[0.12em] underline underline-offset-4`}>
               {l(UI.viewGallery)}
             </Link>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
             {t.gallery.items.slice(0, 5).map((g, i) => (
               <div key={i} className={`overflow-hidden rounded-[4px] bg-[#3A3330] ${i === 0 ? "col-span-2 aspect-[16/10] lg:row-span-2 lg:aspect-auto" : "aspect-square"} ${i > 2 ? "hidden lg:block" : ""}`}>
                 {s.art(g)}
@@ -157,7 +157,7 @@ export function BarberSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8 lg:py-16">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -182,7 +182,7 @@ export function BarberSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className="mx-auto grid max-w-[1200px] gap-6 px-5 py-14 sm:px-8 lg:grid-cols-3">
+        <section className="mx-auto grid max-w-[1200px] gap-6 px-5 py-10 sm:px-8 lg:grid-cols-3">
           {t.services.groups.map((grp, gi) => (
             <div key={gi} className="rounded-[6px] border-2 border-[#2A2826] p-5 sm:p-7">
               <h2 className={`${o} border-b-2 border-[#2A2826] pb-3 text-3xl font-semibold`}>{l(grp.name)}</h2>
@@ -202,7 +202,7 @@ export function BarberSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto max-w-[1200px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8">
           <ul className="grid gap-10 md:grid-cols-3">
             {t.about.team.map((m) => (
               <li key={m.name}>
@@ -237,7 +237,7 @@ export function BarberSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1200px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -253,7 +253,7 @@ export function BarberSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1200px] gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1200px] gap-8 px-5 py-10 sm:px-8 lg:grid-cols-12">
           <div className="rounded-[6px] border-2 border-[#2A2826] bg-[#F7F1E7] p-5 sm:p-8 lg:col-span-8">
             <DemoBookingForm
               {...s.form}
@@ -338,7 +338,7 @@ function Closing(props: SiteProps) {
   const s = site(props);
   const { t } = props;
   return (
-    <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8">
+    <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8">
       <div className="flex flex-col items-start gap-6 border-y-2 border-[#2A2826] py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className={`${o} text-4xl font-semibold`}>{s.l(t.home.closing.title)}</h2>

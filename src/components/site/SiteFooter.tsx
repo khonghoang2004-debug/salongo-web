@@ -84,7 +84,7 @@ export async function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-6 text-[13px] leading-relaxed text-white/45">
+        <div className="mt-10 border-t border-white/10 pt-6 text-[13px] leading-relaxed text-white/45">
           <ul className="flex flex-wrap gap-x-5">
             {LEGAL_DOCS.map((d) => (
               <li key={d.key}>

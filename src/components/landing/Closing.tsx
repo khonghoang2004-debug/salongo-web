@@ -59,7 +59,7 @@ export async function FinalCta() {
   const t = await getTranslations("landing.final");
   const locale = await getLocale();
   return (
-    <section className="bg-white pb-20 lg:pb-28" aria-labelledby="final-title">
+    <section className="bg-white pb-12 lg:pb-28" aria-labelledby="final-title">
       <div className="x-wrap">
         <div data-cta className="x-panel bg-porcelain px-7 py-14 sm:px-12 lg:px-16 lg:py-20">
           <h2 id="final-title" className="x-h2 max-w-[42rem] text-ink">{t("title")}</h2>

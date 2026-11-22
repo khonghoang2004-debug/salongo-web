@@ -16,7 +16,7 @@ export async function DeskIncluded() {
       <div className="x-wrap grid gap-12 lg:grid-cols-12 lg:gap-8 [&>*]:min-w-0">
         <div className="lg:col-span-5">
           <h2 id="desk-what-title" className="x-h2 text-ink">{t("title")}</h2>
-          <h3 className="mt-10 text-[15px] font-semibold text-ink">{t("yesTitle")}</h3>
+          <h3 className="mt-7 text-[15px] font-semibold text-ink">{t("yesTitle")}</h3>
           <ul className="mt-3 border-t border-ink/80">
             {YES.map((k) => (
               <li key={k} className="flex gap-3 border-b border-line py-4 text-[1.0625rem] leading-snug text-ink">
@@ -25,7 +25,7 @@ export async function DeskIncluded() {
               </li>
             ))}
           </ul>
-          <h3 className="mt-10 text-[15px] font-semibold text-ink">{t("noTitle")}</h3>
+          <h3 className="mt-7 text-[15px] font-semibold text-ink">{t("noTitle")}</h3>
           <ul className="mt-3 border-t border-line">
             {NO.map((k) => (
               <li key={k} className="flex gap-3 border-b border-line py-3.5 text-[15.5px] leading-snug text-muted">

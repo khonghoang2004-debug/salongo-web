@@ -57,7 +57,7 @@ export function HugoSite(props: SiteProps) {
   if (page === "") {
     body = (
       <>
-        <section className="mx-auto grid max-w-[1160px] items-center gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:py-20">
+        <section className="mx-auto grid max-w-[1160px] items-center gap-10 px-5 py-10 sm:px-8 md:grid-cols-2 lg:py-12">
           <div className="order-2">
             <div className="mx-auto aspect-[4/5] max-w-[440px] overflow-hidden bg-[#DDE4EC] shadow-[0_20px_40px_rgba(0,0,0,0.12)]">{s.art(t.home.hero, "", true)}</div>
           </div>
@@ -79,7 +79,7 @@ export function HugoSite(props: SiteProps) {
             <RatingBadge x={x} locale={props.locale} className={`mt-8 border-t border-black/10 pt-5 text-[15px] ${soft}`} starClass="text-[#C9B400]" />
           </div>
         </section>
-        <section className="mx-auto grid max-w-[1160px] gap-10 px-5 pb-16 sm:px-8 md:grid-cols-12">
+        <section className="mx-auto grid max-w-[1160px] gap-10 px-5 pb-10 sm:px-8 md:grid-cols-12">
           <div className="aspect-[4/5] overflow-hidden bg-[#222] md:col-span-4">{s.art(t.about.team[0].visual)}</div>
           <div className="md:col-span-7 md:col-start-6">
             <h2 className="text-3xl font-light uppercase">{l(t.home.intro.title)}</h2>
@@ -103,7 +103,7 @@ export function HugoSite(props: SiteProps) {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-3xl font-light uppercase sm:text-5xl">{l(t.gallery.title)}</h2>
             <Link href={s.href("bo-suu-tap")} className={link}>
@@ -135,7 +135,7 @@ export function HugoSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -157,10 +157,10 @@ export function HugoSite(props: SiteProps) {
     );
   } else if (page === "dich-vu") {
     body = (
-      <section className="mx-auto max-w-[1160px] px-5 py-14 sm:px-8">
+      <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
         <Title>{l(t.services.title)}</Title>
         <p className={`mt-3 ${soft}`}>{l(t.services.lead)}</p>
-        <div className="mt-10 bg-[#EBEBEB] p-6 sm:p-10">
+        <div className="mt-7 bg-[#EBEBEB] p-6 sm:p-10">
           <PriceTable groups={t.services.groups} />
         </div>
         <p className={`mt-6 text-sm ${soft}`}>{l(t.services.note)}</p>
@@ -169,7 +169,7 @@ export function HugoSite(props: SiteProps) {
   } else if (page === "gioi-thieu") {
     body = (
       <>
-        <section className="mx-auto grid max-w-[1160px] gap-10 px-5 py-14 sm:px-8 md:grid-cols-2">
+        <section className="mx-auto grid max-w-[1160px] gap-10 px-5 py-10 sm:px-8 md:grid-cols-2">
           <div>
             <Title>{l(t.about.title)}</Title>
             <p className={`mt-2 ${cap} ${soft}`}>{l(t.about.lead)}</p>
@@ -180,7 +180,7 @@ export function HugoSite(props: SiteProps) {
         <section className="border-t border-black/10">
           <div className="mx-auto max-w-[1160px] px-5 py-14 sm:px-8">
             <h2 className="text-center text-2xl font-light uppercase">Kdo se o vás postará</h2>
-            <ul className="mt-10 grid gap-10 sm:grid-cols-3">
+            <ul className="mt-7 grid gap-10 sm:grid-cols-3">
               {t.about.team.map((m) => (
                 <li key={m.name} className="text-center">
                   <div className="mx-auto size-44 overflow-hidden rounded-full bg-[#222]">{s.art(m.visual)}</div>
@@ -195,9 +195,9 @@ export function HugoSite(props: SiteProps) {
     );
   } else if (page === "bo-suu-tap") {
     body = (
-      <section className="mx-auto max-w-[1160px] px-5 py-14 sm:px-8">
+      <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
         <Title>{l(t.gallery.title)}</Title>
-        <div className="mt-10">
+        <div className="mt-7">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -210,7 +210,7 @@ export function HugoSite(props: SiteProps) {
     );
   } else {
     body = (
-      <section className="mx-auto grid max-w-[1160px] gap-12 px-5 py-14 sm:px-8 lg:grid-cols-2">
+      <section className="mx-auto grid max-w-[1160px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-2">
         <div>
           <Title>{l(t.contact.title)}</Title>
           <div className="mt-8">

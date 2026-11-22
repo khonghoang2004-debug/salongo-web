@@ -20,7 +20,7 @@ export async function FaqView() {
       <PageHead title={p("title")} lead={p("lead")}>
         <Link href="/lien-he" className="x-btn-light mt-8">{p("contact")}</Link>
       </PageHead>
-      <section className="bg-white pb-24 lg:pb-32">
+      <section className="bg-white pb-16 lg:pb-32">
         <div className="x-wrap space-y-16">
           {FAQ_GROUPS.map((g) => (
             <div key={g.title} className="grid gap-6 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">

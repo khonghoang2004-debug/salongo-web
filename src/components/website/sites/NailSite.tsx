@@ -25,7 +25,7 @@ export function NailSite(props: SiteProps) {
   );
 
   const PageHead = ({ title, lead }: { title: string; lead: string }) => (
-    <section className="mx-auto max-w-3xl px-5 pb-10 pt-14 text-center sm:pt-20">
+    <section className="mx-auto max-w-3xl px-5 pb-10 pt-10 text-center sm:pt-14">
       <p className={`text-xs uppercase tracking-[0.3em] ${soft}`}>{t.name}</p>
       <div className="mt-4">
         <Title>{title}</Title>
@@ -53,7 +53,7 @@ export function NailSite(props: SiteProps) {
   if (page === "") {
     body = (
       <>
-        <section className="mx-auto grid max-w-[1200px] items-center gap-10 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-12 lg:gap-14 lg:pb-24 lg:pt-16">
+        <section className="mx-auto grid max-w-[1200px] items-center gap-10 px-5 pb-10 pt-10 sm:px-8 lg:grid-cols-12 lg:gap-14 lg:pb-16 lg:pt-10">
           <div className="lg:col-span-6">
             <p className={`text-xs uppercase tracking-[0.3em] ${soft}`}>{l(t.home.kicker)}</p>
             <div className="mt-5">
@@ -98,7 +98,7 @@ export function NailSite(props: SiteProps) {
           </ul>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12 lg:py-24">
+        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-12 lg:py-16">
           <div className="lg:col-span-5">
             <h2 className={`${serif} text-[2rem] leading-tight sm:text-[2.75rem]`}>{l(t.nav["dich-vu"])}</h2>
             <p className={`mt-4 max-w-sm text-[17px] leading-relaxed ${soft}`}>{l(t.services.lead)}</p>
@@ -121,7 +121,7 @@ export function NailSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8 lg:pb-24">
+        <section className="mx-auto max-w-[1200px] px-5 pb-10 sm:px-8 lg:pb-16">
           <h2 className={`${serif} mb-8 text-center text-[2rem] leading-tight sm:text-[2.75rem]`}>{l(t.gallery.title)}</h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
             {t.gallery.items.slice(0, 6).map((g, i) => (
@@ -155,7 +155,7 @@ export function NailSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8 lg:py-16">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -180,7 +180,7 @@ export function NailSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-x-16 gap-y-12 px-5 pb-16 sm:px-8 lg:grid-cols-2">
+        <section className="mx-auto grid max-w-[1100px] gap-x-16 gap-y-12 px-5 pb-10 sm:px-8 lg:grid-cols-2">
           {t.services.groups.map((g, gi) => (
             <div key={gi} className={gi === 2 ? "lg:col-span-2 lg:mx-auto lg:w-1/2 lg:pl-8" : ""}>
               <h2 className={`${serif} text-[1.75rem] italic text-[#8C7357]`}>{l(g.name)}</h2>
@@ -200,7 +200,7 @@ export function NailSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto grid max-w-[1100px] items-center gap-10 px-5 pb-16 sm:px-8 lg:grid-cols-2 lg:gap-16">
+        <section className="mx-auto grid max-w-[1100px] items-center gap-10 px-5 pb-10 sm:px-8 lg:grid-cols-2 lg:gap-16">
           <div className="aspect-[4/5] overflow-hidden rounded-t-full bg-[#EFE5D9] lg:order-2">{s.art(t.gallery.items[2])}</div>
           <div className="space-y-5">
             {t.about.story.map((p, i) => (
@@ -213,7 +213,7 @@ export function NailSite(props: SiteProps) {
         <section className="border-t border-[#EADFD2] bg-[#F3ECE2]">
           <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
             <h2 className={`${serif} text-center text-[2rem] sm:text-[2.75rem]`}>{l(UI.team)}</h2>
-            <ul className="mt-10 grid gap-10 sm:grid-cols-3">
+            <ul className="mt-7 grid gap-10 sm:grid-cols-3">
               {t.about.team.map((m) => (
                 <li key={m.name} className="text-center">
                   <div className="mx-auto aspect-[3/4] max-w-[260px] overflow-hidden rounded-t-full bg-[#EFE5D9]">{s.art(m.visual)}</div>
@@ -225,7 +225,7 @@ export function NailSite(props: SiteProps) {
             </ul>
           </div>
         </section>
-        <section className="mx-auto grid max-w-[1100px] gap-8 px-5 py-16 sm:grid-cols-3 sm:px-8">
+        <section className="mx-auto grid max-w-[1100px] gap-8 px-5 py-10 sm:grid-cols-3 sm:px-8">
           {t.about.values.map((v, i) => (
             <div key={i} className="border-t border-[#C9AE82] pt-5">
               <h3 className={`${serif} text-2xl`}>{l(v.title)}</h3>
@@ -240,7 +240,7 @@ export function NailSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -256,7 +256,7 @@ export function NailSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 pb-12 sm:px-8 lg:grid-cols-12">
           <div className="rounded-3xl border border-[#E7DCCE] bg-[#FBF8F3] p-6 sm:p-9 lg:col-span-7">
             <DemoBookingForm
               {...s.form}
@@ -322,7 +322,7 @@ function Closing(props: SiteProps) {
   const { t } = props;
   const s = site(props);
   return (
-    <section className="px-5 pb-16 sm:px-8 lg:pb-24">
+    <section className="px-5 pb-10 sm:px-8 lg:pb-16">
       <div className="mx-auto max-w-[1200px] rounded-[32px] bg-[#E9DCCB] px-6 py-14 text-center sm:py-16">
         <h2 className={`${serif} text-[2rem] leading-tight sm:text-[2.75rem]`}>{s.l(t.home.closing.title)}</h2>
         <p className={`mx-auto mt-3 max-w-md text-[17px] ${soft}`}>{s.l(t.home.closing.text)}</p>

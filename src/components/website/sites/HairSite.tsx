@@ -29,7 +29,7 @@ export function HairSite(props: SiteProps) {
   );
 
   const PageHead = ({ n, title, lead }: { n: string; title: string; lead: string }) => (
-    <section className="mx-auto grid max-w-[1240px] gap-6 px-5 pb-12 pt-12 sm:px-8 sm:pt-16 lg:grid-cols-12 lg:items-end">
+    <section className="mx-auto grid max-w-[1240px] gap-6 px-5 pb-12 pt-12 sm:px-8 sm:pt-10 lg:grid-cols-12 lg:items-end">
       <div className="lg:col-span-7">
         <Num n={n} label={t.name} />
         <h1 className={`${g} mt-5 text-[2.75rem] font-bold uppercase leading-[1.04] tracking-[-0.03em] sm:text-[4rem] lg:text-[5.5rem]`}>{title}</h1>
@@ -60,7 +60,7 @@ export function HairSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1240px] gap-10 px-5 py-16 sm:px-8 lg:grid-cols-12 lg:py-24">
+        <section className="mx-auto grid max-w-[1240px] gap-10 px-5 py-10 sm:px-8 lg:grid-cols-12 lg:py-16">
           <div className="lg:col-span-5">
             <Num n="02" label={l(t.nav["dich-vu"])} />
             <h2 className={`${g} mt-5 text-[2.25rem] font-bold uppercase leading-none tracking-[-0.02em] sm:text-5xl`}>{l(t.home.intro.title)}</h2>
@@ -68,7 +68,7 @@ export function HairSite(props: SiteProps) {
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             {t.services.groups.slice(0, 2).map((grp, gi) => (
-              <div key={gi} className={gi ? "mt-10" : ""}>
+              <div key={gi} className={gi ? "mt-7" : ""}>
                 <p className={`${g} mb-3 text-sm font-medium uppercase tracking-[0.12em] ${brassText}`}>{l(grp.name)}</p>
                 <ul className="border-t-2 border-[#2B2B2B]">
                   {grp.items.slice(0, 3).map((it, i) => (
@@ -100,7 +100,7 @@ export function HairSite(props: SiteProps) {
           </ul>
         </section>
 
-        <section className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8 lg:py-16">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <Num n="03" label={l(t.nav["bo-suu-tap"])} />
@@ -111,7 +111,7 @@ export function HairSite(props: SiteProps) {
               <ArrowUpRight className="size-4" aria-hidden />
             </Link>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
             <div className="col-span-2 aspect-[16/10] overflow-hidden bg-[#D9CCBA] lg:col-span-7 lg:aspect-auto lg:h-[460px]">{s.art(t.gallery.items[1])}</div>
             <div className="aspect-[3/4] overflow-hidden bg-[#D9CCBA] lg:col-span-5 lg:aspect-auto lg:h-[460px]">{s.art(t.gallery.items[2])}</div>
             <div className="aspect-[3/4] overflow-hidden bg-[#D9CCBA] lg:col-span-4 lg:aspect-[4/3]">{s.art(t.gallery.items[3])}</div>
@@ -137,7 +137,7 @@ export function HairSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8 lg:py-16">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -162,7 +162,7 @@ export function HairSite(props: SiteProps) {
     body = (
       <>
         <PageHead n="02" title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className="mx-auto max-w-[1240px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1240px] px-5 pb-10 sm:px-8">
           {t.services.groups.map((grp, gi) => (
             <div key={gi} className="grid gap-4 border-t-2 border-[#2B2B2B] py-8 lg:grid-cols-12">
               <h2 className={`${g} text-2xl font-bold uppercase lg:col-span-4`}>
@@ -192,7 +192,7 @@ export function HairSite(props: SiteProps) {
     body = (
       <>
         <PageHead n="04" title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto max-w-[1240px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1240px] px-5 pb-10 sm:px-8">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {t.about.team.map((m, i) => (
               <li key={m.name} className={i === 1 ? "lg:mt-16" : ""}>
@@ -226,7 +226,7 @@ export function HairSite(props: SiteProps) {
     body = (
       <>
         <PageHead n="03" title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1240px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1240px] px-5 pb-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -249,7 +249,7 @@ export function HairSite(props: SiteProps) {
     body = (
       <>
         <PageHead n="05" title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1240px] gap-8 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1240px] gap-8 px-5 pb-12 sm:px-8 lg:grid-cols-12">
           <div className="border-t-2 border-[#2B2B2B] bg-[#FBF8F3] p-5 sm:p-8 lg:col-span-8">
             <DemoBookingForm
               {...s.form}

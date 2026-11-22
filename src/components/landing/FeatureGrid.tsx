@@ -29,7 +29,7 @@ export async function FeatureGrid() {
             <ArrowRight className="size-4" aria-hidden />
           </Link>
         </div>
-        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+        <ul className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {ITEMS.map(({ key, icon: Icon, tone }) => (
             <li key={key} className="rounded-2xl bg-porcelain/60 p-4 ring-1 ring-black/[0.05] sm:p-5">
               <span className={`grid size-10 place-items-center rounded-xl ${tone}`}>

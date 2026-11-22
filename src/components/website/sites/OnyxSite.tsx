@@ -20,7 +20,7 @@ export function OnyxSite(props: SiteProps) {
   const x = extrasOf(t.slug);
 
   const Band = ({ title, sub }: { title: string; sub?: string }) => (
-    <section className="bg-[#141312] px-5 py-14 text-center text-[#F4EEE6] sm:py-20">
+    <section className="bg-[#141312] px-5 py-10 text-center text-[#F4EEE6] sm:py-12">
       {sub && <p className={`${serif} text-lg italic text-[#C9B99E]`}>{sub}</p>}
       <h1 className={`${caps} mt-2 text-[1.75rem] leading-snug sm:text-4xl`}>{title}</h1>
       <span className="mx-auto mt-5 block h-px w-12 bg-[#C9B99E]" aria-hidden />
@@ -86,7 +86,7 @@ export function OnyxSite(props: SiteProps) {
           <div className="mx-auto aspect-[4/3] max-w-[1280px] overflow-hidden bg-[#2A2622] sm:aspect-[21/9]">{s.art(t.home.hero, "", true)}</div>
         </section>
 
-        <section className="mx-auto max-w-[760px] px-5 py-16 text-center sm:py-24">
+        <section className="mx-auto max-w-[760px] px-5 py-10 text-center sm:py-16">
           <h2 className={`${caps} text-xl`}>{l(t.home.intro.title)}</h2>
           <span className="mx-auto mt-4 block h-px w-12 bg-[#8C7A5E]" aria-hidden />
           <p className={`${serif} mt-6 text-2xl leading-relaxed sm:text-[1.75rem]`}>{l(t.home.intro.text)}</p>
@@ -104,7 +104,7 @@ export function OnyxSite(props: SiteProps) {
             </div>
             <div className="lg:col-span-7">
               {t.services.groups.slice(0, 2).map((g, gi) => (
-                <div key={gi} className={gi ? "mt-10" : ""}>
+                <div key={gi} className={gi ? "mt-7" : ""}>
                   <h3 className={`${caps} text-[12px] text-[#8C7A5E]`}>{l(g.name)}</h3>
                   <Menu items={g.items.slice(0, 3)} />
                 </div>
@@ -113,12 +113,12 @@ export function OnyxSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <h2 className={`${caps} mb-8 text-center text-xl`}>{l(t.about.title)}</h2>
           <Spaces />
         </section>
 
-        <section className="mx-auto max-w-[1160px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 pb-10 sm:px-8">
           <h2 className={`${caps} mb-8 text-center text-xl`}>{l(t.gallery.title)}</h2>
           <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
             {t.gallery.items.slice(0, 5).map((g, i) => (
@@ -152,7 +152,7 @@ export function OnyxSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8 sm:py-20">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8 sm:py-12">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -171,7 +171,7 @@ export function OnyxSite(props: SiteProps) {
           />
         </section>
 
-        <section className="bg-[#141312] px-5 py-16 text-center text-[#F4EEE6]">
+        <section className="bg-[#141312] px-5 py-10 text-center text-[#F4EEE6]">
           <h2 className={`${caps} text-2xl`}>{l(t.home.closing.title)}</h2>
           <p className={`${serif} mt-3 text-xl italic text-[#C9B99E]`}>{l(t.home.closing.text)}</p>
           <Link href={s.href("dat-lich")} className={`${btnLight} mt-8`}>
@@ -184,7 +184,7 @@ export function OnyxSite(props: SiteProps) {
     body = (
       <>
         <Band title={l(t.services.title)} sub={l(t.services.lead)} />
-        <section className="mx-auto max-w-[860px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[860px] px-5 py-10 sm:px-8">
           {t.services.groups.map((g, gi) => (
             <div key={gi} className="mb-12">
               <h2 className={`${caps} text-center text-lg`}>{l(g.name)}</h2>
@@ -199,10 +199,10 @@ export function OnyxSite(props: SiteProps) {
     body = (
       <>
         <Band title={l(t.about.title)} sub={l(t.about.lead)} />
-        <section className="mx-auto max-w-[760px] px-5 py-14 text-center">
+        <section className="mx-auto max-w-[760px] px-5 py-10 text-center">
           <p className={`${serif} text-2xl leading-relaxed`}>{l(t.about.story[0])}</p>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 pb-14 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 pb-10 sm:px-8">
           <Spaces />
         </section>
         <section className="bg-[#EFE8DE]">
@@ -221,7 +221,7 @@ export function OnyxSite(props: SiteProps) {
     body = (
       <>
         <Band title={l(t.gallery.title)} sub={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1160px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -236,7 +236,7 @@ export function OnyxSite(props: SiteProps) {
     body = (
       <>
         <Band title={l(t.contact.title)} sub={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 py-10 sm:px-8 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <DemoBookingForm
               {...s.form}

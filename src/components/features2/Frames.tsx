@@ -60,7 +60,7 @@ export function TwoPhones({ items }: { items: { shot: Shot; alt: string; caption
   return (
     <div className="flex items-start gap-5 sm:gap-8 lg:justify-center">
       {items.map((it, i) => (
-        <figure key={it.shot.phone} className={`w-[46%] max-w-[260px] ${i % 2 ? "mt-14 lg:mt-20" : ""}`}>
+        <figure key={it.shot.phone} className={`w-[46%] max-w-[260px] ${i % 2 ? "mt-8 lg:mt-20" : ""}`}>
           <DevicePhone shot={it.shot} alt={it.alt} />
           {it.caption && <figcaption className="mt-5 text-[14px] leading-snug text-muted">{it.caption}</figcaption>}
         </figure>

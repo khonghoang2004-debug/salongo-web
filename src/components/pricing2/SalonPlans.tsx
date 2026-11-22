@@ -38,7 +38,7 @@ export async function SalonPlans({ data }: { data: SitePlans }) {
       <div className="x-wrap">
         <h2 id="salon-title" className="x-h2 max-w-[40rem] text-ink">{t("title")}</h2>
         <p className="x-lead mt-4">{t("lead")}</p>
-        <div className="mt-10">
+        <div className="mt-7">
           <PlanTable
             rows={rows}
             locale={locale}
@@ -59,7 +59,7 @@ export async function SalonPlans({ data }: { data: SitePlans }) {
           />
         </div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-12">
+        <div className="mt-7 grid gap-4 lg:grid-cols-12">
           <h3 className="text-[15px] font-semibold text-ink lg:col-span-3">{t("includedTitle")}</h3>
           <ul className="flex flex-wrap gap-x-6 gap-y-2.5 lg:col-span-9">
             {(t.raw("included") as string[]).map((f) => (

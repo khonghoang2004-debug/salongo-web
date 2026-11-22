@@ -41,7 +41,7 @@ export async function AboutView() {
       </header>
 
       {/* SalonGo làm gì */}
-      <section className="bg-white pb-10 sm:pb-16" aria-labelledby="about-do">
+      <section className="bg-white pb-10 sm:pb-10" aria-labelledby="about-do">
         <div className="x-wrap">
           <h2 id="about-do" className={h2}>{t("doTitle")}</h2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -76,7 +76,7 @@ export async function AboutView() {
       </section>
 
       {/* Vì sao có SalonGo */}
-      <section className="bg-porcelain py-10 sm:py-16" aria-labelledby="about-why">
+      <section className="bg-porcelain py-10 sm:py-10" aria-labelledby="about-why">
         <div className="x-wrap grid gap-6 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
           <h2 id="about-why" className={`${h2} lg:col-span-4`}>{t("whyTitle")}</h2>
           <ol className="space-y-3 lg:col-span-8">
@@ -91,7 +91,7 @@ export async function AboutView() {
       </section>
 
       {/* Điều bạn có thể tin */}
-      <section className="bg-white py-10 sm:py-16" aria-labelledby="about-facts">
+      <section className="bg-white py-10 sm:py-10" aria-labelledby="about-facts">
         <div className="x-wrap">
           <h2 id="about-facts" className={h2}>{t("factsTitle")}</h2>
           <ul className="mt-5 grid rounded-2xl px-4 ring-1 ring-line sm:grid-cols-2 sm:gap-x-10 sm:px-6">

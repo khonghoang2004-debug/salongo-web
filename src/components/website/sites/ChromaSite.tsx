@@ -93,7 +93,7 @@ export function ChromaSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1240px] px-4 py-16 sm:px-6 lg:py-20">
+        <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-6 lg:py-12">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">{l(t.gallery.title).toLowerCase()}</h2>
             <Link href={s.href("bo-suu-tap")} className={btnLine}>
@@ -110,7 +110,7 @@ export function ChromaSite(props: SiteProps) {
           </ul>
         </section>
 
-        <section className="mx-auto grid max-w-[1240px] gap-4 px-4 pb-16 sm:px-6 lg:grid-cols-3">
+        <section className="mx-auto grid max-w-[1240px] gap-4 px-4 pb-10 sm:px-6 lg:grid-cols-3">
           <div className={`${tile} flex flex-col justify-between bg-[#2A211C] p-7 text-[#F5F0EA]`}>
             <h2 className="text-4xl font-semibold tracking-[-0.04em]">{l(t.nav["dich-vu"]).toLowerCase()}</h2>
             <p className="mt-4 text-[#E2D6CC]">{l(t.services.lead)}</p>
@@ -123,7 +123,7 @@ export function ChromaSite(props: SiteProps) {
           ))}
         </section>
 
-        <section className="mx-auto max-w-[1240px] px-4 pb-16 sm:px-6">
+        <section className="mx-auto max-w-[1240px] px-4 pb-10 sm:px-6">
           <div className={`${tile} bg-[#F3E3A1] p-6 sm:p-10`}>
             <Reviews
               x={x}
@@ -142,7 +142,7 @@ export function ChromaSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1240px] px-4 pb-16 sm:px-6">
+        <section className="mx-auto max-w-[1240px] px-4 pb-10 sm:px-6">
           <Visit
             tpl={t}
             locale={props.locale}

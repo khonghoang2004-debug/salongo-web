@@ -23,7 +23,7 @@ export function LumenSite(props: SiteProps) {
   const tiers = (t.services.tiers ?? []).map(l);
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
-    <section className="mx-auto max-w-[1280px] px-5 pt-10 sm:px-8 sm:pt-14">
+    <section className="mx-auto max-w-[1280px] px-5 pt-10 sm:px-8 sm:pt-10">
       <div className="flex items-center justify-between border-b border-[#141414] pb-3">
         <p className={label}>{t.name}</p>
         <p className={`${label} ${wine}`}>{lead}</p>
@@ -85,7 +85,7 @@ export function LumenSite(props: SiteProps) {
             <RatingBadge x={x} locale={props.locale} className={`${sans} text-[15px] ${soft}`} starClass={wine} />
           </div>
         </section>
-        <section className="mx-auto grid max-w-[1280px] gap-10 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:py-16">
+        <section className="mx-auto grid max-w-[1280px] gap-10 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:py-10">
           <figure className="lg:col-span-7">
             <div className="aspect-[4/5] overflow-hidden bg-[#E6DED0] sm:aspect-[5/4] lg:aspect-[4/5]">{s.art(t.home.hero, "", true)}</div>
             <figcaption className={`mt-3 ${label} ${soft}`}>Look 01 — {l(t.home.hero.alt)}</figcaption>
@@ -93,7 +93,7 @@ export function LumenSite(props: SiteProps) {
           <div className="flex flex-col lg:col-span-5">
             <p className={`text-[19px] leading-relaxed first-letter:float-left first-letter:mr-3 first-letter:text-[4.5rem] first-letter:leading-[0.8] ${serif}`}>{l(t.home.intro.text)}</p>
             <p className={`mt-6 text-[17px] ${soft}`}>{l(t.home.lead)}</p>
-            <ol className="mt-10 border-t border-[#141414]">
+            <ol className="mt-7 border-t border-[#141414]">
               {t.home.highlights.map((h, i) => (
                 <li key={i} className="grid grid-cols-[48px_1fr] gap-3 border-b border-[#CFC6B6] py-5">
                   <span className={`${serif} text-2xl italic ${wine}`}>0{i + 1}</span>
@@ -104,7 +104,7 @@ export function LumenSite(props: SiteProps) {
                 </li>
               ))}
             </ol>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="mt-7 flex flex-wrap items-center gap-6">
               <Link href={s.href("dat-lich")} className={btn}>
                 {l(t.bookLabel)}
               </Link>
@@ -133,7 +133,7 @@ export function LumenSite(props: SiteProps) {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:py-20">
+        <section className="mx-auto max-w-[1280px] px-5 py-10 sm:px-8 lg:py-12">
           <div className="grid gap-8 lg:grid-cols-12">
             <h2 className={`${serif} text-4xl font-light sm:text-6xl lg:col-span-4`}>{l(t.services.title)}</h2>
             <div className="lg:col-span-8">
@@ -162,7 +162,7 @@ export function LumenSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:py-20">
+        <section className="mx-auto max-w-[1280px] px-5 py-10 sm:px-8 lg:py-12">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -198,7 +198,7 @@ export function LumenSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto max-w-[1280px] space-y-16 px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1280px] space-y-16 px-5 pb-10 sm:px-8">
           {t.about.team.map((m, i) => (
             <article key={m.name} className="grid items-end gap-6 md:grid-cols-12 md:gap-10">
               <div className={`aspect-[4/5] overflow-hidden bg-[#E6DED0] md:col-span-5 ${i % 2 ? "md:order-2 md:col-start-8" : ""}`}>{s.art(m.visual)}</div>
@@ -227,7 +227,7 @@ export function LumenSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1280px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1280px] px-5 pb-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -243,7 +243,7 @@ export function LumenSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1280px] gap-10 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1280px] gap-10 px-5 pb-12 sm:px-8 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <DemoBookingForm
               {...s.form}
@@ -314,7 +314,7 @@ export function LumenSite(props: SiteProps) {
             </div>
             <FooterCols tpl={t} locale={props.locale} nav={s.nav} c={{ head: `${label} text-[#E7B8BF]`, text: "text-[15px]", link: `${label} hover:text-white` }} />
           </div>
-          <p className={`${serif} mt-10 overflow-hidden whitespace-nowrap text-[17vw] font-light italic leading-[0.9] tracking-[-0.04em] text-[#F6F2EA] lg:text-[12rem]`} aria-hidden>
+          <p className={`${serif} mt-7 overflow-hidden whitespace-nowrap text-[17vw] font-light italic leading-[0.9] tracking-[-0.04em] text-[#F6F2EA] lg:text-[12rem]`} aria-hidden>
             Lumen
           </p>
         </div>

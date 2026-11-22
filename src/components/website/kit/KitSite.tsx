@@ -160,14 +160,14 @@ export function KitSite(props: SiteProps) {
         );
       case "center":
         return (
-          <section className={`px-5 pb-4 pt-14 text-center sm:pt-20 ${pillPad}`}>
+          <section className={`px-5 pb-4 pt-10 text-center sm:pt-14 ${pillPad}`}>
             <Kicker />
             <div className="mt-5">
               <H1 center />
             </div>
             <p className={`mx-auto mt-5 max-w-xl text-lg ${k.muted}`}>{l(t.home.lead)}</p>
             {ctas(false, true)}
-            <div className={`mx-auto mt-12 aspect-[4/3] max-w-[1160px] overflow-hidden bg-[var(--line)] sm:aspect-[21/9] ${th.radius === "arch" ? "rounded-t-[300px]" : k.r}`}>{hero}</div>
+            <div className={`mx-auto mt-8 aspect-[4/3] max-w-[1160px] overflow-hidden bg-[var(--line)] sm:aspect-[21/9] ${th.radius === "arch" ? "rounded-t-[300px]" : k.r}`}>{hero}</div>
           </section>
         );
       case "giant":
@@ -187,14 +187,14 @@ export function KitSite(props: SiteProps) {
               </div>
               <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-7">
                 <div className={`aspect-[3/4] overflow-hidden bg-[var(--line)] ${k.r}`}>{hero}</div>
-                <div className={`mt-10 aspect-[3/4] overflow-hidden bg-[var(--line)] ${k.r}`}>{img(0)}</div>
+                <div className={`mt-7 aspect-[3/4] overflow-hidden bg-[var(--line)] ${k.r}`}>{img(0)}</div>
               </div>
             </div>
           </section>
         );
       case "collage":
         return (
-          <section className={`mx-auto grid max-w-[1240px] items-center gap-10 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:py-16 ${pillPad}`}>
+          <section className={`mx-auto grid max-w-[1240px] items-center gap-10 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:py-10 ${pillPad}`}>
             <div className="lg:col-span-5">
               <Kicker />
               <div className="mt-5">
@@ -448,7 +448,7 @@ export function KitSite(props: SiteProps) {
     switch (b) {
       case "intro":
         return (
-          <section key={i} className={`${wrap} py-16 lg:py-24`}>
+          <section key={i} className={`${wrap} py-10 lg:py-16`}>
             <div className="grid gap-10 lg:grid-cols-12">
               <p className={`${k.D} text-[1.875rem] leading-snug sm:text-[2.5rem] lg:col-span-7`}>{l(t.home.intro.text)}</p>
               <ol className="lg:col-span-4 lg:col-start-9">
@@ -467,7 +467,7 @@ export function KitSite(props: SiteProps) {
         );
       case "services":
         return (
-          <section key={i} className="bg-[var(--tint)] py-16 lg:py-24">
+          <section key={i} className="bg-[var(--tint)] py-10 lg:py-16">
             <div className={wrap}>
               <SectionTitle link={{ href: s.href("dich-vu"), label: l(UI.allServices) }}>{l(t.services.title)}</SectionTitle>
               <Services groups={t.services.groups.slice(0, L.services === "cards" ? 1 : 2).map((g) => ({ ...g, items: g.items.slice(0, L.services === "cards" ? 4 : 3) }))} compact />
@@ -476,24 +476,24 @@ export function KitSite(props: SiteProps) {
         );
       case "gallery":
         return (
-          <section key={i} className={`${wrap} py-16 lg:py-24`}>
+          <section key={i} className={`${wrap} py-10 lg:py-16`}>
             <SectionTitle link={{ href: s.href("bo-suu-tap"), label: l(UI.viewGallery) }}>{l(t.gallery.title)}</SectionTitle>
             <Gallery count={6} />
           </section>
         );
       case "team":
         return (
-          <section key={i} className={`${wrap} py-16 lg:py-24`}>
+          <section key={i} className={`${wrap} py-10 lg:py-16`}>
             <SectionTitle link={{ href: s.href("gioi-thieu"), label: l(t.nav["gioi-thieu"]) }}>{l(t.about.title)}</SectionTitle>
             <Team />
           </section>
         );
       case "steps":
         return (
-          <section key={i} className="bg-[var(--dark)] py-16 text-[var(--onDark)] lg:py-20">
+          <section key={i} className="bg-[var(--dark)] py-10 text-[var(--onDark)] lg:py-12">
             <div className={wrap}>
               <h2 className={`${k.D} ${k.h2}`}>{l(t.home.intro.title)}</h2>
-              <ol className="mt-10 grid gap-4 sm:grid-cols-3">
+              <ol className="mt-7 grid gap-4 sm:grid-cols-3">
                 {t.home.highlights.map((h, j) => (
                   <li key={j} className={`border border-white/15 p-6 ${k.rc}`}>
                     <span className={`${k.D} text-4xl opacity-70`}>{j + 1}</span>
@@ -507,7 +507,7 @@ export function KitSite(props: SiteProps) {
         );
       case "quote":
         return (
-          <section key={i} className="relative isolate overflow-hidden bg-[var(--dark)] py-20 text-center text-[var(--onDark)] lg:py-28">
+          <section key={i} className="relative isolate overflow-hidden bg-[var(--dark)] py-12 text-center text-[var(--onDark)] lg:py-28">
             <div className="absolute inset-0 -z-10 opacity-35">{img(2)}</div>
             <div className="mx-auto max-w-3xl px-5">
               <p className={`${k.D} text-[1.875rem] leading-snug sm:text-[2.75rem] ${th.italic ? "italic" : ""}`}>“{l(t.home.intro.title)}”</p>
@@ -517,13 +517,13 @@ export function KitSite(props: SiteProps) {
         );
       case "visit":
         return (
-          <section key={i} className={`${wrap} py-16`}>
+          <section key={i} className={`${wrap} py-10`}>
             <Visit />
           </section>
         );
       case "reviews":
         return (
-          <section key={i} className="bg-[var(--tint)] py-16 lg:py-24">
+          <section key={i} className="bg-[var(--tint)] py-10 lg:py-16">
             <div className={wrap}>
               <Reviews
                 x={x}
@@ -543,7 +543,7 @@ export function KitSite(props: SiteProps) {
         );
       case "map":
         return (
-          <section key={i} className={`${wrap} py-16 lg:py-24`}>
+          <section key={i} className={`${wrap} py-10 lg:py-16`}>
             <VisitMap
               tpl={t}
               locale={props.locale}
@@ -565,7 +565,7 @@ export function KitSite(props: SiteProps) {
       case "cta":
       default:
         return (
-          <section key={i} className={`${wrap} pb-16`}>
+          <section key={i} className={`${wrap} pb-10`}>
             <div className={`flex flex-col items-start gap-6 bg-[var(--accent)] px-7 py-12 text-[var(--onAccent)] sm:flex-row sm:items-center sm:justify-between sm:px-12 ${k.rc}`}>
               <div>
                 <h2 className={`${k.D} text-3xl sm:text-5xl`}>{l(t.home.closing.title)}</h2>
@@ -605,11 +605,11 @@ export function KitSite(props: SiteProps) {
         </section>
       );
     return (
-      <section className={`${wrap} pb-10 pt-14 sm:pt-20 ${pillPad}`}>
+      <section className={`${wrap} pb-10 pt-10 sm:pt-14 ${pillPad}`}>
         <p className={`${k.label} text-[var(--accent-ink)]`}>{t.name}</p>
         <h1 className={`${k.D} mt-3 ${k.h1}`}>{title}</h1>
         <p className={`mt-4 max-w-xl text-lg ${k.muted}`}>{lead}</p>
-        <div className="mt-10 h-px bg-[var(--line)]" />
+        <div className="mt-7 h-px bg-[var(--line)]" />
       </section>
     );
   };
@@ -626,7 +626,7 @@ export function KitSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className={`${wrap} py-12 lg:py-16`}>
+        <section className={`${wrap} py-12 lg:py-10`}>
           <Services groups={t.services.groups} />
           <p className={`mt-8 text-sm ${k.muted}`}>{l(t.services.note)}</p>
         </section>
@@ -640,7 +640,7 @@ export function KitSite(props: SiteProps) {
         <section className={`${wrap} py-12`}>
           <p className={`${k.D} max-w-3xl text-[1.75rem] leading-snug sm:text-4xl`}>{l(t.about.story[0])}</p>
         </section>
-        <section className={`${wrap} pb-16`}>
+        <section className={`${wrap} pb-10`}>
           <Team />
         </section>
         <section className="bg-[var(--tint)]">

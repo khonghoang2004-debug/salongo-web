@@ -28,7 +28,7 @@ export function FeaturesHero({
   items: IndexItem[];
 }) {
   return (
-    <section className="bg-white pb-6 pt-10 sm:pt-14 lg:pb-12 lg:pt-20">
+    <section className="bg-white pb-6 pt-10 sm:pt-10 lg:pb-12 lg:pt-14">
       <div className="x-wrap grid gap-12 lg:grid-cols-12 lg:gap-10 [&>*]:min-w-0">
         <div className="lg:col-span-6">
           <h1 className="x-display text-ink lg:!text-[clamp(3rem,1rem+3.4vw,4.4rem)]">{title}</h1>

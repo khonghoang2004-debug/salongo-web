@@ -6,7 +6,7 @@ export default function NotFound() {
   const t = useTranslations("pages2.notFound");
   return (
     <PageShell cta={false}>
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-32">
         <div className="x-wrap">
           <p className="text-[15px] font-medium tabular-nums text-brand-700">404</p>
           <h1 className="x-display mt-4 max-w-[40rem] text-ink">{t("title")}</h1>

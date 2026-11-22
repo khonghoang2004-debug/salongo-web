@@ -46,7 +46,7 @@ export function FeatureRow({ id, title, lead, points, media, extra, wide = false
                 {extra}
               </div>
             </div>
-            <div className="mt-10 lg:mt-14">{media}</div>
+            <div className="mt-7 lg:mt-14">{media}</div>
           </div>
         ) : (
           <div className="grid gap-10 border-t border-line py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24 [&>*]:min-w-0">

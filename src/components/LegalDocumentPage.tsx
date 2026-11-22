@@ -106,17 +106,17 @@ export async function LegalDocumentPage({ locale, docKey }: { locale: string; do
         </div>
       </header>
 
-      <section className="bg-white pb-20 pt-4 sm:pb-28">
+      <section className="bg-white pb-12 pt-4 sm:pb-28">
         <div className="x-wrap"><div className="max-w-3xl">
           <OperatorBox locale={locale} />
           {doc.sections.map((s) => (
-            <div key={s.heading} className="mt-10">
+            <div key={s.heading} className="mt-7">
               <h2 className="text-[1.2rem] font-semibold tracking-[-0.015em] text-ink sm:text-[1.3rem]">{fillLegal(s.heading)}</h2>
               <Body lines={s.body} />
             </div>
           ))}
 
-          <nav aria-label={ui.otherDocs} className="mt-12 border-t border-line pt-6">
+          <nav aria-label={ui.otherDocs} className="mt-8 border-t border-line pt-6">
             <p className="text-sm font-semibold text-ink">{ui.otherDocs}</p>
             <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
               {others.map((d) => (

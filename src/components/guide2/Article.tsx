@@ -49,7 +49,7 @@ export function Toc({ label, sections }: { label: string; sections: GuideSection
 /** Ảnh trong bài: điện thoại dưới md, máy tính từ md, có chú thích. */
 function Figure({ shot, caption }: { shot: Shot; caption: string }) {
   return (
-    <figure className="mb-2 mt-10">
+    <figure className="mb-2 mt-7">
       <div className="w-[62%] max-w-[260px] md:hidden">
         <img src={shot.phone} alt={caption} width={shot.pw} height={shot.ph} loading="lazy" decoding="async" className="x-phone block h-auto w-full" />
       </div>
@@ -72,7 +72,7 @@ export function ArticleBody({ sections, shots }: { sections: GuideSection[]; sho
       {sections.map((s, i) => {
         const shot = shots[s.id];
         return (
-          <section key={s.id} id={s.id} aria-labelledby={`${s.id}-h`} className={`scroll-mt-24 ${i ? "mt-14 sm:mt-16" : ""}`}>
+          <section key={s.id} id={s.id} aria-labelledby={`${s.id}-h`} className={`scroll-mt-24 ${i ? "mt-8 sm:mt-16" : ""}`}>
             <h2 id={`${s.id}-h`} className="text-[clamp(1.5rem,1.2rem+1vw,2rem)] font-semibold leading-[1.2] tracking-[-0.025em] text-ink [text-wrap:balance] [:lang(vi)_&]:leading-[1.3]">
               {s.h}
             </h2>

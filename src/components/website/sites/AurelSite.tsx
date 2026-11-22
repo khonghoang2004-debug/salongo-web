@@ -30,7 +30,7 @@ export function AurelSite(props: SiteProps) {
   );
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
-    <section className="bg-[#1E3A32] px-5 pb-14 pt-14 text-center text-[#F5EFE4] sm:pt-20">
+    <section className="bg-[#1E3A32] px-5 pb-10 pt-10 text-center text-[#F5EFE4] sm:pt-14">
       <Monogram size="size-12" />
       <h1 className={`${serif} mx-auto mt-6 max-w-3xl text-[2.75rem] font-light leading-[1.08] sm:text-6xl`}>{title}</h1>
       <p className={`${label} mt-5 ${goldLight}`}>{lead}</p>
@@ -70,7 +70,7 @@ export function AurelSite(props: SiteProps) {
   if (page === "") {
     body = (
       <>
-        <section className="bg-[#1E3A32] px-5 pb-0 pt-14 text-center text-[#F5EFE4] sm:pt-20">
+        <section className="bg-[#1E3A32] px-5 pb-0 pt-10 text-center text-[#F5EFE4] sm:pt-14">
           <Monogram />
           <p className={`${label} mt-6 ${goldLight}`}>{l(t.home.kicker)}</p>
           <h1 className={`${serif} mx-auto mt-5 max-w-4xl text-[2.875rem] font-light leading-[1.05] tracking-[-0.01em] sm:text-7xl lg:text-[5.25rem]`}>{l(t.home.title)}</h1>
@@ -84,16 +84,16 @@ export function AurelSite(props: SiteProps) {
             </Link>
           </div>
           <RatingBadge x={x} locale={props.locale} className={`${sans} mt-7 justify-center text-[13px] tracking-[0.04em] text-[#DCE3DE]`} starClass="text-[#D9BC85]" />
-          <div className="relative mx-auto mt-14 max-w-[520px] translate-y-16 p-3 sm:mt-16">
+          <div className="relative mx-auto mt-8 max-w-[520px] translate-y-16 p-3 sm:mt-16">
             <div className="absolute inset-0 rounded-t-full border border-[#B8955A]" aria-hidden />
             <div className="aspect-[4/5] overflow-hidden rounded-t-full bg-[#2A4A40]">{s.art(t.home.hero, "", true)}</div>
           </div>
         </section>
-        <section className="px-5 pb-16 pt-28 text-center sm:pt-32">
+        <section className="px-5 pb-10 pt-28 text-center sm:pt-32">
           <Divider />
           <h2 className={`${serif} mx-auto mt-6 max-w-2xl text-[2.25rem] font-light leading-tight sm:text-5xl`}>{l(t.home.intro.title)}</h2>
           <p className={`mx-auto mt-4 max-w-md text-[17px] ${soft}`}>{l(t.home.intro.text)}</p>
-          <ul className="mx-auto mt-12 grid max-w-[1000px] gap-10 sm:grid-cols-3">
+          <ul className="mx-auto mt-8 grid max-w-[1000px] gap-10 sm:grid-cols-3">
             {t.home.highlights.map((h, i) => (
               <li key={i}>
                 <Diamond />
@@ -106,20 +106,20 @@ export function AurelSite(props: SiteProps) {
         <section className="border-y border-[#D9CBB2] bg-[#EFE6D6]">
           <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
             <h2 className={`${serif} text-center text-4xl font-light italic sm:text-5xl`}>{l(t.nav["dich-vu"])}</h2>
-            <div className="mt-10">
+            <div className="mt-7">
               <Services groups={t.services.groups.slice(0, 2).map((g) => ({ ...g, items: g.items.slice(0, 4) }))} />
             </div>
-            <div className="mt-10 text-center">
+            <div className="mt-7 text-center">
               <Link href={s.href("dich-vu")} className={btnDark}>
                 {l(UI.allServices)}
               </Link>
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8 sm:py-12">
           <Divider />
           <h2 className={`${serif} mt-6 text-center text-4xl font-light italic sm:text-5xl`}>{l(t.gallery.title)}</h2>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          <div className="mt-7 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
             {t.gallery.items.slice(0, 6).map((g, i) => (
               <figure key={i} className={`text-center ${i === 0 ? "col-span-2 row-span-2" : ""} ${i > 4 ? "hidden" : i > 2 ? "hidden lg:block" : ""}`}>
                 <div className="h-full border border-[#B8955A] p-2">
@@ -128,7 +128,7 @@ export function AurelSite(props: SiteProps) {
               </figure>
             ))}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-7 text-center">
             <Link href={s.href("bo-suu-tap")} className={btnDark}>
               {l(UI.viewGallery)}
             </Link>
@@ -151,7 +151,7 @@ export function AurelSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8 sm:py-12">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -176,9 +176,9 @@ export function AurelSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8">
           <Services groups={t.services.groups} />
-          <p className={`mt-10 text-center text-[15px] ${soft}`}>{l(t.services.note)}</p>
+          <p className={`mt-7 text-center text-[15px] ${soft}`}>{l(t.services.note)}</p>
         </section>
         <Closing {...props} />
       </>
@@ -187,11 +187,11 @@ export function AurelSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto max-w-[900px] px-5 py-16 text-center sm:px-8">
+        <section className="mx-auto max-w-[900px] px-5 py-10 text-center sm:px-8">
           <Divider />
           <p className={`${serif} mt-6 text-2xl font-light leading-relaxed sm:text-3xl`}>{l(t.about.story[0])}</p>
         </section>
-        <section className="mx-auto grid max-w-[900px] gap-12 px-5 pb-16 sm:grid-cols-2 sm:px-8">
+        <section className="mx-auto grid max-w-[900px] gap-12 px-5 pb-10 sm:grid-cols-2 sm:px-8">
           {t.about.team.map((m) => (
             <article key={m.name} className="text-center">
               <div className="mx-auto max-w-[300px] border border-[#B8955A] p-2">
@@ -221,7 +221,7 @@ export function AurelSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -237,7 +237,7 @@ export function AurelSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 py-16 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 py-10 sm:px-8 lg:grid-cols-12">
           <div className="border border-[#B8955A] p-2 lg:col-span-8">
             <div className="bg-[#FBF7F0] p-5 sm:p-8">
               <DemoBookingForm
@@ -335,7 +335,7 @@ function Closing(props: SiteProps) {
   const s = site(props);
   const { t } = props;
   return (
-    <section className="px-5 pb-16 sm:px-8">
+    <section className="px-5 pb-10 sm:px-8">
       <div className="mx-auto max-w-[900px] border border-[#B8955A] p-2">
         <div className="bg-[#1E3A32] px-6 py-14 text-center text-[#F5EFE4]">
           <h2 className={`${serif} text-[2.25rem] font-light italic leading-tight sm:text-5xl`}>{s.l(t.home.closing.title)}</h2>

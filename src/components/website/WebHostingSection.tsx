@@ -66,7 +66,7 @@ export async function WebHostingSection() {
           <span>{t("buildFee", { price: formatKc(WEBSITE_PRICE_KC) })}</span>
         </div>
 
-        <div className="mt-10 lg:max-w-[58rem]">
+        <div className="mt-7 lg:max-w-[58rem]">
           <h3 className="text-[1.125rem] font-semibold text-ink">{t("faqTitle")}</h3>
           <div className="mt-3 divide-y divide-line rounded-2xl ring-1 ring-line">
             {faq.map((f) => (

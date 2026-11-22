@@ -76,7 +76,7 @@ export default async function EetPage({ params }: Props) {
         </div>
       </header>
 
-      <section className="bg-white pb-20 lg:pb-28" aria-labelledby="eet-summary">
+      <section className="bg-white pb-12 lg:pb-28" aria-labelledby="eet-summary">
         <div className="x-wrap grid gap-12 lg:grid-cols-12 [&>*]:min-w-0">
           <div className="lg:col-span-7">
             <h2 id="eet-summary" className="x-h3 text-ink">{t("summaryTitle")}</h2>
@@ -95,7 +95,7 @@ export default async function EetPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-porcelain py-20 lg:py-28" aria-labelledby="eet-steps">
+      <section className="bg-porcelain py-12 lg:py-28" aria-labelledby="eet-steps">
         <div className="x-wrap">
           <h2 id="eet-steps" className="x-h2 max-w-[36rem] text-ink">{t("stepsTitle")}</h2>
           <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
@@ -110,7 +110,7 @@ export default async function EetPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-white py-20 lg:py-28" aria-labelledby="eet-faq">
+      <section className="bg-white py-12 lg:py-28" aria-labelledby="eet-faq">
         <div className="x-wrap grid gap-10 lg:grid-cols-12 [&>*]:min-w-0">
           <h2 id="eet-faq" className="x-h2 text-ink lg:col-span-4">{t("faqTitle")}</h2>
           <div className="border-t border-line lg:col-span-8">
@@ -128,7 +128,7 @@ export default async function EetPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-white pb-24">
+      <section className="bg-white pb-16">
         <div className="x-wrap">
           <div data-cta className="x-panel flex flex-col gap-4 bg-brand-800 px-7 py-12 text-white sm:flex-row sm:items-center sm:justify-between sm:px-12">
             <p className="max-w-[30rem] text-[1.35rem] font-semibold leading-snug tracking-[-0.02em]">{tNav("trialLine")}</p>

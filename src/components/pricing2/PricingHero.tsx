@@ -11,12 +11,12 @@ export async function PricingHero() {
     { href: "#goi-ban", label: t("desk"), price: t("deskPrice") },
   ];
   return (
-    <section className="bg-white pb-16 pt-10 sm:pt-14 lg:pb-20 lg:pt-20" aria-labelledby="pricing-title">
+    <section className="bg-white pb-10 pt-10 sm:pt-10 lg:pb-12 lg:pt-14" aria-labelledby="pricing-title">
       <div className="x-wrap grid gap-12 lg:grid-cols-12 lg:gap-8 [&>*]:min-w-0">
         <div className="lg:col-span-7">
           <h1 id="pricing-title" className="x-display max-w-[44rem] text-ink lg:!text-[clamp(2.75rem,0.9rem+2.9vw,4rem)]">{t("title")}</h1>
           <p className="x-lead mt-6 max-w-[32rem]">{t("lead")}</p>
-          <nav aria-label={t("jump")} className="mt-10 max-w-[36rem]">
+          <nav aria-label={t("jump")} className="mt-7 max-w-[36rem]">
             <ul className="border-t border-line">
               {jumps.map((j) => (
                 <li key={j.href} className="border-b border-line">

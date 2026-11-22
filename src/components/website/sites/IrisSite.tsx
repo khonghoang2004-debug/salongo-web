@@ -23,7 +23,7 @@ export function IrisSite(props: SiteProps) {
   const x = extrasOf(t.slug);
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
-    <section className="mx-auto max-w-[1200px] px-5 pb-10 pt-14 sm:px-8 sm:pt-20">
+    <section className="mx-auto max-w-[1200px] px-5 pb-10 pt-10 sm:px-8 sm:pt-14">
       <p className={`${cap} ${soft}`}>
         {t.name} — {lead}
       </p>
@@ -95,7 +95,7 @@ export function IrisSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-28">
+        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:py-28">
           <p className={`${serif} text-[2rem] font-light leading-snug sm:text-[2.5rem] lg:col-span-7`}>{l(t.home.intro.text)}</p>
           <ol className="lg:col-span-4 lg:col-start-9">
             {t.home.highlights.map((h, i) => (
@@ -119,13 +119,13 @@ export function IrisSite(props: SiteProps) {
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
-            <div className="mt-10">
+            <div className="mt-7">
               <PriceTable groups={t.services.groups.slice(0, 2).map((g) => ({ ...g, items: g.items.slice(0, 3) }))} />
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8 lg:py-16">
           <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {t.gallery.items.slice(0, 4).map((g, i) => (
               <li key={i} className={i % 2 ? "lg:mt-12" : ""}>
@@ -154,7 +154,7 @@ export function IrisSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8 lg:py-16">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -173,7 +173,7 @@ export function IrisSite(props: SiteProps) {
           />
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
+        <section className="mx-auto max-w-[1200px] px-5 pb-12 sm:px-8">
           <h2 className={`${serif} mb-8 text-4xl font-light italic`}>Dvě studia v centru Prahy</h2>
           <Branches />
         </section>
@@ -184,7 +184,7 @@ export function IrisSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className="mx-auto max-w-[1200px] px-5 pb-14 sm:px-8">
+        <section className="mx-auto max-w-[1200px] px-5 pb-10 sm:px-8">
           <PriceTable groups={t.services.groups} />
           <p className={`mt-8 text-sm ${soft}`}>{l(t.services.note)}</p>
         </section>
@@ -195,9 +195,9 @@ export function IrisSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto max-w-[1200px] px-5 pb-14 sm:px-8">
+        <section className="mx-auto max-w-[1200px] px-5 pb-10 sm:px-8">
           <p className={`${serif} max-w-3xl text-[1.75rem] font-light leading-snug`}>{l(t.about.story[0])}</p>
-          <ul className="mt-12 grid gap-6 sm:grid-cols-3">
+          <ul className="mt-8 grid gap-6 sm:grid-cols-3">
             {t.about.team.map((m) => (
               <li key={m.name}>
                 <div className="aspect-[4/5] overflow-hidden rounded-[20px] bg-[#EFE9E4]">{s.art(m.visual)}</div>
@@ -219,7 +219,7 @@ export function IrisSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1200px] px-5 pb-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -235,7 +235,7 @@ export function IrisSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1200px] gap-10 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1200px] gap-10 px-5 pb-12 sm:px-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <DemoBookingForm
               {...s.form}
@@ -316,7 +316,7 @@ function Closing(props: SiteProps) {
   const s = site(props);
   const { t } = props;
   return (
-    <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
+    <section className="mx-auto max-w-[1200px] px-5 pb-12 sm:px-8">
       <div className="flex flex-col items-start justify-between gap-6 border-t border-[#E9E4DF] pt-10 sm:flex-row sm:items-end">
         <h2 className={`${serif} text-4xl font-light italic sm:text-5xl`}>{s.l(t.home.closing.title)}</h2>
         <Link href={s.href("dat-lich")} className={btnDark}>

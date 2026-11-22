@@ -26,7 +26,7 @@ export async function ContactView() {
         </div>
       </header>
 
-      <section className="bg-white pb-16 lg:pb-24">
+      <section className="bg-white pb-10 lg:pb-16">
         <div className="x-wrap grid gap-8 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
           <ul className="grid gap-3 lg:col-span-7 lg:self-start">
             {rows.map(({ label, value, href, action, ext, Icon }) => (

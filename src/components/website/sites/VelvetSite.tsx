@@ -34,7 +34,7 @@ export function VelvetSite(props: SiteProps) {
   };
 
   const Head = ({ title, lead }: { title: string; lead: string }) => (
-    <section className="px-5 pb-12 pt-14 text-center sm:pt-20">
+    <section className="px-5 pb-12 pt-10 text-center sm:pt-14">
       <p className={`${label} ${rose}`}>{t.name}</p>
       <div className="mt-4">
         <Title text={title} size="md" />
@@ -64,7 +64,7 @@ export function VelvetSite(props: SiteProps) {
   if (page === "") {
     body = (
       <>
-        <section className="mx-auto grid max-w-[1200px] items-center gap-12 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-2 lg:pb-24 lg:pt-16">
+        <section className="mx-auto grid max-w-[1200px] items-center gap-12 px-5 pb-10 pt-10 sm:px-8 lg:grid-cols-2 lg:pb-16 lg:pt-10">
           <div>
             <p className={`${label} ${rose}`}>{l(t.home.kicker)}</p>
             <div className="mt-6">
@@ -94,7 +94,7 @@ export function VelvetSite(props: SiteProps) {
           <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-20">
             <h2 className={`${serif} text-center text-[2.25rem] italic sm:text-5xl`}>{l(t.home.intro.title)}</h2>
             <p className={`mx-auto mt-3 max-w-md text-center text-[17px] ${soft}`}>{l(t.home.intro.text)}</p>
-            <ul className="mt-12 grid gap-8 sm:grid-cols-3">
+            <ul className="mt-8 grid gap-8 sm:grid-cols-3">
               {t.home.highlights.map((h, i) => (
                 <li key={i} className="text-center">
                   <span className={`${serif} mx-auto flex size-14 items-center justify-center rounded-full border border-[#D6A1A1] text-2xl italic ${rose}`}>{i + 1}</span>
@@ -106,19 +106,19 @@ export function VelvetSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12 lg:py-24">
+        <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-12 lg:py-16">
           <div className="lg:col-span-5">
             <h2 className={`${serif} text-[2.5rem] leading-tight sm:text-6xl`}>
               {l(t.nav["dich-vu"])}
             </h2>
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="aspect-[3/4] overflow-hidden rounded-[999px] bg-[#EBCFC7]">{s.art(t.gallery.items[2])}</div>
-              <div className="mt-10 aspect-[3/4] overflow-hidden rounded-[999px] bg-[#EBCFC7]">{s.art(t.gallery.items[3])}</div>
+              <div className="mt-7 aspect-[3/4] overflow-hidden rounded-[999px] bg-[#EBCFC7]">{s.art(t.gallery.items[3])}</div>
             </div>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             {t.services.groups.slice(0, 2).map((g, gi) => (
-              <div key={gi} className={gi ? "mt-10" : ""}>
+              <div key={gi} className={gi ? "mt-7" : ""}>
                 <p className={`${label} ${rose}`}>{l(g.name)}</p>
                 <Menu items={g.items.slice(0, 3)} />
               </div>
@@ -131,21 +131,21 @@ export function VelvetSite(props: SiteProps) {
         <section className="bg-[#FFF8F5]">
           <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-20">
             <h2 className={`${serif} text-center text-[2.25rem] italic sm:text-5xl`}>{l(t.gallery.title)}</h2>
-            <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            <div className="mt-7 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
               {[0, 4, 5, 1].map((gi, i) => (
                 <div key={gi} className={`aspect-[3/4] overflow-hidden rounded-[999px] bg-[#EBCFC7] ${i % 2 ? "lg:mt-10" : ""}`}>
                   {s.art(t.gallery.items[gi])}
                 </div>
               ))}
             </div>
-            <div className="mt-10 text-center">
+            <div className="mt-7 text-center">
               <Link href={s.href("bo-suu-tap")} className={btnGhost}>
                 {l(UI.viewGallery)}
               </Link>
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 lg:py-24">
+        <section className="mx-auto max-w-[1200px] px-5 py-10 sm:px-8 lg:py-16">
           <Reviews
             x={x}
             locale={props.locale}
@@ -160,7 +160,7 @@ export function VelvetSite(props: SiteProps) {
             }}
           />
         </section>
-        <section className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8 lg:pb-24">
+        <section className="mx-auto max-w-[1200px] px-5 pb-10 sm:px-8 lg:pb-16">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -214,7 +214,7 @@ export function VelvetSite(props: SiteProps) {
         <section className="bg-[#FFF8F5]">
           <div className="mx-auto max-w-[1000px] px-5 py-14 text-center sm:px-8">
             <p className={`${serif} text-2xl italic sm:text-3xl`}>{l(t.about.story[0])}</p>
-            <ul className="mt-10 grid gap-6 sm:grid-cols-3">
+            <ul className="mt-7 grid gap-6 sm:grid-cols-3">
               {t.about.values.map((v, i) => (
                 <li key={i}>
                   <h3 className={label}>{l(v.title)}</h3>
@@ -231,7 +231,7 @@ export function VelvetSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -247,7 +247,7 @@ export function VelvetSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-8 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1100px] gap-8 px-5 pb-12 sm:px-8 lg:grid-cols-12">
           <div className="rounded-[36px] bg-[#FFF8F5] p-6 sm:p-9 lg:col-span-7">
             <DemoBookingForm
               {...s.form}
@@ -326,7 +326,7 @@ function Closing(props: SiteProps) {
   const s = site(props);
   const { t } = props;
   return (
-    <section className="px-5 py-16 sm:px-8">
+    <section className="px-5 py-10 sm:px-8">
       <div className="mx-auto max-w-[1000px] rounded-[48px] bg-[#EBCFC7] px-6 py-14 text-center">
         <h2 className={`${serif} text-[2.25rem] italic leading-tight sm:text-5xl`}>{s.l(t.home.closing.title)}</h2>
         <p className={`mt-3 text-[17px] ${soft}`}>{s.l(t.home.closing.text)}</p>

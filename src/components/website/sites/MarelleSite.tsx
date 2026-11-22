@@ -84,7 +84,7 @@ export function MarelleSite(props: SiteProps) {
           </h1>
         </section>
 
-        <section className="px-5 py-16 text-center">
+        <section className="px-5 py-10 text-center">
           <svg viewBox="0 0 120 40" className="mx-auto h-8 w-24 text-[#2B211C]" aria-hidden>
             <path d="M5 30 C40 30 70 22 115 8" fill="none" stroke="currentColor" strokeWidth="1.5" />
             {[20, 38, 56, 74, 92].map((x, i) => (
@@ -96,7 +96,7 @@ export function MarelleSite(props: SiteProps) {
           </p>
         </section>
 
-        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 pb-16 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1100px] gap-10 px-5 pb-10 sm:px-8 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <h2 className={`${serif} text-4xl sm:text-5xl`}>{l(t.services.title)}</h2>
             <p className={`mt-3 ${soft}`}>{l(t.services.lead)}</p>
@@ -118,7 +118,7 @@ export function MarelleSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1100px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-10 sm:px-8">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
             <h2 className={`${serif} text-4xl sm:text-5xl`}>{l(t.gallery.title)}</h2>
             <Link href={s.href("bo-suu-tap")} className={`${pill} border border-[#2B211C]/25 hover:border-[#2B211C]`}>
@@ -152,7 +152,7 @@ export function MarelleSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8 sm:py-12">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -176,7 +176,7 @@ export function MarelleSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.services.title)} lead={l(t.services.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-6 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-3">
+        <section className="mx-auto grid max-w-[1100px] gap-6 px-5 py-10 sm:px-8 md:grid-cols-2 lg:grid-cols-3">
           {t.services.groups.map((g, gi) => (
             <div key={gi} className="rounded-3xl bg-white px-6 py-5 shadow-[0_1px_3px_rgba(43,33,28,0.08)]">
               <h2 className={`${serif} text-2xl`}>{l(g.name)}</h2>
@@ -195,8 +195,8 @@ export function MarelleSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto max-w-2xl px-5 py-14 text-center text-xl leading-relaxed">{l(t.about.story[0])}</section>
-        <section className="mx-auto grid max-w-[900px] gap-6 px-5 pb-14 sm:grid-cols-2 sm:px-8">
+        <section className="mx-auto max-w-2xl px-5 py-10 text-center text-xl leading-relaxed">{l(t.about.story[0])}</section>
+        <section className="mx-auto grid max-w-[900px] gap-6 px-5 pb-10 sm:grid-cols-2 sm:px-8">
           {t.about.team.map((m) => (
             <article key={m.name} className="overflow-hidden rounded-3xl bg-white shadow-[0_1px_3px_rgba(43,33,28,0.08)]">
               <div className="aspect-[4/3] bg-[#E9DFC6]">{s.art(m.visual)}</div>
@@ -208,7 +208,7 @@ export function MarelleSite(props: SiteProps) {
             </article>
           ))}
         </section>
-        <section className="mx-auto grid max-w-[1100px] gap-3 px-5 pb-20 sm:grid-cols-3 sm:px-8">
+        <section className="mx-auto grid max-w-[1100px] gap-3 px-5 pb-12 sm:grid-cols-3 sm:px-8">
           {t.about.values.map((v, i) => (
             <div key={i} className="rounded-2xl border border-[#E2D3B3] px-5 py-6 text-center">
               <h3 className={`${serif} text-2xl`}>{l(v.title)}</h3>
@@ -222,7 +222,7 @@ export function MarelleSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 py-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -237,7 +237,7 @@ export function MarelleSite(props: SiteProps) {
     body = (
       <>
         <Head title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto max-w-[900px] px-5 py-14 sm:px-8">
+        <section className="mx-auto max-w-[900px] px-5 py-10 sm:px-8">
           <div className="rounded-3xl bg-white p-6 shadow-[0_1px_3px_rgba(43,33,28,0.08)] sm:p-9">
             <DemoBookingForm
               {...s.form}
@@ -253,7 +253,7 @@ export function MarelleSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1100px] px-5 pb-20 sm:px-8">
+        <section className="mx-auto max-w-[1100px] px-5 pb-12 sm:px-8">
           <Info />
         </section>
       </>

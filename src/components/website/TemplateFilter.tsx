@@ -58,7 +58,7 @@ export function TemplateFilter({
         ))}
       </ul>
       {rest > 0 && (
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <button type="button" onClick={() => setMore(true)} className="x-btn-light w-full !min-h-[52px] text-base sm:w-auto sm:!px-8">
             {t("showMore", { count: rest })}
           </button>

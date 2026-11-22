@@ -11,7 +11,7 @@ export async function DeskHero({ desk }: { desk: DeskPlan }) {
   const t = await getTranslations("desk2.hero");
   const locale = await getLocale();
   return (
-    <section className="overflow-hidden bg-white pb-16 pt-10 sm:pt-14 lg:pb-24 lg:pt-16" aria-labelledby="desk-hero-title">
+    <section className="overflow-hidden bg-white pb-10 pt-10 sm:pt-10 lg:pb-16 lg:pt-10" aria-labelledby="desk-hero-title">
       <div className="x-wrap grid items-center gap-14 lg:grid-cols-12 lg:gap-8 [&>*]:min-w-0">
         <div className="lg:col-span-6">
           <p className="x-kicker">

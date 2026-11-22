@@ -103,7 +103,7 @@ export function NovaSite(props: SiteProps) {
             </div>
             <RatingBadge x={x} locale={props.locale} className={`mt-6 justify-center text-[15px] ${soft}`} starClass="text-[#D2AE62]" />
           </div>
-          <figure className="relative mx-auto mt-12 max-w-[1040px]">
+          <figure className="relative mx-auto mt-8 max-w-[1040px]">
             <div className="aspect-[16/9] overflow-hidden rounded-[22px] bg-[#E6DDD3]">{s.art(t.home.hero, "", true)}</div>
             <figcaption className="mt-3 text-left text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5E5560]">
               {t.name} · {t.contact.address}
@@ -111,7 +111,7 @@ export function NovaSite(props: SiteProps) {
           </figure>
         </section>
         <Strip />
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <div className="grid gap-4 md:grid-cols-2 md:items-end">
             <div>
               <p className={label}>{l(t.nav["dich-vu"])}</p>
@@ -121,7 +121,7 @@ export function NovaSite(props: SiteProps) {
             </div>
             <p className={`text-[15px] md:max-w-sm md:justify-self-end ${soft}`}>{l(t.home.intro.text)}</p>
           </div>
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {t.services.groups.map((g, gi) => (
               <Card key={gi} g={g} gi={gi} />
             ))}
@@ -139,7 +139,7 @@ export function NovaSite(props: SiteProps) {
                 </li>
               ))}
             </ul>
-            <div className="mt-10 grid overflow-hidden rounded-[22px] bg-[#33243A] text-white md:grid-cols-2">
+            <div className="mt-7 grid overflow-hidden rounded-[22px] bg-[#33243A] text-white md:grid-cols-2">
               <div className="p-8 sm:p-10">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70">{l(t.about.title)}</p>
                 <h2 className={`mt-3 text-3xl ${it}`}>{l(t.about.lead)}</h2>
@@ -153,7 +153,7 @@ export function NovaSite(props: SiteProps) {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-4xl font-light leading-tight sm:text-5xl">
               {l(t.gallery.title).split(" ")[0]} <span className={it}>{l(t.gallery.title).split(" ").slice(1).join(" ")}</span>
@@ -187,7 +187,7 @@ export function NovaSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 py-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-10 sm:px-8">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -209,13 +209,13 @@ export function NovaSite(props: SiteProps) {
     );
   } else if (page === "dich-vu") {
     body = (
-      <section className="mx-auto max-w-[1160px] px-5 pb-16 pt-28 sm:px-8 sm:pt-36">
+      <section className="mx-auto max-w-[1160px] px-5 pb-10 pt-28 sm:px-8 sm:pt-36">
         <p className={label}>{t.name}</p>
         <div className="mt-3">
           <Title text={l(t.services.title) + " a ceny od"} size="text-[2.5rem] sm:text-6xl" />
         </div>
         <p className={`mt-3 ${soft}`}>{l(t.services.lead)}</p>
-        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {t.services.groups.map((g, gi) => (
             <Card key={gi} g={g} gi={gi} />
           ))}
@@ -226,7 +226,7 @@ export function NovaSite(props: SiteProps) {
   } else if (page === "gioi-thieu") {
     body = (
       <>
-        <section className="mx-auto grid max-w-[1160px] items-center gap-10 px-5 pb-14 pt-28 sm:px-8 sm:pt-36 md:grid-cols-2">
+        <section className="mx-auto grid max-w-[1160px] items-center gap-10 px-5 pb-10 pt-28 sm:px-8 sm:pt-36 md:grid-cols-2">
           <div>
             <p className={label}>{l(t.about.title)}</p>
             <div className="mt-3">
@@ -236,7 +236,7 @@ export function NovaSite(props: SiteProps) {
           </div>
           <div className="aspect-[4/3] overflow-hidden rounded-[22px] bg-[#E6DDD3]">{s.art(t.gallery.items[5])}</div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 pb-10 sm:px-8">
           <ul className="grid gap-5 sm:grid-cols-3">
             {t.about.team.map((m, i) => (
               <li key={m.name} className="rounded-[22px] bg-white p-5 shadow-[0_8px_24px_rgba(51,36,58,0.06)]">
@@ -259,9 +259,9 @@ export function NovaSite(props: SiteProps) {
     );
   } else if (page === "bo-suu-tap") {
     body = (
-      <section className="mx-auto max-w-[1160px] px-5 pb-16 pt-28 sm:px-8 sm:pt-36">
+      <section className="mx-auto max-w-[1160px] px-5 pb-10 pt-28 sm:px-8 sm:pt-36">
         <Title text={l(t.gallery.title) + " našeho studia"} size="text-[2.5rem] sm:text-6xl" />
-        <div className="mt-10">
+        <div className="mt-7">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -274,7 +274,7 @@ export function NovaSite(props: SiteProps) {
     );
   } else {
     body = (
-      <section className="mx-auto grid max-w-[1160px] gap-8 px-5 pb-16 pt-28 sm:px-8 sm:pt-36 lg:grid-cols-12">
+      <section className="mx-auto grid max-w-[1160px] gap-8 px-5 pb-10 pt-28 sm:px-8 sm:pt-36 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Title text={l(t.contact.title) + " a rezervace"} size="text-[2.5rem] sm:text-6xl" />
           <p className={`mt-4 ${soft}`}>{l(t.contact.lead)}</p>

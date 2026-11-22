@@ -27,7 +27,7 @@ export async function EetBand() {
                 </li>
               ))}
             </ul>
-            <Link href="/eet-2-0" className="x-btn-ghostDark mt-10">{t("cta")}</Link>
+            <Link href="/eet-2-0" className="x-btn-ghostDark mt-7">{t("cta")}</Link>
           </div>
           <div className="relative flex min-h-[420px] items-start justify-center overflow-hidden bg-brand-900/40 pt-12 lg:col-span-5 lg:min-h-0">
             <Receipt className="rotate-[-2deg]" />

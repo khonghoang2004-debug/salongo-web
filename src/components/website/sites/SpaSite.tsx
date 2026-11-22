@@ -21,7 +21,7 @@ export function SpaSite(props: SiteProps) {
   const x = extrasOf(t.slug);
 
   const PageHead = ({ title, lead }: { title: string; lead: string }) => (
-    <section className="mx-auto max-w-2xl px-5 pb-12 pt-14 text-center sm:pt-20">
+    <section className="mx-auto max-w-2xl px-5 pb-12 pt-10 text-center sm:pt-14">
       <Leaf className="mx-auto size-5 text-[#7C8A62]" aria-hidden />
       <h1 className={`${serif} mt-5 text-[2.5rem] leading-[1.1] sm:text-[3.5rem]`}>{title}</h1>
       <p className={`mx-auto mt-5 max-w-lg text-[17px] leading-[1.75] ${soft}`}>{lead}</p>
@@ -43,7 +43,7 @@ export function SpaSite(props: SiteProps) {
   if (page === "") {
     body = (
       <>
-        <section className="px-5 pt-14 text-center sm:pt-20">
+        <section className="px-5 pt-10 text-center sm:pt-14">
           <p className={`text-sm tracking-[0.18em] ${olive}`}>{l(t.home.kicker)}</p>
           <h1 className={`${serif} mx-auto mt-5 max-w-3xl text-[2.75rem] leading-[1.08] sm:text-6xl lg:text-[4.25rem]`}>{l(t.home.title)}</h1>
           <p className={`mx-auto mt-6 max-w-xl text-[17px] leading-[1.75] ${soft}`}>{l(t.home.lead)}</p>
@@ -57,13 +57,13 @@ export function SpaSite(props: SiteProps) {
           </div>
           <RatingBadge x={x} locale={props.locale} className={`mt-6 justify-center text-[15px] ${soft}`} starClass="text-[#7C8A62]" />
         </section>
-        <section className="mx-auto mt-14 grid max-w-[1160px] grid-cols-12 items-end gap-3 px-5 sm:gap-5 sm:px-8">
+        <section className="mx-auto mt-8 grid max-w-[1160px] grid-cols-12 items-end gap-3 px-5 sm:gap-5 sm:px-8">
           <div className="col-span-3 hidden aspect-[3/4] overflow-hidden rounded-t-full bg-[#ECE5D8] sm:block">{s.art(t.gallery.items[1])}</div>
           <div className="col-span-12 aspect-[4/5] overflow-hidden rounded-t-full bg-[#ECE5D8] sm:col-span-6 sm:aspect-[5/6]">{s.art(t.home.hero, "", true)}</div>
           <div className="col-span-3 hidden aspect-[3/4] overflow-hidden rounded-t-full bg-[#ECE5D8] sm:block">{s.art(t.gallery.items[2])}</div>
         </section>
 
-        <section className="mx-auto grid max-w-[1000px] items-center gap-10 px-5 py-20 sm:px-8 md:grid-cols-2 lg:py-28">
+        <section className="mx-auto grid max-w-[1000px] items-center gap-10 px-5 py-12 sm:px-8 md:grid-cols-2 lg:py-28">
           <div className="mx-auto aspect-square w-full max-w-[380px] overflow-hidden rounded-full bg-[#ECE5D8]">{s.art(t.about.team[0].visual)}</div>
           <div>
             <h2 className={`${serif} text-[2rem] leading-tight sm:text-[2.5rem]`}>{l(t.home.intro.title)}</h2>
@@ -81,37 +81,37 @@ export function SpaSite(props: SiteProps) {
           </div>
         </section>
 
-        <section className="bg-[#F4F0E7] py-20">
+        <section className="bg-[#F4F0E7] py-12">
           <div className="mx-auto max-w-[1160px] px-5 sm:px-8">
             <h2 className={`${serif} text-center text-[2rem] sm:text-[2.5rem]`}>{l(t.nav["dich-vu"])}</h2>
-            <ul className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-3">
+            <ul className="mt-7 grid gap-4 sm:gap-5 md:grid-cols-3">
               {t.services.groups.flatMap((g) => g.items.slice(0, 2)).slice(0, 6).map((it, i) => (
                 <Treatment key={i} it={it} />
               ))}
             </ul>
-            <div className="mt-10 text-center">
+            <div className="mt-7 text-center">
               <Link href={s.href("dich-vu")} className={btnGhost}>
                 {l(UI.allServices)}
               </Link>
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 py-20 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-12 sm:px-8">
           <h2 className={`${serif} text-center text-[2rem] sm:text-[2.5rem]`}>{l(t.gallery.title)}</h2>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {t.gallery.items.slice(0, 4).map((g, i) => (
               <div key={i} className={`aspect-[3/4] overflow-hidden bg-[#ECE5D8] ${i % 2 ? "rounded-[28px]" : "rounded-t-full"}`}>
                 {s.art(g)}
               </div>
             ))}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-7 text-center">
             <Link href={s.href("bo-suu-tap")} className={btnGhost}>
               {l(UI.viewGallery)}
             </Link>
           </div>
         </section>
-        <section className="bg-[#F4F0E7] py-20">
+        <section className="bg-[#F4F0E7] py-12">
           <div className="mx-auto max-w-[1160px] px-5 sm:px-8">
             <Reviews
               x={x}
@@ -128,7 +128,7 @@ export function SpaSite(props: SiteProps) {
             />
           </div>
         </section>
-        <section className="mx-auto max-w-[1160px] px-5 py-20 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 py-12 sm:px-8">
           <Visit
             tpl={t}
             locale={props.locale}
@@ -171,7 +171,7 @@ export function SpaSite(props: SiteProps) {
               </ul>
             </div>
           ))}
-          <p className={`mx-auto mt-12 max-w-xl text-center text-[15px] ${soft}`}>{l(t.services.note)}</p>
+          <p className={`mx-auto mt-8 max-w-xl text-center text-[15px] ${soft}`}>{l(t.services.note)}</p>
         </section>
         <Closing {...props} />
       </>
@@ -180,7 +180,7 @@ export function SpaSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.about.title)} lead={l(t.about.lead)} />
-        <section className="mx-auto grid max-w-[1000px] items-center gap-10 px-5 pb-16 sm:px-8 md:grid-cols-2">
+        <section className="mx-auto grid max-w-[1000px] items-center gap-10 px-5 pb-10 sm:px-8 md:grid-cols-2">
           <div className="aspect-[4/5] overflow-hidden rounded-t-full bg-[#ECE5D8]">{s.art(t.gallery.items[5])}</div>
           <div className="space-y-5">
             {t.about.story.map((p, i) => (
@@ -193,7 +193,7 @@ export function SpaSite(props: SiteProps) {
         <section className="bg-[#F4F0E7]">
           <div className="mx-auto max-w-[1000px] px-5 py-16 sm:px-8">
             <h2 className={`${serif} text-center text-[2rem]`}>{l(UI.team)}</h2>
-            <ul className="mt-10 grid gap-8 sm:grid-cols-2">
+            <ul className="mt-7 grid gap-8 sm:grid-cols-2">
               {t.about.team.map((m) => (
                 <li key={m.name} className="flex items-center gap-5">
                   <div className="size-28 shrink-0 overflow-hidden rounded-full bg-[#ECE5D8] sm:size-32">{s.art(m.visual)}</div>
@@ -207,7 +207,7 @@ export function SpaSite(props: SiteProps) {
             </ul>
           </div>
         </section>
-        <section className="mx-auto grid max-w-[1000px] gap-8 px-5 py-16 text-center sm:grid-cols-3 sm:px-8">
+        <section className="mx-auto grid max-w-[1000px] gap-8 px-5 py-10 text-center sm:grid-cols-3 sm:px-8">
           {t.about.values.map((v, i) => (
             <div key={i}>
               <span className="mx-auto block size-2 rounded-full bg-[#A3AE92]" aria-hidden />
@@ -223,7 +223,7 @@ export function SpaSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.gallery.title)} lead={l(t.gallery.lead)} />
-        <section className="mx-auto max-w-[1160px] px-5 pb-16 sm:px-8">
+        <section className="mx-auto max-w-[1160px] px-5 pb-10 sm:px-8">
           <DemoLightbox
             motif={t.motif}
             {...s.gallery}
@@ -239,7 +239,7 @@ export function SpaSite(props: SiteProps) {
     body = (
       <>
         <PageHead title={l(t.contact.title)} lead={l(t.contact.lead)} />
-        <section className="mx-auto grid max-w-[1100px] gap-8 px-5 pb-20 sm:px-8 lg:grid-cols-12">
+        <section className="mx-auto grid max-w-[1100px] gap-8 px-5 pb-12 sm:px-8 lg:grid-cols-12">
           <div className="rounded-[32px] bg-[#F1ECE1] p-6 sm:p-9 lg:col-span-7">
             <DemoBookingForm
               {...s.form}
@@ -324,7 +324,7 @@ function Closing(props: SiteProps) {
   const s = site(props);
   const { t } = props;
   return (
-    <section className="px-5 py-16 sm:px-8 lg:py-24">
+    <section className="px-5 py-10 sm:px-8 lg:py-16">
       <div className="mx-auto grid max-w-[1000px] items-center gap-8 overflow-hidden rounded-[40px] bg-[#DDE2D1] md:grid-cols-2">
         <div className="px-7 pt-10 md:py-14 md:pl-12">
           <h2 className={`${serif} text-[2rem] leading-tight`}>{s.l(t.home.closing.title)}</h2>

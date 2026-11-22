@@ -12,7 +12,7 @@ export async function ClipSection() {
           <h2 id="clips-title" className="x-h2 text-ink">{t("title")}</h2>
           <p className="x-lead mt-4">{t("lead")}</p>
         </div>
-        <div className="mt-12">
+        <div className="mt-8">
           <ClipReel items={items} playLabel={t("play")} pauseLabel={t("pause")} />
         </div>
       </div>

@@ -10,7 +10,7 @@ import { HostingPlans, type HostingPlan } from "./HostingPlans";
 const PRICES = { basic: { m: 299, y: 2999 }, pro: { m: 999, y: 9999 } };
 const LINKS = {
   basic: { m: "https://buy.stripe.com/5kQ28j23m6594qKbRw8k803", y: "https://buy.stripe.com/00wcMX4bu8dh1eyg7M8k805" },
-  pro: { m: "https://buy.stripe.com/bJefZ9eQ8eBF5oaNs8k801", y: "https://buy.stripe.com/3cIdR123mdxB4qKg7M8k802" },
+  pro: { m: "https://buy.stripe.com/bJefZ9eQ8eBFf5oaNs8k801", y: "https://buy.stripe.com/3cIdR123mdxB4qKg7M8k802" },
 };
 /** Stripe Customer Portal (billing.stripe.com/p/login/…); empty until the owner sends it. */
 const PORTAL_URL = "";

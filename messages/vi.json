@@ -1426,6 +1426,7 @@
       "features": "Tính năng",
       "pricing": "Bảng giá",
       "desk": "Gói IČO riêng",
+      "kasa": "Kasa",
       "website": "Làm website",
       "faq": "Hỏi đáp",
       "contact": "Liên hệ",
@@ -2244,5 +2245,137 @@
     "payTitle": "Thanh toán hosting",
     "payBack": "Quay lại các gói",
     "payFallback": "Không mở được khung thanh toán. Bấm vào đây để thanh toán trên Stripe."
+  },
+  "kasa": {
+    "meta": {
+      "title": "SalonGo Kasa – phần mềm tính tiền cho tiệm nail, trả một lần",
+      "desc": "Tính tiền, in hoá đơn, EET 2.0, Thu & Chi và doanh thu thợ trên Windows và macOS. Dữ liệu ở máy của tiệm. Trả một lần {price}.",
+      "buyTitle": "Mua SalonGo Kasa",
+      "downloadTitle": "Tải SalonGo Kasa",
+      "thanksTitle": "Cảm ơn bạn đã mua SalonGo Kasa"
+    },
+    "hero": {
+      "pill": "Sẵn sàng cho EET 2.0 từ 1.1.2027",
+      "title": "SalonGo Kasa",
+      "lead": "Máy tính tiền cho tiệm nail: trả một lần, chạy trên máy của bạn.",
+      "once": "trả một lần",
+      "platforms": "Windows · macOS",
+      "buy": "Mua Kasa",
+      "download": "Tải về (đã có giấy phép)",
+      "fact1": "Dữ liệu ở máy của tiệm",
+      "fact2": "Sao lưu mã hoá mỗi ngày",
+      "fact3": "1 giấy phép = 1 máy tính",
+      "alt": "Màn tính tiền của SalonGo"
+    },
+    "features": {
+      "title": "Kasa làm gì",
+      "checkout": {
+        "t": "Tính tiền, in hoá đơn",
+        "d": "Hoá đơn, in giấy nhiệt 80 mm."
+      },
+      "eet": {
+        "t": "EET 2.0",
+        "d": "Gửi doanh thu theo luật mới từ 2027."
+      },
+      "thuchi": {
+        "t": "Thu & Chi",
+        "d": "Chi phí, thu, lãi. Xuất CSV, Excel, PDF."
+      },
+      "services": {
+        "t": "Dịch vụ & giá",
+        "d": "Bảng giá của tiệm, sửa lúc nào cũng được."
+      },
+      "staff": {
+        "t": "Thợ & doanh thu thợ",
+        "d": "Mỗi thợ làm được bao nhiêu."
+      },
+      "customers": {
+        "t": "Khách hàng",
+        "d": "Tên, số điện thoại, lần đến gần nhất."
+      }
+    },
+    "compare": {
+      "title": "Kasa hay SalonGo?",
+      "price": "Giá",
+      "priceKasa": "Một lần",
+      "priceGo": "Hàng tháng",
+      "data": "Dữ liệu",
+      "dataKasa": "Trên máy",
+      "dataGo": "Cloud",
+      "appointments": "Lịch hẹn",
+      "booking": "Đặt lịch online",
+      "devices": "Máy tính bảng, điện thoại",
+      "eet": "EET 2.0",
+      "thuchi": "Thu & Chi",
+      "staffRevenue": "Doanh thu thợ",
+      "yes": "Có",
+      "no": "Không",
+      "goLink": "Xem SalonGo"
+    },
+    "faq": {
+      "title": "Hỏi nhanh",
+      "q1": "Kasa khác SalonGo thế nào?",
+      "a1": "Kasa chỉ tính tiền và sổ sách, chạy trên một máy tính, trả một lần. Cần lịch hẹn, đặt lịch online hay dùng điện thoại thì chọn SalonGo.",
+      "q2": "Mất mạng có bán được không?",
+      "a2": "Được. Kasa tính tiền và in hoá đơn không cần mạng, EET gửi khi có mạng lại.",
+      "q3": "Dữ liệu lưu ở đâu?",
+      "a3": "Trên máy tính của tiệm. Mỗi ngày Kasa sao lưu mã hoá vào USB hoặc thư mục Google Drive.",
+      "q4": "Đổi máy tính mới thì sao?",
+      "a4": "1 giấy phép dùng cho 1 máy. Nhắn hỗ trợ, chúng tôi chuyển giấy phép sang máy mới.",
+      "q5": "Có phí hằng tháng không?",
+      "a5": "Không. Trả một lần {price} cho một máy."
+    },
+    "buy": {
+      "title": "Mua SalonGo Kasa",
+      "back": "Về trang Kasa",
+      "summary": "1 giấy phép, 1 máy tính · {price}",
+      "ico": "IČO",
+      "icoPlaceholder": "12345678",
+      "lookup": "Tìm",
+      "looking": "Đang tìm…",
+      "found": "Đã điền từ ARES",
+      "invalid": "IČO không đúng",
+      "notFound": "Không tìm thấy IČO này",
+      "unavailable": "ARES đang không trả lời, hãy tự điền",
+      "company": "Tên công ty / người kinh doanh",
+      "address": "Địa chỉ",
+      "email": "E-mail (nhận mã giấy phép)",
+      "consent": "Tôi đồng ý với <terms>Điều khoản</terms> và <privacy>Chính sách bảo mật</privacy>.",
+      "pay": "Cách trả",
+      "card": "Thẻ",
+      "bank": "Chuyển khoản",
+      "next": "Tiếp tục",
+      "fillFirst": "Điền IČO, e-mail và đồng ý điều khoản",
+      "soon": "Sắp mở. Hãy quay lại sau ít ngày.",
+      "secure": "Thanh toán an toàn qua Stripe",
+      "edit": "Sửa thông tin",
+      "account": "Số tài khoản",
+      "iban": "IBAN",
+      "amount": "Số tiền",
+      "vs": "Mã VS",
+      "message": "Nội dung",
+      "bankNote": "Khi tiền về, mã giấy phép gửi tới e-mail của bạn.",
+      "fallback": "Không mở được trang thanh toán. Thử lại sau."
+    },
+    "download": {
+      "title": "Tải SalonGo Kasa",
+      "lead": "Cho tiệm đã có giấy phép.",
+      "mac": "Tải cho macOS",
+      "win": "Tải cho Windows",
+      "macFile": ".dmg · macOS 11 trở lên",
+      "winFile": ".exe · Windows 10 và 11",
+      "steps": "Cài đặt",
+      "s1": "Tải bản cài cho máy của bạn và mở file.",
+      "s2": "macOS: kéo Kasa vào Ứng dụng. Windows: bấm Cài đặt.",
+      "s3": "Mở Kasa và nhập mã giấy phép.",
+      "key": "Mã giấy phép có trong e-mail sau khi mua.",
+      "noKey": "Chưa có giấy phép?",
+      "buy": "Mua Kasa"
+    },
+    "thanks": {
+      "title": "Cảm ơn bạn!",
+      "lead": "Mã giấy phép sẽ gửi tới e-mail của bạn.",
+      "download": "Tải Kasa"
+    }
   }
 }

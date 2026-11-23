@@ -1426,6 +1426,7 @@
       "features": "Funktionen",
       "pricing": "Preise",
       "desk": "Tarif Stuhl",
+      "kasa": "Kasa",
       "website": "Salon-Website",
       "faq": "Fragen",
       "contact": "Kontakt",
@@ -2244,5 +2245,137 @@
     "payTitle": "Hosting bezahlen",
     "payBack": "Zurück zu den Tarifen",
     "payFallback": "Das Zahlungsformular konnte nicht laden. Hier klicken, um bei Stripe zu zahlen."
+  },
+  "kasa": {
+    "meta": {
+      "title": "SalonGo Kasa – Kasse für Nagelstudios, Einmalkauf",
+      "desc": "Kasse, Belegdruck, EET 2.0, Einnahmen & Ausgaben und Umsatz pro Mitarbeiter unter Windows und macOS. Die Daten bleiben auf Ihrem Computer. Einmalig {price}.",
+      "buyTitle": "SalonGo Kasa kaufen",
+      "downloadTitle": "SalonGo Kasa herunterladen",
+      "thanksTitle": "Danke für Ihren Kauf von SalonGo Kasa"
+    },
+    "hero": {
+      "pill": "Bereit für EET 2.0 ab 1.1.2027",
+      "title": "SalonGo Kasa",
+      "lead": "Die Kasse für Nagelstudios: einmal zahlen, läuft auf Ihrem Computer.",
+      "once": "einmalig",
+      "platforms": "Windows · macOS",
+      "buy": "Kasa kaufen",
+      "download": "Download (mit Lizenz)",
+      "fact1": "Daten auf Ihrem Computer",
+      "fact2": "Täglich verschlüsseltes Backup",
+      "fact3": "1 Lizenz = 1 Computer",
+      "alt": "Kasse in SalonGo"
+    },
+    "features": {
+      "title": "Was Kasa kann",
+      "checkout": {
+        "t": "Kasse & Belege",
+        "d": "Rechnungen, 80-mm-Thermodruck."
+      },
+      "eet": {
+        "t": "EET 2.0",
+        "d": "Umsatzmeldung nach dem Gesetz ab 2027."
+      },
+      "thuchi": {
+        "t": "Einnahmen & Ausgaben",
+        "d": "Kosten, Einnahmen, Gewinn. Export CSV, Excel, PDF."
+      },
+      "services": {
+        "t": "Leistungen & Preise",
+        "d": "Ihre Preisliste, jederzeit änderbar."
+      },
+      "staff": {
+        "t": "Mitarbeiter & Umsatz",
+        "d": "Wer wie viel verdient hat."
+      },
+      "customers": {
+        "t": "Kunden",
+        "d": "Name, Telefon, letzter Besuch."
+      }
+    },
+    "compare": {
+      "title": "Kasa oder SalonGo?",
+      "price": "Preis",
+      "priceKasa": "Einmalig",
+      "priceGo": "Monatlich",
+      "data": "Daten",
+      "dataKasa": "Auf dem Computer",
+      "dataGo": "Cloud",
+      "appointments": "Termine",
+      "booking": "Online-Buchung",
+      "devices": "Tablets, Handys",
+      "eet": "EET 2.0",
+      "thuchi": "Einnahmen & Ausgaben",
+      "staffRevenue": "Umsatz pro Mitarbeiter",
+      "yes": "Ja",
+      "no": "Nein",
+      "goLink": "SalonGo ansehen"
+    },
+    "faq": {
+      "title": "Kurze Fragen",
+      "q1": "Was unterscheidet Kasa von SalonGo?",
+      "a1": "Kasa ist nur Kasse und Buchhaltung, auf einem Computer, einmal bezahlt. Für Termine, Online-Buchung oder Handy wählen Sie SalonGo.",
+      "q2": "Geht es ohne Internet?",
+      "a2": "Ja. Kasa kassiert und druckt auch offline und sendet EET, sobald wieder Internet da ist.",
+      "q3": "Wo liegen die Daten?",
+      "a3": "Auf dem Computer Ihres Salons. Kasa sichert sie täglich verschlüsselt auf USB oder in einen Google-Drive-Ordner.",
+      "q4": "Und wenn ich den Computer wechsle?",
+      "a4": "1 Lizenz gilt für 1 Computer. Schreiben Sie dem Support, wir übertragen die Lizenz auf den neuen.",
+      "q5": "Gibt es eine Monatsgebühr?",
+      "a5": "Nein. Einmalig {price} pro Computer."
+    },
+    "buy": {
+      "title": "SalonGo Kasa kaufen",
+      "back": "Zurück zu Kasa",
+      "summary": "1 Lizenz, 1 Computer · {price}",
+      "ico": "IČO (Firmennummer)",
+      "icoPlaceholder": "12345678",
+      "lookup": "Suchen",
+      "looking": "Suche…",
+      "found": "Aus ARES übernommen",
+      "invalid": "Ungültige IČO",
+      "notFound": "IČO nicht in ARES gefunden",
+      "unavailable": "ARES antwortet nicht, bitte selbst eintragen",
+      "company": "Firma / Name",
+      "address": "Sitz",
+      "email": "E-Mail (für Ihren Lizenzschlüssel)",
+      "consent": "Ich stimme den <terms>AGB</terms> und der <privacy>Datenschutzerklärung</privacy> zu.",
+      "pay": "Zahlung",
+      "card": "Karte",
+      "bank": "Überweisung",
+      "next": "Weiter",
+      "fillFirst": "IČO, E-Mail eintragen und zustimmen",
+      "soon": "Bald verfügbar. Bitte schauen Sie in ein paar Tagen wieder vorbei.",
+      "secure": "Sichere Zahlung über Stripe",
+      "edit": "Angaben ändern",
+      "account": "Kontonummer",
+      "iban": "IBAN",
+      "amount": "Betrag",
+      "vs": "Variables Symbol (VS)",
+      "message": "Verwendungszweck",
+      "bankNote": "Sobald die Zahlung eingeht, mailen wir Ihnen den Lizenzschlüssel.",
+      "fallback": "Die Zahlungsseite ließ sich nicht öffnen. Bitte später erneut versuchen."
+    },
+    "download": {
+      "title": "SalonGo Kasa herunterladen",
+      "lead": "Für Salons mit Lizenz.",
+      "mac": "Für macOS laden",
+      "win": "Für Windows laden",
+      "macFile": ".dmg · macOS 11 oder neuer",
+      "winFile": ".exe · Windows 10 und 11",
+      "steps": "Installation",
+      "s1": "Installer für Ihren Computer laden und öffnen.",
+      "s2": "macOS: Kasa in Programme ziehen. Windows: auf Installieren klicken.",
+      "s3": "Kasa öffnen und Lizenzschlüssel eingeben.",
+      "key": "Den Lizenzschlüssel finden Sie in der E-Mail nach dem Kauf.",
+      "noKey": "Noch keine Lizenz?",
+      "buy": "Kasa kaufen"
+    },
+    "thanks": {
+      "title": "Danke!",
+      "lead": "Ihr Lizenzschlüssel kommt per E-Mail.",
+      "download": "Kasa herunterladen"
+    }
   }
 }

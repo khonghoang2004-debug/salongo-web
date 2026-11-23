@@ -9,7 +9,7 @@ const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
 // Giống SITEMAP_PATHS (src/app/sitemap.ts); test sitemap bên dưới so sánh chính xác hai danh sách
-const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/goi-ban", "/eet-2-0", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
+const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/goi-ban", "/kasa", "/eet-2-0", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
 // Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);
@@ -174,7 +174,8 @@ test("cs/en/de: tiêu đề H1/H2 đã dịch (không còn tiếng Việt)", asy
     const vi = headings(await (await get(`/vi${p}`, PRIMARY)).text());
     for (const l of ["cs", "en", "de"]) {
       const hs = headings(await (await get(`/${l}${p}`, PRIMARY)).text());
-      assert.notEqual(hs[0], vi[0], `/${l}${p}: H1 giống bản tiếng Việt`);
+      // /kasa: H1 is the product name "SalonGo Kasa", the same in every language
+      if (p !== "/kasa") assert.notEqual(hs[0], vi[0], `/${l}${p}: H1 giống bản tiếng Việt`);
       const left = hs.filter((h) => VI_ONLY.test(h));
       assert.deepEqual(left, [], `/${l}${p}: còn tiêu đề tiếng Việt`);
     }

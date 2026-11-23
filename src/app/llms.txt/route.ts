@@ -1,3 +1,4 @@
+import { KASA_PRICE_CZK } from "@/lib/kasa";
 import { getPlans, priceRange, type DeskPlan, type SitePlan } from "@/lib/plans";
 
 const SITE = "https://www.salongo.eu";
@@ -35,6 +36,7 @@ const SECTIONS = [
   ["/giai-phap", "Solutions by salon type"],
   ["/bang-gia", "Pricing"],
   ["/goi-ban", "Chair / desk renter plan"],
+  ["/kasa", "SalonGo Kasa: one-time-purchase desktop POS"],
   ["/eet-2-0", "Czech EET 2.0 for salons: what to do by 1 Jan 2027"],
   ["/faq", "FAQ"],
   ["/ve-salongo", "About SalonGo"],
@@ -95,6 +97,7 @@ export async function GET() {
     ...lines,
     `- ${discount ? `Paying yearly saves up to ${discount}%. ` : ""}New salons get a ${plans.trialDays}-day free trial, no card needed. Plans are renewed in the app (Plan screen).`,
     desk(plans.desk),
+    `- SalonGo Kasa ${KASA_PRICE_CZK} CZK one-time per computer (not a subscription): desktop POS for Windows and macOS for Czech salons. Only checkout, receipts, Czech EET 2.0, income & expenses (CSV/Excel/PDF export), services & prices, staff revenue and a simple customer list; data stays on the salon's computer with a daily encrypted backup. No appointments, online booking or phones (that is SalonGo). Details: https://www.salongo.eu/en/kasa`,
   ].join("\n");
   const body = `${HEAD}${answers(priceRange(plans).low, plans.trialDays)}${pricing}\n\n## Pages\n${PAGES}\n\n## Other\n${OTHER}\n`;
   return new Response(body, {

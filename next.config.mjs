@@ -32,6 +32,9 @@ const onVercel = Boolean(process.env.VERCEL);
 const preview = (...src) => (isPreview ? src : []);
 // Stripe Embedded Checkout (hosting payment on /website/thanh-toan): js.stripe.com script + iframes, api.stripe.com calls.
 const STRIPE = { script: ["https://js.stripe.com"], frame: ["https://js.stripe.com", "https://checkout.stripe.com", "https://hooks.stripe.com"], connect: ["https://api.stripe.com", "https://checkout.stripe.com"] };
+// SalonGo Kasa installers + auto-update feed: static files in public/kasa/updates/<mac|win>/ (see the README there).
+// Short stable links /kasa/download/mac|win → newest installer (302, so the target can change with each release).
+const KASA_INSTALLER = { mac: "/kasa/updates/mac/SalonGo-Kasa-latest.dmg", win: "/kasa/updates/win/SalonGo-Kasa-latest.exe" };
 const HOSTING_SHORT = { 299: "plan=basic&cycle=m", 2999: "plan=basic&cycle=y", 999: "plan=pro&cycle=m", 9999: "plan=pro&cycle=y" };
 const CSP = [
   ["default-src", "'self'"],
@@ -85,6 +88,24 @@ const nextConfig = {
       // Ảnh / video trong /public mặc định "max-age=0, must-revalidate": trình duyệt hỏi lại server mỗi lần xem.
       // Cho giữ 1 ngày, sau đó vẫn dùng bản cũ thêm 1 tuần trong lúc tải bản mới ở nền.
       // Thay ảnh mà giữ tên file thì khách quen có thể thấy ảnh cũ tối đa 1 ngày — muốn đổi ngay thì đổi tên (…-v2.webp).
+      // Kasa update feed: electron-updater must always see the newest latest*.yml (no cache); installers are files
+      // to save (correct type + attachment), never pages to index.
+      {
+        source: "/kasa/updates/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+          { key: "X-Robots-Tag", value: "noindex" },
+        ],
+      },
+      { source: "/kasa/updates/:path*.yml", headers: [{ key: "Content-Type", value: "text/yaml; charset=utf-8" }] },
+      {
+        source: "/kasa/updates/:path*.dmg",
+        headers: [{ key: "Content-Type", value: "application/x-apple-diskimage" }, { key: "Content-Disposition", value: "attachment" }],
+      },
+      {
+        source: "/kasa/updates/:path*.exe",
+        headers: [{ key: "Content-Type", value: "application/vnd.microsoft.portable-executable" }, { key: "Content-Disposition", value: "attachment" }],
+      },
       ...["/images/:path*", "/videos/:path*"].map((source) => ({
         source,
         headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
@@ -98,6 +119,10 @@ const nextConfig = {
       ...Object.entries(HOSTING_SHORT).flatMap(([price, q]) => [
         { source: `/hosting-${price}`, destination: `/vi/website/thanh-toan?${q}`, permanent: false },
         { source: `/:locale(vi|cs|en|de)/hosting-${price}`, destination: `/:locale/website/thanh-toan?${q}`, permanent: false },
+      ]),
+      ...Object.entries(KASA_INSTALLER).flatMap(([os, destination]) => [
+        { source: `/kasa/download/${os}`, destination, permanent: false },
+        { source: `/:locale(vi|cs|en|de)/kasa/download/${os}`, destination, permanent: false },
       ]),
       ...Object.entries(OLD_IMAGES).map(([from, to]) => ({
         source: `/images/${from}.webp`,

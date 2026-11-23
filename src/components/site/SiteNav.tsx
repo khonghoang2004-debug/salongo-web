@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, X, CalendarSync, ChevronRight, Sparkles, Tag, Armchair, Globe, ReceiptText, CircleHelp, Mail, Info } from "lucide-react";
+import { Menu, X, CalendarSync, ChevronRight, Sparkles, Tag, Armchair, Globe, ReceiptText, Calculator, CircleHelp, Mail, Info } from "lucide-react";
 import { AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
 import { siteConfig } from "@/lib/metadata";
 import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, appLink, renewLink } from "@/lib/app-links";
@@ -19,6 +19,7 @@ const ITEMS = [
   { href: "/tinh-nang", key: "features" },
   { href: "/bang-gia", key: "pricing" },
   { href: "/goi-ban", key: "desk" },
+  { href: "/kasa", key: "kasa" },
   { href: "/website", key: "website" },
   { href: "/faq", key: "faq" },
 ] as const;
@@ -29,6 +30,7 @@ const MOBILE_MAIN: MenuItem[] = [
   { href: "/tinh-nang", key: "features", icon: Sparkles, tone: "bg-[#F8EEF1] text-brand-700" },
   { href: "/bang-gia", key: "pricing", icon: Tag, tone: "bg-[#FFF3E0] text-[#C2410C]" },
   { href: "/goi-ban", key: "desk", icon: Armchair, tone: "bg-[#F3E8FF] text-[#7E22CE]" },
+  { href: "/kasa", key: "kasa", icon: Calculator, tone: "bg-[#FFF1F2] text-[#BE123C]" },
   { href: "/website", key: "website", icon: Globe, tone: "bg-[#E0F2FE] text-[#0369A1]" },
   { href: "/eet-2-0", key: "eet", label: "EET 2.0", icon: ReceiptText, tone: "bg-[#DCFCE7] text-[#15803D]" },
   { href: "/faq", key: "faq", icon: CircleHelp, tone: "bg-[#F1F5F9] text-[#475569]" },
@@ -121,7 +123,7 @@ export function SiteNav() {
                   <Link
                     href={it.href}
                     aria-current={isActive(it.href) ? "page" : undefined}
-                    className={`inline-flex h-10 items-center whitespace-nowrap rounded-full px-3 text-[15px] transition-colors xl:px-3.5 ${
+                    className={`inline-flex h-10 items-center whitespace-nowrap rounded-full px-2 text-[15px] transition-colors xl:px-3.5 ${
                       isActive(it.href) ? "bg-porcelain font-medium text-ink" : "text-ink/70 hover:text-ink"
                     }`}
                   >

@@ -206,6 +206,10 @@ export function SiteNav() {
                     <AppleIcon className="size-4" />
                     {t("mac")}
                   </a>
+                  <a href={DOWNLOAD_LINKS.ios} target="_blank" rel="noopener noreferrer" className="col-span-2 inline-flex h-11 items-center justify-center gap-1.5 rounded-full border border-line px-3.5 text-[14px] font-medium text-ink">
+                    <AppleIcon className="size-4" />
+                    {t("appStore")}
+                  </a>
                 </div>
               </div>
               <div className="mt-3 flex items-center justify-end gap-3">

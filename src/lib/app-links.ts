@@ -40,7 +40,11 @@ export function renewLink(locale: string, plan?: PlanCode | "DESK", cycle?: Bill
   return u.toString();
 }
 
+/** SalonGo for iPhone and iPad on the App Store (listed 2026-11, bundle eu.salongo.app). No country in the link: Apple opens the visitor's own store. */
+export const APP_STORE_URL = "https://apps.apple.com/app/salongo/id6831757876";
+
 export const DOWNLOAD_LINKS = {
+  ios: APP_STORE_URL,
   // Our own redirect: newest published version (full or pre-release), see src/app/api/download/[os]/route.ts
   windows: "/api/download/windows",
   mac: "/api/download/mac",
@@ -69,5 +73,7 @@ export function deskSignupLink(locale: string): string {
   return u.toString();
 }
 
-/** Phone apps in the App Store / Google Play: hidden on the site until they are publicly listed (owner 2026-11-22). */
-export const PHONE_APPS_LIVE = false;
+/** iPhone / iPad app is public on the App Store (owner 2026-11-23): shown on the site. */
+export const IOS_APP_LIVE = true;
+/** Android app on Google Play: hidden on the site until it is publicly listed (owner 2026-11-22). */
+export const ANDROID_APP_LIVE = false;

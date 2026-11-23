@@ -330,7 +330,7 @@
     "note": "Luôn là bản mới nhất",
     "macSigned": "Bản Mac đã được ký với Apple.",
     "phone": "Trên điện thoại: mở app.salongo.eu trong trình duyệt để xem lịch, tính tiền, xem doanh thu.",
-    "ios": "App SalonGo cho iPhone, để đăng nhập tài khoản có sẵn: sắp có trên App Store."
+    "ios": "App SalonGo cho iPhone và iPad, để đăng nhập tài khoản có sẵn: tải trên App Store."
   },
   "trust": {
     "eyebrow": "Vì sao chọn SalonGo",
@@ -1437,9 +1437,10 @@
       "menu": "Menu",
       "close": "Đóng menu",
       "skip": "Bỏ qua, tới nội dung",
-      "download": "Tải app cho máy tính",
+      "download": "Tải app",
       "windows": "Windows",
       "mac": "macOS",
+      "appStore": "iPhone, iPad (App Store)",
       "trialLine": "{days} ngày miễn phí, không cần thẻ"
     },
     "footer": {

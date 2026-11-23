@@ -1437,9 +1437,10 @@
       "menu": "Menu",
       "close": "Zavřít menu",
       "skip": "Přeskočit na obsah",
-      "download": "Aplikace pro počítač",
+      "download": "Stáhnout aplikaci",
       "windows": "Windows",
       "mac": "macOS",
+      "appStore": "iPhone, iPad (App Store)",
       "trialLine": "{days} dní zdarma, bez platební karty"
     },
     "footer": {

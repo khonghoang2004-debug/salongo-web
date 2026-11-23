@@ -8,7 +8,7 @@ export const revalidate = 60;
 
 const HEAD = `# SalonGo
 
-> SalonGo is salon management software for nail, hair, lash and beauty salons in Europe, built for Vietnamese-run salons (app in Vietnamese, Czech, Slovak, English, German and French). It runs in the browser, as a desktop app for Windows and macOS (Mac build signed), and in the phone browser. An iPhone app for signing in is coming to the App Store. Client booking page languages: Czech, Slovak, English, German, French. Every plan has every feature; plans differ only by staff per location and number of locations.
+> SalonGo is salon management software for nail, hair, lash and beauty salons in Europe, built for Vietnamese-run salons (app in Vietnamese, Czech, Slovak, English, German and French). It runs in the browser, as a desktop app for Windows and macOS (Mac build signed), and in the phone browser. An iPhone and iPad app for signing in to existing accounts is on the App Store: https://apps.apple.com/app/salongo/id6831757876 Client booking page languages: Czech, Slovak, English, German, French. Every plan has every feature; plans differ only by staff per location and number of locations.
 
 Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://app.salongo.eu. Support in Vietnamese and Czech: salongosupport@gmail.com, +420 728 568 807. Operator: Nguyen Đuc Hoang Khong (sole trader), IČO 30241464, Svornosti 189, 252 42 Jesenice, Czech Republic.
 
@@ -63,7 +63,7 @@ const answers = (low: number, trialDays: number) => `## Quick answers
 - How much does it cost? From ${low} CZK per month; ${trialDays}-day free trial, no card needed. All features are in every plan.
 - Does it support Czech EET 2.0 (mandatory from 1 January 2027)? Yes, included in every plan at no extra cost; set up in 2 steps with the DIS+ certificate. No extra cash register hardware is needed.
 - Is the app in Vietnamese? Yes. The salon app is in Vietnamese, Czech, Slovak, English, German and French; the client booking page is in Czech, Slovak, English, German and French. Support by phone/email in Vietnamese and Czech.
-- Does it work on a phone? Yes, in the phone browser; desktop apps for Windows and macOS; an iPhone sign-in app is coming to the App Store.
+- Does it work on a phone? Yes, in the phone browser; desktop apps for Windows and macOS; an iPhone and iPad sign-in app is on the App Store (https://apps.apple.com/app/salongo/id6831757876).
 - Does it do SMS reminders or online prepayment? No: confirmations and reminders are by email; payments are taken in the salon.
 - Vietnamese: SalonGo là app quản lý tiệm nail, salon tóc, mi, spa cho người Việt ở Séc và châu Âu: đặt lịch online, tính tiền, EET 2.0, tính lương thợ, báo cáo doanh thu.
 - Czech: SalonGo je rezervační systém a pokladna pro nehtová studia, kadeřnictví a kosmetické salony, s EET 2.0, mzdami a přehledy tržeb, česky i vietnamsky.

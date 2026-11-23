@@ -330,7 +330,7 @@
     "note": "Immer die neueste Version",
     "macSigned": "Die Mac-App ist von Apple signiert.",
     "phone": "Auf dem Handy öffnen Sie app.salongo.eu im Browser: Termine, Kasse und Umsatz.",
-    "ios": "Eine iPhone-App zum Anmelden in bestehende Konten kommt bald in den App Store."
+    "ios": "Eine iPhone- und iPad-App zum Anmelden in bestehende Konten gibt es im App Store."
   },
   "trust": {
     "eyebrow": "Warum SalonGo",
@@ -1437,9 +1437,10 @@
       "menu": "Menü",
       "close": "Menü schließen",
       "skip": "Zum Inhalt springen",
-      "download": "Desktop-App",
+      "download": "App herunterladen",
       "windows": "Windows",
       "mac": "macOS",
+      "appStore": "iPhone, iPad (App Store)",
       "trialLine": "{days} Tage kostenlos, ohne Karte"
     },
     "footer": {

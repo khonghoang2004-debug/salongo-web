@@ -77,9 +77,10 @@ export async function SiteFooter() {
             </ul>
             <p className="mt-3 text-sm leading-relaxed text-white/50">{t("footer.support")}</p>
             <h2 className={`${head} mt-7`}>{t("nav.download")}</h2>
-            <div className="mt-3 flex gap-2">
+            <div className="mt-3 flex flex-wrap gap-2">
               <a href={DOWNLOAD_LINKS.windows} className="x-btn-ghostDark !min-h-10 !px-4 text-sm">{t("nav.windows")}</a>
               <a href={DOWNLOAD_LINKS.mac} className="x-btn-ghostDark !min-h-10 !px-4 text-sm">{t("nav.mac")}</a>
+              <a href={DOWNLOAD_LINKS.ios} target="_blank" rel="noopener noreferrer" className="x-btn-ghostDark !min-h-10 !px-4 text-sm">{t("nav.appStore")}</a>
             </div>
           </div>
         </div>

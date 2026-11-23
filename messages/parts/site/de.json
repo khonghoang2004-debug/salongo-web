@@ -14,9 +14,10 @@
     "menu": "Menü",
     "close": "Menü schließen",
     "skip": "Zum Inhalt springen",
-    "download": "Desktop-App",
+    "download": "App herunterladen",
     "windows": "Windows",
     "mac": "macOS",
+    "appStore": "iPhone, iPad (App Store)",
     "trialLine": "{days} Tage kostenlos, ohne Karte"
   },
   "footer": {

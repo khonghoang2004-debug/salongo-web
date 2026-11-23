@@ -14,9 +14,10 @@
     "menu": "Menu",
     "close": "Đóng menu",
     "skip": "Bỏ qua, tới nội dung",
-    "download": "Tải app cho máy tính",
+    "download": "Tải app",
     "windows": "Windows",
     "mac": "macOS",
+    "appStore": "iPhone, iPad (App Store)",
     "trialLine": "{days} ngày miễn phí, không cần thẻ"
   },
   "footer": {

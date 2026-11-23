@@ -330,7 +330,7 @@
     "note": "Always the latest version",
     "macSigned": "The Mac app is signed with Apple.",
     "phone": "On a phone, open app.salongo.eu in the browser for bookings, checkout and revenue.",
-    "ios": "An iPhone app for signing in to existing accounts is coming to the App Store."
+    "ios": "An iPhone and iPad app for signing in to existing accounts is on the App Store."
   },
   "trust": {
     "eyebrow": "Why SalonGo",
@@ -1437,9 +1437,10 @@
       "menu": "Menu",
       "close": "Close menu",
       "skip": "Skip to content",
-      "download": "Desktop app",
+      "download": "Download the app",
       "windows": "Windows",
       "mac": "macOS",
+      "appStore": "iPhone, iPad (App Store)",
       "trialLine": "{days} days free, no card needed"
     },
     "footer": {

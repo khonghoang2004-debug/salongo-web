@@ -17,7 +17,8 @@
     "fact1": "Dữ liệu ở máy của tiệm",
     "fact2": "Sao lưu mã hoá mỗi ngày",
     "fact3": "1 giấy phép = 1 máy tính",
-    "alt": "Màn tính tiền của SalonGo"
+    "alt": "Màn tính tiền của SalonGo",
+    "buyContact": "Liên hệ mua"
   },
   "features": {
     "title": "Kasa làm gì",
@@ -107,7 +108,13 @@
     "vs": "Mã VS",
     "message": "Nội dung",
     "bankNote": "Khi tiền về, mã giấy phép gửi tới e-mail của bạn.",
-    "fallback": "Không mở được trang thanh toán. Thử lại sau."
+    "fallback": "Không mở được trang thanh toán. Thử lại sau.",
+    "contactLead": "Gọi hoặc nhắn tin cho SalonGo để mua. Sau khi nhận tiền, SalonGo gửi bạn mã giấy phép KASA-… và giúp cài đặt.",
+    "hours": "Trả lời bằng tiếng Việt hoặc tiếng Séc.",
+    "contactCall": "Gọi",
+    "contactWhatsapp": "WhatsApp",
+    "contactFacebook": "Facebook",
+    "contactEmail": "E-mail"
   },
   "download": {
     "title": "Tải SalonGo Kasa",

@@ -2269,7 +2269,8 @@
       "fact1": "Daten auf Ihrem Computer",
       "fact2": "Täglich verschlüsseltes Backup",
       "fact3": "1 Lizenz = 1 Computer",
-      "alt": "Kasse in SalonGo"
+      "alt": "Kasse in SalonGo",
+      "buyContact": "Kauf anfragen"
     },
     "features": {
       "title": "Was Kasa kann",
@@ -2359,7 +2360,13 @@
       "vs": "Variables Symbol (VS)",
       "message": "Verwendungszweck",
       "bankNote": "Sobald die Zahlung eingeht, mailen wir Ihnen den Lizenzschlüssel.",
-      "fallback": "Die Zahlungsseite ließ sich nicht öffnen. Bitte später erneut versuchen."
+      "fallback": "Die Zahlungsseite ließ sich nicht öffnen. Bitte später erneut versuchen.",
+      "contactLead": "Rufen Sie SalonGo an oder schreiben Sie uns. Nach Zahlungseingang senden wir Ihnen den Lizenzcode KASA-… und helfen bei der Installation.",
+      "hours": "Wir antworten auf Tschechisch, Vietnamesisch oder Englisch.",
+      "contactCall": "Anrufen",
+      "contactWhatsapp": "WhatsApp",
+      "contactFacebook": "Facebook",
+      "contactEmail": "E-Mail"
     },
     "download": {
       "title": "SalonGo Kasa herunterladen",

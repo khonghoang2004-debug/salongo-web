@@ -2269,7 +2269,8 @@
       "fact1": "Data on your computer",
       "fact2": "Encrypted backup every day",
       "fact3": "1 licence = 1 computer",
-      "alt": "SalonGo checkout screen"
+      "alt": "SalonGo checkout screen",
+      "buyContact": "Contact to buy"
     },
     "features": {
       "title": "What Kasa does",
@@ -2359,7 +2360,13 @@
       "vs": "Variable symbol",
       "message": "Message",
       "bankNote": "Once the payment arrives, we e-mail your licence key.",
-      "fallback": "The payment page could not open. Please try later."
+      "fallback": "The payment page could not open. Please try later.",
+      "contactLead": "Call or message SalonGo to buy. Once the payment arrives, we send your KASA-… licence code and help you install.",
+      "hours": "We answer in Czech, Vietnamese or English.",
+      "contactCall": "Call",
+      "contactWhatsapp": "WhatsApp",
+      "contactFacebook": "Facebook",
+      "contactEmail": "E-mail"
     },
     "download": {
       "title": "Download SalonGo Kasa",

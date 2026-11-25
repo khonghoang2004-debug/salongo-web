@@ -17,7 +17,8 @@
     "fact1": "Data ve vašem počítači",
     "fact2": "Šifrovaná záloha každý den",
     "fact3": "1 licence = 1 počítač",
-    "alt": "Pokladna v SalonGo"
+    "alt": "Pokladna v SalonGo",
+    "buyContact": "Koupit přes kontakt"
   },
   "features": {
     "title": "Co Kasa umí",
@@ -107,7 +108,13 @@
     "vs": "Variabilní symbol",
     "message": "Zpráva pro příjemce",
     "bankNote": "Po připsání platby vám pošleme licenční klíč e-mailem.",
-    "fallback": "Platební stránku se nepodařilo otevřít. Zkuste to později."
+    "fallback": "Platební stránku se nepodařilo otevřít. Zkuste to později.",
+    "contactLead": "Zavolejte nebo napište SalonGo. Po přijetí platby vám pošleme licenční kód KASA-… a pomůžeme s instalací.",
+    "hours": "Odpovídáme česky nebo vietnamsky.",
+    "contactCall": "Zavolat",
+    "contactWhatsapp": "WhatsApp",
+    "contactFacebook": "Facebook",
+    "contactEmail": "E-mail"
   },
   "download": {
     "title": "Stáhnout SalonGo Kasa",

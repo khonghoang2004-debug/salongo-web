@@ -3,7 +3,7 @@ import { ArrowRight, Check, Download, PiggyBank, Printer, ReceiptText, Scissors,
 import { Link } from "@/i18n/navigation";
 import { DesktopShot } from "@/components/landing/Shots";
 import { Receipt } from "@/components/landing/Receipt";
-import { kasaPrice } from "@/lib/kasa";
+import { kasaBankReady, kasaCardReady, kasaPrice } from "@/lib/kasa";
 
 /** /kasa hero: EET 2.0 pill, name, one line, one-time price, Buy + Download, three short facts; POS screenshot. */
 export async function KasaHero() {
@@ -32,7 +32,7 @@ export async function KasaHero() {
           </p>
           <div data-cta className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link href="/kasa/thanh-toan" className="x-btn-primary !min-h-[52px] !px-7 text-base">
-              {t("buy")}
+              {kasaCardReady() || kasaBankReady() ? t("buy") : t("buyContact")}
             </Link>
             <Link href="/kasa/download" className="x-btn-light !min-h-[52px] !px-7 text-base">
               <Download className="size-4" aria-hidden />

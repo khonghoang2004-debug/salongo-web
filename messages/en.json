@@ -165,7 +165,7 @@
     "toggleMonth": "Monthly",
     "toggleYear": "Yearly",
     "popularMost": "Most popular",
-    "compareTitle": "All 3 salon plans have every feature",
+    "compareTitle": "All 3 salon plans have the same salon tools",
     "compareFeatureCol": "Feature",
     "compareRow1": "Appointment management",
     "compareRow2": "Online booking",
@@ -239,7 +239,7 @@
     "pickStaffHint": "Employed by a salon? You don't need a plan: the owner adds you as staff in the app.",
     "salonKicker": "Plans for salon owners",
     "salonTitle": "Basic, Pro, Premium",
-    "salonLead": "Every plan has every feature. Choose by staff per location and number of locations.",
+    "salonLead": "Choose by staff per location, number of locations and email marketing.",
     "deskKicker": "For chair renters with their own IČO",
     "vsTitle": "How is Chair different from the salon plans?",
     "vsSalonCol": "Salon",
@@ -270,7 +270,7 @@
     "solutionsTitle": "Solutions for nail and beauty salons",
     "solutionsDesc": "No double bookings, payroll mistakes or cash losses: how SalonGo helps Vietnamese-run nail and beauty salons in Europe run smoothly.",
     "pricingTitle": "Salon management app pricing",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Every plan has every feature. {days}-day trial, renew on the web.",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/month[[discount:, {discount}% off yearly]]. Plans differ in staff, locations and email marketing. {days}-day trial, renew on the web.",
     "aboutTitle": "About SalonGo: salon software made in Czechia",
     "aboutDesc": "SalonGo builds software for nail, hair, lash and beauty studios in Europe. Data stored in the EU, support in Czech and Vietnamese.",
     "faqTitle": "FAQ: SalonGo salon software, EET 2.0, pricing",
@@ -307,7 +307,7 @@
     "stat2Value": "6",
     "stat2Label": "languages in the app",
     "stat3Value": "3 plans",
-    "stat3Label": "every plan has every feature, from {from} CZK/month",
+    "stat3Label": "salon plans from {from} CZK/month",
     "stat4Value": "24 hours",
     "stat4Label": "to get a reply, in Vietnamese or Czech",
     "badge": "Salon software for Vietnamese owners in Europe",
@@ -833,7 +833,7 @@
     "type4Text": "One account for every location, with revenue of all locations on one page.",
     "priceEyebrow": "Pricing",
     "priceTitle": "{days} days free, then from {from} CZK a month",
-    "priceLead": "Every plan has every feature; plans differ only in staff and locations.[[discount: Pay yearly and save {discount}%.]]",
+    "priceLead": "Plans differ in staff, locations and email marketing.[[discount: Pay yearly and save {discount}%.]]",
     "priceCta": "See pricing",
     "price1": "No card required",
     "price2": "Setup help in Vietnamese",
@@ -925,7 +925,7 @@
     "ctaPricing": "See pricing",
     "shotAlt": "SalonGo salon management software Overview screen on a phone",
     "boxTitle": "{days}-day free trial, no card",
-    "boxText": "Every plan has every feature, from {from} CZK/month. Support in Vietnamese and Czech.",
+    "boxText": "Salon plans from {from} CZK/month. Support in Vietnamese and Czech.",
     "sections": [
       {
         "h": "What is salon management software?",
@@ -993,7 +993,7 @@
       },
       {
         "h": "Salon software pricing",
-        "p": "Every plan has every feature; plans differ only by staff per location and number of locations: Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
+        "p": "Plans differ by staff per location, number of locations and email marketing (none on Basic, 50 clients a day on Pro, unlimited on Premium): Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
         "link": {
           "href": "/bang-gia",
           "label": "See pricing"
@@ -1277,7 +1277,7 @@
     "q1": "What is SalonGo?",
     "a1": "SalonGo is salon management software for nail, hair, lash and beauty salons in Europe: appointments, online booking for clients, checkout, receipts, Czech EET 2.0, payroll, client emails and reports. It runs in the browser, on Windows and Mac, and on the phone.",
     "q2": "How much does SalonGo cost?",
-    "a2": "Salon plans start at {from} CZK a month (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), every plan with every feature.[[discount: Paying yearly saves {discount}%.]] New salons get a {days}-day free trial, no card needed.",
+    "a2": "Salon plans start at {from} CZK a month (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), differing in staff, locations and email marketing.[[discount: Paying yearly saves {discount}%.]] New salons get a {days}-day free trial, no card needed.",
     "q3": "Does SalonGo support EET 2.0?",
     "a3": "Yes. EET 2.0 is mandatory in Czechia from 1 January 2027. In SalonGo you upload your certificate from DIS+, enter its password and the sales unit ID; after that every payment is reported automatically. EET is included in every plan.",
     "q4": "Which languages can clients book in?",
@@ -1370,7 +1370,7 @@
       "title": "Pick the plan that fits how you work",
       "salonTag": "Salon with staff",
       "salonTitle": "You run a salon",
-      "salonDesc": "Calendar, online booking, checkout, EET, payroll, clients and several locations. Three plans by team size, every feature in each.",
+      "salonDesc": "Calendar, online booking, checkout, EET, payroll, clients and several locations. Three plans by team size and email marketing.",
       "salonPrice": "from {from} Kč/month",
       "salonCta": "See salon plans",
       "deskTag": "Own IČO in a salon",
@@ -1392,7 +1392,7 @@
     },
     "pricing": {
       "title": "Clear prices, paid monthly",
-      "lead": "Every plan has every feature, only the number of staff and locations differs. Change or renew your plan on the web any time and the app updates straight away.",
+      "lead": "Plans differ in staff, locations and email marketing. Change or renew your plan on the web any time and the app updates straight away.",
       "month": "Kč/month",
       "staff": "up to {n} staff per location",
       "staffAll": "unlimited staff",
@@ -1490,7 +1490,7 @@
       "promise1": "Data is stored in Frankfurt (Germany), inside the EU, under GDPR.",
       "promise2": "When a plan ends, your data stays.",
       "promise3": "Support in Czech and Vietnamese, replies within 24 hours.",
-      "promise4": "Every plan has every feature, and prices are on the website.",
+      "promise4": "Prices and what each plan includes are on the website.",
       "who": "Operator",
       "doTitle": "What SalonGo does for your salon",
       "do1T": "Appointments & online booking",
@@ -1632,7 +1632,7 @@
   "pricing2": {
     "hero": {
       "title": "SalonGo pricing: from {from} CZK a month, EET 2.0 included",
-      "lead": "Every plan has every feature. You choose by staff and locations.",
+      "lead": "You choose by staff, locations and how many clients get your marketing email each day.",
       "jump": "Jump to",
       "salon": "I own a salon",
       "salonPrice": "from {from} CZK/month",
@@ -1673,12 +1673,15 @@
         "EET 2.0",
         "Income & expenses",
         "Payroll",
-        "Clients and email marketing",
+        "Clients and loyalty points",
         "Reports and exports",
         "Unlimited clients and appointments"
       ],
       "note": "No hidden fees.[[discount: Paying yearly saves {discount}%.]] At checkout the app always uses the current price.",
-      "terms": "Terms of use"
+      "terms": "Terms of use",
+      "marketingBASIC": "No email marketing",
+      "marketingPRO": "Email marketing: 50 clients a day",
+      "marketingPREMIUM": "Unlimited email marketing"
     },
     "desk": {
       "title": "What does a chair renter with their own IČO pay?",
@@ -1877,7 +1880,7 @@
     },
     "closing": {
       "title": "Try every feature free for {days} days",
-      "lead": "No card needed. Every plan has every feature; they differ only by staff and locations.",
+      "lead": "No card needed. Plans differ in staff, locations and email marketing.",
       "cta": "Start free trial",
       "link": "See pricing"
     }
@@ -2006,7 +2009,7 @@
         "id": "gia",
         "h": "Salon software pricing",
         "body": [
-          "Every plan has every feature; plans differ only by staff per location and number of locations: Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
+          "Plans differ by staff per location, number of locations and email marketing (none on Basic, 50 clients a day on Pro, unlimited on Premium): Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
           "Chair renters with their own IČO use the Chair plan, {priceDesk} CZK/month. Plans are bought and renewed in the browser; the iPhone app does not sell plans."
         ],
         "link": {
@@ -2029,7 +2032,7 @@
       }
     ],
     "endTitle": "Try free for {days} days, no card needed",
-    "endText": "Every plan has every feature, from {from} CZK/month. Support in Vietnamese and Czech.",
+    "endText": "Salon plans from {from} CZK/month. Support in Vietnamese and Czech.",
     "ctaPricing": "See pricing",
     "faqTitle": "Questions about salon management software",
     "faq": [
@@ -2172,11 +2175,11 @@
       "items": [
         {
           "q": "Is SalonGo right for a small salon?",
-          "a": "Yes. Basic covers {staffBasic} staff and 1 location with every feature. When the team grows, switch plans any time."
+          "a": "Yes. Basic covers {staffBasic} staff and 1 location with every salon tool except email marketing. When the team grows, switch plans any time."
         },
         {
-          "q": "Does every plan have every feature?",
-          "a": "Yes. Basic, Pro and Premium have the same features and differ only by staff per location and number of locations."
+          "q": "How do the plans differ?",
+          "a": "Basic, Pro and Premium have the same salon tools and differ by staff per location, number of locations and email marketing: none on Basic, 50 clients a day on Pro, unlimited on Premium."
         },
         {
           "q": "Which languages can clients book in?",

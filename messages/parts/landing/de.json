@@ -81,7 +81,7 @@
     "title": "Der Tarif, der zu Ihrer Arbeitsweise passt",
     "salonTag": "Salon mit Team",
     "salonTitle": "Sie führen einen Salon",
-    "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße, jeder mit allen Funktionen.",
+    "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße und E-Mail-Marketing.",
     "salonPrice": "ab {from} Kč/Monat",
     "salonCta": "Salon-Tarife",
     "deskTag": "Eigene IČO im Salon",
@@ -103,7 +103,7 @@
   },
   "pricing": {
     "title": "Klare Preise, monatlich bezahlt",
-    "lead": "Jeder Tarif hat alle Funktionen, nur die Zahl der Mitarbeiter und Filialen ist anders. Tarif jederzeit im Web wechseln oder verlängern, die App aktualisiert sich sofort.",
+    "lead": "Die Tarife unterscheiden sich bei Mitarbeitern, Filialen und E-Mail-Marketing. Tarif jederzeit im Web wechseln oder verlängern, die App aktualisiert sich sofort.",
     "month": "Kč/Monat",
     "staff": "bis {n} Mitarbeiter pro Filiale",
     "staffAll": "unbegrenzt Mitarbeiter",

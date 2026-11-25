@@ -107,11 +107,11 @@
     "items": [
       {
         "q": "Passt SalonGo auch für einen kleinen Salon?",
-        "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Funktionen. Wächst das Team, wechseln Sie jederzeit den Tarif."
+        "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Salon-Werkzeugen außer E-Mail-Marketing. Wächst das Team, wechseln Sie jederzeit den Tarif."
       },
       {
-        "q": "Hat jeder Tarif alle Funktionen?",
-        "a": "Ja. Basic, Pro und Premium haben dieselben Funktionen und unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen."
+        "q": "Worin unterscheiden sich die Tarife?",
+        "a": "Basic, Pro und Premium haben dieselben Salon-Werkzeuge und unterscheiden sich nach Mitarbeitern pro Filiale, Anzahl der Filialen und E-Mail-Marketing: Basic ohne, Pro 50 Kunden pro Tag, Premium unbegrenzt."
       },
       {
         "q": "In welchen Sprachen buchen Kunden?",

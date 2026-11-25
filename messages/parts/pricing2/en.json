@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "SalonGo pricing: from {from} CZK a month, EET 2.0 included",
-    "lead": "Every plan has every feature. You choose by staff and locations.",
+    "lead": "You choose by staff, locations and how many clients get your marketing email each day.",
     "jump": "Jump to",
     "salon": "I own a salon",
     "salonPrice": "from {from} CZK/month",
@@ -42,12 +42,15 @@
       "EET 2.0",
       "Income & expenses",
       "Payroll",
-      "Clients and email marketing",
+      "Clients and loyalty points",
       "Reports and exports",
       "Unlimited clients and appointments"
     ],
     "note": "No hidden fees.[[discount: Paying yearly saves {discount}%.]] At checkout the app always uses the current price.",
-    "terms": "Terms of use"
+    "terms": "Terms of use",
+    "marketingBASIC": "No email marketing",
+    "marketingPRO": "Email marketing: 50 clients a day",
+    "marketingPREMIUM": "Unlimited email marketing"
   },
   "desk": {
     "title": "What does a chair renter with their own IČO pay?",

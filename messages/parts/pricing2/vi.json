@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Bảng giá SalonGo: từ {from} Kč/tháng, có EET 2.0",
-    "lead": "Gói nào cũng đủ tính năng. Bạn chọn theo số thợ và số chi nhánh.",
+    "lead": "Bạn chọn theo số thợ, số chi nhánh và số khách gửi email marketing mỗi ngày.",
     "jump": "Chọn nhanh",
     "salon": "Tôi là chủ salon",
     "salonPrice": "từ {from} Kč/tháng",
@@ -42,12 +42,15 @@
       "EET 2.0",
       "Thu & Chi",
       "Tính lương",
-      "Khách hàng, email marketing",
+      "Khách hàng, tích điểm",
       "Báo cáo, xuất file",
       "Không giới hạn khách và lịch hẹn"
     ],
     "note": "Không phí ẩn.[[discount: Trả theo năm giảm {discount}%.]] Khi thanh toán, app tính theo giá hiện hành.",
-    "terms": "Điều khoản sử dụng"
+    "terms": "Điều khoản sử dụng",
+    "marketingBASIC": "Không có email marketing",
+    "marketingPRO": "Email marketing: 50 khách/ngày",
+    "marketingPREMIUM": "Email marketing không giới hạn"
   },
   "desk": {
     "title": "Thợ thuê bàn có IČO riêng trả bao nhiêu?",

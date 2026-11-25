@@ -86,7 +86,7 @@
       "id": "gia",
       "h": "Salon software pricing",
       "body": [
-        "Every plan has every feature; plans differ only by staff per location and number of locations: Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
+        "Plans differ by staff per location, number of locations and email marketing (none on Basic, 50 clients a day on Pro, unlimited on Premium): Basic {priceBasic} CZK/month ({staffBasic} staff, 1 location), Pro {pricePro} CZK/month ({staffPro} staff per location, up to {branchesPro} locations) and Premium {pricePremium} CZK/month ({premiumLimits}).[[discount: Paying yearly saves {discount}%.]] New salons get a free {days}-day trial, no card needed.",
         "Chair renters with their own IČO use the Chair plan, {priceDesk} CZK/month. Plans are bought and renewed in the browser; the iPhone app does not sell plans."
       ],
       "link": { "href": "/bang-gia", "label": "See pricing" }
@@ -104,7 +104,7 @@
     }
   ],
   "endTitle": "Try free for {days} days, no card needed",
-  "endText": "Every plan has every feature, from {from} CZK/month. Support in Vietnamese and Czech.",
+  "endText": "Salon plans from {from} CZK/month. Support in Vietnamese and Czech.",
   "ctaPricing": "See pricing",
   "faqTitle": "Questions about salon management software",
   "faq": [

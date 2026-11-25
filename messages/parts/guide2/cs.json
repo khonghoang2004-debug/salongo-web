@@ -86,7 +86,7 @@
       "id": "gia",
       "h": "Kolik stojí rezervační systém pro salon",
       "body": [
-        "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
+        "Tarify se liší počtem personálu na pobočku, počtem poboček a e-mailovým marketingem (Basic bez něj, Pro 50 klientů denně, Premium bez omezení): Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
         "Nájemci křesla s vlastním IČO mají tarif Křeslo za {priceDesk} Kč měsíčně. Tarify se kupují a prodlužují v prohlížeči; aplikace pro iPhone tarify neprodává."
       ],
       "link": { "href": "/bang-gia", "label": "Ceník" }
@@ -104,7 +104,7 @@
     }
   ],
   "endTitle": "{days} dní zdarma, bez karty",
-  "endText": "Každý tarif má všechny funkce, od {from} Kč měsíčně. Podpora česky i vietnamsky.",
+  "endText": "Tarify pro salon od {from} Kč měsíčně. Podpora česky i vietnamsky.",
   "ctaPricing": "Ceník",
   "faqTitle": "Otázky o softwaru pro salon",
   "faq": [

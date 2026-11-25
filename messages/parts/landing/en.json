@@ -81,7 +81,7 @@
     "title": "Pick the plan that fits how you work",
     "salonTag": "Salon with staff",
     "salonTitle": "You run a salon",
-    "salonDesc": "Calendar, online booking, checkout, EET, payroll, clients and several locations. Three plans by team size, every feature in each.",
+    "salonDesc": "Calendar, online booking, checkout, EET, payroll, clients and several locations. Three plans by team size and email marketing.",
     "salonPrice": "from {from} Kč/month",
     "salonCta": "See salon plans",
     "deskTag": "Own IČO in a salon",
@@ -103,7 +103,7 @@
   },
   "pricing": {
     "title": "Clear prices, paid monthly",
-    "lead": "Every plan has every feature, only the number of staff and locations differs. Change or renew your plan on the web any time and the app updates straight away.",
+    "lead": "Plans differ in staff, locations and email marketing. Change or renew your plan on the web any time and the app updates straight away.",
     "month": "Kč/month",
     "staff": "up to {n} staff per location",
     "staffAll": "unlimited staff",

@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "SalonGo Preise: ab {from} CZK im Monat, EET 2.0 inklusive",
-    "lead": "Jeder Tarif hat alle Funktionen. Sie wählen nach Mitarbeitern und Filialen.",
+    "lead": "Sie wählen nach Mitarbeitern, Filialen und der Zahl der Kunden, die täglich Marketing-E-Mails erhalten.",
     "jump": "Schnellwahl",
     "salon": "Ich habe einen Salon",
     "salonPrice": "ab {from} CZK/Monat",
@@ -42,12 +42,15 @@
       "EET 2.0",
       "Einnahmen und Ausgaben",
       "Lohnabrechnung",
-      "Kunden und E-Mail-Marketing",
+      "Kunden und Treuepunkte",
       "Berichte und Exporte",
       "Unbegrenzt Kunden und Termine"
     ],
     "note": "Keine versteckten Gebühren.[[discount: Jährlich {discount} % günstiger.]] Beim Bezahlen nutzt die App immer den aktuellen Preis.",
-    "terms": "Nutzungsbedingungen"
+    "terms": "Nutzungsbedingungen",
+    "marketingBASIC": "Ohne E-Mail-Marketing",
+    "marketingPRO": "E-Mail-Marketing: 50 Kunden pro Tag",
+    "marketingPREMIUM": "E-Mail-Marketing unbegrenzt"
   },
   "desk": {
     "title": "Was zahlen Stuhlmieter mit eigener IČO?",

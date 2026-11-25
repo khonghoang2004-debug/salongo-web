@@ -107,11 +107,11 @@
     "items": [
       {
         "q": "Hodí se SalonGo i pro malý salon?",
-        "a": "Ano. Basic je pro {staffBasic} zaměstnance a 1 pobočku, se všemi funkcemi. Když tým vyroste, tarif kdykoli změníte."
+        "a": "Ano. Basic je pro {staffBasic} zaměstnance a 1 pobočku, se všemi nástroji pro salon kromě e-mailového marketingu. Když tým vyroste, tarif kdykoli změníte."
       },
       {
-        "q": "Má každý tarif všechny funkce?",
-        "a": "Ano. Basic, Pro a Premium mají stejné funkce, liší se jen počtem personálu na pobočku a počtem poboček."
+        "q": "Čím se tarify liší?",
+        "a": "Basic, Pro a Premium mají stejné nástroje pro salon a liší se počtem personálu na pobočku, počtem poboček a e-mailovým marketingem: Basic bez něj, Pro 50 klientů denně, Premium bez omezení."
       },
       {
         "q": "V jakém jazyce se klienti objednávají?",

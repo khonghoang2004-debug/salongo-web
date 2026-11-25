@@ -122,7 +122,7 @@
       "id": "gia",
       "h": "Giá phần mềm quản lý salon",
       "body": [
-        "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
+        "Các gói khác nhau ở số thợ mỗi chi nhánh, số chi nhánh và email marketing (Basic không có, Pro 50 khách/ngày, Premium không giới hạn): Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
         "Thợ thuê bàn dùng gói IČO riêng, {priceDesk} Kč/tháng. Mua và gia hạn gói trên trình duyệt; app trên iPhone không bán gói."
       ],
       "link": {
@@ -145,7 +145,7 @@
     }
   ],
   "endTitle": "Dùng thử {days} ngày, không cần thẻ",
-  "endText": "Gói nào cũng đủ tính năng, từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+  "endText": "Gói salon từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
   "ctaPricing": "Xem bảng giá",
   "faqTitle": "Câu hỏi về phần mềm quản lý salon",
   "faq": [

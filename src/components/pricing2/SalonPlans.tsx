@@ -22,6 +22,7 @@ export async function SalonPlans({ data }: { data: SitePlans }) {
       fit: t(`fit${p.code}`),
       staff: p.staff === null ? t("staffAll") : t("staff", { n: p.staff }),
       branches: p.branches === null ? t("branchesAll") : t("branches", { n: p.branches }),
+      marketing: t(`marketing${p.code}`),
       monthly: p.monthly,
       listMonthly: p.listMonthly,
       monthlyDiscountPct: p.monthlyDiscountPct,

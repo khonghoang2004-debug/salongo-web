@@ -107,11 +107,11 @@
     "items": [
       {
         "q": "Is SalonGo right for a small salon?",
-        "a": "Yes. Basic covers {staffBasic} staff and 1 location with every feature. When the team grows, switch plans any time."
+        "a": "Yes. Basic covers {staffBasic} staff and 1 location with every salon tool except email marketing. When the team grows, switch plans any time."
       },
       {
-        "q": "Does every plan have every feature?",
-        "a": "Yes. Basic, Pro and Premium have the same features and differ only by staff per location and number of locations."
+        "q": "How do the plans differ?",
+        "a": "Basic, Pro and Premium have the same salon tools and differ by staff per location, number of locations and email marketing: none on Basic, 50 clients a day on Pro, unlimited on Premium."
       },
       {
         "q": "Which languages can clients book in?",

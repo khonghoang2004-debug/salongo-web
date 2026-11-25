@@ -86,7 +86,7 @@
       "id": "gia",
       "h": "Was kostet die Salonsoftware?",
       "body": [
-        "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
+        "Die Tarife unterscheiden sich nach Mitarbeitern pro Filiale, Anzahl der Filialen und E-Mail-Marketing (Basic ohne, Pro 50 Kunden pro Tag, Premium unbegrenzt): Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
         "Stuhlmieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat. Tarife werden im Browser gekauft und verlängert; die iPhone-App verkauft keine Tarife."
       ],
       "link": { "href": "/bang-gia", "label": "Preise ansehen" }
@@ -104,7 +104,7 @@
     }
   ],
   "endTitle": "{days} Tage gratis testen, ohne Karte",
-  "endText": "Jeder Tarif hat alle Funktionen, ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
+  "endText": "Salon-Tarife ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
   "ctaPricing": "Preise ansehen",
   "faqTitle": "Fragen zur Salonsoftware",
   "faq": [

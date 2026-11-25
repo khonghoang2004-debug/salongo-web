@@ -80,7 +80,7 @@ const fb = (code: PlanCode, monthly: number, staff: number | null, branches: num
 });
 
 export const FALLBACK_PLANS: SitePlans = {
-  trialDays: 150,
+  trialDays: 60,
   plans: [fb("BASIC", 199, 3, 1, false), fb("PRO", 499, 8, 3, true), fb("PREMIUM", 799, null, null, false)],
   desk: FALLBACK_DESK,
   source: "fallback",

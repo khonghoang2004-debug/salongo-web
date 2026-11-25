@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "SalonGo pricing: from {from} CZK a month, EET 2.0 included",
-    "lead": "Every plan has every feature. You choose by staff and locations.",
+    "lead": "You choose by staff, locations and how many clients get your marketing email each day.",
     "jump": "Jump to",
     "salon": "I own a salon",
     "salonPrice": "from {from} CZK/month",
@@ -42,12 +42,15 @@
       "EET 2.0",
       "Income & expenses",
       "Payroll",
-      "Clients and email marketing",
+      "Clients and loyalty points",
       "Reports and exports",
       "Unlimited clients and appointments"
     ],
     "note": "No hidden fees.[[discount: Paying yearly saves {discount}%.]] At checkout the app always uses the current price.",
-    "terms": "Terms of use"
+    "terms": "Terms of use",
+    "marketingBASIC": "No email marketing",
+    "marketingPRO": "Email marketing: 50 clients a day",
+    "marketingPREMIUM": "Unlimited email marketing"
   },
   "desk": {
     "title": "What does a chair renter with their own IČO pay?",
@@ -101,7 +104,7 @@
     "q5": "Can I switch plans?",
     "a5": "Yes, on the Renew page. An upgrade starts right away, a downgrade starts with the next period.",
     "q6": "Is there a limit on clients or appointments?",
-    "a6": "No. Clients, appointments and invoices are unlimited. Plans only limit staff and locations.",
+    "a6": "No. Clients, appointments and invoices are unlimited. Plans limit staff, locations and how many clients get your marketing email each day (none on Basic, 50 on Pro, unlimited on Premium).",
     "q7": "Can one owner run several locations?",
     "a7": "Yes. One owner account runs every location. Each location has its own plan and end date.",
     "q8": "Does EET cost extra?",

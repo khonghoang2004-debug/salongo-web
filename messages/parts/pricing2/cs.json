@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Ceník SalonGo: od {from} Kč měsíčně, EET 2.0 v ceně",
-    "lead": "Každý tarif má všechny funkce. Vybíráte podle počtu zaměstnanců a poboček.",
+    "lead": "Vybíráte podle počtu zaměstnanců, poboček a klientů, kterým denně pošlete marketingový e-mail.",
     "jump": "Rychlá volba",
     "salon": "Mám salon",
     "salonPrice": "od {from} Kč/měsíc",
@@ -42,12 +42,15 @@
       "EET 2.0",
       "Příjmy a výdaje",
       "Mzdy",
-      "Klienti a e-mailový marketing",
+      "Klienti a věrnostní body",
       "Přehledy a exporty",
       "Neomezeně klientů a rezervací"
     ],
     "note": "Žádné skryté poplatky.[[discount: Při ročním placení sleva {discount} %.]] Při platbě aplikace vždy použije aktuální cenu.",
-    "terms": "Obchodní podmínky"
+    "terms": "Obchodní podmínky",
+    "marketingBASIC": "Bez e-mailového marketingu",
+    "marketingPRO": "E-mailový marketing: 50 klientů denně",
+    "marketingPREMIUM": "E-mailový marketing bez omezení"
   },
   "desk": {
     "title": "Kolik platí nájemce křesla s vlastním IČO?",
@@ -101,7 +104,7 @@
     "q5": "Můžu přejít na jiný tarif?",
     "a5": "Ano, na stránce Prodloužit tarif. Vyšší tarif platí hned, nižší od dalšího období.",
     "q6": "Je omezený počet klientů nebo rezervací?",
-    "a6": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje jen zaměstnance a pobočky.",
+    "a6": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje zaměstnance, pobočky a počet klientů, kterým denně pošlete marketingový e-mail (Basic žádný, Pro 50, Premium bez omezení).",
     "q7": "Může jeden majitel vést více poboček?",
     "a7": "Ano. Jeden účet majitele spravuje všechny pobočky. Každá pobočka má vlastní tarif a datum konce.",
     "q8": "Stojí EET něco navíc?",

@@ -10,6 +10,8 @@ export type PlanRow = {
   fit: string;
   staff: string;
   branches: string;
+  /** Email marketing per plan: Basic none, Pro 50 clients a day, Premium no limit (app: lib/marketing/plan-limit). */
+  marketing: string;
   monthly: number;
   listMonthly: number | null;
   monthlyDiscountPct: number | null;
@@ -91,6 +93,8 @@ export function PlanTable({ rows, labels, locale, signupHref }: { rows: PlanRow[
                 {r.staff}
                 <br />
                 {r.branches}
+                <br />
+                {r.marketing}
               </p>
 
               <div className="md:col-start-2 md:row-span-2 md:row-start-1 md:text-right lg:col-start-3 lg:row-span-1 lg:text-left" aria-live="polite">

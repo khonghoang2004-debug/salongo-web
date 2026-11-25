@@ -81,7 +81,7 @@
     "title": "Vyberte tarif podle toho, jak pracujete",
     "salonTag": "Salon s personálem",
     "salonTitle": "Vedete salon",
-    "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu, v každém všechny funkce.",
+    "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu a e-mailového marketingu.",
     "salonPrice": "od {from} Kč/měsíc",
     "salonCta": "Tarify pro salon",
     "deskTag": "Vlastní IČO v salonu",
@@ -103,7 +103,7 @@
   },
   "pricing": {
     "title": "Jasné ceny, platba měsíčně",
-    "lead": "Každý tarif má všechny funkce, liší se jen počtem personálu a poboček. Tarif změníte nebo prodloužíte na webu kdykoli a aplikace se hned aktualizuje.",
+    "lead": "Tarify se liší počtem personálu, poboček a e-mailovým marketingem. Tarif změníte nebo prodloužíte na webu kdykoli a aplikace se hned aktualizuje.",
     "month": "Kč/měsíc",
     "staff": "až {n} osob na pobočku",
     "staffAll": "neomezený personál",

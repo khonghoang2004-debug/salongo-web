@@ -165,7 +165,7 @@
     "toggleMonth": "Měsíčně",
     "toggleYear": "Ročně",
     "popularMost": "Nejoblíbenější",
-    "compareTitle": "Všechny 3 tarify pro salon mají všechny funkce",
+    "compareTitle": "Všechny 3 tarify mají stejné nástroje pro salon",
     "compareFeatureCol": "Funkce",
     "compareRow1": "Správa rezervací",
     "compareRow2": "Online rezervace",
@@ -191,7 +191,7 @@
     "faqQ1": "Je potřeba dlouhodobá smlouva?",
     "faqA1": "Ne. Platíte měsíčně nebo ročně. Tarif placený kartou můžete kdykoli přestat prodlužovat, platí do konce zaplaceného období.",
     "faqQ2": "Je limit zákazníků?",
-    "faqA2": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje jen zaměstnance a pobočky.",
+    "faqA2": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje zaměstnance, pobočky a počet klientů, kterým denně pošlete marketingový e-mail (Basic žádný, Pro 50, Premium bez omezení).",
     "faqQ3": "Funguje to na telefonu?",
     "faqA3": "Ano. Aplikaci otevřete v prohlížeči telefonu nebo použijete aplikaci pro Windows a Mac.",
     "faqQ5": "Může jeden majitel vést více poboček?",
@@ -209,7 +209,7 @@
     "allFeature3": "Neomezeně klientů a rezervací",
     "allFeature4": "Podpora vietnamsky a česky",
     "plansNote": "Ceny odpovídají obrazovce tarifů v aplikaci.[[discount: Při ročním placení sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty. Tarif Křeslo má 1 měsíc zdarma. Při platbě aplikace vždy použije aktuální cenu tarifu.",
-    "compareLead": "Tarify se liší jen počtem zaměstnanců a poboček. Všechny ostatní funkce jsou stejné.",
+    "compareLead": "Tarify se liší počtem zaměstnanců, poboček a e-mailovým marketingem (Basic bez něj, Pro 50 klientů denně, Premium bez omezení). Ostatní funkce jsou stejné.",
     "compareRowStaff": "Zaměstnanci na pobočku",
     "staffUnlimited": "Neomezeně zaměstnanců",
     "branchLimit": "{n, plural, =1 {1 pobočka} other {Až # pobočky}}",
@@ -239,7 +239,7 @@
     "pickStaffHint": "Jste zaměstnanec salonu? Žádný tarif nepotřebujete: majitel vás přidá jako zaměstnance v aplikaci.",
     "salonKicker": "Tarify pro majitele salonu",
     "salonTitle": "Basic, Pro, Premium",
-    "salonLead": "Každý tarif má všechny funkce. Vybíráte podle počtu zaměstnanců na pobočku a počtu poboček.",
+    "salonLead": "Vybíráte podle počtu zaměstnanců na pobočku, počtu poboček a e-mailového marketingu.",
     "deskKicker": "Pro nájemce místa s vlastním IČO",
     "vsTitle": "Čím se Křeslo liší od tarifů pro salon?",
     "vsSalonCol": "Salon",
@@ -270,7 +270,7 @@
     "solutionsTitle": "Řešení pro nehtová studia a salony",
     "solutionsDesc": "Žádné dvojité rezervace, chyby ve mzdách ani ztráty na pokladně: jak SalonGo pomáhá nehtovým studiím a salonům v Česku a v Evropě.",
     "pricingTitle": "Ceník rezervačního systému a aplikace pro salony",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/měsíc[[discount:, ročně o {discount} % levněji]]. Každý tarif má všechny funkce. {days} dní zdarma, prodloužení na webu.",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/měsíc[[discount:, ročně o {discount} % levněji]]. Liší se počtem personálu, poboček a e-mailovým marketingem. {days} dní zdarma, prodloužení na webu.",
     "aboutTitle": "O SalonGo: software pro salony z Česka",
     "aboutDesc": "SalonGo vyvíjí software pro nehtová studia, kadeřnictví a kosmetiku v Evropě. Data v EU, podpora česky i vietnamsky.",
     "faqTitle": "Časté dotazy: rezervační systém, EET 2.0, ceny",
@@ -307,7 +307,7 @@
     "stat2Value": "6",
     "stat2Label": "jazyků v aplikaci",
     "stat3Value": "3 tarify",
-    "stat3Label": "každý tarif má všechny funkce, od {from} Kč/měsíc",
+    "stat3Label": "tarify pro salon od {from} Kč/měsíc",
     "stat4Value": "24 hodin",
     "stat4Label": "do odpovědi, vietnamsky nebo česky",
     "badge": "Software pro vietnamské salony v Evropě",
@@ -833,7 +833,7 @@
     "type4Text": "Jeden účet pro všechny pobočky, tržby všech poboček na jedné stránce.",
     "priceEyebrow": "Ceník",
     "priceTitle": "{days} dní zdarma, pak od {from} Kč měsíčně",
-    "priceLead": "Každý tarif má všechny funkce, liší se jen počtem pracovníků a poboček.[[discount: Při roční platbě ušetříte {discount} %.]]",
+    "priceLead": "Tarify se liší počtem pracovníků, poboček a e-mailovým marketingem.[[discount: Při roční platbě ušetříte {discount} %.]]",
     "priceCta": "Zobrazit ceník",
     "price1": "Bez platební karty",
     "price2": "Pomoc s nastavením vietnamsky",
@@ -925,7 +925,7 @@
     "ctaPricing": "Zobrazit ceník",
     "shotAlt": "Přehled v softwaru pro salony SalonGo na telefonu",
     "boxTitle": "{days} dní zdarma, bez karty",
-    "boxText": "Každý tarif má všechny funkce, od {from} Kč měsíčně. Podpora česky a vietnamsky.",
+    "boxText": "Tarify pro salon od {from} Kč měsíčně. Podpora česky a vietnamsky.",
     "sections": [
       {
         "h": "Co je software pro správu salonu?",
@@ -993,7 +993,7 @@
       },
       {
         "h": "Cena rezervačního systému",
-        "p": "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
+        "p": "Tarify se liší počtem personálu na pobočku, počtem poboček a e-mailovým marketingem (Basic bez něj, Pro 50 klientů denně, Premium bez omezení): Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
         "link": {
           "href": "/bang-gia",
           "label": "Ceník"
@@ -1277,7 +1277,7 @@
     "q1": "Co je SalonGo?",
     "a1": "SalonGo je aplikace pro řízení nehtových, kadeřnických, lash a beauty salonů: rezervace, online objednávky pro klienty, pokladna, účtenky, EET 2.0, mzdy, e-maily klientům a přehledy. Funguje v prohlížeči, na počítači s Windows i Mac a v telefonu.",
     "q2": "Kolik SalonGo stojí?",
-    "a2": "Tarify pro salon od {from} CZK měsíčně (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), každý se všemi funkcemi.[[discount: Při ročním placení sleva {discount} %.]] Nové salony mají {days} dní zdarma, bez karty.",
+    "a2": "Tarify pro salon od {from} CZK měsíčně (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), liší se počtem personálu, poboček a e-mailovým marketingem.[[discount: Při ročním placení sleva {discount} %.]] Nové salony mají {days} dní zdarma, bez karty.",
     "q3": "Podporuje SalonGo EET 2.0?",
     "a3": "Ano. EET 2.0 je v Česku povinná od 1. 1. 2027. V SalonGo nahrajete certifikát z DIS+, zadáte heslo a označení evidenční jednotky; každou platbu pak aplikace odešle sama. EET je v každém tarifu bez příplatku.",
     "q4": "V jakém jazyce se klienti objednávají?",
@@ -1370,7 +1370,7 @@
       "title": "Vyberte tarif podle toho, jak pracujete",
       "salonTag": "Salon s personálem",
       "salonTitle": "Vedete salon",
-      "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu, v každém všechny funkce.",
+      "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu a e-mailového marketingu.",
       "salonPrice": "od {from} Kč/měsíc",
       "salonCta": "Tarify pro salon",
       "deskTag": "Vlastní IČO v salonu",
@@ -1392,7 +1392,7 @@
     },
     "pricing": {
       "title": "Jasné ceny, platba měsíčně",
-      "lead": "Každý tarif má všechny funkce, liší se jen počtem personálu a poboček. Tarif změníte nebo prodloužíte na webu kdykoli a aplikace se hned aktualizuje.",
+      "lead": "Tarify se liší počtem personálu, poboček a e-mailovým marketingem. Tarif změníte nebo prodloužíte na webu kdykoli a aplikace se hned aktualizuje.",
       "month": "Kč/měsíc",
       "staff": "až {n} osob na pobočku",
       "staffAll": "neomezený personál",
@@ -1491,7 +1491,7 @@
       "promise1": "Data jsou uložena ve Frankfurtu (Německo), v EU, podle GDPR.",
       "promise2": "Když tarif skončí, vaše data zůstanou.",
       "promise3": "Podpora česky i vietnamsky, odpověď do 24 hodin.",
-      "promise4": "Každý tarif má všechny funkce a cena je jasně na webu.",
+      "promise4": "Ceny a obsah každého tarifu jsou jasně na webu.",
       "who": "Provozovatel",
       "doTitle": "Co SalonGo udělá pro váš salon",
       "do1T": "Kalendář a online rezervace",
@@ -1633,7 +1633,7 @@
   "pricing2": {
     "hero": {
       "title": "Ceník SalonGo: od {from} Kč měsíčně, EET 2.0 v ceně",
-      "lead": "Každý tarif má všechny funkce. Vybíráte podle počtu zaměstnanců a poboček.",
+      "lead": "Vybíráte podle počtu zaměstnanců, poboček a klientů, kterým denně pošlete marketingový e-mail.",
       "jump": "Rychlá volba",
       "salon": "Mám salon",
       "salonPrice": "od {from} Kč/měsíc",
@@ -1674,12 +1674,15 @@
         "EET 2.0",
         "Příjmy a výdaje",
         "Mzdy",
-        "Klienti a e-mailový marketing",
+        "Klienti a věrnostní body",
         "Přehledy a exporty",
         "Neomezeně klientů a rezervací"
       ],
       "note": "Žádné skryté poplatky.[[discount: Při ročním placení sleva {discount} %.]] Při platbě aplikace vždy použije aktuální cenu.",
-      "terms": "Obchodní podmínky"
+      "terms": "Obchodní podmínky",
+      "marketingBASIC": "Bez e-mailového marketingu",
+      "marketingPRO": "E-mailový marketing: 50 klientů denně",
+      "marketingPREMIUM": "E-mailový marketing bez omezení"
     },
     "desk": {
       "title": "Kolik platí nájemce křesla s vlastním IČO?",
@@ -1733,7 +1736,7 @@
       "q5": "Můžu přejít na jiný tarif?",
       "a5": "Ano, na stránce Prodloužit tarif. Vyšší tarif platí hned, nižší od dalšího období.",
       "q6": "Je omezený počet klientů nebo rezervací?",
-      "a6": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje jen zaměstnance a pobočky.",
+      "a6": "Ne. Klienti, rezervace i účtenky jsou neomezené. Tarif omezuje zaměstnance, pobočky a počet klientů, kterým denně pošlete marketingový e-mail (Basic žádný, Pro 50, Premium bez omezení).",
       "q7": "Může jeden majitel vést více poboček?",
       "a7": "Ano. Jeden účet majitele spravuje všechny pobočky. Každá pobočka má vlastní tarif a datum konce.",
       "q8": "Stojí EET něco navíc?",
@@ -1878,7 +1881,7 @@
     },
     "closing": {
       "title": "{days} dní zdarma se všemi funkcemi",
-      "lead": "Bez platební karty. Každý tarif má všechny funkce, liší se jen počtem personálu a poboček.",
+      "lead": "Bez platební karty. Tarify se liší počtem personálu, poboček a e-mailovým marketingem.",
       "cta": "Vyzkoušet zdarma",
       "link": "Ceník"
     }
@@ -2007,7 +2010,7 @@
         "id": "gia",
         "h": "Kolik stojí rezervační systém pro salon",
         "body": [
-          "Každý tarif má všechny funkce, liší se jen počtem personálu na pobočku a počtem poboček: Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
+          "Tarify se liší počtem personálu na pobočku, počtem poboček a e-mailovým marketingem (Basic bez něj, Pro 50 klientů denně, Premium bez omezení): Basic {priceBasic} Kč/měsíc ({staffBasic} zaměstnanci, 1 pobočka), Pro {pricePro} Kč/měsíc ({staffPro} na pobočku, až {branchesPro} pobočky) a Premium {pricePremium} Kč/měsíc ({premiumLimits}).[[discount: Při roční platbě sleva {discount} %.]] Nový salon má {days} dní zdarma, bez karty.",
           "Nájemci křesla s vlastním IČO mají tarif Křeslo za {priceDesk} Kč měsíčně. Tarify se kupují a prodlužují v prohlížeči; aplikace pro iPhone tarify neprodává."
         ],
         "link": {
@@ -2030,7 +2033,7 @@
       }
     ],
     "endTitle": "{days} dní zdarma, bez karty",
-    "endText": "Každý tarif má všechny funkce, od {from} Kč měsíčně. Podpora česky i vietnamsky.",
+    "endText": "Tarify pro salon od {from} Kč měsíčně. Podpora česky i vietnamsky.",
     "ctaPricing": "Ceník",
     "faqTitle": "Otázky o softwaru pro salon",
     "faq": [
@@ -2173,11 +2176,11 @@
       "items": [
         {
           "q": "Hodí se SalonGo i pro malý salon?",
-          "a": "Ano. Basic je pro {staffBasic} zaměstnance a 1 pobočku, se všemi funkcemi. Když tým vyroste, tarif kdykoli změníte."
+          "a": "Ano. Basic je pro {staffBasic} zaměstnance a 1 pobočku, se všemi nástroji pro salon kromě e-mailového marketingu. Když tým vyroste, tarif kdykoli změníte."
         },
         {
-          "q": "Má každý tarif všechny funkce?",
-          "a": "Ano. Basic, Pro a Premium mají stejné funkce, liší se jen počtem personálu na pobočku a počtem poboček."
+          "q": "Čím se tarify liší?",
+          "a": "Basic, Pro a Premium mají stejné nástroje pro salon a liší se počtem personálu na pobočku, počtem poboček a e-mailovým marketingem: Basic bez něj, Pro 50 klientů denně, Premium bez omezení."
         },
         {
           "q": "V jakém jazyce se klienti objednávají?",

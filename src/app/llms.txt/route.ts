@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 const HEAD = `# SalonGo
 
-> SalonGo is salon management software for nail, hair, lash and beauty salons in Europe, built for Vietnamese-run salons (app in Vietnamese, Czech, Slovak, English, German and French). It runs in the browser, as a desktop app for Windows and macOS (Mac build signed), and in the phone browser. An iPhone and iPad app for signing in to existing accounts is on the App Store: https://apps.apple.com/app/salongo/id6831757876 Client booking page languages: Czech, Slovak, English, German, French. Every plan has every feature; plans differ only by staff per location and number of locations.
+> SalonGo is salon management software for nail, hair, lash and beauty salons in Europe, built for Vietnamese-run salons (app in Vietnamese, Czech, Slovak, English, German and French). It runs in the browser, as a desktop app for Windows and macOS (Mac build signed), and in the phone browser. An iPhone and iPad app for signing in to existing accounts is on the App Store: https://apps.apple.com/app/salongo/id6831757876 Client booking page languages: Czech, Slovak, English, German, French. Plans differ by staff per location, number of locations and email marketing (none on Basic, 50 clients a day on Pro, unlimited on Premium).
 
 Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://app.salongo.eu. Support in Vietnamese and Czech: salongosupport@gmail.com, +420 728 568 807. Operator: Nguyen Đuc Hoang Khong (sole trader), IČO 30241464, Svornosti 189, 252 42 Jesenice, Czech Republic.
 
@@ -19,7 +19,7 @@ Website: https://www.salongo.eu (languages: /vi, /cs, /de, /en). App: https://ap
 - Checkout (POS): cash, card, bank transfer with a payment QR code (QR Platba / EPC), tips recorded on the invoice; receipts for 80 mm printers; invoices exported to PDF.
 - Czech EET 2.0 (mandatory from 1 January 2027): set up in 2 steps (upload the DIS+ certificate, enter its password and the sales unit ID); every payment is then reported automatically. Included in every plan at no extra cost.
 - Clients: profiles, visit history, VIP / new / lapsed filters, VIP rules, membership/points program, birthdays.
-- Email marketing: 10 occasion templates (sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday), sent only to clients who agreed, with one-click unsubscribe; birthday reminders for the owner 2 days ahead, to send a birthday offer.
+- Email marketing: 10 occasion templates (sale, new service, Christmas, New Year, Valentine's, Women's Day, Easter, Mother's Day, summer, Black Friday), sent only to clients who agreed, with one-click unsubscribe (Pro plan: up to 50 clients a day, Premium: unlimited, not in Basic); birthday reminders for the owner 2 days ahead, to send a birthday offer.
 - Reports: overview, revenue by staff/service/payment method, invoices.
 - Payroll: each staff member is paid a percentage of their own revenue (optionally per service) or a fixed monthly salary; tips go to the staff member the client tipped or are split equally, as the owner chooses.
 - Staff accounts on the phone: staff see only their own schedule for today and the coming days (view only); their own revenue is on a separate page only if the owner allows it. Push notifications in each user's app language.
@@ -62,7 +62,7 @@ const OTHER = `- [Facebook page](https://www.facebook.com/people/SalonGo/6158376
 const answers = (low: number, trialDays: number) => `## Quick answers
 - What is SalonGo? Salon management software (booking, calendar, checkout, Czech EET 2.0, payroll, reports) for nail, hair, lash and beauty salons in Europe, made for Vietnamese-run salons in Czechia.
 - Who makes it? SalonGo, operated by Nguyen Đuc Hoang Khong (sole trader, IČO 30241464), Svornosti 189, 252 42 Jesenice, Czech Republic.
-- How much does it cost? From ${low} CZK per month; ${trialDays}-day free trial, no card needed. All features are in every plan.
+- How much does it cost? From ${low} CZK per month; ${trialDays}-day free trial, no card needed. Plans differ in staff, locations and email marketing.
 - Does it support Czech EET 2.0 (mandatory from 1 January 2027)? Yes, included in every plan at no extra cost; set up in 2 steps with the DIS+ certificate. No extra cash register hardware is needed.
 - Is the app in Vietnamese? Yes. The salon app is in Vietnamese, Czech, Slovak, English, German and French; the client booking page is in Czech, Slovak, English, German and French. Support by phone/email in Vietnamese and Czech.
 - Does it work on a phone? Yes, in the phone browser; desktop apps for Windows and macOS; an iPhone and iPad sign-in app is on the App Store (https://apps.apple.com/app/salongo/id6831757876).

@@ -107,11 +107,11 @@
     "items": [
       {
         "q": "Tiệm nhỏ có dùng được SalonGo không?",
-        "a": "Có. Gói Basic cho {staffBasic} thợ và 1 chi nhánh, đủ mọi tính năng. Tiệm đông thợ hơn thì đổi gói bất cứ lúc nào."
+        "a": "Có. Gói Basic cho {staffBasic} thợ và 1 chi nhánh, đủ công cụ quản lý salon (trừ email marketing). Tiệm đông thợ hơn thì đổi gói bất cứ lúc nào."
       },
       {
-        "q": "Gói nào cũng có đủ tính năng không?",
-        "a": "Có. Basic, Pro và Premium có cùng tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh."
+        "q": "Các gói khác nhau ở điểm nào?",
+        "a": "Basic, Pro và Premium có cùng công cụ quản lý salon, khác ở số thợ mỗi chi nhánh, số chi nhánh và email marketing: Basic không có, Pro gửi 50 khách/ngày, Premium không giới hạn."
       },
       {
         "q": "Khách đặt lịch bằng tiếng gì?",

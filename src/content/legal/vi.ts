@@ -61,7 +61,7 @@ export const vi: LegalPack = {
         {
           heading: "5. Thời gian dùng thử",
           body: [
-            "Mỗi salon mới và mỗi chi nhánh mới được dùng thử miễn phí với độ dài hiển thị khi đăng ký (hiện là 150 ngày), đủ tính năng, không cần thẻ.",
+            "Mỗi salon mới và mỗi chi nhánh mới được dùng thử miễn phí với độ dài hiển thị khi đăng ký (hiện là 60 ngày), đủ tính năng, không cần thẻ.",
             "Hết thời gian dùng thử, muốn dùng tiếp phải trả phí gói. Nếu không trả, SalonGo có thể giới hạn tính năng; dữ liệu được giữ theo Điều 14.",
             "SalonGo có thể thay đổi thời gian và điều kiện dùng thử cho đăng ký mới. Việc này không rút ngắn thời gian dùng thử đang chạy.",
           ],

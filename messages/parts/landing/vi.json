@@ -81,7 +81,7 @@
     "title": "Chọn đúng gói cho cách bạn làm việc",
     "salonTag": "Tiệm có thợ",
     "salonTitle": "Bạn là chủ tiệm",
-    "salonDesc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ, khách hàng và nhiều chi nhánh. Ba gói theo số thợ, gói nào cũng đủ tính năng.",
+    "salonDesc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ, khách hàng và nhiều chi nhánh. Ba gói theo số thợ và nhu cầu email marketing.",
     "salonPrice": "từ {from} Kč/tháng",
     "salonCta": "Xem gói salon",
     "deskTag": "IČO riêng trong tiệm hoặc salon",
@@ -103,7 +103,7 @@
   },
   "pricing": {
     "title": "Giá rõ ràng, trả theo tháng",
-    "lead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh. Đổi gói hoặc gia hạn trên web bất cứ lúc nào, app cập nhật ngay.",
+    "lead": "Các gói khác nhau ở số thợ, chi nhánh và email marketing. Đổi gói hoặc gia hạn trên web bất cứ lúc nào, app cập nhật ngay.",
     "month": "Kč/tháng",
     "staff": "đến {n} thợ mỗi chi nhánh",
     "staffAll": "không giới hạn thợ",

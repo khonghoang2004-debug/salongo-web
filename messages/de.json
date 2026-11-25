@@ -165,7 +165,7 @@
     "toggleMonth": "Monatlich",
     "toggleYear": "Jährlich",
     "popularMost": "Am beliebtesten",
-    "compareTitle": "Alle 3 Salon-Tarife haben alle Funktionen",
+    "compareTitle": "Alle 3 Salon-Tarife haben dieselben Salon-Werkzeuge",
     "compareFeatureCol": "Funktion",
     "compareRow1": "Terminverwaltung",
     "compareRow2": "Online-Buchung",
@@ -191,7 +191,7 @@
     "faqQ1": "Langfristiger Vertrag nötig?",
     "faqA1": "Nein. Zahlen Sie monatlich oder jährlich. Ein Kartentarif lässt sich jederzeit nicht mehr verlängern und läuft bis zum Ende des bezahlten Zeitraums.",
     "faqQ2": "Kundenlimit?",
-    "faqA2": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt nur Mitarbeiter und Filialen.",
+    "faqA2": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt Mitarbeiter, Filialen und wie viele Kunden täglich Ihre Marketing-E-Mail erhalten (Basic keine, Pro 50, Premium unbegrenzt).",
     "faqQ3": "Auf dem Handy nutzbar?",
     "faqA3": "Ja. Öffnen Sie die App im Browser des Handys oder nutzen Sie die Desktop-App für Windows und Mac.",
     "faqQ5": "Kann ein Inhaber mehrere Filialen führen?",
@@ -209,7 +209,7 @@
     "allFeature3": "Unbegrenzt Kunden und Termine",
     "allFeature4": "Support auf Vietnamesisch und Tschechisch",
     "plansNote": "Preise wie auf der Tarifseite in der App.[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage ohne Karte. Tarif Stuhl: 1 Monat kostenlos testen. Beim Bezahlen nutzt die App immer den aktuellen Tarifpreis.",
-    "compareLead": "Die Tarife unterscheiden sich nur in Mitarbeitern und Filialen. Alle anderen Funktionen sind gleich.",
+    "compareLead": "Die Tarife unterscheiden sich bei Mitarbeitern, Filialen und E-Mail-Marketing (Basic ohne, Pro 50 Kunden pro Tag, Premium unbegrenzt). Alle anderen Funktionen sind gleich.",
     "compareRowStaff": "Mitarbeiter pro Filiale",
     "staffUnlimited": "Unbegrenzt Mitarbeiter",
     "branchLimit": "{n, plural, =1 {1 Filiale} other {Bis zu # Filialen}}",
@@ -239,7 +239,7 @@
     "pickStaffHint": "Im Salon angestellt? Sie brauchen keinen Tarif: der Inhaber fügt Sie in der App als Mitarbeiter hinzu.",
     "salonKicker": "Tarife für Salonbesitzer",
     "salonTitle": "Basic, Pro, Premium",
-    "salonLead": "Jeder Tarif hat alle Funktionen. Sie wählen nach Mitarbeitern pro Standort und Anzahl der Standorte.",
+    "salonLead": "Sie wählen nach Mitarbeitern pro Standort, Anzahl der Standorte und E-Mail-Marketing.",
     "deskKicker": "Für Platzmieter mit eigener IČO",
     "vsTitle": "Wie unterscheidet sich Stuhl von den Salon-Tarifen?",
     "vsSalonCol": "Salon",
@@ -270,7 +270,7 @@
     "solutionsTitle": "Lösungen für Nagelstudios und Salons",
     "solutionsDesc": "Keine Doppelbuchungen, falschen Löhne oder Kassenverluste: wie SalonGo Nagelstudios und Salons in Europa den Alltag erleichtert.",
     "pricingTitle": "Preise der Salon-App und Salonsoftware",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Jeder Tarif mit allen Funktionen. {days} Tage testen, im Web verlängern.",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK/Monat[[discount:, jährlich {discount} % günstiger]]. Unterschiede bei Mitarbeitern, Filialen und E-Mail-Marketing. {days} Tage testen, im Web verlängern.",
     "aboutTitle": "Über SalonGo: Salonsoftware aus Tschechien",
     "aboutDesc": "SalonGo entwickelt Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa. Daten in der EU, Support auf Tschechisch und Vietnamesisch.",
     "faqTitle": "FAQ: Salonsoftware, EET 2.0, Preise",
@@ -307,7 +307,7 @@
     "stat2Value": "6",
     "stat2Label": "Sprachen in der App",
     "stat3Value": "3 Tarife",
-    "stat3Label": "jeder Tarif mit allen Funktionen, ab {from} CZK/Monat",
+    "stat3Label": "Salon-Tarife ab {from} CZK/Monat",
     "stat4Value": "24 Stunden",
     "stat4Label": "bis zur Antwort, auf Vietnamesisch oder Tschechisch",
     "badge": "Salon-Software für vietnamesische Inhaber",
@@ -833,7 +833,7 @@
     "type4Text": "Ein Konto für alle Filialen, Umsatz aller Filialen auf einer Seite.",
     "priceEyebrow": "Preise",
     "priceTitle": "{days} Tage kostenlos, danach ab {from} CZK im Monat",
-    "priceLead": "Jeder Tarif enthält alle Funktionen, sie unterscheiden sich nur bei Mitarbeitern und Filialen.[[discount: Bei jährlicher Zahlung sparen Sie {discount} %.]]",
+    "priceLead": "Die Tarife unterscheiden sich bei Mitarbeitern, Filialen und E-Mail-Marketing.[[discount: Bei jährlicher Zahlung sparen Sie {discount} %.]]",
     "priceCta": "Preise ansehen",
     "price1": "Keine Kreditkarte",
     "price2": "Hilfe bei der Einrichtung auf Vietnamesisch",
@@ -925,7 +925,7 @@
     "ctaPricing": "Preise ansehen",
     "shotAlt": "Übersicht der Salonsoftware SalonGo am Handy",
     "boxTitle": "{days} Tage gratis, ohne Karte",
-    "boxText": "Jeder Tarif mit allen Funktionen, ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
+    "boxText": "Salon-Tarife ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
     "sections": [
       {
         "h": "Was ist eine Salonsoftware?",
@@ -993,7 +993,7 @@
       },
       {
         "h": "Was kostet die Salonsoftware?",
-        "p": "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
+        "p": "Die Tarife unterscheiden sich nach Mitarbeitern pro Filiale, Anzahl der Filialen und E-Mail-Marketing (Basic ohne, Pro 50 Kunden pro Tag, Premium unbegrenzt): Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
         "link": {
           "href": "/bang-gia",
           "label": "Preise"
@@ -1277,7 +1277,7 @@
     "q1": "Was ist SalonGo?",
     "a1": "SalonGo ist eine Software für Nagel-, Friseur-, Lash- und Beauty-Salons: Termine, Online-Buchung für Kunden, Kasse, Belege, tschechische EET 2.0, Lohnabrechnung, E-Mails an Kunden und Berichte. Sie läuft im Browser, auf Windows und Mac und auf dem Handy.",
     "q2": "Was kostet SalonGo?",
-    "a2": "Salontarife ab {from} CZK im Monat (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), jeder mit allen Funktionen.[[discount: Bei jährlicher Zahlung {discount} % günstiger.]] Neue Salons testen {days} Tage kostenlos, ohne Karte.",
+    "a2": "Salontarife ab {from} CZK im Monat (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), mit Unterschieden bei Mitarbeitern, Filialen und E-Mail-Marketing.[[discount: Bei jährlicher Zahlung {discount} % günstiger.]] Neue Salons testen {days} Tage kostenlos, ohne Karte.",
     "q3": "Unterstützt SalonGo die EET 2.0?",
     "a3": "Ja. Die EET 2.0 ist in Tschechien ab 1. Januar 2027 Pflicht. In SalonGo laden Sie Ihr Zertifikat aus DIS+ hoch und geben Passwort und Kennung der Verkaufsstelle ein; danach meldet die App jede Zahlung automatisch. EET ist in jedem Tarif enthalten.",
     "q4": "In welchen Sprachen buchen Kunden?",
@@ -1370,7 +1370,7 @@
       "title": "Der Tarif, der zu Ihrer Arbeitsweise passt",
       "salonTag": "Salon mit Team",
       "salonTitle": "Sie führen einen Salon",
-      "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße, jeder mit allen Funktionen.",
+      "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße und E-Mail-Marketing.",
       "salonPrice": "ab {from} Kč/Monat",
       "salonCta": "Salon-Tarife",
       "deskTag": "Eigene IČO im Salon",
@@ -1392,7 +1392,7 @@
     },
     "pricing": {
       "title": "Klare Preise, monatlich bezahlt",
-      "lead": "Jeder Tarif hat alle Funktionen, nur die Zahl der Mitarbeiter und Filialen ist anders. Tarif jederzeit im Web wechseln oder verlängern, die App aktualisiert sich sofort.",
+      "lead": "Die Tarife unterscheiden sich bei Mitarbeitern, Filialen und E-Mail-Marketing. Tarif jederzeit im Web wechseln oder verlängern, die App aktualisiert sich sofort.",
       "month": "Kč/Monat",
       "staff": "bis {n} Mitarbeiter pro Filiale",
       "staffAll": "unbegrenzt Mitarbeiter",
@@ -1491,7 +1491,7 @@
       "promise1": "Die Daten liegen in Frankfurt (Deutschland), in der EU, nach DSGVO.",
       "promise2": "Endet der Tarif, bleiben Ihre Daten erhalten.",
       "promise3": "Support auf Tschechisch und Vietnamesisch, Antwort innerhalb von 24 Stunden.",
-      "promise4": "Jeder Tarif hat alle Funktionen, die Preise stehen auf der Website.",
+      "promise4": "Preise und Leistungen jedes Tarifs stehen auf der Website.",
       "who": "Betreiber",
       "doTitle": "Was SalonGo für Ihren Salon erledigt",
       "do1T": "Termine & Online-Buchung",
@@ -1633,7 +1633,7 @@
   "pricing2": {
     "hero": {
       "title": "SalonGo Preise: ab {from} CZK im Monat, EET 2.0 inklusive",
-      "lead": "Jeder Tarif hat alle Funktionen. Sie wählen nach Mitarbeitern und Filialen.",
+      "lead": "Sie wählen nach Mitarbeitern, Filialen und der Zahl der Kunden, die täglich Marketing-E-Mails erhalten.",
       "jump": "Schnellwahl",
       "salon": "Ich habe einen Salon",
       "salonPrice": "ab {from} CZK/Monat",
@@ -1674,12 +1674,15 @@
         "EET 2.0",
         "Einnahmen und Ausgaben",
         "Lohnabrechnung",
-        "Kunden und E-Mail-Marketing",
+        "Kunden und Treuepunkte",
         "Berichte und Exporte",
         "Unbegrenzt Kunden und Termine"
       ],
       "note": "Keine versteckten Gebühren.[[discount: Jährlich {discount} % günstiger.]] Beim Bezahlen nutzt die App immer den aktuellen Preis.",
-      "terms": "Nutzungsbedingungen"
+      "terms": "Nutzungsbedingungen",
+      "marketingBASIC": "Ohne E-Mail-Marketing",
+      "marketingPRO": "E-Mail-Marketing: 50 Kunden pro Tag",
+      "marketingPREMIUM": "E-Mail-Marketing unbegrenzt"
     },
     "desk": {
       "title": "Was zahlen Stuhlmieter mit eigener IČO?",
@@ -1733,7 +1736,7 @@
       "q5": "Kann ich den Tarif wechseln?",
       "a5": "Ja, auf der Seite Tarif verlängern. Ein Upgrade gilt sofort, ein Downgrade ab dem nächsten Zeitraum.",
       "q6": "Gibt es ein Limit für Kunden oder Termine?",
-      "a6": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt nur Mitarbeiter und Filialen.",
+      "a6": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt Mitarbeiter, Filialen und wie viele Kunden täglich Ihre Marketing-E-Mail erhalten (Basic keine, Pro 50, Premium unbegrenzt).",
       "q7": "Kann ein Inhaber mehrere Filialen führen?",
       "a7": "Ja. Ein Inhaberkonto führt alle Filialen. Jede Filiale hat eigenen Tarif und eigenes Enddatum.",
       "q8": "Kostet EET extra?",
@@ -1878,7 +1881,7 @@
     },
     "closing": {
       "title": "{days} Tage alle Funktionen gratis testen",
-      "lead": "Ohne Kreditkarte. Jeder Tarif hat alle Funktionen, nur Mitarbeiterzahl und Filialen unterscheiden sich.",
+      "lead": "Ohne Kreditkarte. Die Tarife unterscheiden sich bei Mitarbeitern, Filialen und E-Mail-Marketing.",
       "cta": "Kostenlos testen",
       "link": "Preise ansehen"
     }
@@ -2007,7 +2010,7 @@
         "id": "gia",
         "h": "Was kostet die Salonsoftware?",
         "body": [
-          "Jeder Tarif hat alle Funktionen; sie unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen: Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
+          "Die Tarife unterscheiden sich nach Mitarbeitern pro Filiale, Anzahl der Filialen und E-Mail-Marketing (Basic ohne, Pro 50 Kunden pro Tag, Premium unbegrenzt): Basic {priceBasic} CZK/Monat ({staffBasic} Mitarbeiter, 1 Filiale), Pro {pricePro} CZK/Monat ({staffPro} pro Filiale, bis zu {branchesPro} Filialen) und Premium {pricePremium} CZK/Monat ({premiumLimits}).[[discount: Jährlich {discount} % günstiger.]] Neue Salons testen {days} Tage gratis, ohne Karte.",
           "Stuhlmieter mit eigener IČO nutzen den Tarif Stuhl für {priceDesk} CZK im Monat. Tarife werden im Browser gekauft und verlängert; die iPhone-App verkauft keine Tarife."
         ],
         "link": {
@@ -2030,7 +2033,7 @@
       }
     ],
     "endTitle": "{days} Tage gratis testen, ohne Karte",
-    "endText": "Jeder Tarif hat alle Funktionen, ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
+    "endText": "Salon-Tarife ab {from} CZK im Monat. Support auf Vietnamesisch und Tschechisch.",
     "ctaPricing": "Preise ansehen",
     "faqTitle": "Fragen zur Salonsoftware",
     "faq": [
@@ -2173,11 +2176,11 @@
       "items": [
         {
           "q": "Passt SalonGo auch für einen kleinen Salon?",
-          "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Funktionen. Wächst das Team, wechseln Sie jederzeit den Tarif."
+          "a": "Ja. Basic ist für {staffBasic} Mitarbeiter und 1 Filiale, mit allen Salon-Werkzeugen außer E-Mail-Marketing. Wächst das Team, wechseln Sie jederzeit den Tarif."
         },
         {
-          "q": "Hat jeder Tarif alle Funktionen?",
-          "a": "Ja. Basic, Pro und Premium haben dieselben Funktionen und unterscheiden sich nur nach Mitarbeitern pro Filiale und Anzahl der Filialen."
+          "q": "Worin unterscheiden sich die Tarife?",
+          "a": "Basic, Pro und Premium haben dieselben Salon-Werkzeuge und unterscheiden sich nach Mitarbeitern pro Filiale, Anzahl der Filialen und E-Mail-Marketing: Basic ohne, Pro 50 Kunden pro Tag, Premium unbegrenzt."
         },
         {
           "q": "In welchen Sprachen buchen Kunden?",

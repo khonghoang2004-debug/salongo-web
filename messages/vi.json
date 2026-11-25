@@ -165,7 +165,7 @@
     "toggleMonth": "Theo tháng",
     "toggleYear": "Theo năm",
     "popularMost": "Phổ biến nhất",
-    "compareTitle": "3 gói salon đều đủ tính năng",
+    "compareTitle": "3 gói salon có cùng công cụ quản lý salon",
     "compareFeatureCol": "Tính năng",
     "compareRow1": "Quản lý lịch hẹn",
     "compareRow2": "Đặt lịch online",
@@ -191,7 +191,7 @@
     "faqQ1": "Có cần ký hợp đồng dài hạn không?",
     "faqA1": "Không. Bạn trả theo tháng hoặc theo năm. Gói trả bằng thẻ có thể huỷ gia hạn bất cứ lúc nào, gói vẫn dùng đến hết kỳ đã trả.",
     "faqQ2": "Có giới hạn số khách không?",
-    "faqA2": "Không. Khách hàng, lịch hẹn và hoá đơn đều không giới hạn. Gói chỉ giới hạn số nhân viên và số chi nhánh.",
+    "faqA2": "Không. Khách, lịch hẹn và hoá đơn không giới hạn. Gói giới hạn số thợ, số chi nhánh và số khách nhận email marketing mỗi ngày (Basic không có, Pro 50, Premium không giới hạn).",
     "faqQ3": "Có dùng trên điện thoại không?",
     "faqA3": "Có. Bạn mở app trên trình duyệt điện thoại, hoặc dùng app cho máy tính Windows và Mac.",
     "faqQ5": "Một chủ có quản lý được nhiều chi nhánh không?",
@@ -209,7 +209,7 @@
     "allFeature3": "Không giới hạn khách hàng và lịch hẹn",
     "allFeature4": "Hỗ trợ tiếng Việt và tiếng Séc",
     "plansNote": "Giá giống màn Nâng cấp gói trong app.[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử {days} ngày, không cần thẻ. Gói IČO riêng dùng thử 1 tháng. Khi thanh toán, app luôn tính giá theo gói hiện hành.",
-    "compareLead": "Các gói chỉ khác nhau ở số nhân viên và số chi nhánh. Mọi tính năng khác đều giống nhau.",
+    "compareLead": "Các gói khác nhau ở số nhân viên, số chi nhánh và email marketing (Basic không có, Pro 50 khách/ngày, Premium không giới hạn). Các tính năng khác đều giống nhau.",
     "compareRowStaff": "Nhân viên mỗi chi nhánh",
     "staffUnlimited": "Không giới hạn nhân viên",
     "branchLimit": "{n, plural, =1 {1 chi nhánh} other {Tối đa # chi nhánh}}",
@@ -239,7 +239,7 @@
     "pickStaffHint": "Bạn làm công cho salon? Bạn không cần mua gói: chủ salon thêm bạn làm nhân viên trong app.",
     "salonKicker": "Gói cho chủ salon",
     "salonTitle": "Basic, Pro, Premium",
-    "salonLead": "Gói nào cũng đủ tính năng. Chọn theo số thợ mỗi chi nhánh và số chi nhánh.",
+    "salonLead": "Chọn theo số thợ mỗi chi nhánh, số chi nhánh và email marketing.",
     "deskKicker": "Cho người thuê bàn có IČO riêng",
     "vsTitle": "Gói IČO riêng khác gói salon thế nào?",
     "vsSalonCol": "Gói salon",
@@ -270,7 +270,7 @@
     "solutionsTitle": "Giải pháp quản lý tiệm nail, salon tóc",
     "solutionsDesc": "Hết trùng lịch, tính sai lương, thất thoát ở quầy: cách SalonGo giúp tiệm nail và salon của người Việt ở châu Âu quản lý gọn từng việc.",
     "pricingTitle": "Bảng giá app quản lý salon, tiệm nail",
-    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/tháng[[discount:, trả theo năm giảm {discount}%]]. Gói nào cũng đủ tính năng. Dùng thử {days} ngày, gia hạn trên web.",
+    "pricingDesc": "Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} Kč/tháng[[discount:, trả theo năm giảm {discount}%]]. Khác nhau ở số thợ, chi nhánh và email marketing. Dùng thử {days} ngày, gia hạn trên web.",
     "aboutTitle": "Về SalonGo: phần mềm salon của người Việt ở Séc",
     "aboutDesc": "SalonGo làm phần mềm cho tiệm nail, tóc, mi và spa ở châu Âu, bắt đầu từ các tiệm của người Việt ở Séc. Dữ liệu ở EU, hỗ trợ tiếng Việt và tiếng Séc.",
     "faqTitle": "Hỏi đáp app quản lý tiệm nail, EET 2.0, giá",
@@ -307,7 +307,7 @@
     "stat2Value": "6",
     "stat2Label": "ngôn ngữ trong app",
     "stat3Value": "3 gói",
-    "stat3Label": "gói nào cũng đủ tính năng, từ {from} CZK/tháng",
+    "stat3Label": "gói salon từ {from} CZK/tháng",
     "stat4Value": "24 giờ",
     "stat4Label": "là có phản hồi, bằng tiếng Việt hoặc tiếng Séc",
     "badge": "Quản lý salon cho người Việt ở châu Âu",
@@ -833,7 +833,7 @@
     "type4Text": "Một tài khoản cho mọi chi nhánh, xem doanh thu tất cả chi nhánh trên một trang.",
     "priceEyebrow": "Bảng giá",
     "priceTitle": "{days} ngày miễn phí, rồi từ {from} CZK/tháng",
-    "priceLead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và số chi nhánh.[[discount: Trả theo năm giảm {discount}%.]]",
+    "priceLead": "Các gói khác nhau ở số thợ, số chi nhánh và email marketing.[[discount: Trả theo năm giảm {discount}%.]]",
     "priceCta": "Xem bảng giá",
     "price1": "Không cần thẻ thanh toán",
     "price2": "Hỗ trợ thiết lập bằng tiếng Việt",
@@ -925,7 +925,7 @@
     "ctaPricing": "Xem bảng giá",
     "shotAlt": "Màn Tổng quan của phần mềm quản lý salon SalonGo trên điện thoại",
     "boxTitle": "Dùng thử {days} ngày, không cần thẻ",
-    "boxText": "Gói nào cũng đủ tính năng, từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+    "boxText": "Gói salon từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
     "sections": [
       {
         "h": "Phần mềm quản lý salon là gì?",
@@ -993,7 +993,7 @@
       },
       {
         "h": "Giá phần mềm quản lý salon",
-        "p": "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
+        "p": "Các gói khác nhau ở số thợ mỗi chi nhánh, số chi nhánh và email marketing (Basic không có, Pro 50 khách/ngày, Premium không giới hạn): Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
         "link": {
           "href": "/bang-gia",
           "label": "Xem bảng giá"
@@ -1277,7 +1277,7 @@
     "q1": "SalonGo là gì?",
     "a1": "SalonGo là app quản lý salon cho tiệm nail, tóc, mi và spa của người Việt ở châu Âu: lịch hẹn, đặt lịch online cho khách, tính tiền, hoá đơn, EET 2.0, tính lương thợ, email cho khách và báo cáo. Dùng trên trình duyệt, máy tính Windows, Mac và điện thoại.",
     "q2": "SalonGo giá bao nhiêu?",
-    "a2": "Gói salon từ {from} CZK/tháng (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), gói nào cũng đủ tính năng.[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử {days} ngày, không cần thẻ.",
+    "a2": "Gói salon từ {from} CZK/tháng (Basic {priceBasic}, Pro {pricePro}, Premium {pricePremium} CZK), khác nhau ở số thợ, chi nhánh và email marketing.[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử {days} ngày, không cần thẻ.",
     "q3": "SalonGo có hỗ trợ EET 2.0 không?",
     "a3": "Có. EET 2.0 bắt buộc ở Séc từ 1.1.2027. Trong SalonGo bạn chỉ cần tải chứng chỉ từ DIS+, nhập mật khẩu và mã chỗ bán; sau đó mỗi lần tính tiền app tự gửi lên sở thuế. EET có trong mọi gói, không tính thêm.",
     "q4": "Khách đặt lịch bằng tiếng gì?",
@@ -1370,7 +1370,7 @@
       "title": "Chọn đúng gói cho cách bạn làm việc",
       "salonTag": "Tiệm có thợ",
       "salonTitle": "Bạn là chủ tiệm",
-      "salonDesc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ, khách hàng và nhiều chi nhánh. Ba gói theo số thợ, gói nào cũng đủ tính năng.",
+      "salonDesc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ, khách hàng và nhiều chi nhánh. Ba gói theo số thợ và nhu cầu email marketing.",
       "salonPrice": "từ {from} Kč/tháng",
       "salonCta": "Xem gói salon",
       "deskTag": "IČO riêng trong tiệm hoặc salon",
@@ -1392,7 +1392,7 @@
     },
     "pricing": {
       "title": "Giá rõ ràng, trả theo tháng",
-      "lead": "Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh. Đổi gói hoặc gia hạn trên web bất cứ lúc nào, app cập nhật ngay.",
+      "lead": "Các gói khác nhau ở số thợ, chi nhánh và email marketing. Đổi gói hoặc gia hạn trên web bất cứ lúc nào, app cập nhật ngay.",
       "month": "Kč/tháng",
       "staff": "đến {n} thợ mỗi chi nhánh",
       "staffAll": "không giới hạn thợ",
@@ -1491,7 +1491,7 @@
       "promise1": "Dữ liệu lưu ở Frankfurt (Đức), trong Liên minh châu Âu, theo GDPR.",
       "promise2": "Hết hạn gói, dữ liệu vẫn được giữ nguyên.",
       "promise3": "Hỗ trợ bằng tiếng Việt và tiếng Séc, trả lời trong 24 giờ.",
-      "promise4": "Gói nào cũng đủ tính năng, giá ghi rõ trên web.",
+      "promise4": "Giá và quyền lợi từng gói ghi rõ trên web.",
       "who": "Người vận hành",
       "doTitle": "SalonGo làm gì cho tiệm",
       "do1T": "Lịch hẹn & đặt lịch online",
@@ -1633,7 +1633,7 @@
   "pricing2": {
     "hero": {
       "title": "Bảng giá SalonGo: từ {from} Kč/tháng, có EET 2.0",
-      "lead": "Gói nào cũng đủ tính năng. Bạn chọn theo số thợ và số chi nhánh.",
+      "lead": "Bạn chọn theo số thợ, số chi nhánh và số khách gửi email marketing mỗi ngày.",
       "jump": "Chọn nhanh",
       "salon": "Tôi là chủ salon",
       "salonPrice": "từ {from} Kč/tháng",
@@ -1674,12 +1674,15 @@
         "EET 2.0",
         "Thu & Chi",
         "Tính lương",
-        "Khách hàng, email marketing",
+        "Khách hàng, tích điểm",
         "Báo cáo, xuất file",
         "Không giới hạn khách và lịch hẹn"
       ],
       "note": "Không phí ẩn.[[discount: Trả theo năm giảm {discount}%.]] Khi thanh toán, app tính theo giá hiện hành.",
-      "terms": "Điều khoản sử dụng"
+      "terms": "Điều khoản sử dụng",
+      "marketingBASIC": "Không có email marketing",
+      "marketingPRO": "Email marketing: 50 khách/ngày",
+      "marketingPREMIUM": "Email marketing không giới hạn"
     },
     "desk": {
       "title": "Thợ thuê bàn có IČO riêng trả bao nhiêu?",
@@ -1733,7 +1736,7 @@
       "q5": "Đổi sang gói khác được không?",
       "a5": "Được, ở trang Gia hạn gói. Nâng lên gói cao hơn có hiệu lực ngay, hạ xuống gói thấp hơn áp dụng từ kỳ sau.",
       "q6": "Có giới hạn số khách hay lịch hẹn không?",
-      "a6": "Không. Khách, lịch hẹn và hoá đơn không giới hạn. Gói chỉ giới hạn số thợ và số chi nhánh.",
+      "a6": "Không. Khách, lịch hẹn và hoá đơn không giới hạn. Gói giới hạn số thợ, số chi nhánh và số khách nhận email marketing mỗi ngày (Basic không có, Pro 50, Premium không giới hạn).",
       "q7": "Một chủ quản lý được nhiều chi nhánh không?",
       "a7": "Được. Một tài khoản chủ quản lý mọi chi nhánh. Mỗi chi nhánh có gói và thời hạn riêng.",
       "q8": "EET có tính thêm tiền không?",
@@ -1878,7 +1881,7 @@
     },
     "closing": {
       "title": "Dùng thử {days} ngày, đủ mọi tính năng",
-      "lead": "Không cần thẻ. Gói nào cũng đủ tính năng, chỉ khác số thợ và chi nhánh.",
+      "lead": "Không cần thẻ. Các gói khác nhau ở số thợ, chi nhánh và email marketing.",
       "cta": "Dùng thử miễn phí",
       "link": "Xem bảng giá"
     }
@@ -2007,7 +2010,7 @@
         "id": "gia",
         "h": "Giá phần mềm quản lý salon",
         "body": [
-          "Gói nào cũng đủ tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh: Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
+          "Các gói khác nhau ở số thợ mỗi chi nhánh, số chi nhánh và email marketing (Basic không có, Pro 50 khách/ngày, Premium không giới hạn): Basic {priceBasic} CZK/tháng ({staffBasic} thợ, 1 chi nhánh), Pro {pricePro} CZK/tháng ({staffPro} thợ mỗi chi nhánh, tối đa {branchesPro} chi nhánh) và Premium {pricePremium} CZK/tháng ({premiumLimits}).[[discount: Trả theo năm giảm {discount}%.]] Salon mới được dùng thử miễn phí {days} ngày, không cần thẻ.",
           "Thợ thuê bàn dùng gói IČO riêng, {priceDesk} Kč/tháng. Mua và gia hạn gói trên trình duyệt; app trên iPhone không bán gói."
         ],
         "link": {
@@ -2030,7 +2033,7 @@
       }
     ],
     "endTitle": "Dùng thử {days} ngày, không cần thẻ",
-    "endText": "Gói nào cũng đủ tính năng, từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
+    "endText": "Gói salon từ {from} CZK/tháng. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
     "ctaPricing": "Xem bảng giá",
     "faqTitle": "Câu hỏi về phần mềm quản lý salon",
     "faq": [
@@ -2173,11 +2176,11 @@
       "items": [
         {
           "q": "Tiệm nhỏ có dùng được SalonGo không?",
-          "a": "Có. Gói Basic cho {staffBasic} thợ và 1 chi nhánh, đủ mọi tính năng. Tiệm đông thợ hơn thì đổi gói bất cứ lúc nào."
+          "a": "Có. Gói Basic cho {staffBasic} thợ và 1 chi nhánh, đủ công cụ quản lý salon (trừ email marketing). Tiệm đông thợ hơn thì đổi gói bất cứ lúc nào."
         },
         {
-          "q": "Gói nào cũng có đủ tính năng không?",
-          "a": "Có. Basic, Pro và Premium có cùng tính năng, chỉ khác số thợ mỗi chi nhánh và số chi nhánh."
+          "q": "Các gói khác nhau ở điểm nào?",
+          "a": "Basic, Pro và Premium có cùng công cụ quản lý salon, khác ở số thợ mỗi chi nhánh, số chi nhánh và email marketing: Basic không có, Pro gửi 50 khách/ngày, Premium không giới hạn."
         },
         {
           "q": "Khách đặt lịch bằng tiếng gì?",

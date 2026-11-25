@@ -23,7 +23,7 @@
     "appStoreShort": "App Store"
   },
   "footer": {
-    "tagline": "Software pro nehtová, kadeřnická, řasová a kosmetická studia v Evropě.",
+    "tagline": "Software a weby pro nehtová, kadeřnická, řasová a kosmetická studia v Evropě.",
     "product": "Produkt",
     "company": "SalonGo",
     "help": "Podpora",
@@ -32,6 +32,96 @@
     "solutions": "Řešení podle typu salonu",
     "support": "Odpovíme do 24 hodin, česky nebo vietnamsky.",
     "operator": "Provozovatel",
-    "rights": "Všechna práva vyhrazena."
+    "rights": "Všechna práva vyhrazena.",
+    "studio": "Web Studio",
+    "resources": "Zdroje",
+    "account": "Účet",
+    "gdpr": "V souladu s GDPR · Podpora česky a vietnamsky"
+  },
+  "menu": {
+    "groups": {
+      "product": "Produkt",
+      "solutions": "Řešení",
+      "studio": "Web Studio",
+      "pricing": "Ceník",
+      "resources": "Zdroje"
+    },
+    "product": {
+      "features": {
+        "title": "Software pro salon",
+        "desc": "Rezervace, online objednávky, pokladna, mzdy"
+      },
+      "desk": {
+        "title": "Tarif Křeslo",
+        "desc": "Pro nájemce křesla: pokladna a EET na vaše IČO"
+      },
+      "kasa": {
+        "title": "SalonGo Kasa",
+        "desc": "Pokladní software s jednorázovou platbou"
+      },
+      "eet": {
+        "title": "EET 2.0",
+        "desc": "Připraveno na povinnost od 1. 1. 2027"
+      },
+      "download": {
+        "title": "Stáhnout aplikaci",
+        "desc": "iPhone, iPad, Mac a Windows"
+      }
+    },
+    "solutions": {
+      "nail": {
+        "title": "Nehtová studia",
+        "desc": "Kalendář podle pracovnic, mzdy z provizí"
+      },
+      "hair": {
+        "title": "Kadeřnictví",
+        "desc": "Plný kalendář a dlouhé služby"
+      },
+      "beauty": {
+        "title": "Řasy, obočí a spa",
+        "desc": "Karty klientek, procedury, stálé klientky"
+      },
+      "chain": {
+        "title": "Více poboček",
+        "desc": "Jeden účet pro celý řetězec"
+      },
+      "guide": {
+        "title": "Průvodce softwarem pro salon",
+        "desc": "Na co se dívat při výběru"
+      }
+    },
+    "studio": {
+      "templates": {
+        "title": "Šablony webů",
+        "desc": "35+ návrhů pro nehty, vlasy, spa, barber"
+      },
+      "contact": {
+        "title": "Objednat web",
+        "desc": "Od 4 999 Kč za web s 5 stránkami"
+      },
+      "terms": {
+        "title": "Podmínky tvorby webu",
+        "desc": "Rozsah, platba, práva"
+      }
+    },
+    "resources": {
+      "faq": {
+        "title": "Časté dotazy",
+        "desc": "Odpovědi na nejčastější otázky"
+      },
+      "about": {
+        "title": "O SalonGo",
+        "desc": "Kdo SalonGo vyvíjí a proč"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "desc": "Česky i vietnamsky, odpověď do 24 hodin"
+      }
+    },
+    "studioFeature": "Krásný web pro váš salon",
+    "studioFeatureCta": "Prohlédnout šablony",
+    "productFeature": "{days} dní zdarma, bez platební karty",
+    "productFeatureCta": "Založit účet",
+    "more": "Více"
   }
 }

@@ -23,7 +23,7 @@
     "appStoreShort": "App Store"
   },
   "footer": {
-    "tagline": "Salon-Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa.",
+    "tagline": "Software und Websites für Nagel-, Friseur-, Wimpern- und Kosmetiksalons in Europa.",
     "product": "Produkt",
     "company": "SalonGo",
     "help": "Hilfe",
@@ -32,6 +32,96 @@
     "solutions": "Lösungen nach Salontyp",
     "support": "Antwort innerhalb von 24 Stunden, auf Tschechisch, Vietnamesisch oder Englisch.",
     "operator": "Betreiber",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "studio": "Web Studio",
+    "resources": "Ressourcen",
+    "account": "Konto",
+    "gdpr": "DSGVO-konform · Support auf Vietnamesisch und Tschechisch"
+  },
+  "menu": {
+    "groups": {
+      "product": "Produkt",
+      "solutions": "Lösungen",
+      "studio": "Web Studio",
+      "pricing": "Preise",
+      "resources": "Ressourcen"
+    },
+    "product": {
+      "features": {
+        "title": "Salonsoftware",
+        "desc": "Termine, Online-Buchung, Kasse, Lohn"
+      },
+      "desk": {
+        "title": "Tarif Stuhl",
+        "desc": "Für Stuhlmieter: Kasse und EET mit eigener IČO"
+      },
+      "kasa": {
+        "title": "SalonGo Kasa",
+        "desc": "Kassensoftware zum Einmalpreis"
+      },
+      "eet": {
+        "title": "EET 2.0",
+        "desc": "Bereit für die Pflicht ab 1.1.2027"
+      },
+      "download": {
+        "title": "Herunterladen",
+        "desc": "iPhone, iPad, Mac und Windows"
+      }
+    },
+    "solutions": {
+      "nail": {
+        "title": "Nagelstudios",
+        "desc": "Kalender pro Mitarbeiterin, Lohn nach Provision"
+      },
+      "hair": {
+        "title": "Friseursalons",
+        "desc": "Volle Kalender, lange Behandlungen"
+      },
+      "beauty": {
+        "title": "Wimpern, Brauen, Spa",
+        "desc": "Kundenkarten, Behandlungen, Stammkunden"
+      },
+      "chain": {
+        "title": "Mehrere Filialen",
+        "desc": "Ein Konto für alle Standorte"
+      },
+      "guide": {
+        "title": "Ratgeber Salonsoftware",
+        "desc": "Worauf es bei der Auswahl ankommt"
+      }
+    },
+    "studio": {
+      "templates": {
+        "title": "Website-Vorlagen",
+        "desc": "35+ Designs für Nagel, Friseur, Spa, Barber"
+      },
+      "contact": {
+        "title": "Website bestellen",
+        "desc": "Ab 4 999 Kč für 5 Seiten"
+      },
+      "terms": {
+        "title": "Bedingungen Website",
+        "desc": "Umfang, Zahlung, Rechte"
+      }
+    },
+    "resources": {
+      "faq": {
+        "title": "Häufige Fragen",
+        "desc": "Antworten auf die wichtigsten Fragen"
+      },
+      "about": {
+        "title": "Über SalonGo",
+        "desc": "Wer SalonGo entwickelt und warum"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "desc": "Vietnamesisch und Tschechisch, Antwort in 24 Stunden"
+      }
+    },
+    "studioFeature": "Eine schöne Website für Ihren Salon",
+    "studioFeatureCta": "Vorlagen ansehen",
+    "productFeature": "{days} Tage kostenlos, ohne Karte",
+    "productFeatureCta": "Konto erstellen",
+    "more": "Mehr"
   }
 }

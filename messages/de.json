@@ -1290,8 +1290,8 @@
   "landing": {
     "hero": {
       "eet": "SalonGo ist bereit für EET 2.0",
-      "title": "Termine, Kasse, EET. Ihr ganzer Salon in einer App.",
-      "lead": "Salonsoftware für Nagel-, Friseur-, Wimpern- und Spa-Studios in Tschechien und der EU.",
+      "title": "Ihr ganzer Salon|in einer App.",
+      "lead": "Termine, Online-Buchung, Kasse mit EET 2.0, Einnahmen und Ausgaben sowie Löhne. Für Nagelstudios, Friseure, Wimpern- und Kosmetikstudios.",
       "cta": "{days} Tage kostenlos testen",
       "secondary": "Preise ansehen",
       "note": "Ohne Kreditkarte. Support auf Tschechisch, Vietnamesisch und Englisch.",
@@ -1299,7 +1299,8 @@
       "altPhone": "SalonGo-Kasse auf dem Smartphone",
       "chipToday": "Heute",
       "chipBookings": "Termine",
-      "chipIncome": "Einnahmen heute"
+      "chipIncome": "Einnahmen heute",
+      "eyebrow": "Salonsoftware · Tschechien und Europa"
     },
     "platforms": {
       "label": "Ein Konto, läuft auf",
@@ -1307,7 +1308,7 @@
       "langs": "App in 6 Sprachen"
     },
     "features": {
-      "title": "Ihr ganzer Salon in einer App",
+      "title": "Alles, was Ihr Salon tut,|auf einem Bildschirm.",
       "all": "Alle Funktionen",
       "online": {
         "title": "Online-Buchung"
@@ -1332,7 +1333,8 @@
       },
       "devices": {
         "title": "Jedes Gerät"
-      }
+      },
+      "eyebrow": "Funktionen"
     },
     "videos": {
       "title": "So sieht die App im Einsatz aus",
@@ -1364,20 +1366,8 @@
           "title": "Tarif Stuhl",
           "desc": "Eine Stuhlmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben."
         }
-      }
-    },
-    "who": {
-      "title": "Der Tarif, der zu Ihrer Arbeitsweise passt",
-      "salonTag": "Salon mit Team",
-      "salonTitle": "Sie führen einen Salon",
-      "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße und E-Mail-Marketing.",
-      "salonPrice": "ab {from} Kč/Monat",
-      "salonCta": "Salon-Tarife",
-      "deskTag": "Eigene IČO im Salon",
-      "deskTitle": "Sie mieten einen Stuhl und arbeiten auf eigene Rechnung",
-      "deskDesc": "Kasse, Belege und EET mit Ihrem eigenen Zertifikat, Ihre eigenen Einnahmen und Ausgaben. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
-      "deskPrice": "{priceDesk} Kč/Monat",
-      "deskCta": "Tarif Stuhl"
+      },
+      "eyebrow": "In Aktion"
     },
     "eet": {
       "title": "EET 2.0 ist ab 1.1.2027 Pflicht. Eine extra Kasse brauchen Sie nicht.",
@@ -1415,10 +1405,42 @@
       "all": "Alle Fragen"
     },
     "final": {
-      "title": "Konto in 2 Minuten eröffnen. {days} Tage testen.",
+      "title": "Konto in 2 Minuten eröffnen.|{days} Tage testen.",
       "lead": "Ohne Karte. Nach dem Test bleiben Ihre Daten erhalten.",
       "cta": "Kostenlos testen",
-      "contact": "Sprechen Sie mit uns"
+      "contact": "Sprechen Sie mit uns",
+      "eyebrow": "Heute starten"
+    },
+    "products": {
+      "eyebrow": "Produkte",
+      "title": "Drei Wege zu SalonGo.|Wählen Sie Ihren.",
+      "salon": {
+        "tag": "Monatlich · Cloud",
+        "title": "SalonGo für Salonbesitzer",
+        "desc": "Kalender, Online-Buchung, Kasse, EET, Löhne und mehrere Filialen. Auf Computer, iPad und Smartphone.",
+        "price": "ab {from} Kč/Monat",
+        "cta": "Tarife ansehen"
+      },
+      "desk": {
+        "tag": "Monatlich · 1 Person",
+        "title": "Tarif Stuhl (eigene IČO)",
+        "desc": "Für Stuhlmieter mit eigener IČO: Kasse, Belege und EET mit eigenem Zertifikat. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
+        "price": "{priceDesk} Kč/Monat",
+        "cta": "Tarif Stuhl"
+      },
+      "kasa": {
+        "tag": "Einmalig · Windows, macOS",
+        "title": "SalonGo Kasa",
+        "desc": "Kassensoftware auf dem Salon-Computer. Einmal zahlen, keine Monatsgebühr, verkauft auch offline.",
+        "price": "{price} einmalig",
+        "cta": "Was ist Kasa?"
+      }
+    },
+    "studio": {
+      "eyebrow": "SalonGo Web Studio",
+      "title": "Eine Website für Ihren Salon,|gestaltet wie eine große Marke.",
+      "lead": "Wählen Sie eine von {count} Salon-Vorlagen. Texte, Fotos und Domain richten wir für Sie ein. Schön auf Smartphone und Computer.",
+      "scroll": "Seitlich wischen für mehr Vorlagen"
     }
   },
   "site": {
@@ -1446,7 +1468,7 @@
       "appStoreShort": "App Store"
     },
     "footer": {
-      "tagline": "Salon-Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa.",
+      "tagline": "Software und Websites für Nagel-, Friseur-, Wimpern- und Kosmetiksalons in Europa.",
       "product": "Produkt",
       "company": "SalonGo",
       "help": "Hilfe",
@@ -1455,7 +1477,97 @@
       "solutions": "Lösungen nach Salontyp",
       "support": "Antwort innerhalb von 24 Stunden, auf Tschechisch, Vietnamesisch oder Englisch.",
       "operator": "Betreiber",
-      "rights": "Alle Rechte vorbehalten."
+      "rights": "Alle Rechte vorbehalten.",
+      "studio": "Web Studio",
+      "resources": "Ressourcen",
+      "account": "Konto",
+      "gdpr": "DSGVO-konform · Support auf Vietnamesisch und Tschechisch"
+    },
+    "menu": {
+      "groups": {
+        "product": "Produkt",
+        "solutions": "Lösungen",
+        "studio": "Web Studio",
+        "pricing": "Preise",
+        "resources": "Ressourcen"
+      },
+      "product": {
+        "features": {
+          "title": "Salonsoftware",
+          "desc": "Termine, Online-Buchung, Kasse, Lohn"
+        },
+        "desk": {
+          "title": "Tarif Stuhl",
+          "desc": "Für Stuhlmieter: Kasse und EET mit eigener IČO"
+        },
+        "kasa": {
+          "title": "SalonGo Kasa",
+          "desc": "Kassensoftware zum Einmalpreis"
+        },
+        "eet": {
+          "title": "EET 2.0",
+          "desc": "Bereit für die Pflicht ab 1.1.2027"
+        },
+        "download": {
+          "title": "Herunterladen",
+          "desc": "iPhone, iPad, Mac und Windows"
+        }
+      },
+      "solutions": {
+        "nail": {
+          "title": "Nagelstudios",
+          "desc": "Kalender pro Mitarbeiterin, Lohn nach Provision"
+        },
+        "hair": {
+          "title": "Friseursalons",
+          "desc": "Volle Kalender, lange Behandlungen"
+        },
+        "beauty": {
+          "title": "Wimpern, Brauen, Spa",
+          "desc": "Kundenkarten, Behandlungen, Stammkunden"
+        },
+        "chain": {
+          "title": "Mehrere Filialen",
+          "desc": "Ein Konto für alle Standorte"
+        },
+        "guide": {
+          "title": "Ratgeber Salonsoftware",
+          "desc": "Worauf es bei der Auswahl ankommt"
+        }
+      },
+      "studio": {
+        "templates": {
+          "title": "Website-Vorlagen",
+          "desc": "35+ Designs für Nagel, Friseur, Spa, Barber"
+        },
+        "contact": {
+          "title": "Website bestellen",
+          "desc": "Ab 4 999 Kč für 5 Seiten"
+        },
+        "terms": {
+          "title": "Bedingungen Website",
+          "desc": "Umfang, Zahlung, Rechte"
+        }
+      },
+      "resources": {
+        "faq": {
+          "title": "Häufige Fragen",
+          "desc": "Antworten auf die wichtigsten Fragen"
+        },
+        "about": {
+          "title": "Über SalonGo",
+          "desc": "Wer SalonGo entwickelt und warum"
+        },
+        "contact": {
+          "title": "Kontakt",
+          "desc": "Vietnamesisch und Tschechisch, Antwort in 24 Stunden"
+        }
+      },
+      "studioFeature": "Eine schöne Website für Ihren Salon",
+      "studioFeatureCta": "Vorlagen ansehen",
+      "productFeature": "{days} Tage kostenlos, ohne Karte",
+      "productFeatureCta": "Konto erstellen",
+      "more": "Mehr"
     }
   },
   "pages2": {

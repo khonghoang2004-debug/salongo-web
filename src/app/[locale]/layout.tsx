@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Be_Vietnam_Pro, IBM_Plex_Mono } from "next/font/google";
+import { Be_Vietnam_Pro, IBM_Plex_Mono, Newsreader } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
@@ -22,6 +22,15 @@ const sans = Be_Vietnam_Pro({
   display: "swap",
 });
 
+
+// Tiêu đề lớn (x-display, x-h2): serif biên tập, đủ dấu Việt / Séc / Đức, có nghiêng để nhấn một từ
+const serif = Newsreader({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 // Chỉ dùng cho hình hoá đơn (giấy in nhiệt) trên trang, không dùng cho chữ thường
 const mono = IBM_Plex_Mono({
@@ -139,7 +148,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = Object.fromEntries(CLIENT_NAMESPACES.filter((k) => k in all).map((k) => [k, all[k]]));
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable} ${serif.variable}`} suppressHydrationWarning>
       <head>
         {/* Bật chuyển động trước khi vẽ trang để nội dung không bị nháy */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('sg-js')" }} />
@@ -156,7 +165,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </defs>
         </svg>
         <NextIntlClientProvider messages={messages}>
-          <div id="sg-root" className={`${sans.variable} ${mono.variable} font-sans antialiased`}>
+          <div id="sg-root" className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans antialiased`}>
             {children}
             <MotionRoot />
           </div>

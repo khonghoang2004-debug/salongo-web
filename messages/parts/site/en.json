@@ -23,7 +23,7 @@
     "appStoreShort": "App Store"
   },
   "footer": {
-    "tagline": "Salon software for nail, hair, lash and beauty studios in Europe.",
+    "tagline": "Management software and websites for nail, hair, lash and beauty salons in Europe.",
     "product": "Product",
     "company": "SalonGo",
     "help": "Support",
@@ -32,6 +32,96 @@
     "solutions": "Solutions by salon type",
     "support": "We reply within 24 hours, in Czech, Vietnamese or English.",
     "operator": "Operated by",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "studio": "Web Studio",
+    "resources": "Resources",
+    "account": "Account",
+    "gdpr": "GDPR compliant · Support in Vietnamese and Czech"
+  },
+  "menu": {
+    "groups": {
+      "product": "Product",
+      "solutions": "Solutions",
+      "studio": "Web Studio",
+      "pricing": "Pricing",
+      "resources": "Resources"
+    },
+    "product": {
+      "features": {
+        "title": "Salon management software",
+        "desc": "Bookings, online booking, checkout, payroll"
+      },
+      "desk": {
+        "title": "Chair plan",
+        "desc": "For chair renters: checkout and EET under your own IČO"
+      },
+      "kasa": {
+        "title": "SalonGo Kasa",
+        "desc": "Point of sale software, one-time purchase"
+      },
+      "eet": {
+        "title": "EET 2.0",
+        "desc": "Ready for the requirement from 1 January 2027"
+      },
+      "download": {
+        "title": "Download",
+        "desc": "iPhone, iPad, Mac and Windows"
+      }
+    },
+    "solutions": {
+      "nail": {
+        "title": "Nail salons",
+        "desc": "Per-technician calendar, commission payroll"
+      },
+      "hair": {
+        "title": "Hair salons",
+        "desc": "Busy calendars and long services"
+      },
+      "beauty": {
+        "title": "Lash, brow and spa",
+        "desc": "Client records, treatments, regulars"
+      },
+      "chain": {
+        "title": "Multiple locations",
+        "desc": "One account for the whole group"
+      },
+      "guide": {
+        "title": "Salon software guide",
+        "desc": "What to look for when choosing software"
+      }
+    },
+    "studio": {
+      "templates": {
+        "title": "Website templates",
+        "desc": "35+ designs for nail, hair, spa, barber"
+      },
+      "contact": {
+        "title": "Order a website",
+        "desc": "From 4 999 Kč for a 5-page website"
+      },
+      "terms": {
+        "title": "Website service terms",
+        "desc": "Scope, payment, rights"
+      }
+    },
+    "resources": {
+      "faq": {
+        "title": "FAQ",
+        "desc": "Answers to common questions"
+      },
+      "about": {
+        "title": "About SalonGo",
+        "desc": "Who builds SalonGo and why"
+      },
+      "contact": {
+        "title": "Contact",
+        "desc": "Vietnamese and Czech, reply within 24 hours"
+      }
+    },
+    "studioFeature": "A beautiful website for your salon",
+    "studioFeatureCta": "Browse templates",
+    "productFeature": "{days}-day free trial, no card needed",
+    "productFeatureCta": "Create an account",
+    "more": "Learn more"
   }
 }

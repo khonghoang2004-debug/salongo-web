@@ -1,8 +1,8 @@
 {
   "hero": {
     "eet": "SalonGo ist bereit für EET 2.0",
-    "title": "Termine, Kasse, EET. Ihr ganzer Salon in einer App.",
-    "lead": "Salonsoftware für Nagel-, Friseur-, Wimpern- und Spa-Studios in Tschechien und der EU.",
+    "title": "Ihr ganzer Salon|in einer App.",
+    "lead": "Termine, Online-Buchung, Kasse mit EET 2.0, Einnahmen und Ausgaben sowie Löhne. Für Nagelstudios, Friseure, Wimpern- und Kosmetikstudios.",
     "cta": "{days} Tage kostenlos testen",
     "secondary": "Preise ansehen",
     "note": "Ohne Kreditkarte. Support auf Tschechisch, Vietnamesisch und Englisch.",
@@ -10,7 +10,8 @@
     "altPhone": "SalonGo-Kasse auf dem Smartphone",
     "chipToday": "Heute",
     "chipBookings": "Termine",
-    "chipIncome": "Einnahmen heute"
+    "chipIncome": "Einnahmen heute",
+    "eyebrow": "Salonsoftware · Tschechien und Europa"
   },
   "platforms": {
     "label": "Ein Konto, läuft auf",
@@ -18,7 +19,7 @@
     "langs": "App in 6 Sprachen"
   },
   "features": {
-    "title": "Ihr ganzer Salon in einer App",
+    "title": "Alles, was Ihr Salon tut,|auf einem Bildschirm.",
     "all": "Alle Funktionen",
     "online": {
       "title": "Online-Buchung"
@@ -43,7 +44,8 @@
     },
     "devices": {
       "title": "Jedes Gerät"
-    }
+    },
+    "eyebrow": "Funktionen"
   },
   "videos": {
     "title": "So sieht die App im Einsatz aus",
@@ -75,20 +77,8 @@
         "title": "Tarif Stuhl",
         "desc": "Eine Stuhlmieterin kassiert schnell und sieht ihre eigenen Einnahmen und Ausgaben."
       }
-    }
-  },
-  "who": {
-    "title": "Der Tarif, der zu Ihrer Arbeitsweise passt",
-    "salonTag": "Salon mit Team",
-    "salonTitle": "Sie führen einen Salon",
-    "salonDesc": "Kalender, Online-Buchung, Kasse, EET, Löhne, Kunden und mehrere Filialen. Drei Tarife nach Teamgröße und E-Mail-Marketing.",
-    "salonPrice": "ab {from} Kč/Monat",
-    "salonCta": "Salon-Tarife",
-    "deskTag": "Eigene IČO im Salon",
-    "deskTitle": "Sie mieten einen Stuhl und arbeiten auf eigene Rechnung",
-    "deskDesc": "Kasse, Belege und EET mit Ihrem eigenen Zertifikat, Ihre eigenen Einnahmen und Ausgaben. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
-    "deskPrice": "{priceDesk} Kč/Monat",
-    "deskCta": "Tarif Stuhl"
+    },
+    "eyebrow": "In Aktion"
   },
   "eet": {
     "title": "EET 2.0 ist ab 1.1.2027 Pflicht. Eine extra Kasse brauchen Sie nicht.",
@@ -126,9 +116,41 @@
     "all": "Alle Fragen"
   },
   "final": {
-    "title": "Konto in 2 Minuten eröffnen. {days} Tage testen.",
+    "title": "Konto in 2 Minuten eröffnen.|{days} Tage testen.",
     "lead": "Ohne Karte. Nach dem Test bleiben Ihre Daten erhalten.",
     "cta": "Kostenlos testen",
-    "contact": "Sprechen Sie mit uns"
+    "contact": "Sprechen Sie mit uns",
+    "eyebrow": "Heute starten"
+  },
+  "products": {
+    "eyebrow": "Produkte",
+    "title": "Drei Wege zu SalonGo.|Wählen Sie Ihren.",
+    "salon": {
+      "tag": "Monatlich · Cloud",
+      "title": "SalonGo für Salonbesitzer",
+      "desc": "Kalender, Online-Buchung, Kasse, EET, Löhne und mehrere Filialen. Auf Computer, iPad und Smartphone.",
+      "price": "ab {from} Kč/Monat",
+      "cta": "Tarife ansehen"
+    },
+    "desk": {
+      "tag": "Monatlich · 1 Person",
+      "title": "Tarif Stuhl (eigene IČO)",
+      "desc": "Für Stuhlmieter mit eigener IČO: Kasse, Belege und EET mit eigenem Zertifikat. Die Salonbesitzerin sieht Ihren Umsatz nicht.",
+      "price": "{priceDesk} Kč/Monat",
+      "cta": "Tarif Stuhl"
+    },
+    "kasa": {
+      "tag": "Einmalig · Windows, macOS",
+      "title": "SalonGo Kasa",
+      "desc": "Kassensoftware auf dem Salon-Computer. Einmal zahlen, keine Monatsgebühr, verkauft auch offline.",
+      "price": "{price} einmalig",
+      "cta": "Was ist Kasa?"
+    }
+  },
+  "studio": {
+    "eyebrow": "SalonGo Web Studio",
+    "title": "Eine Website für Ihren Salon,|gestaltet wie eine große Marke.",
+    "lead": "Wählen Sie eine von {count} Salon-Vorlagen. Texte, Fotos und Domain richten wir für Sie ein. Schön auf Smartphone und Computer.",
+    "scroll": "Seitlich wischen für mehr Vorlagen"
   }
 }

@@ -37,7 +37,7 @@ export function MobileCta() {
   return (
     <div
       aria-hidden={!show}
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/92 px-5 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white px-5 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-8px_24px_-16px_rgba(34,22,26,0.25)] transition-transform duration-300 md:hidden ${
         show ? "translate-y-0" : "pointer-events-none translate-y-full"
       }`}
     >

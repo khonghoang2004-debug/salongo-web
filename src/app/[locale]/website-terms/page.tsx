@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { pageMetadata } from "@/lib/seo";
 import { getLegalPack } from "@/content/legal";
-import { LegalDocumentPage } from "@/components/LegalDocumentPage";
+import { LegalDocumentPage, fillLegal } from "@/components/LegalDocumentPage";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const doc = getLegalPack(locale).docs.websiteTerms;
-  return pageMetadata({ locale, path: "/website-terms", title: doc.title, description: doc.description });
+  return pageMetadata({ locale, path: "/website-terms", title: fillLegal(doc.title), description: fillLegal(doc.description) });
 }
 
 export default async function Page({ params }: Props) {

@@ -70,7 +70,7 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
   );
 }
 
-/** Thanh menu của site mới: trắng, dính trên cùng, có vạch mờ khi cuộn. Dưới 1024 px là nút Menu mở trang menu toàn màn hình. */
+/** Thanh menu của site mới: trắng, dính trên cùng, có vạch mờ khi cuộn. Dưới 1280 px là nút Menu mở trang menu toàn màn hình. */
 export function SiteNav() {
   const t = useTranslations("site.nav");
   const locale = useLocale();
@@ -117,7 +117,7 @@ export function SiteNav() {
             <Logo />
           </Link>
 
-          <nav aria-label="Menu" className="hidden lg:block">
+          <nav aria-label="Menu" className="hidden xl:block">
             <ul className="flex items-center gap-1">
               {ITEMS.map((it) => (
                 <li key={it.href}>
@@ -145,7 +145,7 @@ export function SiteNav() {
               aria-current={isActive("/tai-app") ? "page" : undefined}
               aria-label={t("download")}
               title={t("download")}
-              className={`hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 text-[15px] transition-colors lg:inline-flex ${
+              className={`hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 text-[15px] transition-colors xl:inline-flex ${
                 isActive("/tai-app") ? "bg-porcelain font-medium text-ink" : "text-ink/70 hover:text-ink"
               }`}
             >
@@ -155,15 +155,15 @@ export function SiteNav() {
             <a href={appLink(LOGIN_URL, locale)} className="hidden h-10 items-center whitespace-nowrap rounded-full px-3 text-[15px] text-ink/70 transition-colors hover:text-ink sm:inline-flex">
               {t("login")}
             </a>
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <LocaleSwitcher compact />
             </div>
             <a href={signup} className="x-btn-primary !min-h-10 !px-3.5 sm:!min-h-11 sm:!px-5">
-              <span className="sm:hidden lg:inline xl:hidden">{t("ctaShort")}</span>
-              <span className="hidden sm:inline lg:hidden xl:inline">{t("cta")}</span>
+              <span className="sm:hidden">{t("ctaShort")}</span>
+              <span className="hidden sm:inline">{t("cta")}</span>
             </a>
             {/* Phone / tablet: language right after the trial button on the logo row (owner 2026-11-22). */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <LocaleSwitcher tight />
             </div>
             <button
@@ -171,7 +171,7 @@ export function SiteNav() {
               onClick={() => setOpen(true)}
               aria-expanded={open}
               aria-controls="site-menu"
-              className="-mr-2 inline-flex size-10 items-center justify-center rounded-full text-ink sm:size-11 lg:hidden"
+              className="-mr-2 inline-flex size-10 items-center justify-center rounded-full text-ink sm:size-11 xl:hidden"
             >
               <Menu className="size-6" aria-hidden />
               <span className="sr-only">{t("menu")}</span>
@@ -183,7 +183,7 @@ export function SiteNav() {
       {mounted &&
         open &&
         createPortal(
-          <div id="site-menu" role="dialog" aria-modal="true" aria-label={t("menu")} className="fixed inset-0 z-[70] flex flex-col bg-white lg:hidden">
+          <div id="site-menu" role="dialog" aria-modal="true" aria-label={t("menu")} className="fixed inset-0 z-[70] flex flex-col bg-white xl:hidden">
             <div className="x-wrap flex h-16 shrink-0 items-center justify-between">
               <Link href="/" onClick={() => setOpen(false)} aria-label={siteConfig.name}>
                 <Logo />

@@ -72,7 +72,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
         url: pageUrl(locale),
         publisher: org,
         applicationCategory: "BusinessApplication",
-        operatingSystem: "Web, Windows, macOS",
+        operatingSystem: "Web, Windows, macOS, iOS, iPadOS",
         offers: { "@type": "AggregateOffer", priceCurrency: "CZK", lowPrice: prices.low, highPrice: prices.high, offerCount: prices.count },
       },
     ],

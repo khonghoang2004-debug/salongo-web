@@ -1083,8 +1083,8 @@
     "ctaContact": "Ask about a website",
     "previewLabel": "Preview of the {name} template",
     "allTemplates": "See all {count} templates",
-    "heroTitle": "Pick a beautiful website|for your salon",
-    "heroLead": "Made for salons.",
+    "heroTitle": "A salon website|that looks like a big brand.",
+    "heroLead": "Designed for salons",
     "galleryKicker": "Templates",
     "galleryTitle": "Website templates for nail, hair, spa, lash and barber salons",
     "galleryLead": "Each template is a working website. Tap to open the demo.",
@@ -1141,7 +1141,17 @@
     "studio": "SalonGo Web Studio",
     "priceLabel": "From",
     "previewGroup": "Preview a template",
-    "showMore": "Show {count} more templates"
+    "showMore": "Show {count} more templates",
+    "processKicker": "How it works",
+    "processTitle": "From template to live website|in 4 steps.",
+    "p1t": "Pick a template or share your idea",
+    "p1d": "Choose a design from the library, or tell us your own idea.",
+    "p2t": "Send your content",
+    "p2d": "Logo, service price list, salon photos and contact details.",
+    "p3t": "Review the draft",
+    "p3d": "Check the website on your phone and computer and give feedback before it goes live.",
+    "p4t": "Go live",
+    "p4d": "With a button to your SalonGo booking page if you use SalonGo. Domain and hosting are advised separately."
   },
   "day": {
     "kicker": "A day at the salon",
@@ -1629,7 +1639,11 @@
       "fact6": "Works in the browser (phone, iPad) and on Mac and Windows.",
       "contactTitle": "Want to talk to us?",
       "contactLead": "Call, message or e-mail us. We reply within 24 hours.",
-      "contactCta": "Contact"
+      "contactCta": "Contact",
+      "do6T": "SalonGo Kasa",
+      "do6": "One-time checkout software installed on the salon's computer.",
+      "do7T": "Salon websites",
+      "do7": "SalonGo Web Studio builds your own website, 35+ designs."
     },
     "notFound": {
       "title": "We couldn't find this page",

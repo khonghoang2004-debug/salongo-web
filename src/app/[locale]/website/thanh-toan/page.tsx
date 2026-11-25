@@ -34,7 +34,7 @@ export default async function HostingPayPage({ params, searchParams }: Props) {
             <ArrowLeft className="size-4" aria-hidden />
             {t("payBack")}
           </Link>
-          <h1 className="mt-4 text-[1.6rem] font-semibold tracking-[-0.02em] text-ink sm:text-[2rem]">{name}</h1>
+          <h1 className="x-title mt-4 !text-[clamp(1.75rem,1.4rem+1.4vw,2.4rem)] text-ink">{name}</h1>
           <p className="mt-1 text-[15px] text-muted">
             {price} {cycle === "y" ? t("perYear") : t("perMonth")}
           </p>

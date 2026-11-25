@@ -19,10 +19,10 @@ export async function ContactView() {
   ];
   return (
     <>
-      <header className="bg-white pb-6 pt-8 sm:pb-10 sm:pt-14 lg:pt-16">
+      <header className="relative overflow-hidden bg-white pb-6 pt-12 sm:pb-10 sm:pt-16 lg:pt-20">
         <div className="x-wrap">
-          <h1 className="text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[2.75rem] lg:text-[3.25rem]">{t("title")}</h1>
-          <p className="mt-3 max-w-[38rem] text-[16px] leading-relaxed text-muted sm:text-[17px]">{t("lead")}</p>
+          <h1 className="x-display max-w-[52rem] text-ink lg:!text-[clamp(3rem,1.6rem+3vw,4.5rem)]">{t("title")}</h1>
+          <p className="x-lead mt-5 max-w-[38rem]">{t("lead")}</p>
         </div>
       </header>
 

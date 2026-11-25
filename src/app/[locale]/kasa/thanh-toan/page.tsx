@@ -84,7 +84,7 @@ export default async function KasaBuyPage({ params }: Props) {
             <ArrowLeft className="size-4" aria-hidden />
             {t("back")}
           </Link>
-          <h1 className="mt-4 text-[1.6rem] font-semibold tracking-[-0.02em] text-ink sm:text-[2rem]">
+          <h1 className="x-title mt-4 !text-[clamp(1.75rem,1.4rem+1.4vw,2.4rem)] text-ink">
             {t("title")}
           </h1>
           <p className="mt-1 text-[15px] tabular-nums text-muted">

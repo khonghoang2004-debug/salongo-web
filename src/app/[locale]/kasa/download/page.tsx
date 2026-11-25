@@ -34,7 +34,7 @@ export default async function KasaDownloadPage({ params, searchParams }: Props) 
     <PageShell cta={false}>
       <section className="bg-white py-10 sm:py-14">
         <div className="x-wrap max-w-[44rem]">
-          <h1 className="text-[1.9rem] font-semibold tracking-[-0.025em] text-ink sm:text-[2.5rem]">{t("title")}</h1>
+          <h1 className="x-title !text-[clamp(2rem,1.5rem+2vw,3rem)] text-ink">{t("title")}</h1>
           <p className="mt-2 text-[16px] text-muted">{t("lead")}</p>
 
           {soon ? (

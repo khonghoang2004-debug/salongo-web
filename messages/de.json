@@ -1083,8 +1083,8 @@
     "ctaContact": "Website anfragen",
     "previewLabel": "Vorschau der Vorlage {name}",
     "allTemplates": "Alle {count} Vorlagen",
-    "heroTitle": "Wählen Sie eine schöne Website|für Ihren Salon",
-    "heroLead": "Für Salons.",
+    "heroTitle": "Eine Salon-Website,|die wie eine große Marke wirkt.",
+    "heroLead": "Für Salons gestaltet",
     "galleryKicker": "Vorlagen",
     "galleryTitle": "Website-Vorlagen für Nägel, Haare, Spa, Wimpern und Barbershops",
     "galleryLead": "Jede Vorlage ist eine funktionierende Website. Tippen für die Demo.",
@@ -1141,7 +1141,17 @@
     "studio": "SalonGo Web Studio",
     "priceLabel": "Ab",
     "previewGroup": "Vorlage ansehen",
-    "showMore": "{count} weitere Vorlagen anzeigen"
+    "showMore": "{count} weitere Vorlagen anzeigen",
+    "processKicker": "So läuft es ab",
+    "processTitle": "Von der Vorlage zur fertigen Website|in 4 Schritten.",
+    "p1t": "Vorlage wählen oder Idee schicken",
+    "p1d": "Wählen Sie ein Design aus der Bibliothek oder erzählen Sie uns Ihre eigene Idee.",
+    "p2t": "Inhalte senden",
+    "p2d": "Logo, Preisliste, Fotos vom Salon und Kontaktdaten.",
+    "p3t": "Entwurf prüfen",
+    "p3d": "Sie sehen die Website auf Smartphone und Computer und geben vor dem Start Feedback.",
+    "p4t": "Website geht online",
+    "p4d": "Mit Button zu Ihrer SalonGo-Buchungsseite, wenn Sie SalonGo nutzen. Domain und Hosting beraten wir separat."
   },
   "day": {
     "kicker": "Ein Tag im Salon",
@@ -1629,7 +1639,11 @@
       "fact6": "Läuft im Browser (Handy, iPad) sowie auf Mac und Windows.",
       "contactTitle": "Lieber direkt sprechen?",
       "contactLead": "Anrufen, schreiben oder mailen. Antwort innerhalb von 24 Stunden.",
-      "contactCta": "Kontakt"
+      "contactCta": "Kontakt",
+      "do6T": "SalonGo Kasa",
+      "do6": "Kassensoftware zum Einmalpreis, installiert auf dem Salon-Computer.",
+      "do7T": "Salon-Websites",
+      "do7": "SalonGo Web Studio erstellt Ihre eigene Website, 35+ Designs."
     },
     "notFound": {
       "title": "Diese Seite gibt es nicht",

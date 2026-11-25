@@ -1,15 +1,17 @@
 import { getTranslations, getLocale } from "next-intl/server";
-import { ArrowRight, Building2, CalendarDays, Check, Receipt, ShieldCheck, Users, Wallet, type LucideIcon } from "lucide-react";
+import { ArrowRight, Building2, CalendarDays, Check, Globe, Printer, Receipt, ShieldCheck, Users, Wallet, type LucideIcon } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { OPERATOR } from "@/lib/legal";
 import { getLegalPack } from "@/content/legal";
 
-const DOES: { k: "do1" | "do2" | "do3" | "do4" | "do5"; Icon: LucideIcon; href?: "/eet-2-0" }[] = [
+const DOES: { k: "do1" | "do2" | "do3" | "do4" | "do5" | "do6" | "do7"; Icon: LucideIcon; href?: "/eet-2-0" | "/kasa" | "/website" }[] = [
   { k: "do1", Icon: CalendarDays },
   { k: "do2", Icon: Receipt },
   { k: "do3", Icon: ShieldCheck, href: "/eet-2-0" },
   { k: "do4", Icon: Users },
   { k: "do5", Icon: Wallet },
+  { k: "do6", Icon: Printer, href: "/kasa" },
+  { k: "do7", Icon: Globe, href: "/website" },
 ];
 const FOR = ["for1", "for2", "for3", "for4", "for5"] as const;
 const FACTS = ["fact5", "fact6", "promise1", "promise2", "promise3", "promise4"] as const;
@@ -23,10 +25,10 @@ export async function AboutView() {
   return (
     <>
       {/* Đầu trang */}
-      <header className="bg-white pb-8 pt-8 sm:pb-12 sm:pt-14 lg:pt-16">
+      <header className="relative overflow-hidden bg-white pb-8 pt-12 sm:pb-12 sm:pt-16 lg:pt-20">
         <div className="x-wrap">
-          <h1 className="text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[2.75rem] lg:text-[3.25rem]">{t("title")}</h1>
-          <p className="mt-3 max-w-[40rem] text-[16px] leading-relaxed text-muted sm:text-[18px]">{t("lead")}</p>
+          <h1 className="x-display max-w-[52rem] text-ink lg:!text-[clamp(3rem,1.6rem+3vw,4.5rem)]">{t("title")}</h1>
+          <p className="x-lead mt-5 max-w-[40rem]">{t("lead")}</p>
           <ul className="mt-5 flex flex-wrap gap-2" aria-label={t("forTitle")}>
             {FOR.map((k) => (
               <li key={k} className="rounded-full bg-porcelain px-3 py-1.5 text-[14px] text-ink/80 ring-1 ring-black/[0.05]">{t(k)}</li>

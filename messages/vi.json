@@ -1083,8 +1083,8 @@
     "ctaContact": "Liên hệ làm website",
     "previewLabel": "Xem trước mẫu {name}",
     "allTemplates": "Xem cả {count} mẫu",
-    "heroTitle": "Chọn ngay 1 website đẹp|cho salon của bạn nhé",
-    "heroLead": "Làm riêng cho salon.",
+    "heroTitle": "Website cho salon,|đẹp như thương hiệu lớn.",
+    "heroLead": "Thiết kế riêng cho salon",
     "galleryKicker": "Thư viện mẫu",
     "galleryTitle": "Mẫu website cho nail, tóc, spa, mi và barbershop",
     "galleryLead": "Mỗi mẫu là một website chạy thật. Bấm để xem demo.",
@@ -1141,7 +1141,17 @@
     "studio": "SalonGo Web Studio",
     "priceLabel": "Từ",
     "previewGroup": "Xem trước mẫu",
-    "showMore": "Xem thêm {count} mẫu"
+    "showMore": "Xem thêm {count} mẫu",
+    "processKicker": "Cách làm",
+    "processTitle": "Từ mẫu đến website thật|trong 4 bước.",
+    "p1t": "Chọn mẫu hoặc gửi ý tưởng",
+    "p1d": "Chọn một mẫu trong thư viện, hoặc kể cho chúng tôi ý tưởng riêng của bạn.",
+    "p2t": "Gửi nội dung",
+    "p2d": "Logo, bảng giá dịch vụ, hình ảnh tiệm và thông tin liên hệ.",
+    "p3t": "Xem bản nháp, góp ý",
+    "p3d": "Bạn xem website trên điện thoại và máy tính, góp ý trước khi đưa lên mạng.",
+    "p4t": "Website lên mạng",
+    "p4d": "Có nút dẫn tới trang đặt lịch SalonGo nếu tiệm đang dùng. Tên miền và hosting được tư vấn riêng."
   },
   "day": {
     "kicker": "Một ngày ở tiệm",
@@ -1629,7 +1639,11 @@
       "fact6": "Dùng trên trình duyệt (điện thoại, iPad), Mac và Windows.",
       "contactTitle": "Cần nói chuyện trực tiếp?",
       "contactLead": "Gọi, nhắn hoặc gửi email, trả lời trong 24 giờ.",
-      "contactCta": "Liên hệ"
+      "contactCta": "Liên hệ",
+      "do6T": "SalonGo Kasa",
+      "do6": "Phần mềm tính tiền trả một lần, cài trên máy tính của tiệm.",
+      "do7T": "Website cho salon",
+      "do7": "SalonGo Web Studio làm website riêng, 35+ mẫu thiết kế."
     },
     "notFound": {
       "title": "Không tìm thấy trang này",

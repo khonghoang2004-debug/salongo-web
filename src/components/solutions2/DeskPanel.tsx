@@ -27,7 +27,7 @@ export function DeskPanel({
       <div className="x-wrap">
         <div className="x-panel grid overflow-hidden bg-plum text-white lg:grid-cols-12">
           <div className="p-7 sm:p-10 lg:col-span-7 lg:p-14">
-            <h2 id={`${id}-title`} className="text-[clamp(1.6rem,1.15rem+1.5vw,2.35rem)] font-semibold leading-[1.15] tracking-[-0.03em] [text-wrap:balance] [:lang(vi)_&]:leading-[1.24]">
+            <h2 id={`${id}-title`} className="x-title">
               {title}
             </h2>
             <p className="mt-4 max-w-[32rem] text-[1.0625rem] leading-relaxed text-white/75">{lead}</p>

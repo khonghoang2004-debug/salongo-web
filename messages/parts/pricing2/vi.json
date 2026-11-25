@@ -10,7 +10,9 @@
     "staffHint": "Bạn làm công cho salon? Bạn không cần mua gói: chủ salon thêm bạn làm nhân viên.",
     "renewTitle": "Đã dùng SalonGo?",
     "renewLead": "Gia hạn trên web. Thanh toán xong, app cập nhật ngay.",
-    "renewCta": "Gia hạn gói"
+    "renewCta": "Gia hạn gói",
+    "kasa": "Tôi chỉ cần máy tính tiền",
+    "kasaPrice": "{kasa} một lần"
   },
   "plans": {
     "title": "Phần mềm quản lý salon giá bao nhiêu?",
@@ -113,5 +115,19 @@
     "a9": "Gói IČO riêng, {priceDesk} Kč/tháng: tính tiền, hoá đơn và EET bằng chứng chỉ của bạn, không có lịch hẹn. Cần lịch hẹn thì đổi sang Basic bất cứ lúc nào.",
     "q10": "Tôi làm công cho salon. Tôi có cần mua gói không?",
     "a10": "Không. Chủ salon thêm bạn làm nhân viên trong app của salon."
+  },
+  "other": {
+    "eyebrow": "Sản phẩm khác",
+    "title": "Không cần thuê bao?|Còn hai lựa chọn.",
+    "kasaTag": "Trả một lần · Windows, macOS",
+    "kasaTitle": "SalonGo Kasa",
+    "kasaDesc": "Phần mềm tính tiền cài trên máy tính của tiệm: tính tiền, in bill, EET 2.0, thu chi. Không có phí tháng.",
+    "kasaPrice": "{kasa} một lần cho 1 máy",
+    "kasaCta": "Kasa là gì?",
+    "studioTag": "Trả một lần · Web Studio",
+    "studioTitle": "Website cho salon",
+    "studioDesc": "Chọn một trong {count} mẫu thiết kế, SalonGo làm xong nội dung, hình ảnh và tên miền cho bạn.",
+    "studioPrice": "từ {price} cho website {pages} trang",
+    "studioCta": "Xem mẫu website"
   }
 }

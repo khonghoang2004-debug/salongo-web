@@ -10,7 +10,9 @@
     "staffHint": "Im Salon angestellt? Sie brauchen keinen Tarif: Der Inhaber fügt Sie als Mitarbeiter hinzu.",
     "renewTitle": "Sie nutzen SalonGo schon?",
     "renewLead": "Verlängern Sie im Web. Nach der Zahlung ist die App sofort aktuell.",
-    "renewCta": "Tarif verlängern"
+    "renewCta": "Tarif verlängern",
+    "kasa": "Ich brauche nur eine Kasse",
+    "kasaPrice": "{kasa} einmalig"
   },
   "plans": {
     "title": "Was kostet eine Salonsoftware?",
@@ -113,5 +115,19 @@
     "a9": "Der Tarif Stuhl, {priceDesk} CZK/Monat: Kasse, Belege und EET mit Ihrem Zertifikat, ohne Kalender. Termine nötig? Wechseln Sie jederzeit zu Basic.",
     "q10": "Ich bin im Salon angestellt. Brauche ich einen Tarif?",
     "a10": "Nein. Der Inhaber fügt Sie als Mitarbeiter im Konto des Salons hinzu."
+  },
+  "other": {
+    "eyebrow": "Weitere Produkte",
+    "title": "Kein Abo gewünscht?|Zwei weitere Optionen.",
+    "kasaTag": "Einmalig · Windows, macOS",
+    "kasaTitle": "SalonGo Kasa",
+    "kasaDesc": "Kassensoftware auf dem Salon-Computer: kassieren, Belege, EET 2.0, Einnahmen und Ausgaben. Keine Monatsgebühr.",
+    "kasaPrice": "{kasa} einmalig pro Computer",
+    "kasaCta": "Was ist Kasa?",
+    "studioTag": "Einmalig · Web Studio",
+    "studioTitle": "Eine Website für Ihren Salon",
+    "studioDesc": "Wählen Sie eine von {count} Vorlagen, SalonGo richtet Texte, Fotos und Domain für Sie ein.",
+    "studioPrice": "ab {price} für eine Website mit {pages} Seiten",
+    "studioCta": "Vorlagen ansehen"
   }
 }

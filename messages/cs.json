@@ -1755,7 +1755,9 @@
       "staffHint": "Jste zaměstnanec salonu? Tarif nepotřebujete: majitel vás přidá jako zaměstnance.",
       "renewTitle": "Už SalonGo používáte?",
       "renewLead": "Tarif prodloužíte na webu. Po zaplacení se aplikace hned aktualizuje.",
-      "renewCta": "Prodloužit tarif"
+      "renewCta": "Prodloužit tarif",
+      "kasa": "Stačí mi pokladna",
+      "kasaPrice": "{kasa} jednorázově"
     },
     "plans": {
       "title": "Kolik stojí rezervační systém pro salon?",
@@ -1858,6 +1860,20 @@
       "a9": "Tarif Křeslo, {priceDesk} Kč/měsíc: pokladna, účtenky a EET s vaším certifikátem, bez kalendáře. Potřebujete rezervace? Kdykoli přejděte na Basic.",
       "q10": "Jsem zaměstnanec salonu. Potřebuji tarif?",
       "a10": "Ne. Majitel vás přidá jako zaměstnance do účtu salonu."
+    },
+    "other": {
+      "eyebrow": "Další produkty",
+      "title": "Nechcete předplatné?|Máte ještě dvě možnosti.",
+      "kasaTag": "Jednorázově · Windows, macOS",
+      "kasaTitle": "SalonGo Kasa",
+      "kasaDesc": "Pokladní software v počítači salonu: účtování, účtenky, EET 2.0, příjmy a výdaje. Bez měsíčního poplatku.",
+      "kasaPrice": "{kasa} jednorázově za 1 počítač",
+      "kasaCta": "Co je Kasa?",
+      "studioTag": "Jednorázově · Web Studio",
+      "studioTitle": "Web pro váš salon",
+      "studioDesc": "Vyberte si z {count} šablon a SalonGo za vás připraví texty, fotky i doménu.",
+      "studioPrice": "od {price} za web o {pages} stránkách",
+      "studioCta": "Prohlédnout šablony"
     }
   },
   "features2": {

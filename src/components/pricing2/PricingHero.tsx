@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { renewLink } from "@/lib/app-links";
+import { kasaPrice } from "@/lib/kasa";
 
 /** Đầu trang Bảng giá: H1, hai lối vào theo người đọc (chủ salon / thợ thuê bàn) và lối Gia hạn cho khách đang dùng. */
 export async function PricingHero() {
@@ -9,6 +10,7 @@ export async function PricingHero() {
   const jumps = [
     { href: "#salon", label: t("salon"), price: t("salonPrice") },
     { href: "#goi-ban", label: t("desk"), price: t("deskPrice") },
+    { href: "#san-pham-khac", label: t("kasa"), price: t("kasaPrice", { kasa: kasaPrice(locale) }) },
   ];
   return (
     <section className="bg-white pb-10 pt-10 sm:pt-10 lg:pb-12 lg:pt-14" aria-labelledby="pricing-title">

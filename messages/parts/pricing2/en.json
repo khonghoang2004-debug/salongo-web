@@ -10,7 +10,9 @@
     "staffHint": "Employed by a salon? You don't need a plan: the owner adds you as staff.",
     "renewTitle": "Already on SalonGo?",
     "renewLead": "Renew on the web. Once you pay, the app updates right away.",
-    "renewCta": "Renew plan"
+    "renewCta": "Renew plan",
+    "kasa": "I only need a till",
+    "kasaPrice": "{kasa} one-time"
   },
   "plans": {
     "title": "How much does salon software cost?",
@@ -113,5 +115,19 @@
     "a9": "The Chair plan, {priceDesk} CZK/month: checkout, receipts and EET with your own certificate, no calendar. Need appointments? Switch to Basic at any time.",
     "q10": "I'm employed by a salon. Do I need a plan?",
     "a10": "No. The owner adds you as staff in the salon's account."
+  },
+  "other": {
+    "eyebrow": "Other products",
+    "title": "No subscription?|Two more options.",
+    "kasaTag": "One-time · Windows, macOS",
+    "kasaTitle": "SalonGo Kasa",
+    "kasaDesc": "Checkout software installed on the salon's computer: payments, receipts, EET 2.0, income and expenses. No monthly fee.",
+    "kasaPrice": "{kasa} one-time per computer",
+    "kasaCta": "What is Kasa?",
+    "studioTag": "One-time · Web Studio",
+    "studioTitle": "A website for your salon",
+    "studioDesc": "Pick one of {count} designs and SalonGo sets up the text, photos and domain for you.",
+    "studioPrice": "from {price} for a {pages}-page website",
+    "studioCta": "See website templates"
   }
 }

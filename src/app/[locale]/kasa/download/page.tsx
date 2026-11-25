@@ -22,6 +22,7 @@ export default async function KasaDownloadPage({ params, searchParams }: Props) 
   setRequestLocale(locale);
   const t = await getTranslations("kasa.download");
   const d = await getTranslations("downloads");
+  const g = await getTranslations("kasa.nav");
   const btn =
     "group flex min-h-[76px] items-center gap-4 rounded-2xl border border-line bg-white px-5 text-left transition-colors hover:border-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700";
   const items = [
@@ -80,6 +81,9 @@ export default async function KasaDownloadPage({ params, searchParams }: Props) 
               </li>
             ))}
           </ol>
+          <Link href="/kasa#huong-dan" className="x-link mt-5">
+            {g("guide")}
+          </Link>
 
           <p className="mt-8 text-[15px] text-muted">
             {t("noKey")}{" "}

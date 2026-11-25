@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageShell } from "@/components/PageShell";
 import { KasaCompare, KasaFeatures, KasaHero } from "@/components/kasa/KasaSections";
+import { KasaAnchorNav, KasaBuySteps, KasaInstallGuide, KasaPick, KasaWhat } from "@/components/kasa/KasaGuide";
 import { FaqList } from "@/components/pricing2/FaqList";
 import { pageMetadata, pageUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/metadata";
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ locale, path: PATH, title: t("title"), description: t("desc", { price: kasaPrice(locale) }), absolute: true });
 }
 
-/** SalonGo Kasa: one-time-purchase desktop POS. Hero, 6 tiles, Kasa vs SalonGo table, short FAQ. */
+/** SalonGo Kasa: hero, jump links, what Kasa is, features, Kasa vs SalonGo, how to buy, step-by-step install guide, FAQ. */
 export default async function KasaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -63,8 +64,13 @@ export default async function KasaPage({ params }: Props) {
     <PageShell cta={false}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
       <KasaHero />
+      <KasaAnchorNav />
+      <KasaWhat />
       <KasaFeatures />
+      <KasaPick />
       <KasaCompare />
+      <KasaBuySteps />
+      <KasaInstallGuide />
       <FaqList id="faq" title={t("faq.title")} items={faq} />
     </PageShell>
   );

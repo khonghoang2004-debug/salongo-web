@@ -4,7 +4,7 @@
     "desc": "Stáhněte si SalonGo pro Mac, Windows, iPhone a iPad a SalonGo Kasu (pokladna s jednorázovou platbou) pro Mac a Windows. Ke stažení zdarma."
   },
   "title": "Stáhnout aplikaci",
-  "lead": "Vyberte produkt a zařízení. Stažení je zdarma.",
+  "lead": "Vyberte aplikaci a zařízení. Stažení je zdarma.",
   "salongo": {
     "name": "SalonGo",
     "tag": "Rezervace, pokladna, EET, příjmy a výdaje, mzdy. Jeden účet na všech zařízeních.",
@@ -14,7 +14,7 @@
   },
   "kasa": {
     "name": "SalonGo Kasa",
-    "tag": "Pokladna pro nehtová studia, jednorázová platba, data zůstávají v počítači salonu. Aktivace licenčním kódem.",
+    "tag": "Pokladna pro nehtová studia, koupíte jednou a máte napořád, data zůstávají v počítači salonu. Aktivujete ji kódem od SalonGo.",
     "more": "Více o SalonGo Kase",
     "buy": "Koupit licenci"
   },
@@ -26,6 +26,6 @@
   "winNote": ".exe · Windows 10, 11",
   "macArm": "Mac Apple M1–M4",
   "macIntel": "Mac Intel",
-  "help": "Potřebujete pomoc s instalací? Napište SalonGo, odpovíme česky nebo vietnamsky.",
+  "help": "Něco nejde nebo se chcete zeptat? Napište SalonGo, odpovíme česky nebo vietnamsky.",
   "contact": "Kontakt"
 }

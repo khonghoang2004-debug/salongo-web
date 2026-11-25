@@ -2261,42 +2261,42 @@
     "hero": {
       "pill": "Ready for EET 2.0 from 1 Jan 2027",
       "title": "SalonGo Kasa",
-      "lead": "A till for nail salons: pay once, runs on your own computer.",
-      "once": "one-time",
+      "lead": "Checkout software for nail salons that you buy once and keep. It runs on the salon's own computer and keeps selling even offline.",
+      "once": "one-time, no monthly fee",
       "platforms": "Windows · macOS",
       "buy": "Buy Kasa",
       "download": "Download Kasa",
-      "fact1": "Data on your computer",
-      "fact2": "Encrypted backup every day",
-      "fact3": "1 licence = 1 computer",
+      "fact1": "Your data stays on the salon's computer",
+      "fact2": "Automatic backup every day",
+      "fact3": "One code = one computer",
       "alt": "SalonGo checkout screen",
       "buyContact": "Contact to buy"
     },
     "features": {
-      "title": "What Kasa does",
+      "title": "How Kasa helps your salon",
       "checkout": {
-        "t": "Checkout & receipts",
-        "d": "Invoices, 80 mm thermal printing."
+        "t": "Checkout and receipts",
+        "d": "Pick the service and the technician, take payment and the receipt prints right away."
       },
       "eet": {
         "t": "EET 2.0",
-        "d": "Sales reporting under the 2027 law."
+        "d": "Sends sales under the new 2027 law, nothing for you to worry about."
       },
       "thuchi": {
-        "t": "Income & expenses",
-        "d": "Costs, income, profit. CSV, Excel, PDF export."
+        "t": "Income and expenses",
+        "d": "See what came in, what went out and what you kept today."
       },
       "services": {
-        "t": "Services & prices",
-        "d": "Your price list, edit any time."
+        "t": "Services and prices",
+        "d": "Your price list, change it whenever you like."
       },
       "staff": {
-        "t": "Staff & revenue",
-        "d": "How much each person made."
+        "t": "Earnings per technician",
+        "d": "See what each technician earned, so payroll is easy."
       },
       "customers": {
-        "t": "Customers",
-        "d": "Name, phone, last visit."
+        "t": "Regular clients",
+        "d": "Name, phone and their last visit."
       }
     },
     "compare": {
@@ -2318,17 +2318,17 @@
       "goLink": "See SalonGo"
     },
     "faq": {
-      "title": "Quick questions",
+      "title": "Common questions",
       "q1": "How is Kasa different from SalonGo?",
-      "a1": "Kasa is only the till and the books, on one computer, paid once. For appointments, online booking or phones, choose SalonGo.",
-      "q2": "Does it work offline?",
-      "a2": "Yes. Kasa takes payments and prints receipts offline and sends EET once you are back online.",
+      "a1": "Kasa is for salons that only need checkout and bookkeeping on one computer, pay once and you're done. If you want appointments, online booking or to work from your phone, SalonGo is the better fit.",
+      "q2": "Can I sell without internet?",
+      "a2": "Yes. Kasa takes payments and prints receipts offline, and EET sends itself once you're back online.",
       "q3": "Where is my data?",
-      "a3": "On your salon's computer. Kasa makes an encrypted backup every day to a USB drive or a Google Drive folder.",
+      "a3": "Right on your salon's computer. Kasa backs up every day to a USB stick or a Google Drive folder.",
       "q4": "What if I change computers?",
-      "a4": "1 licence is for 1 computer. Message support and we move the licence to the new one.",
+      "a4": "No problem. Call or message SalonGo, we move your code to the new computer and your data stays.",
       "q5": "Is there a monthly fee?",
-      "a5": "No. One-time {price} per computer."
+      "a5": "No. You pay {price} once per computer and that's it."
     },
     "buy": {
       "title": "Buy SalonGo Kasa",
@@ -2361,8 +2361,8 @@
       "message": "Message",
       "bankNote": "Once the payment arrives, we e-mail your licence key.",
       "fallback": "The payment page could not open. Please try later.",
-      "contactLead": "Call or message SalonGo to buy. Once the payment arrives, we send your KASA-… licence code and help you install.",
-      "hours": "We answer in Czech, Vietnamese or English.",
+      "contactLead": "Just call or message SalonGo. Once the payment arrives we send your KASA-… code and help you install.",
+      "hours": "We answer in Czech, Vietnamese or English, usually the same day.",
       "contactCall": "Call",
       "contactWhatsapp": "WhatsApp",
       "contactFacebook": "Facebook",
@@ -2370,21 +2370,21 @@
     },
     "download": {
       "title": "Download SalonGo Kasa",
-      "lead": "The download is free; Kasa is activated with a licence code.",
+      "lead": "Free to download, enter your licence code and you're ready to go.",
       "mac": "Mac (Apple M1–M4)",
       "win": "Windows",
       "macFile": ".dmg · macOS 11 or later",
       "winFile": ".exe · Windows 10 and 11",
-      "steps": "Install",
-      "s1": "Download the installer for your computer and open it.",
-      "s2": "macOS: drag Kasa to Applications. Windows: click Install.",
-      "s3": "Open Kasa, enter the licence code and set a PIN. Salon name and IČO can be added later.",
-      "key": "Your licence code (KASA-XXXX-XXXX-XXXX-XXXX) is sent by SalonGo after purchase. One code = one computer.",
-      "noKey": "No licence yet?",
-      "buy": "Buy Kasa",
+      "steps": "Install in 3 steps",
+      "s1": "Pick the installer for your computer and open the downloaded file.",
+      "s2": "Mac: drag Kasa into Applications. Windows: click Install.",
+      "s3": "Open Kasa, enter the licence code and set a PIN. Salon name and IČO can wait.",
+      "key": "Your licence code looks like KASA-XXXX-XXXX-XXXX-XXXX and SalonGo sends it when you buy. One code = one computer.",
+      "noKey": "No code yet?",
+      "buy": "Contact SalonGo",
       "macIntel": "Mac (Intel)",
       "macIntelFile": ".dmg · Macs before 2021",
-      "soon": "The installer is being updated. Contact SalonGo and we will send you the download link right away.",
+      "soon": "The installer is being updated. Message SalonGo and we'll send you the download link right away.",
       "which": "Not sure which Mac you have? Click the Apple menu → About This Mac: “Chip Apple M…” is Apple, “Intel” is Intel."
     },
     "thanks": {
@@ -2399,7 +2399,7 @@
       "desc": "Download SalonGo for Mac, Windows, iPhone and iPad, and SalonGo Kasa (one-time-purchase POS) for Mac and Windows. Free to download."
     },
     "title": "Download",
-    "lead": "Pick your product and device. Downloads are free.",
+    "lead": "Pick the app and the device you use. Downloads are free.",
     "salongo": {
       "name": "SalonGo",
       "tag": "Booking, checkout, EET, income and expenses, payroll. One account on every device.",
@@ -2409,7 +2409,7 @@
     },
     "kasa": {
       "name": "SalonGo Kasa",
-      "tag": "POS for nail salons, one-time purchase, data stays on the salon's computer. Activated with a licence code.",
+      "tag": "Checkout software for nail salons, buy once and keep it, your data stays on the salon's computer. Activated with a code from SalonGo.",
       "more": "About SalonGo Kasa",
       "buy": "Buy a licence"
     },
@@ -2421,7 +2421,7 @@
     "winNote": ".exe · Windows 10, 11",
     "macArm": "Mac Apple M1–M4",
     "macIntel": "Mac Intel",
-    "help": "Need help installing? Contact SalonGo, we answer in Czech, Vietnamese or English.",
+    "help": "Stuck or have a question? Message SalonGo, we answer in Czech, Vietnamese or English.",
     "contact": "Contact"
   }
 }

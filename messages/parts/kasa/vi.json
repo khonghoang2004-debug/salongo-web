@@ -9,46 +9,46 @@
   "hero": {
     "pill": "Sẵn sàng cho EET 2.0 từ 1.1.2027",
     "title": "SalonGo Kasa",
-    "lead": "Máy tính tiền cho tiệm nail: trả một lần, chạy trên máy của bạn.",
-    "once": "trả một lần",
+    "lead": "Phần mềm tính tiền cho tiệm nail, mua một lần là dùng mãi. Cài trên máy tính của tiệm, mất mạng vẫn bán được.",
+    "once": "mua một lần, không phí tháng",
     "platforms": "Windows · macOS",
     "buy": "Mua Kasa",
     "download": "Tải Kasa",
-    "fact1": "Dữ liệu ở máy của tiệm",
-    "fact2": "Sao lưu mã hoá mỗi ngày",
-    "fact3": "1 giấy phép = 1 máy tính",
+    "fact1": "Dữ liệu nằm ngay trên máy của tiệm",
+    "fact2": "Tự sao lưu mỗi ngày",
+    "fact3": "Mỗi mã dùng cho 1 máy tính",
     "alt": "Màn tính tiền của SalonGo",
     "buyContact": "Liên hệ mua"
   },
   "features": {
-    "title": "Kasa làm gì",
+    "title": "Kasa giúp tiệm bạn những gì",
     "checkout": {
-      "t": "Tính tiền, in hoá đơn",
-      "d": "Hoá đơn, in giấy nhiệt 80 mm."
+      "t": "Tính tiền, in bill",
+      "d": "Chọn dịch vụ, chọn thợ, bấm thanh toán là in bill ngay."
     },
     "eet": {
       "t": "EET 2.0",
-      "d": "Gửi doanh thu theo luật mới từ 2027."
+      "d": "Tự gửi doanh thu theo luật mới từ 2027, bạn không phải lo."
     },
     "thuchi": {
       "t": "Thu & Chi",
-      "d": "Chi phí, thu, lãi. Xuất CSV, Excel, PDF."
+      "d": "Xem hôm nay thu bao nhiêu, chi bao nhiêu, lãi bao nhiêu."
     },
     "services": {
-      "t": "Dịch vụ & giá",
-      "d": "Bảng giá của tiệm, sửa lúc nào cũng được."
+      "t": "Dịch vụ & bảng giá",
+      "d": "Bảng giá của tiệm, đổi giá lúc nào cũng được."
     },
     "staff": {
-      "t": "Thợ & doanh thu thợ",
-      "d": "Mỗi thợ làm được bao nhiêu."
+      "t": "Doanh thu từng thợ",
+      "d": "Biết mỗi thợ làm được bao nhiêu để tính lương cho dễ."
     },
     "customers": {
-      "t": "Khách hàng",
-      "d": "Tên, số điện thoại, lần đến gần nhất."
+      "t": "Khách quen",
+      "d": "Lưu tên, số điện thoại và lần cuối khách đến tiệm."
     }
   },
   "compare": {
-    "title": "Kasa hay SalonGo?",
+    "title": "Nên chọn Kasa hay SalonGo?",
     "price": "Giá",
     "priceKasa": "Một lần",
     "priceGo": "Hàng tháng",
@@ -66,17 +66,17 @@
     "goLink": "Xem SalonGo"
   },
   "faq": {
-    "title": "Hỏi nhanh",
+    "title": "Câu hỏi hay gặp",
     "q1": "Kasa khác SalonGo thế nào?",
-    "a1": "Kasa chỉ tính tiền và sổ sách, chạy trên một máy tính, trả một lần. Cần lịch hẹn, đặt lịch online hay dùng điện thoại thì chọn SalonGo.",
-    "q2": "Mất mạng có bán được không?",
-    "a2": "Được. Kasa tính tiền và in hoá đơn không cần mạng, EET gửi khi có mạng lại.",
+    "a1": "Kasa dành cho tiệm chỉ cần tính tiền và sổ sách trên một máy tính, mua một lần là xong. Nếu tiệm cần lịch hẹn, khách tự đặt lịch online hay dùng trên điện thoại thì SalonGo sẽ hợp hơn.",
+    "q2": "Mất mạng có tính tiền được không?",
+    "a2": "Được chứ. Kasa tính tiền và in bill bình thường khi mất mạng, có mạng lại thì EET tự gửi đi.",
     "q3": "Dữ liệu lưu ở đâu?",
-    "a3": "Trên máy tính của tiệm. Mỗi ngày Kasa sao lưu mã hoá vào USB hoặc thư mục Google Drive.",
+    "a3": "Ngay trên máy tính của tiệm bạn. Mỗi ngày Kasa tự sao lưu vào USB hoặc thư mục Google Drive để bạn yên tâm.",
     "q4": "Đổi máy tính mới thì sao?",
-    "a4": "1 giấy phép dùng cho 1 máy. Nhắn hỗ trợ, chúng tôi chuyển giấy phép sang máy mới.",
+    "a4": "Không sao cả. Bạn gọi hoặc nhắn SalonGo, chúng tôi chuyển mã sang máy mới và dữ liệu vẫn giữ nguyên.",
     "q5": "Có phí hằng tháng không?",
-    "a5": "Không. Trả một lần {price} cho một máy."
+    "a5": "Không có. Bạn trả một lần {price} cho một máy và dùng luôn."
   },
   "buy": {
     "title": "Mua SalonGo Kasa",
@@ -109,8 +109,8 @@
     "message": "Nội dung",
     "bankNote": "Khi tiền về, mã giấy phép gửi tới e-mail của bạn.",
     "fallback": "Không mở được trang thanh toán. Thử lại sau.",
-    "contactLead": "Gọi hoặc nhắn tin cho SalonGo để mua. Sau khi nhận tiền, SalonGo gửi bạn mã giấy phép KASA-… và giúp cài đặt.",
-    "hours": "Trả lời bằng tiếng Việt hoặc tiếng Séc.",
+    "contactLead": "Bạn gọi hoặc nhắn cho SalonGo là được. Khi nhận tiền xong, chúng tôi gửi mã KASA-… và giúp bạn cài đặt luôn.",
+    "hours": "Trả lời bằng tiếng Việt hoặc tiếng Séc, thường trong ngày.",
     "contactCall": "Gọi",
     "contactWhatsapp": "WhatsApp",
     "contactFacebook": "Facebook",
@@ -118,21 +118,21 @@
   },
   "download": {
     "title": "Tải SalonGo Kasa",
-    "lead": "Tải bản cài miễn phí, kích hoạt bằng mã giấy phép.",
+    "lead": "Tải về miễn phí, nhập mã giấy phép là dùng được ngay.",
     "mac": "Mac (Apple M1–M4)",
     "win": "Windows",
     "macFile": ".dmg · macOS 11 trở lên",
     "winFile": ".exe · Windows 10 và 11",
-    "steps": "Cài đặt",
-    "s1": "Tải bản cài cho máy của bạn và mở file.",
-    "s2": "macOS: kéo Kasa vào Ứng dụng. Windows: bấm Cài đặt.",
-    "s3": "Mở Kasa, nhập mã giấy phép, đặt mã PIN. Tên tiệm, IČO có thể điền sau.",
-    "key": "Mã giấy phép dạng KASA-XXXX-XXXX-XXXX-XXXX, SalonGo gửi cho bạn sau khi mua. Mỗi mã dùng cho 1 máy.",
-    "noKey": "Chưa có giấy phép?",
-    "buy": "Mua Kasa",
+    "steps": "Cài trong 3 bước",
+    "s1": "Chọn bản cài hợp với máy của bạn và mở file vừa tải.",
+    "s2": "Mac: kéo Kasa vào thư mục Ứng dụng. Windows: bấm Cài đặt.",
+    "s3": "Mở Kasa, nhập mã giấy phép và đặt mã PIN. Tên tiệm, IČO điền sau cũng được.",
+    "key": "Mã giấy phép có dạng KASA-XXXX-XXXX-XXXX-XXXX, SalonGo gửi cho bạn khi mua. Mỗi mã dùng cho 1 máy.",
+    "noKey": "Chưa có mã?",
+    "buy": "Liên hệ SalonGo",
     "macIntel": "Mac (Intel)",
     "macIntelFile": ".dmg · Mac đời trước 2021",
-    "soon": "Bản cài đang được cập nhật. Liên hệ SalonGo để nhận link tải ngay.",
+    "soon": "Bản cài đang được cập nhật. Bạn nhắn SalonGo, chúng tôi gửi link tải ngay.",
     "which": "Không biết Mac của bạn là loại nào? Bấm menu Apple → Giới thiệu về máy Mac: dòng “Chip Apple M…” là Apple, “Intel” là Intel."
   },
   "thanks": {

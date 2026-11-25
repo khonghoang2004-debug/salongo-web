@@ -2261,42 +2261,42 @@
     "hero": {
       "pill": "Připraveno na EET 2.0 od 1. 1. 2027",
       "title": "SalonGo Kasa",
-      "lead": "Pokladna pro nehtová studia: zaplatíte jednou, běží ve vašem počítači.",
-      "once": "jednorázově",
+      "lead": "Pokladna pro nehtová studia, kterou koupíte jednou a máte napořád. Běží přímo v počítači salonu, prodává i bez internetu.",
+      "once": "jednorázově, bez měsíčních poplatků",
       "platforms": "Windows · macOS",
       "buy": "Koupit Kasu",
       "download": "Stáhnout Kasu",
-      "fact1": "Data ve vašem počítači",
-      "fact2": "Šifrovaná záloha každý den",
-      "fact3": "1 licence = 1 počítač",
+      "fact1": "Data zůstávají v počítači salonu",
+      "fact2": "Automatická záloha každý den",
+      "fact3": "Jeden kód = 1 počítač",
       "alt": "Pokladna v SalonGo",
       "buyContact": "Koupit přes kontakt"
     },
     "features": {
-      "title": "Co Kasa umí",
+      "title": "S čím vám Kasa pomůže",
       "checkout": {
         "t": "Pokladna a účtenky",
-        "d": "Doklady, tisk na 80mm termotiskárnu."
+        "d": "Vyberete službu a pracovnici, zaplatíte a účtenka se hned vytiskne."
       },
       "eet": {
         "t": "EET 2.0",
-        "d": "Evidence tržeb podle zákona od roku 2027."
+        "d": "Tržby odesílá podle nového zákona od 2027, nemusíte nic řešit."
       },
       "thuchi": {
         "t": "Příjmy a výdaje",
-        "d": "Výdaje, příjmy, zisk. Export CSV, Excel, PDF."
+        "d": "Kolik jste dnes vydělali, utratili a kolik zbylo."
       },
       "services": {
-        "t": "Služby a ceny",
-        "d": "Ceník salonu, upravíte kdykoli."
+        "t": "Služby a ceník",
+        "d": "Ceník salonu můžete kdykoli upravit."
       },
       "staff": {
-        "t": "Zaměstnanci a tržby",
-        "d": "Kolik kdo vydělal."
+        "t": "Tržby pracovnic",
+        "d": "Uvidíte, kolik která pracovnice vydělala, mzdy pak spočítáte snadno."
       },
       "customers": {
-        "t": "Zákazníci",
-        "d": "Jméno, telefon, poslední návštěva."
+        "t": "Stálí zákazníci",
+        "d": "Jméno, telefon a kdy byla zákaznice naposledy."
       }
     },
     "compare": {
@@ -2320,15 +2320,15 @@
     "faq": {
       "title": "Časté otázky",
       "q1": "Čím se Kasa liší od SalonGo?",
-      "a1": "Kasa je jen pokladna a evidence, běží na jednom počítači a platí se jednou. Pro rezervace, online objednávky nebo telefon zvolte SalonGo.",
-      "q2": "Funguje bez internetu?",
-      "a2": "Ano. Kasa účtuje a tiskne i bez připojení, EET odešle, jakmile je internet zpět.",
+      "a1": "Kasa je pro salony, kterým stačí pokladna a přehled na jednom počítači, zaplatíte jednou a hotovo. Pokud chcete rezervace, online objednávání nebo práci z telefonu, sedne vám lépe SalonGo.",
+      "q2": "Prodám i bez internetu?",
+      "a2": "Ano. Kasa účtuje a tiskne i offline, EET se odešle samo, jakmile je zase internet.",
       "q3": "Kde jsou data uložená?",
-      "a3": "Ve vašem počítači. Kasa je každý den šifrovaně zálohuje na USB nebo do složky Google Drive.",
+      "a3": "Přímo v počítači vašeho salonu. Kasa každý den sama zálohuje na USB nebo do složky Google Drive.",
       "q4": "Co když vyměním počítač?",
-      "a4": "1 licence platí pro 1 počítač. Napište podpoře a licenci převedeme na nový počítač.",
+      "a4": "Žádný problém. Zavolejte nebo napište SalonGo, kód přesuneme na nový počítač a data zůstanou.",
       "q5": "Platí se něco měsíčně?",
-      "a5": "Ne. Jednorázově {price} za jeden počítač."
+      "a5": "Ne. Zaplatíte jednou {price} za jeden počítač a používáte."
     },
     "buy": {
       "title": "Koupit SalonGo Kasa",
@@ -2361,8 +2361,8 @@
       "message": "Zpráva pro příjemce",
       "bankNote": "Po připsání platby vám pošleme licenční klíč e-mailem.",
       "fallback": "Platební stránku se nepodařilo otevřít. Zkuste to později.",
-      "contactLead": "Zavolejte nebo napište SalonGo. Po přijetí platby vám pošleme licenční kód KASA-… a pomůžeme s instalací.",
-      "hours": "Odpovídáme česky nebo vietnamsky.",
+      "contactLead": "Stačí zavolat nebo napsat SalonGo. Po přijetí platby vám pošleme kód KASA-… a pomůžeme s instalací.",
+      "hours": "Odpovídáme česky nebo vietnamsky, obvykle ještě týž den.",
       "contactCall": "Zavolat",
       "contactWhatsapp": "WhatsApp",
       "contactFacebook": "Facebook",
@@ -2370,21 +2370,21 @@
     },
     "download": {
       "title": "Stáhnout SalonGo Kasa",
-      "lead": "Instalace je zdarma, aktivuje se licenčním kódem.",
+      "lead": "Stažení je zdarma, po zadání licenčního kódu můžete hned začít.",
       "mac": "Mac (Apple M1–M4)",
       "win": "Windows",
       "macFile": ".dmg · macOS 11 a novější",
       "winFile": ".exe · Windows 10 a 11",
-      "steps": "Instalace",
-      "s1": "Stáhněte instalátor pro svůj počítač a otevřete ho.",
-      "s2": "macOS: přetáhněte Kasu do Aplikací. Windows: klikněte na Instalovat.",
-      "s3": "Spusťte Kasu, zadejte licenční kód a nastavte PIN. Název salonu a IČO můžete vyplnit později.",
-      "key": "Licenční kód ve tvaru KASA-XXXX-XXXX-XXXX-XXXX vám SalonGo pošle po nákupu. Jeden kód = 1 počítač.",
-      "noKey": "Ještě nemáte licenci?",
-      "buy": "Koupit Kasu",
+      "steps": "Instalace ve 3 krocích",
+      "s1": "Vyberte instalátor pro svůj počítač a otevřete stažený soubor.",
+      "s2": "Mac: přetáhněte Kasu do Aplikací. Windows: klikněte na Instalovat.",
+      "s3": "Spusťte Kasu, zadejte licenční kód a nastavte PIN. Název salonu a IČO doplníte klidně později.",
+      "key": "Licenční kód ve tvaru KASA-XXXX-XXXX-XXXX-XXXX vám SalonGo pošle při nákupu. Jeden kód = 1 počítač.",
+      "noKey": "Ještě nemáte kód?",
+      "buy": "Napište SalonGo",
       "macIntel": "Mac (Intel)",
       "macIntelFile": ".dmg · Mac před rokem 2021",
-      "soon": "Instalační soubor se právě aktualizuje. Napište SalonGo a odkaz ke stažení pošleme hned.",
+      "soon": "Instalátor se právě aktualizuje. Napište SalonGo a odkaz ke stažení pošleme hned.",
       "which": "Nevíte, jaký máte Mac? Klikněte na menu Apple → O tomto Macu: „Čip Apple M…“ = Apple, „Intel“ = Intel."
     },
     "thanks": {
@@ -2399,7 +2399,7 @@
       "desc": "Stáhněte si SalonGo pro Mac, Windows, iPhone a iPad a SalonGo Kasu (pokladna s jednorázovou platbou) pro Mac a Windows. Ke stažení zdarma."
     },
     "title": "Stáhnout aplikaci",
-    "lead": "Vyberte produkt a zařízení. Stažení je zdarma.",
+    "lead": "Vyberte aplikaci a zařízení. Stažení je zdarma.",
     "salongo": {
       "name": "SalonGo",
       "tag": "Rezervace, pokladna, EET, příjmy a výdaje, mzdy. Jeden účet na všech zařízeních.",
@@ -2409,7 +2409,7 @@
     },
     "kasa": {
       "name": "SalonGo Kasa",
-      "tag": "Pokladna pro nehtová studia, jednorázová platba, data zůstávají v počítači salonu. Aktivace licenčním kódem.",
+      "tag": "Pokladna pro nehtová studia, koupíte jednou a máte napořád, data zůstávají v počítači salonu. Aktivujete ji kódem od SalonGo.",
       "more": "Více o SalonGo Kase",
       "buy": "Koupit licenci"
     },
@@ -2421,7 +2421,7 @@
     "winNote": ".exe · Windows 10, 11",
     "macArm": "Mac Apple M1–M4",
     "macIntel": "Mac Intel",
-    "help": "Potřebujete pomoc s instalací? Napište SalonGo, odpovíme česky nebo vietnamsky.",
+    "help": "Něco nejde nebo se chcete zeptat? Napište SalonGo, odpovíme česky nebo vietnamsky.",
     "contact": "Kontakt"
   }
 }

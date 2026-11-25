@@ -61,7 +61,7 @@ export const de: LegalPack = {
         {
           heading: "5. Testzeitraum",
           body: [
-            "Jeder neue Salon und jede neue Filiale erhält einen kostenlosen Testzeitraum in der bei der Registrierung angezeigten Länge (derzeit 150 Tage) mit allen Funktionen und ohne Karte.",
+            "Jeder neue Salon und jede neue Filiale erhält einen kostenlosen Testzeitraum in der bei der Registrierung angezeigten Länge (derzeit 60 Tage) mit allen Funktionen und ohne Karte.",
             "Nach Ablauf ist für die weitere Nutzung ein kostenpflichtiger Tarif erforderlich. Ohne Zahlung kann SalonGo den Zugang zu Funktionen einschränken; die Daten bleiben nach Abschnitt 14 gespeichert.",
             "SalonGo kann Länge und Bedingungen des Testzeitraums für neue Registrierungen jederzeit ändern. Ein laufender Testzeitraum wird dadurch nicht verkürzt.",
           ],

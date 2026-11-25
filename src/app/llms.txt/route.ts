@@ -60,7 +60,7 @@ const OTHER = `- [Facebook page](https://www.facebook.com/people/SalonGo/6158376
 const answers = (low: number, trialDays: number) => `## Quick answers
 - What is SalonGo? Salon management software (booking, calendar, checkout, Czech EET 2.0, payroll, reports) for nail, hair, lash and beauty salons in Europe, made for Vietnamese-run salons in Czechia.
 - Who makes it? SalonGo, operated by Nguyen Đuc Hoang Khong (sole trader, IČO 30241464), Svornosti 189, 252 42 Jesenice, Czech Republic.
-- How much does it cost? From ${low} CZK per month; ${trialDays}-day free trial, no card needed. All features are in every plan.
+- How much does it cost? From ${low} CZK per month; ${trialDays}-day free trial, no card needed. Plans differ in staff, locations and email marketing.
 - Does it support Czech EET 2.0 (mandatory from 1 January 2027)? Yes, included in every plan at no extra cost; set up in 2 steps with the DIS+ certificate. No extra cash register hardware is needed.
 - Is the app in Vietnamese? Yes. The salon app is in Vietnamese, Czech, Slovak, English, German and French; the client booking page is in Czech, Slovak, English, German and French. Support by phone/email in Vietnamese and Czech.
 - Does it work on a phone? Yes, in the phone browser; desktop apps for Windows and macOS; an iPhone and iPad sign-in app is on the App Store (https://apps.apple.com/app/salongo/id6831757876).

@@ -45,15 +45,15 @@ test("sai hợp đồng → null (dùng giá dự phòng)", () => {
   }
 });
 
-test("trialDays thiếu → 150; gói lạ bị bỏ qua", () => {
+test("trialDays thiếu → 60; gói lạ bị bỏ qua", () => {
   const r = mapPlansResponse({ ...ok, trialDays: undefined, plans: [...ok.plans, { ...ok.plans[0], code: "GOLD" }] });
-  assert.equal(r.trialDays, 150);
+  assert.equal(r.trialDays, 60);
   assert.equal(r.plans.length, 3);
 });
 
 test("giá dự phòng = bảng giá hiện tại trên web", () => {
   assert.equal(FALLBACK_PLANS.source, "fallback");
-  assert.equal(FALLBACK_PLANS.trialDays, 150);
+  assert.equal(FALLBACK_PLANS.trialDays, 60);
   assert.deepEqual(FALLBACK_PLANS.plans.map((p) => [p.code, p.monthly, p.yearly, p.staff, p.branches, p.highlighted]), [
     ["BASIC", 199, 2149, 3, 1, false],
     ["PRO", 499, 5389, 8, 3, true],
@@ -90,7 +90,7 @@ test("loadPlans: chưa từng tải được — lúc build dùng dự phòng, l
 
 test("điền số liệu vào văn bản; không có giảm giá năm thì bỏ đoạn [[discount:…]]", () => {
   const t = planTokens(FALLBACK_PLANS, "en");
-  assert.equal(fillPlanText("{days} days, from {from} CZK.[[discount: Save {discount}%.]] Pro {staffPro}/{branchesPro}", t), "150 days, from 199 CZK. Save 10%. Pro 8/3");
+  assert.equal(fillPlanText("{days} days, from {from} CZK.[[discount: Save {discount}%.]] Pro {staffPro}/{branchesPro}", t), "60 days, from 199 CZK. Save 10%. Pro 8/3");
   const noDisc = mapPlansResponse({ ...ok, plans: ok.plans.map((p) => ({ ...p, yearlyPriceCents: null, yearlyDiscountPct: null })) });
   const t2 = planTokens(noDisc, "cs");
   assert.equal(fillPlanText("Ceník.[[discount: Ročně sleva {discount} %.]] {days} dní", t2), "Ceník. 120 dní");

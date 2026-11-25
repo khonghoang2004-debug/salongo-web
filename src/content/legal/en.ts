@@ -61,7 +61,7 @@ export const en: LegalPack = {
         {
           heading: "5. Free trial",
           body: [
-            "Each new salon and each new branch receives a free trial of the length shown at sign-up (currently 150 days) with all features and no card required.",
+            "Each new salon and each new branch receives a free trial of the length shown at sign-up (currently 60 days) with all features and no card required.",
             "After the trial, a paid plan is required for further use. Without payment, SalonGo may restrict access to features; data is kept as described in section 14.",
             "SalonGo may change the length and conditions of the trial for new registrations at any time. This does not shorten a trial already running.",
           ],

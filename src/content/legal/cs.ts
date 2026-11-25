@@ -64,7 +64,7 @@ export const cs: LegalPack = {
         {
           heading: "5. Zkušební doba",
           body: [
-            "Každý nový Salon a každá nová pobočka získá bezplatnou zkušební dobu v délce zobrazené při registraci (nyní 150 dní) se všemi funkcemi, bez platební karty.",
+            "Každý nový Salon a každá nová pobočka získá bezplatnou zkušební dobu v délce zobrazené při registraci (nyní 60 dní) se všemi funkcemi, bez platební karty.",
             "Po skončení zkušební doby je pro další užívání nutné zaplatit tarif. Bez zaplacení může SalonGo přístup k funkcím omezit; data zůstávají uložena podle článku 14.",
             "SalonGo může délku a podmínky zkušební doby pro nové registrace kdykoli změnit. Již běžící zkušební dobu to nezkracuje.",
           ],

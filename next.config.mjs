@@ -32,9 +32,9 @@ const onVercel = Boolean(process.env.VERCEL);
 const preview = (...src) => (isPreview ? src : []);
 // Stripe Embedded Checkout (hosting payment on /website/thanh-toan): js.stripe.com script + iframes, api.stripe.com calls.
 const STRIPE = { script: ["https://js.stripe.com"], frame: ["https://js.stripe.com", "https://checkout.stripe.com", "https://hooks.stripe.com"], connect: ["https://api.stripe.com", "https://checkout.stripe.com"] };
-// SalonGo Kasa installers + auto-update feed: static files in public/kasa/updates/<mac|win>/ (see the README there).
-// Short stable links /kasa/download/mac|win → newest installer (302, so the target can change with each release).
-const KASA_INSTALLER = { mac: "/kasa/updates/mac/SalonGo-Kasa-latest.dmg", win: "/kasa/updates/win/SalonGo-Kasa-latest.exe" };
+// SalonGo Kasa installers: GitHub releases of khonghoang2004-debug/salongo-kasa-releases via /api/download/kasa/<os>.
+// Short stable links /kasa/download/mac|mac-intel|win → newest installer (302, so the target can change with each release).
+const KASA_INSTALLER = { mac: "/api/download/kasa/mac-arm64", "mac-intel": "/api/download/kasa/mac-x64", win: "/api/download/kasa/windows" };
 const HOSTING_SHORT = { 299: "plan=basic&cycle=m", 2999: "plan=basic&cycle=y", 999: "plan=pro&cycle=m", 9999: "plan=pro&cycle=y" };
 const CSP = [
   ["default-src", "'self'"],

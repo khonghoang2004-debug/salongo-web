@@ -9,7 +9,7 @@ const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const SITE = "https://www.salongo.eu";
 const LOCALES = ["vi", "en", "cs", "de"];
 // Giống SITEMAP_PATHS (src/app/sitemap.ts); test sitemap bên dưới so sánh chính xác hai danh sách
-const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/goi-ban", "/kasa", "/eet-2-0", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
+const PATHS = ["", "/tinh-nang", "/phan-mem-quan-ly-salon", "/giai-phap", "/bang-gia", "/goi-ban", "/kasa", "/kasa/download", "/tai-app", "/eet-2-0", "/ve-salongo", "/faq", "/lien-he", "/website", "/privacy", "/terms", "/cookies", "/dpa", "/website-terms"];
 const PRIMARY = { headers: { host: "www.salongo.eu" } };
 // Đổi header Host chỉ có ý nghĩa với server chạy local (trên Vercel, Host chọn project khác)
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);

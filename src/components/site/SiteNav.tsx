@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, X, CalendarSync, ChevronRight, Sparkles, Tag, Armchair, Globe, ReceiptText, Calculator, CircleHelp, Mail, Info } from "lucide-react";
+import { Menu, X, CalendarSync, ChevronRight, Sparkles, Tag, Armchair, Globe, ReceiptText, Calculator, CircleHelp, Mail, Info, Download } from "lucide-react";
 import { AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
 import { siteConfig } from "@/lib/metadata";
 import { DOWNLOAD_LINKS, LOGIN_URL, SIGNUP_URL, appLink, renewLink } from "@/lib/app-links";
@@ -34,6 +34,7 @@ const MOBILE_MAIN: MenuItem[] = [
   { href: "/website", key: "website", icon: Globe, tone: "bg-[#E0F2FE] text-[#0369A1]" },
   { href: "/eet-2-0", key: "eet", label: "EET 2.0", icon: ReceiptText, tone: "bg-[#DCFCE7] text-[#15803D]" },
   { href: "/faq", key: "faq", icon: CircleHelp, tone: "bg-[#F1F5F9] text-[#475569]" },
+  { href: "/tai-app", key: "download", icon: Download, tone: "bg-[#ECFDF5] text-[#047857]" },
 ];
 const MOBILE_MORE: MenuItem[] = [
   { href: "/lien-he", key: "contact", icon: Mail, tone: "bg-[#F1F5F9] text-[#475569]" },
@@ -139,6 +140,18 @@ export function SiteNav() {
               <CalendarSync className="size-4" aria-hidden />
               {t("renew")}
             </a>
+            <Link
+              href="/tai-app"
+              aria-current={isActive("/tai-app") ? "page" : undefined}
+              aria-label={t("download")}
+              title={t("download")}
+              className={`hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 text-[15px] transition-colors lg:inline-flex ${
+                isActive("/tai-app") ? "bg-porcelain font-medium text-ink" : "text-ink/70 hover:text-ink"
+              }`}
+            >
+              <Download className="size-[18px]" aria-hidden />
+              <span className="hidden 2xl:inline">{t("download")}</span>
+            </Link>
             <a href={appLink(LOGIN_URL, locale)} className="hidden h-10 items-center whitespace-nowrap rounded-full px-3 text-[15px] text-ink/70 transition-colors hover:text-ink sm:inline-flex">
               {t("login")}
             </a>

@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "SalonGo herunterladen für Mac, Windows, iPhone und iPad",
+    "desc": "SalonGo für Mac, Windows, iPhone und iPad und SalonGo Kasa (Kasse mit Einmalkauf) für Mac und Windows herunterladen. Kostenloser Download."
+  },
+  "title": "Herunterladen",
+  "lead": "Produkt und Gerät wählen. Der Download ist kostenlos.",
+  "salongo": {
+    "name": "SalonGo",
+    "tag": "Termine, Kasse, EET, Einnahmen und Ausgaben, Löhne. Ein Konto auf allen Geräten.",
+    "trial": "{days} Tage kostenlos testen",
+    "web": "Im Browser",
+    "webNote": "Ohne Installation, app.salongo.eu öffnen"
+  },
+  "kasa": {
+    "name": "SalonGo Kasa",
+    "tag": "Kasse für Nagelstudios, Einmalkauf, die Daten bleiben auf dem Computer des Salons. Aktivierung mit Lizenzcode.",
+    "more": "Mehr über SalonGo Kasa",
+    "buy": "Lizenz kaufen"
+  },
+  "mac": "macOS",
+  "win": "Windows",
+  "ios": "iPhone, iPad",
+  "iosNote": "App Store",
+  "macNote": ".dmg · macOS 11+",
+  "winNote": ".exe · Windows 10, 11",
+  "macArm": "Mac Apple M1–M4",
+  "macIntel": "Mac Intel",
+  "help": "Hilfe bei der Installation? Schreiben Sie SalonGo, wir antworten auf Tschechisch, Vietnamesisch oder Englisch.",
+  "contact": "Kontakt"
+}

@@ -1442,7 +1442,8 @@
       "windows": "Windows",
       "mac": "macOS",
       "appStore": "iPhone, iPad (App Store)",
-      "trialLine": "{days} ngày miễn phí, không cần thẻ"
+      "trialLine": "{days} ngày miễn phí, không cần thẻ",
+      "appStoreShort": "App Store"
     },
     "footer": {
       "tagline": "Phần mềm quản lý salon cho tiệm nail, tóc, mi và spa ở châu Âu.",
@@ -2264,7 +2265,7 @@
       "once": "trả một lần",
       "platforms": "Windows · macOS",
       "buy": "Mua Kasa",
-      "download": "Tải về (đã có giấy phép)",
+      "download": "Tải Kasa",
       "fact1": "Dữ liệu ở máy của tiệm",
       "fact2": "Sao lưu mã hoá mỗi ngày",
       "fact3": "1 giấy phép = 1 máy tính",
@@ -2332,7 +2333,7 @@
       "title": "Mua SalonGo Kasa",
       "back": "Về trang Kasa",
       "summary": "1 giấy phép, 1 máy tính · {price}",
-      "ico": "IČO",
+      "ico": "IČO (không bắt buộc)",
       "icoPlaceholder": "12345678",
       "lookup": "Tìm",
       "looking": "Đang tìm…",
@@ -2348,7 +2349,7 @@
       "card": "Thẻ",
       "bank": "Chuyển khoản",
       "next": "Tiếp tục",
-      "fillFirst": "Điền IČO, e-mail và đồng ý điều khoản",
+      "fillFirst": "Điền e-mail và đồng ý điều khoản",
       "soon": "Sắp mở. Hãy quay lại sau ít ngày.",
       "secure": "Thanh toán an toàn qua Stripe",
       "edit": "Sửa thông tin",
@@ -2362,23 +2363,58 @@
     },
     "download": {
       "title": "Tải SalonGo Kasa",
-      "lead": "Cho tiệm đã có giấy phép.",
-      "mac": "Tải cho macOS",
-      "win": "Tải cho Windows",
+      "lead": "Tải bản cài miễn phí, kích hoạt bằng mã giấy phép.",
+      "mac": "Mac (Apple M1–M4)",
+      "win": "Windows",
       "macFile": ".dmg · macOS 11 trở lên",
       "winFile": ".exe · Windows 10 và 11",
       "steps": "Cài đặt",
       "s1": "Tải bản cài cho máy của bạn và mở file.",
       "s2": "macOS: kéo Kasa vào Ứng dụng. Windows: bấm Cài đặt.",
-      "s3": "Mở Kasa và nhập mã giấy phép.",
-      "key": "Mã giấy phép có trong e-mail sau khi mua.",
+      "s3": "Mở Kasa, nhập mã giấy phép, đặt mã PIN. Tên tiệm, IČO có thể điền sau.",
+      "key": "Mã giấy phép dạng KASA-XXXX-XXXX-XXXX-XXXX, SalonGo gửi cho bạn sau khi mua. Mỗi mã dùng cho 1 máy.",
       "noKey": "Chưa có giấy phép?",
-      "buy": "Mua Kasa"
+      "buy": "Mua Kasa",
+      "macIntel": "Mac (Intel)",
+      "macIntelFile": ".dmg · Mac đời trước 2021",
+      "soon": "Bản cài đang được cập nhật. Liên hệ SalonGo để nhận link tải ngay.",
+      "which": "Không biết Mac của bạn là loại nào? Bấm menu Apple → Giới thiệu về máy Mac: dòng “Chip Apple M…” là Apple, “Intel” là Intel."
     },
     "thanks": {
       "title": "Cảm ơn bạn!",
       "lead": "Mã giấy phép sẽ gửi tới e-mail của bạn.",
       "download": "Tải Kasa"
     }
+  },
+  "downloads": {
+    "meta": {
+      "title": "Tải app SalonGo cho Mac, Windows, iPhone và iPad",
+      "desc": "Tải SalonGo cho Mac, Windows, iPhone, iPad, và SalonGo Kasa (máy tính tiền trả một lần) cho Mac và Windows. Miễn phí tải về."
+    },
+    "title": "Tải app",
+    "lead": "Chọn sản phẩm và thiết bị của bạn. Tải về miễn phí.",
+    "salongo": {
+      "name": "SalonGo",
+      "tag": "Lịch hẹn, tính tiền, EET, thu chi, lương thợ. Một tài khoản dùng trên mọi thiết bị.",
+      "trial": "Dùng thử {days} ngày miễn phí",
+      "web": "Dùng trên trình duyệt",
+      "webNote": "Không cần cài, mở app.salongo.eu"
+    },
+    "kasa": {
+      "name": "SalonGo Kasa",
+      "tag": "Máy tính tiền cho tiệm nail, trả một lần, dữ liệu ở máy của tiệm. Cần mã giấy phép để kích hoạt.",
+      "more": "Xem SalonGo Kasa",
+      "buy": "Mua giấy phép"
+    },
+    "mac": "macOS",
+    "win": "Windows",
+    "ios": "iPhone, iPad",
+    "iosNote": "App Store",
+    "macNote": ".dmg · macOS 11+",
+    "winNote": ".exe · Windows 10, 11",
+    "macArm": "Mac Apple M1–M4",
+    "macIntel": "Mac Intel",
+    "help": "Cần giúp cài đặt? Liên hệ SalonGo, trả lời bằng tiếng Việt hoặc tiếng Séc.",
+    "contact": "Liên hệ"
   }
 }

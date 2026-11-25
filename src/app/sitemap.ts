@@ -12,6 +12,8 @@ export const SITEMAP_PATHS = [
   "/bang-gia",
   "/goi-ban",
   "/kasa",
+  "/kasa/download",
+  "/tai-app",
   "/eet-2-0",
   "/ve-salongo",
   "/faq",

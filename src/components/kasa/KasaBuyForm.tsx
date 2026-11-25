@@ -79,8 +79,9 @@ export function KasaBuyForm({
     }
   }, []);
 
-  const valid = isValidIco(ico) && isEmail(email.trim()) && agreed;
-  const cleanIco = normalizeIco(ico) ?? ico;
+  // IČO is optional (owner 2026-11-25: a licence code needs no IČO); when typed it must be valid.
+  const valid = (!ico.trim() || isValidIco(ico)) && isEmail(email.trim()) && agreed;
+  const cleanIco = ico.trim() ? (normalizeIco(ico) ?? ico) : "";
   const cleanEmail = email.trim().toLowerCase();
 
   const fetchClientSecret = useCallback(async () => {
@@ -140,7 +141,7 @@ export function KasaBuyForm({
                   [text.account, bank!.account],
                   ...(bank!.iban ? [[text.iban, bank!.iban]] : []),
                   [text.amount, price],
-                  [text.vs, cleanIco],
+                  ...(cleanIco ? [[text.vs, cleanIco]] : []),
                   [text.message, kasaTransferMessage(cleanEmail)],
                 ] as [string, string][]
               ).map(([k, v]) => (
@@ -190,7 +191,7 @@ export function KasaBuyForm({
               if (n.length === 8 && isValidIco(n)) void runLookup(n);
             }}
             onBlur={() => ico && void runLookup(ico)}
-            aria-invalid={tried && !isValidIco(ico) ? true : undefined}
+            aria-invalid={tried && ico.trim() !== "" && !isValidIco(ico) ? true : undefined}
             aria-describedby="kasa-ico-status"
             className={`${input} tabular-nums`}
           />

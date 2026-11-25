@@ -19,7 +19,8 @@
     "windows": "Windows",
     "mac": "macOS",
     "appStore": "iPhone, iPad (App Store)",
-    "trialLine": "{days} Tage kostenlos, ohne Karte"
+    "trialLine": "{days} Tage kostenlos, ohne Karte",
+    "appStoreShort": "App Store"
   },
   "footer": {
     "tagline": "Salon-Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa.",

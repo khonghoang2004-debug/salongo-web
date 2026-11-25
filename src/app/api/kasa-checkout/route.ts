@@ -19,12 +19,13 @@ export async function POST(req: Request) {
   const body = (await req.json().catch(() => ({}))) as { ico?: unknown; email?: unknown; company?: unknown; locale?: unknown };
   const ico = typeof body.ico === "string" && isValidIco(body.ico) ? normalizeIco(body.ico)! : null;
   const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
-  if (!ico) return Response.json({ error: "bad_ico" }, { status: 400 });
+  // IČO optional; a typed but invalid one is still refused
+  if (typeof body.ico === "string" && body.ico.trim() && !ico) return Response.json({ error: "bad_ico" }, { status: 400 });
   if (!isEmail(email)) return Response.json({ error: "bad_email" }, { status: 400 });
   const company = typeof body.company === "string" ? body.company.trim().slice(0, 200) : "";
   const locale = routing.locales.includes(body.locale as never) ? (body.locale as (typeof routing.locales)[number]) : routing.defaultLocale;
 
-  const metadata = { product: "kasa", ico, email, ...(company ? { company } : {}), locale };
+  const metadata = { product: "kasa", ...(ico ? { ico } : {}), email, ...(company ? { company } : {}), locale };
   const stripe = new Stripe(key);
   try {
     const origin = new URL(req.url).origin;

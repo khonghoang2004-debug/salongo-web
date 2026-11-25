@@ -13,7 +13,7 @@
     "once": "trả một lần",
     "platforms": "Windows · macOS",
     "buy": "Mua Kasa",
-    "download": "Tải về (đã có giấy phép)",
+    "download": "Tải Kasa",
     "fact1": "Dữ liệu ở máy của tiệm",
     "fact2": "Sao lưu mã hoá mỗi ngày",
     "fact3": "1 giấy phép = 1 máy tính",
@@ -21,12 +21,30 @@
   },
   "features": {
     "title": "Kasa làm gì",
-    "checkout": { "t": "Tính tiền, in hoá đơn", "d": "Hoá đơn, in giấy nhiệt 80 mm." },
-    "eet": { "t": "EET 2.0", "d": "Gửi doanh thu theo luật mới từ 2027." },
-    "thuchi": { "t": "Thu & Chi", "d": "Chi phí, thu, lãi. Xuất CSV, Excel, PDF." },
-    "services": { "t": "Dịch vụ & giá", "d": "Bảng giá của tiệm, sửa lúc nào cũng được." },
-    "staff": { "t": "Thợ & doanh thu thợ", "d": "Mỗi thợ làm được bao nhiêu." },
-    "customers": { "t": "Khách hàng", "d": "Tên, số điện thoại, lần đến gần nhất." }
+    "checkout": {
+      "t": "Tính tiền, in hoá đơn",
+      "d": "Hoá đơn, in giấy nhiệt 80 mm."
+    },
+    "eet": {
+      "t": "EET 2.0",
+      "d": "Gửi doanh thu theo luật mới từ 2027."
+    },
+    "thuchi": {
+      "t": "Thu & Chi",
+      "d": "Chi phí, thu, lãi. Xuất CSV, Excel, PDF."
+    },
+    "services": {
+      "t": "Dịch vụ & giá",
+      "d": "Bảng giá của tiệm, sửa lúc nào cũng được."
+    },
+    "staff": {
+      "t": "Thợ & doanh thu thợ",
+      "d": "Mỗi thợ làm được bao nhiêu."
+    },
+    "customers": {
+      "t": "Khách hàng",
+      "d": "Tên, số điện thoại, lần đến gần nhất."
+    }
   },
   "compare": {
     "title": "Kasa hay SalonGo?",
@@ -63,7 +81,7 @@
     "title": "Mua SalonGo Kasa",
     "back": "Về trang Kasa",
     "summary": "1 giấy phép, 1 máy tính · {price}",
-    "ico": "IČO",
+    "ico": "IČO (không bắt buộc)",
     "icoPlaceholder": "12345678",
     "lookup": "Tìm",
     "looking": "Đang tìm…",
@@ -79,7 +97,7 @@
     "card": "Thẻ",
     "bank": "Chuyển khoản",
     "next": "Tiếp tục",
-    "fillFirst": "Điền IČO, e-mail và đồng ý điều khoản",
+    "fillFirst": "Điền e-mail và đồng ý điều khoản",
     "soon": "Sắp mở. Hãy quay lại sau ít ngày.",
     "secure": "Thanh toán an toàn qua Stripe",
     "edit": "Sửa thông tin",
@@ -93,18 +111,22 @@
   },
   "download": {
     "title": "Tải SalonGo Kasa",
-    "lead": "Cho tiệm đã có giấy phép.",
-    "mac": "Tải cho macOS",
-    "win": "Tải cho Windows",
+    "lead": "Tải bản cài miễn phí, kích hoạt bằng mã giấy phép.",
+    "mac": "Mac (Apple M1–M4)",
+    "win": "Windows",
     "macFile": ".dmg · macOS 11 trở lên",
     "winFile": ".exe · Windows 10 và 11",
     "steps": "Cài đặt",
     "s1": "Tải bản cài cho máy của bạn và mở file.",
     "s2": "macOS: kéo Kasa vào Ứng dụng. Windows: bấm Cài đặt.",
-    "s3": "Mở Kasa và nhập mã giấy phép.",
-    "key": "Mã giấy phép có trong e-mail sau khi mua.",
+    "s3": "Mở Kasa, nhập mã giấy phép, đặt mã PIN. Tên tiệm, IČO có thể điền sau.",
+    "key": "Mã giấy phép dạng KASA-XXXX-XXXX-XXXX-XXXX, SalonGo gửi cho bạn sau khi mua. Mỗi mã dùng cho 1 máy.",
     "noKey": "Chưa có giấy phép?",
-    "buy": "Mua Kasa"
+    "buy": "Mua Kasa",
+    "macIntel": "Mac (Intel)",
+    "macIntelFile": ".dmg · Mac đời trước 2021",
+    "soon": "Bản cài đang được cập nhật. Liên hệ SalonGo để nhận link tải ngay.",
+    "which": "Không biết Mac của bạn là loại nào? Bấm menu Apple → Giới thiệu về máy Mac: dòng “Chip Apple M…” là Apple, “Intel” là Intel."
   },
   "thanks": {
     "title": "Cảm ơn bạn!",

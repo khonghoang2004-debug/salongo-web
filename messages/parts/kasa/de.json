@@ -13,7 +13,7 @@
     "once": "einmalig",
     "platforms": "Windows · macOS",
     "buy": "Kasa kaufen",
-    "download": "Download (mit Lizenz)",
+    "download": "Kasa herunterladen",
     "fact1": "Daten auf Ihrem Computer",
     "fact2": "Täglich verschlüsseltes Backup",
     "fact3": "1 Lizenz = 1 Computer",
@@ -21,12 +21,30 @@
   },
   "features": {
     "title": "Was Kasa kann",
-    "checkout": { "t": "Kasse & Belege", "d": "Rechnungen, 80-mm-Thermodruck." },
-    "eet": { "t": "EET 2.0", "d": "Umsatzmeldung nach dem Gesetz ab 2027." },
-    "thuchi": { "t": "Einnahmen & Ausgaben", "d": "Kosten, Einnahmen, Gewinn. Export CSV, Excel, PDF." },
-    "services": { "t": "Leistungen & Preise", "d": "Ihre Preisliste, jederzeit änderbar." },
-    "staff": { "t": "Mitarbeiter & Umsatz", "d": "Wer wie viel verdient hat." },
-    "customers": { "t": "Kunden", "d": "Name, Telefon, letzter Besuch." }
+    "checkout": {
+      "t": "Kasse & Belege",
+      "d": "Rechnungen, 80-mm-Thermodruck."
+    },
+    "eet": {
+      "t": "EET 2.0",
+      "d": "Umsatzmeldung nach dem Gesetz ab 2027."
+    },
+    "thuchi": {
+      "t": "Einnahmen & Ausgaben",
+      "d": "Kosten, Einnahmen, Gewinn. Export CSV, Excel, PDF."
+    },
+    "services": {
+      "t": "Leistungen & Preise",
+      "d": "Ihre Preisliste, jederzeit änderbar."
+    },
+    "staff": {
+      "t": "Mitarbeiter & Umsatz",
+      "d": "Wer wie viel verdient hat."
+    },
+    "customers": {
+      "t": "Kunden",
+      "d": "Name, Telefon, letzter Besuch."
+    }
   },
   "compare": {
     "title": "Kasa oder SalonGo?",
@@ -63,7 +81,7 @@
     "title": "SalonGo Kasa kaufen",
     "back": "Zurück zu Kasa",
     "summary": "1 Lizenz, 1 Computer · {price}",
-    "ico": "IČO (Firmennummer)",
+    "ico": "IČO (optional)",
     "icoPlaceholder": "12345678",
     "lookup": "Suchen",
     "looking": "Suche…",
@@ -79,7 +97,7 @@
     "card": "Karte",
     "bank": "Überweisung",
     "next": "Weiter",
-    "fillFirst": "IČO, E-Mail eintragen und zustimmen",
+    "fillFirst": "E-Mail eingeben und den Bedingungen zustimmen",
     "soon": "Bald verfügbar. Bitte schauen Sie in ein paar Tagen wieder vorbei.",
     "secure": "Sichere Zahlung über Stripe",
     "edit": "Angaben ändern",
@@ -93,18 +111,22 @@
   },
   "download": {
     "title": "SalonGo Kasa herunterladen",
-    "lead": "Für Salons mit Lizenz.",
-    "mac": "Für macOS laden",
-    "win": "Für Windows laden",
+    "lead": "Der Download ist kostenlos; Kasa wird mit einem Lizenzcode aktiviert.",
+    "mac": "Mac (Apple M1–M4)",
+    "win": "Windows",
     "macFile": ".dmg · macOS 11 oder neuer",
     "winFile": ".exe · Windows 10 und 11",
     "steps": "Installation",
     "s1": "Installer für Ihren Computer laden und öffnen.",
     "s2": "macOS: Kasa in Programme ziehen. Windows: auf Installieren klicken.",
-    "s3": "Kasa öffnen und Lizenzschlüssel eingeben.",
-    "key": "Den Lizenzschlüssel finden Sie in der E-Mail nach dem Kauf.",
+    "s3": "Kasa öffnen, Lizenzcode eingeben und eine PIN festlegen. Salonname und IČO können später ergänzt werden.",
+    "key": "Den Lizenzcode (KASA-XXXX-XXXX-XXXX-XXXX) sendet Ihnen SalonGo nach dem Kauf. Ein Code = ein Computer.",
     "noKey": "Noch keine Lizenz?",
-    "buy": "Kasa kaufen"
+    "buy": "Kasa kaufen",
+    "macIntel": "Mac (Intel)",
+    "macIntelFile": ".dmg · Macs vor 2021",
+    "soon": "Das Installationsprogramm wird gerade aktualisiert. Schreiben Sie SalonGo, wir senden Ihnen den Download-Link sofort.",
+    "which": "Welchen Mac haben Sie? Klicken Sie auf das Apple-Menü → Über diesen Mac: „Chip Apple M…“ = Apple, „Intel“ = Intel."
   },
   "thanks": {
     "title": "Danke!",

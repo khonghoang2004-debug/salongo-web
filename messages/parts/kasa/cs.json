@@ -13,7 +13,7 @@
     "once": "jednorázově",
     "platforms": "Windows · macOS",
     "buy": "Koupit Kasu",
-    "download": "Stáhnout (mám licenci)",
+    "download": "Stáhnout Kasu",
     "fact1": "Data ve vašem počítači",
     "fact2": "Šifrovaná záloha každý den",
     "fact3": "1 licence = 1 počítač",
@@ -21,12 +21,30 @@
   },
   "features": {
     "title": "Co Kasa umí",
-    "checkout": { "t": "Pokladna a účtenky", "d": "Doklady, tisk na 80mm termotiskárnu." },
-    "eet": { "t": "EET 2.0", "d": "Evidence tržeb podle zákona od roku 2027." },
-    "thuchi": { "t": "Příjmy a výdaje", "d": "Výdaje, příjmy, zisk. Export CSV, Excel, PDF." },
-    "services": { "t": "Služby a ceny", "d": "Ceník salonu, upravíte kdykoli." },
-    "staff": { "t": "Zaměstnanci a tržby", "d": "Kolik kdo vydělal." },
-    "customers": { "t": "Zákazníci", "d": "Jméno, telefon, poslední návštěva." }
+    "checkout": {
+      "t": "Pokladna a účtenky",
+      "d": "Doklady, tisk na 80mm termotiskárnu."
+    },
+    "eet": {
+      "t": "EET 2.0",
+      "d": "Evidence tržeb podle zákona od roku 2027."
+    },
+    "thuchi": {
+      "t": "Příjmy a výdaje",
+      "d": "Výdaje, příjmy, zisk. Export CSV, Excel, PDF."
+    },
+    "services": {
+      "t": "Služby a ceny",
+      "d": "Ceník salonu, upravíte kdykoli."
+    },
+    "staff": {
+      "t": "Zaměstnanci a tržby",
+      "d": "Kolik kdo vydělal."
+    },
+    "customers": {
+      "t": "Zákazníci",
+      "d": "Jméno, telefon, poslední návštěva."
+    }
   },
   "compare": {
     "title": "Kasa, nebo SalonGo?",
@@ -63,7 +81,7 @@
     "title": "Koupit SalonGo Kasa",
     "back": "Zpět na Kasu",
     "summary": "1 licence, 1 počítač · {price}",
-    "ico": "IČO",
+    "ico": "IČO (nepovinné)",
     "icoPlaceholder": "12345678",
     "lookup": "Najít",
     "looking": "Hledám…",
@@ -79,7 +97,7 @@
     "card": "Kartou",
     "bank": "Převodem",
     "next": "Pokračovat",
-    "fillFirst": "Vyplňte IČO, e-mail a potvrďte souhlas",
+    "fillFirst": "Vyplňte e-mail a souhlas s podmínkami",
     "soon": "Brzy spouštíme. Zkuste to prosím za pár dní.",
     "secure": "Bezpečná platba přes Stripe",
     "edit": "Upravit údaje",
@@ -93,18 +111,22 @@
   },
   "download": {
     "title": "Stáhnout SalonGo Kasa",
-    "lead": "Pro salony s licencí.",
-    "mac": "Stáhnout pro macOS",
-    "win": "Stáhnout pro Windows",
+    "lead": "Instalace je zdarma, aktivuje se licenčním kódem.",
+    "mac": "Mac (Apple M1–M4)",
+    "win": "Windows",
     "macFile": ".dmg · macOS 11 a novější",
     "winFile": ".exe · Windows 10 a 11",
     "steps": "Instalace",
     "s1": "Stáhněte instalátor pro svůj počítač a otevřete ho.",
     "s2": "macOS: přetáhněte Kasu do Aplikací. Windows: klikněte na Instalovat.",
-    "s3": "Spusťte Kasu a zadejte licenční klíč.",
-    "key": "Licenční klíč najdete v e-mailu po nákupu.",
+    "s3": "Spusťte Kasu, zadejte licenční kód a nastavte PIN. Název salonu a IČO můžete vyplnit později.",
+    "key": "Licenční kód ve tvaru KASA-XXXX-XXXX-XXXX-XXXX vám SalonGo pošle po nákupu. Jeden kód = 1 počítač.",
     "noKey": "Ještě nemáte licenci?",
-    "buy": "Koupit Kasu"
+    "buy": "Koupit Kasu",
+    "macIntel": "Mac (Intel)",
+    "macIntelFile": ".dmg · Mac před rokem 2021",
+    "soon": "Instalační soubor se právě aktualizuje. Napište SalonGo a odkaz ke stažení pošleme hned.",
+    "which": "Nevíte, jaký máte Mac? Klikněte na menu Apple → O tomto Macu: „Čip Apple M…“ = Apple, „Intel“ = Intel."
   },
   "thanks": {
     "title": "Děkujeme!",

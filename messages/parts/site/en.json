@@ -19,7 +19,8 @@
     "windows": "Windows",
     "mac": "macOS",
     "appStore": "iPhone, iPad (App Store)",
-    "trialLine": "{days} days free, no card needed"
+    "trialLine": "{days} days free, no card needed",
+    "appStoreShort": "App Store"
   },
   "footer": {
     "tagline": "Salon software for nail, hair, lash and beauty studios in Europe.",

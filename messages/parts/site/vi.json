@@ -19,7 +19,8 @@
     "windows": "Windows",
     "mac": "macOS",
     "appStore": "iPhone, iPad (App Store)",
-    "trialLine": "{days} ngày miễn phí, không cần thẻ"
+    "trialLine": "{days} ngày miễn phí, không cần thẻ",
+    "appStoreShort": "App Store"
   },
   "footer": {
     "tagline": "Phần mềm quản lý salon cho tiệm nail, tóc, mi và spa ở châu Âu.",

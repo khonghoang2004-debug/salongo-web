@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Download SalonGo for Mac, Windows, iPhone and iPad",
+    "desc": "Download SalonGo for Mac, Windows, iPhone and iPad, and SalonGo Kasa (one-time-purchase POS) for Mac and Windows. Free to download."
+  },
+  "title": "Download",
+  "lead": "Pick your product and device. Downloads are free.",
+  "salongo": {
+    "name": "SalonGo",
+    "tag": "Booking, checkout, EET, income and expenses, payroll. One account on every device.",
+    "trial": "{days}-day free trial",
+    "web": "In the browser",
+    "webNote": "Nothing to install, open app.salongo.eu"
+  },
+  "kasa": {
+    "name": "SalonGo Kasa",
+    "tag": "POS for nail salons, one-time purchase, data stays on the salon's computer. Activated with a licence code.",
+    "more": "About SalonGo Kasa",
+    "buy": "Buy a licence"
+  },
+  "mac": "macOS",
+  "win": "Windows",
+  "ios": "iPhone, iPad",
+  "iosNote": "App Store",
+  "macNote": ".dmg · macOS 11+",
+  "winNote": ".exe · Windows 10, 11",
+  "macArm": "Mac Apple M1–M4",
+  "macIntel": "Mac Intel",
+  "help": "Need help installing? Contact SalonGo, we answer in Czech, Vietnamese or English.",
+  "contact": "Contact"
+}

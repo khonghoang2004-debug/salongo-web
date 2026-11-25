@@ -15,19 +15,14 @@ export function kasaPrice(locale: string, n = KASA_PRICE_CZK): string {
 }
 
 /**
- * Installer links shown on /kasa/download. They are stable short URLs; next.config.mjs redirects them (302) to the
- * newest installer in public/kasa/updates/<os>/ (see public/kasa/updates/README.md):
- *   /kasa/download/mac → /kasa/updates/mac/SalonGo-Kasa-latest.dmg
- *   /kasa/download/win → /kasa/updates/win/SalonGo-Kasa-latest.exe
+ * Installer links (stable short URLs). next.config.mjs redirects them (302) to /api/download/kasa/<os>, which sends
+ * the newest installer from the public GitHub release repository (src/lib/release-download.ts, KASA_RELEASE_REPO).
+ * Relative, so the buttons stay on the host serving the page.
  */
-/** Relative, so the buttons stay on the host serving the page (https://salongo.eu/kasa/download/mac in production). */
 export const KASA_DOWNLOAD = {
   mac: "/kasa/download/mac",
+  macIntel: "/kasa/download/mac-intel",
   win: "/kasa/download/win",
-} as const;
-export const KASA_INSTALLER = {
-  mac: "/kasa/updates/mac/SalonGo-Kasa-latest.dmg",
-  win: "/kasa/updates/win/SalonGo-Kasa-latest.exe",
 } as const;
 
 /**

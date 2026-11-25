@@ -19,7 +19,8 @@
     "windows": "Windows",
     "mac": "macOS",
     "appStore": "iPhone, iPad (App Store)",
-    "trialLine": "{days} dní zdarma, bez platební karty"
+    "trialLine": "{days} dní zdarma, bez platební karty",
+    "appStoreShort": "App Store"
   },
   "footer": {
     "tagline": "Software pro nehtová, kadeřnická, řasová a kosmetická studia v Evropě.",

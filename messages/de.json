@@ -1442,7 +1442,8 @@
       "windows": "Windows",
       "mac": "macOS",
       "appStore": "iPhone, iPad (App Store)",
-      "trialLine": "{days} Tage kostenlos, ohne Karte"
+      "trialLine": "{days} Tage kostenlos, ohne Karte",
+      "appStoreShort": "App Store"
     },
     "footer": {
       "tagline": "Salon-Software für Nagel-, Friseur-, Wimpern- und Kosmetikstudios in Europa.",
@@ -2264,7 +2265,7 @@
       "once": "einmalig",
       "platforms": "Windows · macOS",
       "buy": "Kasa kaufen",
-      "download": "Download (mit Lizenz)",
+      "download": "Kasa herunterladen",
       "fact1": "Daten auf Ihrem Computer",
       "fact2": "Täglich verschlüsseltes Backup",
       "fact3": "1 Lizenz = 1 Computer",
@@ -2332,7 +2333,7 @@
       "title": "SalonGo Kasa kaufen",
       "back": "Zurück zu Kasa",
       "summary": "1 Lizenz, 1 Computer · {price}",
-      "ico": "IČO (Firmennummer)",
+      "ico": "IČO (optional)",
       "icoPlaceholder": "12345678",
       "lookup": "Suchen",
       "looking": "Suche…",
@@ -2348,7 +2349,7 @@
       "card": "Karte",
       "bank": "Überweisung",
       "next": "Weiter",
-      "fillFirst": "IČO, E-Mail eintragen und zustimmen",
+      "fillFirst": "E-Mail eingeben und den Bedingungen zustimmen",
       "soon": "Bald verfügbar. Bitte schauen Sie in ein paar Tagen wieder vorbei.",
       "secure": "Sichere Zahlung über Stripe",
       "edit": "Angaben ändern",
@@ -2362,23 +2363,58 @@
     },
     "download": {
       "title": "SalonGo Kasa herunterladen",
-      "lead": "Für Salons mit Lizenz.",
-      "mac": "Für macOS laden",
-      "win": "Für Windows laden",
+      "lead": "Der Download ist kostenlos; Kasa wird mit einem Lizenzcode aktiviert.",
+      "mac": "Mac (Apple M1–M4)",
+      "win": "Windows",
       "macFile": ".dmg · macOS 11 oder neuer",
       "winFile": ".exe · Windows 10 und 11",
       "steps": "Installation",
       "s1": "Installer für Ihren Computer laden und öffnen.",
       "s2": "macOS: Kasa in Programme ziehen. Windows: auf Installieren klicken.",
-      "s3": "Kasa öffnen und Lizenzschlüssel eingeben.",
-      "key": "Den Lizenzschlüssel finden Sie in der E-Mail nach dem Kauf.",
+      "s3": "Kasa öffnen, Lizenzcode eingeben und eine PIN festlegen. Salonname und IČO können später ergänzt werden.",
+      "key": "Den Lizenzcode (KASA-XXXX-XXXX-XXXX-XXXX) sendet Ihnen SalonGo nach dem Kauf. Ein Code = ein Computer.",
       "noKey": "Noch keine Lizenz?",
-      "buy": "Kasa kaufen"
+      "buy": "Kasa kaufen",
+      "macIntel": "Mac (Intel)",
+      "macIntelFile": ".dmg · Macs vor 2021",
+      "soon": "Das Installationsprogramm wird gerade aktualisiert. Schreiben Sie SalonGo, wir senden Ihnen den Download-Link sofort.",
+      "which": "Welchen Mac haben Sie? Klicken Sie auf das Apple-Menü → Über diesen Mac: „Chip Apple M…“ = Apple, „Intel“ = Intel."
     },
     "thanks": {
       "title": "Danke!",
       "lead": "Ihr Lizenzschlüssel kommt per E-Mail.",
       "download": "Kasa herunterladen"
     }
+  },
+  "downloads": {
+    "meta": {
+      "title": "SalonGo herunterladen für Mac, Windows, iPhone und iPad",
+      "desc": "SalonGo für Mac, Windows, iPhone und iPad und SalonGo Kasa (Kasse mit Einmalkauf) für Mac und Windows herunterladen. Kostenloser Download."
+    },
+    "title": "Herunterladen",
+    "lead": "Produkt und Gerät wählen. Der Download ist kostenlos.",
+    "salongo": {
+      "name": "SalonGo",
+      "tag": "Termine, Kasse, EET, Einnahmen und Ausgaben, Löhne. Ein Konto auf allen Geräten.",
+      "trial": "{days} Tage kostenlos testen",
+      "web": "Im Browser",
+      "webNote": "Ohne Installation, app.salongo.eu öffnen"
+    },
+    "kasa": {
+      "name": "SalonGo Kasa",
+      "tag": "Kasse für Nagelstudios, Einmalkauf, die Daten bleiben auf dem Computer des Salons. Aktivierung mit Lizenzcode.",
+      "more": "Mehr über SalonGo Kasa",
+      "buy": "Lizenz kaufen"
+    },
+    "mac": "macOS",
+    "win": "Windows",
+    "ios": "iPhone, iPad",
+    "iosNote": "App Store",
+    "macNote": ".dmg · macOS 11+",
+    "winNote": ".exe · Windows 10, 11",
+    "macArm": "Mac Apple M1–M4",
+    "macIntel": "Mac Intel",
+    "help": "Hilfe bei der Installation? Schreiben Sie SalonGo, wir antworten auf Tschechisch, Vietnamesisch oder Englisch.",
+    "contact": "Kontakt"
   }
 }

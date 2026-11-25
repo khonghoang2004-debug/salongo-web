@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Tải app SalonGo cho Mac, Windows, iPhone và iPad",
+    "desc": "Tải SalonGo cho Mac, Windows, iPhone, iPad, và SalonGo Kasa (máy tính tiền trả một lần) cho Mac và Windows. Miễn phí tải về."
+  },
+  "title": "Tải app",
+  "lead": "Chọn sản phẩm và thiết bị của bạn. Tải về miễn phí.",
+  "salongo": {
+    "name": "SalonGo",
+    "tag": "Lịch hẹn, tính tiền, EET, thu chi, lương thợ. Một tài khoản dùng trên mọi thiết bị.",
+    "trial": "Dùng thử {days} ngày miễn phí",
+    "web": "Dùng trên trình duyệt",
+    "webNote": "Không cần cài, mở app.salongo.eu"
+  },
+  "kasa": {
+    "name": "SalonGo Kasa",
+    "tag": "Máy tính tiền cho tiệm nail, trả một lần, dữ liệu ở máy của tiệm. Cần mã giấy phép để kích hoạt.",
+    "more": "Xem SalonGo Kasa",
+    "buy": "Mua giấy phép"
+  },
+  "mac": "macOS",
+  "win": "Windows",
+  "ios": "iPhone, iPad",
+  "iosNote": "App Store",
+  "macNote": ".dmg · macOS 11+",
+  "winNote": ".exe · Windows 10, 11",
+  "macArm": "Mac Apple M1–M4",
+  "macIntel": "Mac Intel",
+  "help": "Cần giúp cài đặt? Liên hệ SalonGo, trả lời bằng tiếng Việt hoặc tiếng Séc.",
+  "contact": "Liên hệ"
+}

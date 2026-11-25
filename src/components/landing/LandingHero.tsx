@@ -2,9 +2,11 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SIGNUP_URL, appLink } from "@/lib/app-links";
 import { DesktopShot, PhoneShot } from "./Shots";
+import { DownloadBadges } from "@/components/site/DownloadBadges";
 
 export async function LandingHero() {
   const t = await getTranslations("landing.hero");
+  const nav = await getTranslations("site.nav");
   const locale = await getLocale();
   return (
     <section className="relative overflow-hidden bg-white pb-10 pt-10 sm:pt-10 lg:pb-16 lg:pt-10">
@@ -28,6 +30,7 @@ export async function LandingHero() {
             </Link>
           </div>
           <p className="mt-5 text-sm text-muted">{t("note")}</p>
+          <DownloadBadges className="mt-6" labels={{ label: nav("download"), mac: nav("mac"), win: nav("windows"), ios: nav("appStoreShort") }} />
         </div>
 
         <div className="relative lg:col-span-6 xl:col-span-7">

@@ -88,3 +88,18 @@ test("JSON-LD: không thể đóng thẻ <script>, JSON.parse cho lại đúng d
   assert.equal(s.includes("\u2028"), false);
   assert.deepEqual(JSON.parse(s), data);
 });
+
+test("Kasa installers: own repo, stable names, only that repo's downloads accepted", async () => {
+  const { KASA_INSTALLERS, KASA_RELEASE_REPO } = await import("../src/lib/release-download.ts");
+  assert.equal(installerFor("mac-arm64", KASA_INSTALLERS), "SalonGo-Kasa-arm64.dmg");
+  assert.equal(installerFor("windows", KASA_INSTALLERS), "SalonGo-Kasa-Setup.exe");
+  assert.equal(installerFor("mac", KASA_INSTALLERS), undefined);
+  const ok = `https://github.com/${KASA_RELEASE_REPO}/releases/download/v1.3.0/SalonGo-Kasa-arm64.dmg`;
+  assert.ok(isReleaseDownloadUrl(ok, "SalonGo-Kasa-arm64.dmg", KASA_RELEASE_REPO));
+  assert.ok(!isReleaseDownloadUrl(ok, "SalonGo-Kasa-arm64.dmg"), "SalonGo desktop repo must not accept Kasa assets");
+  const rel = [
+    { draft: false, tag_name: "v1.2.0", assets: [{ name: "SalonGo-Kasa-arm64.dmg", browser_download_url: ok.replace("v1.3.0", "v1.2.0") }] },
+    { draft: false, tag_name: "v1.3.0", assets: [{ name: "SalonGo-Kasa-arm64.dmg", browser_download_url: ok }] },
+  ];
+  assert.equal(pickLatestInstaller(rel, "SalonGo-Kasa-arm64.dmg", KASA_RELEASE_REPO), ok);
+});

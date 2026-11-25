@@ -34,6 +34,7 @@ const preview = (...src) => (isPreview ? src : []);
 const STRIPE = { script: ["https://js.stripe.com"], frame: ["https://js.stripe.com", "https://checkout.stripe.com", "https://hooks.stripe.com"], connect: ["https://api.stripe.com", "https://checkout.stripe.com"] };
 // SalonGo Kasa installers: GitHub releases of khonghoang2004-debug/salongo-kasa-releases via /api/download/kasa/<os>.
 // Short stable links /kasa/download/mac|mac-intel|win → newest installer (302, so the target can change with each release).
+const KASA_RELEASE_REPO = "khonghoang2004-debug/salongo-kasa-releases";
 const KASA_INSTALLER = { mac: "/api/download/kasa/mac-arm64", "mac-intel": "/api/download/kasa/mac-x64", win: "/api/download/kasa/windows" };
 const HOSTING_SHORT = { 299: "plan=basic&cycle=m", 2999: "plan=basic&cycle=y", 999: "plan=pro&cycle=m", 9999: "plan=pro&cycle=y" };
 const CSP = [
@@ -120,6 +121,9 @@ const nextConfig = {
         { source: `/hosting-${price}`, destination: `/vi/website/thanh-toan?${q}`, permanent: false },
         { source: `/:locale(vi|cs|en|de)/hosting-${price}`, destination: `/:locale/website/thanh-toan?${q}`, permanent: false },
       ]),
+      // Kasa auto-update feed (electron-updater "generic", url https://salongo.eu/kasa/updates/<mac|win>/): every file
+      // (latest-mac.yml, latest.yml, the zip / exe they name) is served from the newest GitHub release.
+      { source: "/kasa/updates/:os(mac|win)/:file", destination: `https://github.com/${KASA_RELEASE_REPO}/releases/latest/download/:file`, permanent: false },
       ...Object.entries(KASA_INSTALLER).flatMap(([os, destination]) => [
         { source: `/kasa/download/${os}`, destination, permanent: false },
         { source: `/:locale(vi|cs|en|de)/kasa/download/${os}`, destination, permanent: false },

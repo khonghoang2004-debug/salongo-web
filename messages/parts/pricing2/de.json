@@ -104,7 +104,7 @@
     "q5": "Kann ich den Tarif wechseln?",
     "a5": "Ja, auf der Seite Tarif verlängern. Ein Upgrade gilt sofort, ein Downgrade ab dem nächsten Zeitraum.",
     "q6": "Gibt es ein Limit für Kunden oder Termine?",
-    "a6": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt nur Mitarbeiter und Filialen.",
+    "a6": "Nein. Kunden, Termine und Rechnungen sind unbegrenzt. Der Tarif begrenzt Mitarbeiter, Filialen und wie viele Kunden täglich Ihre Marketing-E-Mail erhalten (Basic keine, Pro 50, Premium unbegrenzt).",
     "q7": "Kann ein Inhaber mehrere Filialen führen?",
     "a7": "Ja. Ein Inhaberkonto führt alle Filialen. Jede Filiale hat eigenen Tarif und eigenes Enddatum.",
     "q8": "Kostet EET extra?",

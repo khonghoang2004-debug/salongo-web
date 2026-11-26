@@ -1290,8 +1290,8 @@
   "landing": {
     "hero": {
       "eet": "SalonGo đã sẵn sàng cho EET 2.0",
-      "title": "Lịch hẹn, tính tiền, EET. Cả tiệm trong một app.",
-      "lead": "Phần mềm quản lý cho tiệm nail, tóc, mi và spa ở Séc và EU.",
+      "title": "Cả tiệm của bạn,|gọn trong một app.",
+      "lead": "Lịch hẹn, khách tự đặt lịch, tính tiền có EET 2.0, thu chi và lương thợ. Dành cho tiệm nail, tóc, mi và spa.",
       "cta": "Dùng thử {days} ngày miễn phí",
       "secondary": "Xem bảng giá",
       "note": "Không cần thẻ thanh toán. Hỗ trợ bằng tiếng Việt và tiếng Séc.",
@@ -1299,7 +1299,8 @@
       "altPhone": "Màn tính tiền của SalonGo trên điện thoại",
       "chipToday": "Hôm nay",
       "chipBookings": "lịch hẹn",
-      "chipIncome": "Thu hôm nay"
+      "chipIncome": "Thu hôm nay",
+      "eyebrow": "Phần mềm quản lý salon · Séc và châu Âu"
     },
     "platforms": {
       "label": "Một tài khoản, dùng trên",
@@ -1307,7 +1308,7 @@
       "langs": "App có 6 ngôn ngữ"
     },
     "features": {
-      "title": "Mọi việc của tiệm, trong một app",
+      "title": "Mọi việc của tiệm,|trên một màn hình.",
       "all": "Xem tất cả tính năng",
       "online": {
         "title": "Khách tự đặt lịch"
@@ -1332,7 +1333,8 @@
       },
       "devices": {
         "title": "Mọi thiết bị"
-      }
+      },
+      "eyebrow": "Tính năng"
     },
     "videos": {
       "title": "Xem app chạy thật",
@@ -1364,20 +1366,8 @@
           "title": "Gói IČO riêng",
           "desc": "Người thuê bàn tính tiền nhanh và xem thu chi của riêng mình."
         }
-      }
-    },
-    "who": {
-      "title": "Chọn đúng gói cho cách bạn làm việc",
-      "salonTag": "Tiệm có thợ",
-      "salonTitle": "Bạn là chủ tiệm",
-      "salonDesc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ, khách hàng và nhiều chi nhánh. Ba gói theo số thợ và nhu cầu email marketing.",
-      "salonPrice": "từ {from} Kč/tháng",
-      "salonCta": "Xem gói salon",
-      "deskTag": "IČO riêng trong tiệm hoặc salon",
-      "deskTitle": "Bạn thuê bàn, tự làm tự thu",
-      "deskDesc": "Tính tiền, hoá đơn và EET bằng chứng chỉ của chính bạn, thu chi của riêng bạn. Chủ tiệm không xem được doanh thu của bạn.",
-      "deskPrice": "{priceDesk} Kč/tháng",
-      "deskCta": "Xem gói IČO riêng"
+      },
+      "eyebrow": "Xem thực tế"
     },
     "eet": {
       "title": "EET 2.0 bắt buộc từ 1.1.2027. Bạn không cần mua thêm máy.",
@@ -1415,10 +1405,42 @@
       "all": "Xem tất cả câu hỏi"
     },
     "final": {
-      "title": "Mở tài khoản trong 2 phút. Dùng thử {days} ngày.",
+      "title": "Mở tài khoản trong 2 phút.|Dùng thử {days} ngày.",
       "lead": "Không cần thẻ. Hết hạn dùng thử, dữ liệu vẫn được giữ nguyên.",
       "cta": "Dùng thử miễn phí",
-      "contact": "Nói chuyện với chúng tôi"
+      "contact": "Nói chuyện với chúng tôi",
+      "eyebrow": "Bắt đầu hôm nay"
+    },
+    "products": {
+      "eyebrow": "Sản phẩm",
+      "title": "Ba cách dùng SalonGo.|Chọn cách hợp với tiệm.",
+      "salon": {
+        "tag": "Thuê bao tháng · Cloud",
+        "title": "SalonGo cho chủ tiệm",
+        "desc": "Lịch hẹn, đặt lịch online, tính tiền, EET, lương thợ và nhiều chi nhánh. Dùng trên máy tính, iPad và điện thoại.",
+        "price": "từ {from} Kč/tháng",
+        "cta": "Xem các gói"
+      },
+      "desk": {
+        "tag": "Thuê bao tháng · 1 người",
+        "title": "Gói IČO riêng",
+        "desc": "Cho thợ thuê bàn có IČO riêng: tính tiền, hoá đơn và EET bằng chứng chỉ của chính mình. Chủ tiệm không xem được doanh thu của bạn.",
+        "price": "{priceDesk} Kč/tháng",
+        "cta": "Xem gói IČO riêng"
+      },
+      "kasa": {
+        "tag": "Trả một lần · Windows, macOS",
+        "title": "SalonGo Kasa",
+        "desc": "Phần mềm tính tiền cài trên máy tính của tiệm. Mua một lần, không phí tháng, mất mạng vẫn bán được.",
+        "price": "{price} một lần",
+        "cta": "Kasa là gì?"
+      }
+    },
+    "studio": {
+      "eyebrow": "SalonGo Web Studio",
+      "title": "Website riêng cho tiệm,|thiết kế như thương hiệu lớn.",
+      "lead": "Chọn một trong {count} mẫu thiết kế cho salon, chúng tôi làm xong nội dung, hình ảnh và tên miền. Đẹp trên điện thoại lẫn máy tính.",
+      "scroll": "Kéo ngang để xem thêm mẫu"
     }
   },
   "site": {
@@ -1446,7 +1468,7 @@
       "appStoreShort": "App Store"
     },
     "footer": {
-      "tagline": "Phần mềm quản lý salon cho tiệm nail, tóc, mi và spa ở châu Âu.",
+      "tagline": "Phần mềm quản lý và website cho tiệm nail, tóc, mi và spa ở châu Âu.",
       "product": "Sản phẩm",
       "company": "SalonGo",
       "help": "Hỗ trợ",
@@ -1455,7 +1477,97 @@
       "solutions": "Giải pháp theo loại tiệm",
       "support": "Trả lời trong 24 giờ, bằng tiếng Việt hoặc tiếng Séc.",
       "operator": "Vận hành bởi",
-      "rights": "Bảo lưu mọi quyền."
+      "rights": "Bảo lưu mọi quyền.",
+      "studio": "Web Studio",
+      "resources": "Tài nguyên",
+      "account": "Tài khoản",
+      "gdpr": "Tuân thủ GDPR · Hỗ trợ tiếng Việt và tiếng Séc"
+    },
+    "menu": {
+      "groups": {
+        "product": "Sản phẩm",
+        "solutions": "Giải pháp",
+        "studio": "Web Studio",
+        "pricing": "Bảng giá",
+        "resources": "Tài nguyên"
+      },
+      "product": {
+        "features": {
+          "title": "Phần mềm quản lý salon",
+          "desc": "Lịch hẹn, đặt lịch online, tính tiền, lương thợ"
+        },
+        "desk": {
+          "title": "Gói IČO riêng",
+          "desc": "Cho thợ thuê bàn: tính tiền và EET bằng IČO của bạn"
+        },
+        "kasa": {
+          "title": "SalonGo Kasa",
+          "desc": "Phần mềm tính tiền trả một lần, dùng lâu dài"
+        },
+        "eet": {
+          "title": "EET 2.0",
+          "desc": "Sẵn sàng cho quy định bắt buộc từ 1.1.2027"
+        },
+        "download": {
+          "title": "Tải app",
+          "desc": "iPhone, iPad, Mac và Windows"
+        }
+      },
+      "solutions": {
+        "nail": {
+          "title": "Tiệm nail",
+          "desc": "Lịch theo thợ, lương theo phần trăm"
+        },
+        "hair": {
+          "title": "Salon tóc",
+          "desc": "Lịch dày, nhiều dịch vụ dài"
+        },
+        "beauty": {
+          "title": "Mi, mày và spa",
+          "desc": "Hồ sơ khách, liệu trình, khách quen"
+        },
+        "chain": {
+          "title": "Nhiều chi nhánh",
+          "desc": "Một tài khoản cho cả chuỗi"
+        },
+        "guide": {
+          "title": "Cẩm nang phần mềm salon",
+          "desc": "Cần gì khi chọn phần mềm cho tiệm"
+        }
+      },
+      "studio": {
+        "templates": {
+          "title": "Thư viện mẫu website",
+          "desc": "35+ mẫu cho nail, tóc, spa, barber"
+        },
+        "contact": {
+          "title": "Đặt làm website",
+          "desc": "Từ 4 999 Kč cho website 5 trang"
+        },
+        "terms": {
+          "title": "Điều khoản làm website",
+          "desc": "Phạm vi, thanh toán, quyền sử dụng"
+        }
+      },
+      "resources": {
+        "faq": {
+          "title": "Hỏi đáp",
+          "desc": "Câu trả lời cho câu hỏi hay gặp"
+        },
+        "about": {
+          "title": "Về SalonGo",
+          "desc": "Ai làm SalonGo và vì sao"
+        },
+        "contact": {
+          "title": "Liên hệ",
+          "desc": "Tiếng Việt và tiếng Séc, trả lời trong 24 giờ"
+        }
+      },
+      "studioFeature": "Website đẹp cho salon của bạn",
+      "studioFeatureCta": "Xem các mẫu",
+      "productFeature": "Dùng thử {days} ngày, không cần thẻ",
+      "productFeatureCta": "Mở tài khoản",
+      "more": "Xem thêm"
     }
   },
   "pages2": {

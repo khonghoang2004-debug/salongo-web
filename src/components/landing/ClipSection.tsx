@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { CLIPS } from "@/lib/clips";
+import { SectionHead } from "./SectionHead";
 import { ClipReel, type ClipItem } from "./ClipReel";
 
 export async function ClipSection() {
@@ -8,11 +9,8 @@ export async function ClipSection() {
   return (
     <section className="x-section bg-white" aria-labelledby="clips-title">
       <div className="x-wrap">
-        <div className="max-w-[40rem]">
-          <h2 id="clips-title" className="x-h2 text-ink">{t("title")}</h2>
-          <p className="x-lead mt-4">{t("lead")}</p>
-        </div>
-        <div className="mt-8">
+        <SectionHead id="clips-title" eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} className="max-w-[40rem]" />
+        <div className="mt-10 lg:mt-14">
           <ClipReel items={items} playLabel={t("play")} pauseLabel={t("pause")} />
         </div>
       </div>

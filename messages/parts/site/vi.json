@@ -23,7 +23,7 @@
     "appStoreShort": "App Store"
   },
   "footer": {
-    "tagline": "Phần mềm quản lý salon cho tiệm nail, tóc, mi và spa ở châu Âu.",
+    "tagline": "Phần mềm quản lý và website cho tiệm nail, tóc, mi và spa ở châu Âu.",
     "product": "Sản phẩm",
     "company": "SalonGo",
     "help": "Hỗ trợ",
@@ -32,6 +32,96 @@
     "solutions": "Giải pháp theo loại tiệm",
     "support": "Trả lời trong 24 giờ, bằng tiếng Việt hoặc tiếng Séc.",
     "operator": "Vận hành bởi",
-    "rights": "Bảo lưu mọi quyền."
+    "rights": "Bảo lưu mọi quyền.",
+    "studio": "Web Studio",
+    "resources": "Tài nguyên",
+    "account": "Tài khoản",
+    "gdpr": "Tuân thủ GDPR · Hỗ trợ tiếng Việt và tiếng Séc"
+  },
+  "menu": {
+    "groups": {
+      "product": "Sản phẩm",
+      "solutions": "Giải pháp",
+      "studio": "Web Studio",
+      "pricing": "Bảng giá",
+      "resources": "Tài nguyên"
+    },
+    "product": {
+      "features": {
+        "title": "Phần mềm quản lý salon",
+        "desc": "Lịch hẹn, đặt lịch online, tính tiền, lương thợ"
+      },
+      "desk": {
+        "title": "Gói IČO riêng",
+        "desc": "Cho thợ thuê bàn: tính tiền và EET bằng IČO của bạn"
+      },
+      "kasa": {
+        "title": "SalonGo Kasa",
+        "desc": "Phần mềm tính tiền trả một lần, dùng lâu dài"
+      },
+      "eet": {
+        "title": "EET 2.0",
+        "desc": "Sẵn sàng cho quy định bắt buộc từ 1.1.2027"
+      },
+      "download": {
+        "title": "Tải app",
+        "desc": "iPhone, iPad, Mac và Windows"
+      }
+    },
+    "solutions": {
+      "nail": {
+        "title": "Tiệm nail",
+        "desc": "Lịch theo thợ, lương theo phần trăm"
+      },
+      "hair": {
+        "title": "Salon tóc",
+        "desc": "Lịch dày, nhiều dịch vụ dài"
+      },
+      "beauty": {
+        "title": "Mi, mày và spa",
+        "desc": "Hồ sơ khách, liệu trình, khách quen"
+      },
+      "chain": {
+        "title": "Nhiều chi nhánh",
+        "desc": "Một tài khoản cho cả chuỗi"
+      },
+      "guide": {
+        "title": "Cẩm nang phần mềm salon",
+        "desc": "Cần gì khi chọn phần mềm cho tiệm"
+      }
+    },
+    "studio": {
+      "templates": {
+        "title": "Thư viện mẫu website",
+        "desc": "35+ mẫu cho nail, tóc, spa, barber"
+      },
+      "contact": {
+        "title": "Đặt làm website",
+        "desc": "Từ 4 999 Kč cho website 5 trang"
+      },
+      "terms": {
+        "title": "Điều khoản làm website",
+        "desc": "Phạm vi, thanh toán, quyền sử dụng"
+      }
+    },
+    "resources": {
+      "faq": {
+        "title": "Hỏi đáp",
+        "desc": "Câu trả lời cho câu hỏi hay gặp"
+      },
+      "about": {
+        "title": "Về SalonGo",
+        "desc": "Ai làm SalonGo và vì sao"
+      },
+      "contact": {
+        "title": "Liên hệ",
+        "desc": "Tiếng Việt và tiếng Séc, trả lời trong 24 giờ"
+      }
+    },
+    "studioFeature": "Website đẹp cho salon của bạn",
+    "studioFeatureCta": "Xem các mẫu",
+    "productFeature": "Dùng thử {days} ngày, không cần thẻ",
+    "productFeatureCta": "Mở tài khoản",
+    "more": "Xem thêm"
   }
 }

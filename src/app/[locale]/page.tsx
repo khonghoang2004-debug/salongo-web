@@ -8,7 +8,7 @@ import { WebStudioSection } from "@/components/landing/WebStudioSection";
 import { Platforms } from "@/components/landing/Platforms";
 import { FeatureGrid } from "@/components/landing/FeatureGrid";
 import { ClipSection } from "@/components/landing/ClipSection";
-import { WhoFor } from "@/components/landing/WhoFor";
+import { Products } from "@/components/landing/Products";
 import { EetBand } from "@/components/landing/EetBand";
 import { PriceBoard } from "@/components/landing/PriceBoard";
 import { FaqShort, FinalCta, LANDING_FAQ } from "@/components/landing/Closing";
@@ -181,10 +181,10 @@ export default async function Home({ params }: Props) {
         <Platforms />
         <FeatureGrid />
         <ClipSection />
-        <WhoFor />
+        <Products />
         <EetBand />
-        <WebStudioSection />
         <PriceBoard />
+        <WebStudioSection />
         <FaqShort />
         <FinalCta />
       </PageShell>

@@ -1,8 +1,8 @@
 {
   "hero": {
     "eet": "SalonGo je připraveno na EET 2.0",
-    "title": "Rezervace, pokladna, EET. Celý salon v jedné aplikaci.",
-    "lead": "Software pro nehtová, kadeřnická, řasová studia a spa v Česku a EU.",
+    "title": "Celý váš salon|v jedné aplikaci.",
+    "lead": "Rezervace, online objednávky, pokladna s EET 2.0, příjmy a výdaje i mzdy. Pro nehtová studia, kadeřnictví, řasy a kosmetiku.",
     "cta": "Vyzkoušet {days} dní zdarma",
     "secondary": "Ceník",
     "note": "Bez platební karty. Podpora česky i vietnamsky.",
@@ -10,7 +10,8 @@
     "altPhone": "Pokladna SalonGo na telefonu",
     "chipToday": "Dnes",
     "chipBookings": "rezervací",
-    "chipIncome": "Tržba dnes"
+    "chipIncome": "Tržba dnes",
+    "eyebrow": "Software pro salony · Česko a Evropa"
   },
   "platforms": {
     "label": "Jeden účet, funguje na",
@@ -18,7 +19,7 @@
     "langs": "Aplikace v 6 jazycích"
   },
   "features": {
-    "title": "Celý salon v jedné aplikaci",
+    "title": "Vše, co salon dělá,|na jedné obrazovce.",
     "all": "Všechny funkce",
     "online": {
       "title": "Online rezervace"
@@ -43,7 +44,8 @@
     },
     "devices": {
       "title": "Všechna zařízení"
-    }
+    },
+    "eyebrow": "Funkce"
   },
   "videos": {
     "title": "Podívejte se, jak aplikace funguje",
@@ -75,20 +77,8 @@
         "title": "Tarif Křeslo",
         "desc": "Nájemkyně křesla rychle namarkuje a vidí své vlastní příjmy a výdaje."
       }
-    }
-  },
-  "who": {
-    "title": "Vyberte tarif podle toho, jak pracujete",
-    "salonTag": "Salon s personálem",
-    "salonTitle": "Vedete salon",
-    "salonDesc": "Kalendář, online rezervace, pokladna, EET, mzdy, klienti a více poboček. Tři tarify podle velikosti týmu a e-mailového marketingu.",
-    "salonPrice": "od {from} Kč/měsíc",
-    "salonCta": "Tarify pro salon",
-    "deskTag": "Vlastní IČO v salonu",
-    "deskTitle": "Pronajímáte si křeslo a pracujete na sebe",
-    "deskDesc": "Pokladna, účtenky a EET s vaším vlastním certifikátem, vaše vlastní příjmy a výdaje. Majitel salonu vaše tržby nevidí.",
-    "deskPrice": "{priceDesk} Kč/měsíc",
-    "deskCta": "Tarif Křeslo"
+    },
+    "eyebrow": "Ukázky z aplikace"
   },
   "eet": {
     "title": "EET 2.0 je povinná od 1. 1. 2027. Žádnou pokladnu navíc nekupujete.",
@@ -126,9 +116,41 @@
     "all": "Všechny dotazy"
   },
   "final": {
-    "title": "Účet založíte za 2 minuty. Zkoušíte {days} dní.",
+    "title": "Účet založíte za 2 minuty.|Zkoušíte {days} dní.",
     "lead": "Bez platební karty. Po zkušební době vaše data zůstanou.",
     "cta": "Vyzkoušet zdarma",
-    "contact": "Napište nám"
+    "contact": "Napište nám",
+    "eyebrow": "Začněte ještě dnes"
+  },
+  "products": {
+    "eyebrow": "Produkty",
+    "title": "Tři způsoby, jak používat SalonGo.|Vyberte ten svůj.",
+    "salon": {
+      "tag": "Měsíčně · Cloud",
+      "title": "SalonGo pro majitele salonu",
+      "desc": "Kalendář, online rezervace, pokladna, EET, mzdy a více poboček. Na počítači, iPadu i telefonu.",
+      "price": "od {from} Kč/měsíc",
+      "cta": "Tarify"
+    },
+    "desk": {
+      "tag": "Měsíčně · 1 osoba",
+      "title": "Tarif Křeslo (vlastní IČO)",
+      "desc": "Pro nájemce křesla s vlastním IČO: pokladna, účtenky a EET s vlastním certifikátem. Majitel salonu vaše tržby nevidí.",
+      "price": "{priceDesk} Kč/měsíc",
+      "cta": "Tarif Křeslo"
+    },
+    "kasa": {
+      "tag": "Jednorázově · Windows, macOS",
+      "title": "SalonGo Kasa",
+      "desc": "Pokladní software v počítači salonu. Zaplatíte jednou, žádný měsíční poplatek, prodává i bez internetu.",
+      "price": "{price} jednorázově",
+      "cta": "Co je Kasa?"
+    }
+  },
+  "studio": {
+    "eyebrow": "SalonGo Web Studio",
+    "title": "Web pro váš salon,|navržený jako velká značka.",
+    "lead": "Vyberte si z {count} šablon pro salony. Texty, fotky i doménu připravíme za vás. Krásný na telefonu i počítači.",
+    "scroll": "Posuňte do strany pro další šablony"
   }
 }

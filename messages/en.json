@@ -1290,8 +1290,8 @@
   "landing": {
     "hero": {
       "eet": "SalonGo is ready for EET 2.0",
-      "title": "Bookings, checkout, EET. Your whole salon in one app.",
-      "lead": "Salon software for nail, hair, lash and spa studios in Czechia and the EU.",
+      "title": "Your whole salon,|in one app.",
+      "lead": "Appointments, online booking, checkout with EET 2.0, income and expenses, and staff pay. Built for nail, hair, lash and beauty salons.",
       "cta": "Try free for {days} days",
       "secondary": "See pricing",
       "note": "No card needed. Support in Czech, Vietnamese and English.",
@@ -1299,7 +1299,8 @@
       "altPhone": "SalonGo checkout screen on a phone",
       "chipToday": "Today",
       "chipBookings": "bookings",
-      "chipIncome": "Income today"
+      "chipIncome": "Income today",
+      "eyebrow": "Salon software · Czechia and Europe"
     },
     "platforms": {
       "label": "One account, works on",
@@ -1307,7 +1308,7 @@
       "langs": "App in 6 languages"
     },
     "features": {
-      "title": "Your whole salon in one app",
+      "title": "Everything your salon does,|on one screen.",
       "all": "See all features",
       "online": {
         "title": "Online booking"
@@ -1332,7 +1333,8 @@
       },
       "devices": {
         "title": "Every device"
-      }
+      },
+      "eyebrow": "Features"
     },
     "videos": {
       "title": "See the app in action",
@@ -1364,20 +1366,8 @@
           "title": "Chair plan",
           "desc": "A chair renter rings up a sale and checks their own income and expenses."
         }
-      }
-    },
-    "who": {
-      "title": "Pick the plan that fits how you work",
-      "salonTag": "Salon with staff",
-      "salonTitle": "You run a salon",
-      "salonDesc": "Calendar, online booking, checkout, EET, payroll, clients and several locations. Three plans by team size and email marketing.",
-      "salonPrice": "from {from} Kč/month",
-      "salonCta": "See salon plans",
-      "deskTag": "Own IČO in a salon",
-      "deskTitle": "You rent a chair and work for yourself",
-      "deskDesc": "Checkout, receipts and EET with your own certificate, your own income and expenses. The salon owner can't see your revenue.",
-      "deskPrice": "{priceDesk} Kč/month",
-      "deskCta": "See the Chair plan"
+      },
+      "eyebrow": "See it in action"
     },
     "eet": {
       "title": "EET 2.0 is mandatory from 1 Jan 2027. No extra till needed.",
@@ -1415,10 +1405,42 @@
       "all": "See all questions"
     },
     "final": {
-      "title": "Open an account in 2 minutes. Try it for {days} days.",
+      "title": "Open an account in 2 minutes.|Try it for {days} days.",
       "lead": "No card needed. When the trial ends, your data stays put.",
       "cta": "Start free trial",
-      "contact": "Talk to us"
+      "contact": "Talk to us",
+      "eyebrow": "Start today"
+    },
+    "products": {
+      "eyebrow": "Products",
+      "title": "Three ways to use SalonGo.|Pick the one that fits.",
+      "salon": {
+        "tag": "Monthly · Cloud",
+        "title": "SalonGo for salon owners",
+        "desc": "Calendar, online booking, checkout, EET, payroll and multiple locations. Works on computers, iPads and phones.",
+        "price": "from {from} Kč/month",
+        "cta": "See plans"
+      },
+      "desk": {
+        "tag": "Monthly · 1 person",
+        "title": "Chair plan (own IČO)",
+        "desc": "For chair renters with their own IČO: checkout, receipts and EET with your own certificate. The salon owner can't see your revenue.",
+        "price": "{priceDesk} Kč/month",
+        "cta": "See the Chair plan"
+      },
+      "kasa": {
+        "tag": "One-time · Windows, macOS",
+        "title": "SalonGo Kasa",
+        "desc": "Checkout software installed on the salon's computer. Pay once, no monthly fee, keeps selling offline.",
+        "price": "{price} one-time",
+        "cta": "What is Kasa?"
+      }
+    },
+    "studio": {
+      "eyebrow": "SalonGo Web Studio",
+      "title": "A website for your salon,|designed like a big brand.",
+      "lead": "Pick one of {count} salon templates. We set up the text, photos and domain for you. Beautiful on phones and computers.",
+      "scroll": "Swipe to see more templates"
     }
   },
   "site": {
@@ -1446,7 +1468,7 @@
       "appStoreShort": "App Store"
     },
     "footer": {
-      "tagline": "Salon software for nail, hair, lash and beauty studios in Europe.",
+      "tagline": "Management software and websites for nail, hair, lash and beauty salons in Europe.",
       "product": "Product",
       "company": "SalonGo",
       "help": "Support",
@@ -1455,7 +1477,97 @@
       "solutions": "Solutions by salon type",
       "support": "We reply within 24 hours, in Czech, Vietnamese or English.",
       "operator": "Operated by",
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "studio": "Web Studio",
+      "resources": "Resources",
+      "account": "Account",
+      "gdpr": "GDPR compliant · Support in Vietnamese and Czech"
+    },
+    "menu": {
+      "groups": {
+        "product": "Product",
+        "solutions": "Solutions",
+        "studio": "Web Studio",
+        "pricing": "Pricing",
+        "resources": "Resources"
+      },
+      "product": {
+        "features": {
+          "title": "Salon management software",
+          "desc": "Bookings, online booking, checkout, payroll"
+        },
+        "desk": {
+          "title": "Chair plan",
+          "desc": "For chair renters: checkout and EET under your own IČO"
+        },
+        "kasa": {
+          "title": "SalonGo Kasa",
+          "desc": "Point of sale software, one-time purchase"
+        },
+        "eet": {
+          "title": "EET 2.0",
+          "desc": "Ready for the requirement from 1 January 2027"
+        },
+        "download": {
+          "title": "Download",
+          "desc": "iPhone, iPad, Mac and Windows"
+        }
+      },
+      "solutions": {
+        "nail": {
+          "title": "Nail salons",
+          "desc": "Per-technician calendar, commission payroll"
+        },
+        "hair": {
+          "title": "Hair salons",
+          "desc": "Busy calendars and long services"
+        },
+        "beauty": {
+          "title": "Lash, brow and spa",
+          "desc": "Client records, treatments, regulars"
+        },
+        "chain": {
+          "title": "Multiple locations",
+          "desc": "One account for the whole group"
+        },
+        "guide": {
+          "title": "Salon software guide",
+          "desc": "What to look for when choosing software"
+        }
+      },
+      "studio": {
+        "templates": {
+          "title": "Website templates",
+          "desc": "35+ designs for nail, hair, spa, barber"
+        },
+        "contact": {
+          "title": "Order a website",
+          "desc": "From 4 999 Kč for a 5-page website"
+        },
+        "terms": {
+          "title": "Website service terms",
+          "desc": "Scope, payment, rights"
+        }
+      },
+      "resources": {
+        "faq": {
+          "title": "FAQ",
+          "desc": "Answers to common questions"
+        },
+        "about": {
+          "title": "About SalonGo",
+          "desc": "Who builds SalonGo and why"
+        },
+        "contact": {
+          "title": "Contact",
+          "desc": "Vietnamese and Czech, reply within 24 hours"
+        }
+      },
+      "studioFeature": "A beautiful website for your salon",
+      "studioFeatureCta": "Browse templates",
+      "productFeature": "{days}-day free trial, no card needed",
+      "productFeatureCta": "Create an account",
+      "more": "Learn more"
     }
   },
   "pages2": {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { OtherProducts } from "@/components/pricing2/OtherProducts";
 import { PageShell } from "@/components/PageShell";
 import { PricingHero } from "@/components/pricing2/PricingHero";
 import { SalonPlans, PLAN_NAMES } from "@/components/pricing2/SalonPlans";
@@ -73,6 +74,7 @@ export default async function PricingPage({ params }: Props) {
       <PricingHero />
       <SalonPlans data={data} />
       <DeskBand desk={data.desk} />
+      <OtherProducts />
       <RenewPanel />
       <FaqList
         id="faq"

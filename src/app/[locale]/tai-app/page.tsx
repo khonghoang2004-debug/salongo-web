@@ -109,7 +109,7 @@ export default async function DownloadsPage({ params }: Props) {
           <article className={card} aria-labelledby="dl-salongo">
             <div className="flex items-center gap-3">
               <img src={siteConfig.logo} alt="" width={40} height={40} className="size-10" />
-              <h2 id="dl-salongo" className="text-[1.5rem] font-semibold tracking-[-0.025em] text-ink">
+              <h2 id="dl-salongo" className="x-title !text-[1.85rem] text-ink">
                 {t("salongo.name")}
               </h2>
             </div>
@@ -127,7 +127,7 @@ export default async function DownloadsPage({ params }: Props) {
           <article className={card} aria-labelledby="dl-kasa">
             <div className="flex items-center gap-3">
               <img src="/images/kasa-icon.png" alt="" width={40} height={40} className="size-10 rounded-[10px]" />
-              <h2 id="dl-kasa" className="text-[1.5rem] font-semibold tracking-[-0.025em] text-ink">
+              <h2 id="dl-kasa" className="x-title !text-[1.85rem] text-ink">
                 {t("kasa.name")}
               </h2>
               <span className="ml-auto whitespace-nowrap text-[15px] font-semibold text-brand-700">{kasaPrice(locale)}</span>

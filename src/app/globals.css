@@ -740,6 +740,18 @@ button {
   .x-h2 em.on-dark {
     color: #f1c9d3;
   }
+  /* Tiêu đề phần trong trang (cỡ vừa), cùng serif với x-h2 */
+  .x-title {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+  :lang(vi) .x-title {
+    line-height: 1.2;
+  }
   /* Nhãn nhỏ in hoa phía trên tiêu đề section */
   .x-eyebrow {
     @apply inline-flex items-center gap-2 text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand-700;

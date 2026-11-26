@@ -19,7 +19,7 @@ export async function AboutView() {
   const t = await getTranslations("pages2.about");
   const locale = await getLocale();
   const { ui } = getLegalPack(locale);
-  const h2 = "text-[1.375rem] font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-[1.75rem]";
+  const h2 = "x-title text-ink";
   return (
     <>
       {/* Đầu trang */}

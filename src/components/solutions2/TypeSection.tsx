@@ -36,7 +36,7 @@ export function TypeSection({
         <div className="border-t border-line pt-14 sm:pt-16 lg:pt-24">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-12 [&>*]:min-w-0">
             <div className="lg:col-span-5">
-              <h2 id={`${id}-title`} className="text-[clamp(1.6rem,1.15rem+1.5vw,2.35rem)] font-semibold leading-[1.15] tracking-[-0.03em] text-ink [text-wrap:balance] [:lang(vi)_&]:leading-[1.24]">
+              <h2 id={`${id}-title`} className="x-title text-ink">
                 {title}
               </h2>
               <p className="x-body mt-4 max-w-[30rem] text-[1.0625rem]">{lead}</p>

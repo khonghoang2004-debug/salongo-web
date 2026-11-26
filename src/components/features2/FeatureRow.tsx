@@ -12,7 +12,7 @@ type Props = {
 };
 
 const H2 =
-  "text-[clamp(1.6rem,1.15rem+1.5vw,2.35rem)] font-semibold leading-[1.15] tracking-[-0.03em] text-ink [text-wrap:balance] [:lang(vi)_&]:leading-[1.24]";
+  "x-title text-ink";
 
 function Points({ points }: { points: string[] }) {
   return (

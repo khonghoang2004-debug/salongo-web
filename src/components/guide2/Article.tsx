@@ -73,7 +73,7 @@ export function ArticleBody({ sections, shots }: { sections: GuideSection[]; sho
         const shot = shots[s.id];
         return (
           <section key={s.id} id={s.id} aria-labelledby={`${s.id}-h`} className={`scroll-mt-24 ${i ? "mt-8 sm:mt-16" : ""}`}>
-            <h2 id={`${s.id}-h`} className="text-[clamp(1.5rem,1.2rem+1vw,2rem)] font-semibold leading-[1.2] tracking-[-0.025em] text-ink [text-wrap:balance] [:lang(vi)_&]:leading-[1.3]">
+            <h2 id={`${s.id}-h`} className="x-title !text-[clamp(1.5rem,1.2rem+1vw,2.1rem)] text-ink">
               {s.h}
             </h2>
             {s.body.map((p) => (

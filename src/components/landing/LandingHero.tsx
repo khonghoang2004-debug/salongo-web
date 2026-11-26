@@ -44,7 +44,7 @@ export async function LandingHero() {
           </div>
           <DownloadBadges
             compact
-            className="mt-6 lg:justify-center"
+            className="mt-6 justify-center"
             labels={{ mac: nav("mac"), win: nav("windows"), ios: nav("appStoreShort") }}
           />
         </div>

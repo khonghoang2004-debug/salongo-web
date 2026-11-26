@@ -2475,7 +2475,7 @@
     "buy": {
       "title": "Buy SalonGo Kasa",
       "back": "Back to Kasa",
-      "summary": "1 licence, 1 computer · {price}",
+      "summary": "1 activation code, 1 computer · {price}",
       "ico": "IČO (optional)",
       "icoPlaceholder": "12345678",
       "lookup": "Find",
@@ -2486,7 +2486,7 @@
       "unavailable": "ARES is not responding, please type it in",
       "company": "Company / name",
       "address": "Registered address",
-      "email": "E-mail (for your licence key)",
+      "email": "E-mail (so SalonGo can contact you)",
       "consent": "I agree to the <terms>Terms</terms> and the <privacy>Privacy Policy</privacy>.",
       "pay": "Payment",
       "card": "Card",
@@ -2501,7 +2501,7 @@
       "amount": "Amount",
       "vs": "Variable symbol",
       "message": "Message",
-      "bankNote": "Once the payment arrives, we e-mail your licence key.",
+      "bankNote": "Once you've paid, download and install Kasa, then contact SalonGo for your activation code.",
       "fallback": "The payment page could not open. Please try later.",
       "contactLead": "Just call or message SalonGo. Once the payment arrives we send your KASA-… code and help you install.",
       "hours": "We answer in Czech, Vietnamese or English, usually the same day.",
@@ -2512,7 +2512,7 @@
     },
     "download": {
       "title": "Download SalonGo Kasa",
-      "lead": "Free to download, enter your licence code and you're ready to go.",
+      "lead": "Free to download. Once it's installed, contact SalonGo for your activation code.",
       "mac": "Mac (Apple M1–M4)",
       "win": "Windows",
       "macFile": ".dmg · macOS 11 or later",
@@ -2520,9 +2520,9 @@
       "steps": "Install in 3 steps",
       "s1": "Pick the installer for your computer and open the downloaded file.",
       "s2": "Mac: drag Kasa into Applications. Windows: click Install.",
-      "s3": "Open Kasa, enter the licence code and set a PIN. Salon name and IČO can wait.",
-      "key": "Your licence code looks like KASA-XXXX-XXXX-XXXX-XXXX and SalonGo sends it when you buy. One code = one computer.",
-      "noKey": "No code yet?",
+      "s3": "Contact SalonGo for your activation code. Open Kasa, enter the code and set a PIN. Salon name and IČO can wait.",
+      "key": "Your activation code looks like KASA-XXXX-XXXX-XXXX-XXXX. Once Kasa is installed, contact SalonGo to get it. One code = one computer.",
+      "noKey": "No activation code yet?",
       "buy": "Contact SalonGo",
       "macIntel": "Mac (Intel)",
       "macIntelFile": ".dmg · Macs before 2021",
@@ -2531,7 +2531,7 @@
     },
     "thanks": {
       "title": "Thank you!",
-      "lead": "Your licence key is on its way to your e-mail.",
+      "lead": "Download and install Kasa, then contact SalonGo for your activation code.",
       "download": "Download Kasa"
     },
     "nav": {
@@ -2574,10 +2574,10 @@
       "s1t": "Order",
       "s1dOnline": "Click Buy Kasa, enter your e-mail (and IČO if you have one), then pay by card or bank transfer.",
       "s1dContact": "Call SalonGo or message us on WhatsApp or Facebook. We answer in Czech or Vietnamese.",
-      "s2t": "Get your licence code",
-      "s2d": "Once the payment arrives, SalonGo e-mails you a code like KASA-XXXX-XXXX-XXXX-XXXX. One code = one computer.",
-      "s3t": "Download, install, enter the code",
-      "s3d": "Download Kasa for free, install it and enter the code. The step-by-step guide is right below."
+      "s2t": "Download and install Kasa",
+      "s2d": "Download Kasa for free and install it on the computer at your front desk. The step-by-step guide is right below.",
+      "s3t": "Contact SalonGo for your activation code",
+      "s3d": "Once it's installed, call or message SalonGo. We send you an activation code; enter it in Kasa and you're ready. One code = one computer."
     },
     "guide": {
       "eyebrow": "Install guide",
@@ -2588,8 +2588,8 @@
       "s1d": "On the Download Kasa page, pick Windows, Mac (Apple M1–M4) or Mac (Intel). Not sure which Mac? Apple menu → About This Mac.",
       "s2t": "Open the file and install",
       "s2d": "Windows: open the .exe file, click Install and wait. Mac: open the .dmg file and drag the Kasa icon into Applications.",
-      "s3t": "Open Kasa and enter your licence code",
-      "s3d": "Type or paste the KASA-… code from SalonGo's e-mail. The computer needs internet for this step only.",
+      "s3t": "Contact SalonGo and enter your activation code",
+      "s3d": "Once it's installed, call or message SalonGo for your activation code. Open Kasa, type or paste the KASA-… code and click Activate. The computer needs internet for this step.",
       "s4t": "Set a PIN",
       "s4d": "Choose a PIN to open Kasa every day. Salon name, IČO and address can wait.",
       "s5t": "Add services and ring up the first sale",
@@ -2605,7 +2605,7 @@
         "install": "Install",
         "apps": "Applications",
         "drag": "Drag here",
-        "key": "Licence code",
+        "key": "Activation code",
         "activate": "Activate",
         "pin": "Enter PIN",
         "sale": "Receipt",
@@ -2635,7 +2635,7 @@
       "name": "SalonGo Kasa",
       "tag": "Checkout software for nail salons, buy once and keep it, your data stays on the salon's computer. Activated with a code from SalonGo.",
       "more": "About SalonGo Kasa",
-      "buy": "Buy a licence"
+      "buy": "Buy Kasa"
     },
     "mac": "macOS",
     "win": "Windows",

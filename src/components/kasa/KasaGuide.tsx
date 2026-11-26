@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowRight, Check, Download, Printer, KeyRound, Mail, MonitorSmartphone, Phone, ShoppingBag, WifiOff } from "lucide-react";
+import { ArrowRight, Check, Download, Printer, KeyRound, MonitorSmartphone, Phone, ShoppingBag, WifiOff } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
 import { SectionHead } from "@/components/landing/SectionHead";
@@ -108,8 +108,8 @@ export async function KasaBuySteps() {
   const online = kasaCardReady() || kasaBankReady();
   const steps = [
     { icon: ShoppingBag, title: t("s1t"), desc: online ? t("s1dOnline") : t("s1dContact") },
-    { icon: Mail, title: t("s2t"), desc: t("s2d") },
-    { icon: Download, title: t("s3t"), desc: t("s3d") },
+    { icon: Download, title: t("s2t"), desc: t("s2d") },
+    { icon: KeyRound, title: t("s3t"), desc: t("s3d") },
   ];
   return (
     <section id="cach-mua" className="x-section scroll-mt-32 bg-porcelain" aria-labelledby="kasa-buy-title">

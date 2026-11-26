@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Tablet, Globe, Languages } from "lucide-react";
+import { Tablet, Globe } from "lucide-react";
 import { AndroidIcon, AppleIcon, WindowsIcon } from "@/components/site/BrandIcons";
 import { ANDROID_APP_LIVE, APP_STORE_URL, IOS_APP_LIVE } from "@/lib/app-links";
 
@@ -18,7 +18,6 @@ export async function Platforms() {
     ...(ANDROID_APP_LIVE ? [{ icons: [<AndroidIcon key="g" className={ico} />], label: "Android" }] : []),
     { icons: [<AppleIcon key="a" className={ico} />, <WindowsIcon key="w" className="size-[15px] shrink-0 text-brand-700" />], label: "Mac, Windows" },
     { icons: [line(Globe)], label: t("web") },
-    { icons: [line(Languages)], label: t("langs") },
   ];
   return (
     <section aria-label={t("label")} className="border-y border-line bg-white">

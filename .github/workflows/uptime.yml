@@ -1,0 +1,87 @@
+# Canh web và app mỗi 15 phút. Khi có lỗi: mở (hoặc cập nhật) một issue "Sự cố" trong repo này, GitHub gửi e-mail
+# cho chủ repo. Khi mọi thứ chạy lại: tự đóng issue đó. Chạy tay: tab Actions → Uptime → Run workflow.
+#
+# Kiểm tra:
+#   web        https://www.salongo.eu/vi                  phải trả 200
+#   app        https://app.salongo.eu/api/health          phải trả 200 và "ok":true (gồm kiểm tra cơ sở dữ liệu)
+#   kasa       POST https://app.salongo.eu/api/kasa/activate với body rỗng → phải trả 400 "mã sai" (máy chủ kích hoạt
+#              đang sống; 5xx/không trả lời = khách mới không kích hoạt được Kasa)
+#   download   https://www.salongo.eu/api/download/windows và /mac phải chuyển hướng (3xx) tới file cài
+#
+# Lưu ý: GitHub tự tắt lịch chạy của repo public nếu repo không có commit nào trong 60 ngày. Khi đó vào tab Actions →
+# Uptime → "Enable workflow". Lịch của GitHub có thể trễ vài phút, nên đây là lưới an toàn, không phải đo từng phút.
+name: Uptime
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check web, app, Kasa activation, downloads
+        id: probe
+        run: |
+          fail=""
+          check() { # name expected-regex actual detail
+            if echo "$3" | grep -Eq "^($2)$"; then echo "OK   $1 ($3)"; else echo "FAIL $1: got $3, want $2 $4"; fail="$fail- **$1**: trả về \`$3\`, cần \`$2\` $4"$'\n'; fi
+          }
+          try() { # retries once after 20 s so a single blip doesn't page anyone
+            local out; out=$("$@") || true
+            if [ -z "$out" ] || echo "$out" | grep -Eq '^(000|5..)'; then sleep 20; out=$("$@") || true; fi
+            echo "${out:-000}"
+          }
+          C="curl -s -o /dev/null --max-time 20 -A salongo-uptime -w %{http_code}"
+
+          check web "200" "$(try $C https://www.salongo.eu/vi)"
+
+          body=$(mktemp)
+          code=$(try curl -s -o "$body" --max-time 20 -A salongo-uptime -w '%{http_code}' https://app.salongo.eu/api/health)
+          okflag=$(grep -o '"ok":[a-z]*' "$body" | head -1)
+          check "app (lịch hẹn, đăng nhập, cơ sở dữ liệu)" "200" "$code" ""
+          if [ "$code" = 200 ] && [ "$okflag" != '"ok":true' ]; then fail="$fail- **app**: /api/health trả về $okflag$'\n'"; fi
+
+          check "kích hoạt Kasa" "400" "$(try $C -X POST -H 'content-type: application/json' --data '{}' https://app.salongo.eu/api/kasa/activate)" "(khách mới không kích hoạt được Kasa)"
+          check "tải app SalonGo cho Windows" "30[1278]" "$(try $C https://www.salongo.eu/api/download/windows)"
+          check "tải app SalonGo cho Mac" "30[1278]" "$(try $C https://www.salongo.eu/api/download/mac)"
+
+          { echo "fail<<EOF"; printf '%s' "$fail"; echo "EOF"; } >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the incident issue
+        if: steps.probe.outputs.fail != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAIL: ${{ steps.probe.outputs.fail }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          now=$(TZ=Europe/Prague date '+%d.%m.%Y %H:%M')
+          msg=$(printf '%s (giờ Praha), lần kiểm tra [này](%s):\n\n%s\nXem trang "Khi sự cố thì làm gì" để biết bước tiếp theo.' "$now" "$RUN" "$FAIL")
+          n=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --label incident --json number -q '.[0].number')
+          if [ -z "$n" ]; then
+            gh label create incident -R "$GITHUB_REPOSITORY" --color B60205 --description "Uptime: web/app/Kasa lỗi" 2>/dev/null || true
+            gh issue create -R "$GITHUB_REPOSITORY" --label incident --assignee "$GITHUB_REPOSITORY_OWNER" \
+              --title "Sự cố: salongo đang lỗi" --body "$msg"
+          else
+            gh issue comment "$n" -R "$GITHUB_REPOSITORY" --body "Vẫn lỗi. $msg"
+          fi
+          exit 1
+
+      - name: Close the incident issue when everything is back
+        if: steps.probe.outputs.fail == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list -R "$GITHUB_REPOSITORY" --state open --label incident --json number -q '.[].number'); do
+            gh issue close "$n" -R "$GITHUB_REPOSITORY" --comment "Đã chạy lại bình thường lúc $(TZ=Europe/Prague date '+%d.%m.%Y %H:%M') (giờ Praha)."
+          done

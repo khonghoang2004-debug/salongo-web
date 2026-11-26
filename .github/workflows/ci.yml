@@ -1,0 +1,47 @@
+# Kiểm tra mỗi PR trước khi merge: tin nhắn 4 ngôn ngữ đủ khoá, type, lint, unit test, build, rồi chạy thử bản build
+# và kiểm tra SEO (sitemap, canonical, hreflang, 1 H1 mỗi trang). PR đỏ = đừng merge, nhắn Claude sửa.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Messages (4 languages, same keys)
+        run: npm run messages:check
+      - name: Typecheck
+        run: npx tsc --noEmit
+      - name: Lint
+        run: npm run lint
+      - name: Unit tests
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: SEO tests on the built site
+        run: |
+          rm -rf .next/server/route-cache
+          npx next start -p 3000 > next.log 2>&1 &
+          for i in $(seq 1 30); do curl -fs -o /dev/null http://localhost:3000/vi && break; sleep 1; done
+          npm run test:seo
+      - name: Server log (on failure)
+        if: failure()
+        run: tail -n 100 next.log || true

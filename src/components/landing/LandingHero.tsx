@@ -42,10 +42,10 @@ export async function LandingHero() {
               {t("secondary")}
             </Link>
           </div>
-          <p className="mt-5 text-[14.5px] text-muted">{t("note")}</p>
           <DownloadBadges
+            compact
             className="mt-6 lg:justify-center"
-            labels={{ label: nav("download"), mac: nav("mac"), win: nav("windows"), ios: nav("appStoreShort") }}
+            labels={{ mac: nav("mac"), win: nav("windows"), ios: nav("appStoreShort") }}
           />
         </div>
 

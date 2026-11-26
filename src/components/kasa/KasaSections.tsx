@@ -97,6 +97,7 @@ type Cell = boolean | string;
 /** Kasa vs SalonGo: two text rows, then ✓ / ✗ rows. */
 export async function KasaCompare() {
   const t = await getTranslations("kasa.compare");
+  const p = await getTranslations("kasa.pick");
   const rows: [string, Cell, Cell][] = [
     [t("price"), t("priceKasa"), t("priceGo")],
     [t("data"), t("dataKasa"), t("dataGo")],
@@ -122,10 +123,10 @@ export async function KasaCompare() {
       </>
     );
   return (
-    <section id="so-sanh" className="x-section-tight scroll-mt-20 bg-porcelain" aria-labelledby="kasa-compare-title">
-      <div className="x-wrap max-w-[52rem]">
+    <section className="bg-white pb-[clamp(4.5rem,3rem+5vw,8rem)] pt-12" aria-labelledby="kasa-compare-title">
+      <div className="x-wrap">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <h2 id="kasa-compare-title" className="x-h2 text-ink">{t("title")}</h2>
+          <h2 id="kasa-compare-title" className="text-[1.35rem] font-semibold tracking-[-0.015em] text-ink">{p("tableTitle")}</h2>
           <Link href="/" className="x-link shrink-0">
             {t("goLink")}
             <ArrowRight className="size-4" aria-hidden />

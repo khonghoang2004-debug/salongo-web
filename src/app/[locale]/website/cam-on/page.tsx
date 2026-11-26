@@ -22,7 +22,7 @@ export default async function HostingThanksPage({ params }: Props) {
       <section className="bg-white py-10 sm:py-16">
         <div className="x-wrap max-w-[36rem] text-center">
           <CheckCircle2 className="mx-auto size-14 text-emerald-600" aria-hidden />
-          <h1 className="mt-5 text-[1.75rem] font-semibold tracking-[-0.02em] text-ink sm:text-[2.25rem]">{t("thanksTitle")}</h1>
+          <h1 className="x-title mt-5 !text-[clamp(1.9rem,1.5rem+1.6vw,2.75rem)] text-ink">{t("thanksTitle")}</h1>
           <p className="mt-3 text-[16px] leading-relaxed text-muted">{t("thanksLead")}</p>
           <Link href="/website" className="x-btn-primary mt-8 inline-flex !min-h-12 !px-7">
             {t("thanksBack")}

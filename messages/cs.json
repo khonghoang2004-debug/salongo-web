@@ -1083,8 +1083,8 @@
     "ctaContact": "Mám zájem o web",
     "previewLabel": "Náhled šablony {name}",
     "allTemplates": "Všechny šablony ({count})",
-    "heroTitle": "Vyberte si krásný web|pro váš salon",
-    "heroLead": "Pro salony.",
+    "heroTitle": "Web pro salon,|který vypadá jako velká značka.",
+    "heroLead": "Navrženo pro salony",
     "galleryKicker": "Šablony",
     "galleryTitle": "Šablony webů pro nehty, vlasy, spa, řasy a barbershopy",
     "galleryLead": "Každá šablona je funkční web. Klikněte na ukázku.",
@@ -1141,7 +1141,17 @@
     "studio": "SalonGo Web Studio",
     "priceLabel": "Od",
     "previewGroup": "Náhled šablony",
-    "showMore": "Zobrazit další šablony ({count})"
+    "showMore": "Zobrazit další šablony ({count})",
+    "processKicker": "Jak to probíhá",
+    "processTitle": "Od šablony k hotovému webu|ve 4 krocích.",
+    "p1t": "Vyberte šablonu nebo pošlete nápad",
+    "p1d": "Zvolte šablonu z knihovny, nebo nám popište svůj vlastní nápad.",
+    "p2t": "Pošlete podklady",
+    "p2d": "Logo, ceník služeb, fotky salonu a kontakty.",
+    "p3t": "Projděte návrh",
+    "p3d": "Prohlédnete si web v telefonu i počítači a před spuštěním napíšete připomínky.",
+    "p4t": "Web jde online",
+    "p4d": "S tlačítkem na rezervační stránku SalonGo, pokud SalonGo používáte. Doménu a hosting řešíme zvlášť."
   },
   "day": {
     "kicker": "Den v salonu",
@@ -1629,7 +1639,11 @@
       "fact6": "Funguje v prohlížeči (telefon, iPad), na Macu a Windows.",
       "contactTitle": "Chcete s námi mluvit?",
       "contactLead": "Zavolejte, napište nebo pošlete e-mail. Odpovíme do 24 hodin.",
-      "contactCta": "Kontakt"
+      "contactCta": "Kontakt",
+      "do6T": "SalonGo Kasa",
+      "do6": "Jednorázová pokladna nainstalovaná v počítači salonu.",
+      "do7T": "Weby pro salony",
+      "do7": "SalonGo Web Studio vám udělá vlastní web, 35+ šablon."
     },
     "notFound": {
       "title": "Tuto stránku jsme nenašli",

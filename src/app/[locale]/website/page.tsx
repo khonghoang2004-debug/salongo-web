@@ -15,6 +15,7 @@ import { LivePreview, type LiveItem } from "@/components/website/LivePreview";
 import { DevicePhone } from "@/components/landing/Shots";
 import { WebsiteContactPanel } from "@/components/website/WebsiteContact";
 import { WebHostingSection } from "@/components/website/WebHostingSection";
+import { SectionHead } from "@/components/landing/SectionHead";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -99,7 +100,8 @@ export default async function WebsitePage({ params }: Props) {
     .map((x) => ({ slug: x.slug, name: x.name, type: tr(x.card.type, locale), shot: templateShot(x.slug, locale) }));
 
   return (
-    <PageShell>
+    // Thanh nút dính dưới đáy điện thoại mời dùng thử SalonGo: không phải lời mời của trang này
+    <PageShell cta={false}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* 1. Đầu trang: chữ + giá bên trái, mẫu thật trong khung máy tính + iPhone bên phải */}
@@ -110,8 +112,8 @@ export default async function WebsitePage({ params }: Props) {
               <span className="shrink-0 whitespace-nowrap rounded-full bg-blush px-2.5 py-0.5 text-[13px] font-semibold text-brand-800">{t("studio")}</span>
               <span className="truncate">{t("heroLead")}</span>
             </p>
-            <h1 className="x-display mt-6 text-ink lg:!text-[clamp(2.8rem,1rem+3.2vw,4.4rem)]">
-              {h1a} {h1b && <span className="text-brand-700">{h1b}</span>}
+            <h1 className="x-display mt-6 text-ink lg:!text-[clamp(2.6rem,1rem+2.6vw,3.9rem)]">
+              {h1a} {h1b && <em>{h1b}</em>}
             </h1>
             <p className="x-lead mt-5 max-w-[32rem]">{t("lead")}</p>
             <div className="mt-7 flex flex-wrap items-end gap-x-4 gap-y-1">
@@ -157,10 +159,28 @@ export default async function WebsitePage({ params }: Props) {
         </div>
       </section>
 
-      {/* 5. Giá: khối mận đậm, cùng kiểu khối EET ở trang chủ */}
-      <section className="bg-white pb-[clamp(3rem,2rem+4vw,5.5rem)]" aria-labelledby="price-title">
+      {/* 4b. Cách làm: 4 bước từ mẫu đến website thật (không ghi thời gian hay số lần sửa: chưa chốt với khách) */}
+      <section className="x-section bg-porcelain" aria-labelledby="process-title">
         <div className="x-wrap">
-          <div className="x-panel grid overflow-hidden bg-brand-800 text-white lg:grid-cols-12">
+          <SectionHead id="process-title" eyebrow={t("processKicker")} title={t("processTitle")} className="max-w-[44rem]" />
+          <ol data-stagger className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-5">
+            {([1, 2, 3, 4] as const).map((n) => (
+              <li key={n} className="rounded-[22px] bg-white p-6 ring-1 ring-black/[0.05] sm:p-7">
+                <span className="block text-[2.6rem] font-medium leading-none text-brand-700 [font-family:var(--font-serif)] tabular-nums" aria-hidden>
+                  0{n}
+                </span>
+                <h3 className="mt-5 text-[1.15rem] font-semibold tracking-[-0.015em] text-ink">{t(`p${n}t`)}</h3>
+                <p className="mt-2 text-[1.0313rem] leading-relaxed text-ink/70">{t(`p${n}d`)}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* 5. Giá: khối mận đậm, cùng kiểu khối EET ở trang chủ */}
+      <section className="bg-white py-[clamp(3rem,2rem+4vw,5.5rem)]" aria-labelledby="price-title">
+        <div className="x-wrap">
+          <div className="x-panel grid overflow-hidden bg-plum text-white lg:grid-cols-12">
             <div className="p-7 sm:p-10 lg:col-span-7 lg:p-14">
               <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[14px] text-white/85">{t("eyebrow")}</p>
               <h2 id="price-title" className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -181,7 +201,7 @@ export default async function WebsitePage({ params }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="relative hidden items-end justify-center overflow-hidden bg-brand-900/40 px-10 pt-12 lg:col-span-5 lg:flex" aria-hidden>
+            <div className="relative hidden items-end justify-center overflow-hidden bg-white/[0.04] px-10 pt-12 lg:col-span-5 lg:flex" aria-hidden>
               <div className="w-[min(240px,70%)] translate-y-[18%]">
                 <DevicePhone shot={templateShot(PRICE_PICK, locale)} alt="" />
               </div>

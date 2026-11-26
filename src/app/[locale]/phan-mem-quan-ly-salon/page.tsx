@@ -97,7 +97,7 @@ export default async function SalonSoftwarePage({ params }: Props) {
               </li>
             </ol>
           </nav>
-          <h1 className="mt-4 max-w-[56rem] text-[clamp(2.2rem,1.3rem+3.4vw,4rem)] font-semibold leading-[1.1] tracking-[-0.035em] text-ink [text-wrap:balance] [:lang(vi)_&]:leading-[1.2]">
+          <h1 className="x-display mt-4 max-w-[56rem] text-ink lg:!text-[clamp(3rem,1.6rem+3vw,4.5rem)]">
             {t("h1")}
           </h1>
           <p className="x-lead mt-6 max-w-[40rem]">{t("intro")}</p>

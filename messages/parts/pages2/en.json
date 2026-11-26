@@ -57,7 +57,11 @@
     "fact6": "Works in the browser (phone, iPad) and on Mac and Windows.",
     "contactTitle": "Want to talk to us?",
     "contactLead": "Call, message or e-mail us. We reply within 24 hours.",
-    "contactCta": "Contact"
+    "contactCta": "Contact",
+    "do6T": "SalonGo Kasa",
+    "do6": "One-time checkout software installed on the salon's computer.",
+    "do7T": "Salon websites",
+    "do7": "SalonGo Web Studio builds your own website, 35+ designs."
   },
   "notFound": {
     "title": "We couldn't find this page",

@@ -775,9 +775,9 @@ button {
     color: #4f4347;
     text-wrap: pretty;
   }
-  /* Dòng nhỏ phía trên tiêu đề: chữ thường, chỉ dùng khi nó mang thông tin (giờ, tên gói) */
+  /* Dòng nhỏ phía trên tiêu đề (cùng kiểu x-eyebrow: chữ in hoa nhỏ, giãn chữ) */
   .x-kicker {
-    @apply inline-flex items-center gap-2 text-[15px] font-medium text-brand-700;
+    @apply inline-flex items-center gap-2 text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand-700;
   }
 
   .x-btn {

@@ -13,6 +13,15 @@ export function MotionRoot() {
     const root = document.documentElement;
     root.classList.add("sg-js");
 
+    // Phần đã nằm trong màn hình đầu: hiện luôn, không chạy hiệu ứng (để trang không trắng lúc mở)
+    if (!root.classList.contains("sg-ready")) {
+      const vh = window.innerHeight;
+      document.querySelectorAll(SELECTOR).forEach((el) => {
+        if (el.getBoundingClientRect().top < vh) el.classList.add("is-in");
+      });
+      root.classList.add("sg-ready");
+    }
+
     if (!("IntersectionObserver" in window)) {
       document.querySelectorAll(SELECTOR).forEach((el) => el.classList.add("is-in"));
       return;

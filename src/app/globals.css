@@ -551,8 +551,9 @@
   animation-delay: var(--d, 0ms);
 }
 
-/* Hiện dần khi cuộn tới: chỉ ẩn khi JS đã chạy (class sg-js), không JS vẫn thấy đủ */
-.sg-js [data-reveal] {
+/* Hiện dần khi cuộn tới. Chỉ ẩn sau khi MotionRoot đã đánh dấu phần nằm sẵn trong màn hình đầu (class sg-ready),
+   nên màn hình đầu hiện ngay khi tải trang, không bị trắng chờ JS. */
+.sg-ready [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 16px, 0);
   transition:
@@ -561,29 +562,29 @@
   transition-delay: var(--d, 0ms);
 }
 
-.sg-js [data-reveal="fade"] {
+.sg-ready [data-reveal="fade"] {
   transform: none;
 }
 
-.sg-js [data-reveal="scale"] {
+.sg-ready [data-reveal="scale"] {
   transform: translate3d(0, 20px, 0) scale(0.98);
 }
 
-.sg-js [data-reveal="left"] {
+.sg-ready [data-reveal="left"] {
   transform: translate3d(-16px, 0, 0);
 }
 
-.sg-js [data-reveal="right"] {
+.sg-ready [data-reveal="right"] {
   transform: translate3d(16px, 0, 0);
 }
 
-.sg-js [data-reveal].is-in {
+.sg-ready [data-reveal].is-in {
   opacity: 1;
   transform: none;
 }
 
 /* Các phần tử con hiện lần lượt */
-.sg-js [data-stagger] > * {
+.sg-ready [data-stagger] > * {
   opacity: 0;
   transform: translate3d(0, 12px, 0);
   transition:
@@ -592,7 +593,7 @@
   transition-delay: calc(var(--i, 0) * 70ms + var(--d, 0ms));
 }
 
-.sg-js [data-stagger].is-in > * {
+.sg-ready [data-stagger].is-in > * {
   opacity: 1;
   transform: none;
 }
@@ -607,7 +608,7 @@
 [data-stagger] > :nth-child(n + 9) { --i: 8; }
 
 /* Đường kẻ tự vẽ khi cuộn tới */
-.sg-js [data-reveal="line"] {
+.sg-ready [data-reveal="line"] {
   opacity: 1;
   transform: scaleX(0);
   transform-origin: left center;
@@ -615,7 +616,7 @@
   transition-delay: var(--d, 0ms);
 }
 
-.sg-js [data-reveal="line"].is-in {
+.sg-ready [data-reveal="line"].is-in {
   transform: scaleX(1);
 }
 
@@ -676,8 +677,8 @@ button {
     animation: none !important;
   }
 
-  .sg-js [data-reveal],
-  .sg-js [data-stagger] > * {
+  .sg-ready [data-reveal],
+  .sg-ready [data-stagger] > * {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

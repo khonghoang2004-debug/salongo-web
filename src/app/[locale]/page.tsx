@@ -117,7 +117,7 @@ export default async function Home({ params }: Props) {
         url: pageUrl,
         applicationCategory: "BusinessApplication",
         applicationSubCategory: "Salon management software",
-        operatingSystem: "Web, Windows, macOS",
+        operatingSystem: "Web, Windows, macOS, iOS, iPadOS",
         inLanguage: ["vi", "cs", "sk", "en", "de", "fr"],
         image: ogImageUrl,
         description: tPage("homeDesc"),
